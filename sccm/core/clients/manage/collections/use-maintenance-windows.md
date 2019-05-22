@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15dbcbb3d0528a2627ab00bf81c6de5f5441d9e2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cc4a984b15af66a5426d30f3fb4f0b68c794ba5f
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120305"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673343"
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>如何在 Configuration Manager 中使用维护时段
 
@@ -66,3 +66,12 @@ ms.locfileid: "56120305"
 7.  从“将此计划应用到”下拉列表中进行选择。  
 
 8.  选择“确定”，然后关闭“&lt;集合名称\>属性”对话框。  
+ 
+## <a name="bkmk_powershell"></a> 使用 PowerShell
+
+PowerShell 可用于配置维护时段。  有关详情，请参阅：
+
+* [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow)
+* [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow)
+* [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow)
+* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow)

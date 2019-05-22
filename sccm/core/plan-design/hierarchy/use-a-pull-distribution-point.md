@@ -2,7 +2,7 @@
 title: 请求分发点
 titleSuffix: Configuration Manager
 description: 了解在结合使用 Configuration Manager 和拉取分发点方面的配置和限制。
-ms.date: 07/30/2018
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 488fa5251711c8d9c7702e2b240a6f10602d447f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142266"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499285"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>结合使用 Configuration Manager 和拉取分发点
 
@@ -40,7 +40,7 @@ ms.locfileid: "56142266"
 - 单独管理或作为分发点组的成员进行管理  
 
 > [!IMPORTANT]  
-> 尽管请求分发点支持通过 HTTP 和 HTTPS 的通信，但在使用 Configuration Manager 控制台时，你只能指定为 HTTP 配置的源分发点。 你可以使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。  
+> 尽管拉取分发点支持通过 HTTP 和 HTTPS 通信，但在使用 Configuration Manager 控制台时，你只能指定配置为通过 HTTP 通信的源分发点。 你可以使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。  
 
 在安装分发点时配置拉取分发点。 创建分发点之后，可通过编辑角色属性将其配置为拉取分发点。 要详细了解如何使分发点成为拉取分发点，请参阅[拉取分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point)。  
 
@@ -102,7 +102,7 @@ ms.locfileid: "56142266"
 
 -   对于每个站点，拉取分发点不使用“软件分发组件属性”的“常规”选项卡上的设置。 这些设置包括“并发分发”和“多播重试”。  
 
--   要从远程林中的源分发点传输内容，请在拉取分发点上安装 Configuration Manager 客户端。 此外，请配置可访问源分发点的网络访问帐户。 自版本 1806 起，如果启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的站点选项，则不需要网络访问帐户。<!--1358228-->  
+-   要从远程林中的源分发点传输内容，请在拉取分发点上安装 Configuration Manager 客户端。 此外，请配置可访问源分发点的网络访问帐户。 自版本 1806 起，如果启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”站点选项，则不需要网络访问帐户。<!--1358228-->  
 
 -   如果拉取分发点还是一个 Configuration Manager 客户端，则该客户端的版本必须与安装拉取分发点的 Configuration Manager 站点相同。 拉取分发点使用该分发点和 Configuration Manager 客户端共有的 CCMFramework。  
 
@@ -120,7 +120,7 @@ ms.locfileid: "56142266"
 
 -   请使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。 若要使用为 HTTPS 配置的源分发点，请在拉取分发点上安装 Configuration Manager 客户端。  
 
--   自版本 1806 起，如果远程办公室与 Internet 建立了更好的连接，或者希望减少 WAN 链路负载，可在 Microsoft Azure 中将[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)用作源。 请求分发点需要访问 Internet 才能与 Microsoft Azure 通信。 必须将内容分发到源云分发点。<!--1321554-->  
+-   自版本 1806 起，如果远程办公室与 Internet 建立了更好的连接，或者希望减少 WAN 链路负载，可在 Microsoft Azure 中将[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)用作源。 请求分发点需要访问 Internet 才能与 Microsoft Azure 通信。 必须内容将分发到源云分发点。<!--1321554-->  
 
     > [!Note]  
     > 此功能确实会对你的 Azure 数据存储和网络出口订阅收取费用。 有关详细信息，请参阅[使用云分发点所产生的成本](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)。  

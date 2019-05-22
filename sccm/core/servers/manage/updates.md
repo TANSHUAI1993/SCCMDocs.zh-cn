@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb97b113bb6c99d67414a5de904f071f44497ada
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: b6ebe46963001a4ccc5932afa14ec7eb206dc1c4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524228"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496871"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新和服务
 

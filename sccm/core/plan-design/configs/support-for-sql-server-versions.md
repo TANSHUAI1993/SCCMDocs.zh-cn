@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f2d2b10419cec019cc3c0791c7a7aadc016c15b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133793"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499481"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -85,7 +85,8 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
   <!--SMS.498506-->
 
 ### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2：Standard、Enterprise  
-<!--514985--> 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+<!--514985-->
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
@@ -145,7 +146,8 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
 自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用：
--   辅助站点 <!--SMS.498506-->
+-   辅助站点
+<!--SMS.498506-->
 
 ### <a name="sql-server-2016-express-sp2"></a>SQL Server 2016 Express SP2  
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
@@ -209,9 +211,9 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ### <a name="sql-server-memory"></a>SQL Server 内存  
  通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
--   **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为可用可寻址的系统内存的 50% 到 80%。  
+-   **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 50% 到 80%。  
 
--   **专用的数据库服务器（远离站点服务器）**：将用于 SQL Server 的内存限制为可用可寻址的系统内存的 80% 到 90%。  
+-   **专用的数据库服务器（远离站点服务器）**：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 80% 到 90%。  
 
 -   对于使用中的每个 SQL Server 实例的缓冲池内存预留：  
 

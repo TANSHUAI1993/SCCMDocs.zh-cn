@@ -2,27 +2,28 @@
 title: 支持中心
 titleSuffix: Configuration Manager
 description: 使用支持中心对 Configuration Manager 客户端进行故障排除。
-ms.date: 03/06/2019
+ms.date: 05/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 9246ea46787b1db466b8aca5d8a602617c80e26a
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562034"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612525"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager 的支持中心
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-<!--1357489--> 从版本 1810 开始，使用支持中心排除客户端故障、查看实时日志，或者捕获 Configuration Manager 客户端计算机状态供日后分析。 支持中心是用于整合多个管理员故障排除工具的单一工具。 
+<!--1357489-->
+自版本 1810 起，支持中心可用于排除客户端故障、查看实时日志，或捕获 Configuration Manager 客户端计算机状态以供日后分析。 支持中心是用于整合多个管理员故障排除工具的单一工具。 
 
 
 
@@ -46,7 +47,7 @@ ms.locfileid: "57562034"
 
 ### <a name="support-center-log-file-viewer"></a>支持中心日志文件查看器
 
-支持中心包括最新日志查看器。 此工具将替代 CMTrace。 OneTrace 可提供可自定义的界面、支持选项卡和可停靠窗口。 它具有快速表示层，可以在几秒钟内加载大型日志文件。
+支持中心包括最新日志查看器。 此工具取代了 CMTrace，提供可自定义的界面，并支持选项卡和可停靠窗口。 它具有快速表示层，可以在几秒钟内加载大型日志文件。
 
 
 ### <a name="powershell-cmdlets"></a>PowerShell cmdlet
@@ -79,7 +80,8 @@ ms.locfileid: "57562034"
 ## <a name="known-issues"></a>已知问题 
 
 #### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>如果已安装旧版本，则无法安装最新版本
-<!--SCCMDocs-pr issue #3090-->如果已安装旧版支持中心，1810 版安装程序将失败。 文件在原始版本和最新版本之间进行版本控制，从而导致了此问题。 为解决此问题，请先卸载旧版支持中心。 然后从 Configuration Manager 1810 版安装最新版本。
+<!--SCCMDocs-pr issue #3090-->
+如果你已安装旧版支持中心，版本 1810 安装程序会失败。 文件在原始版本和最新版本之间进行版本控制，从而导致了此问题。 为解决此问题，请先卸载旧版支持中心。 然后从 Configuration Manager 1810 版安装最新版本。
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>远程连接必须包括计算机名或域名作为用户名的一部分
 如果从支持中心连接到远程客户端，在建立连接时，必须为用户帐户提供计算机名或域名。 如果使用缩写的计算机名或域名（例如 `.\administrator`），则连接会成功，但支持中心不会从客户端收集数据。 
@@ -93,7 +95,8 @@ ms.locfileid: "57562034"
 其中 `<connection_name>` 是远程连接的名称。
 
 #### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>向远程计算机发送的应用程序部署评估周期请求不正确
-<!--2849356--> 在支持中心，如果在“内容”选项卡上的“调用触发器”操作中选择“应用程序部署评估”，则此操作将启动一个评估已部署应用程序的任务。 如果你已连接到本地客户端，则它会评估计算机和用户应用程序部署。 但是，如果你已连接到远程客户端，它将仅评估计算机应用程序部署。
+<!--2849356-->
+在支持中心内，如果你在“内容”选项卡上的“调用触发器”操作中选择“应用程序部署评估”，此操作会启动任务来评估已部署的应用程序。 如果你已连接到本地客户端，则它会评估计算机和用户应用程序部署。 但是，如果你已连接到远程客户端，它将仅评估计算机应用程序部署。
 
 
 ## <a name="next-steps"></a>后续步骤

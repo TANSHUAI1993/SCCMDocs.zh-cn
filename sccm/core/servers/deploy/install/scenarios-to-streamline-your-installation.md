@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83cea2136839ff3cf45b899bf4ec3d8ecbaff0ef
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aab0cfd2eba4e003130ca19147bf4c8fb6b2ea9b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140290"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501351"
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>简化 System Center Configuration Manager 安装的方案
 
@@ -38,7 +38,7 @@ ms.locfileid: "56140290"
 -   主站点运行要使用的更新版本之后，才能从 Microsoft System Center 2012 Configuration Manager 升级辅助站点。  
 -   主站点运行要使用的更新版本之后，才能从 Microsoft System Center 2012 Configuration Manager 升级客户端。  
 
-## <a name="scenario-install-a-new-hierarchy-to-an-update-version"></a>场景：将新的层次结构安装到更新版本  
+## <a name="scenario-install-a-new-hierarchy-to-an-update-version"></a>方案：将新的层次结构安装到更新版本  
 在此示例方案中，使用 System Center Configuration Manager 的基准版本（如版本 1610）来安装层次结构的第一个站点。 然后安装 1610 更新，再部署其他站点或客户端。  
 
 -   因为计划使用更新版本（例如版本 1610）而不会保留在基准版本（例如版本 1606），因此无需安装并升级其他站点。 这同样适用于客户端。  
@@ -82,7 +82,7 @@ ms.locfileid: "56140290"
 
    在此步骤后，运行 1610 版的新客户端已安装好。  
 
-## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>场景：将 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager Current Branch 的更新版本  
+## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>方案：将 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager Current Branch 的更新版本  
 在此示例方案中，将 Microsoft System Center 2012 Configuration Manager 基础结构升级到 System Center Configuration Manager 的更新版本（如版本 1610）。  
 
 -   安装 1610 版更新之前，必须将管理中心站点和每个主站点升级到 1606 基准版本。  

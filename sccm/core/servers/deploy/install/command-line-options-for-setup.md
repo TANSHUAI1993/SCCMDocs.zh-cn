@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5c85e3058a63868cfee28865c1be222919b29a8
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 434b53d24d050cc66cbb5e8bec7a681311f945b8
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141817"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498671"
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于安装程序的命令行选项
 
@@ -75,7 +75,7 @@ ms.locfileid: "56141817"
 
     -   **值：** ManageLanguages  
 
-    -   **详细信息：** 管理站点上的服务器、客户端和移动客户端语言支持。  
+    -   **详细信息：** 管理站点处的服务器、客户端和移动客户端语言支持。  
 
 **选项**  
 
@@ -93,7 +93,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
+    -   **详细信息：** 指定可供客户端计算机使用的语言。 默认情况下使用英语。  
 
 -   **密钥名称：** DeleteServerLanguages  
 
@@ -183,9 +183,9 @@ ms.locfileid: "56141817"
 
     -   **值：** <*站点代码*>  
 
-    -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。  
+    -   **详细信息：** 指定三个字母数字字符，用于唯一标识层次结构中的站点。  
 
--   **密钥名称：** 站点名称  
+-   **密钥名称：** SiteName  
 
     -   **必需：** 是  
 
@@ -207,7 +207,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
-    -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
+    -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
 
 -   **密钥名称：** PrerequisiteComp  
 
@@ -239,7 +239,7 @@ ms.locfileid: "56141817"
 
          1 = 安装  
 
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
+    -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。  
 
 -   **密钥名称：** JoinCEIP  
     > [!Note]  
@@ -269,7 +269,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
+    -   **详细信息：** 指定可供客户端计算机使用的语言。 默认情况下使用英语。  
 
 -   **密钥名称：** DeleteServerLanguages  
 
@@ -277,7 +277,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
+    -   **详细信息：** 修改安装后的站点。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
 -   **密钥名称：** DeleteClientLanguages  
 
@@ -285,7 +285,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
+    -   **详细信息：** 修改安装后的站点。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
 -   **密钥名称：** MobileDeviceLanguage  
 
@@ -301,7 +301,7 @@ ms.locfileid: "56141817"
 
 **SQLConfigOptions**  
 
--   **密钥名称：** SQLServerName   
+-   **密钥名称：** SQLServerName  
 
     -   **必需：** 是  
 
@@ -431,7 +431,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*站点代码*>  
 
-    -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。  
+    -   **详细信息：** 指定三个字母数字字符，用于唯一标识层次结构中的站点。  
 
 -   **密钥名称：** SiteName  
 
@@ -455,7 +455,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
-    -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
+    -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
 
 -   **密钥名称：** PrerequisiteComp  
 
@@ -487,7 +487,7 @@ ms.locfileid: "56141817"
 
          1 = 安装  
 
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
+    -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。  
 
 -   **密钥名称：** JoinCEIP  
     > [!Note]  
@@ -509,7 +509,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*管理点站点服务器 FQDN*>  
 
-    -   **详细信息：** 指定将承载管理点站点系统角色的服务器的 FQDN。  
+    -   **详细信息：** 指定托管管理点站点系统角色的服务器的 FQDN。  
 
 -   **密钥名称：** ManagementPointProtocol  
 
@@ -553,7 +553,7 @@ ms.locfileid: "56141817"
 
          1 = 使用  
 
-    -   **详细信息：** 指定客户端是否将使用客户端 PKI 证书与站点系统角色通信。  
+    -   **详细信息：** 指定客户端是否使用客户端 PKI 证书与站点系统角色通信。  
 
 -   **密钥名称：** AddServerLanguages  
 
@@ -569,7 +569,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
+    -   **详细信息：** 指定可供客户端计算机使用的语言。 默认情况下使用英语。  
 
 -   **密钥名称：** DeleteServerLanguages  
 
@@ -577,7 +577,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
+    -   **详细信息：** 修改安装后的站点。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
 -   **密钥名称：** DeleteClientLanguages  
 
@@ -585,7 +585,7 @@ ms.locfileid: "56141817"
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
-    -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
+    -   **详细信息：** 修改安装后的站点。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
 -   **密钥名称：** MobileDeviceLanguage  
 
@@ -601,7 +601,7 @@ ms.locfileid: "56141817"
 
 **SQLConfigOptions**  
 
--   **密钥名称：** SQLServerName   
+-   **密钥名称：** SQLServerName  
 
     -   **必需：** 是  
 
@@ -825,7 +825,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*站点代码*>  
 
-    -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
+    -   **详细信息：** 指定三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 -   **密钥名称：** SiteName  
 
@@ -883,7 +883,7 @@ ms.locfileid: "56141817"
 
          1 = 安装  
 
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
+    -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。  
 
 -   **密钥名称：** JoinCEIP  
     > [!Note]  
@@ -901,7 +901,7 @@ ms.locfileid: "56141817"
 
 **SQLConfigOptions**  
 
--   **密钥名称：** SQLServerName   
+-   **密钥名称：** SQLServerName  
 
     -   **必需：** 是  
 
@@ -1087,7 +1087,7 @@ ms.locfileid: "56141817"
 
     -   **值：** <*站点代码*>  
 
-    -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
+    -   **详细信息：** 指定三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 -   **密钥名称：** SiteName  
 
@@ -1143,7 +1143,7 @@ ms.locfileid: "56141817"
 
          1 = 安装  
 
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
+    -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。  
 
 -   **密钥名称：** JoinCEIP  
     > [!Note]  
@@ -1161,7 +1161,7 @@ ms.locfileid: "56141817"
 
 **SQLConfigOptions**  
 
--   **密钥名称：** SQLServerName   
+-   **密钥名称：** SQLServerName  
 
     -   **必需：** 是  
 

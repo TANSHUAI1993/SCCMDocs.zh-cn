@@ -2,7 +2,7 @@
 title: 管理分发点
 titleSuffix: Configuration Manager
 description: 使用分发点托管部署到设备和用户的内容。
-ms.date: 07/30/2018
+ms.date: 05/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d5d3a1efd2dc58cca06b18fc4221d52ce58bb7f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3bd5a2b483551fc760b0dc69cd488bf1e3671732
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125285"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498656"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -169,7 +169,8 @@ ms.locfileid: "56125285"
 
 
 ## <a name="bkmk_reassign"></a>重新分配分发点
-<!-- 1306937 --> 许多客户都有大型 Configuration Manager 基础结构，并且正要通过减少主站点或辅助站点来简化自己的环境。 他们仍需要在分支机构位置保留分发点，以向托管客户提供内容。 这些分发点通常包含多个 TB 或更多的内容。 将此内容分发到这些远程服务器所需的时间和网络带宽成本高昂。 
+<!-- 1306937 -->
+许多客户都有大型的 Configuration Manager 基础结构，并且正在减少主站点或辅助站点来简化其环境。 他们仍需要在分支机构位置保留分发点，以向托管客户提供内容。 这些分发点通常包含多个 TB 或更多的内容。 将此内容分发到这些远程服务器所需的时间和网络带宽成本高昂。 
 
 从 1802 版开始，此功能允许向其他主站点重新分配分发点，而无需重新分发内容。 此操作可更新站点系统分配，同时在服务器上保留所有内容。 如果需要重新分配多个分发点，请首先对一个分发点执行此操作。 然后继续对其他服务器执行操作（一次一个）。
 
@@ -190,7 +191,7 @@ ms.locfileid: "56125285"
 
 像添加新角色时那样监视重新分配。 最简单的方法是在几分钟后刷新控制台视图。 将站点代码列添加到视图中。 Configuration Manager 重新分配服务器时会更改此值。 如果尝试在刷新控制台视图之前在目标服务器上执行另一项操作，会出现“找不到对象”错误。 在服务器上开始任何其他操作之前，请确保此过程完成并刷新控制台视图。
 
-重新分配分发点后，请刷新服务器的证书。 新的站点服务器需要使用其公钥重新加密此证书，并将其存储在站点数据库中。 有关详细信息，请参阅分发点属性的“[常规](#general)”选项卡上的“创建自签名证书或导入分发点的公钥基础结构 (PKI) 客户端证书”设置。 
+重新分配分发点后，请刷新服务器的证书。 新的站点服务器需要使用其公钥重新加密此证书，并将其存储在站点数据库中。 有关详细信息，请参阅分发点属性的“[常规](#bkmk_config-general)”选项卡上的“创建自签名证书或导入分发点的公钥基础结构 (PKI) 客户端证书”设置。 
 
 - 对于 PKI 证书，无需创建新证书。 导入相同的 .PFX，并输入密码。  
 
@@ -255,7 +256,22 @@ ms.locfileid: "56125285"
 
 - **启用和配置此分发点的 BranchCache**：选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关详细信息，请参阅 [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)。  
 
-- **调整下载速度以使用未使用的网络带宽(Windows LEDBAT)**<!--1358112-->：自版本 1806 开始，启用分发点可使用网络拥塞控制。 有关详细信息，请参阅 [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat)。 分发点必须运行 Windows Server 版本 1709。 没有客户端先决条件。  
+- **调整下载速度以使用未用网络带宽(Windows LEDBAT)**<!--1358112-->：自版本 1806 开始，启用分发点可使用网络拥塞控制。 有关详细信息，请参阅 [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat)。 获取 LEDBAT 支持要满足的最低要求：<!-- SCCMDocs issue 883 -->  
+
+    - Configuration Manager 版本 1806（常规版本）  
+
+        - Windows Server 版本 1709 或更高版本  
+
+    - 包含更新汇总 (4462978) 的 Configuration Manager 版本 1806 或更高版本  
+
+        - Windows Server 版本 1709 或更高版本
+        - 包含更新 KB4132216 和 KB4284833 的 Windows Server 2016
+
+    - Configuration Manager 版本 1810 或更高版本：
+
+        - Windows Server 版本 1709 或更高版本
+        - 包含更新 KB4132216 和 KB4284833 的 Windows Server 2016
+        - Windows Server 2019  
 
 - **描述**：此分发点角色的可选描述。  
 
@@ -341,10 +357,12 @@ ms.locfileid: "56125285"
 
 - **启用未知计算机支持**：指定是否启用对不受 Configuration Manager 管理的计算机的支持。 有关详细信息，请参阅[准备未知计算机部署](/sccm/osd/get-started/prepare-for-unknown-computer-deployments)。  
 
-- **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍“为客户端启用 PXE 支持，分发点将重新启用 WDS”<!--1357580-->。  
+- **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍使用“为客户端启用 PXE 支持”，分发点会重新启用 WDS。<!--1357580-->  
 
-    > [!Note]
-    >不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
+    > [!Note]  
+    > 在版本 1810 及更低版本中，不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
+    >
+    > 自版本 1902 起，如果你对分发点启用不含 Windows 部署服务的 PXE 响应程序，它现在与 DHCP 服务位于同一服务器上。 <!--3734270-->  
 
 - **当计算机使用 PXE 时要求密码**：为了提高 PXE 部署的安全性，请指定强密码。  
 
@@ -361,7 +379,7 @@ ms.locfileid: "56125285"
 - **网络接口**：指定分发点响应来自所有网络接口或来自特定网络接口的 PXE 请求。 如果分发点响应特定网络接口，然后提供每个网络接口的 MAC 地址。  
 
     > [!Note]  
-    > 更改网络接口时，请重新启动 WDS 服务以确保正确保存配置。 从版本 1806 开始，使用 PXE 响应程序服务时，重新启动“ConfigMgr PXE 响应程序服务”(SccmPxe)<!--SCCMDocs issue 642-->。  
+    > 更改网络接口时，请重新启动 WDS 服务以确保正确保存配置。 自版本 1806 起，使用 PXE 响应程序服务时，重启“ConfigMgr PXE 响应程序服务”(SccmPxe)。<!--SCCMDocs issue 642-->  
 
 - **指定 PXE 服务器响应延迟(秒)**：使用多个 PXE 服务器时，请指定启用了 PXE 的此分发点在响应计算机请求之前应等待的时长。 默认情况下，启用了 Configuration Manager PXE 的分发点会立即响应。  
 
@@ -428,7 +446,7 @@ ms.locfileid: "56125285"
 
 ### <a name="bkmk_config-valid"></a>内容验证  
 
-设置计划以验证分发点上内容文件的完整性。 如果按计划启用内容验证，Configuration Manager 将在计划的时间启动进程。 它验证分发点上的所有内容。 你还可以配置内容验证优先级。 默认情况下，优先级设置为“最低” 。 在验证过程中，提高优先级可能会增加服务器上的处理器和磁盘利用率，但应会更快完成。 
+设置计划以验证分发点上内容文件的完整性。 如果按计划启用内容验证，Configuration Manager 将在计划的时间启动进程。 它根据本地 SMS_PackagesInContLib SCCMDP 类验证分发点上的所有内容。 你还可以配置内容验证优先级。 默认情况下，优先级设置为“最低” 。 在验证过程中，提高优先级可能会增加服务器上的处理器和磁盘利用率，但应会更快完成。 
 
 若要查看内容验证过程的结果，请在“监视”工作区中展开“分发状态”，然后选择“内容状态”节点。 会显示每种软件类型（例如，应用程序、软件更新包以及启动映像）的内容。  
 
@@ -489,4 +507,4 @@ ms.locfileid: "56125285"
 
 - **脉冲模式**：此选项指定站点服务器发送到分发点的数据块的大小。 你也可以指定在两次发送各个数据块之间的时间延迟。 如果必须在连接到分发点的极低带宽网络上发送数据，请使用此选项。 例如，你有每五秒发送 1 KB 数据的约束，而不管某个给定时间的链接速度或其使用率如何。  
 
-- **限制为按小时指定的最大传输速率**：指定此设置以让站点仅使用你配置的时间百分比将数据发送到分发点。 使用此选项时，Configuration Manager 无法识别网络的可用带宽。 它划分了可发送数据的时间。 服务器发送数据的时间很短，在此时间后是不发送数据的时间段。 例如，如果将“限制可用带宽”设置为 50%，Configuration Manager 传输数据一段时间后，在相同的时间内不发送任何数据。 不会管理实际数据量大小或数据块大小。 它只管理发送数据的时间量。  
+- **限制为按小时指定的最大传输速率**：指定此设置可以让站点仅使用你配置的一定比例时间，将数据发送到分发点。 使用此选项时，Configuration Manager 无法识别网络的可用带宽。 它划分了可发送数据的时间。 服务器发送数据的时间很短，在此时间后是不发送数据的时间段。 例如，如果将“限制可用带宽”设置为 50%，Configuration Manager 传输数据一段时间后，在相同的时间内不发送任何数据。 不会管理实际数据量大小或数据块大小。 它只管理发送数据的时间量。  

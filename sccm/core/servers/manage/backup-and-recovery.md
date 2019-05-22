@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fb6a87f965db0a329a4f64918b0efcd5732ea0b
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269136"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501220"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -165,9 +165,9 @@ AfterBackup.bat 文件可以让你在每个备份操作结束时存档备份快�
 ### <a name="back-up-content-files"></a>备份内容文件  
 Configuration Manager 中的内容库是存储所有软件部署的所有内容文件的位置。 内容库位于站点服务器和每个分发点上。 备份站点服务器维护任务不备份内容库或包源文件。 当站点服务器失败时，有关内容库的信息会被还原到站点数据库，但必须还原内容库和包源文件。  
 
--   必须还原内容库，然后才能将内容重新分发到分发点。 当开始执行内容重分发时，Configuration Manager 会将文件从站点服务器的内容库复制到分发点。 有关详细信息，请参阅[内容库](/sccm/core/plan-design/hierarchy/the-content-library)。  
+-   必须先还原内容库，然后才能将内容重新分发到分发点。 当开始执行内容重分发时，Configuration Manager 会将文件从站点服务器的内容库复制到分发点。 有关详细信息，请参阅[内容库](/sccm/core/plan-design/hierarchy/the-content-library)。  
 
--   必须还原包源文件，然后才能更新分发点上的内容。 当开始进行内容更新时，Configuration Manager 会将新文件或修改的文件从包源复制到内容库。 然后，它会将文件复制到关联的分发点。 针对站点数据库运行以下 SQL Server 查询，以查找所有包和应用程序的包源位置：`SELECT * FROM v_Package`。 你可以通过查看包 ID 的前三个字符来确定包源站点。 例如，如果包 ID 为 CEN00001，则源站点的站点代码为 CEN。 在还原包源文件时，必须将它们还原到发生故障之前所在的同一位置。  
+-   必须先还原包源文件，然后才能更新分发点上的内容。 当开始进行内容更新时，Configuration Manager 会将新文件或修改的文件从包源复制到内容库。 然后，它会将文件复制到关联的分发点。 针对站点数据库运行以下 SQL Server 查询，以查找所有包和应用程序的包源位置：`SELECT * FROM v_Package`。 你可以通过查看包 ID 的前三个字符来确定包源站点。 例如，如果包 ID 为 CEN00001，则源站点的站点代码为 CEN。 在还原包源文件时，必须将它们还原到发生故障之前所在的同一位置。  
 
 验证是否在站点服务器的文件系统备份中包含了内容库和包源文件。  
 

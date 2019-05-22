@@ -2,21 +2,21 @@
 title: 配置边界组
 titleSuffix: Configuration Manager
 description: 通过使用边界组以逻辑方式对称为边界的相关网络位置进行整理，帮助客户端查找站点系统
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1062cd5983c3eb0d1353b6387b7d9ee507df3b4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 011f2cb69ec2de6070bc4f2266dbf73a0e1e7843
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132633"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498918"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>为 Configuration Manager 配置边界组
 
@@ -41,7 +41,7 @@ ms.locfileid: "56132633"
     - 首选管理点  
 
         > [!Note]  
-        > 如果使用首选管理点，则为层次结构启用此选项，但不是从边界组配置中启用。 有关详细信息，请参阅[启用对首选管理点的使用](#to-enable-use-of-preferred-management-points)。  
+        > 如果使用首选管理点，则为层次结构启用此选项，但不是从边界组配置中启用。 有关详细信息，请参阅[启用对首选管理点的使用](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer)。  
 
 
 
@@ -185,13 +185,15 @@ ms.locfileid: "56132633"
 
 ### <a name="bkmk_bgoptions"></a>对等下载适用的边界组选项
 
-<!--1356193--> 从版本 1806 开始，边界组包含以下附加设置，可以更好地控制环境中的内容分发：  
+<!--1356193-->
+自版本 1806 起，边界组包含以下附加设置，用户可以更好地控制环境中的内容分发：  
 
 - [允许在此边界组中进行对等下载](#bkmk_bgoptions1)  
 
 - [对等下载期间，只能使用同一子网内的对等设备](#bkmk_bgoptions2)  
 
-<!--1358749--> 版本 1810 显示下列选项：  
+<!--1358749-->
+版本 1810 新增下列选项：  
 
 - [优先选择具有相同子网的对等点的分发点](#bkmk_bgoptions3)  
 
@@ -280,14 +282,15 @@ ms.locfileid: "56132633"
 
 
 ## <a name="management-points"></a>管理点
-<!-- 1324594 --> 从版本 1802 开始，可在边界组之间配置管理点的回退关系。 此行为可以更好地控制客户端使用的管理点。 在边界组属性的“关系”选项卡上，有一个管理点列。 在添加新回退边界组时，当前管理点的回退时间始终为零 (0)。 对于站点默认边界组上的“默认行为”，此行为是相同的。
+<!-- 1324594 -->
+从版本 1802 开始，可在边界组之间配置管理点的回退关系。 此行为可以更好地控制客户端使用的管理点。 在边界组属性的“关系”选项卡上，有一个管理点列。 在添加新回退边界组时，当前管理点的回退时间始终为零 (0)。 对于站点默认边界组上的“默认行为”，此行为是相同的。
 
 在此之前，当安全网络中有一个受保护的管理点，会出现一个常见问题。 主要公司网络上的客户端接收策略，其中包括此受保护的管理点，即使它们无法通过防火墙与管理点进行通信。 若要解决此问题，请使用“从不回退”选项，以确保客户端仅回退到它们可以与之通信的管理点。
 
 当站点升级到版本 1802 时，Configuration Manager 会将所有 Internet 管理点添加到站点默认边界组。 （此组服务器不包括仅面向 internet 的管理点。）此升级行为可确保旧版客户端继续与管理点通信。 若要充分利用此功能，请将管理点移到所需的边界组。
 
 > [!Note]  
-> 如果启用站点默认边界组中的分发点进行回退，且一个管理点同在一个分发点上，该站点还会将此管理点添加到站点默认边界组。<!--VSO 2841292-->  
+> 如果你在站点默认边界组中启用分发点进行回退，且管理点与分发点位于同一位置，那么站点还会将此管理点添加到站点默认边界组。<!--VSO 2841292-->  
 
 如果客户端在未分配任何管理点的边界组中，站点会向客户端提供管理点的完整列表。 此行为可确保客户端始终收到管理点列表。
 

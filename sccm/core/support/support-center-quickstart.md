@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 026c6e5646983f815572974d5aaa67746178c03b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f63193f9d4c9c754a56186f7a36cb9fabaf95725
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156451"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500736"
 ---
 # <a name="support-center-quickstart-guide"></a>支持中心快速入门指南
 
@@ -36,7 +36,7 @@ ms.locfileid: "56156451"
 
 
 
-## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>步骤 1：在本地客户端上创建一个数据包
+## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>步骤 1：在本地客户端上创建数据包
 
 1.  在 Configuration Manager 客户端上安装支持中心。  
 
@@ -48,7 +48,7 @@ ms.locfileid: "56156451"
 
 
 
-## <a name="step-2-view-the-data-bundle-using-support-center-viewer"></a>步骤 2：使用支持中心查看器查看数据捆绑包
+## <a name="step-2-view-the-data-bundle-using-support-center-viewer"></a>步骤 2:使用支持中心查看器查看数据捆绑包
 
 1.  启动“Support Center 查看器” 。 此操作可在安装支持中心的任何计算机上发生。  
 

@@ -2,7 +2,7 @@
 title: 将客户端部署到 Windows
 titleSuffix: Configuration Manager
 description: 了解如何将 Configuration Manager 客户端部署到 Windows 计算机。
-ms.date: 07/30/2018
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 639521ecf0084b40bf61ac3d635ab4f5e55d1321
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3260fb68d9ce334061fc39fe8d40cd68d109655e
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123839"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214719"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
@@ -38,7 +38,7 @@ ms.locfileid: "56123839"
 
 - 通过为特定集合或集合内的资源运行“客户端请求安装向导”来启动客户端请求安装。  
 
-- 使用“客户端请求安装向导”将 Configuration Manager 客户端安装到[查询](/sccm/core/servers/manage/queries-technical-reference)结果。 为了使安装成功，查询返回的其中一个项目必须为“系统资源”类中的“ResourceID”属性。   
+- 使用“客户端请求安装向导”将 Configuration Manager 客户端安装到[查询](/sccm/core/servers/manage/introduction-to-queries)结果。 为了使安装成功，查询返回的其中一个项目必须为“系统资源”类中的“ResourceID”属性。   
 
 如果站点服务器无法与客户端计算机联系或者无法启动安装过程，则它每小时都会自动重试安装。 服务器不断重试长达七天。  
 

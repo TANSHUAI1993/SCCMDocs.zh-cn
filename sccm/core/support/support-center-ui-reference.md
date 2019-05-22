@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 970d2fbf69a7c4c91a55cadf5d420988b2207ca2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7858497f1ff49e5068da066cc481ca5fd38f825f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131092"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500689"
 ---
 # <a name="support-center-user-interface-reference"></a>支持中心用户界面引用
 
@@ -229,13 +229,13 @@ ms.locfileid: "56131092"
 
     - **超时内容请求**：如果任何内容位置请求运行的时间过长，此操作停止该请求。  
 
-  - **应用程序部署评估**：启动评估已部署应用程序的任务。  
+  - **应用程序部署评估**：启动任务来评估已部署的应用程序。  
 
-  - **软件更新部署评估**：启动评估已部署软件更新的任务。  
+  - **软件更新部署评估**：启动任务来评估已部署的软件更新。  
 
-  - **软件更新源扫描**：启动扫描更新源位置的任务。  
+  - **软件更新源扫描**：启动任务来扫描更新源位置。  
 
-  - **Windows Installer 源列表更新**：启动更新 Windows Installer (MSI) 源位置的任务。  
+  - **Windows Installer 源列表更新**：启动任务来更新 Windows Installer (MSI) 安装的源位置。  
 
 #### <a name="content-view"></a>内容视图
 查看加载到客户端上的应用程序、包和更新。 选择某个应用程序、包或更新时，你可以查看关于该内容的详细信息。 还可以对某些应用程序执行以下操作：  
@@ -272,7 +272,7 @@ ms.locfileid: "56131092"
 
  - **时间**：客户端引发该事件的时间  
  - **主题类型**：状态消息类型  
- - **主题 ID**：状态消息的 ID，用于映射日志文件中的事件  
+ - **主题 ID**：状态消息的 ID，用于映射到日志文件中的事件  
  - **主题 ID 类型**：状态消息的子类型  
  - **状态 ID**：当前监视的操作的结果  
  - **详细信息**和**事件数据**：有关此视图中显示的状态消息的详细信息。 状态详细信息有时可能为空。  
@@ -303,9 +303,9 @@ ms.locfileid: "56131092"
 
  - **软件清单周期**：触发用于收集软件清单数据的客户端任务  
 
- - **软件计量报告周期**：触发用于生成软件计量报告并将报告发送至管理点的客户端任务。 在“SWMTRReportGen.log”中跟踪此任务的进度。
+ - **软件计量报告周期**：触发用于生成软件计数报告并将报告发送至管理点的客户端任务。 在“SWMTRReportGen.log”中跟踪此任务的进度。
 
- - **发送队列中未发送的状态消息**：触发刷新状态消息队列的客户端任务。
+ - **发送队列中未发送的状态消息**：触发客户端任务来刷新状态消息队列。
 
  - Advanced  
      - 硬件清单周期（完全重新同步）  
@@ -469,9 +469,9 @@ ms.locfileid: "56131092"
 
 #### <a name="error-lookup"></a>错误查找
 输入错误代码以在当前打开的日志文件中搜索该错误代码。 请使用以下错误代码格式：
- - **32 位整数（有符号）**：例如 `-2147024891`  
- - **32 位整数（无符号）**：例如 `2147942405`  
- - **32 位十六进制**：例如 `0x80070005`  
+ - **32 位整数（有符号）**：例如，`-2147024891`  
+ - **32 位整数（无符号）**：例如，`2147942405`  
+ - **32 位十六进制**：例如，`0x80070005`  
 
 #### <a name="decode-certificate"></a>对证书进行解码
 在“对证书进行解码”对话框中，粘贴客户端上任何证书的串行化证书值。 在注册表、日志文件或 WMI 中查找此值。 选择“进程”查看证书上的常规信息和详细信息。 此信息包括其证书路径。 选择“导出”将证书导出为“.cer”文件。

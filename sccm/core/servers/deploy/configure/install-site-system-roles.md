@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d9028077d2d8fdae624ae7c10bfb7bf307f97a2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 991db8c7076f9f76515aba17df6339c133f1d63e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128307"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498593"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>安装 System Center Configuration Manager 的站点系统角色
 
@@ -24,9 +24,9 @@ ms.locfileid: "56128307"
 
 System Center Configuration Manager 控制台具有可用于安装站点系统角色的两个向导：  
 
--   **添加站点系统角色向导**：使用此向导将站点系统角色添加到站点中的现有站点系统服务器。  
+-   **添加站点系统角色向导**：此向导可用于将站点系统角色添加到站点中的现有站点系统服务器。  
 
--   **创建站点系统服务器向导**：使用此向导将新服务器指定为站点系统服务器，然后在该服务器上安装一个或多个站点系统角色。 此向导与“添加站点系统角色向导” 相同，只是你必须在第一页上指定要使用的服务器的名称以及你要在其进行安装的站点。  
+-   **创建站点系统服务器向导**：此向导可用于将新服务器指定为站点系统服务器，然后在服务器上安装一个或多个站点系统角色。 此向导与“添加站点系统角色向导” 相同，只是你必须在第一页上指定要使用的服务器的名称以及你要在其进行安装的站点。  
 
 当你将站点系统角色安装到远程计算机（包括 SMS 提供程序的实例）上时，会将远程计算机的计算机帐户添加到站点服务器上的本地组。 在域控制器上安装站点后，站点服务器上的组是域组而不是本地组。 在这种情况下，站点系统角色计算机重启或远程计算机帐户的 Kerberos 票证刷新前，远程站点系统角色不会运行。 有关详细信息，请参阅 [System Center Configuration Manager 中使用的帐户](../../../../core/plan-design/hierarchy/accounts.md)。  
 

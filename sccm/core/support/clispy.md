@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 60575413-44fe-43bb-bcfb-39ec5ed5055b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b90628e4f1e4a1405c90d17fc43628df00070978
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: adb826a13e96947bba29a3a0928301517d446bc6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123376"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495785"
 ---
 # <a name="client-spy"></a>客户端 Spy
 

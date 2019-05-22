@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 679f62bb38bab06c074c97e92ff7d3adcae80f1b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130786"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501447"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
 
@@ -109,9 +109,9 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 可以配置下列发现作用域，控制此方法搜索信息的方式：  
 
--   **位置**：如果要搜索一个或多个 Active Directory 容器，请使用位置。 此作用域选项支持对指定的 Active Directory 容器的递归搜索。 此过程搜索指定容器下的每个子容器。 此过程将继续，直至找不到其他子容器为止。  
+-   **位置**：若要搜索一个或多个 Active Directory 容器，请使用位置。 此作用域选项支持对指定的 Active Directory 容器的递归搜索。 此过程搜索指定容器下的每个子容器。 此过程将继续，直至找不到其他子容器为止。  
 
--   **组**：如果要搜索一个或多个特定 Active Directory 组，请使用组。 可以配置“Active Directory 域”以使用默认域和林，或将搜索范围限制为单独的域控制器。 此外，你可以指定要搜索的一个或多个组。 如果未指定至少一个组，则会搜索在指定“Active Directory 域”  位置中找到的所有组。  
+-   **组**：若要搜索一个或多个特定 Active Directory 组，请使用组。 可以配置“Active Directory 域”以使用默认域和林，或将搜索范围限制为单独的域控制器。 此外，你可以指定要搜索的一个或多个组。 如果未指定至少一个组，则会搜索在指定“Active Directory 域”  位置中找到的所有组。  
 
 > [!CAUTION]  
 >  在配置发现作用域时，请仅选择必须发现的组。 提供此建议是因为 Active Directory 组发现会尝试发现发现作用域中每个组的每个成员。 大组的发现可能需要使用大量的带宽和 Active Directory 资源。  
@@ -267,7 +267,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 使用此方法发现网络的拓扑，并在拥有 IP 地址的网络上发现设备。 网络发现通过查询以下实体在网络中搜索启用了 IP 资源： 
 - 运行 DHCP 的 Microsoft 实现的服务器
 - 网络路由器中的地址解析协议 (ARP) 缓存
-- 启用了 SNMP 的设备
+- 已启用 SNMP 的设备
 - Active Directory 域  
 
 使用网络发现前，必须指定要运行的发现的*级别*。 你也需要配置一个或多个发现机制，以使网络发现能够查询网络段或设备。 你也可以配置有助于控制网络上的发现操作的设置。 最后，你可以定义网络发现运行的一个或多个计划。  
@@ -377,7 +377,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 > [!NOTE]  
 >  子网配置不限制**域**发现选项发现的对象。  
 
-#### <a name="snmp-community-names"></a>SNMP 团体名称  
+#### <a name="snmp-community-names"></a>SNMP 社区名称  
 
 要使网络发现能够成功查询 SNMP 设备，请使用设备的社区名称配置网络发现。 如果未使用 SNMP 设备的社区名称来配置网络发现，则设备会拒绝查询。  
 

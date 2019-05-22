@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 04/18/2019
+ms.date: 05/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0251371b8a0e9fa41dc5008beffa87977c47d7c6
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 73fe5e23cd23c874e56b0d71cb6988d815bcbc5c
+ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287051"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974103"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -46,6 +46,25 @@ ms.locfileid: "62287051"
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
 
+
+## <a name="may-2019"></a>2019 年 5
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation"></a>Intune 策略更新身份验证方法和公司门户应用安装
+
+<!-- 1927359 -->
+
+注册的设备已通过设置助理通过 Apple 的企业设备注册方法之一，Intune app store 中的用户手动安装它时，不支持公司门户。 在注册过程中验证使用 Apple 设置助理时，此更改才适用。 它只影响通过以下方法注册的 iOS 设备：  
+
+- Apple 配置器
+- Apple 业务经理
+- Apple School Manager
+- Apple 设备注册计划 (DEP)
+
+如果用户从应用商店安装公司门户应用，然后尝试注册这些设备通过它，他们将收到一个错误。 此外，**标识设备**公司门户应用中的屏幕很快就会过时。
+
+若要在已注册 DEP 设备上安装公司门户，请将其推送作为托管应用的应用配置策略。 此过程的详细信息，请参阅[将设置应用于使用应用配置策略在 Configuration Manager 中的 iOS 应用](/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies)。
 
 
 ## <a name="april-2019"></a>2019 年 4 月

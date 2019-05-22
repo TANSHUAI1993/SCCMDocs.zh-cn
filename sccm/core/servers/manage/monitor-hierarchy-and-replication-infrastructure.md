@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7a9fcf06630c76fc3e1123fa56861c4de224521
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: dcc3a43f1cc2393a66fe50ef74e864afeb27704c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129368"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501054"
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的监视层次结构和复制基础结构
 
@@ -89,7 +89,7 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 ###  <a name="BKMK_SH_Node"></a> 关于站点层次结构节点  
 “监视”工作区中的“站点层次结构”节点提供 Configuration Manager 层次结构和站点间链接的概述。 你可以使用两个视图：  
 
--   **层次结构关系图**：此视图将层次结构显示为一个拓扑图，该拓扑图经过简化，仅显示重要信息。  
+-   **层次结构关系图**：此视图将层次结构显示为，简化后仅显示重要信息的拓扑图。  
 
 -   **地理视图**：此视图在显示你配置的站点位置的地图上显示你的站点。  
 
@@ -106,9 +106,9 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
  下列选项会修改层次结构关系图：  
 
--   **组**：你可以配置在层次结构关系图显示中触发更改的主站点和辅助站点的数量，该关系图将这些站点合并为一个对象。 如果站点合并为一个对象，你将看到站点的总数，以及状态消息和站点状态的高级汇总。 组配置不影响地理视图。  
+-   **组**：可以配置触发层次结构关系图的显示内容更改的主站点数和辅助站点数，关系图将这些站点合并为一个对象。 如果站点合并为一个对象，你将看到站点的总数，以及状态消息和站点状态的高级汇总。 组配置不影响地理视图。  
 
--   **收藏站点**：你可以将单独的站点指定为收藏站点。 星形图标在层次结构关系图中标识收藏站点。 当你使用组时，收藏站点不会与其他站点合并，并始终会单独显示。  
+-   **收藏站点**：可以将各个站点指定为最常用站点。 星形图标在层次结构关系图中标识收藏站点。 当你使用组时，收藏站点不会与其他站点合并，并始终会单独显示。  
 
 #### <a name="geographical-view"></a>地理视图  
  地理视图显示每个站点在地图上的位置。 只会显示与位置一起配置的站点。 在此视图中选择站点时，将显示指向父站点或子站点的复制链接。 与层次结构关系图视图不同，你无法在此视图中显示站点状态消息或复制链接详细信息。  
@@ -118,7 +118,7 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
 下列选项修改地理视图。  
 
--   **站点位置**：你可以指定每个站点的地理位置。 你可以将位置指定为街道地址、位置名称（例如城市名称），或者通过经纬度坐标来指定位置。 例如，要使用华盛顿雷蒙德市的经纬度，你将指定 **N 47 40 26.3572 W 122 7 17.4432** 作为站点位置。 你无需为经纬度的度、分或秒指定符号。 Configuration Manager 使用必应地图在地理视图上显示位置。 这样，你将能选择相对于某个地理位置查看你的层次结构，从而可深入了解可能影响特定站点或站点内复制的区域问题。  
+-   **站点位置**：可以指定每个站点的地理位置。 你可以将位置指定为街道地址、位置名称（例如城市名称），或者通过经纬度坐标来指定位置。 例如，要使用华盛顿雷蒙德市的经纬度，你将指定 **N 47 40 26.3572 W 122 7 17.4432** 作为站点位置。 你无需为经纬度的度、分或秒指定符号。 Configuration Manager 使用必应地图在地理视图上显示位置。 这样，你将能选择相对于某个地理位置查看你的层次结构，从而可深入了解可能影响特定站点或站点内复制的区域问题。  
 
      在指定位置时，你可以使用“位置”  框来搜索层次结构中的特定站点。 选中站点后，在“位置”  列中输入城市名或街道地址作为位置。 Configuration Manager 使用必应地图解析位置。  
 

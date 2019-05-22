@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70612d3f60802892aa99bbc4fc006b9385cb8756
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: b4f69d686a48af3c6e710c6aff592d71de1dbff1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737325"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496988"
 ---
 # <a name="the-cdlatest-folder-for-configuration-manager"></a>Configuration Manager 的 CD.Latest 文件夹
 
@@ -62,7 +62,8 @@ CD.Latest 文件夹包含一个名为 Redist 的文件夹，该文件夹包含�
 要通过安装新的管理中心站点来扩展独立主站点时，使用来自主站点的 CD.Latest 文件夹中的安装程序和源文件。 此过程使用与主站点的版本匹配的安装源文件。 有关详细信息，请参阅[扩展独立主站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand)。
 
 ### <a name="install-a-secondary-site"></a>安装辅助站点
-<!-- SCCMDocs-pr issue #3164 -->要在安装了一个或多个控制台中更新的主站点下安装新的辅助站点时，使用来自主站点的 CD.Latest 文件夹中的源文件。 
+<!-- SCCMDocs-pr issue #3164 -->
+若要在安装了一个或多个控制台中更新的主站点下安装新的辅助站点，请使用主站点中 CD.Latest 文件夹内的源文件。 
 
 有关详细信息，请参阅[安装辅助站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary)。 
 

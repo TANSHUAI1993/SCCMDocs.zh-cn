@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2188ce295f999b392166c99133822ad8fc1e441e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 577fb36610924f2659c35d59d4817363f521e6c4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125232"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496548"
 ---
 # <a name="deployment-monitoring-tool"></a>部署监视工具
 

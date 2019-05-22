@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f14953b7c2008f6d0e9e5715a8096126e56b0b7e
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: f86fccc965fd0d6147c55a7c9a3ad25b81e95aff
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881956"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443098"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -494,9 +494,9 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 
  除了 Configuration Manager 日志文件外，请在运行网络设备注册服务的服务器和承载证书注册点的服务器上的事件查看器中查看 Windows 应用程序日志。 例如，从“NetworkDeviceEnrollmentService”源中查找消息。 你还可以使用下列日志文件：  
 
--   网络设备注册服务的 IIS 日志文件：**&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   网络设备注册服务的 IIS 日志文件：%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1  
 
--   证书注册点的 IIS 日志文件：**&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   证书注册点的 IIS 日志文件：%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1  
 
 -   网络设备注册策略日志文件： **mscep.log**  
 

@@ -2,21 +2,21 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 04/17/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbc38cdb72a2c8f595eed88e0b4b5b5e29374597
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673643"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673425"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -173,9 +173,9 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>指定一个自定义端口用于对等唤醒
 <!--3605925-->
-现在可以为唤醒代理指定一个自定义端口号。 在客户端设置中，在“电源管理”组中，配置“唤醒 LAN 端口号(UDP)”的设置。  
+***[已更新]***：现在可以为唤醒代理指定自定义端口号。 在客户端设置中，在“电源管理”组中，配置“唤醒 LAN 端口号(UDP)”的设置。  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+有关详细信息，请参阅[如何配置 LAN 唤醒](/sccm/core/clients/deploy/configure-wake-on-lan)。
 
 
 
@@ -218,17 +218,30 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 此功能适用于任何受支持的 Windows 10 版本，且仅适用于就地升级任务序列。 
 
 
-### <a name="improvements-to-task-sequence-media-creation"></a>对任务序列媒体创建的改进 
+### <a name="improvements-to-task-sequence-media-creation"></a>对任务序列媒体创建的改进
+
 <!--3556027, fka 1359388-->
-此版本包括几项改进，有助于用户更好地创建和管理任务序列媒体。 <!-- For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media). -->
+***[已更新]***：此版本包括几项改进，有助于用户更好地创建和管理任务序列媒体。 有关详细信息，请参阅下列关于特定媒体类型的文章：
+
+- [创建独立媒体](/sccm/osd/deploy-use/create-stand-alone-media)
+- [创建预留媒体](/sccm/osd/deploy-use/create-prestaged-media)
+- [创建可启动媒体](/sccm/osd/deploy-use/create-bootable-media)
+- [创建捕获媒体](/sccm/osd/deploy-use/create-capture-media)
 
 #### <a name="specify-temporary-storage"></a>指定临时存储
-创建任务序列媒体时，现在可以自定义站点用作临时存储数据的位置。 此过程可能需要大量临时驱动器空间。 此更改可以让你更灵活地选择存储这些临时文件的位置。 
+
+创建任务序列媒体时，现在可以自定义站点用作临时存储数据的位置。 此过程可能需要大量临时驱动空间。 此更改可以让你更灵活地选择存储这些临时文件的位置。
 
 在“创建任务序列媒体向导”中，指定“暂存文件夹”的位置。 默认情况下，此位置类似于以下路径：`%UserProfile%\AppData\Local\Temp`。
 
 #### <a name="add-a-label-to-the-media"></a>向媒体添加标签
+
 现在可以向任务序列媒体添加标签。 此标签可帮助你在创建媒体后更好地识别媒体。 在“创建任务序列媒体向导”中，指定“媒体标签”。
+
+#### <a name="include-autoruninf-file-on-media"></a>在媒体上添加 autorun.inf 文件
+
+<!-- 4090666 -->
+当你创建任务序列媒体时，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 如果情况需要，仍然可以包括该文件。
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>导入 OS 映像的单个索引
@@ -254,8 +267,9 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>对运行 PowerShell 脚本任务序列步骤的改进
+
 <!--3556028, fka 1359389-->
-“运行 PowerShell 脚本”任务序列步骤现在包括以下改进：  
+***[已更新]***：“运行 PowerShell 脚本”任务序列步骤现在包括以下改进：  
 
 - 现在，可以在此步骤中直接输入 Windows PowerShell 代码。 此更改允许你在任务序列期间运行 PowerShell 命令，而无需先使用脚本创建和分发包。
 
@@ -271,17 +285,18 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 - 要在任务序列日志中包含脚本参数，请将任务序列变量 OSDLogPowerShellParameters 设置为“TRUE”。 默认情况下，参数不在日志中。  
 
-- 提供与[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤功能相似的其他改进。 例如，指定备用用户凭据或指定超时值。 
+- 提供与[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤功能相似的其他改进。 例如，指定备用用户凭据或指定超时值。
 
 > [!Important]  
 > 若要利用 Configuration Manager 的此项新功能，更新站点后，还请将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+有关详细信息，请参阅[运行 PowerShell 脚本](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)。
 
 
 ### <a name="other-improvements-to-os-deployment"></a>对 OS 部署的其他改进
+
 <!--3633146,3641475,3654172,3734270-->
-此版本包括对 OS 部署的以下改进：
+***[已更新]***：此版本包括以下对 OS 部署的改进：
 
 - 任务序列中新增了“查看”默认操作。 <!--3633146-->  
 
@@ -296,20 +311,13 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 ## <a name="bkmk_userxp"></a>软件中心
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>使用对话框窗口替换 toast 通知
+
 <!--3555947-->
-有时用户看不到有关重启或必需的部署的 Windows toast 通知。 然后，他们也看不到推迟提醒体验。 当客户端临近截止时间时，此行为可能导致不佳的用户体验。
+***[已更新]***：有时，用户看不到有关重启或必需部署的 Windows toast 通知。 然后，他们也看不到推迟提醒体验。 当客户端临近截止时间时，此行为可能导致不佳的用户体验。
 
-现在，在部署需要重启或要求进行软件更改时，可以选择使用侵入性更强的对话框窗口。 
+现在，在部署需要重启或要求进行软件更改时，可以选择使用侵入性更强的对话框窗口。
 
-#### <a name="software-changes-are-required"></a>需要更改软件
-在部署软件向导的“用户体验”页上，选择**要在软件中心显示的用户通知选项并显示所有通知**。 然后，选择以下选项：**需要更改软件时，向用户显示一个对话框窗口而不是 toast 通知**。  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### <a name="restart-required"></a>需要重启
-在客户端设置的“计算机重启”组中，启用以下选项：**当部署要求重启时，向用户显示一个对话框窗口而不是 toast 通知**。  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+有关详细信息，请参阅[为软件中心制定计划](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)
 
 
 ### <a name="configure-user-device-affinity-in-software-center"></a>在软件中心中配置用户设备相关性
@@ -345,7 +353,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3734525-->
 [已更新] 调整客户端通过 [Windows 10 维护服务](/sccm/osd/deploy-use/manage-windows-as-a-service)安装功能更新的优先级。 默认情况下，客户端现在安装具有较高处理优先级的功能更新。 
 
-使用客户端设置来配置此选项。 在“软件更新”组中，配置以下设置：为功能更新指定线程优先级。 
+使用客户端设置来配置此选项。 在“软件更新”组中，配置以下设置：为功能更新指定线程优先级。
 
 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#software-updates)。 
 
@@ -384,9 +392,9 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>生命周期仪表板上的 Office 产品
 <!--3556026-->
-产品生命周期仪表板现包括 Office 2003 到 Office 2016 已安装版本的信息。 数据在站点运行生命周期摘要任务后（即每隔 24 小时）显示。
+***[已更新]***：产品生命周期仪表板现包括已安装的 Office 2003 至 Office 2016 版本的信息。 数据在站点运行生命周期摘要任务后（即每隔 24 小时）显示。
 
-<!-- For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). -->
+有关详细信息，请参阅[使用产品生命周期仪表板](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)。
 
 
 
@@ -398,18 +406,18 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>分阶段部署专用监视
 <!--3555949-->
-分阶段部署现具有其自己的专用监视节点。 此节点可以更轻松地标识创建的分阶段部署，然后导航到分阶段部署监视视图。 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“分阶段部署”节点。 它将显示分阶段部署列表。
+***[已更新]***：分阶段部署现有自己的专用监视节点。 此节点可以更轻松地标识创建的分阶段部署，然后导航到分阶段部署监视视图。 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“分阶段部署”节点。 它将显示分阶段部署列表。
 
-<!-- For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). -->
+有关详细信息，请参阅[分阶段部署监视视图](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor)。 
 
 
 ### <a name="improvement-to-phased-deployment-success-criteria"></a>对分阶段部署成功标准的改进
 <!--3555946-->
-为分阶段部署中某个阶段的成功指定额外的标准。 此标准现在也可以是成功部署的设备数，而不仅仅是百分比。 当集合的大小可变并且你在前进到下一阶段前已有一定数量的设备成功部署时，此选项很有用。 
+***[已更新]***：指定分阶段部署中额外的阶段成功标准。 此标准现在也可以是成功部署的设备数，而不仅仅是百分比。 当集合的大小可变并且你在前进到下一阶段前已有一定数量的设备成功部署时，此选项很有用。 
 
-为任务序列、软件更新或应用程序创建分阶段部署。 然后，在向导的“设置”页上，选择以下选项作为第一阶段成功的标准：“成功部署的设备数”。 
+为任务序列、软件更新或应用程序创建分阶段部署。 然后，在向导的“设置”页上，选择以下选项作为第一阶段成功的标准：“成功部署的设备数”。
 
-<!-- For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). -->
+有关详细信息，请参阅[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。
 
 
 

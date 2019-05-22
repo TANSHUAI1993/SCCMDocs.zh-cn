@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e31e56948d30b95c6de4d9640985c4387bbe7058
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 666cb86e4acbb46956f768655637d3185fc5df71
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124960"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497181"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -77,26 +77,26 @@ ms.locfileid: "56124960"
 | 功能          | 添加为预发行功能 | 添加为完整版功能 |  
 |------------------|----------------------|-------------------------|
 | SMS 提供程序 API <!--1359052--> | 版本 1810 | ![尚未发行](media/red_x.png) |
-| [增强的 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
-| [适用于共同管理的设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
+| [增强型 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
+| [适用于共同管理设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [SCAP 扩展](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
 | [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
 | [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | 版本 1802 | 版本 1806 |
 | [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  版本 1710 | 版本 1802 |
 | [Windows Defender 攻击防护](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | 版本 1710 | 版本 1802 |
-| [用于条件访问符合性策略的“设备运行状况证明”评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | 版本 1710 | 版本 1802 |
+| [用于条件访问符合性策略的设备运行状况证明评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | 版本 1710 | 版本 1802 |
 | [创建并运行 Windows PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | 版本 1706 | 版本 1802 |
 | [管理 Microsoft Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | 版本 1706 | 版本 1710 |
 | [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | 版本 1702 | ![尚未发行](media/red_x.png) |
 | [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | 版本 1702 | 版本 1710 |
-| [在安装应用程序之前检查运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | 版本 1702 | 版本 1706 |
-| [数据仓库服务点](/sccm/core/servers/manage/data-warehouse)<!--1277922--> | 版本 1702 | 版本 1706 |
+| [在安装应用程序前检查是否有正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | 版本 1702 | 版本 1706 |
+| [数据仓库服务点](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | 版本 1702 | 版本 1706 |
 | [用于向客户端进行内容分发的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | 版本 1610 | 版本 1710 |
 | [云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | 版本 1610 | 版本 1802 |
 | [Azure Log Analytics 连接器](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | 版本 1606 | 版本 1802 |
-| [维护群集感知集合（为服务器组提供服务）](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | 版本 1602 | ![尚未发行](media/red_x.png) |
-| [对由 Configuration Manager 管理的电脑进行条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | 版本 1602 | 版本 1702 |
+| [维护群集感知集合（维护服务器组）](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | 版本 1602 | ![尚未发行](media/red_x.png) |
+| [用于 Configuration Manager 管理的电脑的条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | 版本 1602 | 版本 1702 |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 

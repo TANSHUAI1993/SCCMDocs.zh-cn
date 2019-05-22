@@ -2,7 +2,7 @@
 title: 关于升级、更新和安装
 titleSuffix: Configuration Manager
 description: 了解在管理 Configuration Manager 基础结构时，“安装”、“更新”和“升级”三个术语之间的差异。
-ms.date: 1/11/2017
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df4daee11a72100debb93270fc6e51ab1a5e2622
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 53803d154a871739c5dd8cf7eaff4eebf92fd651
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140038"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083421"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>关于站点和层次结构基础结构的升级、更新和安装
 
@@ -34,11 +34,11 @@ ms.locfileid: "56140038"
 
 
 ## <a name="update"></a>更新
-“更新”用于安装 System Center Configuration Manager 的控制台中更新，还用于带外更新，带外更新指无法从 Configuration Manager 控制台中传递的更新。 控制台中更新可修改 Current Branch 站点（或 Technical Preview 站点）的版本，使其可运行更高版本。 例如，如果你的站点运行版本 1606，可安装版本 1610 的更新。 更新还可为已知问题安装修补程序，无需修改站点版本。      
+“更新”用于安装 System Center Configuration Manager 的控制台中更新，还用于带外更新，带外更新指无法从 Configuration Manager 控制台中传递的更新。 控制台中更新可修改 Current Branch 站点（或 Technical Preview 站点）的版本，使其可运行更高版本。 例如，如果站点运行版本 1806，你可以安装版本 1810 的更新。 更新还可以安装已知问题的修补程序，无需修改站点版本。      
 
 通常情况下，更新会将安全修补程序、质量改进和新功能添加到现有部署。 如果使用 Technical Preview Branch，则更新可安装更新版本的 Technical Preview。
 -   从层次结构的顶层站点开始，选择安装控制台中更新的时间。
-- 可安装能从控制台中获取的任何更新。 例如，如果站点运行版本 1602，并且同时提供了 1606 和 1610，则应考虑安装版本 1610，因为每个版本都包括了以前发布的版本中首次提供的功能。
+- 可安装能从控制台中获取的任何更新。 例如，如果站点运行版本 1802，并且同时提供了 1806 和 1810，你应考虑安装版本 1810，因为每个版本都包括了以前发布的版本中首次提供的功能。
 - 顶层站点完成安装新更新后，子主站点将自动启动更新过程。 但是，可设置[服务时段](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers)以控制更新的执行时间。
 - 辅助站点不会自动安装更新。 相反，请从 Configuration Manager 控制台中手动启动更新。
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6adb326a484976335d114277e095884e107f9906
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: db33a822c762922a04cbfe695435950023384f93
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124790"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501005"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>安装更新时测试数据库升级
 
@@ -54,7 +54,7 @@ ms.locfileid: "56124790"
 
 4. 还原数据库副本之后，从包含要更新到的版本的源文件的 CD.Latest 文件夹中运行安装程序。 运行安装程序时，使用 **/TESTDBUPGRADE** 命令行选项。 如果托管数据库副本的 SQL Server 实例不是默认实例，请提供命令行参数以确定托管站点数据库副本的实例。   
 
-   例如，已有数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行：Setup.exe /TESTDBUPGRADE DBtest\CM_ABC。  
+   例如，已有数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 若要测试此站点数据库副本的升级，请使用下列命令行：Setup.exe /TESTDBUPGRADE DBtest\CM_ABC。  
 
    可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：SMSSETUP\BIN\X64。  
 

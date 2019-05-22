@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc4958e83c73da91aa31fb8ac0e1b84375218ac9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c55b7b5bc4effdb1bf1f13dbe0248aa56ad2abe1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128198"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499962"
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-configuration-manager"></a>如何使用 Configuration Manager 中的资源浏览器来查看硬件清单
 
@@ -58,7 +58,8 @@ ms.locfileid: "56128198"
 
 
 ## <a name="bkmk_bigint"></a> 大整数值的用法
-<!--1357880--> 在 Configuration Manager 版本 1802 及更早版本中，硬件清单对大于 4,294,967,296 (2^32) 的整数有限制。 对于诸如以字节为单位的硬盘大小之类的属性，可以达到此限制。 管理点不会处理超过此限制的整数值，因此数据库中不会存储任何值。 
+<!--1357880-->
+在 Configuration Manager 版本 1802 及更低版本中，硬件清单的限制为，整数不超过 4,294,967,296 (2^32)。 对于诸如以字节为单位的硬盘大小之类的属性，可以达到此限制。 管理点不会处理超过此限制的整数值，因此数据库中不会存储任何值。 
 
 从版本 1806 开始，此限制增加到 18,446,744,073,709,551,616 (2^64)。 
 

@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b6c7dac285493e4887b254c7d6fe7432840d6bd
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 735b5d4d50c09edaeef85a72f6a5aa5f82241762
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524126"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501283"
 ---
 # <a name="upgrade-to-configuration-manager"></a>升级到 Configuration Manager
 
@@ -190,7 +190,7 @@ Configuration Manager 无法升级使用网络负载均衡 (NLB) 群集来托管
 
 有关语言包的详细信息，请参阅[语言包](/sccm/core/servers/deploy/install/language-packs)。  
 
-#### <a name="review-considerations-for-site-upgrades"></a>查看站点升级考虑事项
+#### <a name="review-considerations-for-site-upgrades"></a>查看站点升级注意事项
 升级站点时，某些功能和配置会重置为默认配置。 若要帮助准备这些更改以及相关更改，请参阅[升级注意事项](#bkmk_considerations)。  
 
 #### <a name="create-a-backup-of-the-site-database-at-the-central-administration-site-and-primary-sites"></a>在管理中心站点和主站点上创建站点数据库备份
@@ -348,7 +348,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 2. 还原数据库副本之后，请从 Configuration Manager Current Branch 的源媒体中运行安装程序。 运行安装程序时，使用 `/TESTDBUPGRADE` 命令行选项。 如果托管数据库副本的 SQL Server 实例不是默认实例，还请提供命令行参数以确定托管站点数据库副本的实例。  
 
-    例如，你计划升级数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行：`Setup.exe /TESTDBUPGRADE DBtest\CM_ABC`  
+    例如，你计划升级数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 若要测试此站点数据库副本的升级，请使用下列命令行：`Setup.exe /TESTDBUPGRADE DBtest\CM_ABC`  
 
     Setup.exe 在 Configuration Manager 源媒体上位于以下位置：`SMSSETUP\BIN\X64`  
 

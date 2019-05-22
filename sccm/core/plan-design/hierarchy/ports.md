@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673711"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612790"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -718,7 +718,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 #### <a name="bkmk_note4"></a> 注释 4：日常文件传输协议 (TFTP) 守护程序
 日常文件传输协议 (TFTP) 守护程序系统服务不需要用户名或密码，并且它是 Windows 部署服务 (WDS) 不可或缺的一部分。 普通文件传输协议后台程序服务支持下列 RFC 定义的 TFTP 协议：  
 
-- RFC 350：TFTP  
+- RFC 1350：TFTP  
 
 - RFC 2347：选项扩展  
 
@@ -730,7 +730,7 @@ TFTP 为支持无盘启动环境而设计。 TFTP 后台程序侦听 UDP 端口 
 
 Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端口进行 TFTP 传输。 这些端口由 Microsoft 定义（49152 - 65535）。 有关详细信息，请参阅 [Windows 的服务概述和网络端口要求](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)
 
-但是，在实际的 PXE 启动期间，设备上的网络卡可选择其在 TFTP 传输过程中使用的动态分配的高端口。 设备上的网络卡未绑定到 Microsoft 定义的动态分配的高端口。 它只绑定到 RFC 350 中定义的端口。 此端口可以是 0 到 65535 中的任意值。 有关网络卡所使用的动态分配的高端口的信息，请与设备硬件制造商联系。
+但是，在实际的 PXE 启动期间，设备上的网络卡可选择其在 TFTP 传输过程中使用的动态分配的高端口。 设备上的网络卡未绑定到 Microsoft 定义的动态分配的高端口。 它只绑定到 RFC 1350 中定义的端口。 此端口可以是 0 到 65535 中的任意值。 有关网络卡所使用的动态分配的高端口的信息，请与设备硬件制造商联系。
 
 
 #### <a name="bkmk_note5"></a> 注释 5：站点服务器和站点系统之间的通信

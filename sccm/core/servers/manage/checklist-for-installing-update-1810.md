@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11a67aa698340cd100ded1ca64b9a97960bc6b9b
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: c57042e6ea4db7b244b8617bbef99633d9026d1b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211663"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501123"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>用于为 Configuration Manager 安装 1810 更新的清单
 
@@ -146,7 +146,8 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 若要定义可向站点服务器安装更新的时间段，请使用服务时段。 它们可以帮助控制层次结构中的站点安装更新的时间。 有关详细信息，请参阅 [站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
 
 #### <a name="review-supported-extensions"></a>查看支持的扩展
-<!--SCCMdocs#587-->如果使用 Microsoft 或 Microsoft 合作伙伴的其他产品扩展 Configuration Manager，请确认这些产品支持版本 1810。 检查产品供应商的此项信息。 例如，请查看 Microsoft Deployment Toolkit 的[发行说明](/sccm/mdt/release-notes)。
+<!--SCCMdocs#587-->
+如果使用 Microsoft 或 Microsoft 合作伙伴的其他产品来扩展 Configuration Manager，请确认这些产品是否支持版本 1810。 检查产品供应商的此项信息。 例如，请查看 Microsoft Deployment Toolkit 的[发行说明](/sccm/mdt/release-notes)。
 
 #### <a name="run-the-setup-prerequisite-checker"></a>运行安装程序先决条件检查程序   
 当更新在控制台中列为“可用”时，可以独立运行先决条件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）

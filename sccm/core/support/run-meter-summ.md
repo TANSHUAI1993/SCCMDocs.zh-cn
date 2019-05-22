@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bfb6758d62fb76650e019d00eef1ac2b2803d4b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b044272663ada4b43536f88c293308c57732e9c4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126957"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500816"
 ---
 # <a name="run-meter-summarization-tool"></a>运行计量摘要工具
 

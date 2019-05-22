@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8621f759a2e79090c6cd6dac5f2f3749147cabed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f2312cb68940f5d0eb3d0dd33d192d07b6801d8e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133344"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501036"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
@@ -65,7 +65,8 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 管理见解规则的日志文件是站点服务器上的 SMS_DataEngine.log。
 
-<!--1357930-->从版本 1806 开始，一些规则允许执行操作。 选择规则，选择“更多详细信息”，然后选择“执行操作”（如果可用）。 
+<!--1357930-->
+自版本 1806 起，一些规则允许你执行操作。 选择规则，选择“更多详细信息”，然后选择“执行操作”（如果可用）。 
 
 根据规则，此操作会出现以下某一行为：  
 
@@ -95,7 +96,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 - **管理见解优先级**：按优先级显示规则百分比，支持筛选器。   
 
 - **所有见解**：一个包括优先级和状态的见解表。 使用表顶部的“筛选器”字段匹配任何可用列中的字符串。 仪表板按以下顺序对表进行排序：
-    - 状态:需要执行操作、已完成、未知  
+    - 状态：需要执行操作、已完成、未知  
     - 优先级：重要、建议、可选  
     - 上次更改时间：较早的日期排在前面   
 
@@ -144,7 +145,8 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 
 ### <a name="proactive-maintenance"></a>主动维护
-<!--1352184-->从版本 1806 开始，此组中的规则突出了通过维护 Configuration Manager 对象避免的潜在配置问题。    
+<!--1352184-->
+自版本 1806 起，此组中的规则突出显示潜在的配置问题，以通过定期维护 Configuration Manager 对象避免这些问题。    
 
 - **未分配有站点系统的边界组**：未分配有站点系统的边界组只能用于站点分配。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)。  
 
@@ -158,7 +160,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **未用配置项目**：配置项目不属于配置基线，且已存在超过 30 天。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。  
 
-- **将对等缓存源升级到最新版 Configuration Manager 客户端**：确定用作对等缓存源，但尚未从先前的 1806 客户端版本升级的客户端。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“执行操作”打开显示客户端列表的设备视图。<!--1358008-->  
+- **将对等缓存源升级到最新版 Configuration Manager 客户端**：确定用作对等缓存源，但尚未从先前的 1806 客户端版本升级的客户端。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“采取措施”打开显示客户端列表的设备视图。<!--1358008-->  
 
 
 ### <a name="security"></a>安全

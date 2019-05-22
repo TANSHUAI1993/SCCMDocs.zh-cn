@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b100daf91b8bb7c5d4dd5f041c57e7dc9dac390e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e8ae8d006555a79be1a27b327a3de78c75743bad
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156774"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500748"
 ---
 # <a name="customize-support-center"></a>自定义支持中心
 
@@ -128,7 +128,7 @@ ms.locfileid: "56156774"
 
 ## <a name="bkmk_wildcards"></a> 使用通配符收集额外的日志文件
 
-要收集额外的日志文件，请在文件路径或文件名中使用通配符。 这些通配符包括系统范围的环境变量（如 `%WINDIR%`），但不包括用户范围的环境变量（如 `%USERPROFILE%`）。 若要使用非递归日志文件搜索收集额外的日志文件，请在 `<add/>` 元素中使用 `<additionalLogFiles>` 元素。 
+要收集额外的日志文件，请在文件路径或文件名中使用通配符。 这些通配符包括系统范围的环境变量（如 `%WINDIR%`），但不包括用户范围的环境变量（如 `%USERPROFILE%`）。 若要使用非递归日志文件搜索来收集其他日志文件，请在 `<additionalLogFiles>` 元素中使用 `<add/>` 元素。 
 
 以下示例演示支持中心如何在默认配置文件中使用此功能。
 

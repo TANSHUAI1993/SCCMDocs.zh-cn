@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8a55ec24a70e6059bb638d1d7ddfc7651574055
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8506996f7b769003c937de69a9c7f659341c4294
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134361"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501016"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -133,7 +133,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 - 将站点 XYZ 中的已复制数据插入到站点 ABC 的站点数据库中。
 
 #### <a name="example-scenario-1-the-primary-site-reinitializes-the-global-data-from-the-central-administration-site"></a>示例方案 1：主站点重新初始化管理中心站点中的全局数据  
-恢复过程删除主站点数据库中主站点的现有全局数据，并将数据替换为从管理中心站点中复制的全局数据。
+恢复流程删除主站点数据库中主站点的现有全局数据，并将数据替换为从管理中心站点复制的全局数据。
 
 #### <a name="example-scenario-2-the-central-administration-site-reinitializes-the-site-data-from-a-primary-site"></a>示例方案 2：管理中心站点重新初始化主站点中的站点数据 
 恢复过程会删除管理中心站点数据库中该主站点的现有站点数据。 它将数据替换为从主站点中复制的站点数据。 其他主站点的站点数据不受影响。
@@ -146,9 +146,9 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 #### <a name="recovered-site-is-a-central-administration-site"></a>恢复的站点是管理中心站点
 - 更改跟踪保持期内的数据库备份  
 
-     - **全局数据**：系统从所有主站点中复制备份之后在全局数据中所做的更改。  
+     - **全局数据**：系统从所有主站点中复制备份后出现的全局数据更改。  
 
-     - **站点数据**：系统从所有主站点中复制备份之后在站点数据中所做的更改。  
+     - **站点数据**：系统从所有主站点中复制备份后出现的站点数据更改。  
 
 - 更改跟踪保持期之前的数据库备份  
 
@@ -159,7 +159,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 #### <a name="recovered-site-is-a-primary-site"></a>恢复的站点是主站点
 - 更改跟踪保持期内的数据库备份  
 
-     - **全局数据**：系统从管理中心站点中复制备份之后在全局数据中所做的更改。  
+     - **全局数据**：系统从管理中心站点中复制备份后出现的全局数据更改。  
 
      - **站点数据**：管理中心站点重新初始化主站点中的站点数据。 备份后所做的更改会丢失。 客户端在向主站点发送信息时会重新生成大部分数据。  
 
@@ -192,7 +192,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 1. 针对站点恢复所需要的选项准备无人参与安装脚本。 有关详细信息，请参阅[无人参与的站点恢复](/sccm/core/servers/manage/unattended-recovery)。  
 
-2. 使用 `/script` 命令行选项运行 Configuration Manager 安装程序。 例如，创建一个安装程序初始化文件 ConfigMgrUnattend.ini。 将其保存在运行安装程序的计算机的 `C:\Temp` 目录中。 请使用以下命令：  
+2. 使用 `/script` 命令行选项运行 Configuration Manager 安装程序。 例如，创建一个安装程序初始化文件 ConfigMgrUnattend.ini。 将其保存在运行安装程序的计算机的 `C:\Temp` 目录中。 使用以下命令：  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 

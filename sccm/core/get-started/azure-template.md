@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25283e513e256e8ce779df7b71ac6f6c17f1e370
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: aeef8e447d646df183f7f2075954e381b08d8c93
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196817"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499722"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
 
@@ -33,7 +33,8 @@ ms.locfileid: "58196817"
 ## <a name="prerequisites"></a>先决条件
 
 此过程需要可在其中创建以下对象的 Azure 订阅： 
-- 三台 Standard_D2s_v3 虚拟机
+- 两台用于域控制器和 MP & DP 角色的 Standard_B2s 虚拟机。
+- 一台用于主站点服务器和 SQL 数据库服务器的 Standard_B2ms 虚拟机。
 - Standard_LRS 存储帐户
 
 > [!Tip]  
@@ -49,7 +50,7 @@ ms.locfileid: "58196817"
 
 3. 完成包含以下信息的 Azure 快速入门模板：
 
-    - 基础知识  
+    - 基本  
 
         - **订阅**：要在其中创建 VM 的订阅的名称  
 

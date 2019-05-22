@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fb57705079072e6a656464f5b7252b2ce05ad9d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 36db15b340a4122d44e60ee5a2a3eec101c16556
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123240"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499388"
 ---
 # <a name="cng-certificates-overview"></a>CNG 证书概述
 <!-- 1356191 --> 
@@ -32,7 +32,7 @@ Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书
 - 客户端消息 SDK（具有最新更新）和 ISV 代理   
 - 云管理网关配置  
 
-从版本 1802 开始，CNG 证书将用于以下已启用 HTTPS 的服务器角色：<!-- 1357314 -->   
+自版本 1802 起，CNG 证书用于下列已启用 HTTPS 的服务器角色： <!-- 1357314 -->   
 - 管理点
 - 分发点
 - 软件更新点
@@ -40,7 +40,7 @@ Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书
 
 自版本 1806 起，CNG 证书将用于下述已启用 HTTPS 的服务器角色：
 
-- 证书注册点，包括具有 Configuration Manager 策略模块的 NDES 服务器<!--1357314-->
+- 证书注册点，包括具有 Configuration Manager 策略模块的 NDES 服务器 <!--1357314-->
 
 > [!NOTE]
 > CNG 后向兼容 crypto API (CAPI)。 即使 CNG 支持已在客户端启用，CAPI 证书仍继续得到支持。

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f378bb3bda5341e99eb06303d5fb5a8e13c8ac88
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 4cba7c2bf782dce636117e71cb6982cd95ffb8ab
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524058"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500091"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager 中适用于 Linux 和 UNIX 的硬件清单
 
@@ -113,7 +113,7 @@ Linux 或 UNIX 服务器上的硬件清单会根据客户端设置中配置的�
 
 1.  将提供程序库复制到想要从中收集清单的每个 Linux 和 UNIX 计算机。 提供程序库的名称类似于以下名称：**XYZ_MyProvider.so**  
 
-2.  接下来，在每台 Linux 和 UNIX 计算机上，向 OMI 服务器注册提供程序库。 当安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，OMI 服务器会安装在计算机上，但必须手动注册自定义提供程序。 使用以下命令行注册提供程序：`/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so`  
+2.  接下来，在每台 Linux 和 UNIX 计算机上，向 OMI 服务器注册提供程序库。 当安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，OMI 服务器会安装在计算机上，但必须手动注册自定义提供程序。 使用以下命令行来注册提供程序：`/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so`  
 
 3.  注册新提供程序后，使用 **omicli** 工具测试提供程序。 安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时， **omicli** 工具会安装在每台 Linux 和 UNIX 计算机上。 例如，当创建的提供程序的名称是 **XYZ_MyProvider** 时，则在计算机上运行后列命令： **/opt/microsoft/omi/bin/omicli ei root/cimv2 XYZ_MyProvider**  
 

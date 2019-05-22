@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e61eb676d7ec61a2e72cd911389e019c9f0cbd7a
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 5959cb6af3fb7c433d02b21a8a8f8d99b991d8a6
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802370"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612574"
 ---
 <!-- 
 - Feature 1357546
@@ -88,6 +88,7 @@ ms.locfileid: "59802370"
 用来帮助排查 Configuration Manager 组件和功能问题的指导式演练。
 
 - [排查 PXE 启动问题](https://support.microsoft.com/help/4468612)
+- [了解 Configuration Manager 中的“更新和维护”节点和排除故障](https://support.microsoft.com/help/4490424)
 - [排查软件更新同步问题](https://support.microsoft.com/help/10059)
 - [了解并排查内容分发问题](https://support.microsoft.com/help/4482728)
 - [了解并排查适用于企业的 Microsoft Store 集成的问题](https://support.microsoft.com/help/4010214)
@@ -96,14 +97,13 @@ ms.locfileid: "59802370"
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 
-2019 年 3 月新的或更新的支持文章。
+2019 年 4 月 7 日至 5 月 13 日期间的新增或更新的支持文章。
 
 - [KB 4488598：System Center Configuration Manager Current Branch（版本 1810）更新汇总 2](https://support.microsoft.com/help/4488598)
 - [KB 4494015：Windows 安装程序或就地升级完成后，OSD 任务序列不会继续](https://support.microsoft.com/help/4494015)
 - [KB 4495265：将 CMG 用作具有第三方证书的云 DP 时的 WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID](https://support.microsoft.com/help/4495265)
-- [KB 4494799：如果预设置 BitLocker 与 Windows 10 版本 1511 一起使用，则在完成“安装 Windows 和 Configuration Manager”步骤之后，Windows 早期版本不启动](https://support.microsoft.com/help/4494799)
-- [KB 4494362：更新到 Configuration Manager 版本 1810 后，在 Smsdbmon.log 中重复记录“无法发送组件 PolicyTargetEvalNotify_iud 的更新”](https://support.microsoft.com/help/4494362)
-- [KB 4494361：启用双因素身份验证时，将管理中心站点附加到独立主站点失败](https://support.microsoft.com/help/4494361)
-- [KB 4493667：OSDResults 不显示 Configuration Manager 中 UDI 任务序列安装的应用程序](https://support.microsoft.com/help/4493667)
+- [KB 4498259：Configuration Manager 持续下载升级就绪情况数据](https://support.microsoft.com/help/4498259)
+- [KB 4040243：如何为 Configuration Manager 启用 TLS 1.2](https://support.microsoft.com/help/4040243)
+- [KB 4490644：Microsoft WSUS 和 Configuration Manager SUP 维护的完整指南](https://support.microsoft.com/help/4490644)
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  

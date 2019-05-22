@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a7438a2815f615b029888d8fb1ca28f601735d5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fed583e07c59f61f5c06b8355f9d59f18dde47e6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140004"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499050"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>如何为 Configuration Manager 配置边界组
 
@@ -102,7 +102,8 @@ ms.locfileid: "56140004"
 
 
 ### <a name="bkmk_options"></a> 配置边界组选项
-<!--1356193--> 从版本 1806 开始，若要为此边界组中的客户端配置其他选项，请切换到“选项”选项卡。有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
+<!--1356193-->
+自版本 1806 起，若要为此边界组中的客户端配置其他选项，请切换到“选项”选项卡。有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
 - **允许在此边界组中进行对等下载**：默认情况下会启用此选项。 管理点向客户端提供包含对等源的内容位置的列表。  
 

@@ -2,27 +2,27 @@
 title: Configuration Manager 工具
 titleSuffix: Configuration Manager
 description: 了解可帮助管理 Configuration Manager 基础结构并对其进行故障排除的工具。
-ms.date: 07/30/2018
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1479524f08f17aa59f6e7dc771253a4fb6720189
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b3324189cdf482684cc0738c51fbf336a65ee221
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131126"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500690"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager 工具
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助管理 Configuration Manager 基础结构并对其进行故障排除。 
+Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助管理 Configuration Manager 基础结构并对其进行故障排除。
 
 从 Configuration Manager 版本 1806 开始，这些工具包含在站点服务器上的 `CD.Latest\SMSSETUP\Tools` 文件夹中。 无需进行其他安装。<!--1357145--> 将这些版本的工具与 Configuration Manager 版本 1806 及更高版本一起使用。
 
@@ -67,16 +67,17 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 - [运行计量摘要工具](/sccm/core/support/run-meter-summ)：运行计数摘要任务并分析计量数据
 
 > [!Note]  
-> ServerTools 文件夹还包括以下文件 
+> ServerTools 文件夹还包括以下文件：
+>
 > - AdminUI.WqlQueryEngine.dll
 > - Microsoft.ConfigurationManagement.ManagementProvider.dll
-> - Microsoft.Diagnostics.Tracing.EventSource.dll。 
+> - Microsoft.Diagnostics.Tracing.EventSource.dll
 >
 > 好几个服务器工具都需要这些库。 不能直接使用它们。  
 
 
 
-## <a name="other-tools"></a>其他工具
+## <a name="other-tools-and-toolkits"></a>其他工具和工具包
 
 - [内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)：使用 `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` 中的 ContentLibraryCleanup.exe 来从分发点删除孤立的内容。  
 
@@ -85,3 +86,13 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 - [更新重置工具](/sccm/core/servers/manage/update-reset-tool)：在控制台中更新出现下载或复制问题时，可使用 `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` 中的 CMUpdateReset.exe 修复这些问题。  
 
 - [服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)：服务连接点处于脱机状态时，可使用 `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` 中的 ServiceConnectionTool.exe 使站点保持最新状态。  
+
+- [支持中心](/sccm/core/support/support-center)：进行故障排除时，请从客户端收集信息以便于分析。
+
+- [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/)：一系列工具、流程和指南，用于自动执行桌面和服务器 OS 部署。
+
+- [System Center Updates Publisher (SCUP)](/sccm/sum/tools/updates-publisher)：用于管理和导入自定义软件更新的独立工具。
+
+- [安全内容自动化协议 (SCAP) 扩展](/sccm/compliance/plan-design/scap/about-scap)：分析和评估你的环境与 NIST 基线的符合性。
+
+- [包转换管理器](/sccm/apps/pcm/package-conversion-manager)：将旧包转换为应用程序。

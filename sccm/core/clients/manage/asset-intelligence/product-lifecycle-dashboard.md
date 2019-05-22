@@ -2,21 +2,21 @@
 title: 产品生命周期仪表板
 titleSuffix: Configuration Manager
 description: 通过 Configuration Manager 中的产品生命周期仪表板查看 Microsoft 生命周期策略。
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716c5218eafaf6297292fdd852589b7327e2ecaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b8876f00ecb26aabd84f863ee1fcef4f2aac283a
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120021"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673403"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>使用 Configuration Manager 管理 Microsoft 生命周期策略
 
@@ -26,7 +26,7 @@ ms.locfileid: "56120021"
 
 有关详细信息，请参阅 [Microsoft 生命周期策略](https://support.microsoft.com/lifecycle)。
 
-从版本 1810 开始，仪表板包含 System Center 2012 Configuration Manager 及更高版本的信息。<!--1358702-->  
+自版本 1810 起，仪表板包含 System Center 2012 Configuration Manager 及更高版本的信息。<!--1358702-->  
 
 
 
@@ -35,6 +35,8 @@ ms.locfileid: "56120021"
  若要查看产品生命周期仪表板中的数据，需要以下组件：  
 
 - 必须在运行 Configuration Manager 控制台的计算机上安装 Internet Explorer 9 或更高版本。  
+
+- 必须安装和配置服务连接点角色。 若要在此仪表板上获取数据更新，服务连接点必须处于联机状态，或必须定期同步（如果处于脱机状态的话）。 有关详细信息，请参阅[关于服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。
 
 - 仪表板中的超链接功能需要一个 Reporting Services 点。 仪表板链接到 SQL Server Reporting Services (SSRS) 报表。 有关详细信息，请参阅 [Configuration Manager 中的报告](/sccm/core/servers/manage/reporting)。  
 
@@ -67,7 +69,8 @@ ms.locfileid: "56120021"
 - **Windows 客户端**：查看 Windows 客户端操作系统版本  
 - **Windows Server**：查看 Windows Server 操作系统版本  
 - **数据库**：查看 SQL Server 版本  
-- **Configuration Manager**：从版本 1810 开始，查看 Configuration Manager 版本  
+- **Configuration Manager**：从版本 1810 开始，查看 Configuration Manager 版本 
+- **Microsoft Office**：自版本 1902 起，可查看已安装的 Office 2003 至 Office 2016 版本的信息 <!--3556026-->
 
 该仪表板具有以下磁贴：  
 
@@ -101,4 +104,4 @@ ms.locfileid: "56120021"
 
 - **生命周期 05A - 产品生命周期仪表板**：从版本 1810 开始，此报表包含与控制台内仪表板类似的信息。 选择一个类别以查看环境中的产品数量以及剩余支持的天数。  
 
-有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#asset-intelligence) <!--SCCMDocs issue 997-->  
+有关详细信息，请参阅[报告列表](/sccm/core/servers/manage/list-of-reports#asset-intelligence)。<!--SCCMDocs issue 997-->  

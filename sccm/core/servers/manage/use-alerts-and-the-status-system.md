@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70e19304d63c9660a685b37db19219ba38981b18
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 52c501c30d2eb4ecea3d7830d0f0c3bb61262137
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133446"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497234"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的警报和状态系统
 
@@ -288,15 +288,15 @@ ms.locfileid: "56133446"
 ###  <a name="BKMK_MonitorAlerts"></a> 监视器警报  
  你可以在“监视”  工作区的“警报”  节点中查看警报。 警报具有以下警报状态之一：  
 
-- **从未触发**：未满足警报的条件。  
+- **从未触发**：警报条件尚未满足。  
 
-- **活动**：已满足警报的条件。  
+- **活动**：警报条件已满足。  
 
 - **已取消**：不再满足活动警报的条件。 此状态指示导致警报的情况现在已解决。  
 
 - **已推迟**：管理用户已配置 Configuration Manager，以便稍后评估警报的状态。  
 
-- **已禁用**：管理用户已禁用了警报。 当警报处于此状态时，即使警报的状态发生更改，Configuration Manager 也不会更新警报。  
+- **已禁用**：管理用户已禁用警报。 当警报处于此状态时，即使警报的状态发生更改，Configuration Manager 也不会更新警报。  
 
   Configuration Manager 生成警报时，可以执行以下操作之一：  
 

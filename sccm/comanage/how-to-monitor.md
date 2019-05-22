@@ -2,7 +2,7 @@
 title: 监视共同管理
 titleSuffix: Configuration Manager
 description: 使用共同管理仪表板查看有关共同管理的设备的信息。
-ms.date: 01/14/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c731692bc2277cc5ce97e079387b392ca09ff3e
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: f10e71bbf3099bad4d367f068c4a5f9e098f97eb
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754695"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083266"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>如何监视 Configuration Manager 中的共同管理
 
@@ -172,6 +172,7 @@ ms.locfileid: "56754695"
 
 在“监视”工作区的“部署”节点中创建了两个策略。 一个策略用于试点组，另一个策略用于生产。 这些策略仅报告其中 Configuration Manager 应用了此策略的设备数量。 这些策略不考虑 Intune 中注册了多少设备，这是设备可实现共同管理的前提。  
 
+生产策略 (CoMgmtSettingsProd) 定目标到“所有系统”集合。 它有检查 OS 类型和版本的适用性条件。 如果客户端是服务器 OS 或不是 Windows 10，那么策略就不适用，且不会执行任何操作。
 
 
 ## <a name="wmi-device-data"></a>WMI 设备数据

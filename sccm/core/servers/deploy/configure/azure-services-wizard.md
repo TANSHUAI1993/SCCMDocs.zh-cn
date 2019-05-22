@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5a0834e61173708fd99dcdc8806e2f8e633e87c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 94e632638018d213d46b34e87f8b5398cb49c59e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137501"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499088"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -64,10 +64,10 @@ ms.locfileid: "56137501"
 
 |服务  |租户  |云  |Web 应用  |本机应用  |操作  |
 |---------|---------|---------|---------|---------|---------|
-|云管理及<br>Azure AD 用户发现 | 多选 | 公共、私有 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
-|Log Analytics 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
-|Upgrade Readiness | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
-|适用于企业和教育的<br>业务电话 | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
+|云管理及<br>Azure AD 用户发现 | 多个 | 公共、私有 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
+|Log Analytics 连接器 | 一个 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
+|Upgrade Readiness | 一个 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
+|适用于企业的<br>Microsoft Store | 一个 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
 
 
 ### <a name="about-azure-ad-apps"></a>关于 Azure AD 应用
@@ -252,7 +252,7 @@ ms.locfileid: "56137501"
 ## <a name="view-the-configuration-of-an-azure-service"></a>查看 Azure 服务的配置
 查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后选择“属性”。
 
-如果选择服务并选择功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
+如果选择服务并选择功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导来导入应用。<!--483440-->
 
 
 ## <a name="cloud-management-data-flow"></a>云管理数据流

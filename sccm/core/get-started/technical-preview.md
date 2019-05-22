@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 04/03/2019
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2909de734954d9519c04bc02012c3bfe17c9b81f
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: c6797b25138bdd09dd4a879ef461d5420c38ab47
+ms.sourcegitcommit: 8eccf5429aabcef17d5762e4b03912ccad1215e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802506"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64928875"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -119,19 +119,25 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1903"></a>技术预览版 1903
+### <a name="technical-preview-version-1904"></a>Tech Preview 版本 1904
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [云服务成本估算器](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) <!--3555774-->  
+- [Office 365 专业增强版升级就绪情况仪表板](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) <!--4021125-->  
 
-- [将分发点用作传递优化的本地缓存服务器](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) <!--3555764-->  
+- [配置功能更新的动态更新](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) <!--4062619-->  
 
-- [回收锁定以编辑任务序列](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) <!--3699337-->  
+- [社区中心和 GitHub](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) <!--3555935,3555936-->  
 
-- [深入查看所需更新](/sccm/core/get-started/2019/technical-preview-1903#bkmk_req-updates) <!--4224414-->  
+- [CMPivot 独立应用](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) <!--3555890-->  
 
-- [对任务序列媒体创建的改进](/sccm/core/get-started/2019/technical-preview-1903#bkmk_tsmedia) <!--4090666-->  
+- [软件中心基础结构改进](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) <!--3555950-->  
+
+- [改进了对 WSUS 维护的控制](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) <!--4110109-->  
+
+- [预缓存驱动程序包和 OS 映像](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) <!--4224642-->  
+
+- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) <!--2839943,4447680-->  
 
 > [!Note]  
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。  
@@ -147,6 +153,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
+ | 云服务成本估算器 <!--3555774--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) | ![未添加](media/Red_X.gif) |
+ | 将分发点用作传递优化的本地缓存服务器 <!--3555764--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) | ![未添加](media/Red_X.gif) |
+ | 回收锁定以编辑任务序列 <!--3699337--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) | ![未添加](media/Red_X.gif) |
+ | 钻取必需更新 <!--4224414--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_req-updates) | ![未添加](media/Red_X.gif) |
+ | 对任务序列媒体创建的改进 <!--4090666--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_tsmedia) | ![未添加](media/Red_X.gif) |
  | Office 365 更新的其他语言 <!--3555955--> | [技术预览版 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) | 版本 1902 |
  | Office 365 专业增强版与分析集成的就绪情况 <!--3735402--> | [技术预览版 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) | 版本 1902 |
  | 对分阶段部署成功标准的改进 <!--3555946--> | [技术预览版 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) | 版本 1902 |
@@ -178,11 +189,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 超过阈值时停止云服务 <!--3735092--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | 版本 1902 |
  | 客户端预配模式超时 <!--3197824--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | 版本 1902 |
  | 对 OS 部署的改进 <!--3633146,3641475,3654172,3734270--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | 版本 1902 |
- | 对运行 PowerShell 脚本任务序列步骤的改进 <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | 版本 1902 |
- | 对通过电子邮件进行的应用程序批准的改进 <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | 版本 1902 |
- | 在软件中心中配置用户设备相关性 <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | 版本 1902 |
- | 对 Configuration Manager 控制台的改进 <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | 版本 1902 |
- | 从社区中心下载报表<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![未添加](media/Red_X.gif) |
+
 
 ## <a name="features-in-previous-technical-previews"></a>旧版技术预览版中的功能
 
@@ -196,6 +203,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |  
 |----------------|---------------------------|
+| 从社区中心下载报表<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
 | 社区中心 <!--3556020, fka 1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | 基于客户端的 PXE 响应者服务 <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE 网络启动对 IPv6 的支持 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|

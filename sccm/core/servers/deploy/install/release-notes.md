@@ -2,21 +2,21 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 03/27/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a168e12000f11ca2bb6af8b1988f508910ab7263
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 861d1d12c0df4b2f606a3f36983805fddd83711f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523956"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497691"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -145,6 +145,9 @@ OS Deployment Manager 内置安全角色具有[分阶段部署](/sccm/osd/deploy
 ## <a name="mobile-device-management"></a>移动设备管理  
 
 ### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>有效链接上的 iOS 应用链接验证有时会失败
+
+适用范围：Configuration Manager 版本 1810 及更低版本
+
 <!-- LSI 106004348 -->
 创建“应用商店中的 iOS 应用包”类型的新应用程序时，验证程序不接受该位置的某些有效 URL。 具体而言，iOS App Store 不需要 URL 的应用名称部分的值。 例如，以下两个链接都有效并指向同一个应用，但“创建应用程序向导”仅接受第一个链接：
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`

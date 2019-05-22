@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 38b2355159e3ce0472a5a5ceb0ff0a5f2275358d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139181"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499546"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>配置 Configuration Manager 的发现方法
 
@@ -178,7 +178,7 @@ ms.locfileid: "56139181"
 
         - **以递归方式搜索 Active Directory 子容器：**：如果启用此选项，该站点将搜索以上路径中的任何其他容器或 OU。 如果禁用此选项，该站点仅搜索特定路径中的资源。  
 
-            从版本 1806 开始，请选择要从此递归搜索中排除的子容器。 此选项有助于减少发现的对象数。 选择“添加”选择以上路径下的容器。 在“选择新容器”对话框中，选择要排除的子容器。 选择“确定”以关闭“选择新容器”对话框。<!--1358143-->
+            从版本 1806 开始，请选择要从此递归搜索中排除的子容器。 此选项有助于减少发现的对象数。 选择“添加”选择以上路径下的容器。 在“选择新容器”对话框中，选择要排除的子容器。 选择“确定”，以关闭“选择新容器”对话框。<!--1358143-->
 
             > [!Tip]  
             > “Active Directory 系统发现属性”窗口中的 Active Directory 容器列表包含列“已排除”。 当选择要排除的容器，此值为“是”。  
@@ -195,7 +195,7 @@ ms.locfileid: "56139181"
 3.  在“Active Directory 属性”选项卡上，为要发现的计算机配置其他 Active Directory 属性。 此选项卡会列出默认对象属性。  
 
      > [!Tip]  
-     > 例如，你的组织在 Active Directory 中的计算机帐户上使用 Description 属性。 选择“自定义”，然后将 `Description` 添加为自定义属性。 此发现方法运行后，该属性将在 Configuration Manager 控制台的设备“属性”选项卡上显示。<!--513948-->  
+     > 例如，你的组织在 Active Directory 中的计算机帐户上使用 Description 属性。 选择“自定义”，然后将 `Description` 添加为自定义属性。 在此发现方法运行后，这一属性显示在 Configuration Manager 控制台的设备“属性”选项卡上。<!--513948-->  
 
 4.  在“选项”选项卡上，可以配置这些设置，以从发现中筛选出或排除过期的计算机记录。  
 
@@ -246,7 +246,7 @@ Azure AD 用户发现未启用，或与其他发现方法的配置相同。 在�
  > 如果服务器应用是从 Configuration Manager 中创建的，Azure AD 会自动创建该应用程序的权限。 仍需在 Azure 门户中向应用程序授予许可。
 
  > [!Note]  
- > 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)和 Azure AD 用户发现。 有关混合标识的详细信息，请参阅[定义混合标识采用策略](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)<!--497750-->。
+ > 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)和 Azure AD 用户发现。 若要详细了解混合标识，请参阅[定义混合标识采用策略](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->
 
 
 

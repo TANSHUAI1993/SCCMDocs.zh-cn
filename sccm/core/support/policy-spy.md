@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 740dda5c41c28e1648eb24e75fe24a2e22784f3b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 297aa9f8756b0c7214381e5e688f26cc21645fc4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129096"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500855"
 ---
 # <a name="policy-spy"></a>策略 Spy
 
@@ -127,7 +127,7 @@ Policy Spy 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。
 
 
 
-## <a name="details-pane"></a>“详细信息”窗格
+## <a name="details-pane"></a>细节窗格
 “详细信息”窗格显示有关当前选择的详细信息。 如果没有选择处于活动状态，它会显示有关 Policy Spy 本身的信息，包括版本。 否则，它会显示选定项目的托管对象格式 (MOF) 表示形式。
 
 Policy Spy 使用自己的 MOF 生成例程来创建比 WMI 生成的纯文本 MOF 更加用户友好的 HTML 显示。 此行为允许 Policy Spy 添加以下功能，让 MOF 变得更易读：  

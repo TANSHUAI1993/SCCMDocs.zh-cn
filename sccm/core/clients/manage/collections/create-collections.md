@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e79ec4b19ad45c49438ef273bcaf031754cf7e7
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 40cb1a96771181b395ec2f628e0f0c3c2efe29b7
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558127"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673300"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -115,7 +115,7 @@ ms.locfileid: "57558127"
 
     - **对此集合计划完全更新**：计划集合成员身份的定期完全评估。  
 
-        从 1810 版开始，集合评估行为中的以下更改可改进站点性能：<!--3607726-->  
+        自版本 1810 起，集合评估行为的以下更改可提升站点性能：<!--3607726-->  
 
         - 以前，在基于查询的集合上配置计划时，站点将继续评估查询，无论你是否启用了“在此集合上计划完全更新”的集合设置。 若要完全禁用计划，必须将计划更改为“无”。 
 
@@ -171,7 +171,7 @@ ms.locfileid: "57558127"
 
 - **资源类**：选择要搜索并添加到集合的资源的类型。 从“系统资源”  值中选择值以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
 
-- **编辑查询语句**：打开“查询语句属性”对话框，在其中可以创作查询以将其用作集合的规则。 有关查询的详细信息，请参阅[查询技术参考](/sccm/core/servers/manage/queries-technical-reference)。  
+- **编辑查询语句**：打开“查询语句属性”对话框，在其中可以创作查询以将其用作集合的规则。 若要详细了解查询，请参阅[查询简介](/sccm/core/servers/manage/introduction-to-queries)。  
 
 
 ### <a name="bkmk-category"></a>设备类别规则
@@ -218,3 +218,10 @@ ms.locfileid: "57558127"
 
 5. 完成向导以导入集合。 新集合会显示在“资产和符合性”  工作区的“用户集合”  或“设备集合”  节点中。 刷新或重新加载 Configuration Manager 控制台才能查看新导入的集合的集合成员。  
 
+## <a name="bkmk_powershell"></a> 使用 PowerShell
+
+PowerShell 可用于创建和导入集合。  有关详情，请参阅：
+
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1609f162460d525a146289e70426783cd126912
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b966654712dbe670ea200fbb4c975df26ecac542
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123421"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495578"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -49,10 +49,10 @@ Version 1710 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>站点基础结构
 
-### <a name="updates-for-peer-cache-----sms500850---"></a>用于对等缓存的更新<!-- sms500850 -->
+### <a name="updates-for-peer-cache-----sms500850---"></a>对等缓存更新  <!-- sms500850 -->
 从这个版本开始，对等缓存不再属于预发行功能。  此版本中没有引入对等缓存的其他更改。 有关详细信息，请参阅[用于 Configuration Manager 客户端的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)。
 
-### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>对 Azure 政府云的云分发点支持<!-- sms491428 -->
+### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>对 Azure 政府云的云分发点支持   <!-- sms491428 -->
 现在可以在 Azure 政府云中使用[基于云的分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。   
 
 ### <a name="inventory-default-unit-revision----sms503697---"></a>清单默认单位修订 <!-- sms503697 -->
@@ -65,9 +65,10 @@ Version 1710 drops support for the following products:
 ## <a name="client-management"></a>客户端管理
 
 ### <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
-<!-- 1350871 --> 在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。
+<!-- 1350871 -->
+在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。
 
-### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机<!-- 1356283 -->
+### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机  <!-- 1356283 -->
 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
 
 请参阅[如何在 System Center Configuration Manager 中管理客户端](/sccm/core/clients/manage/manage-clients#restart-clients)
@@ -77,7 +78,7 @@ Version 1710 drops support for the following products:
 
 
 ## <a name="application-management"></a>应用程序管理
-### <a name="improvements-for-run-scripts------1236459---"></a>运行脚本的改进<!-- 1236459 -->
+### <a name="improvements-for-run-scripts------1236459---"></a>对“运行脚本”的改进   <!-- 1236459 -->
 此版本中将多项改进引入 **“运行脚本”** 功能，可将 PowerShell 脚本部署为在托管设备上运行。 1706 版本首次引入了此功能。
 
 改进包括：
@@ -88,7 +89,8 @@ Version 1710 drops support for the following products:
 有关使用“运行脚本”的详细信息，请参阅[创建和运行脚本](../../../apps/deploy-use/create-deploy-scripts.md)。
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新移动应用程序管理策略设置
-<!-- 1324760 --> 以下设置已添加到移动应用程序管理策略设置：
+<!-- 1324760 -->
+以下设置已添加到移动应用程序管理策略设置：
 - **禁用联系人同步**：阻止应用将数据保存到设备上的本机“联系人”应用。
 - **禁用打印**：阻止应用打印工作或学校数据。
 
@@ -101,7 +103,8 @@ Version 1710 drops support for the following products:
 
 ## <a name="operating-system-deployment"></a>操作系统部署
  > [!TIP]   
- > <!-- 1354281 --> 从 Windows 10 版本 1709（也称为 Fall Creators Update）开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
+ > <!-- 1354281 -->
+ > 从 Windows 10 版本 1709（也称为 Fall Creators Update）开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>将子任务序列添加到任务序列
 <!-- 1261338 -->
@@ -111,13 +114,14 @@ Version 1710 drops support for the following products:
 若要了解有关子任务序列的详细信息，请参阅[子任务序列](/sccm/osd/understand/task-sequence-steps#child-task-sequence)。
 
 ## <a name="software-center-customization"></a>软件中心自定义
-<!-- 1351224 --> 可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+<!-- 1351224 -->
+可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
 
 有关详细信息，请参阅[在 System Center Configuration Manager 中规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management)。
 
 ## <a name="software-updates"></a>软件更新
 
-### <a name="surface-driver-updates-----1098490---"></a>Surface 驱动程序更新<!-- 1098490 -->
+### <a name="surface-driver-updates-----1098490---"></a>Surface 驱动程序更新  <!-- 1098490 -->
 从此版本开始，管理 Surface 驱动程序更新不再是预发行功能。  
 
 
@@ -199,7 +203,8 @@ Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书
 可以使用 Configuration Manager Endpoint Protection [创建和部署 Windows Defender 应用程序防护策略](/sccm/protect/deploy-use/create-deploy-application-guard-policy)。
 
 ### <a name="device-guard-policy-changes"></a>设备防护策略更改
-<!-- 1355092 --> 下面是三个与设备防护策略相关的更改：
+<!-- 1355092 -->
+下面是三个与设备防护策略相关的更改：
 
 - 设备防护策略已被重命名为 Windows Defender 应用程序控制策略。 因此，举例来说，“创建设备防护策略”向导现命名为“创建 Windows Defender 应用程序控制策略”向导。
 - 使用 Windows 版本 1709 Fall Creators Update 的设备无需重启就能应用 Windows Defender 应用程序控制策略。 重新启动仍是默认设置，但你可以[关闭重启](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)。

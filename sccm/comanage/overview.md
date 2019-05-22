@@ -5,32 +5,34 @@ description: 了解如何使用 Configuration Manager 和 Microsoft Intune 同�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 04/26/2019
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c88bf98e035499c271de8acf9d8fa222e5058447
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 1e0ae5c392acd03509f70c19f551731065bc4be2
+ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754689"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873286"
 ---
 # <a name="what-is-co-management"></a>什么是共同管理？
 
 <!-- 1350871 -->
-共同管理是将现有 Configuration Manager 部署附加到 Microsoft 365 云的主要方式之一。 它可帮助解锁其他由云提供支持的功能，例如条件访问。 
+共同管理是将现有 Configuration Manager 部署附加到 Microsoft 365 云的主要方式之一。 它可帮助解锁其他由云提供支持的功能，例如条件访问。
 
-通过共同管理，可以使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。 它允许通过添加新功能在 Configuration Manager 中云附加现有投资。 通过使用共同管理，可以灵活地使用最适合组织的技术解决方案。 
+通过共同管理，可以使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。 它允许通过添加新功能在 Configuration Manager 中云附加现有投资。 通过使用共同管理，可以灵活地使用最适合组织的技术解决方案。
 
 如果某台 Windows 10 设备既具有 Configuration Manager 客户端又已注册到 Intune，用户将同时获得这两项服务的优势。 可以控制将颁发机构从 Configuration Manager 切换到 Intune 时的工作负载（如果有）。 Configuration Manager 持续管理所有其他工作负载（其中包括不切换到 Intune 的那些工作负载）以及共同管理不支持的的所有其他 Configuration Manager 功能。
 
-用户还可以使用单独的设备集合来试验工作负载。 借助试验功能，可以在切换大型组之前使用设备子集测试 Intune 功能。 
+用户还可以使用单独的设备集合来试验工作负载。 借助试验功能，可以在切换大型组之前使用设备子集测试 Intune 功能。
 
 ![共同管理的概述图](media/co-management-overview.png)
 
+> [!Note]  
+> 同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种配置称为“共同管理”。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种配置称为“共存”。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](#workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。 有关详细信息，请参阅[第三方 MDM 与 Configuration Manager 共存](/sccm/comanage/coexistence)。
 
 
 ## <a name="paths-to-co-management"></a>共同管理的路径
@@ -45,7 +47,7 @@ ms.locfileid: "56754689"
 
 
 
-## <a name="benefits"></a>优点 
+## <a name="benefits"></a>优点
 
 在共同管理中注册现有的 Configuration Manager 客户端时，将获得以下直接价值：  
 
@@ -63,7 +65,7 @@ ms.locfileid: "56754689"
 
 若要详细了解共同管理的直接价值，请参阅快速入门系列[启用了共同管理的云](/sccm/comanage/quickstarts)。
 
-借助共同管理，还可以使用 Intune 协调多个工作负载。 有关详细信息，请参阅[工作负载](#workloads)部分。 
+借助共同管理，还可以使用 Intune 协调多个工作负载。 有关详细信息，请参阅[工作负荷](#workloads)部分。
 
 
 
@@ -80,7 +82,7 @@ ms.locfileid: "56754689"
 
 ### <a name="licensing"></a>许可
 
-- Azure AD Premium 
+- Azure AD Premium
 - 适用于所有用户的 EMS 或 Intune 许可证  
 
     > [!Note]  
@@ -116,7 +118,7 @@ ms.locfileid: "56754689"
 
 > [!Note]  
 > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法启用共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。  
-> 
+>
 > 若正在使用[混合机构](/sccm/mdm/deploy-use/migrate-mixed-authority)，请先迁移到 Intune 独立版。 然后，在设置共同管理前将 MDM 机构设置为 Intune。<!--SCCMDocs issue #797-->
 
 
@@ -129,21 +131,21 @@ ms.locfileid: "56754689"
 
 
 ### <a name="permissions-and-roles"></a>权限和角色
-<!--SCCMDocs issue #667-->
 
+<!--SCCMDocs issue #667-->
 | 操作 | 所需角色 |
 |----|----|
 | 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员 |
 | 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员 |
 | 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员<br>无需任何其他的 Azure 角色 |
-| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员。<!--SCCMDoc issue 626--> | 
+| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员。<!--SCCMDoc issue 626--> |
 
 要详细了解 Azure 角色，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
 
 有关 Configuration Manager 角色的详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
 
 
-## <a name="workloads"></a>工作负载 
+## <a name="workloads"></a>工作负载
 
 不必切换工作负载，或可以在准备好后单独执行这些工作负载。 Configuration Manager 持续管理所有其他工作负载（其中包括不切换到 Intune 的那些工作负载）以及共同管理不支持的的所有其他 Configuration Manager 功能。
 
@@ -182,4 +184,3 @@ ms.locfileid: "56754689"
 - [详细了解直接价值并开始使用共同管理](/sccm/comanage/quickstarts)  
 
 - [教程：为现有 Configuration Manager 客户端启用共同管理](/sccm/comanage/tutorial-co-manage-clients)  
-

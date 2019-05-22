@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0da207f92ea2c11266831a0c03f5b846654e83a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 34072fe18bc2d0d751938ff536f6d4ba8e4c378b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128994"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500952"
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Configuration Manager 的无人参与站点恢复   
 
@@ -128,7 +128,7 @@ ms.locfileid: "56128994"
 
   -   **必需：** 是
   -   **值：** SiteName
-  -   **详细信息：** 此站点的描述。
+  -   **详细信息：** 此站点的说明。
 
 
 - **密钥名称：** SMSInstallDir
@@ -167,7 +167,7 @@ ms.locfileid: "56128994"
   -   **必需：** 可能
   -   **值：** 0 或 1 0 = 不安装   
        1 = 安装
-  -   **详细信息：** 指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
+  -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
 
 
 - **密钥名称：** JoinCEIP   
@@ -178,11 +178,11 @@ ms.locfileid: "56128994"
   -   **值：** 0 或 1  
        0 = 不加入  
        1 = 加入
-  -   **详细信息：** 指定是否加入客户体验改善计划。
+  -   **详细信息：** 指定是否要加入客户体验改善计划。
 
 **SQLConfigOptions**
 
--   **密钥名称：** SQLServerName 
+-   **密钥名称：** SQLServerName
 
     -   **必需：** 是
     -   **值：***&lt;SQLServerName\>*
@@ -287,7 +287,7 @@ ms.locfileid: "56128994"
 
     -   **必需：** 是
     -   **值：** SiteName
-    -   **详细信息：** 此站点的描述。
+    -   **详细信息：** 此站点的说明。
 
 
 -   **密钥名称：** SMSInstallDir
@@ -329,7 +329,7 @@ ms.locfileid: "56128994"
     -   **值：** 0 或 1  
          0 = 不安装   
          1 = 安装  
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
+    -   **详细信息：** 指定是否要安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
 
 -   **密钥名称：** JoinCEIP  
     > [!Note]  
@@ -339,12 +339,12 @@ ms.locfileid: "56128994"
     -   **值：** 0 或 1    
          0 = 不加入  
          1 = 加入
-    -   **详细信息：** 指定是否加入客户体验改善计划。
+    -   **详细信息：** 指定是否要加入客户体验改善计划。
 
 
 **SQLConfigOptions**
 
--   **密钥名称：** SQLServerName 
+-   **密钥名称：** SQLServerName
 
     -   **必需：** 是
     -   **值：***&lt;SQLServerName\>*

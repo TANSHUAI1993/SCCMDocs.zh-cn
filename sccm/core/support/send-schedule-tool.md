@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38829a249ca87ca87f9c5005ed7ae73e1500e2ab
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 97c506c85cbb26dbb68b2e0eb0c223ae2a9d5b7e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131194"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500779"
 ---
 # <a name="send-schedule-tool"></a>发送计划工具
 

@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67c82a884a5d3df3b1e61e1f9f2c109ff2b7fef6
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: 92c51158412b8bc9737c4851fc43dc2a7776488b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737338"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501260"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>使用安装向导安装 Configuration Manager 站点
 
@@ -173,7 +173,7 @@ ms.locfileid: "57737338"
 
 16. 在“站点系统角色”  页上，选择是要安装管理点还是安装分发点。 对于每个选择使用安装程序安装的角色：  
 
-    - 输入将托管角色的服务器的 FQDN。 然后选择服务器支持的客户端连接方法：这些数据。  
+    - 输入将托管角色的服务器的 FQDN。 然后选择服务器支持的客户端连接方法：HTTP 或 HTTPS。  
 
     - 如果在上一页上选择了“所有站点系统角色仅接受来自客户端的 HTTPS 通信”，则会针对 HTTPS 自动配置客户端连接设置。 只有返回上一页才可更改此设置。  
 
@@ -307,7 +307,7 @@ ms.locfileid: "57737338"
             > [!Note]  
             > 如果在安装过程中出现哈希不匹配错误，请更新“Redist”文件夹。 使用[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)获取最新文件。 此外，对于任何导致哈希不匹配错误的文件，请将它们从更新的“Redist”文件夹复制到“SMSSETUP\BIN\X64”文件夹。 
 
-    - 1806 版和更高版本<!-- SCCMDocs-pr issue 3164 -->
+    - **1806 版及更高版本**<!-- SCCMDocs-pr issue 3164 -->
 
         - CD.Latest 源文件位置包括一个名为“Redist”的文件夹。 将此“Redist”文件夹作为子文件夹移动到“SMSSETUP”文件夹下。  
 

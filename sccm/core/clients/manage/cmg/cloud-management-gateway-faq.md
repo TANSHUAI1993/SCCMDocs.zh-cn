@@ -4,18 +4,18 @@ description: 使用本文解答有关云管理网关的常见问题
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cbb9b37c951c490c1f2245f089fa22707f4c220
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 71c30e6770d667426a0aabbf03043d6fb44ecced
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557993"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083190"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>有关云管理网关的常见问题解答
 
@@ -24,7 +24,7 @@ ms.locfileid: "57557993"
 本文解答了有关云管理网关的常见问题。 有关详细信息，请参阅[规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。
 
 
-## <a name="frequently-asked-questions"></a>常见问题
+## <a name="frequently-asked-questions"></a>常见问题解答
 
 ### <a name="what-certificates-do-i-need"></a>我需要什么证书？
 
@@ -40,7 +40,8 @@ ms.locfileid: "57557993"
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>我需要维护 Azure 虚拟机吗？
 
-不需要维护。 云管理网关的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的虚拟机 (VM)、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云管理网关是将 Configuration Manager 环境扩展到云端的 PaaS。 
+不需要维护。 云管理网关的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的虚拟机 (VM)、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云管理网关是将 Configuration Manager 环境扩展到云端的 PaaS。 有关详细信息，请参阅[保护 PaaS 部署](/azure/security/security-paas-deployments)。
+
 
 ### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>如何在服务更新期间确保服务连续性？
 
@@ -53,7 +54,8 @@ ms.locfileid: "57557993"
 
 
 ### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-subscription-as-the-subscription-that-hosts-the-cmg-cloud-service"></a>用户帐户是否必须与托管 CMG 云服务的订阅位于同一 Azure 订阅中？
-<!--SCCMDocs-pr issue #2873--> 若环境有多个订阅，则可以将 CMG 部署到任何可以托管 Azure 云服务的订阅中。 
+<!--SCCMDocs-pr issue #2873-->
+如果环境有多个订阅，可以将 CMG 部署到任何可以托管 Azure 云服务的订阅中。 
 
 此问题在以下方案中很常见：  
 

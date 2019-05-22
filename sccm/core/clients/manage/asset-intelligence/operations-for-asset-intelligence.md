@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0febe68b659f1f9444b1a1471a4a8053374daaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b200594c4769fb4528c3adc7b846b2345ffeda39
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127994"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499870"
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中使用资产智能
 
@@ -323,12 +323,12 @@ ms.locfileid: "56127994"
 
    -   **本地值**：指定资产智能目录中与较新的 System Center Online 软件分类详细信息冲突的现有软件分类信息。  
 
-   -   **下载的值**：为冲突的资产智能目录软件分类信息指定新 System Center Online 软件分类信息。  
+   -   **下载的值**：指定与资产智能目录中软件分类信息冲突的新 System Center Online 软件分类信息。  
 
 6. 选择以下设置之一以解决软件详细信息冲突：  
 
-   - **不更改本地编辑的目录信息值**：通过保留现有资产智能目录软件分类信息来解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“用户定义” 。  
+   - **不更改本地编辑的目录信息值**：通过保留资产智能目录中的现有软件分类信息，解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“用户定义” 。  
 
-   - **用下载的 System Center Online 值覆盖本地编辑的目录信息值**：通过用从 System Center Online 获取的新信息覆盖现有的资产智能目录软件分类信息来解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“已验证” 。  
+   - **用下载的 System Center Online 值覆盖本地编辑的目录信息值**：通过用从 System Center Online 获取的新信息覆盖资产智能目录中的现有软件分类信息，解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“已验证” 。  
 
      单击“确定”  保存冲突解决。  

@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 554e67e171fe5b800d231d257105531dcd633baf
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 73583d4dea93cefcbe9dd9615671606112cc8860
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131568"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498951"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>为 Configuration Manager 配置基于角色的管理   
 
@@ -175,9 +175,9 @@ ms.locfileid: "56131568"
 
 -   **与分配的安全角色相关的所有对象实例**：此选项将管理用户与“所有”作用域以及“所有系统”和“所有用户和用户组”集合关联。 分配给用户的安全角色定义对象的访问权限。  
 
--   **仅分配给指定安全作用域和集合的对象实例**：此选项将管理用户与安全作用域和集合关联，这些安全作用域和集合关联和与用于配置管理用户的帐户关联安全作用域和集合相同。 此选项支持添加或删除安全角色和集合来自定义管理用户的管理作用域。  
+-   **仅分配给指定安全作用域和集合的对象实例**：此选项将管理用户关联到与用于配置管理用户的帐户关联的相同安全作用域和集合。 此选项支持添加或删除安全角色和集合来自定义管理用户的管理作用域。  
 
--   **将分配的安全角色与特定安全作用域和集合关联**：此选项使你能在单独的安全角色与用户的安全作用域和集合之间创建特定关联。  
+-   **将分配的安全角色与特定安全作用域和集合关联**：使用此选项，可以在各个安全角色与用户的安全作用域和集合之间创建特定关联。  
 
     > [!NOTE]  
     >  只有在你修改管理用户的属性时，此选项才可用。  

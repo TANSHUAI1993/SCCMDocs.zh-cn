@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 100fdd8e9032b1d16ae79b3cd52ffba3b3609446
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140154"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499337"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -72,7 +72,7 @@ ms.locfileid: "56140154"
 -   **带 SP2 的 Windows Server 2008** (x86, x64)：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
 
-#### <a name="server-core"></a>服务器核心
+#### <a name="server-core"></a>Server Core
 以下版本专指 OS 的服务器核心安装。 <sup>[注 3](#bkmk_note3)</sup>  
 
 Windows Server 半年频道版本是服务器核心安装，如 Windows Server 版本 1809。 作为 Configuration Manager 客户端，它们与相关的 Windows 10 半年频道版本一样受到相同的支持。 有关详细信息，请参阅 [Windows 10 支持](/sccm/core/plan-design/configs/support-for-windows-10)。
@@ -97,7 +97,7 @@ Windows Server 半年频道版本是服务器核心安装，如 Windows Server �
  若要支持[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)。  
 
 #### <a name="bkmk_note3"></a>注释 3
- 任何版本的 Windows Server Core 上都不支持新的软件中心应用。<!--SCCMDocs issue 683-->
+ 任何版本的 Windows Server Core 都不支持新的软件中心应用。<!--SCCMDocs issue 683-->
 
 
 
@@ -126,7 +126,7 @@ Windows Server 半年频道版本是服务器核心安装，如 Windows Server �
 -   **Windows 10 企业版**（x86、x64）  
 
 -   **Windows 10 IoT 企业版**（x86、x64）  
-    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
 
 -   **Windows Embedded 8.1 Industry**（x86、x64）    
 
@@ -342,7 +342,7 @@ Windows Server 半年频道版本是服务器核心安装，如 Windows Server �
 - **Windows 10 Pro Enterprise**（x86、x64）  
 
 - **Windows 10 IoT 企业版**（x86、x64）  
-    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
 
 - **Windows 10 移动版**  
 

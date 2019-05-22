@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33c10c82207d079dc5abd53c53673627888df955
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156706"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499744"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置资产智能
 
@@ -153,7 +153,7 @@ ms.locfileid: "56156706"
  还可以使用以逗号分隔 (.csv) 文件格式手动创建的许可证导入文件将常规许可证声明导入资产智能目录中。  
 
 > [!NOTE]  
->  只有当“名称” 、“发布者” 、“版本” 和“有效数量”  字段需要包含数据时，才必须在许可证导入文件的首行输入所有字段。 所有日期字段应以下列格式显示：年/月/日，例如 2008/08/04。  
+>  只有当“名称” 、“发布者” 、“版本” 和“有效数量”  字段需要包含数据时，才必须在许可证导入文件的首行输入所有字段。 所有日期字段都应采用以下格式显示：年/月/日，例如 2008/08/04。  
 
 资产智能使用产品名称和产品版本（而不是发布者名称）对常规许可证声明中指定的产品进行匹配。 你必须在常规许可证声明中使用与站点数据库中存储的产品名称完全匹配的产品名称。 资产智能采用常规许可证声明中提供的“有效数量”数字，将该数字与 Configuration Manager 清单中找到的已安装产品数进行比较。  
 
@@ -200,9 +200,9 @@ ms.locfileid: "56156706"
 |首行|整数值|是|购买的许可证数|  
 |PO 编号|最多 255 个字符|否|订单信息|  
 |经销商名称|最多 255 个字符|否|经销商信息|  
-|购买日期|日期值格式如下：MM/DD/YYYY|否|许可证的购买日期|  
+|购买日期|日期值采用以下格式：MM/DD/YYYY|否|许可证的购买日期|  
 |购买的支持|位值|否|0 或 1：如果为“是”，输入 0；如果为“否”，输入 1|  
-|支持到期日期|日期值格式如下：MM/DD/YYYY|否|购买的支持的结束日期|  
+|支持到期日期|日期值采用以下格式：MM/DD/YYYY|否|购买的支持的结束日期|  
 |注释|最多 255 个字符|否|可选备注|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  

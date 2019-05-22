@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d759ada36184ac8a6d1ac59c94c96cdaf234d56
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2c9f8b65180c4255c5c279d75f012db766163fd6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139368"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500765"
 ---
 # <a name="accessibility-features-in-support-center"></a>支持中心中的辅助功能
 
@@ -62,7 +62,7 @@ ms.locfileid: "56139368"
 |关闭所有日志文件<br>（位于支持中心“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **W** |
 |在日志文件中搜索| - Ctrl + F：打开“查找”对话框，输入搜索字符串<br> - **F3**：查找下一个匹配项<br> - Shift + F3：查找上一个匹配项|
 |查找错误代码<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **L** |
-|从日志文件复制| - Ctrl + C：复制日志文件文本<br> - Ctrl + Shift + C：复制日志条目（不复制格式）|
+|从日志文件复制| - Ctrl + C：复制日志文件文本<br> - Ctrl + Shift + C：复制不含格式的日志项目|
 |使用日志文件文本进行快速过滤<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **Shift** + **C** |
 |注释日志文件<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **Shift** + **N** <sup>[注释 1](#bkmk_note1)</sup>|
 |打开帮助|**F1**|

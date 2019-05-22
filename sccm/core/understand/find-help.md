@@ -2,7 +2,7 @@
 title: 查找帮助
 titleSuffix: Configuration Manager
 description: 查找有关 Configuration Manager 的其他信息的资源。
-ms.date: 07/30/2018
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9440a4873b6011ed4a7394c335531afc72ac5d97
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: e767d46c81e3942efb44d9d94ba7f66ecd1f5281
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802540"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083124"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>查找使用 Configuration Manager 的帮助
 
@@ -112,7 +112,7 @@ ms.locfileid: "59802540"
 
 1. 单击“提供反馈”窗口底部的“保存”。 
 2. 保存 .zip 文件。 如果本地计算机无法访问 Internet，请将文件复制到连接了 Internet 的计算机。 
-3. 如果需要，请复制位于 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` 的 UploadOfflineFeedback.exe
+3. 如果需要，复制位于 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\` 的 UploadOfflineFeedback 文件夹
     - 有关 cd.latest 文件夹的详细信息，请参阅 [CD.Latest 文件夹](../servers/manage/the-cd.latest-folder.md)
 
 4. 在连接了 Internet 的计算机上，打开命令提示符。 

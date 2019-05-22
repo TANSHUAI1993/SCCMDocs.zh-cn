@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be3b70d91155b379881332ddb7c8d405d0d92e84
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523854"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083520"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Configuration Manager 中的站点服务器高可用性
 
@@ -70,7 +70,7 @@ Microsoft Core Services Engineering and Operations 使用此功能将其管理�
 
     - 承载站点数据库的 SQL Server 可以使用默认实例、命名实例、[SQL Server 群集](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database)或 [SQL Server Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。  
 
-    - 两个站点服务器都需要在托管站点数据库的 SQL Server 实例上拥有 sysadmin 和 securityadmin 安全角色。 原始站点服务器应已具有这些角色，因此请为新站点服务器添加这些角色。 例如，以下 SQL 脚本将为 Contoso 域中的新站点服务器 VM2 添加这些角色：  
+    - 两个站点服务器都需要托管站点数据库的 SQL Server 实例上的 sysadmin 安全角色。 原始站点服务器应已具有这些角色，因此请为新站点服务器添加这些角色。 例如，以下 SQL 脚本将为 Contoso 域中的新站点服务器 VM2 添加这些角色：  
 
         ```SQL
         USE [master]
@@ -78,9 +78,7 @@ Microsoft Core Services Engineering and Operations 使用此功能将其管理�
         CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
         GO
         ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
-        GO
-        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
-        GO        
+        GO       
         ```
     - 两个站点服务器需要有权访问 SQL Server 实例上的站点数据库。 原始站点服务器应已具有此访问权限，因此请为新站点服务器添加此权限。 例如，以下 SQL 脚本将为 Contoso 域中的新站点服务器 VM2 添加登录到 CM_ABC 数据库的权限：  
 
@@ -230,7 +228,7 @@ Microsoft Core Services Engineering and Operations 使用此功能将其管理�
 有关“规划的”提升流程的详细信息，请参阅[流程图 - 提升站点服务器（规划）](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)。
 
 
-### <a name="unplanned-failover"></a>未计划的故障转移
+### <a name="unplanned-failover"></a>计划外故障转移
 
 如果当前的主动模式站点服务器处于脱机状态，则要进行提升的站点服务器会尝试联系当前的主动模式站点服务器（需要 30 分钟）。 如果脱机服务器在此时间之前恢复，它会成功收到通知，并且更改会正常进行。 否则，要进行提升的站点服务器会强制更新站点配置以更改为主动状态。 如果脱机服务器在此时间之后恢复，它首先会检查站点数据库中的当前状态。 然后，继续降级为被动模式下的站点服务器。
 

@@ -1,8 +1,8 @@
 ---
 title: 使用的帐户
 titleSuffix: Configuration Manager
-description: 标识和管理 Configuration Manager 中使用的 Windows 组和帐户。
-ms.date: 03/29/2019
+description: 标识和管理 Configuration Manager 中使用的 Windows 组、帐户和 SQL 对象。
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05ff407c3787283a58973f2861432a0a26a52b0
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 7949808110d058bc1511abd1053e583b7f452cfa
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802778"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083574"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
-适用范围：*System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-可以使用以下信息确定 Configuration Manager 中使用的 Windows 组和帐户、它们的使用方式以及任何要求。  
+使用以下信息来标识 Configuration Manager 中使用的 Windows 组、帐户和 SQL 对象及其使用方式和任何要求。  
 
 - [Configuration Manager 创建和使用的 Windows 组](#bkmk_groups)  
     - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
@@ -61,7 +61,10 @@ ms.locfileid: "59802778"
     - [任务序列网络文件夹连接帐户](#task-sequence-network-folder-connection-account)  
     - [任务序列运行方式帐户](#task-sequence-run-as-account)  
 
-
+- [Configuration Manager 在 SQL 中使用的用户对象](#bkmk_sqlobjects)
+    - [smsdbuser_ReadOnly](#smsdbuser_ReadOnly)
+    - [smsdbuser_ReadWrite](#smsdbuser_ReadWrite)
+    - [smsdbuser_ReportSchema](#smsdbuser_ReportSchema)
 
 ## <a name="bkmk_groups"></a>Configuration Manager 创建和使用的 Windows 组  
 
@@ -71,7 +74,7 @@ ms.locfileid: "59802778"
 >  当 Configuration Manager 在作为域成员的计算机上创建组时，该组为本地安全组。 如果计算机是域控制器，则该组是域本地组。 此类组在域中的所有域控制器之间共享。  
 
 
-### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
 
 Configuration Manager 使用此组来授予查看软件清单所收集的文件的访问权限。  
 
@@ -89,7 +92,7 @@ Configuration Manager 自动管理组成员身份。 成员身份管理用户，
 默认情况下，该组对站点服务器上的以下文件夹具有“读取”权限：`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgrdviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
 
  此组是由 Configuration Manager 在子主站点的站点数据库服务器或数据库副本服务器上创建的本地安全组。 使用分布式视图在层次结构中的站点之间进行数据库复制时，站点会创建它。 它包含管理中心站点的站点服务器和 SQL Server 计算机帐户。
 
@@ -589,3 +592,25 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 >   
 >  如果命令行需要计算机上的管理权限，请考虑在所有运行任务序列的计算机上为此帐户单独创建一个本地管理员帐户。 不再需要该帐户时请立即将其删除。  
 
+
+## <a name="bkmk_sqlobjects"></a> Configuration Manager 在 SQL 中使用的用户对象 
+<!--SCCMDocs issue #1160-->
+Configuration Manager 自动在 SQL 中创建和维护以下用户对象。  这些对象位于 Configuration Manager 数据库中的 Security/Users 下。  
+
+> [!IMPORTANT]  
+>  修改或删除这些对象可能会导致 Configuration Manager 环境中出现严重问题。  建议不要对这些对象进行任何更改。
+
+
+### <a name="smsdbuserreadonly"></a>smsdbuser_ReadOnly
+
+此对象用于在只读上下文中运行查询。  此对象与多个存储过程结合使用。
+
+
+### <a name="smsdbuserreadwrite"></a>smsdbuser_ReadWrite
+
+此对象用于为动态 SQL 语句提供权限。
+
+
+### <a name="smsdbuserreportschema"></a>smsdbuser_ReportSchema
+
+此对象用于运行 SQL 报告执行。  以下存储过程与此函数结合使用：spSRExecQuery。

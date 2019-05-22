@@ -2,21 +2,21 @@
 title: 增量版本
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 最新更新中的新增功能。
-ms.date: 03/27/2019
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 350b349aee07a984b51d1d1f53358bf45dd4402b
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 5b053cdb8bbaf03a250c1daeff3a51beb16508d8
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523701"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499584"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Configuration Manager 增量版本中的新增功能
 
@@ -33,11 +33,12 @@ Configuration Manager 采用控制台中[更新和服务](/sccm/core/servers/man
 ## <a name="supported-versions"></a>支持的版本
 
 使用以下链接查看每个受支持版本的新增功能：
-    - [版本 1902 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1902)
-    - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
-    - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
-    - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-    - [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
+
+- [版本 1902 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1902)  
+- [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)  
+- [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
+- [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)  
+- [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)  
 
 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。  了解最新的更新版本。 有关详细信息，请参阅[对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。  
 

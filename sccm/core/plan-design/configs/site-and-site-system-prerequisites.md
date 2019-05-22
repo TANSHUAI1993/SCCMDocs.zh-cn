@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5e58d82f12ceaac5ad0da66a0836f1d3d913d6
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: d719f35ced60d868cd527dc82769595457d69228
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881803"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499401"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -516,7 +516,8 @@ ms.locfileid: "57881803"
 
 -   有关详细信息，请参阅[规划软件更新](/sccm/sum/plan-design/plan-for-software-updates)。  
 
-
+> [!NOTE]  
+> 如果在除站点服务器以外的服务器上使用软件更新点，必须在站点服务器上安装 WSUS 管理控制台。   
 
 ##  <a name="bkmk_2012SMPpreq"></a> 状态迁移点  
 <!--SCCMDocs issue 645-->

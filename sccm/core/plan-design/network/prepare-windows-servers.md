@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e794ff161f193f76fc899ab35acb1d29afdf606
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cbe2608058f7364ba2b78a7ed31a01dbec5ef65f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120328"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499188"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>准备 Windows Server 以支持 Configuration Manager
 
@@ -47,7 +47,7 @@ ms.locfileid: "56120328"
 
     由于 .NET Framework 4.0 和更高版本不是向后兼容，无法替换 3.5 及更早版本，在不同的版本被列为必需时，计划在同一台计算机上启用每个版本。  
 
-- **后台智能传输服务 (BITS)**：管理点需要 BITS（和自动选择的选项）来支持与托管设备之间的通信。  
+- **后台智能传输服务 (BITS)**：管理点需要 BITS（和自动选择的选项），以支持与托管设备之间的通信。  
 
 - **BranchCache**：可以通过 BranchCache 来设置分发点以支持使用 BranchCache 的客户端。  
 
@@ -60,7 +60,7 @@ ms.locfileid: "56120328"
 
 - **网络设备注册服务**（在 Active Directory 域服务证书服务下）：此 Windows 角色是在 Configuration Manager 中使用证书配置文件的先决条件。  
 
-- **Web 服务器 (IIS)**：Incluindo:  
+- **Web 服务器 (IIS)**：包括：  
     - 常见 HTTP 功能  
           - HTTP 重定向  
     - 应用程序开发  

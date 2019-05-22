@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 086f7aa4062ee62a2ee8aaf28df3a1e6e389bdf0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f9ef05ac5a931addb5dd5a8dc7d1b04bd4d50e1c
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139198"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443111"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
@@ -48,7 +48,8 @@ Steps to workaround, if any.
 
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence"></a>使用手动配置的任务序列阶段创建分阶段部署
-<!--1358148--> 现在可以使用手动配置的任务序列阶段[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。 可以从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段。 
+<!--1358148-->
+现在可以使用手动配置的任务序列阶段[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。 可以从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段。 
 
 
 ### <a name="try-it-out"></a>试试看！
@@ -86,7 +87,8 @@ Steps to workaround, if any.
 
 
 ## <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>对 Azure 资源管理器的云分发点支持
-<!--1322209--> 在创建[云分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)实例时，向导现提供选项来创建“Azure 资源管理器部署”。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+<!--1322209-->
+在创建[云分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)实例时，向导现提供选项来创建“Azure 资源管理器部署”。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 云分发点向导仍提供使用 Azure 管理证书的“经典服务部署”选项。 若要简化资源的部署和管理，我们建议为所有新的云分发点使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有云分发点。
 
@@ -121,7 +123,8 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 
 
 ## <a name="take-actions-based-on-management-insights"></a>根据管理见解执行操作
-<!--1357930--> 某些[管理见解](/sccm/core/servers/manage/management-insights)现在可以选择执行一个操作。 根据规则，此操作会出现以下行为之一：  
+<!--1357930-->
+某些[管理见解](/sccm/core/servers/manage/management-insights)现在可以选择执行一个操作。 根据规则，此操作会出现以下行为之一：  
 
 - 在控制台中自动导航到可以采取进一步操作的节点。 例如，如果管理见解建议更改客户端设置，执行操作将导航到“客户端设置”节点。 可以通过修改默认或自定义客户端设置对象采取进一步操作。  
 
@@ -138,7 +141,7 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
     - 非 CB 客户端版本
 - 集合
     - 空集合 
-- Cloud Services
+- 云服务
     - 将客户端更新到 Windows 10 最新版本
 
 
@@ -181,7 +184,8 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 
 
 ## <a name="cloud-management-dashboard"></a>云管理仪表板
-<!--1358461--> 新**云管理仪表板**为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。  
+<!--1358461-->
+新云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。  
 
 下面的屏幕截图是云管理仪表板的一部分，显示了两个可用磁贴：  
 ![云管理仪表板磁贴 CMG 流量和当前联机客户端](media/1358461-cmg-dashboard.png)
@@ -219,7 +223,8 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 
 
 ## <a name="cmpivot"></a>CMPivot
-<!--1358456--> Configuration Manager 总是提供设备数据的大型集中式存储，客户可将其用于报告目的。 然而，这些数据只和上次从客户端那里收集的数据一样。 
+<!--1358456-->
+Configuration Manager 总是提供设备数据的大型集中式存储，客户可将其用于报告目的。 然而，这些数据只和上次从客户端那里收集的数据一样。 
 
 CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实时状态的访问。 它立即对目标集合中的所有连接设备运行查询，并返回结果。 然后你可以在工具中对此数据进行筛选和分组。 通过提供来自联机客户端的实时数据，可以更快地回答业务问题、解决问题并对安全事件作出响应。
 
@@ -262,7 +267,8 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 
 ## <a name="improved-secure-client-communications"></a>已改进安全客户端通信
-<!--1356889,1358228,1358460--> 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
+<!--1356889,1358228,1358460-->
+建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
 
 此版本包括对客户端与站点系统之间的通信方式的改进。 这些改进有两个主要目标：  
 
@@ -285,10 +291,12 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个启用了 HTTPS 的管理点。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
 
 #### <a name="bkmk_token2"></a> 方案 2：客户端到分发点
-<!--1358228--> 工作组或加入 Azure AD 的客户端可以通过安全通道从为 HTTP 配置的分发点下载内容。   
+<!--1358228-->
+工作组或加入 Azure AD 的客户端可以通过安全通道从为 HTTP 配置的分发点下载内容。   
 
 #### <a name="bkmk_token3"></a> 方案 3：Azure AD 设备标识 
-<!--1358460--> 没有 Azure AD 用户登录的加入 Azure AD 的或[混合 Azure AD 设备](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
+<!--1358460-->
+没有 Azure AD 用户登录的加入 Azure AD 的或[混合 Azure AD 设备](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
 
 
 ### <a name="prerequisites"></a>先决条件  
@@ -331,7 +339,8 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 
 ## <a name="improvements-for-enabling-third-party-software-update-support"></a>启用第三方软件更新支持的改进
-<!--1357605--> 有关[第三方软件更新支持](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)的 UserVoice 反馈结果是，此版本进一步迭代与 System Center Updates Publisher 的集成 (SCUP)。 Configuration Manager Technical Preview [版本 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) 添加了从 WSUS 读取证书以便进行第三方更新，然后将该证书部署到客户端的功能。 但仍需要使用 SCUP 工具创建和管理证书以签署第三方软件更新。
+<!--1357605-->
+有关[第三方软件更新支持](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)的 UserVoice 反馈结果是，此版本进一步迭代与 System Center Updates Publisher 的集成 (SCUP)。 Configuration Manager Technical Preview [版本 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) 添加了从 WSUS 读取证书以便进行第三方更新，然后将该证书部署到客户端的功能。 但仍需要使用 SCUP 工具创建和管理证书以签署第三方软件更新。
 
 在此版本中，可以启用 Configuration Manager 站点来自动配置证书。 站点与 WSUS 进行通信，以此为该目的生成一个证书。 然后，Configuration Manager 继续将该证书部署到客户端。 此迭代不再需要使用 SCUP 工具来创建和管理证书。 
 
@@ -390,17 +399,19 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 
 ## <a name="improvement-to-the-configuration-manager-console"></a>对 Configuration Manager 控制台的改进
-<!--1358202--> 我们已对 Configuration Manager 控制台进行了以下改进：
+<!--1358202-->
+我们已对 Configuration Manager 控制台进行了以下改进：
 
 - 现在，“资产和符合性”、“设备”下的设备列表默认显示当前登录用户。 此值与[客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus)同步保持最新。 当用户注销时，将清除该值。 如果没有用户登录，则值为空。 
 
 ### <a name="known-issues"></a>已知问题
-当前登录用户值在“设备”节点中为空，或者在查看“设备集合”节点下的设备列表时为空。 若要解决此问题，请下载此 [SQL 脚本](https://gallery.technet.microsoft.com/ConfigMgr-1805-BgbUpdateLiv-306ff46c)。 在站点数据库服务器上，运行 sp_BgbUpdateLiveData.sql，然后重新启动管理点上的 smsexec 和 sms_notification_server 服务。<!--514471-->
+当前登录用户值在“设备”节点中为空，或者在查看“设备集合”节点下的设备列表时为空。 若要解决此问题，请下载此 [SQL 脚本](https://gallery.technet.microsoft.com/ConfigMgr-1805-BgbUpdateLiv-306ff46c)。 在站点数据库服务器上，运行 sp_BgbUpdateLiveData.sql，然后重启管理点上的 smsexec 和 sms_notification_server 服务。<!--514471-->
 
 
 
 ## <a name="improvements-to-console-feedback"></a>对控制台反馈的改进
-<!--1357542--> 此版本包含对 Configuration Manager 控制台中新[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)机制的以下改进：  
+<!--1357542-->
+此版本包含对 Configuration Manager 控制台中新[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)机制的以下改进：  
 
 - 反馈对话框现在会记住以前的设置，例如选择的选项和电子邮件地址。  
 
@@ -422,7 +433,8 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 
 ## <a name="improvement-to-hardware-inventory-for-large-integer-values"></a>对大整数值硬件清单的改进
-<!--1357880--> 硬件清单当前对大于 4,294,967,296 (2^32) 的整数设定了限制。 对于诸如以字节为单位的硬盘大小之类的属性，可以达到此限制。 管理点不会处理超过此限制的整数值，因此数据库中不会存储任何值。 现在，此版本中的限制增加到了 18,446,744,073,709,551,616 (2^64)。 
+<!--1357880-->
+硬件清单当前对大于 4,294,967,296 (2^32) 的整数设定了限制。 对于诸如以字节为单位的硬盘大小之类的属性，可以达到此限制。 管理点不会处理超过此限制的整数值，因此数据库中不会存储任何值。 现在，此版本中的限制增加到了 18,446,744,073,709,551,616 (2^64)。 
 
 对于值不变的属性（如总磁盘大小），可能在升级站点后不会立即看到值。 大多数硬件清单为增量报表。 客户端仅发送更改的值。 若要解决此行为，请将另一个属性添加到同一个类。 此操作会导致客户端更新已更改类中的所有属性。 
 
@@ -445,7 +457,8 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 
 ## <a name="improvement-to-support-for-cng-certificates"></a>对 CNG 证书支持的改进
-<!--1357314--> 在此版本中，[CNG 证书](/sccm/core/plan-design/network/cng-certificates-overview)将用于下列其他已启用 HTTPS 的服务器角色：  
+<!--1357314-->
+在此版本中，[CNG 证书](/sccm/core/plan-design/network/cng-certificates-overview)将用于下列其他已启用 HTTPS 的服务器角色：  
 - 证书注册点，包括具有 Configuration Manager 策略模块的 NDES 服务器
 
 

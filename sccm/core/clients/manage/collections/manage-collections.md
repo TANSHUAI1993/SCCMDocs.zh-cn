@@ -2,7 +2,7 @@
 title: 管理集合
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中执行常见集合管理任务。
-ms.date: 08/17/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1a6b087b19a27bcb7cbc2fa2022d828aea58800b
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133725"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673318"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>如何管理 Configuration Manager 中的集合
 
@@ -25,7 +25,7 @@ ms.locfileid: "56133725"
 使用本文中的概述信息可帮助执行 Configuration Manager 中的集合的管理任务。  
 
 > [!NOTE]  
->  有关如何创建 Configuration Manager 集合的信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。  
+>  有关如何创建 Configuration Manager 集合的信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。
 
 
 
@@ -70,7 +70,7 @@ ms.locfileid: "56133725"
 
 
 #### <a name="add-resources"></a>添加资源
- 将打开“将资源添加到集合”对话框。 搜索要添加到所选集合的新资源。 更新过程中，所选集合的图标将显示沙漏符号。
+ 将打开“将资源添加到集合”对话框。 搜索要添加到所选集合的新资源。 当更新正在进行时，选定集合的图标显示沙漏符号。
 
 
 #### <a name="client-notification"></a>客户端通知
@@ -112,7 +112,7 @@ ms.locfileid: "56133725"
 
  - **配置基线**：打开“部署配置基线”对话框。 配置所选集合的一个或多个配置基线的部署。 有关详细信息，请参阅[如何部署配置基线](/sccm/compliance/deploy-use/deploy-configuration-baselines)。  
 
- - **任务序列**：打开“部署软件向导”。 选择并配置所选集合的任务序列部署。 有关详细信息，请参阅[管理任务序列以自动执行任务](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
+ - **任务序列**：打开“部署软件向导”。 选择并配置所选集合的任务序列部署。 有关详细信息，请参阅[管理任务序列以自动执行任务](/sccm/osd/deploy-use/deploy-a-task-sequence)。  
 
  - **软件更新**：打开“部署软件更新向导”。 配置所选集合中到资源的软件更新部署。 有关详细信息，请参阅[管理软件更新](/sccm/sum/understand/software-updates-introduction)。  
 
@@ -127,7 +127,6 @@ ms.locfileid: "56133725"
 
 #### <a name="properties"></a>属性
  有关详细信息，请参阅[集合设置](#BKMK_CollProp)。  
-
 
 
 ## <a name="bkmk_user"></a> 如何管理用户集合  
@@ -152,10 +151,9 @@ ms.locfileid: "56133725"
  - **部署**  
      - **应用程序**  
      - 程序  
-     - 配置基线   
+     - 配置基线
  - **移动**  
  - <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept>
-
 
 
 ##  <a name="BKMK_CollProp"></a> 集合属性  
@@ -188,3 +186,32 @@ ms.locfileid: "56133725"
 
 #### <a name="alerts"></a>警报 
  配置何时对于客户端状态和 Endpoint Protection 生成警报。 有关详细信息，请参阅[如何配置客户端状态](/sccm/core/clients/deploy/configure-client-status)和[如何监视 Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection)。  
+## <a name="bkmk_powershell"></a> 使用 PowerShell
+
+PowerShell 可用于管理集合。  有关详情，请参阅：
+
+* [Get-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Copy-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
+* [Export-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

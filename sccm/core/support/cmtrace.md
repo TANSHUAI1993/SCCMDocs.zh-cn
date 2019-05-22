@@ -2,21 +2,21 @@
 title: CMTrace
 titleSuffix: Configuration Manager
 description: 了解如何使用 CMTrace 工具查看 Configuration Manager 的日志文件。
-ms.date: 07/30/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 988e834de78bac64be43600ca73d0d51ff29bf4b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125289"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496778"
 ---
 # <a name="cmtrace"></a>CMTrace
 
@@ -115,8 +115,8 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 - [筛选器](#filter)
 - [错误查找](#error-lookup)
 - [暂停](#pause)
-- [显示/隐藏详细信息](#show-hide-details)
-- [显示/隐藏信息窗格](#show-hide-info-pane)
+- [显示/隐藏详细信息](#show/hide-details)
+- [显示/隐藏信息窗格](#show/hide-info-pane)
 
 #### <a name="find"></a>查找
 在打开的日志文件中搜索指定的文本字符串。  
@@ -141,7 +141,8 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 #### <a name="filter"></a>筛选器
 根据指定条件显示或隐藏日志行。 将筛选器应用于四列中的任何一列，无论它们是否可见。 这些设置适用于每个打开的日志文件。 
 
-示例：<!--SCCMDocs issue #603-->
+示例：
+<!--SCCMDocs issue #603-->
 - 根据包含“the action”或“the group”的条目文本筛选 **smsts.log**。 
 - 筛选条目文本包含“destination”的 **InventoryAgent.log**。
 
@@ -230,7 +231,8 @@ CMTrace 支持基本的拖放功能。 将日志文件从 Windows 资源管理�
 ## <a name="other-tips"></a>其他提示
 
 ### <a name="last-directory-registry-key"></a>Last Directory 注册表项
-<!--511280--> 默认情况下，CMTrace 会保存你打开的最后一个日志位置。 此行为在站点服务器上很有用，因为它每次都默认为日志路径。 
+<!--511280-->
+CMTrace 默认保存你打开的最后一个日志位置。 此行为在站点服务器上很有用，因为它每次都默认为日志路径。 
 
 第一次在客户端上启动它时，它默认为当前工作目录。 此位置可能是保存 CMTrace 的路径，也可能是类似于 `%userprofile%\Desktop` 的路径。 
 

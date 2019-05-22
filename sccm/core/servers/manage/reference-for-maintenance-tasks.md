@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b395cc8a19a3aab86f3ad40302673d41afe4885
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7cc2e1783843f600f88b78e0db0cc6b8b8db0f55
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123359"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500984"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
@@ -42,7 +42,7 @@ ms.locfileid: "56123359"
 -   **主站点**：未启用    
 -   辅助站点：不可用  
 
-**删除过期的应用程序请求数据**：使用此任务从数据库中删除过期的应用程序请求。 有关应用程序请求的详细信息，请参阅[通过 System Center Configuration Manager 创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。  
+**删除过期的应用程序请求数据**：此任务可用于从数据库中删除过期的应用程序请求。 有关应用程序请求的详细信息，请参阅[通过 System Center Configuration Manager 创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。  
 
 -   管理中心站点：不可用
 -   **主站点**：Enabled    
@@ -71,49 +71,49 @@ ms.locfileid: "56123359"
 - 辅助站点 - 不可用
 
 
-**删除过期的收集文件**：使用此任务从数据库中删除有关收集的文件的过期信息。 此任务还从所选站点内的站点服务器文件夹结构中删除收集的文件。 默认情况下，会在站点服务器上的 **Inboxes\sinv.box\FileCol** 目录中存储收集的文件的五个最新副本。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
+**删除过期的收集文件**：此任务可用于从数据库中删除已收集文件的过期信息。 此任务还从所选站点内的站点服务器文件夹结构中删除收集的文件。 默认情况下，会在站点服务器上的 **Inboxes\sinv.box\FileCol** 目录中存储收集的文件的五个最新副本。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的计算机关联数据**：使用此任务从数据库中删除过期的操作系统部署计算机关联数据。 此信息用作完成用户状态还原的一部分。 有关计算机关联的详细信息，请参阅[在 System Center Configuration Manager 中管理用户状态](../../../osd/get-started/manage-user-state.md)。  
+**删除过期的计算机关联数据**：此任务可用于从数据库中删除过期的操作系统部署计算机关联数据。 此信息用作完成用户状态还原的一部分。 有关计算机关联的详细信息，请参阅[在 System Center Configuration Manager 中管理用户状态](../../../osd/get-started/manage-user-state.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的删除检测数据**：使用此任务从数据库中删除通过提取视图创建的过期数据。 默认情况下，禁用提取视图。 只能通过使用 Configuration Manager SDK 启用它们。 除非启用提取视图，否则没有可供此任务删除的数据。  
+**删除过期的删除检测数据**：此任务可用于从提取视图创建的数据库中删除过期数据。 默认情况下，禁用提取视图。 只能通过使用 Configuration Manager SDK 启用它们。 除非启用提取视图，否则没有可供此任务删除的数据。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的设备擦除记录**：使用此任务从数据库中删除有关移动设备擦除操作的过期数据。 有关擦除移动设备的信息，请参阅[使用 System Center Configuration Manager 通过远程擦除、锁定或密码重置功能帮助保护数据](/sccm/mdm/deploy-use/wipe-lock-reset-devices)。  
+**删除过期的设备擦除记录**：此任务可用于从数据库中删除移动设备擦除操作的过期数据。 有关擦除移动设备的信息，请参阅[使用 System Center Configuration Manager 通过远程擦除、锁定或密码重置功能帮助保护数据](/sccm/mdm/deploy-use/wipe-lock-reset-devices)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除 Exchange Server 连接器管理的过期设备**：使用此任务删除有关使用 Exchange Server 连接器管理的移动设备的过期数据。 将依据在 Exchange Server 连接器属性的“发现”选项卡上为“忽略非活动天数超过以下值的移动设备”选项配置的间隔删除此数据。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+**删除 Exchange Server 连接器管理的过期设备**：此任务可用于删除使用 Exchange Server 连接器管理的移动设备的过期数据。 将依据在 Exchange Server 连接器属性的“发现”选项卡上为“忽略非活动天数超过以下值的移动设备”选项配置的间隔删除此数据。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
 -   管理中心站点：不可用   
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的发现数据**：使用此任务从数据库中删除过期的发现数据。 此数据可能包括利用检测信号发现、网络发现和 Active Directory 域服务发现方法（系统、用户和组）生成的记录。 此任务还会移除标记为已解除授权的过期设备。 在某个站点运行此任务时，将删除与此站点关联的数据，而这些更改将复制到其他站点。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
+**删除过期的发现数据**：此任务可用于从数据库中删除过期的发现数据。 此数据可能包括利用检测信号发现、网络发现和 Active Directory 域服务发现方法（系统、用户和组）生成的记录。 此任务还会移除标记为已解除授权的过期设备。 在某个站点运行此任务时，将删除与此站点关联的数据，而这些更改将复制到其他站点。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的分发点使用情况数据**：使用此任务从数据库中删除存储时间比指定时间长的分发点的过期数据。  
+**删除过期的分发点使用情况数据**：此任务可用于从数据库中删除存储时间长于指定时间的过期分发点数据。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的 Endpoint Protection 运行状况历史数据**：使用此任务从数据库中删除 Endpoint Protection 的过期状态信息。 有关 Endpoint Protection 状态信息的详细信息，请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
+**删除过期的 Endpoint Protection 运行状况历史数据**：此任务可用于从数据库中删除过期的 Endpoint Protection 状态信息。 有关 Endpoint Protection 状态信息的详细信息，请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
@@ -127,13 +127,13 @@ ms.locfileid: "56123359"
 -   **主站点**：未启用    
 -   辅助站点：不可用  
 
-**删除过期的清单历史记录**：使用此任务从数据库中删除存储时间比指定时间长的清单数据。 有关清单历史记录的信息，请参阅[如何使用资源浏览器来查看 System Center Configuration Manager 中的硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
+**删除过期的清单历史记录**：此任务可用于从数据库中删除存储时间长于指定时间的清单数据。 有关清单历史记录的信息，请参阅[如何使用资源浏览器来查看 System Center Configuration Manager 中的硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的日志数据**：使用此任务从数据库中删除用于疑难解答的过期日志数据。 此数据与 Configuration Manager 组件操作无关。  
+**删除过期的日志数据**：此任务可用于从数据库中删除用于排除故障的过期日志数据。 此数据与 Configuration Manager 组件操作无关。  
 
 > [!IMPORTANT]  
 > 默认情况下，此任务每天将在每个站点运行。 在管理中心站点和主站点，此任务会删除存在时间大于 30 天的数据。 在辅助站点使用 SQL Server Express 时，请确保此任务每天都运行并删除已 7 天不活动的数据。  
@@ -166,25 +166,25 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled    
 -   **辅助站点**：Enabled  
 
-**删除过期的软件计数数据**：使用此任务从数据库中删除存储时间比指定时间长的软件计数过期数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+**删除过期的软件计数数据**：此任务可用于从数据库中删除存储时间长于指定时间的过期软件计数数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的软件计数摘要数据**：使用此任务从数据库中删除存储时间比指定时间长的软件计数过期摘要数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+**删除过期的软件计数摘要数据**：此任务可用于从数据库中删除存储时间长于指定时间的过期软件计数汇总数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的状态消息**：使用此任务从数据库中删除在状态筛选规则中配置的过期状态消息数据。 有关信息，请参阅[使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md)主题中的“监视 Configuration Manager 的状态系统”部分。  
+**删除过期的状态消息**：此任务可用于从数据库中删除状态筛选规则中配置的过期状态消息数据。 有关信息，请参阅[使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md)主题中的“监视 Configuration Manager 的状态系统”部分。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的威胁数据**：使用此任务从数据库中删除存储时间比指定时间长的过期 Endpoint Protection 威胁数据。 有关 Endpoint Protection 的信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。  
+**删除过期的威胁数据**：此任务可用于从数据库中删除存储时间长于指定时间的过期 Endpoint Protection 威胁数据。 有关 Endpoint Protection 的信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
@@ -196,7 +196,7 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的用户设备相关性数据**：使用此任务从数据库中删除过期的用户设备相关性数据。 有关详细信息，请参阅[在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
+**删除过期的用户设备相关性数据**：此任务可用于从数据库中删除过期的用户设备相关性数据。 有关详细信息，请参阅[在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
@@ -207,7 +207,7 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled
 -   辅助站点：不可用
 
-**删除非活动状态的客户端发现数据**：使用此任务从数据库中删除不活动客户端的发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，会将客户端标记为不活动。
+**删除非活动状态的客户端发现数据**：此任务可用于从数据库中删除不活动客户端的发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，会将客户端标记为不活动。
 
 此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
 
@@ -218,13 +218,13 @@ ms.locfileid: "56123359"
 -   **主站点**：未启用    
 -   辅助站点：不可用  
 
-**删除过时的警报**：使用此任务从数据库中删除存储时间比指定时间长的过期警报。 有关详细信息，请参阅 [使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
+**删除过时的警报**：此任务可用于从数据库中删除存储时间长于指定时间的过期警报。 有关详细信息，请参阅 [使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过时的客户端发现数据**：使用此任务从数据库中删除过时的客户端记录。 标记为过时的记录通常会被同一客户端的较新记录所取代。 较新记录将成为客户端的当前记录。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
+**删除过时的客户端发现数据**：此任务可用于从数据库中删除过时的客户端记录。 标记为过时的记录通常会被同一客户端的较新记录所取代。 较新记录将成为客户端的当前记录。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
 
 > [!IMPORTANT]  
 > 启用此任务时，请将此任务配置为按大于“检测信号发现”计划的间隔运行。 这允许客户端发送“检测信号发现”记录以正确设置过时的状态。  
@@ -244,13 +244,13 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled    
 -   辅助站点：不可用
 
-**删除未使用的应用程序版本**：使用此任务删除不再被引用的应用程序版本。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中修订和取代应用程序](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
+**删除未使用的应用程序版本**：此任务可用于删除不再被引用的应用程序版本。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中修订和取代应用程序](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**计算集合成员**：你可以将集合成员身份评估配置为站点组件。 有关站点组件的信息，请参阅 [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md)。  
+**计算集合成员**：将集合成员身份评估配置为站点组件。 有关站点组件的信息，请参阅 [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
@@ -270,13 +270,13 @@ ms.locfileid: "56123359"
 -   **主站点**：未启用    
 -   **辅助站点**：未启用  
 
-**汇总已安装软件的数据**：使用此任务将来自多个记录的已安装软件的数据汇总成一个总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](../../clients/manage/inventory/introduction-to-software-inventory.md)。  
+**汇总已安装软件的数据**：此任务可用于将来自多个记录的已安装软件数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](../../clients/manage/inventory/introduction-to-software-inventory.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**汇总软件计数文件使用数据**：使用此任务将来自多个记录的软件计数文件使用数据汇总成一个总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
+**汇总软件计数文件使用数据**：此任务可用于将来自多个记录的软件计数文件使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
 可配合使用此任务与“汇总软件计数每月使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的磁盘空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
@@ -284,7 +284,7 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**汇总软件计数每月使用数据**：使用此任务将来自多个记录的软件计数每月使用数据汇总成一个总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
+**汇总软件计数每月使用数据**：此任务可用于将来自多个记录的软件计数每月使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
 可配合使用此任务与“汇总软件计数文件使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
@@ -300,7 +300,7 @@ ms.locfileid: "56123359"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**更新应用程序目录表**：使用此任务将应用程序目录网站数据库缓存与最新的应用程序信息进行同步。 在更改此维护任务的配置时，配置将应用到层次结构中的所有主站点。  
+**更新应用程序目录表**：此任务可用于将应用程序目录网站数据库缓存与最新的应用程序信息同步。 在更改此维护任务的配置时，配置将应用到层次结构中的所有主站点。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    

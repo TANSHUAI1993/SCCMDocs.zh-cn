@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abfad38e0c02ff6c0af8d4c9c47bdeed7598e513
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 23fbe5ecb6b69f9832ca34659cd35f5ad25b29b9
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129742"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501309"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager 安装程序下载程序
 
@@ -58,15 +58,15 @@ ms.locfileid: "56129742"
 
     可将以下命令行选项配合“Setupdl.exe”使用：   
 
-    -   **/VERIFY**：使用此选项来验证下载文件夹中的文件（包括语言文件）。 查看驱动器 C 根目录中的 ConfigMgrSetup.log 文件，获取过期文件的列表。 使用此选项时不会下载文件。  
+    -   **/VERIFY**：此选项可用于验证下载文件夹中的文件（包括语言文件）。 查看驱动器 C 根目录中的 ConfigMgrSetup.log 文件，获取过期文件的列表。 使用此选项时不会下载文件。  
 
-    -   **/VERIFYLANG**：使用此选项来验证下载文件夹中的语言文件。 查看驱动器 C 根目录中的 ConfigMgrSetup.log 文件，获取过期语言文件的列表。
+    -   **/VERIFYLANG**：此选项可用于验证下载文件夹中的语言文件。 查看驱动器 C 根目录中的 ConfigMgrSetup.log 文件，获取过期语言文件的列表。
 
-    -   **/LANG**：使用此选项以便仅将语言文件下载到下载文件夹。  
+    -   **/LANG**：此选项可用于仅将语言文件下载到下载文件夹。  
 
-    -   **/NOUI**：使用此选项以启动安装程序下载程序而不显示用户界面。 如果使用此选项，必须指定“下载路径”作为命令提示符中命令的一部分。  
+    -   **/NOUI**：此选项可用于启动安装程序下载程序，而不显示用户界面。 如果使用此选项，必须指定“下载路径”作为命令提示符中命令的一部分。  
 
-    -   **&lt;DownloadPath\>**：你可以指定下载文件夹的路径以自动启动验证或下载过程。 使用“/NOUI”选项时必须指定下载路径。 如果未指定下载路径，则必须在安装程序下载程序打开时指定该路径。 安装程序下载程序会创建文件夹（如果不存在）。  
+    -   **&lt;DownloadPath\>**：可以指定下载文件夹的路径，以自动启动验证或下载流程。 使用“/NOUI”选项时必须指定下载路径。 如果未指定下载路径，则必须在安装程序下载程序打开时指定该路径。 安装程序下载程序会创建文件夹（如果不存在）。  
 
     示例命令：
 

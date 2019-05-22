@@ -2,27 +2,28 @@
 title: 数据仓库
 titleSuffix: Configuration Manager
 description: Configuration Manager 的数据仓库服务点和数据库
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4630504cbbf4b00fbfa12b666e26b93fcda09ae5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130167"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501135"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-<!--1277922--> 使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
+<!--1277922-->
+使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
@@ -84,7 +85,7 @@ ms.locfileid: "56130167"
 
 若要安装该角色，请使用“添加站点系统角色向导”或“创建站点系统服务器向导”。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 在向导的“系统角色选择”页上，选择“数据仓库服务点”角色。 
 
-安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称，Configuration Manager 将不会创建新数据库。 而会使用你指定的数据库。 此过程与[将数据仓库数据库移动到新 SQL Server](#move-the-data-warehouse-database) 时的过程相同。
+安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称，Configuration Manager 将不会创建新数据库。 而会使用你指定的数据库。 此过程与[将数据仓库数据库移动到新 SQL Server](#move-the-database) 时的过程相同。
 
 
 ### <a name="configure-properties"></a>配置属性
@@ -137,7 +138,7 @@ ms.locfileid: "56130167"
 安装数据仓库服务点后，可以在站点的 Reporting Services 点上获得多个报告。 如果在安装 Reporting Services 点之前先安装数据仓库服务点，当稍后安装 Reporting Services 点时，将自动添加这些报表。
 
 > [!WARNING]  
-> 从版本 1802 开始，数据仓库点支持备用凭据。<!--507334--> 如果从先前版本的 Configuration Manager 升级，则需指定 SQL Server Reporting Services 用于连接到数据仓库数据库的凭据。 在添加凭据之前，数据仓库报告不会打开。 
+> 自版本 1802 起，数据仓库点支持备用凭据。<!--507334--> 如果从先前版本的 Configuration Manager 升级，则需指定 SQL Server Reporting Services 用于连接到数据仓库数据库的凭据。 在添加凭据之前，数据仓库报告不会打开。 
 > 
 > 要指定一个帐户，请在角色属性中为数据仓库服务点帐户设置用户名。 有关详细信息，请参阅[配置属性](#configure-properties)。 
 
