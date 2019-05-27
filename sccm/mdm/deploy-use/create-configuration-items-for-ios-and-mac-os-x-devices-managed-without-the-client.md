@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 690aefeac875e3c3f39d5801bdb33d69ccecb45e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1d511df5dc4b6e29a86d4eabacec9037ee204ecc
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135814"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176728"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
 使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
@@ -92,7 +92,7 @@ ms.locfileid: "56135814"
 |**锁定时允许语音助手**|允许在设备锁定时使用 Siri 等语音助手应用。|  
 |**屏幕捕获**|允许捕获设备显示的屏幕截图。|  
 |**视频聊天客户端**|允许使用 Facetime 等视频聊天应用。|  
-|**多玩家游戏**|允许在 Internet 上与其他玩家进行游戏。|  
+|**多玩家游戏**|可以在 internet 上玩与其他玩家的游戏。|  
 |**锁定时允许个人钱包软件**|允许使用 Passbook 等个人钱包软件。|  
 |**诊断数据提交**|允许提交应用日志文件。|  
 |**操作中心通知**|允许用户不解锁设备而访问通知视图。|
@@ -116,8 +116,8 @@ ms.locfileid: "56135814"
 |**输入预测**(仅限监控模式)|允许使用建议用户可能所需单词的输入预测。|
 |**键盘拼写检查**(仅限监控模式)|允许设备拼写检查器。|
 |**修改通知设置**(仅限监控模式)|允许用户更改设备通知设置。|
-|**使用 Spotlight 搜索从 Internet 返回结果**(仅限监控模式)|允许 Spotlight 搜索连接到 Internet 以提供更多的结果。|
-|**使用 Siri 从 Internet 查询用户生成的内容**(仅限监控模式)|允许 Siri 访问网站以回答问题。|
+|**从使用 Spotlight 搜索 internet 返回结果**（仅限监管模式）|允许 Spotlight 搜索连接到 internet 以提供进一步结果。|
+|**使用 Siri 从 internet 查询用户生成内容**（仅限监管模式）|允许 Siri 访问网站以回答问题。|
 
   
 ###  <a name="store"></a>应用商店  
@@ -138,7 +138,7 @@ ms.locfileid: "56135814"
   
 |设置名|详细信息|  
 |------------------|-------------|  
-|**默认浏览器**|用户可以更改默认 Internet 浏览器。|  
+|**默认浏览器**|用户可以更改默认 internet 浏览器。|  
 |**自动填充**|用户可以更改浏览器中的自动完成设置。|  
 |**活动脚本**|浏览器可以运行脚本，如 Active X 脚本。|  
 |**弹出窗口阻止程序**|启用或禁用浏览器弹出窗口阻止程序。|  

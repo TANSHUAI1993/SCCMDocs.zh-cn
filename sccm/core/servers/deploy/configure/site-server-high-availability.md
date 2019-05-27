@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 5738be3bd84d7698e7b67128e3aff178d2460e52
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176923"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Configuration Manager 中的站点服务器高可用性
 
@@ -26,10 +26,10 @@ ms.locfileid: "65083520"
 
 过去可以向 Configuration Manager 中的大部分角色添加冗余，方法是使环境拥有这些角色的多个实例。 站点服务器本身除外。 从 Configuration Manager 1806 版开始，站点服务器角色的高可用性（一个基于 Configuration Manager 的解决方案）可用于安装被动 ** 模式下的其他站点服务器。 版本 1810 添加了层次结构支持，因此管理中心站点和子主站点还可拥有其他被动模式下的站点服务器。 被动模式下的站点服务器可以是本地服务器或是 Azure 中基于云的服务器。
 
-此功能提供以下优点 
-- 站点服务器角色的冗余和高可用性  
+此功能提供以下优点 
+- 站点服务器角色的冗余和高可用性  
 - 更轻松地更改站点服务器的硬件或操作系统  
-- 更轻松地将站点服务器移动到 Azure IaaS  
+- 更轻松地将站点服务器移动到 Azure IaaS  
 
 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 将此附加站点服务器作为整体设计的一部分，从而使 Configuration Manager 服务获得[高可用性](/sccm/core/servers/deploy/configure/high-availability-options)。  
 

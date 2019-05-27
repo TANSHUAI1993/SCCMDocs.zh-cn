@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 160425f461e0191a792185d1eb8ef9bfdec08b1c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 01253487d7fb90aaa24dae6a55b9110e516ab4ad
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130150"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176007"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1708 中的功能
 
@@ -74,14 +74,16 @@ ms.locfileid: "56130150"
 脚本运行时，将使用你配置的任何参数值。 如果未配置必需的参数，将要求最终用户在运行脚本时提供此参数。
 
 ## <a name="management-insights"></a>管理见解
-<!-- 1353967 --> 现在，可以基于站点数据库中的数据分析，深入了解当前的环境状态。 见解有助于更好地了解环境，并根据见解执行操作。 在 Configuration Manager 控制台中，通过“管理” > “管理见解” > “所有见解”来查看管理见解。 在此版本中，现提供有以下见解：
+<!-- 1353967 -->
+现在，可以基于站点数据库中的数据分析，深入了解当前的环境状态。 见解有助于更好地了解环境，并根据见解执行操作。 在 Configuration Manager 控制台中，通过“管理” > “管理见解” > “所有见解”来查看管理见解。 在此版本中，现提供有以下见解：
 
 - **不具有部署的应用程序**：列出环境中没有活动部署的应用程序。 这有助于查找并删除未使用的应用程序，以简化显示在控制台中的应用程序列表。
 - **空集合**：列出环境中没有成员的集合。 例如，可以删除这些集合来简化在部署对象时显示的集合列表。
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台重启计算机   
-<!-- 1356283 --> 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
+<!-- 1356283 -->
+从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
 
 若要标识等待重启的设备，请转到“资产和符合性” > “设备”，并选择一个可能需要重启的设备的集合。 选择集合后，可以在名为“等待重新启动”的新列的详细信息窗格中查看每个设备的状态。 每台设备都具有值“是”或“否”。
 
@@ -100,15 +102,16 @@ ms.locfileid: "56130150"
 
 
 ## <a name="software-center-customization"></a>软件中心自定义
-<!-- 1351224 --> 可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+<!-- 1351224 -->
+可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
 
 ### <a name="customize-software-center"></a>自定义“软件中心”
 
 若要修改“软件中心”，请执行以下操作：
 
-1. 在“Configuration Manager”控制台中，选择“管理”>“客户端设置” ****  ****。 单击所需的客户端设置实例。
-2. 在“主页”选项卡上的“属性”组中，请选择“属性” ****  ****  ****。
-3. 在“默认设置”对话框中，请选择“软件中心” ****  ****。
+1. 在“Configuration Manager”控制台中，选择“管理” > “客户端设置”。 单击所需的客户端设置实例。
+2. 在“主页”选项卡上的“属性”组中，选择“属性”。
+3. 在“默认设置”对话框中，选择“软件中心”。
 4. 将“选择新设置以指定公司信息”选择为“是”，来启用“软件中心”自定义设置。
 5. 键入“公司名称”。
 6. 选择“软件中心的配色方案”。

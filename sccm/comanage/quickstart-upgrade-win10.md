@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0815a974f3b1f29f664a2948eed33de24c6ecff3
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: bbc042975840e5b4e840928f01257785f4859dd4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754674"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176828"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>升级 Windows 10 以进行共同管理
 
@@ -52,7 +52,7 @@ ms.locfileid: "56754674"
 
 ## <a name="case-studies"></a>案例研究
 
-Microsoft IT 已将 Windows 10 部署到 Microsoft 的 96,000 名分布式用户。 部署包括远程用户和公司网络中的用户。 部署在九周内完成。 有关用户体验的详细信息，请参阅[在 Microsoft 将 Windows 10 作为就地升级部署](https://www.microsoft.com/download/details.aspx?id=50377)。  
+Microsoft IT 已将 Windows 10 部署到 Microsoft 的 96,000 名分布式用户。 部署包括远程用户和公司网络中的用户。 部署在九周内完成。 有关用户体验的详细信息，请参阅[在 Microsoft 将 Windows 10 作为就地升级部署](https://www.microsoft.com/itshowcase/deploying-windows-10-at-microsoft-as-an-in-place-upgrade)。  
 
 一家大型欧洲软件制造商成功地使用了早期采用者组。 继初始测试和试点组之后，约 2,000 名员工收到首个更新、升级和软件。 该组包括 IT 员工和选择加入的志愿者。 这种与用户的互动程度使他们在测试时更有信心，并且在大规模推出时更具可信度。
 

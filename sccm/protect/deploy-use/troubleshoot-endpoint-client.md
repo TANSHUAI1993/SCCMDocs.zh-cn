@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b8bda1fd21ed3281142a717b768ff7d8c6ac3c3
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3e0b8e6a522e367e17d6c13fad3896a6606d3e5c
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500430"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176067"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -158,7 +158,7 @@ ms.locfileid: "65500430"
 
 ### <a name="step-7-contact-support"></a>步骤 7：联系技术支持人员  
 
--   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174))。  
+-   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](https://support.microsoft.com/contactus/) ()。  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>启动 Windows Defender 或 Endpoint Protection 服务  
  **症状**  
@@ -197,7 +197,7 @@ ms.locfileid: "65500430"
 
 > [!CAUTION]  
 >  删除 Internet 安全程序后，你的计算机处于不受保护的状态。 如果删除现有 Internet 安全程序后，安装   
->       Endpoint Protection 时遇到问题，请通过在线提交案例联系 Windows Defender 或   
+>       Endpoint Protection 时遇到问题，请通过在线提交案例联系 Windows Defender 或  
 >       Endpoint Protection 支持人员（有关详细信息，请参阅[如何在线提交案例](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)）。  
 
 ### <a name="step-4-uninstallreinstall-endpoint-protection"></a>步骤 4：卸载/重新安装 Endpoint Protection  

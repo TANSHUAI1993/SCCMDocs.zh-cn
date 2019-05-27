@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 251a614aebce244edddfe362a5f7119ca9dd0c87
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 11ad5a0bef004b778ba431c9a2da30f51eafc443
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132500"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933290"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1706 中的功能
 
@@ -54,7 +54,8 @@ ms.locfileid: "56132500"
 -->
 
 ## <a name="improved-boundary-groups-for-software-update-points"></a>改进了软件更新点的边界组
-<!-- 1324591 --> 此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
+<!-- 1324591 -->
+此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
 - 现在，软件更新点的回退使用一个可配置的时间来回退到相邻边界组，最小时间为 120 分钟。
 
 - 独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
@@ -76,7 +77,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="site-server-role-high-availability"></a>站点服务器角色的高可用性
-<!-- 1128774 --> 站点服务器角色的高可用性是一个基于 Configuration Manager 的解决方案，用以在“被动”模式下安装其他主站点服务器。 被动模式站点服务器是现有处于“主动”模式的主站点服务器的另一个服务器。 在需要时可立即使用被动模式站点服务器。
+<!-- 1128774 -->
+站点服务器角色的高可用性是一个基于 Configuration Manager 的解决方案，用以在“被动”模式下安装其他主站点服务器。 被动模式站点服务器是现有处于“主动”模式的主站点服务器的另一个服务器。 在需要时可立即使用被动模式站点服务器。
 
 被动模式主站点服务器：
 -   使用相同的站点数据库作为活动站点服务器。
@@ -184,7 +186,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 策略中包括对特定文件和文件夹的信任
-<!-- 1324676 --> 在此版本中，我们已向 [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) 策略管理添加了更多功能
+<!-- 1324676 -->
+在此版本中，我们已向 [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) 策略管理添加了更多功能
 
 现在可以选择在 Device Guard 策略中添加对特定文件或文件夹的信任。 此操作可让你：
 
@@ -200,7 +203,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="hide-task-sequence-progress"></a>隐藏任务序列进度
-<!-- 1354291 --> 在此版本中，可以通过使用新的变量控制何时向最终用户显示任务序列进度。 在任务序列中，使用“设置任务序列变量”步骤来设置“TSDisableProgressUI”变量的值，以隐藏或显示任务序列进度。 你可以在任务序列中多次使用“设置任务序列变量”步骤来更改变量的值。 这样可以在任务序列进度的不同部分中隐藏或显示任务序列。
+<!-- 1354291 -->
+在此版本中，你可以通过使用新的变量控制何时向最终用户显示任务序列进度。 在任务序列中，使用“设置任务序列变量”步骤来设置“TSDisableProgressUI”变量的值，以隐藏或显示任务序列进度。 你可以在任务序列中多次使用“设置任务序列变量”步骤来更改变量的值。 这样可以在任务序列进度的不同部分中隐藏或显示任务序列。
 
 #### <a name="to-hide-task-sequence-progress"></a>隐藏任务序列进度
 在任务序列编辑器中，使用[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“True”，以隐藏任务序列进度。
@@ -209,7 +213,8 @@ ms.locfileid: "56132500"
 在任务序列编辑器中，使用[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“False”，以显示任务序列进度。
 
 ## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>指定安装内容和卸载内容的不同内容位置
-<!-- 1097546 --> 在今天的 Configuration Manager 中，你可以指定包含应用安装程序文件的安装位置。 指定安装位置时，它同样可用作应用程序内容的卸载位置。
+<!-- 1097546 -->
+在今天的 Configuration Manager 中，你可以指定包含应用安装程序文件的安装位置。 指定安装位置时，它同样可用作应用程序内容的卸载位置。
 根据你的反馈，当想要卸载部署的应用程序，并且应用内容不在客户端计算机上时，客户端会在卸载应用程序之前再次下载所有应用安装程序文件。
 为了解决此问题，现在你可以同时指定一个安装内容位置和一个可选的卸载内容位置。 此外，你还可以选择不指定卸载内容位置。
 
@@ -226,7 +231,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="accessibility-improvements"></a>辅助功能改进  
-<!--1253000 --> 此预览版在 Configuration Manager 控制台中引入了对[辅助功能](/sccm/core/understand/accessibility-features)的多项改进。 其中包括:     
+<!--1253000 -->
+此预览版在 Configuration Manager 控制台中引入了对[辅助功能](/sccm/core/understand/accessibility-features)的多项改进。 其中包括:     
 
 **在控制台中移动的新键盘快捷方式：**
 -   Ctrl + M - 将焦点设置在主（中心）窗格中。
@@ -246,7 +252,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>更改 Azure 服务向导以支持升级就绪情况
-<!-- 1353331 --> 从此版本开始，可使用 Azure 服务向导来配置从 Configuration Manager 到[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)的连接。 通过使用相关 Azure 服务的常见向导，简化了连接器的配置。   
+<!-- 1353331 -->
+从此版本开始，可使用 Azure 服务向导来配置从 Configuration Manager 到[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)的连接。 通过使用相关 Azure 服务的常见向导，简化了连接器的配置。   
 
 虽然配置连接的方法已更改，但是连接的先决条件和对“升级就绪情况”的使用方式仍保持不变。   
 
@@ -384,7 +391,8 @@ ms.locfileid: "56132500"
 3. 在“脚本结果”列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码“0”，通常表示脚本已成功运行。
 
 ## <a name="pxe-network-boot-support-for-ipv6"></a>PXE 网络启动对 IPv6 的支持
-<!-- 1269793 --> 现在可以启用对 IPv6 的 PXE 网络启动支持，以启动任务序列操作系统部署。 当你使用此设置时，启用 PXE 的分发点将支持 IPv4 和 IPv6。 此选项不需要 WDS，并且存在的话，将会停止 WDS。
+<!-- 1269793 -->
+你现在可以启用对 IPv6 的 PXE 网络启动支持，以启动任务序列操作系统部署。 当你使用此设置时，启用 PXE 的分发点将支持 IPv4 和 IPv6。 此选项不需要 WDS，并且存在的话，将会停止 WDS。
 
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>启用 PXE 启动对 IPv6 的支持
 使用以下过程来启用 PXE 的 IPv6 支持选项。
@@ -393,7 +401,8 @@ ms.locfileid: "56132500"
 2. 在“PXE”选项卡上，选择“支持 IPv6”，以启用 PXE 的 IPv6 支持。
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>管理 Microsoft Surface 驱动程序更新
-<!-- 1098490 --> 现在可以使用 Configuration Manager 来管理 Microsoft Surface 驱动程序更新。
+<!-- 1098490 -->
+你现在可以使用 Configuration Manager 来管理 Microsoft Surface 驱动程序更新。
 
 ### <a name="prerequisites"></a>先决条件
 所有软件更新点都必须运行 Windows Server 2016。
@@ -405,7 +414,8 @@ ms.locfileid: "56132500"
 3. [部署同步的 Microsoft Surface 驱动程序](/sccm/sum/deploy-use/deploy-software-updates)
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>配置 Windows Update for Business 延迟策略
-<!-- 1290890 --> 现在，你可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
+<!-- 1290890 -->
+现在，你可以针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
 
 ### <a name="prerequisites"></a>先决条件
 由 Windows Update for Business 托管的 Windows 10 设备必须具有 Internet 连接。
@@ -443,7 +453,8 @@ ms.locfileid: "56132500"
 
 
 ## <a name="support-for-entrust-certification-authorities"></a>支持 Entrust 证书颁发机构
-<!-- 1350740 --> 现在，Configuration Manager 可支持 Entrust 证书颁发机构；这使得 PFX 证书可传送到在 Microsoft Intune 中注册的设备。
+<!-- 1350740 -->
+现在，Configuration Manager 可支持 Entrust 证书颁发机构；这使得 PFX 证书可传送到在 Microsoft Intune 中注册的设备。
 
 在 Configuration Manager 中添加“证书注册点”角色时，你可以将 Entrust 配置为证书颁发机构。 在添加颁发 PFX 证书的新证书配置文件时，你可以选择 Microsoft 或 Entrust 证书颁发机构。
 
@@ -453,7 +464,7 @@ ms.locfileid: "56132500"
 ## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>iOS VPN 配置文件的 Cisco (IPsec) 支持
 <!-- 1321367 -->
 
-可以使用 Cisco (IPsec) 作为连接类型创建 iOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
+可以使用 Cisco (IPsec) 作为连接类型创建 iOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](https://docs.microsoft.com/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
 
 
 ## <a name="new-windows-configuration-item-settings"></a>新 Windows 配置项设置
@@ -533,7 +544,8 @@ ms.locfileid: "56132500"
 请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
 
 ## <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 注册限制
-<!-- 1290826 --> 从此版本开始，管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这可让你将注册的设备限制为预先声明的公司所有设备，或仅限注册了“设备注册计划”的 iOS 设备。
+<!-- 1290826 -->
+从此版本开始，管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这可让你将注册的设备限制为预先声明的公司所有设备，或仅限注册了“设备注册计划”的 iOS 设备。
 
 ### <a name="try-it-out"></a>试试看
 1. 在“管理”工作区中的 Configuration Manager 控制台中，转到“云服务” > “Microsoft Intune 订阅”。
@@ -563,7 +575,8 @@ ms.locfileid: "56132500"
 4. 选择“允许在工作和个人配置文件之间共享数据”，然后完成向导。
 
 ## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>用于条件访问的符合性策略的“设备运行状况证明”评估
-<!-- 1097546 --> 从此版本开始，可将“设备运行状况证明”状态用作对公司资源进行条件性访问的符合性策略规则。
+<!-- 1097546 -->
+从此版本开始，你可以将“设备运行状况证明”状态用作对公司资源进行条件性访问的符合性策略规则。
 
 ### <a name="try-it-out"></a>试试看
 选择一个“设备运行状况证明”规则作为符合性策略评估的一部分。

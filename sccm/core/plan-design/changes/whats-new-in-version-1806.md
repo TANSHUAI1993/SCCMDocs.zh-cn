@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 301b7de8d991b7e272aa57e6d87e912d6c3df210
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 03368d543b539b018ba581277cb0ba7e6e8cb251
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495406"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933498"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -308,7 +308,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 ### <a name="uninstall-application-on-approval-revocation"></a>在批准撤消时卸载应用程序
 <!--1357891-->
-当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”。 
+当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”。 
 
 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_approval)。
 

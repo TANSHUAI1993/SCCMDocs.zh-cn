@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffe97408d5de71c9ea67b07649d7b92ad77f0a57
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a41f144909ba946d3c3bc2f00a1573cad2c9b850
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56143693"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933328"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
@@ -318,4 +318,4 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>更改为配置多重身份验证以进行设备注册
 
-现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory)。
+现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](https://docs.microsoft.com/intune/deploy-use/multi-factor-authentication-azure-active-directory)。

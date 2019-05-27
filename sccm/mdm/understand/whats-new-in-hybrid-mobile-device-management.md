@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 05/20/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73fe5e23cd23c874e56b0d71cb6988d815bcbc5c
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: fc41388c1586fc73ce93127dd0e6492f587d18be
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974103"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176677"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -50,6 +50,21 @@ ms.locfileid: "65974103"
 ## <a name="may-2019"></a>2019 年 5
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="android-enterprise-app-management"></a>Android 企业应用程序管理
+
+<!-- 4459905 -->
+
+若要使你更轻松地配置和使用 Android 企业版管理，Intune 会自动添加以下四种常见的 Android 企业版与 Intune 管理控制台相关应用：
+
+- [Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune):用于完全托管的 Android 企业版方案
+- [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator):如果使用双重验证，此应用可帮助你登录到你的帐户
+- [Intune 公司门户](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal):用于应用保护策略 （应用） 和 Android 企业版工作配置文件方案
+- [托管主屏幕](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise):用于 Android 企业版专用/网亭方案
+
+以前，在安装过程需要手动查找和批准在这些应用程序[托管 Google Play 应用商店](https://play.google.com/store/apps)。 此更改中删除这些以前需要手动步骤，使其更容易且更快地供你使用 Android 企业管理。
+
+当您首次连接到托管 Google Play 其 Intune 租户时，可以看到这些自动添加到 Intune 的应用列表的四个应用。 有关详细信息，请参阅[启用 Android for Work 注册](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-for-work-enrollment)。 如果你已连接你的租户，或者已在使用 Android 企业版，则无需执行任何。 这些四个应用程序会自动显示在 2019 年 5 服务更新后的七天内。
 
 #### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation"></a>Intune 策略更新身份验证方法和公司门户应用安装
 
@@ -735,7 +750,23 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
 
 ## <a name="notices"></a>通知
 
-### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>更改计划：Intune 支持 macOS 10.12 和更高版本中年 12 月 
+### <a name="update-your-android-company-portal-app-to-the-latest-version"></a>将 Android 公司门户应用更新到最新版本
+
+<!-- 4536963 -->
+
+Intune 会定期发布 Android 公司门户应用的更新。 2018 年 11 月，我们发布包括后端切换到准备进行从其现有的通知平台的 Google 的更改到 Google 的 Firebase Cloud Messaging (FCM) 的公司门户更新。 当 Google 停用其现有的通知平台，并将继续与 Google Play 商店进行通信的 2018 年 11 月版本移到 FCM，用户需要至少更新到其公司门户应用。
+
+#### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
+
+我们的数据指示具有的设备的公司门户版本早于 5.0.4269.0 的租户。 如果此版本 （或更高版本） 的应用程序未安装公司门户，管理员启动的设备操作可能无法按预期工作。 这些操作包括擦除、 重置密码、 可用和所需的应用程序安装和证书注册。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
+
+请求未更新公司门户版本，若要更新通过 Google Play 的 Android 设备的用户。 如果用户尚未保留自动更新公司门户应用，请通知支持人员联系。 有关 Google 的 FCM 平台和更改的详细信息，请参阅[Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)。
+
+
+### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>更改计划：Intune 支持 macOS 10.12 和更高版本中年 12 月
+
 <!--2970975-->  
 
 Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持 macOS 10.12 及更高版本。 

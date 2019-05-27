@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7949808110d058bc1511abd1053e583b7f452cfa
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 5b9f4f95916a2d547f89cab7dac838b7fe68fb30
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083574"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933465"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
@@ -526,7 +526,7 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 > [!NOTE]  
 >  源站点帐户和[源站点数据库帐户](#source-site-database-account)均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”。  
 
- 有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies)。
+ 有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="source-site-database-account"></a>源站点数据库帐户  
@@ -542,7 +542,7 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 > [!NOTE]  
 >  源站点帐户和[源站点数据库帐户](#source-site-database-account)均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”。  
 
- 有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies)。
+ 有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="task-sequence-domain-join-account"></a>任务序列域加入帐户 

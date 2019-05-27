@@ -2,7 +2,7 @@
 title: 创建 OS 升级任务序列
 titleSuffix: Configuration Manager
 description: 使用任务序列自动从 Windows 7 或更高版本升级到 Windows 10
-ms.date: 07/30/2018
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc20a7e9be271bde8a5cd6464e2cebdf1ee9bad9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: b1015573d62bdbbd317b9f787071e7725e5d4362
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176118"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在 Configuration Manager 中使用任务序列，自动升级目标计算机上的 OS。 可以从 Windows 7 或更高版本升级到 Windows 10，或从 Windows Server 2012 或更高版本升级到 Windows Server 2016。 创建一个任务序列，该任务序列引用要安装的 OS 升级包和任何其他内容，如应用程序或软件更新。 用于升级 OS 的任务序列是[将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)方案的一部分。  
 
@@ -58,7 +58,7 @@ ms.locfileid: "56138596"
 
 4.  在“任务序列信息”页上，指定以下设置，然后单击“下一步”：  
 
-    -   **任务序列名称**：指定用于标识任务序列的名称。  
+    -   “任务序列名称”：指定用于标识任务序列的名称。  
 
     -   **描述**：（可选）指定描述。  
 
@@ -68,12 +68,12 @@ ms.locfileid: "56138596"
 
     -   **版本索引**：如果包中有多个 OS 版本索引可用，请选择所需的版本索引。 默认情况下，该向导会选择第一个索引。  
 
-    -   **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (-) 将每五个字符分隔为一组。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
+    -   **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (-) 将每五个字符分隔为一组。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
 
         > [!Note]  
         > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。 
 
-    -   **忽略任何不重要的兼容性消息**：如果要升级到 Windows Server 2016，请选择此设置。 如果不选择此设置，则任务序列无法完成，因为 Windows 安装程序正等待用户在“Windows 应用兼容性”对话框上单击“确认”。   
+    -   **忽略任何可拒绝的兼容性消息**：如果要升级到 Windows Server 2016，请选择此设置。 如果不选择此设置，则任务序列无法完成，因为 Windows 安装程序正等待用户在“Windows 应用兼容性”对话框上单击“确认”。   
 
 7.  在“包括更新”页上，指定是安装必需、全部，还是不安装软件更新。 然后单击 **“下一步”**。 如果指定要安装软件更新，则 Configuration Manager 仅安装以目标计算机所在的集合为目标的那些更新。  
 
@@ -93,7 +93,8 @@ ms.locfileid: "56138596"
 
 
 ## <a name="configure-pre-cache-content"></a>配置预先缓存内容
-<!--1021244--> 对于任务序列的可用部署，可使用预先缓存功能让客户端在用户安装任务序列之前下载相关的 OS 升级包内容。  
+<!--1021244-->
+对于任务序列的可用部署，可使用预先缓存功能让客户端在用户安装任务序列之前下载相关 OS 升级包内容。  
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
@@ -144,17 +145,17 @@ ms.locfileid: "56138596"
 
 从版本 1802 开始，Windows 10 就地升级的默认任务序列模板包括在升级过程前要添加的带建议操作的其他组。 “准备升级”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的。 对于 1802 之前版本的站点，请手动将这些操作添加到“准备升级”组中的任务序列中。  
 
-- **电池检查**：在此组中添加步骤，检查计算机是在使用电池还是有线电源。 此操作需要自定义脚本或实用工具来执行此检查。  
+- 电池检查：在此组中添加步骤，以检查计算机使用的是电池还是有线电源。 此操作需要自定义脚本或实用工具来执行此检查。 例如： 使用 WbemTest，连接到`root\cimv2`命名空间。 运行以下查询： `Select Batterystatus From Win32_Battery where batterystatus != 2`。 如果它返回任何结果，然后设备电池运行。 否则，将设备连接到有线电源。  
 
-- **网络/有线连接检查**：在此组中添加步骤，检查计算机是否已连接到网络，以及是否未使用无线连接。 此操作需要自定义脚本或实用工具来执行此检查。  
+- **网络/有线连接检查**：在此组中添加步骤，检查计算机是否已连接到网络且未使用无线连接。 此操作需要自定义脚本或实用工具来执行此检查。  
 
-- **删除不兼容的应用程序**：在此组中添加步骤，删除任何与此版本的 Windows 10 不兼容的应用程序。 卸载应用程序的方法不同。  
+- 删除不兼容的应用程序：在此组中添加步骤，以删除与此版本的 Windows 10 不兼容的任何应用程序。 卸载应用程序的方法不同。  
 
     - 如果应用程序使用 Windows Installer，则从应用程序的 Windows Installer 部署类型属性上的“程序”选项卡中复制“卸载程序”命令行。 然后在此组中添加“运行命令行”步骤，并附加卸载程序命令行。 例如： </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br>  
 
-- **删除不兼容的驱动程序**：在此组中添加步骤，删除任何与此版本的 Windows 10 不兼容的驱动程序。  
+- 删除不兼容的驱动程序：在此组中添加步骤，以删除与此版本的 Windows 10 不兼容的任何驱动程序。  
 
-- **删除/暂停第三方安全程序**：在此组中添加步骤，删除或暂停防病毒程序等第三方安全程序。  
+- 删除/暂停第三方安全程序：在此组中添加步骤，以删除或暂停第三方安全程序，如防病毒程序。  
 
    - 如果使用的是第三方磁盘加密程序，请为 Windows 安装程序的加密驱动程序提供 `/ReflectDrivers` [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23)。 在此组的任务序列中添加[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”。 将值设置为 `/ReflectDrivers`，并附加驱动程序的路径。 此[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。  
 
@@ -168,7 +169,7 @@ ms.locfileid: "56138596"
 -   若要动态下载适用的驱动程序包，请使用两个“下载包内容”步骤以及检测每个驱动程序包的相应硬件类型的条件。 配置每个“下载包内容”步骤，使其使用相同的变量。 然后将该变量用于“升级操作系统”步骤上驱动程序部分中的“预留内容”变量。  
 
     > [!NOTE]  
-    > 当有多个包时，Configuration Manager 会将数字后缀添加到变量名称。 例如，若将 `%mycontent%` 指定为自定义变量，客户端会将所有引用内容存储在此位置。 当引用后续步骤（如“升级操作系统”）中的变量时，请使用带数字后缀的变量。 在本示例中，使用 `%mycontent01%` 或 `%mycontent02%`，其中编号对应于“下载包内容”步骤列出此特定内容的顺序。  
+    > Configuration Manager 向变量名称中添加数字后缀。 例如，若将 `%mycontent%` 指定为自定义变量，客户端会将所有引用内容存储在此位置。 当引用后续步骤（如“升级操作系统”）中的变量时，请使用带数字后缀的变量。 在本示例中，使用 `%mycontent01%` 或 `%mycontent02%`，其中编号对应于“下载包内容”步骤列出此特定内容的顺序。  
 
 
 
@@ -181,13 +182,13 @@ ms.locfileid: "56138596"
 
 从版本 1802 开始，Windows 10 就地升级的默认任务序列模板包括在升级过程后要添加的带建议操作的其他组。 “后期处理”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的。 对于 1802 之前版本的站点，请手动将这些操作添加到“后期处理”组中的任务序列中。  
 
-- **应用基于设置的驱动程序**：在此组中添加步骤，从包中安装基于设置的驱动程序(.exe)。  
+- 应用基于安装程序的驱动程序：在此组中添加步骤，以从包中安装基于安装程序的驱动程序 (.exe)。  
 
-- **安装/启用第三方安全程序**：在此组中添加步骤，安装或启用防病毒程序等第三方安全程序。  
+- 安装/启用第三方安全程序：在此组中添加步骤，以安装或启用第三方安全程序，如防病毒程序。  
 
-- **设置 Windows 默认应用和关联**：在此组中添加步骤，设置 Windows 默认应用和文件关联。 首先要准备一台具备所需应用关联的参考计算机。 然后运行以下导出命令行： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>将 XML 文件添加到包。 然后在此组中添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 指定包含 XML 文件的包，然后指定以下命令行： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 有关详细信息，请参阅[导出或导入默认的应用关联](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。  
+- 设置 Windows 默认应用和关联：在此组中添加步骤，以设置 Windows 默认应用和文件关联。 首先要准备一台具备所需应用关联的参考计算机。 然后运行以下导出命令行： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>将 XML 文件添加到包。 然后在此组中添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 指定包含 XML 文件的包，然后指定以下命令行： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 有关详细信息，请参阅[导出或导入默认的应用关联](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。  
 
-- **应用自定义项和个性化设置**：在此组中添加步骤，应用整理程序组等“开始”菜单自定义项。 有关详细信息，请参阅[自定义“开始”屏幕](/windows-hardware/manufacture/desktop/customize-the-start-screen)。  
+- 应用自定义和个性化：在此组中添加步骤以应用“开始”菜单自定义，如组织程序组。 有关详细信息，请参阅[自定义“开始”屏幕](/windows-hardware/manufacture/desktop/customize-the-start-screen)。  
 
 
 
@@ -202,7 +203,7 @@ ms.locfileid: "56138596"
 
 从版本 1806 开始，Windows 10 就地升级的默认任务序列模板包括一个“如果失败，则运行操作”的组。 此组包括在升级失败时要添加的推荐操作。 这些操作有助于进行故障排除。
 
-- **收集日志**：若要从客户端中收集日志，请在此组中添加步骤。  
+- 收集日志：若要从客户端中收集日志，请在此组中添加步骤。  
 
     - 一种常见的做法是将日志文件复制到网络共享中。 若要建立此连接，请使用[连接到网络文件夹](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)步骤。  
 
@@ -218,7 +219,7 @@ ms.locfileid: "56138596"
 
     - 有关 _SMSTSLogPath 和其他有用变量的详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
 
-- **运行诊断工具**：若要运行其他诊断工具，请在此组中添加步骤。 请自动运行这些工具，以便在出现故障后立即收集系统中的其他信息。  
+- 运行诊断工具：若要运行其他诊断工具，请在此组中添加步骤。 请自动运行这些工具，以便在出现故障后立即收集系统中的其他信息。  
 
     - 其中一个工具是 Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。  
 

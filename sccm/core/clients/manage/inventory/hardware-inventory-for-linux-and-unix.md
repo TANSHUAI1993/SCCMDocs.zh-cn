@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cba7c2bf782dce636117e71cb6982cd95ffb8ab
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 18de1d67ecc1dfa6d9c5fb87355c4fed04e2c4c4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500091"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176752"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager 中适用于 Linux 和 UNIX 的硬件清单
 
@@ -39,7 +39,7 @@ ms.locfileid: "65500091"
 
 从累积更新 1 开始，适用于 Linux 和 UNIX 的客户端使用“开放组”的开放源代码 omiserver 版本 1.0.6。 （在累积更新 1 之前，客户端使用 **nanowbem** 作为其 CIM 服务器）。  
 
-CIM 服务器作为适用于 Linux 和 UNIX 的客户端的一部分安装。 适用于 Linux 和 UNIX 的客户端直接与 CIM 服务器进行通信，并且不使用 CIM 服务器的 WS-MAN 接口。 在客户端安装时，会禁用 CIM 服务器上的 WS-MAN 端口。 Microsoft 开发了 CIM 服务器，现已通过开放式管理基础结构 (OMI) 项目成为可用的开放源代码。 有关开放式管理基础结构项目的详细信息，请参阅 [开放组](https://go.microsoft.com/fwlink/p/?LinkId=262317) 网站。  
+CIM 服务器作为适用于 Linux 和 UNIX 的客户端的一部分安装。 适用于 Linux 和 UNIX 的客户端直接与 CIM 服务器进行通信，并且不使用 CIM 服务器的 WS-MAN 接口。 在客户端安装时，会禁用 CIM 服务器上的 WS-MAN 端口。 Microsoft 开发了 CIM 服务器，现已通过开放式管理基础结构 (OMI) 项目成为可用的开放源代码。 有关开放式管理基础结构项目的详细信息，请参阅 [开放组](https://www.opengroup.org/) 网站。  
 
 Linux 和 UNIX 服务器上的硬件清单通过将现有 Win32 WMI 类和属性映射到 Linux 和 UNIX 服务器的等效类和属性实现运行。 这种类和属性的一对一映射使 Linux 和 UNIX 硬件清单能够与 Configuration Manager 集成。 Linux 和 UNIX 服务器的清单数据与 Configuration Manager 控制台和报表中基于 Windows 的计算机的清单一起显示。 此行为提供了一致的异构管理体验。  
 
