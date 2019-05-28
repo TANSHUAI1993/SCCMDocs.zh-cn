@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5651f381f2c4a101c82d6f1f7730ffc4ae99a20
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 40bfd1c8a541fbb1f108741ef2d4fa00b11088d7
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176111"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 映像
 
@@ -61,13 +61,13 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
 
 在使用 OS 映像之前，请将其添加到 Configuration Manager 站点。 
 
-1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点    。  
 
-2.  在功能区“主页”选项卡的“创建”组中，选择“添加操作系统映像”。 此操作将启动“添加操作系统映像向导”。  
+2.  在功能区“主页”选项卡的“创建”组中，选择“添加操作系统映像”    。 此操作将启动“添加操作系统映像向导”。  
 
-3.  在“数据源”页面上，指定 OS 映像文件的网络“路径”。 例如，`\\server\share\path\image.wim`。  
+3.  在“数据源”页面上，指定 OS 映像文件的网络“路径”   。 例如，`\\server\share\path\image.wim`。  
 
-4.  在“常规”页面上，指定以下信息。 当你有多个 OS 映像时，可利用这些信息对其进行识别。  
+4.  在“常规”页面上，指定以下信息  。 当你有多个 OS 映像时，可利用这些信息对其进行识别。  
 
     -   **名称**：映像的唯一名称。 默认情况下，名称来自 WIM 文件名。  
 
@@ -76,6 +76,8 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
     -   **注释**：可选的简要说明。  
 
 5.  完成向导。  
+
+有关与此控制台向导的等效 PowerShell cmdlet，请参阅 [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)。
 
 
 接下来，将 OS 映像分发到分发点。  
@@ -96,20 +98,20 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
 
 使用多播部署，可以使多台计算机同时下载 OS 映像。 映像通过分发点多播给客户端，而不是每个客户端通过单独连接从分发点下载映像的副本。 选择采用 OS 部署方法[使用多播通过网络来部署 Windows](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network) 时，请将 OS 映像配置为支持多播。 然后将映像分发到启用了多播的分发点。 
 
-1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点    。  
 
 2.  选择要分发到启用了多播的分发点的 OS 映像。  
 
-3.  在功能区“主页”选项卡的“属性”组中，选择“属性”。  
+3.  在功能区“主页”  选项卡的“属性”  组中，选择“属性”  。  
 
-4.  切换到“分发设置”选项卡，并配置以下选项：  
+4.  切换到“分发设置”选项卡，并配置以下选项  ：  
 
-    -   **允许通过多播传输此包（仅 WinPE）**：选择此选项使 Configuration Manager 使用多播同时部署多个 OS 映像。  
+    -   **允许通过多播传输此包（仅 WinPE）** ：选择此选项使 Configuration Manager 使用多播同时部署多个 OS 映像。  
 
     -   **加密多播包**：指定站点在将映像发送到分发点之前是否对其进行加密。 如果映像中包含敏感信息，请使用此选项。 如果映像未加密，则其内容会以明文形式在网络上可见。 于是，未经授权的用户可以截获并查看映像内容。  
 
     -   **仅通过多播传输此包**：指定是否希望分发点仅在多播会话期间部署映像。  
 
-         如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。   
+         如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”   。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。   
 
-5.  选择“确定”以保存设置并关闭映像属性。  
+5.  选择“确定”以保存设置并关闭映像属性  。  
