@@ -706,6 +706,8 @@
               href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
         - name: 规划基于 Internet 的客户端管理
           href: clients/manage/plan-internet-based-client-management.md
+        - name: Azure AD 身份验证工作流
+          href: clients/manage/azure-ccmsetup.md
     - name: 集合
       items:
         - name: 集合简介
