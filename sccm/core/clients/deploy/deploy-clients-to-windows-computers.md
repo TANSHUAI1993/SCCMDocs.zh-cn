@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3260fb68d9ce334061fc39fe8d40cd68d109655e
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 2b53de9695fc2f2586ef162362394536ac911a06
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176808"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文详细介绍如何将 Configuration Manager 客户端部署到 Windows 计算机。 有关规划和准备客户端部署的详细信息，请参阅以下文章：
 - [客户端安装方法](/sccm/core/clients/deploy/plan/client-installation-methods)  
@@ -38,13 +38,13 @@ ms.locfileid: "65214719"
 
 - 通过为特定集合或集合内的资源运行“客户端请求安装向导”来启动客户端请求安装。  
 
-- 使用“客户端请求安装向导”将 Configuration Manager 客户端安装到[查询](/sccm/core/servers/manage/introduction-to-queries)结果。 为了使安装成功，查询返回的其中一个项目必须为“系统资源”类中的“ResourceID”属性。   
+- 使用“客户端请求安装向导”将 Configuration Manager 客户端安装到[查询](/sccm/core/servers/manage/introduction-to-queries)结果。 为了使安装成功，查询返回的其中一个项目必须为“系统资源”类中的“ResourceID”属性   。   
 
 如果站点服务器无法与客户端计算机联系或者无法启动安装过程，则它每小时都会自动重试安装。 服务器不断重试长达七天。  
 
 为了帮助跟踪客户端安装过程，请在安装客户端之前安装回退状态点。 安装回退状态点后，在使用客户端请求安装方法安装客户端时，会自动将该回退状态点分配给客户端。 若要跟踪客户端安装进度，请查看客户端部署和分配报表。 
 
-客户端日志文件提供了用于疑难解答的更加详细的信息。 日志文件不需要回退状态点。 例如，连接到计算机时站点服务器上的 CCM.log 文件记录来自站点服务器的任何问题。 客户端上的 CCMSetup.log 文件记录安装过程。  
+客户端日志文件提供了用于疑难解答的更加详细的信息。 日志文件不需要回退状态点。 例如，连接到计算机时站点服务器上的 CCM.log 文件记录来自站点服务器的任何问题  。 客户端上的 CCMSetup.log 文件记录安装过程  。  
 
 > [!IMPORTANT]  
 >  为了成功执行客户端请求，请确保所有先决条件都已准备就绪。 有关详细信息，请参阅[安装方法依赖项](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies)。  
@@ -52,15 +52,15 @@ ms.locfileid: "65214719"
 
 ### <a name="configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>将站点配置为对发现的计算机自动使用客户端请求
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+1.  在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
 
 2.  选择要为其配置自动站点范围客户端请求安装的站点。  
 
-3.  在功能区的“主页”选项卡上的“设置”组中，依次选择“客户端安装设置”、“客户端请求安装”。  
+3.  在功能区的“主页”选项卡上的“设置”组中，依次选择“客户端安装设置”、“客户端请求安装”     。  
 
-4.  在“客户端请求安装属性”窗口的“常规”选项卡上，选择“启用自动站点范围客户端请求安装”。   
+4.  在“客户端请求安装属性”窗口的“常规”选项卡上，选择“启用自动站点范围客户端请求安装”   。   
 
-5. 从 1806 版开始，当你更新站点时，它会为客户端请求启用 Kerberos 检查。 “允许连接回退到 NTLM”选项已默认启用，该选项与以前的行为一致。 如果站点无法使用 Kerberos 对客户端进行身份验证，则会使用 NTLM 重试连接。 为了提高安全性，建议的配置是禁用此设置，即要求使用 Kerberos 但不回退到 NTLM。<!--1358204-->  
+5. 从 1806 版开始，当你更新站点时，它会为客户端请求启用 Kerberos 检查。 “允许连接回退到 NTLM”选项已默认启用，该选项与以前的行为一致  。 如果站点无法使用 Kerberos 对客户端进行身份验证，则会使用 NTLM 重试连接。 为了提高安全性，建议的配置是禁用此设置，即要求使用 Kerberos 但不回退到 NTLM。<!--1358204-->  
 
     > [!Note]  
     > 使用客户端请求安装 Configuration Manager 客户端时，站点服务器会与客户端建立远程连接。 从 1806 版开始，站点可以通过不允许在建立连接之前回退到 NTLM 来要求 Kerberos 相互身份验证。 此增强有助于保护服务器与客户端之间的通信。  
@@ -71,46 +71,46 @@ ms.locfileid: "65214719"
 
 6.  选择 Configuration Manager 应向其推送客户端软件的系统类型。 选择是否要在域控制器上安装客户端。  
 
-7.  在“帐户”选项卡上，指定当连接到目标计算机时 Configuration Manager 要使用的一个或多个帐户。 单击“创建”图标，输入“用户名”和“密码”（不超过 38 个字符），确认密码，然后单击“确定”。 指定至少一个客户端请求安装帐户。 此帐户在目标计算机上必须具有本地管理员权限以安装客户端。 如果未指定客户端请求安装帐户，则 Configuration Manager 会尝试使用站点系统计算机帐户。 使用站点系统计算机帐户时，跨域客户端请求失败。  
+7.  在“帐户”选项卡上，指定当连接到目标计算机时 Configuration Manager 要使用的一个或多个帐户  。 单击“创建”  图标，输入“用户名”  和“密码”  （不超过 38 个字符），确认密码，然后单击“确定”  。 指定至少一个客户端请求安装帐户。 此帐户在目标计算机上必须具有本地管理员权限以安装客户端。 如果未指定客户端请求安装帐户，则 Configuration Manager 会尝试使用站点系统计算机帐户。 使用站点系统计算机帐户时，跨域客户端请求失败。  
 
     > [!NOTE]  
     >  若要从辅助站点使用客户端请求，请指定用于启动客户端请求的辅助站点上的帐户。  
     >   
     >  有关客户端请求安装帐户的详细信息，请参阅下一个过程，即[使用客户端请求安装向导](#use-the-client-push-installation-wizard)。  
 
-8.  完成“安装属性”选项卡。
+8.  完成“安装属性”  选项卡。
 
      如果为 Configuration Manager 扩展了 Active Directory 架构，站点会向 Active Directory 域服务发布指定的[客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。 当 CCMSetup 在没有安装属性的情况下运行时，它会从 Active Directory 中读取这些属性。  
 
     > [!NOTE]  
-    >  如果在辅助站点上启用客户端请求安装，请将 **SMSSITECODE** 属性设置为其父主站点的 Configuration Manager 站点代码。 如果为 Configuration Manager 扩展了 Active Directory 架构，请将此属性设置为“自动”，以自动查找正确的站点分配。  
+    >  如果在辅助站点上启用客户端请求安装，请将 **SMSSITECODE** 属性设置为其父主站点的 Configuration Manager 站点代码。 如果为 Configuration Manager 扩展了 Active Directory 架构，请将此属性设置为“自动”，以自动查找正确的站点分配  。  
 
 
 ### <a name="use-the-client-push-installation-wizard"></a>使用客户端请求安装向导
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+1.  在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
 
 2.  选择要为其配置自动站点范围客户端请求安装的站点。  
 
-3.  在功能区的“主页”选项卡上的“设置”组中，依次选择“客户端安装设置”、“客户端请求安装”。  
+3.  在功能区的“主页”选项卡上的“设置”组中，依次选择“客户端安装设置”、“客户端请求安装”     。  
 
-4.  完成“安装属性”选项卡。  
+4.  完成“安装属性”  选项卡。  
 
     如果为 Configuration Manager 扩展了 Active Directory 架构，站点会向 Active Directory 域服务发布指定的[客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。 当 CCMSetup 在没有安装属性的情况下运行时，它会从 Active Directory 中读取这些属性。   
 
-5.  在 Configuration Manager 控制台中，转到“资产和符合性”工作区。  
+5.  在 Configuration Manager 控制台中，转到“资产和符合性”  工作区。  
 
-6.  在“设备”节点中，选择一台或多台计算机。 或者在“设备集合”节点中选择一个计算机集合。  
+6.  在“设备”节点中，选择一台或多台计算机  。 或者在“设备集合”节点中选择一个计算机集合  。  
 
-7.  在功能区的“主页”选项卡上，选择以下选项之一：  
+7.  在功能区的“主页”选项卡上，选择以下选项之一  ：  
 
-    -   若要将客户端推送到一个或多个设备，请在“设备”组中选择“安装客户端”。  
+    -   若要将客户端推送到一个或多个设备，请在“设备”组中选择“安装客户端”   。  
 
-    -   若要将客户端推送到一个设备集合，请在“集合”组中选择“安装客户端”。  
+    -   若要将客户端推送到一个设备集合，请在“集合”组中选择“安装客户端”   。  
 
-8. 在“安装客户端向导”的“开始之前”页上，查看信息，然后选择“下一步”。  
+8. 在“安装客户端向导”的“开始之前”页上，查看信息，然后选择“下一步”   。  
 
-9. 完成“安装选项”页。  
+9. 完成“安装选项”  页。  
 
 10. 查看安装设置，然后完成向导。  
 
@@ -144,9 +144,9 @@ ms.locfileid: "65214719"
 
 1.  使用**组策略管理控制台**打开新的或现有的组策略对象。  
 
-2.  依次展开“计算机配置”、“管理模板”和“Windows 组件”，然后选择“Windows 更新”。  
+2.  依次展开“计算机配置”、“管理模板”和“Windows 组件”，然后选择“Windows 更新”     。  
 
-3.  打开“指定 Intranet Microsoft 更新服务位置”设置的属性，然后选择“已启用”。  
+3.  打开“指定 Intranet Microsoft 更新服务位置”  设置的属性，然后选择“已启用”  。  
 
 4.  **设置检测更新的 Intranet 更新服务**：指定软件更新点服务器的名称和端口。  
 
@@ -166,15 +166,15 @@ ms.locfileid: "65214719"
 
 ### <a name="publish-the-configuration-manager-client-to-the-software-update-point"></a>将 Configuration Manager 客户端发布到软件更新点  
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+1.  在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
 
 2.  选择要为其配置基于软件更新的客户端安装的站点。  
 
-3.  在功能区的“主页”选项卡上的“设置”组中，选择“客户端安装设置”，然后选择“基于软件更新的客户端安装”。  
+3.  在功能区的“主页”选项卡上的“设置”组中，选择“客户端安装设置”，然后选择“基于软件更新的客户端安装”     。  
 
-4.  选择“启用基于软件更新的客户端安装”。  
+4.  选择“启用基于软件更新的客户端安装”  。  
 
-5.  如果站点的客户端版本比软件更新点上的版本更新，则会打开“检测到客户端包的较高版本”对话框。 单击“是”以发布最新的版本。  
+5.  如果站点的客户端版本比软件更新点上的版本更新，则会打开“检测到客户端包的较高版本”对话框  。 单击“是”  以发布最新的版本。  
 
     > [!NOTE]  
     >  如果尚未将此客户端软件发布到软件更新点，则此框为空白。  
@@ -185,14 +185,14 @@ ms.locfileid: "65214719"
 
 ##  <a name="BKMK_ClientGP"></a> 组策略安装 
 
-使用 Active Directory 域服务中的组策略发布或分配 Configuration Manager 客户端。 客户端在计算机启动时安装。 使用组策略时，客户端会显示在“添加或删除程序”控制面板中供用户安装。  
+使用 Active Directory 域服务中的组策略发布或分配 Configuration Manager 客户端。 客户端在计算机启动时安装。 使用组策略时，客户端会显示在“添加或删除程序”控制面板中供用户安装  。  
 
 使用 Windows Installer 包 **CCMSetup.msi** 进行基于组策略的安装。 该文件位于站点服务器上的 `<ConfigMgr installation directory>\bin\i386` 文件夹中。 不能通过向此文件添加属性来修改安装行为。  
 
 > [!IMPORTANT]  
 >  必须具有**管理员**权限才能访问客户端安装文件。  
 
--   如果为 Configuration Manager 扩展了 Active Directory 架构，并且在“站点属性”对话框的“高级”选项卡中选择了“在 Active Directory 域服务中发布此站点”，则客户端计算机会在 Active Directory 域服务中自动搜索安装属性。 有关详细信息，请参阅[关于发布到 Active Directory 域服务的客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services)。  
+-   如果为 Configuration Manager 扩展了 Active Directory 架构，并且在“站点属性”对话框的“高级”选项卡中选择了“在 Active Directory 域服务中发布此站点”，则客户端计算机会在 Active Directory 域服务中自动搜索安装属性    。 有关详细信息，请参阅[关于发布到 Active Directory 域服务的客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services)。  
 
 -   如果尚未扩展 Active Directory 架构，请参阅[如何预配客户端安装属性](#BKMK_Provision)部分，将安装属性存储在计算机的 Windows 注册表中。 客户端在安装时会使用这些安装属性。  
 
@@ -302,20 +302,20 @@ Configuration Manager 支持登录脚本来安装 Configuration Manager 客户�
 
 使用以下过程创建 Configuration Manager 包和程序，你可以将此包和程序部署到 Configuration Manager 客户端计算机以升级客户端软件。  
 
-1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“应用程序管理”，然后选择“包”节点。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“应用程序管理”，然后选择“包”节点    。  
 
-2.  在功能区的“主页”选项卡上的“创建”组中，选择“从定义创建包”。  
+2.  在功能区的“主页”选项卡上的“创建”组中，选择“从定义创建包”    。  
 
-3.  在向导的“包定义”页上，从“发布者”下拉列表中选择“Microsoft”，然后从“包定义”列表中选择“Configuration Manager 客户端升级”。  
+3.  在向导的“包定义”  页上，从“发布者”  下拉列表中选择“Microsoft”  ，然后从“包定义”  列表中选择“Configuration Manager 客户端升级”  。  
 
-4.  在“源文件”页上，选择“始终从源文件夹获取文件”。  
+4.  在“源文件”  页上，选择“始终从源文件夹获取文件”  。  
 
-5.  在“源文件夹”页上，选择“网络路径(UNC 名称)”。 然后输入服务器以及客户端安装文件所在的共享的网络路径。  
+5.  在“源文件夹”页上，选择“网络路径(UNC 名称)”   。 然后输入服务器以及客户端安装文件所在的共享的网络路径。  
 
     > [!NOTE]  
     >  运行 Configuration Manager 部署的计算机必须能够访问指定的网络文件夹。 否则，客户端安装失败。  
 
-    若要更改任何客户端安装属性，请在“Configuration Manager 代理无提示升级属性”程序对话框的“常规”选项卡上修改 CCMSetup.exe 命令行。 默认安装属性为 `/noservice SMSSITECODE=AUTO`。  
+    若要更改任何客户端安装属性，请在“Configuration Manager 代理无提示升级属性”程序对话框的“常规”选项卡上修改 CCMSetup.exe 命令行   。 默认安装属性为 `/noservice SMSSITECODE=AUTO`。  
 
 6. 将包分发给你想要承载客户端升级包的所有分发点。 然后，将包部署到包含想要升级的客户端的设备集合。  
 
@@ -365,11 +365,11 @@ Configuration Manager 支持登录脚本来安装 Configuration Manager 客户�
     > [!IMPORTANT]  
     >  请不要在 CCMSetup.exe 命令行属性中为客户端指定 Configuration Manager 站点代码。  
 
-2.  在命令提示符下，键入 `net stop ccmexec` 以停止引用计算机上的“SMS 代理主机”服务 (Ccmexec.exe)。  
+2.  在命令提示符下，键入 `net stop ccmexec` 以停止引用计算机上的“SMS 代理主机”服务 (Ccmexec.exe)  。  
 
-3.  从引用计算机上的“Windows”文件夹中删除文件“SMSCFG.INI”。  
+3.  从引用计算机上的“Windows”  文件夹中删除文件“SMSCFG.INI”  。  
 
-4.  删除存储在引用计算机上的本地计算机存储中的任何证书。 例如，如果使用公钥基础结构 (PKI) 证书，则在创建计算机映像之前，应在“计算机”和“用户”的“个人”存储中删除证书。  
+4.  删除存储在引用计算机上的本地计算机存储中的任何证书。 例如，如果使用公钥基础结构 (PKI) 证书，则在创建计算机映像之前，应在“计算机”和“用户”的“个人”存储中删除证书    。  
 
 5.  如果客户端与引用计算机安装在不同的 Configuration Manager 层次结构中，请从引用计算机中删除受信任的根密钥。  
 
@@ -506,9 +506,9 @@ Configuration Manager 支持为工作组中的计算机安装客户端。 使用
 
 #### <a name="configure-clients-for-internet-based-client-management-after-client-installation-from-the-configuration-manager-control-panel"></a>在从 Configuration Manager 控制面板安装客户端之后，针对基于 Internet 的客户端管理配置客户端  
 
-1.  打开客户端上的“Configuration Manager”控制面板。  
+1.  打开客户端上的“Configuration Manager”控制面板  。  
 
-2.  在“Internet”选项卡上，输入基于 Internet 的管理点的完全限定域名 (FQDN) 作为“Internet FQDN”。  
+2.  在“Internet”选项卡上，输入基于 Internet 的管理点的完全限定域名 (FQDN) 作为“Internet FQDN”   。  
 
     > [!NOTE]  
     >  只有当客户端具有客户端 PKI 证书时，“Internet”  选项卡才可用。  
@@ -518,9 +518,11 @@ Configuration Manager 支持为工作组中的计算机安装客户端。 使用
 
 #### <a name="configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>在客户端安装后通过使用脚本来针对基于 Internet 的客户端管理配置客户端  
 
+##### <a name="vbscript"></a>VBScript
+
 1.  打开文本编辑器，例如记事本。  
 
-2.  将以下 VBScript 示例复制并粘贴到文件中。 将 mp.contoso.com 替换为基于 Internet 的管理点的 Internet FQDN。  
+2.  将以下 VBScript 示例复制并粘贴到文件中。 将 mp.contoso.com 替换为基于 Internet 的管理点的 Internet FQDN  。  
 
     ``` VBScript 
     on error resume next  
@@ -556,6 +558,28 @@ Configuration Manager 支持为工作组中的计算机安装客户端。 使用
 
 可能必须重启客户端以使更改生效。  
 
+##### <a name="powershell"></a>PowerShell
+
+1. 打开 PowerShell 内联编辑器（如 PowerShell ISE 或 Visual Studio Code）或任何文本编辑器（如记事本）。
+
+2. 将以下代码行复制并插入编辑器。 将“mp.contoso.com”替换为基于 Internet 的管理点的 Internet FQDN。
+
+    ``` PowerShell
+    
+    $newInternetBasedManagementPointFQDN = 'mp.contoso.com'
+    $client = New-Object -ComObject Microsoft.SMS.Client
+    $client.SetInternetManagementPointFQDN($newInternetBasedManagementPointFQDN)
+    Restart-Service CcmExec
+    $client.GetInternetManagementPointFQDN()
+    
+    ```
+
+    > [!NOTE]  
+    >  最后一行仅用于验证新的 Internet MP 值。
+    >
+    >  若要删除基于 Internet 的指定管理点，请删除引号内的服务器 FQDN 值。 此行变为：`$newInternetBasedManagementPointFQDN = ''`
+
+3. 使用提升的权限运行此脚本。
 
 
 ##  <a name="BKMK_Provision"></a> 为基于组策略和软件更新的客户端安装预配客户端安装属性
@@ -576,9 +600,9 @@ Configuration Manager 安装介质上提供了名为 **ConfigMgrInstallation.adm
 
 1.  使用编辑器（例如 Windows 组策略对象编辑器）将管理模板 **ConfigMgrInstallation.adm** 导入到新的或现有的组策略对象中。 此文件位于 Configuration Manager 安装介质上的 `TOOLS\ConfigMgrADMTemplates` 文件夹中。  
 
-2.  打开导入的设置“配置客户端部署设置” 的属性。  
+2.  打开导入的设置“配置客户端部署设置”  的属性。  
 
-3.  选择“启用”。  
+3.  选择“启用”  。  
 
 4.  在“CCMSetup”  框中，输入必需的 CCMSetup 命令行属性。 有关所有 CCMSetup 命令行属性的列表及其用法示例，请参阅[关于客户端安装参数和属性](/sccm/core/clients/deploy/about-client-installation-properties)。  
 

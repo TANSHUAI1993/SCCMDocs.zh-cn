@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28e0326cf370d000052eb3bc675e70377d7954c5
-ms.sourcegitcommit: 234f97fde834f94b75f90850378521cf0c5a2343
+ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64945091"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264545"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试运行
 
@@ -140,6 +140,10 @@ ms.locfileid: "64945091"
 6. 选择新的或现有工作区中，并选择**设置为桌面 Analytics 工作区**。  然后选择**继续**中**确认和授予访问权限**对话框。  
 
 7. 在新的浏览器选项卡上，选择要用于登录的帐户。 选择选项**代表你的组织同意**，然后选择**接受**。  
+
+
+    > [!Note]  
+    > 此许可是将 MALogAnalyticsReader 应用程序分配工作区的 Log Analytics 读者角色。 此应用程序角色是桌面分析所需。 有关详细信息，请参阅[MALogAnalyticsReader 应用程序角色](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader)。  
 
 8. 恢复到页面上**设置工作区**，选择**下一步**。  
 
@@ -311,11 +315,11 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
 5. 完成添加操作系统升级包向导。  
 
-#### <a name="distribute-content"></a>将内容分发
+#### <a name="distribute-content"></a>分发内容
 
 接下来，将 OS 升级包分发到分发点。  
 
-1. 在列表中选择 OS 升级包。 上**主页**功能区选项卡，在**部署**组中，选择**分发内容**。 分发内容向导将打开。  
+1. 在列表中选择 OS 升级包。 在功能区的“主页”选项卡上，在“部署”组中，选择“分发内容”。 分发内容向导将打开。  
 
 2. 上**常规**页上，验证列出的内容是你想要分发，然后选择的内容**下一步**。  
 

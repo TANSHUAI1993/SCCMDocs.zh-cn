@@ -2365,8 +2365,10 @@
     - name: SMS_DistributionPointInfo 服务器 WMI 类
       href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
       items:
-        - name: 类 SMSDistributionPointInfo 中的 GetChainedPullDPs 方法
+        - name: GetChainedPullDPs 方法
           href: core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md
+        - name: SetDPMaintenanceMode 方法
+          href: core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md
     - name: SMS_DistributionStatus 服务器 WMI 类
       href: core/servers/configure/sms_distributionstatus-server-wmi-class.md
     - name: SMS_LastPXEAdvertisement 服务器 WMI 类

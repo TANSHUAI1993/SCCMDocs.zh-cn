@@ -10,15 +10,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 985b439a9f74f92a68b1e1c70e4cca0580b819c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bd2a745f7fc158739898930c9d05ea40724879b1
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126788"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176099"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 下列问题和解答可帮助了解何时使用以及如何在 Microsoft Azure 上配置 Configuration Manager。
 
@@ -49,7 +49,7 @@ ms.locfileid: "56126788"
 - **ExpressRoute**（推荐）
   - 自然地扩展到数据中心（可联接多个数据中心）
   - Azure 数据中心与基础结构之间的专用连接
-  - 不使用公共 Internet
+  - 不经过公共 Internet
   - 提供可靠性、高速度、更低的延迟和高安全性
   - 高达 10gbps 的速度和不限流量计划选项
 - **VPN 网关**
@@ -87,7 +87,7 @@ ms.locfileid: "56126788"
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>可否提供有关 Azure 虚拟机的详细信息？应使用何种大小的虚拟机？
 一般情况下，计算能力（CPU 和内存）需满足[用于 System Center Configuration Manager 的推荐硬件](/sccm/core/plan-design/configs/recommended-hardware)。 但常规计算机硬件与 Azure VM 之间有些区别，尤其涉及到这些虚拟机使用的磁盘时。  使用的虚拟机的大小取决于环境的规模，这里有一些建议：
-- 对于任何大规模的生产部署，建议使用“S”级 Azure VM。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
+- 对于任何大规模的生产部署，建议使用“S”  级 Azure VM。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
 - 对于较大的规模，应使用多个高级存储磁盘，并在 Windows 磁盘管理控制台中将其进行分区以获得最大 IOPS。  
 - 建议在初始站点部署期间使用较好的或多个高级磁盘（如使用 P30 而不是 P20，在带区卷中使用 2 个 P30 而不是 1 个 P30）。 之后，如果站点因额外负荷需要增加 VM 的大小，则可利用较大 VM 提供的额外 CPU 和内存空间。 此外，已配置好的磁盘也可充分利用较大 VM 所允许的额外 IOPS 吞吐量。
 
@@ -138,7 +138,7 @@ ms.locfileid: "56126788"
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>我了解并能接受基于云的分发点的限制，但不想将管理点置于 DMZ 内，即使这是支持基于 Internet 的客户端所需的。 是否有其他选择？
 可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)）。
 
-**云管理网关**提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 部署并配置好该服务后，客户端便可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
+云管理网关提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端  。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 部署并配置好该服务后，客户端便可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
 
 接着可以开始在环境中使用云管理网关，并向我们提供反馈以帮助优化该服务。 有关预发行功能的信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)。
 
@@ -153,7 +153,7 @@ ms.locfileid: "56126788"
 很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本： https://azure.microsoft.com/pricing/calculator/
 
 ## <a name="additional-resources"></a>其他资源
-基础知识： http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+基础知识： http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/ 
 
 **Azure VM 计算机类型：**
  - Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5802ea43884ac23d434edd39569159ca48480a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138426"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176015"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1709 中的功能
 
@@ -32,23 +32,24 @@ ms.locfileid: "56138426"
     Workaround details.
 -->
 **此 Technical Preview 中的已知问题：**
-- 如果站点服务器处于被动模式，则无法更新到预览版本 1709。 如果运行的是预览版本 1706、1707 或 1708，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1709。 可以在站点运行版本 1709 后，重新安装被动模式站点服务器。
+- 如果站点服务器处于被动模式，则无法更新到预览版本 1709  。 如果运行的是预览版本 1706、1707 或 1708，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1709。 可以在站点运行版本 1709 后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
-  1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
-  2. 在“站点系统角色”窗格中，右键单击“站点服务器”角色，再选择“删除角色”。
-  3. 右键单击被动模式站点服务器，再选择“删除”。
-  4. 卸载站点服务器后，在处于主动模式的主站点服务器上重启服务 CONFIGURATION_MANAGER_UPDATE。
+  1. 在控制台中，依次转到“管理”   > “概述”   > “站点配置”   > “服务器和站点系统角色”  ，再选择被动模式站点服务器。
+  2. 在“站点系统角色”  窗格中，右键单击“站点服务器”  角色，再选择“删除角色”  。
+  3. 右键单击被动模式站点服务器，再选择“删除”  。
+  4. 卸载站点服务器后，在处于主动模式的主站点服务器上重启服务 CONFIGURATION_MANAGER_UPDATE  。
 
 
 **以下是此版本可以试用的新功能。**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager 控制台中改进了 VPN 配置文件体验
-<!-- 1313282 --> 在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 具体而言：
+<!-- 1313282 -->
+在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 具体而言：
 
 - 每个平台均有其自己的工作流，这意味着新的 VPN 配置文件仅包含平台支持的设置。
-- 如今，“支持的平台”页在“常规”页后显示。  现在于设置属性值之前选择平台。
-- 如果将平台设置为“Android”、“Android for Work”或“Windows Phone 8.1”，则不需要“支持的平台”页，该页也不会显示。
+- 如今，“支持的平台”页在“常规”页后显示   。  现在于设置属性值之前选择平台。
+- 如果将平台设置为“Android”、“Android for Work”或“Windows Phone 8.1”，则不需要“支持的平台”页，该页也不会显示     。
 - 基于 Configuration Manager 客户端的工作流已与基于混合移动设备 (MDM) 客户端的 Windows 10 工作流相结合，它们支持相同的设置。
 - 每个平台工作流仅包含适用于该工作流的设置。  例如，Android 工作流包含适用于 Android 的设置；Android 工作流中将不再显示适用于 iOS 或 Windows 10 移动版的设置。
 - 对于 Windows 8.1 设备，清楚标记了 Configuration Manager 管理的设置。
@@ -62,8 +63,8 @@ ms.locfileid: "56138426"
 
 使用常用流程创建新的 VPN。 请注意，VPN 配置文件向导选项的首页已更改。
 
-1.  请转到“资产和符合性” > “概述” > “符合性设置” > “公司资源访问权限” > “VPN 配置文件”，然后选择“创建 VPN 配置文件”。
-2.  在“常规”页中输入名称，然后选择“指定要创建的 VPN 配置文件类型”下的以下选项之一：
+1.  请转到“资产和符合性” > “概述” > “符合性设置” > “公司资源访问权限” > “VPN 配置文件”，然后选择“创建 VPN 配置文件”       。
+2.  在“常规”页中输入名称，然后选择“指定要创建的 VPN 配置文件类型”下的以下选项之一   ：
 
     - Windows 10  
     - Windows 8.1  
@@ -72,13 +73,14 @@ ms.locfileid: "56138426"
     - Android  
     - Android for Work  
 
-3.  如果选择“Windows 8.1”，则也可选择“创建新的配置文件”或“从文件导入”。
+3.  如果选择“Windows 8.1”，则也可选择“创建新的配置文件”或“从文件导入”    。
 4.  完成向导，结束配置文件创建。
 
 请注意，选择不同的平台时，只显示与选定平台相关的设置。
 
 ## <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
-<!-- 1350871 --> 许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
+<!-- 1350871 -->
+许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
 
 ### <a name="prerequisites"></a>先决条件
 必须具备以下先决条件才能实现共同管理。 存在一般先决条件，以及针对现有 Configuration Manager 客户端和不属于该客户端的设备的不同先决条件。
@@ -92,7 +94,7 @@ ms.locfileid: "56138426"
 - Configuration Manager Technical Preview 1709 版本
 - Azure AD 
 - 适用于所有用户的 EMS 或 Intune 许可证
-- Intune 订阅（Intune 中的 MDM 机构设置为 Intune）
+- Intune 订阅（Intune 中的 MDM 机构设置为 Intune） 
 
    > [!Note]  
    > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法实现共同管理。 如果有兴趣迁移到 Intune 独立版本，请参阅[从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
@@ -109,10 +111,10 @@ ms.locfileid: "56138426"
 启用共同管理后，Configuration Manager 将继续管理所有工作负荷。 如果决定已准备就绪，即可使 Intune 开始管理可用的工作负荷。 在此版本中，可以使 Intune 管理以下工作负荷。   
 
 #### <a name="compliance-policies"></a>相容性策略
-符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。 有关详细信息，请参阅[设备符合性策略](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies)。  
+符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。 有关详细信息，请参阅[设备符合性策略](https://docs.microsoft.com/sccm/mdm/deploy-use/device-compliance-policies)。  
 
 #### <a name="windows-update-for-business-policies"></a>适用于企业的 Windows 更新策略
-通过适用于企业的 Windows 更新策略，可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 有关详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。  
+通过适用于企业的 Windows 更新策略，可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 有关详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Azure 上 Intune 中适用于共同管理设备的可用远程操作
 如果为 Windows 10 设备启用了共同管理，在 Azure 上的 Intune 中可以执行以下远程操作：  
@@ -151,24 +153,24 @@ ms.locfileid: "56138426"
 #### <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
 在适用于 Windows 10 设备（还不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ CCMHOSTNAME=<云管理网关相互身份验证终结点 URL> SMSSiteCode=<站点代码> SMSMP=https://<MP 的 FQDN> AADTENANTID=<AAD 租户 ID> AADTENANTNAME=<租户名> AADCLIENTAPPID=<AAD 集成的 Server AppID> AADRESOURCEURI=https://<资源 ID>”
+ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ CCMHOSTNAME=<云管理网关相互身份验证终结点 URL> SMSSiteCode=<站点代码> SMSMP=https://<MP 的 FQDN> AADTENANTID=<AAD 租户 ID> AADTENANTNAME=<租户名> AADCLIENTAPPID=<AAD 集成的 Server AppID> AADRESOURCEURI=https://<资源 ID>”        
 
 例如，如果具有以下值：
 
-- 云管理网关相互身份验证终结点 URL： https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
+- 云管理网关相互身份验证终结点 URL： https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100     
 
    >[!Note]    
-   >对于云管理网关相互身份验证终结点 URL 值，使用 vProxy_Roles SQL 视图中的 MutualAuthPath 值。
+   >对于云管理网关相互身份验证终结点 URL 值，使用 vProxy_Roles SQL 视图中的 MutualAuthPath 值    。
 
-- 管理点 (MP) 的 FQDN：sccmmp.corp.contoso.com    
+- 管理点 (MP) 的 FQDN：sccmmp.corp.contoso.com     
 - **站点代码**：PS1    
 - **Azure AD 租户 ID**：72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
-- Azure AD 租户名称：contoso    
-- Azure AD 客户端应用 ID：bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+- Azure AD 租户名称：contoso     
+- Azure AD 客户端应用 ID：bef323b3-042f-41a6-907a-f9faf0d1XXXX      
 - **AAD 资源 ID URI**：ConfigMgrServer    
 
   > [!Note]    
-  > 对于 AAD 资源 ID URI 值，使用在 vSMS_AAD_Application_Ex SQL 视图中找到的 IdentifierUri 值。
+  > 对于 AAD 资源 ID URI 值，使用在 vSMS_AAD_Application_Ex SQL 视图中找到的 IdentifierUri 值    。
 
 将使用以下命令行：
 
@@ -176,37 +178,37 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
 
 > [!Tip]
 >可通过使用以下步骤查找站点的命令行参数：     
-> 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。  
-> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。 ****    
-> 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。    
-> 4. 在“启用”页面的“在 Intune 中注册的设备”部分中单击“复制”，将命令行复制到剪贴板，然后将其保存，用在创建应用的过程中。  
-> 5. 单击“取消”退出向导。
+> 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”     。  
+> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导  。    
+> 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”   。    
+> 4. 在“启用”页面的“在 Intune 中注册的设备”部分中单击“复制”，将命令行复制到剪贴板，然后将其保存，用在创建应用的过程中   。  
+> 5. 单击“取消”退出向导  。
 
 #### <a name="new-windows-10-devices"></a>新的 Windows 10 设备
 对于新的 Windows 10 设备，可以使用 Autopilot 服务来配置全新体验，这包括将设备联接到 AD 和 Azure AD，以及在 Intune 中注册设备。 然后，在 Intune 中创建应用，部署 Configuration Manager 客户端。  
 1. 对新的 Windows 10 设备启用 AutoPilot。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)。  
 2. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](https://docs.microsoft.com/intune/windows-enroll)。
-3. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。   
+3. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>未在 Intune 中注册或不是 Configuration Manager 客户端的 Windows 10 设备
 对于未在 Intune 中注册或不是 Configuration Manager 客户端的 Windows 10 设备，可以使用自动注册在 Intune 中注册设备。 然后，在 Intune 中创建应用，部署 Configuration Manager 客户端。
 1. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](https://docs.microsoft.com/intune/windows-enroll)。  
-2. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。
+2. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>在 Intune 中注册的 Windows 10 设备
-对于已在 Intune 中注册的 Windows 10 设备，在 Intune 中创建应用，以部署 Configuration Manager 客户端。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。  
+对于已在 Intune 中注册的 Windows 10 设备，在 Intune 中创建应用，以部署 Configuration Manager 客户端。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 在上一节中，你准备了 Windows 10 设备进行共同管理。 这些设备现已联接到 AD 和 Azure AD，并且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
 
-1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。    
-2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。 ****    
-3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
-4. 在“暂存”页中，配置以下设置并单击“下一步”：
+1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”     。    
+2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导  。    
+3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”   。   
+4. 在“暂存”页中，配置以下设置并单击“下一步”  ：
     - **试点组**：试点组包含选定的一个或多个集合。 在分阶段推出共同管理过程中使用此组。 可从小型测试集合开始，然后随着向更多用户和设备推出共同管理，向试点组添加更多集合。 可随时在共同管理属性中更改试点组中的集合。
-    - **生产**：如果选择此设置，将对所有支持的 Windows 10 设备启用共同管理。 使用一个或多个集合配置排除组。 将不对属于此组中任意集合的成员的设备使用共同管理。 
-5. 在“启用”页中，选择“试点”或“全部”（具体取决于“暂存”页中所配置的设置），在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 这使你能够对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 
-6. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由 Intune 托管，然后单击“下一步”。 使用滑块来选择是否将工作负荷切换到试点组或所有 Windows 10 设备（具体取决于在“暂存”页中所配置的设置）。 
+    - **生产**：如果选择此设置，将对所有支持的 Windows 10 设备启用共同管理。 使用一个或多个集合配置排除组  。 将不对属于此组中任意集合的成员的设备使用共同管理。 
+5. 在“启用”页中，选择“试点”或“全部”（具体取决于“暂存”页中所配置的设置），在 Intune 中启用自动注册，然后单击“下一步”    。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册  。 这使你能够对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 
+6. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由 Intune 托管，然后单击“下一步”  。 使用滑块来选择是否将工作负荷切换到试点组或所有 Windows 10 设备（具体取决于在“暂存”页中所配置的设置）。 
 7. 要启用共同管理，请完成向导。  
 
 <!--### Modify your co-management settings

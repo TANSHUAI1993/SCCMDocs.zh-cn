@@ -2,7 +2,7 @@
 title: 启用共同管理的条件访问
 titleSuffix: Configuration Manager
 description: 根据 Intune 的符合性规则控制用户对组织资源的访问
-ms.date: 01/14/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d5e5c7d6075697431f8c537366dc16164fedd1f
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: a48dd82b1f4c79953ce88c5e156abe47b891ac14
+ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754655"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65973953"
 ---
 # <a name="conditional-access-with-co-management"></a>启用共同管理的条件访问
 
@@ -34,7 +34,7 @@ ms.locfileid: "56754655"
 
     - 对于共同管理的设备，Configuration Manager 还会执行基于配置的评估。 例如，必需的更新或应用符合性。 Intune 将此评估与自身的评估结合起来。  
 
-2. Intune 检测设备上的活动安全事件。 它使用 [Windows Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started)和其他 [Mobile Threat Defense 提供程序](https://www.lookout.com/about/partners/microsoft)的智能安全。 这些合作伙伴对设备进行持续的行为分析。 此分析检测活动事件，然后将此信息传递给 Intune 用于实时符合性评估。  
+2. Intune 检测设备上的活动安全事件。 它使用 [Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started)（以前称为 Windows Defender ATP）和其他 [Mobile Threat Defense 提供程序](https://www.lookout.com/about/partners/microsoft)的智能安全。 这些合作伙伴对设备进行持续的行为分析。 此分析检测活动事件，然后将此信息传递给 Intune 用于实时符合性评估。  
 
     - 此评估在出现安全漏洞之后基于事件执行  
 
@@ -63,7 +63,7 @@ Microsoft 公司副总裁 Brad Anderson 在 Ignite 2018主题演讲期间通过�
 
 条件访问也是开发[零信任网络](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/)体系结构的关键部分。 通过条件访问，符合要求的设备访问控制可覆盖零信任网络的基础层。 此功能是未来为组织提供保护的重要组成部分。
 
-若要了解详细信息，请参阅有关[使用 Windows Defender 高级威胁防护中的计算机风险数据增强条件访问](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559)的博客文章。
+要了解详细信息，请参阅有关[使用 Microsoft Defender 高级威胁防护中的计算机风险数据增强条件访问](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559)的博客文章。
 
 
 
@@ -72,7 +72,7 @@ Microsoft 公司副总裁 Brad Anderson 在 Ignite 2018主题演讲期间通过�
 IT 咨询公司 Wipro 使用条件访问来保护和管理所有 91,000 名员工所使用的设备。 在最近的案例研究中，Wipro 的 IT 副总裁指出：
 
 > 实现条件访问是 Wipro 的一大胜利。现在，我们的所有员工都可以按需移动访问信息。
-> 我们增强了安全性，并提高了员工生产效率。 **** 现在，91,000 名员工可以从任何地方的任何设备高度安全地访问超过 100 个应用。
+> 我们增强了安全性，并提高了员工生产效率。 * *** 现在，91,000 名员工可以从任何地方的任何设备高度安全地访问超过 100 个应用。
 
 <!-- waiting for the case study to be public
 For more information, see [Wipro drives mobile productivity with Microsoft cloud security tools to improve customer engagements](https://customers.microsoft.com/story/446f72f9-2f50-4697-b688-6d279786e010)
@@ -80,7 +80,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 其他示例包括： 
 
-- 雀巢公司为超过 150,000 名员工使用基于应用的条件访问  
+- Nestlé 为超过 150,000 名员工使用基于应用的条件访问  
 
 - 自动化软件公司 Cadence 现在可以确保“只有托管设备才能访问 Office 365 应用（如 Teams）和公司的 Intranet”。 他们还可以让员工“更安全地访问基于云的其他应用，如 Workday 和 Salesforce”。 有关 Cadence 使用 Intune 的更多体验，请参阅 [Cadence 通过 Microsoft 365 中的移动协作工具提高业务处理速度](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365)。
 
@@ -99,13 +99,13 @@ Intune 还可与 Cisco ISE、Aruba Clear Pass 和 Citrix NetScaler 等合作伙�
 
 由于条件访问是企业移动性 + 安全性 (EMS) 的核心部分，因此，不需要本地设置或体系结构。 使用 Intune 和 Azure Active Directory (Azure AD)，可以在云中快速配置条件访问。 如果目前使用的是 Configuration Manager，可以通过共同管理轻松地将环境扩展到云，并立即开始使用。
 
-有关 ATP 集成的更多信息，请参阅以下博客文章：[Windows Defender ATP 设备风险评分暴露新的网络攻击，推动条件访问以保护网络](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)。 这篇文章详细介绍了一个高级黑客组织如何使用从未见过的工具。 Microsoft 云检测到攻击并加以阻止，因为目标用户使用了条件访问。 入侵激活了设备基于风险的条件访问策略。 虽然攻击者已经在网络中建立了立足点，但该策略会自动限制受攻击的计算机访问由 Azure AD 管理的组织服务和数据。
+有关 ATP 集成的更多信息，请参阅以下博客文章：[Microsoft Defender ATP 设备风险评分暴露新的网络攻击，推动条件访问以保护网络](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)。 这篇文章详细介绍了一个高级黑客组织如何使用从未见过的工具。 Microsoft 云检测到攻击并加以阻止，因为目标用户使用了条件访问。 入侵激活了设备基于风险的条件访问策略。 虽然攻击者已经在网络中建立了立足点，但该策略会自动限制受攻击的计算机访问由 Azure AD 管理的组织服务和数据。
 
 
 
 ## <a name="configure"></a>配置
 
-[启用共同管理](/sccm/comanage/how-to-enable)后，可以轻松使用条件访问。 它需要将符合性策略工作负载移至 Intune。 有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](/sccm/comanage/how-to-switch-workloads)。 
+[启用共同管理](/sccm/comanage/how-to-enable)后，可以轻松使用条件访问。 它需要将符合性策略  工作负载移至 Intune。 有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](/sccm/comanage/how-to-switch-workloads)。 
 
 有关使用条件访问的详细信息，请参阅以下文章： 
 

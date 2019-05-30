@@ -2,7 +2,7 @@
 title: 第三方 MDM 共存
 titleSuffix: Configuration Manager
 description: 了解如何结合使用第三方 MDM 服务与 Configuration Manager
-ms.date: 04/26/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,18 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf4c81d03d5887294c85337b403a6fb17dca98
-ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
+ms.openlocfilehash: 5fbb2d4a902c21ac2fa2186bba70f58d66e50c48
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873366"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176850"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>第三方 MDM 与 Configuration Manager 共存
 
-同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种功能称为[“共同管理”](/sccm/comanage/overview)。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种功能称为“共存”。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](/sccm/comanage/workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。
+同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种功能称为[“共同管理”](/sccm/comanage/overview)。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种功能称为“共存”  。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](/sccm/comanage/workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。
 
-在加入 Azure Active Directory 的设备上，Configuration Manager 客户端可以与第三方 MDM 服务共存。 设备可以是下列两种类型之一：
+在已加入 Azure Active Directory 且运行 Windows 10 版本 1709 或更高版本的设备上，Configuration Manager 客户端可以与第三方 MDM 服务共存。 设备可以是下列两种类型之一：
 
 - 仅限[已联接 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）  
 

@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b62ca813b11a6c49366c80623e7c4462e2e4897
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa92ed294196d44aaafcf4e873c706e135928c90
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176639"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-在设备上安装 Configuration Manager 客户端并将其成功分配到站点后，你将在“设备”节点的“资产和符合性”工作区中看到设备，并在“设备集合”节点中看到一个或多个集合。 选择设备或集合时，可执行管理操作。 但是，也可以使用其他方式来管理客户端，其中可能涉及控制台中的其他工作区或控制台未涉及的任务。  
+在设备上安装 Configuration Manager 客户端并将其成功分配到站点后，你将在“设备”  节点的“资产和符合性”  工作区中看到设备，并在“设备集合”  节点中看到一个或多个集合。 选择设备或集合时，可执行管理操作。 但是，也可以使用其他方式来管理客户端，其中可能涉及控制台中的其他工作区或控制台未涉及的任务。  
 
 > [!NOTE]  
 >  如果 Configuration Manager 客户端已安装但尚未成功分配到站点，则可能不会显示在控制台中。 在客户端分配到站点后更新集合成员身份并刷新控制台视图。  
@@ -31,13 +31,13 @@ ms.locfileid: "56133895"
 >
 > 通过使用 Exchange Server 连接器管理的移动设备，以及通过 Microsoft Intune 注册的设备不会安装 Configuration Manager 客户端。  
 >   
->  使用 Configuration Manager 控制台中的“客户端”列来确定是否安装了客户端，以便从控制台对其进行管理。  
+>  使用 Configuration Manager 控制台中的“客户端”  列来确定是否安装了客户端，以便从控制台对其进行管理。  
 
 ##  <a name="BKMK_ManagingClients_DevicesNode"></a> 通过“设备”节点管理客户端  
 
 根据设备类型，其中某些选项可能不可用。  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性” >  “设备”。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”   >  “设备”  。  
 
 2. 选择一台或多台设备，然后从功能区中选择或通过右键单击设备来选择其中一个客户端管理任务：  
 
@@ -107,7 +107,7 @@ ms.locfileid: "56133895"
      > [!WARNING]  
      >  如果要卸载 Configuration Manager 客户端或将其从集合中移除，请不要删除客户端。  
 
-      “删除”操作会从 Configuration Manager 数据库手动删除客户端记录，除非用于故障排除方案，否则通常不应使用此操作。 如果删除了客户端记录，但是依然安装了客户端并与站点进行通信，检测信号发现会重新创建客户端记录。 客户端记录会重新出现在 Configuration Manager 控制台中，然而客户端历史记录和以前的所有关联都会丢失。  
+      “删除”  操作会从 Configuration Manager 数据库手动删除客户端记录，除非用于故障排除方案，否则通常不应使用此操作。 如果删除了客户端记录，但是依然安装了客户端并与站点进行通信，检测信号发现会重新创建客户端记录。 客户端记录会重新出现在 Configuration Manager 控制台中，然而客户端历史记录和以前的所有关联都会丢失。  
 
      > [!NOTE]  
      >  删除通过 Configuration Manager 注册的移动设备客户端时，此操作还会吊销颁发给移动设备的 PKI 证书，并且管理点随后会拒绝此证书（即使 IIS 未检查 CRL）。 在删除这些客户端时，不会吊销移动设备旧客户端上的证书。  
@@ -133,26 +133,26 @@ ms.locfileid: "56133895"
 
      - 如果通过 Exchange Server 连接器管理移动设备，则移动设备会在其与 Exchange 同步时收到命令。  
 
-       可使用“擦除状态” 列来监视设备何时收到擦除命令。 设备将擦除确认发送到 Configuration Manager 之前，可以取消擦除命令。  
+       可使用“擦除状态”  列来监视设备何时收到擦除命令。 设备将擦除确认发送到 Configuration Manager 之前，可以取消擦除命令。  
 
    - **停用移动设备**  
 
-      只有通过 Microsoft Intune 或本地移动设备管理注册的移动设备才支持“停用”选项。  
+      只有通过 Microsoft Intune 或本地移动设备管理注册的移动设备才支持“停用”  选项。  
 
       有关详细信息，请参阅 [使用 System Center Configuration Manager 的远程擦除、远程锁定或密码重置功能帮助保护数据](../../../mdm/deploy-use/wipe-lock-reset-devices.md)。  
 
    - **更改设备的所有权**  
 
-      如果设备未加入域并且未安装 Configuration Manager 客户端，则可以使用此选项将设备的所有权更改为“公司”或“个人”。  
+      如果设备未加入域并且未安装 Configuration Manager 客户端，则可以使用此选项将设备的所有权更改为“公司”  或“个人”  。  
 
       可在应用程序要求中使用此值来控制部署，以及控制从用户设备中收集的清单数量。  
 
-     可能需要右键单击任意列标题并选择“设备所有者”列，将此列添加到视图中。
+     可能需要右键单击任意列标题并选择“设备所有者”  列，将此列添加到视图中。
 
       有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
-  许多在“设备”节点中的设备上可用的任务在集合上也可用。 控制台会将操作自动应用于集合中的所有合格设备。 此操作对整个集合生成附加的网络数据包，并提高站点服务器上的 CPU 使用率。  
+  许多在“设备”  节点中的设备上可用的任务在集合上也可用。 控制台会将操作自动应用于集合中的所有合格设备。 此操作对整个集合生成附加的网络数据包，并提高站点服务器上的 CPU 使用率。  
 
   在执行集合级别任务之前，请考虑以下内容。 开始后，无法从控制台中停止任务。 
  - 集合中有多少设备？
@@ -161,9 +161,9 @@ ms.locfileid: "56133895"
 
 #### <a name="to-manage-clients-from-the-device-collections-node"></a>通过“设备集合”节点管理客户端  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “设备集合”。  
+1.  在 Configuration Manager 控制台中，选择“资产和符合性”   > “设备集合”  。  
 
-3.  选择一个集合，然后从功能区中选择或通过右键单击集合来选择下列客户端管理任务之一。 这些客户端管理任务只能在集合级别执行。  
+3.  选择一个集合，然后从功能区中选择或通过右键单击集合来选择下列客户端管理任务之一。 这些客户端管理任务只  能在集合级别执行。  
 
     -   **扫描计算机以查找恶意软件并下载反恶意软件定义文件。**  
 
@@ -194,18 +194,18 @@ ms.locfileid: "56133895"
 > [!Tip]
 > 此外，必须将客户端升级到 1710 版才能运行此功能。 建议启用客户端自动升级以将客户端保持为管理开销最低的新版本。 有关详细信息，请参阅[使用自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)。
 
-若要标识正在等待重启的设备，请转到 Configuration Manager 控制台中的“资产和符合性”工作区，并选择“设备”节点。 然后可以在名为“等待重启”的新列的详细信息窗格中查看每个设备的状态。 每个设备都具有以下一个或多个值： 
+若要标识正在等待重启的设备，请转到 Configuration Manager 控制台中的“资产和符合性”  工作区，并选择“设备”  节点。 然后可以在名为“等待重启”  的新列的详细信息窗格中查看每个设备的状态。 每个设备都具有以下一个或多个值： 
  - **No**：没有正在等待的重启
  - **Configuration Manager**：此值源于客户端重新启动处理协调器组件 (RebootCoordinator.log)
  - **File rename**：此值源于 Windows 报告挂起的文件重命名操作 (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
  - **Windows Update**：此值源于 Windows 更新代理报告由于一个或多个更新而需要挂起的重启 (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
  - **Add or remove feature**：此值源于 Windows 基于组件的服务报告由于添加或删除一种 Windows 功能而需要重启 (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
-若要创建要重启设备的客户端通知，请执行以下操作：
-1.  在控制台的“设备集合”节点找到集合中要重启的设备。
-2.  右键单击设备，选择“客户端通知”，然后选择“重新启动”。 会打开一个有关重启的信息窗口。 单击“确定” 确认重启请求。
+ 若要创建要重启设备的客户端通知，请执行以下操作：
+1.  在控制台的“设备集合”  节点找到集合中要重启的设备。
+2.  右键单击设备，选择“客户端通知”  ，然后选择“重新启动”  。 会打开一个有关重启的信息窗口。 单击“确定”  确认重启请求。
 
-当客户端收到通知时，将打开“软件中心”通知窗口以通知用户重启。 默认情况下，重启会在 90 分钟后发生。 可以通过配置[客户端设置](/sccm/core/clients/deploy/configure-client-settings)来修改重启时间。 重启行为的设置可在默认设置的[“计算机重启”](/sccm/core/clients/deploy/about-client-settings#computer-restart)选项卡上找到。
+当客户端收到通知时，将打开“软件中心”  通知窗口以通知用户重启。 默认情况下，重启会在 90 分钟后发生。 可以通过配置[客户端设置](/sccm/core/clients/deploy/configure-client-settings)来修改重启时间。 重启行为的设置可在默认设置的[“计算机重启”](/sccm/core/clients/deploy/about-client-settings#computer-restart)选项卡上找到。
 
 
 ##  <a name="BKMK_ClientCache"></a> 为 Configuration Manager 客户端配置客户端缓存  
@@ -246,15 +246,15 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
   - SMSCACHESIZE  
 
     > [!NOTE]
-    > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
+    > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”  的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
 有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 ### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>在使用客户端请求安装来安装客户端时配置客户端缓存文件夹  
 
-1. 在 Configuration Manager 控制台中，单击“管理” > “站点配置” > “站点”。  
+1. 在 Configuration Manager 控制台中，单击“管理”   > “站点配置”   > “站点”  。  
 
-2. 选择相应站点，然后在“主页”选项卡上的“设置”组中，选择“客户端安装设置” > “安装属性”选项卡。  
+2. 选择相应站点，然后在“主页”  选项卡上的“设置”  组中，选择“客户端安装设置”   > “安装属性”  选项卡。  
 
 3. 指定以下属性，并使用空格分隔：  
 
@@ -267,28 +267,28 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
    - SMSCACHESIZE  
 
      > [!NOTE]
-     > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
+     > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”  的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
      有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 ### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>在客户端计算机上配置客户端缓存文件夹  
 
-1.  在客户端计算机上的控制面板中，导航到“Configuration Manager” ，然后双击以打开属性。  
+1.  在客户端计算机上的控制面板中，导航到“Configuration Manager”  ，然后双击以打开属性。  
 
-2.  在“缓存”选项卡上，设置空间和位置属性。 默认位置为 *%windir%* \ccmcache。  
+2.  在“缓存”  选项卡上，设置空间和位置属性。 默认位置为 *%windir%* \ccmcache。  
 
-3.  若要删除缓存文件夹中的文件，请选择“删除文件”。  
+3.  若要删除缓存文件夹中的文件，请选择“删除文件”  。  
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>在客户端设置中配置客户端缓存大小
 
 无需重新安装客户端，在 Configuration Manager 控制台中使用客户端设置就可以通过配置缓存大小来调整客户端缓存大小。  
 
-1. 在 Configuration Manager 控制台中，转到“管理” > “客户端设置”。
+1. 在 Configuration Manager 控制台中，转到“管理” > “客户端设置”   。
 
-2. 双击“默认客户端设置”。
+2. 双击“默认客户端设置”  。
    还可以创建自定义客户端设置，以便更有选择性地应用缓存大小。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../core/clients/deploy/configure-client-settings.md)。
 
-   3. 选择“客户端缓存设置”，并针对“配置客户端缓存大小”选择“是”，然后选择使用“MB”或“磁盘设置的百分比”。 缓存可调整为任何小于最大缓存的大小。
+   3. 选择“客户端缓存设置”  ，并针对“配置客户端缓存大小”  选择“是”  ，然后选择使用“MB”  或“磁盘设置的百分比”  。 缓存可调整为任何小于最大缓存的大小。
 
       在下载下一个客户端策略时，Configuration Manager 客户端将使用这些设置配置缓存大小。
 
@@ -304,10 +304,13 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 1.  打开 Windows 命令提示符，并将文件夹更改到 CCMSetup.exe 所在的位置。  
 
-2.  键入 **Ccmsetup.exe /uninstall**，然后按   
+2.  键入“CCMSetup.exe /uninstall”，然后按 Enter   。  
 
 > [!NOTE]  
->  卸载过程不会在屏幕上显示结果。 要验证客户端卸载是否成功，请检查客户端计算机上 *%windir%\ ccmsetup* 文件夹中的日志文件 **CCMSetup.log**。  
+>  卸载过程不会在屏幕上显示结果。 要验证客户端卸载是否成功，请检查客户端计算机上 %windir%\ccmsetup\logs 文件夹中的日志文件 CCMSetup.log   。  
+
+> [!TIP]
+> 如果需要等待卸载过程完成，才能执行其他操作，请在 PowerShell 中运行 `Wait-Process CCMSetup`。 此命令可以暂停脚本，直到 CCMSetup 过程完成。
 
 ##  <a name="BKMK_ConflictingRecords"></a> 为 Configuration Manager 客户端管理冲突的记录  
  Configuration Manager 使用硬件标识符来尝试标识可能重复的客户端，并发出有关冲突的记录的警报。 例如，如果重新安装计算机，则硬件标识符将相同，但 Configuration Manager 使用的 GUID 可能已更改。  
@@ -317,22 +320,22 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>更改用于管理冲突的记录的层次结构设置  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “站点” > “层次结构设置”
-2.  在“客户端批准和冲突的记录”选项卡上，选择“自动解决冲突的记录”或“手动解决冲突的记录”。  
+1.  在 Configuration Manager 控制台中，选择“管理”   > “站点配置”   > “站点”   > “层次结构设置” 
+2.  在“客户端批准和冲突的记录”  选项卡上，选择“自动解决冲突的记录”  或“手动解决冲突的记录”  。  
 
 #### <a name="to-manually-resolve-conflicting-records"></a>手动解决冲突的记录  
 
-1.  在 Configuration Manager 控制台中，选择“监视” > “系统状态” > “冲突的记录”。  
+1.  在 Configuration Manager 控制台中，选择“监视”   > “系统状态”   > “冲突的记录”  。  
 
-3.  选择一个或多个冲突的记录，然后选择“冲突的记录”。  
+3.  选择一个或多个冲突的记录，然后选择“冲突的记录”  。  
 
 4.  选择下列选项之一：  
 
-    -   选择“合并”以合并新检测到的记录和现有客户端记录。  
+    -   选择“合并”  以合并新检测到的记录和现有客户端记录。  
 
-    -   选择“新建” 为冲突的客户端记录创建新记录。  
+    -   选择“新建”  为冲突的客户端记录创建新记录。  
 
-    -   选择“阻止” 为冲突的客户端记录创建新记录，但将其标记为已阻止。  
+    -   选择“阻止”  为冲突的客户端记录创建新记录，但将其标记为已阻止。  
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>管理重复的硬件标识符
 提供 Configuration Manager 为实现 PXE 启动和客户端注册而忽略的硬件标识符列表有助于解决两种常见问题。
@@ -341,9 +344,9 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 2. SMBIOS 属性应唯一，某些特殊硬件设备具有重复标识符。 排除此重复标识符，并依赖于每个设备的唯一 MAC 地址。
 
 #### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>添加 Configuration Manager 要忽略的硬件标识符  
-1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “站点配置” > “站点”。
-2. 在“主页”选项卡上的“站点”组中，选择“层次结构设置”。
-3. 在“客户端批准和冲突的记录”选项卡上的“复制硬件标识符”部分，选择“添加”以添加新的硬件标识符。
+1. 在 Configuration Manager 控制台中，转到“管理”   > “概述”   > “站点配置”   > “站点”  。
+2. 在“主页”  选项卡上的“站点”  组中，选择“层次结构设置”  。
+3. 在“客户端批准和冲突的记录”  选项卡上的“复制硬件标识符”  部分，选择“添加”  以添加新的硬件标识符。
 
 ##  <a name="BKMK_PolicyRetrieval"></a> 为 Configuration Manager 客户端启动策略检索  
  Windows Configuration Manager 客户端按配置为客户端设置的计划下载其客户端策略。 然而，有时可能需要从客户端启动所需策略检索，例如，进行故障排除或测试时。  
@@ -352,7 +355,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 
 - [客户端通知](#initiate-client-policy-retrieval-using-client-notification)
-- [客户端上的“操作”选项卡](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
+- [客户端上的“操作”  选项卡](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
 - [脚本](#manually-initiate-client-policy-retrieval-by-script)
 
 > [!NOTE]  
@@ -361,9 +364,9 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 #### <a name="initiate-client-policy-retrieval-using-client-notification"></a>使用客户端通知启动客户端策略检索  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “设备集合”。  
+1.  在 Configuration Manager 控制台中，选择“资产和符合性”   > “设备集合”  。  
 
-3.  选择包含要下载策略的计算机的设备集合。 在“主页”选项卡上的“集合”组中，选择“客户端通知” > “下载计算机策略”。  
+3.  选择包含要下载策略的计算机的设备集合。 在“主页”  选项卡上的“集合”  组中，选择“客户端通知”   > “下载计算机策略”  。  
 
     > [!NOTE]  
     >  你也可以使用客户端通知为显示在“设备”  节点下的临时集合节点中的一台或多台所选设备启动策略检索。  
@@ -372,11 +375,11 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 1.  在计算机的控制面板中选择“Configuration Manager”  。  
 
-2.  在“操作”选项卡上，选择“计算机策略检索和评估周期”以启动计算机策略，然后选择“立即运行”。  
+2.  在“操作”  选项卡上，选择“计算机策略检索和评估周期”  以启动计算机策略，然后选择“立即运行”  。  
 
-4.  选择“确定”，确认提示。  
+4.  选择“确定”  ，确认提示。  
 
-5.  为所需的任何其他操作（例如用户客户端设置的“用户策略检索和评估周期”）重复步骤 3 和 4。  
+5.  为所需的任何其他操作（例如用户客户端设置的“用户策略检索和评估周期”  ）重复步骤 3 和 4。  
 
 #### <a name="manually-initiate-client-policy-retrieval-by-script"></a>使用脚本手动启动客户端策略检索  
 
@@ -425,6 +428,6 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
     -   使用 Windows 资源管理器导航到该文件，然后双击脚本文件。  
 
-    -   打开命令提示符，然后键入：**cscript &lt;path\filename.vbs>**。  
+    -   打开命令提示符，然后键入：**cscript &lt;path\filename.vbs>** 。  
 
-5.  在“Windows 脚本宿主”对话框中，选择“确定”。  
+5.  在“Windows 脚本宿主”  对话框中，选择“确定”  。  

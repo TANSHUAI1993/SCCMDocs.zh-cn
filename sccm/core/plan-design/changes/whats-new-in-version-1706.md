@@ -12,16 +12,16 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93862e95a3bae13582c2aa70daf2db22f9d621d8
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495456"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177037"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1706 作为控制台内更新提供，用于运行版本 1606、1610 或 1702 的以前安装的站点。
 
@@ -65,7 +65,7 @@ Version 1706 drops support for the following products:
 
 ### <a name="update-reset-tool"></a>更新重置工具
 <!-- 1324589 -->
-从版本 1706 开始，Configuration Manager 主站点和管理中心站点包含 Configuration Manager 更新重置工具，即 CMUpdateReset.exe。 控制台中更新存在下载或复制问题时，可通过当前仍受支持的分支的任意版本使用此工具来修复问题。 有关详细信息，请参阅[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。
+从版本 1706 开始，Configuration Manager 主站点和管理中心站点包含 Configuration Manager 更新重置工具，即 CMUpdateReset.exe  。 控制台中更新存在下载或复制问题时，可通过当前仍受支持的分支的任意版本使用此工具来修复问题。 有关详细信息，请参阅[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。
 
 ### <a name="high-dpi-console-support"></a>高 DPI 控制台支持  
 <!-- 1353476 -->
@@ -86,10 +86,10 @@ Version 1706 drops support for the following products:
 
 通过改进集成实现了以下功能：  
   -   Azure 服务向导 – 此向导提供了一种可替换单个工作流的常见配置体验，可供设置用于 Configuration Manager 的下列 Azure 服务。
-      - 云管理：使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证。 还可以配置 Azure AD 用户发现。
-      - Log Analytics 连接器连接到 Azure Log Analytics 并同步集合数据。
-      - 升级就绪情况：连接到升级就绪情况并查看客户端升级兼容性数据。
-      - 适用于企业的 Windows 应用商店：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
+      - 云管理  ：使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证。 还可以配置 Azure AD 用户发现。
+      - Log Analytics 连接器  连接到 Azure Log Analytics 并同步集合数据。
+      - 升级就绪情况  ：连接到升级就绪情况并查看客户端升级兼容性数据。
+      - 适用于企业的 Windows 应用商店  ：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
 
 
   可通过使用 [Azure 服务器 Web 应用](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication)提供订阅和配置详情来完成此操作，否则需要在每次使用 Azure 设置新 Configuration Manager 组件或服务时输入这些详细信息。 有关详细信息，请参阅 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)。
@@ -202,7 +202,7 @@ Version 1706 drops support for the following products:
 此版本引入了扩展和折叠任务序列组的功能。 可以展开或折叠单个组，也可一次展开或折叠所有组。
 
 ### <a name="reload-boot-images-with-current-windows-pe-version"></a>重载当前的 Windows PE 版本的启动映像
-当你在所选启动映像上运行“更新分发点”时，现在可以选择在启动映像中从 Windows ADK 安装目录重载最新版本的 Windows PE。 有关详细信息，请参阅[使用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)。
+当你在所选启动映像上运行“更新分发点”  时，现在可以选择在启动映像中从 Windows ADK 安装目录重载最新版本的 Windows PE。 有关详细信息，请参阅[使用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)。
 
 ## <a name="software-updates"></a>软件更新
 
@@ -220,13 +220,13 @@ Version 1706 drops support for the following products:
 
 #### <a name="to-manage-surface-driver-updates"></a>管理 Surface 驱动程序更新
 
-1. 为 Microsoft Surface 驱动程序启用同步。 使用[配置分类和产品](/sccm/sum/get-started/configure-classifications-and-products)中的过程，并选中“分类”选项卡上的“包括 Microsoft Surface 驱动程序和固件更新”复选框，以启用 Surface 驱动程序。
+1. 为 Microsoft Surface 驱动程序启用同步。 使用[配置分类和产品](/sccm/sum/get-started/configure-classifications-and-products)中的过程，并选中“分类”  选项卡上的“包括 Microsoft Surface 驱动程序和固件更新”  复选框，以启用 Surface 驱动程序。
 2. [同步 Microsoft Surface 驱动程序](/sccm/sum/get-started/synchronize-software-updates)。
 3. [部署同步的 Microsoft Surface 驱动程序](/sccm/sum/deploy-use/deploy-software-updates)
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>配置 Windows Update for Business 延迟策略
 <!-- 1290890 -->
-现在，你可以针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
+现在，你可以针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库”   > “Windows 10 维护服务”  下方的新“Windows Update for Business 策略”  节点中管理延迟策略。
 
 有关详细信息，请参阅[在 Windows 10 中与适用于企业的 Windows 更新集成](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。
 
@@ -248,7 +248,7 @@ Windows Analytics 是一组解决方案，可便于深入了解环境的当前�
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Android for Work 共享配置更新
 <!-- 1338403 -->
-在此版本中，更新了“工作配置文件”设置组中的“允许工作和个人配置文件间的数据共享”设置的值。 还添加了自定义设置，用于阻止在工作个个人配置文件之间进行复制粘贴。
+在此版本中，更新了“工作配置文件”  设置组中的“允许工作和个人配置文件间的数据共享”  设置的值。 还添加了自定义设置，用于阻止在工作个个人配置文件之间进行复制粘贴。
 
 有关详细信息，请参阅 [Android for Work 设备的配置项](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)。
 
