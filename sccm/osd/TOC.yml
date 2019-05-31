@@ -139,3 +139,5 @@
       href: understand/task-sequence-variables.md
     - name: 任务序列媒体的预启动命令
       href: understand/prestart-commands-for-task-sequence-media.md
+    - name: 预配模式
+      href: understand/provisioning-mode.md
