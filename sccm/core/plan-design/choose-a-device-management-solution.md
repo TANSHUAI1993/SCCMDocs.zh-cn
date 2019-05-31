@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b396ad5955227494511355f6efdb88ecd901110
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c1aec1447207d20393b0b8454851755ec85f5020
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120825"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264368"
 ---
 # <a name="choose-a-device-management-solution-for-configuration-manager"></a>选择 Configuration Manager 的设备管理解决方案
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 提供了用于管理 PC、服务器和设备的多种解决方案。 请选择适合你组织的解决方案。 可以根据进行管理所需的设备平台和所需的管理功能来决定选择哪种解决方案。  
 
@@ -36,7 +36,7 @@ Configuration Manager 提供了用于管理 PC、服务器和设备的多种解�
 本文介绍以下四种设备管理解决方案： 
 - [Configuration Manager 客户端](#bkmk_sccm)
 - [通过 Configuration Manager 实现本地移动设备管理 (MDM)](#bkmk_opmdm)
-- [使用 Microsoft Intune 进行共同管理](#bkmk_intune)
+- [使用 Microsoft Intune 进行共同管理](#bkmk_comanage)
 - [Microsoft Exchange](#bkmk_opmdm)
 
 可以使用这些设备管理解决方案本身或彼此之间相互结合使用。 例如，你可以使用基于客户端的管理方法来管理组织中的计算机和服务器，同时使用共同管理来管理基于 Internet 的笔记本电脑。 通过这样的组合方法，可以满足所有设备管理需求。  
