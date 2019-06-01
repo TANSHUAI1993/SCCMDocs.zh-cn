@@ -2,7 +2,7 @@
 title: 在 Desktop 分析中注册设备
 titleSuffix: Configuration Manager
 description: 了解如何在桌面分析中注册设备。
-ms.date: 04/05/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5d5e6665b0ddd2e7726af4b8ac8929d5019fedf
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 8d056d533a83290b638958ff78275ddec1409ec5
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802438"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429850"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
@@ -81,7 +81,7 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 > 在安装这些更新时，预期以下行为：
 > 
 > - Desktop 分析到注册的设备显示在该服务在不到一小时内  
-> - 设备快速报告状态功能和质量更新 Windows 和 Office  
+> - 设备快速报告状态上 Windows 功能和质量更新  
 >
 > 如果没有这些更新，这些过程可能需要 48 小时内，使设备能够向桌面分析报告。  
 
@@ -123,11 +123,11 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
 若要更改这些设置，请使用以下过程：
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 选择与桌面 Analytics 的连接，然后选择**属性**功能区中。
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择与桌面 Analytics 的连接，然后选择**属性**功能区中。
 
 2. 上**诊断数据**页上，根据需要对以下设置进行更改：  
 
-    - **商用 ID**： 不应需要更改或编辑此值。 有关解决问题的商业 ID 的详细信息，请参阅[商业 ID 配置](/sccm/desktop-analytics/troubleshooting#commercial-id-configuration)。  
+    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所有所需列表[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从商业 ID 来检索**连接的服务**窗格中的[Desktop 分析门户](https://aka.ms/m365aprod)。   
 
     - **Windows 10 诊断数据级别**:有关详细信息，请参阅[诊断数据级别](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)。  
 
@@ -135,7 +135,7 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
     到此页上，进行更改时**可用的功能**页显示与所选诊断数据设置 Desktop 分析功能的预览。  
 
-3. 上**Microsoft 365 分析连接**页上，根据需要对以下设置进行更改：
+3. 上**桌面分析连接**页上，根据需要对以下设置进行更改：
 
     - **显示名称**：Desktop 分析门户会显示此 Configuration Manager 连接，使用此名称。  
 
@@ -143,9 +143,10 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
     - **目标集合中的设备使用用户身份验证代理进行出站通信**:默认情况下，此值是**否**。 如果需要在环境中，将设置为**是**。 有关详细信息，请参阅[代理服务器身份验证](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication)。  
 
-    - **选择要与桌面 Analytics 同步的特定集合**:选择**添加**以包括其他集合。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  
+    - **选择要与桌面 Analytics 同步的特定集合**:选择**外**以包括其他集合从你**目标集合**层次结构。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  <!-- 4097528 -->
 
-        这些集合继续作为其成员身份的更改进行同步。 例如，你的部署计划使用一组与 Windows 7 的成员身份规则。 在这些设备升级到 Windows 10 和 Configuration Manager 将评估集合成员身份时，这些设备将删除超出集合和部署计划。  
+        > [!Important] 
+        > 这些集合继续作为其成员身份的更改进行同步。 例如，你的部署计划使用一组与 Windows 7 的成员身份规则。 在这些设备升级到 Windows 10 和 Configuration Manager 将评估集合成员身份时，这些设备将删除超出集合和部署计划。  
 
 
 ### <a name="windows-settings"></a>Windows 设置
@@ -167,7 +168,7 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
 ### <a name="device-name"></a>设备名称
 
-从 Windows 10，版本 1803，开始设备名称不能再收集默认情况下。 收集诊断数据的设备名称需要单独参加。 不包含设备名称会更加困难，以便识别哪些设备评估升级到 Windows 或 Office 的新版本时需要注意。
+从 Windows 10，版本 1803，开始设备名称不能再收集默认情况下。 收集诊断数据的设备名称需要单独参加。 不包含设备名称会更加困难，以便识别哪些设备评估升级到新版本的 Windows 时需要注意。
 
 如果不发送设备名称，它显示在桌面分析为"未知"。
 
