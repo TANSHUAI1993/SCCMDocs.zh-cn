@@ -2,7 +2,7 @@
 title: 连接 Configuration Manager
 titleSuffix: Configuration Manager
 description: 与 Desktop 分析连接的配置管理器操作方法指南。
-ms.date: 04/05/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673337"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463017"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析
 
@@ -43,37 +43,47 @@ ms.locfileid: "59673337"
 
 使用此过程将配置管理器连接到桌面 Analytics，并配置设备设置。 此过程是一次性的过程来将你的层次结构附加到云服务。  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 选择**配置 Azure 服务**功能区中。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择**配置 Azure 服务**功能区中。  
 
 2. 上**Azure 服务**页上的 Azure 服务向导配置以下设置：  
 
-    - 指定 Configuration Manager 中的对象名称。  
+    - 指定 Configuration Manager 中的对象名称  。  
 
-    - 指定可选说明以帮助标识服务。  
+    - 指定可选说明以帮助标识服务  。  
 
     - 选择**Desktop 分析**从可用服务列表。  
   
-   选择“下一步”。  
+   选择“下一步”  。  
 
-3. 上**应用程序**页上，选择相应**Azure 环境**。 然后选择**导入**为 web 应用。 配置中的以下设置**导入应用**窗口：  
+3. 上**应用程序**页上，选择相应**Azure 环境**。 然后选择**浏览**为 web 应用。  
 
-    - **Azure AD 租户名称**:此名称是它如何命名已在配置管理器  
+4. 如果有现有应用程序想要重复使用此服务，从列表中，选择它，然后选择**确定**。  
 
-    - **Azure AD 租户 ID**:**Directory ID**从 Azure AD 复制  
+5. 在大多数情况下，可以使用此向导创建桌面 Analytics 连接的应用。 选择“创建”  。<!-- 3572123 -->  
 
-    - **客户端 ID**：**应用程序 ID**复制从 Azure AD 应用  
+    > [!Tip]  
+    > 如果无法通过此向导创建应用程序，可以在 Azure AD 中手动创建应用程序，然后导入 Configuration Manager。 有关详细信息，请参阅[创建和导入应用程序为 Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager)。  
 
-    - **机密密钥**:键**值**复制从 Azure AD 应用  
+6. 配置中的以下设置**创建服务器应用程序**窗口：  
 
-    - **密钥到期日期**：密钥的同一个到期日期  
+    - **应用程序名称**：Azure AD 中应用的友好名称。
 
-    - **应用 ID URI**：此设置应自动填充以下值： `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   选择**验证**，然后选择**确定**以关闭导入应用窗口中。 选择**下一步**Azure 服务向导的应用页上。  
+    - **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 `https://ConfigMgrService`。  
 
-4. 上**诊断数据**页上，配置以下设置：  
+    - **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它是访问令牌中用于由 Configuration Manager 客户端请求服务的访问权限。 默认情况下，此值为 `https://ConfigMgrService`。  
 
-    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所有所需列表[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从商业 ID 来检索**连接的服务**窗格中的[Desktop 分析门户](https://aka.ms/m365aprod)。  
+    - **密钥有效期**：从下拉列表中选择“1 年”或“2 年”   。 默认值为一年。  
+
+    选择**登录**。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称  以供参考。
+        
+    > [!Note]  
+    > 完成此步骤作为**公司管理员**。Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。  
+
+    选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框  。 在服务器应用对话框中，选择**确定**。 然后选择**下一步**Azure 服务向导的应用页上。  
+
+7. 上**诊断数据**页上，配置以下设置：  
+
+    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所需的所有[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从商业 ID 来检索**连接的服务**窗格中的[Desktop 分析门户](https://aka.ms/m365aprod)。  
 
     - **Windows 10 诊断数据级别**： 选择至少**增强 （受限）**  
 
@@ -82,11 +92,11 @@ ms.locfileid: "59673337"
         > [!Note]  
         > 从 Windows 10 1803年版开始，设备名称不是发送给 Microsoft 默认情况下。 如果不发送设备名称，它显示在桌面分析为"未知"。 此行为可以使难以确定和评估设备。  
 
-   选择“下一步”。 **可用的功能**页显示桌面的分析功能，可使用前一页中的诊断数据设置。 选择**下一步**以继续或**上一步**进行更改。  
+   选择“下一步”  。 **可用的功能**页显示桌面的分析功能，可使用前一页中的诊断数据设置。 选择**下一步**以继续或**上一步**进行更改。  
 
     ![Azure 服务向导中的示例中可用的功能页](media/available-functionality.png)
 
-5. 上**集合**页上，配置以下设置：  
+8. 上**集合**页上，配置以下设置：  
 
     - **显示名称**：Desktop 分析门户会显示此 Configuration Manager 连接，使用此名称。 使用它来区分不同的层次结构。 例如，*测试实验室*或*生产*。  
 
@@ -94,14 +104,13 @@ ms.locfileid: "59673337"
 
     - **目标集合中的设备使用用户身份验证代理进行出站通信**:默认情况下，此值是**否**。 如果需要在环境中，将设置为**是**。  
 
-    - **选择要与桌面 Analytics 同步的特定集合**:选择**添加**以包括其他集合。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  
-
-        这些集合继续作为其成员身份的更改进行同步。 例如，你的部署计划使用一组与 Windows 7 的成员身份规则。 在这些设备升级到 Windows 10 和 Configuration Manager 将评估集合成员身份时，这些设备将删除超出集合和部署计划。  
+    - **选择要与桌面 Analytics 同步的特定集合**:选择**外**以包括其他集合从你**目标集合**层次结构。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  <!-- 4097528 -->  
 
         > [!Important]  
-        > 请确保限制这些其他集合上的目标集合。 这些其他集合的属性上**限定集合**应为桌面分析的同一集合**目标集合**。<!-- 4097528 -->  
+        > 这些集合继续作为其成员身份的更改进行同步。 例如，你的部署计划使用一组与 Windows 7 的成员身份规则。 在这些设备升级到 Windows 10 和 Configuration Manager 将评估集合成员身份时，这些设备将删除超出集合和部署计划。  
 
-6. 完成向导。  
+
+9. 完成向导。  
 
 Configuration Manager 创建一个设置策略来配置目标集合中的设备。 此策略包括要使设备能够向 Microsoft 发送数据的诊断数据设置。 默认情况下，客户端每隔一小时更新策略。 收到后的新设置，它可以是几个小时，更多数据之前在桌面 Analytics 中可用。
 
@@ -109,11 +118,11 @@ Configuration Manager 创建一个设置策略来配置目标集合中的设备�
 
 ## <a name="bkmk_monitor"></a> 监视连接运行状况
 
-监视桌面分析你的设备的配置。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Microsoft 365 维护**节点，然后选择**连接运行状况**仪表板。  
+监视桌面分析你的设备的配置。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Desktop 分析服务**节点，然后选择**连接运行状况**仪表板。  
 
 有关详细信息，请参阅[监视连接运行状况](/sccm/desktop-analytics/troubleshooting#monitor-connection-health)。
 
-Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部署计划。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Microsoft 365 维护**节点，然后选择**部署计划**节点。
+Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop 分析门户中，转到**全局试点**，并查看 Configuration Manager 设备集合。
 
 
 

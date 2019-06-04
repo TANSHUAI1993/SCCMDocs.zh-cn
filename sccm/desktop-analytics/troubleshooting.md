@@ -2,7 +2,7 @@
 title: 故障排除桌面分析
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 04/15/2019
+ms.date: 05/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: edb871cf9a12862f19109fe885bfb3a0e626f445
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261478"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463076"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 
@@ -51,7 +51,31 @@ ms.locfileid: "62261478"
 
 当首次设置 Desktop 分析时，这些图表可能不会显示完整的数据。 可能需要 2-3 天的活动设备将诊断数据发送到 Desktop 分析服务，该服务处理数据，并与 Configuration Manager 站点同步时间。<!-- 4098037 -->
 
-如果您认为某些设备不显示在桌面 Analytics 中，先检查所占的百分比**连接的设备**。 如果该值小于 100%，请确保由桌面分析支持的设备。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。
+
+### <a name="connection-details"></a>连接详细信息
+
+<!-- 4412133 -->
+
+此磁贴显示基本信息，如已连接租户名称和从服务更新的时间。 **设备目标**值为 all 中的目标集合，减去以下类型的设备的设备：
+
+- 已解除授权
+- 已过时
+- 非活动状态
+- 非托管
+
+这些设备状态的详细信息，请参阅[关于客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_about)。
+
+> [!Note]  
+> 配置管理器将上传到 Desktop 分析所有减去已解除授权的和已过时的客户端的目标集合中的设备。
+
+### <a name="connected-devices"></a>连接的设备
+
+如果您认为某些设备不显示在桌面 Analytics 中，先检查所占的百分比**连接的设备**。 此图表表示百分比的设备使用以下公式：
+
+- 分子：**设备目标**中的值[连接详细信息](#connection-details)磁贴
+- 分母：所有设备配置管理器中减去非活动和非托管设备
+
+如果该值小于 100%，请确保由桌面分析支持的设备。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。
 
 
 ### <a name="connection-health-states"></a>连接运行状况状态
@@ -114,7 +138,9 @@ Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
 - Windows 诊断数据参加
 - Windows 商业数据参加
 - Windows 诊断终结点连接
-- Office 诊断终结点连接
+
+> [!Note]  
+> 忽略的列**Office 诊断终结点连接**。 它被保留供将来提供的功能。
 
 这些列对应于键[先决条件](/sccm/desktop-analytics/overview#prerequisites)以将设备与 Desktop Analytics 进行通信。
 
@@ -145,8 +171,9 @@ Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
 - [SQM ID 检索](#sqm-id-retrieval)  
 - [唯一的设备标识符检索](#unique-device-identifier-retrieval)  
 - [Windows 诊断数据参加](#windows-diagnostic-data-opt-in)  
-- [Office 诊断终结点连接](#office-diagnostic-endpoint-connectivity)  
-- [Office 诊断数据选择项](#office-diagnostic-data-opt-in)
+
+> [!Note]  
+> 忽略的属性**Office 诊断终结点连接**并**Office 诊断数据参加**。 它们是保留供将来提供的功能。
 
 #### <a name="appraiser-configuration"></a>评估程序配置
 
@@ -390,7 +417,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 <!--54-->
 桌面分析使用 Microsoft 帐户服务的更可靠的设备标识。
 
-请确保**Microsoft 帐户登录助手**服务未被禁用。 启动类型应为**手动 （触发器启动）**。
+请确保**Microsoft 帐户登录助手**服务未被禁用。 启动类型应为**手动 （触发器启动）** 。
 
 若要禁用最终用户的 Microsoft 帐户访问，而不是阻塞此终结点使用策略设置。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。
 
@@ -405,31 +432,6 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 检查这些注册表项的权限。 请确保本地系统帐户可以访问 Configuration Manager 客户端设置这些密钥。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 有关详细信息，在客户端上查看 M365AHandler.log。  
-
-#### <a name="office-diagnostic-endpoint-connectivity"></a>Office 诊断终结点连接
-
-<!-- 1001,1002,1003 -->
-
-如果此检查成功，则可以连接到 Office 诊断终结点。
-
-否则，它可能会显示以下错误之一：
-
-- 无法连接到 Office 诊断终结点 (Aria)。 检查你的网络/代理设置  
-
-- 无法连接到 Office 诊断终结点 (Nexusrules)。 检查你的网络/代理设置  
-
-- 无法连接到 Office 诊断终结点 (Nexus)。 检查你的网络/代理设置  
-
-请确保设备能够与服务进行通信。 有关详细信息，请参阅[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)。  
-
-#### <a name="office-diagnostic-data-opt-in"></a>Office 诊断数据选择项
-
-<!-- SCCMDocs-pr 3570 -->
-从 Configuration Manager 版本 1902年，对将 Office 服务和诊断数据发送到 Microsoft 更改了行为。 此属性检查 Office 策略设置已正确配置。 这些设置控制最小所需的数据，以帮助保持 Office 安全、 最新状态，并按预期方式运行在设备上安装。
-
-有关详细信息，请参阅[隐私概述可以控制对 Office 365 专业增强版](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls)。 使用本文详细介绍隐私控制诊断数据收集并向 Microsoft 发送有关 Office 客户端软件在 Windows 上你的组织中的计算机。
-
-此检查的 Configuration Manager 版本 1810年客户端不会成功。 更新到最新版本的客户端。 请考虑启用 Configuration Manager 站点的客户端自动升级。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade)。
 
 
 
@@ -479,13 +481,88 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 - **配置管理器微服务**:将 Configuration Manager 连接与桌面的分析。 此应用具有没有访问要求。  
 
-- **Office 365 客户端管理**:从 Log Analytics 工作区中检索数据。 此应用需要写入到 Log Analytics 的访问权限。  
-
 - **MALogAnalyticsReader**:检索 OMS 组和 Log Analytics 中创建的设备。 有关详细信息，请参阅[MALogAnalyticsReader 应用程序角色](#bkmk_MALogAnalyticsReader)。  
 
 如果需要将这些应用程序提供了完成设置后，请转到**连接服务**窗格。 选择**配置用户和应用访问**，将应用和设置。  
 
-- **Azure AD 应用程序为 Configuration Manager**。 如果您需要预配或向上完成设置后对连接问题进行故障排除，请参阅[创建应用的 Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager)。 此应用需要**CM 集合数据写入**并**读取 CM 集合数据**上**配置管理器服务**API。  
+- **Azure AD 应用程序为 Configuration Manager**。 如果您需要预配或向上完成设置后对连接问题进行故障排除，请参阅[创建和导入应用程序为 Configuration Manager](#create-and-import-app-for-configuration-manager)。 此应用需要**CM 集合数据写入**并**读取 CM 集合数据**上**配置管理器服务**API。  
+
+
+### <a name="create-and-import-app-for-configuration-manager"></a>创建并应用导入 Configuration Manager
+
+如果无法从配置 Azure 服务向导配置管理器中创建此 Azure AD 应用程序，使用以下步骤手动创建和导入应用程序为 Configuration Manager。
+
+#### <a name="create-app-in-azure-ad"></a>在 Azure AD 中创建应用
+
+1. 打开[Azure 门户](http://portal.azure.com)公司管理员权限的用户，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
+
+2. 在中**创建**面板中，配置以下设置：  
+
+    - **名称**： 唯一名称标识的应用，例如： `Desktop-Analytics-Connection`  
+
+    - **应用程序类型**:**Web 应用 / API**  
+
+    - **登录 URL**： 此值不是使用由配置管理器中，但所需的 Azure AD。 输入一个唯一且有效的 URL，例如： `https://configmgrapp`  
+  
+   选择“创建”  。  
+
+3. 选择应用，并记下**应用程序 ID**。 此值是用于配置 Configuration Manager 连接的 GUID。  
+
+4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。
+
+    > [!Important]  
+    > 这是唯一的机会来复制密钥值。 如果您不立即将其复制，需要创建另一个密钥。  
+    >
+    > 将密钥值保存在安全的位置。  
+
+5. 在应用上**设置**面板中，选择**所需的权限**。  
+
+    1. 上**所需的权限**面板中，选择**添加**。  
+
+    2. 在中**添加 API 访问权限**面板中，**选择 API**。  
+
+    3. 搜索**配置管理器微服务**API。 选择它，，然后选择**选择**。  
+
+    4. 上**启用访问权限**面板中，选择这两个应用程序权限：**CM 集合数据写入**并**读取 CM 集合数据**。 然后选择**选择**。  
+
+    5. 上**添加 API 访问权限**面板中，选择**完成**。  
+
+6. 上**所需的权限**页上，选择**授予权限**。 选择**是**。  
+
+7. 复制 Azure AD 租户 id。 此值是用于配置 Configuration Manager 连接的 GUID。 选择**Azure Active Directory**在主菜单中，然后选择**属性**。 复制**Directory ID**值。  
+
+#### <a name="import-app-in-configuration-manager"></a>导入应用程序在配置管理器
+
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择**配置 Azure 服务**功能区中。  
+
+2. 上**Azure 服务**页上的 Azure 服务向导配置以下设置：  
+
+    - 指定 Configuration Manager 中的对象名称  。  
+
+    - 指定可选说明以帮助标识服务  。  
+
+    - 选择**Desktop 分析**从可用服务列表。  
+  
+   选择“下一步”  。  
+
+3. 上**应用程序**页上，选择相应**Azure 环境**。 然后选择**导入**为 web 应用。 配置中的以下设置**导入应用**窗口：  
+
+    - **Azure AD 租户名称**:此名称是它如何命名已在配置管理器  
+
+    - **Azure AD 租户 ID**:**Directory ID**从 Azure AD 复制  
+
+    - **客户端 ID**：**应用程序 ID**复制从 Azure AD 应用  
+
+    - **机密密钥**:键**值**复制从 Azure AD 应用  
+
+    - **密钥到期日期**：密钥的同一个到期日期  
+
+    - **应用 ID URI**：此设置应自动填充以下值： `https://cmmicrosvc.manage.microsoft.com/`  
+  
+   选择**验证**，然后选择**确定**以关闭导入应用窗口中。 选择**下一步**Azure 服务向导的应用页上。  
+
+若要继续在向导的其余部分**诊断数据**页上，请参阅[连接到服务](/sccm/desktop-analytics/connect-configmgr#bkmk_connect)。
+
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader 应用程序角色
 
@@ -495,7 +572,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 1. 转到[Azure 门户](http://portal.azure.com)，然后选择**的所有资源**。 选择类型的工作区**Log Analytics**。  
 
-2. 在工作区菜单中，选择**访问控制 (IAM)**，然后选择**添加**。  
+2. 在工作区菜单中，选择**访问控制 (IAM)** ，然后选择**添加**。  
 
 3. 在中**添加权限**面板中，配置以下设置：  
 
@@ -505,7 +582,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
     - **选择**:**MALogAnalyticsReader**  
 
-4. 选择“保存”。
+4. 选择“保存”  。
 
 门户会显示一个通知它添加的角色分配的。
 

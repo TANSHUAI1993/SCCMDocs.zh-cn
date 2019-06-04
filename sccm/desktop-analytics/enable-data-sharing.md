@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 用于共享桌面分析诊断数据的参考指南。
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,50 +12,49 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1a6ab6fca6650bde69179b71576d1df2e201b92
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: 3a30dc89882146c892f5eeec1aacfc31efbfd038
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196732"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463063"
 ---
-# <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据 
+# <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-若要注册到 Desktop 分析的设备，他们需要向 Microsoft 发送诊断数据。 如果您的环境使用代理服务器，使用此信息来帮助配置代理。 
+若要注册到 Desktop 分析的设备，他们需要向 Microsoft 发送诊断数据。 如果您的环境使用代理服务器，使用此信息来帮助配置代理。
 
 
 ## <a name="diagnostic-data-levels"></a>诊断数据级别
 
 ![桌面 Analytics 的诊断数据级别的关系图](media/diagnostic-data-levels.png)
 
-当 Configuration Manager 将使用 Desktop 分析时，你还使用它来管理设备上的诊断数据级别。 为获得最佳体验，使用配置管理器。 
+当 Configuration Manager 将使用 Desktop 分析时，你还使用它来管理设备上的诊断数据级别。 为获得最佳体验，使用配置管理器。
 
-在 Desktop 分析的基本功能工作**基本**诊断数据级别。 不会为更新的设备获取使用情况或运行状况数据，而不启用**增强 （受限）** 级别。 Microsoft 建议您启用**增强 （受限）** 诊断数据级别。 有关详细信息，请参阅[Windows 10 增强的诊断数据的事件和使用的 Windows Analytics 字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields))。 
+在 Desktop 分析的基本功能工作**基本**诊断数据级别。 不会为更新的设备获取使用情况或运行状况数据，而不启用**增强 （受限）** 级别。 Microsoft 建议您启用**增强 （受限）** 诊断数据级别。 有关详细信息，请参阅[Windows 10 增强的诊断数据的事件和使用的 Windows Analytics 字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields))。
 
 有关详细信息，请参阅[Desktop 分析隐私](/sccm/desktop-analytics/privacy)。
 
-以下文章也是有用的资源，对更好地了解 Windows 诊断数据级别： 
+以下文章也是有用的资源，对更好地了解 Windows 诊断数据级别：
 
 - [Windows 10 和 IT 决策制定者 GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
 
 - [在你的组织中配置 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-
 > [!Note]  
-> 在增强 （受限） 级别中，当每个客户端执行初始的完全扫描，它将发送大约 2 MB 的数据到 Microsoft 云。 每日增量各不相同，每日 250 400 KB 之间。 
-> 
+> 在增强 （受限） 级别中，当每个客户端执行初始的完全扫描，它将发送大约 2 MB 的数据到 Microsoft 云。 每日增量各不相同，每日 250 400 KB 之间。
+>
 > 每日增量扫描发生在 3:00 AM （设备本地时间）。 某些事件会在一天中的第一个可用时间。 这些时间不是可配置的。
-> 
+>
 > 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://aka.ms/enterprisetelemetry)。  
 
 
 
 ## <a name="endpoints"></a>终结点
 
-若要启用的数据共享，请配置代理服务器加入允许列表的以下终结点：
+若要启用的数据共享，请配置代理服务器以允许以下终结点：
 
 | 终结点  | 函数  |
 |-----------|-----------|
@@ -69,13 +68,13 @@ ms.locfileid: "58196732"
 | `https://umwatsonc.events.data.microsoft.com` | Windows 错误报告 (WER)。 所需的 Windows 10，1809年或更高版本中的设备运行状况报告。 |
 | `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows 错误报告 (WER)。 需要用来监视部署在 Windows 10 中，1809年或更高版本的运行状况。 |
 | `https://www.msftncsi.com` | Windows 错误报告 (WER)。 所需的设备运行状况检查的连接。 |
-| `https://www.msftconnecttest.com` | Windows 错误报告 (WER)。 所需的设备运行状况检查的连接。 | 
+| `https://www.msftconnecttest.com` | Windows 错误报告 (WER)。 所需的设备运行状况检查的连接。 |
 | `https://kmwatsonc.events.data.microsoft.com` | 在线崩溃分析。 所需的 Windows 10，1809年或更高版本中的设备运行状况报告。 |
 | `https://oca.telemetry.microsoft.com`  | 在线崩溃分析 (OCA)。 需要用来监视部署于 Windows 10，版本 1803年或更早版本的运行状况。 |
 | `https://login.live.com` | 所需的桌面 Analytics 提供更可靠的设备标识。 <br> <br>若要禁用最终用户的 Microsoft 帐户访问，而不是阻塞此终结点使用策略设置。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
-| `https://nexusrules.officeapps.live.com` | 用于从 Office 客户端请求动态诊断数据的事件。 此数据可用于桌面 Analytics 门户中的向下钻取和诊断目的 |
-| `https://nexus.officeapps.live.com` | 由 Office 客户端来发送诊断数据事件从 Office 14、 Office 15 和 16.0.8702 以前版本的 Office 16。 它使用，用于收集使用情况和可靠性 Desktop 分析的信号的事件。 |
-| `https://office.pipe.aria.microsoft.com` | 由 Office 客户端用于从通用/新式 Office 应用和 Win32 Office 16 版本晚于 16.0.8702 发送诊断数据事件。 它使用，用于收集使用情况和可靠性 Desktop 分析的信号的事件。 |
+| `https://nexusrules.officeapps.live.com` | 将来提供的功能 <!-- Used to request dynamic diagnostic data events from Office clients. This data is useful for drill-down and diagnostics purposes in the Desktop Analytics portal --> |
+| `https://nexus.officeapps.live.com` | 将来提供的功能 <!-- Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 earlier than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
+| `https://office.pipe.aria.microsoft.com` | 将来提供的功能 <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | 用于自动检索设置，例如 CommercialId 附加到 Desktop 分析 （在 Configuration Manager 服务器角色） 的层次结构时。 |
 | `https://fef.msua06.manage.microsoft.com` | 用于同步设备集合成员身份、 部署计划和使用 Desktop 分析 （在 Configuration Manager 服务器角色） 的设备就绪状态。 |
 
@@ -94,10 +93,8 @@ ms.locfileid: "58196732"
 
 - **用户代理身份验证**:设备配置为使用代理身份验证登录的用户上下文。 此方法要求运行 Windows 10 版本 1703年或更高版本的设备。 请确保用户具有访问诊断数据终结点的代理权限。 此选项要求的设备具有控制台具有代理权限的用户，因此不能与无外设设备使用此方法。  
 
-- **设备代理身份验证**: 
+- **设备代理身份验证**:
+
     - 在设备上配置系统级代理服务器。  
     - 这些设备配置为使用基于设备的出站代理身份验证。  
     - 配置代理服务器，以允许访问诊断数据终结点的计算机帐户。  
-
-
-
