@@ -10,16 +10,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69c5f446c465655adb1e9fee1b891a3152af47e9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: 9368bedd80171077767ead54763abede2381c909
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197089"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198459"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 根据通过云管理网关 (CMG) 管理 Internet 上的客户端所用的方案，可能需要以下一个或多个数字证书：  
 
@@ -49,26 +49,26 @@ ms.locfileid: "58197089"
 
 - 从版本 1802 开始，在使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
 
-- 从 1802 版开始，支持 TLS 1.2。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
+- 从 1802 版开始，支持 TLS 1.2  。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
 
 
 
 ## <a name="bkmk_serverauth"></a>CMG 服务器身份验证证书
 
-所有方案都需要此证书。
+所有方案都需要此证书  。
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
-CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务器需要使用服务器身份验证证书构建安全频道。 请从公共提供程序获取此用途的证书，或通过公钥基础结构 (PKI) 颁发此证书。 有关详细信息，请参阅[针对客户端的 CMG 受信任的根证书](#cmg-trusted-root-certificate-to-clients)。
+CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务器需要使用服务器身份验证证书构建安全频道。 请从公共提供程序获取此用途的证书，或通过公钥基础结构 (PKI) 颁发此证书。 有关详细信息，请参阅[针对客户端的 CMG 受信任的根证书](#bkmk_cmgroot)。
 
  > [!TIP]
- > 此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 依次选择“创建资源”、“计算”类别，以及“云服务”。 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。 
+ > 此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net  。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 依次选择“创建资源”、“计算”类别，以及“云服务”    。 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls   。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。 
   
  > [!TIP]
- > 如果还将 CMG 作为云分发点启用，则确认已选的 CMG 服务名称也是唯一 Azure 存储帐户名称。 例如，“GraniteFalls”。 登录 [Microsoft Azure 门户] (https://portal.azure.com))。 依次选择“创建资源”、“存储”类别、“存储帐户 - blob、文件、表、队列”。 单击“创建”，在“实例详细信息”下，输入为 CMG 服务选择的同一名称，例如“GraniteFalls”。 界面将反映存储帐户名称是否可用，或是否已被其他服务使用。 不要在门户中创建存储帐户，仅使用此流程检查名称可用性。 如果 CMG 云服务名称是唯一的，但存储帐户名称不是唯一的，则配置将失败。
+ > 如果还将 CMG 作为云分发点启用，则确认已选的 CMG 服务名称也是唯一 Azure 存储帐户名称。 例如，“GraniteFalls”  。 登录 [Microsoft Azure 门户] (https://portal.azure.com))。 依次选择“创建资源”  、“存储”  类别、“存储帐户 - blob、文件、表、队列”  。 单击“创建”  ，在“实例详细信息”  下，输入为 CMG 服务选择的同一名称，例如“GraniteFalls”  。 界面将反映存储帐户名称是否可用，或是否已被其他服务使用。 不要在门户中创建存储帐户，仅使用此流程检查名称可用性。 如果 CMG 云服务名称是唯一的，但存储帐户名称不是唯一的，则配置将失败。
  
  > [!NOTE]
- > 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，**\*.contoso.com**。 某些组织使用通配符证书简化其 PKI 并降低维护成本。<!--491233-->  
+ > 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如， **\*.contoso.com**。 某些组织使用通配符证书简化其 PKI 并降低维护成本。<!--491233-->  
  > 
  > 有关如何将 CMG 与通配符证书配合使用的详细信息，请参阅[设置 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg)。<!--SCCMDocs issue #565-->  
 
@@ -95,18 +95,18 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 1. 在组织的公共 DNS 中创建规范名称记录 (CNAME)。 该记录会将 CMG 的别名创建为一个友好名称，你可以在公共证书中使用。
 
-    例如，Contoso 将其 CMG 命名为 GraniteFalls，它在 Azure 中将变成 GraniteFalls.CloudApp.Net。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 GraniteFalls.CloudApp.net 新建 GraniteFalls.Contoso.com 的 CNAME 记录。  
+    例如，Contoso 将其 CMG 命名为 GraniteFalls，它在 Azure 中将变成 GraniteFalls.CloudApp.Net   。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 GraniteFalls.CloudApp.net 新建 GraniteFalls.Contoso.com 的 CNAME 记录   。  
 
 2. 使用 CNAME 别名的公用名称 (CN) 向公共提供程序请求一个服务器身份验证证书。
 例如，Contoso 对证书 CN 使用 **GraniteFalls.Contoso.com**。  
 
-3. 使用此证书在 Configuration Manager 控制台中创建 CMG。 在创建云管理网关向导的“设置”页面：   
+3. 使用此证书在 Configuration Manager 控制台中创建 CMG。 在创建云管理网关向导的“设置”页面  ：   
 
-    - 当（从“证书文件”）添加此云服务的服务器证书时，向导将从证书 CN 中提取主机名用作服务名称。  
+    - 当（从“证书文件”）添加此云服务的服务器证书时，向导将从证书 CN 中提取主机名用作服务名称  。  
 
-    - 然后将该主机名追加到 Azure 美国政府云的 cloudapp.net 或 usgovcloudapp.net，作为用于在 Azure 中创建服务的服务 FQDN。  
+    - 然后将该主机名追加到 Azure 美国政府云的 cloudapp.net 或 usgovcloudapp.net，作为用于在 Azure 中创建服务的服务 FQDN   。  
 
-    - 例如，当 Contoso 创建 CMG 时，Configuration Manager 会从证书 CN 中提取主机名 GraniteFalls。 Azure 将实际服务创建为 GraniteFalls.CloudApp.net。  
+    - 例如，当 Contoso 创建 CMG 时，Configuration Manager 会从证书 CN 中提取主机名 GraniteFalls  。 Azure 将实际服务创建为 GraniteFalls.CloudApp.net  。  
 
 在 Configuration Manager 中创建 CMG 实例时，虽然该证书具有 GraniteFalls.Contoso.com，但 Configuration Manager 仅提取主机名，例如：GraniteFalls。 它将该主机名追加到创建云服务时 Azure 所需的 CloudApp.net。 域的 DNS 命名空间中的 CNAME 别名 Contoso.com 将这两个 FQDN 映射在一起。 Configuration Manager 为客户端提供了用于访问此 CMG 的策略，DNS 映射将其绑定在一起，以便它们可以安全地访问 Azure 中的服务。<!--SCCMDocs issue #565-->  
 
@@ -119,15 +119,15 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 - 将 cloudapp.net 公共域用于 CMG Web 服务器证书时：  
 
-    - 在 Azure 公有云上，请使用以 cloudapp.net 结尾的名称  
+    - 在 Azure 公有云上，请使用以 cloudapp.net 结尾的名称   
 
-    - 针对 Azure 美国政府云，请使用以 usgovcloudapp.net 结尾的名称  
+    - 针对 Azure 美国政府云，请使用以 usgovcloudapp.net 结尾的名称   
 
 
 
 ## <a name="bkmk_azuremgmt"></a>Azure 管理证书
 
-经典服务部署需要此证书。 Azure 资源管理器部署不需要此证书。
+经典服务部署需要此证书。  Azure 资源管理器部署不需要此证书。
 
 > [!Important]  
 > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始使用适用于云管理网关的 Azure 资源管理器部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。
@@ -173,29 +173,29 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 1.  单击“开始”菜单。 键入“run”打开“运行”窗口。 打开 `mmc`。  
 
-2.  在“文件”菜单中，选择“添加/删除管理单元...”。  
+2.  在“文件”菜单中，选择“添加/删除管理单元...”  。  
 
-3.  在“添加/删除管理单元”对话框中，选择“证书”，然后选择“添加”。  
+3.  在“添加/删除管理单元”对话框中，选择“证书”，然后选择“添加”   。  
 
-    a. 在“证书管理单元”对话框中，选择“计算机帐户”，然后选择“下一步”。  
+    a. 在“证书管理单元”对话框中，选择“计算机帐户”，然后选择“下一步”   。  
 
-    b. 在“选择计算机”对话框中，选择“本地计算机”，然后选择“完成”。  
+    b. 在“选择计算机”对话框中，选择“本地计算机”，然后选择“完成”   。  
 
-    c. 在“添加/删除管理单元”对话框中，选择“确定”。  
+    c. 在“添加/删除管理单元”对话框中，选择“确定”  。  
 
-4.  依次展开“证书”、“个人”，然后选择“证书”。  
+4.  依次展开“证书”、“个人”，然后选择“证书”    。  
 
-5.  选择一个预期用途为“客户端身份验证”的证书。  
+5.  选择一个预期用途为“客户端身份验证”的证书  。  
 
-    a. 从“操作”菜单中，选择“打开”。  
+    a. 从“操作”菜单中，选择“打开”  。  
 
-    b. 转到“证书路径”选项卡。  
+    b. 转到“证书路径”选项卡  。  
 
-    c. 从证书链上选择下一个证书，然后选择“查看证书”。  
+    c. 从证书链上选择下一个证书，然后选择“查看证书”  。  
 
-6.  在新“证书”对话框中，转到“详细信息”选项卡。选择“复制到文件...”。  
+6.  在新“证书”对话框中，转到“详细信息”选项卡  。选择“复制到文件...”  。  
 
-7.  使用默认证书格式（DER 编码二进制 X.509 (.CER)）完成证书导出向导。 记下导出证书的名称和位置。  
+7.  使用默认证书格式（DER 编码二进制 X.509 (.CER)）完成证书导出向导  。 记下导出证书的名称和位置。  
 
 8. 导出原始客户端身份验证证书的证书路径中的所有证书。 记下哪些导出证书是中间 CA，哪些是受信任的根 CA。  
 
@@ -210,7 +210,7 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 - 在 1802 版中，所有方案都需要使用此证书。 只有针对 CMG 启用的管理点才需使用 HTTPS。 此行为更改为基于 Azure AD 令牌的身份验证提供了更好的支持。  
 
-- 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
+- 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
 ### <a name="management-point-client-connection-mode-summary"></a>管理点客户端连接模式摘要
 这些表总结了管理点是否需要 HTTP 或 HTTPS，具体取决于客户端和站点版本的类型。
@@ -251,9 +251,9 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 - *AD 域加入*：将设备加入本地 Active Directory 域  
 - *Azure AD 加入*：也称为云域加入，将设备加入 Azure Active Directory 租户  
 - *混合加入*：将设备加入 Active Directory 域和 Azure AD 租户  
-- *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”  
-- *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”  
-- *E-HTTP*：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设置为“HTTPS 或 HTTP”，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。   
+- *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”   
+- *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”   
+- *E-HTTP*：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设置为“HTTPS 或 HTTP”  ，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。   
 
 
 

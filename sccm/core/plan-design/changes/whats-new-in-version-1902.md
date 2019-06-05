@@ -2,7 +2,7 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 05/13/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 6b2468dc5f4cf7a9e1a715b3ec8e8a1d912a12b0
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673425"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354871"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的更新 1902 作为控制台中更新提供。 将此更新应用于运行版本 1802、1806 或 1810 的站点。 <!-- baseline only statement:-->安装新站点时，它也可作为基准版本提供。 本文汇总了 Configuration Manager 版本 1902 中的更改和新增功能。  
 
@@ -40,7 +40,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
 
-- 共享 Azure 内容的实现已更改。 通过启用“允许 CMG 充当云分发点，并提供 Azure 存储中的内容”的选项，使用启用了内容的云管理网关。 将来无法创建传统的云分发点。
+- 共享 Azure 内容的实现已更改。 通过启用“允许 CMG 充当云分发点，并提供 Azure 存储中的内容”的选项，使用启用了内容的云管理网关  。 将来无法创建传统的云分发点。
 
 版本 1902 删除了对以下产品的支持：  
 
@@ -56,7 +56,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 现在可在环境中查看具有 Configuration Manager 客户端运行状况信息的仪表板。 查看客户端运行状况、方案运行状况和常见错误。 按多个属性筛选视图，以查看按 OS 和客户端版本列出的所有潜在问题。 
 
-在 Configuration Manager 控制台中，转到“监视”工作区。 展开“客户端状态”，然后选择“客户端运行状况仪表板”节点。 
+在 Configuration Manager 控制台中，转到“监视”  工作区。 展开“客户端状态”，然后选择“客户端运行状况仪表板”节点   。 
 
 ![客户端运行状况仪表板屏幕截图](media/3599209-client-health-dashboard.png)
 
@@ -66,26 +66,28 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 ### <a name="new-management-insight-rules"></a>新管理见解规则
 管理见解功能具有以下新规则：
 
-- 包含对管理集合的建议的多个规则。 利用这些见解来简化管理并提高性能。 在“集合”组中查看这些新规则。<!--3555752-->  
+- 包含对管理集合的建议的多个规则。 利用这些见解来简化管理并提高性能。 在“集合”  组中查看这些新规则。<!--3555752-->  
 
-- 将客户端更新到“简化管理”组中支持的 Windows 10 版本规则。 此规则报告运行不再受支持的 Windows 10 版本的客户端。 它还包括具有服务即将结束（三个月）的 Windows 10 版本的客户端。<!--3897268-->  
+- 将客户端更新到  “简化管理”  组中支持的 Windows 10 版本规则。 此规则报告运行不再受支持的 Windows 10 版本的客户端。 它还包括具有服务即将结束（三个月）的 Windows 10 版本的客户端。<!--3897268-->  
 
 <!-- For more information, see [Management insights](/sccm/core/servers/manage/management-insights). -->
 
 
 ### <a name="improvement-to-enhanced-http"></a>对增强型 HTTP 的改进
+
 <!--3798957-->
-现在可为每个主站点或管理中心站点启用增强型 HTTP。 
 
-在管理中心站点的属性上，选择“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项。 此设置仅适用于管理中心站点中的站点系统角色。 它不是层次结构的全局设置。 
+***[已更新]*** 现在可为每个主站点或管理中心站点启用增强型 HTTP。
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+在管理中心站点的属性上，选择“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项  。 此设置仅适用于管理中心站点中的站点系统角色。 它不是层次结构的全局设置。
+
+有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
 
 ### <a name="improvement-to-setup-prerequisites"></a>对安装程序先决条件的改进
 安装或更新到版本 1902 时，Configuration Manager 安装程序现在包括以下先决条件检查：
 
-- **正在等待远程 SQL Server 上的系统重启**：此先决条件检查类似于“等待系统重启”规则，但它会检查远程 SQL Server。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart-on-the-remote-sql-server)。 <!--SCCMDocs-pr issue 3377-->  
+- **正在等待远程 SQL Server 上的系统重启**：此先决条件检查类似于“等待系统重启”  规则，但它会检查远程 SQL Server。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart-on-the-remote-sql-server)。 <!--SCCMDocs-pr issue 3377-->  
 
 
 
@@ -95,7 +97,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3735092-->
 现在，当数据传输总量超过限制时，Configuration Manager 可停止云管理网关 (CMG) 服务。 CMG 始终提供提醒，以便在使用量达到警告或严重级别时触发通知。 此新选项将关闭云服务，以帮助降低由于使用量陡升而意外导致的 Azure 成本。 
 
-在 CMG 上[设置出站流量警告](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts)，然后启用“在服务超过临界阈值时停止该服务”选项。  
+在 CMG 上[设置出站流量警告](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts)，然后启用“在服务超过临界阈值时停止该服务”选项  。  
 
 <!-- For more information, see [Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts). -->
 
@@ -128,7 +130,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="edit-or-copy-powershell-scripts"></a>编辑或复制 PowerShell 脚本
 <!--3705507-->
-现在可以“编辑”或“复制”与运行脚本功能一起使用的现有 PowerShell 脚本。 现在可以直接编辑想要更改的脚本，而无需重新创建脚本。 这两种操作都使用与创建新脚本时所使用的相同向导体验。 编辑或复制脚本时，Configuration Manager 不会保留审批状态。 
+现在可以“编辑”  或“复制”  与运行脚本功能一起使用的现有 PowerShell 脚本。 现在可以直接编辑想要更改的脚本，而无需重新创建脚本。 这两种操作都使用与创建新脚本时所使用的相同向导体验。 编辑或复制脚本时，Configuration Manager 不会保留审批状态。 
 
 <!-- For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts). -->
 
@@ -136,44 +138,49 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ## <a name="bkmk_content"></a>内容管理
 
-### <a name="distribution-point-maintenance-mode"></a>分发点维护模式 
-<!--3555754-->
-现在可在维护模式下设置分发点。 如果要安装软件更新，或对服务器进行硬件更改，请启用维护模式。
+### <a name="distribution-point-maintenance-mode"></a>分发点维护模式
 
-当分发点处于维护模式下时，其行为如下： 
+<!--3555754-->
+
+***[已更新]*** 现在可在维护模式下设置分发点。 如果要安装软件更新，或对服务器进行硬件更改，请启用维护模式。
+
+当分发点处于维护模式下时，其行为如下：
 
 - 站点不会向该分发点分发任何内容。  
 
-- 管理点不会向客户端返回此分发点的位置。 
+- 管理点不会向客户端返回此分发点的位置。
 
-- 更新站点时，维护模式下的分发点仍会更新。 
+- 更新站点时，维护模式下的分发点仍会更新。
 
 - 分发点属性为只读。 例如，不能更改证书或添加边界组。  
 
-- 任何计划的任务（例如，内容验证）仍按相同的日程安排运行。 
+- 任何计划的任务（例如，内容验证）仍按相同的日程安排运行。
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+有关此功能的详细信息，请参阅[维护模式](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint)。
+
+有关使用 Configuration Manager SDK 自动执行此过程的详细信息，请参阅[类 SMS_DistributionPointInfo 中的 SetDPMaintenanceMode 方法](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo)。
 
 
 
 ## <a name="bkmk_client"></a> 客户端管理
 
 ### <a name="client-provisioning-mode-timeout"></a>客户端预配模式超时
-<!--3197824-->
-当任务序列使客户端处于预配模式时，将设置时间戳。 处于预配模式下的客户端每隔 60 分钟检查一次自该时间戳以后的持续时间。 如果客户端处于预配模式下超过 48 小时，它将自动退出预配模式，并重新启动其进程。 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[已更新]*** 当任务序列使客户端处于预配模式时，将设置时间戳。 处于预配模式下的客户端每隔 60 分钟检查一次自该时间戳以后的持续时间。 如果客户端处于预配模式下超过 48 小时，它将自动退出预配模式，并重新启动其进程。
+
+有关详细信息，请参阅[预配模式](/sccm/osd/understand/provisioning-mode)。
 
 ### <a name="view-first-screen-only-during-remote-control"></a>在远程控制期间仅查看第一个屏幕
 <!--3231732-->
-[已更新] 当连接到具有两个或多个监视器的客户端时，可能很难在 Configuration Manager 远程控制查看器中查看所有监视器。 远程工具操作人员现在可以选择查看“所有屏幕”或仅查看“第一个屏幕”。
+[已更新] 当连接到具有两个或多个监视器的客户端时，可能很难在 Configuration Manager 远程控制查看器中查看所有监视器。 远程工具操作人员现在可以选择查看“所有屏幕”  或仅查看“第一个屏幕”  。
 
 有关详细信息，请参阅[如何远程管理 Windows 客户端计算机](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)。 
 
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>指定一个自定义端口用于对等唤醒
 <!--3605925-->
-***[已更新]***：现在可以为唤醒代理指定自定义端口号。 在客户端设置中，在“电源管理”组中，配置“唤醒 LAN 端口号(UDP)”的设置。  
+***[已更新]***：现在可以为唤醒代理指定自定义端口号。 在客户端设置中，在“电源管理”  组中，配置“唤醒 LAN 端口号(UDP)”  的设置。  
 
 有关详细信息，请参阅[如何配置 LAN 唤醒](/sccm/core/clients/deploy/configure-wake-on-lan)。
 
@@ -191,10 +198,11 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 ## <a name="bkmk_app"></a>应用程序管理
 
 ### <a name="improvements-to-application-approvals-via-email"></a>对通过电子邮件进行的应用程序批准的改进
-<!--3594063-->
-此版本对用于接收应用程序请求的电子邮件通知的功能进行了改进。 用户始终能够从软件中心向请求添加注释。 此注释显示在 Configuration Manager 控制台中的应用程序请求中。 现在此注释也显示在电子邮件中。 在电子邮件中包含此注释有助于审批者做出更好的决定来批准或拒绝请求。
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[已更新]*** 此版本对用于接收应用程序请求的电子邮件通知的功能进行了改进。 用户始终能够从软件中心向请求添加注释。 此注释显示在 Configuration Manager 控制台中的应用程序请求中。 现在此注释也显示在电子邮件中。 在电子邮件中包含此注释有助于审批者做出更好的决定来批准或拒绝请求。
+
+有关详细信息，请参阅[电子邮件通知](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)。
 
 
 ### <a name="improvements-to-package-conversion-manager"></a>对包转换管理器的改进
@@ -232,11 +240,11 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 创建任务序列媒体时，现在可以自定义站点用作临时存储数据的位置。 此过程可能需要大量临时驱动空间。 此更改可以让你更灵活地选择存储这些临时文件的位置。
 
-在“创建任务序列媒体向导”中，指定“暂存文件夹”的位置。 默认情况下，此位置类似于以下路径：`%UserProfile%\AppData\Local\Temp`。
+在“创建任务序列媒体向导”中，指定“暂存文件夹”的位置   。 默认情况下，此位置类似于以下路径：`%UserProfile%\AppData\Local\Temp`。
 
 #### <a name="add-a-label-to-the-media"></a>向媒体添加标签
 
-现在可以向任务序列媒体添加标签。 此标签可帮助你在创建媒体后更好地识别媒体。 在“创建任务序列媒体向导”中，指定“媒体标签”。
+现在可以向任务序列媒体添加标签。 此标签可帮助你在创建媒体后更好地识别媒体。 在“创建任务序列媒体向导”中，指定“媒体标签”   。
 
 #### <a name="include-autoruninf-file-on-media"></a>在媒体上添加 autorun.inf 文件
 
@@ -245,35 +253,37 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>导入 OS 映像的单个索引
+
 <!--3719699-->
-如果向 Configuration Manager 导入 Windows 映像 (WIM) 文件，现可指定自动导入单个索引，而不是文件中的所有映像索引。 此选项提供以下好处：
+***[已更新]*** 如果向 Configuration Manager 导入 Windows 映像 (WIM) 文件，现可指定自动导入单个索引，而不是文件中的所有映像索引。 此选项提供以下好处：
 
 - 映像文件更小  
 - 脱机维护更快  
-- 优化映像维护，因为在脱机维护后可获得更小的映像文件 
+- 优化映像维护，因为在脱机维护后可获得更小的映像文件
 
-导入 OS 映像时，选择“从指定 WIM 文件中提取特定的映像索引”选项。 然后从列表中选择该映像索引。  
+导入 OS 映像时，选择“从指定 WIM 文件中提取特定的映像索引”选项  。 然后从列表中选择该映像索引。  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+有关详细信息，请参阅[添加 OS 映像](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages)。
 
 
 ### <a name="optimized-image-servicing"></a>经优化的映像维护
+
 <!--3555951-->
-向 OS 映像应用软件更新时，具有通过删除任何被取代更新来优化输出的新选项。 脱机维护优化仅适用于具有单个索引的映像。 
+[已更新]向 OS 映像应用软件更新时，具有通过删除任何被取代更新来优化输出的新选项。 脱机维护优化仅适用于具有单个索引的映像。
 
-创建更新 OS 映像的计划时，选择“更新映像后删除被取代的更新”。 
+创建更新 OS 映像的计划时，选择“更新映像后删除被取代的更新”  。
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+有关详细信息，请参阅[将软件更新应用到映像](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase)。
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>对运行 PowerShell 脚本任务序列步骤的改进
 
 <!--3556028, fka 1359389-->
-***[已更新]***：“运行 PowerShell 脚本”任务序列步骤现在包括以下改进：  
+***[已更新]***：“运行 PowerShell 脚本”  任务序列步骤现在包括以下改进：  
 
 - 现在，可以在此步骤中直接输入 Windows PowerShell 代码。 此更改允许你在任务序列期间运行 PowerShell 命令，而无需先使用脚本创建和分发包。
 
-- 选择“输入 PowerShell 脚本”选项时，请选择“编辑脚本”。 新的 PowerShell 脚本窗口提供以下操作：  
+- 选择“输入 PowerShell 脚本”选项时，请选择“编辑脚本”   。 新的 PowerShell 脚本窗口提供以下操作：  
 
     - 直接编辑脚本  
 
@@ -283,7 +293,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 - 将脚本输出保存到自定义任务序列变量  
 
-- 要在任务序列日志中包含脚本参数，请将任务序列变量 OSDLogPowerShellParameters 设置为“TRUE”。 默认情况下，参数不在日志中。  
+- 要在任务序列日志中包含脚本参数，请将任务序列变量 OSDLogPowerShellParameters 设置为“TRUE”   。 默认情况下，参数不在日志中。  
 
 - 提供与[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤功能相似的其他改进。 例如，指定备用用户凭据或指定超时值。
 
@@ -298,13 +308,13 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3633146,3641475,3654172,3734270-->
 ***[已更新]***：此版本包括以下对 OS 部署的改进：
 
-- 任务序列中新增了“查看”默认操作。 <!--3633146-->  
+- 任务序列中新增了“查看”  默认操作。 <!--3633146-->  
 
 - 任务序列错误对话框窗口现在显示更多信息。 它将显示失败的任务序列步骤的名称。 <!--3641475-->  
 
-- 将 OSDDoNotLogCommand 任务序列变量设为 true 时，现在还可在日志文件中隐藏“运行命令行”步骤中的命令行。 它以前仅屏蔽 smsts.log 中“安装包”步骤中的程序名称。<!--3654172-->  
+- 将 OSDDoNotLogCommand 任务序列变量设为 true 时，现在还可在日志文件中隐藏“运行命令行”步骤中的命令行  。 它以前仅屏蔽 smsts.log 中“安装包”步骤中的程序名称。<!--3654172-->  
 
-- 如果不使用 Windows 部署服务对分发点启用 PXE 响应程序，则它现在可能位于与 DHCP 服务相同的服务器上。 <!--3734270-->  <!-- For more information, see ... -->
+- 如果不使用 Windows 部署服务对分发点启用 PXE 响应程序，则它现在可能位于与 DHCP 服务相同的服务器上。 <!--3734270--> 有关详细信息，请参阅[配置至少一个分发点以接受 PXE 请求](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure)。
 
 
 
@@ -341,7 +351,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
     - 软件中心始终使用默认设置。 用户可以更改此筛选器，但软件中心不会保留其首选项。    
 
-在客户端设置的“软件中心”组中指定这些设置。
+在客户端设置的“软件中心”  组中指定这些设置。
 
 <!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
 
@@ -353,7 +363,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3734525-->
 [已更新] 调整客户端通过 [Windows 10 维护服务](/sccm/osd/deploy-use/manage-windows-as-a-service)安装功能更新的优先级。 默认情况下，客户端现在安装具有较高处理优先级的功能更新。 
 
-使用客户端设置来配置此选项。 在“软件更新”组中，配置以下设置：为功能更新指定线程优先级。
+使用客户端设置来配置此选项。 在“软件更新”组中，配置以下设置  ：为功能更新指定线程优先级  。
 
 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#software-updates)。 
 
@@ -369,7 +379,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 首先，[找到你的 Office 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 System Center Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
 
-若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”工作区。 展开“符合性设置”，然后选择“OneDrive for Business 配置文件”节点。  
+若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”  工作区。 展开“符合性设置”  ，然后选择“OneDrive for Business 配置文件”  节点。  
 
 有关详细信息，请参阅 [OneDrive for Business 配置文件](/sccm/compliance/deploy-use/onedrive-profile)一文中的“将 Windows 已知文件夹重定向到 OneDrive”部分。
 
@@ -378,14 +388,14 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3735402-->
 [已更新] 使用 Configuration Manager 识别准备升级到 Office 365 专业增强版的设备，且识别的可信度非常高。 通过该集成可以深入了解环境中所用 Office 加载项和宏的任何潜在兼容性问题。 然后使用 Configuration Manager 将 Office 部署到已就绪的设备。 
 
-现有 Office 365 客户端管理仪表板现在包含新磁贴“Office 365 专业增强版升级就绪情况”。
+现有 Office 365 客户端管理仪表板现在包含新磁贴“Office 365 专业增强版升级就绪情况”  。
 
 有关详细信息，请参阅 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
 
 
 ### <a name="additional-languages-for-office-365-updates"></a>Office 365 更新的其他语言
 <!--3555955-->
-Configuration Manager 现在支持 Office 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种语言分开。 
+Configuration Manager 现在支持 Office 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种语言分开   。 
 
 有关详细信息，请参阅[管理 Office 365 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
@@ -406,7 +416,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>分阶段部署专用监视
 <!--3555949-->
-***[已更新]***：分阶段部署现有自己的专用监视节点。 此节点可以更轻松地标识创建的分阶段部署，然后导航到分阶段部署监视视图。 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“分阶段部署”节点。 它将显示分阶段部署列表。
+***[已更新]***：分阶段部署现有自己的专用监视节点。 此节点可以更轻松地标识创建的分阶段部署，然后导航到分阶段部署监视视图。 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“分阶段部署”节点   。 它将显示分阶段部署列表。
 
 有关详细信息，请参阅[分阶段部署监视视图](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor)。 
 
@@ -415,7 +425,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 <!--3555946-->
 ***[已更新]***：指定分阶段部署中额外的阶段成功标准。 此标准现在也可以是成功部署的设备数，而不仅仅是百分比。 当集合的大小可变并且你在前进到下一阶段前已有一定数量的设备成功部署时，此选项很有用。 
 
-为任务序列、软件更新或应用程序创建分阶段部署。 然后，在向导的“设置”页上，选择以下选项作为第一阶段成功的标准：“成功部署的设备数”。
+为任务序列、软件更新或应用程序创建分阶段部署。 然后，在向导的“设置”页上，选择以下选项作为第一阶段成功的标准：“成功部署的设备数”  。
 
 有关详细信息，请参阅[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。
 
@@ -429,7 +439,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 - 将应用程序检测方法浏览注册表窗口最大化
 - 从应用程序部署转到集合
 - 从监视状态中删除内容
-- “监视”工作区的“部署”节点中，视图按整数值排序
+- “监视”  工作区的“部署”  节点中，视图按整数值排序
 - 移动警告以获得大量结果
 
 <!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
@@ -448,28 +458,28 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="confirmation-of-console-feedback"></a>确认控制台反馈
 <!--3556010-->
-[已更新] 在 Configuration Manager 控制台中发送[反馈](/sccm/core/understand/find-help#product-feedback)时，现在它将显示一条确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft。
+[已更新] 在 Configuration Manager 控制台中发送[反馈](/sccm/core/understand/find-help#product-feedback)时，现在它将显示一条确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft  。
 
 有关详细信息，请参阅[产品反馈](/sccm/core/understand/find-help#bkmk_feedbackid)。
 
 
 ### <a name="view-recently-connected-consoles"></a>查看最近连接的控制台 
 <!--3699367-->
-[已更新] 现在可以查看 Configuration Manager 控制台的最新连接。 视图包括活动连接以及最近连接的控制台。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“安全性”，然后选择“控制台连接”节点。
+[已更新] 现在可以查看 Configuration Manager 控制台的最新连接。 视图包括活动连接以及最近连接的控制台。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“安全性”，然后选择“控制台连接”节点    。
 
 有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)。
 
 
 ### <a name="in-console-documentation-dashboard"></a>控制台内文档仪表板
 <!--3556019, fka 1357546-->
-新“社区”工作区中新增了一个“文档”节点。 此节点包含有关 Configuration Manager 文档和支持文章的最新信息。
+新“社区”工作区中新增了一个“文档”节点。   此节点包含有关 Configuration Manager 文档和支持文章的最新信息。
 
 <!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
 
 
 ### <a name="search-device-views-using-mac-address"></a>使用 MAC 地址搜索设备视图
 <!--3600878-->
-现在可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列。 使用搜索字段添加“MAC 地址”搜索条件。 
+现在可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列  。 使用搜索字段添加“MAC 地址”搜索条件  。 
 
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>使用 .NET 4.7 以改进控制台的辅助功能
@@ -489,7 +499,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 - ConfigMgr.AC_Extension.i386.cab
 - ConfigMgr.AC_Extension.amd64.cab
 
-安装或更新站点服务器时，它会将这些安装文件和受支持的站点语言包复制到 Tools\ConsoleSetup 子文件夹中。 有关详细信息，请参阅[安装 Configuration Manager 控制台](/sccm/core/servers/deploy/install/install-consoles)。
+安装或更新站点服务器时，它会将这些安装文件和受支持的站点语言包复制到 Tools\ConsoleSetup 子文件夹中  。 有关详细信息，请参阅[安装 Configuration Manager 控制台](/sccm/core/servers/deploy/install/install-consoles)。
 
 
 

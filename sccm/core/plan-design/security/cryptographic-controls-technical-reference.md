@@ -10,16 +10,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a99fff7b6486d6de26e2d4c153244a5665391a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 253710602ca4c46e3ed0d929fb62edea6c3efeb3
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136637"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354835"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 使用签名和加密帮助保护 Configuration Manager 层次结构中的设备的管理。 借助签名，如果数据在传输过程中发生更改，则会放弃它。 加密可帮助阻止攻击者使用网络协议分析器读取数据。  
@@ -267,7 +267,7 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 -   启用 TLS 1.2
 
-    若要为 Configuration Manager 启用 TLS 1.2，请参阅以下知识库文章：[如何为 Configuration Manager 启用 TLS 1.2](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)。
+    若要启用 TLS 1.2 for Configuration Manager，请参阅：[如何启用 TLS 1.2 for Configuration Manager](enable-tls-1-2.md)。
 -   禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
 -   重新排序与 TLS 相关的密码套件 
 
