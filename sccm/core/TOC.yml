@@ -51,7 +51,7 @@
       href: understand/configuration-manager-and-windows-as-service.md
     - name: 扩展互操作性客户端
       href: understand/interoperability-client.md
-    - name: System Center Configuration Manager 授权
+    - name: 许可和分支
       href: understand/learn-more-editions.md
     - name: 使用云服务
       items:
