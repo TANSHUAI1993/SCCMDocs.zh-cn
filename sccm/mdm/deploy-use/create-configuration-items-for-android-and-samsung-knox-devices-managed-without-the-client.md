@@ -11,37 +11,37 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47d2ee0cf82e9739d8e6364098be6c3033ce1ea2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0409e71e09297d23251235aa6093886319c80ae6
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140705"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716265"
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
 
 使用 System Center Configuration Manager **Android 和 Samsung KNOX** 配置项目管理在 Microsoft Intune 中注册或者由 Configuration Manager 在本地进行管理的 Android 和 Samsung KNOX 设备的设置。  
 
-#### <a name="to-create-an-android-and-samsung-knox-configuration-item"></a>若要创建 Android 和 Samsung KNOX 配置项目  
+## <a name="create-an-android-and-samsung-knox-configuration-item"></a>创建 Android 和 Samsung KNOX 配置项目  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  。  
 
-2. 在“资产和符合性”工作区中，展开“符合性设置”，然后选择“配置项目”。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置”  ，然后选择“配置项目”  。  
 
-3. 在“主页”选项卡上的“创建”组中，选择“创建配置项目”。  
+3. 在“主页”  选项卡上的“创建”  组中，选择“创建配置项目”  。  
 
-4. 在“创建配置项目向导”的“常规”页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规”页面上，指定配置项目的名称和可选描述。  
 
-5. 在“指定要创建的配置项目类型”下，选择“Android 和 Samsung KNOX”。  
+5. 在“指定要创建的配置项目类型”  下，选择“Android 和 Samsung KNOX”  。  
 
-6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”  。  
 
-7. 在向导的“支持的平台”页面上，选择将评估配置项目的特定 Android 或 Samsung KNOXs 平台。  
+7. 在向导的“支持的平台”  页面上，选择将评估配置项目的特定 Android 或 Samsung KNOXs 平台。  
 
-8. 在向导的“设备设置”页面上，选择要配置的设置组。 请参阅本主题中的 [Android 和 Samsung KNOX 配置项目设置参考](#BKMK_setref)以了解详细信息，然后选择“下一步”。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Android 和 Samsung KNOX 配置项目设置参考](#android-and-samsung-knox-configuration-item-settings-reference)以了解详细信息，然后选择“下一步”  。  
 
     > [!TIP]  
-    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”框。  
+    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  框。  
 
 9. 在每个设置页上，配置所需的设置。 此外，选择是否要在它们在设备上不符合要求时进行修正（如果支持这样做）。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "56140705"
 
     - **严重事件**。 对于 Configuration Manager 报表，不符合此符合性规则的设备将故障严重性报告为**严重**。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
 
-11. 在向导的“平台适用性”页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
+11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
 
     > [!TIP]  
     >  不会对不受支持的设置评估符合性。  
@@ -169,7 +169,7 @@ ms.locfileid: "56140705"
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **不符合应用列表** |                                                                                                                                                                                                                                                                               指定如果用户安装，将报告为不符合应用的应用列表。                                                                                                                                                                                                                                                                               |
 |  **符合应用列表**   |                                                                                                                                                                                                                                                              指定允许用户安装的应用列表。 安装的任何其他应用将报告为不相容。                                                                                                                                                                                                                                                               |
-|          **添加**           | 将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** Google Play 中搜索**Microsoft Office Mobile**。 你使用的 URL 将为 <https://play.google.com/store/apps/details?id=com.microsoft.office.officehub> 。 |
+|          **添加**           | 将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** Google Play 中搜索**Microsoft Office Mobile**。 你使用的 URL 将为 <https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>  。 |
 |          **编辑**          |                                                                                                                                                                                                                                                                                          使你能够编辑选定应用的名称、发布者和 URL。                                                                                                                                                                                                                                                                                          |
 |         **移除**         |                                                                                                                                                                                                                                                                                                      从列表中删除选定的应用。                                                                                                                                                                                                                                                                                                      |
 |         **导入**         |                                                                                                                                                                                                                                                 导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式应用程序名称、发布者和应用 URL。                                                                                                                                                                                                                                                 |
@@ -184,22 +184,22 @@ Android for Work 具有配置项的两个设置组：
   - **在设备处于锁定状态时隐藏工作配置文件通知** (Android 6.0 +)
   - **设置默认应用权限策略** (Android 6.0+)
 
-要在 Android 工作配置文件中创建配置项目，请在“常规”页上选择“Android for Work”，并配置每个设置组的设置。 像往常一样将配置项添加到基准并进行部署。 这些设置仅适用于注册为 Android for Work 的设备，不适用于注册为 Android 的设备。
+要在 Android 工作配置文件中创建配置项目，请在“常规”  页上选择“Android for Work”  ，并配置每个设置组的设置。 像往常一样将配置项添加到基准并进行部署。 这些设置仅适用于注册为 Android for Work 的设备，不适用于注册为 Android 的设备。
 
 ### <a name="kiosk-mode-samsung-knox-only"></a>站台模式（仅限 Samsung KNOX）  
 可以使用展台模式锁定设备以只允许某些功能工作。 例如，可以让设备只运行一个指定的托管应用，也可以禁用设备上的音量按钮。 这些设置可用于设备的演示模型。 也可将其用于专门执行一个功能的设备（如销售点设备）。  
 
 #### <a name="to-configure-kiosk-mode-for-a-samsung-knox-device"></a>为 Samsung KNOX 设备配置展台模式  
 
-1. 在“创建配置项目向导”的“为 Samsung KNOX 设备配置展台模式设置”页上，指定以下信息：  
+1. 在“创建配置项目向导”  的“为 Samsung KNOX 设备配置展台模式设置”页上，指定以下信息：  
 
    |设置|更多信息|  
    |-------------|----------------------|  
-   |**选择应用**|选择“浏览”以选择 Configuration Manager Android 应用程序（扩展名为 **.apk**），当设备处于展台模式时将允许该应用程序运行。 不允许在设备上运行其他应用。|  
+   |**选择应用**|选择“浏览”  以选择 Configuration Manager Android 应用程序（扩展名为 **.apk**），当设备处于展台模式时将允许该应用程序运行。 不允许在设备上运行其他应用。|  
    |**音量按钮**|启用或禁用设备上的音量按钮。|  
    |**屏幕睡眠和唤醒按钮**|启用或禁用设备上的屏幕睡眠唤醒按钮。|  
 
-2. 完成后，请选择“下一步”。  
+2. 完成后，请选择“下一步”  。  
 
 ## <a name="reports-for-monitoring"></a>监视报表
 你可以使用以下任一报表监视符合和不符合应用：  

@@ -1,7 +1,7 @@
 ---
 title: 如何为使用 Intune 管理的 Android for Work 设备创建配置项
 titleSuffix: Configuration Manager
-ms.date: 2017-07-31
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -9,37 +9,37 @@ ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 author: aczechowski
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15e0c2ad91e512551e55d507d6a84bde3e46396f
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 1ebae22b8536c67fc5c912009b836185be3b17b6
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287137"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716240"
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>如何为使用 Intune 管理的 Android for Work 设备创建配置项
 
  使用 System Center Configuration Manager **Android for Work** 配置项目管理在 Microsoft Intune 中注册或者由 Configuration Manager 进行本地管理的 Android for Work 设备的设置。  
 
-### <a name="to-create-an-android-for-work-configuration-item"></a>创建 Android for Work 配置项目  
+## <a name="create-an-android-for-work-configuration-item"></a>创建 Android for Work 配置项目  
 
-1. 在 Configuration Manager 控制台中单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中单击“资产和符合性”  。  
 
-2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置”  ，然后单击“配置项目”  。  
 
-3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目”  。  
 
-4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规”  页面上，指定配置项目的名称和可选描述。  
 
-5. 在“指定要创建的配置项目类型” 下，选择“Android for Work” 。  
+5. 在“指定要创建的配置项目类型”  下，选择“Android for Work”  。  
 
-6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”  。  
 
-   单击“下一步” 。
+   单击“下一步”  。
 
-7. 在向导的“设备设置”页上，选择要配置的设置组。 若要了解详细信息，请参阅 [Android for Work 配置项目设置](#android-for-work-configuration-item-settings-reference)，然后单击“下一步”。  
+7. 在向导的“设备设置”  页上，选择要配置的设置组。 若要了解详细信息，请参阅 [Android for Work 配置项目设置](#android-for-work-configuration-item-settings-reference)，然后单击“下一步”  。  
 
    > [!TIP]  
-   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  复选框。  
 
 8. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
 
@@ -47,13 +47,13 @@ ms.locfileid: "62287137"
 
    -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
 
-   -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+   -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”  这一故障严重性。  
 
-   -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+   -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”  这一故障严重性。  
 
-   -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+   -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。  
 
-   -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+   -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
 
 10. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
 
@@ -85,12 +85,12 @@ ms.locfileid: "62287137"
 
 |设置名|详细信息|  
 |------------------|-------------|  
-|**允许在工作和个人配置文件之间共享数据**|选择：<br>- **未配置**<br>- 默认共享限制<br>- 工作配置文件中的应用可以处理来自个人配置文件的请求<br>- 个人配置文件中的应用可以处理来自工作配置文件的请求<br><br>（另请参阅使用自定义 URI 进行[复制-粘贴设置](#copy-paste-configuration-item-settings)）|  
+|**允许在工作和个人配置文件之间共享数据**|选择：<br>- **未配置**<br>- 默认共享限制 <br>- 工作配置文件中的应用可以处理来自个人配置文件的请求 <br>- 个人配置文件中的应用可以处理来自工作配置文件的请求 <br><br>（另请参阅使用自定义 URI 进行[复制-粘贴设置](#copy-paste-configuration-item-settings)）|  
 |**在设备处于锁定状态时隐藏工作配置文件通知 (Android 6.0 +)**||
 |**设置默认应用程序权限策略 (Android 6.0 +)**|选择：<br>- **未配置**<br>- **始终提示**<br>- **自动授予**<br>- **自动拒绝**|
 
 ### <a name="copy-paste-configuration-item-settings"></a>复制-粘贴配置项目设置
-没有任何“允许工作和个人配置文件间的数据共享”选项可阻止复制-粘贴行为。 使用可配置为阻止复制-粘贴的自定义设置。 这可以通过自定义 URI 来设置。
+没有任何“允许工作和个人配置文件间的数据共享”  选项可阻止复制-粘贴行为。 使用可配置为阻止复制-粘贴的自定义设置。 这可以通过自定义 URI 来设置。
 
 - OMA-URI: ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
 - 值类型：布尔值

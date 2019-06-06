@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的 Desktop 分析服务概述。
-ms.date: 04/22/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78e9454212bb8264926c1aba5262f06db1798abe
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: bdeffb3b2d478e4984ef721655b78aee5c47c36f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673439"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716223"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -89,6 +89,11 @@ ms.locfileid: "65673439"
     - 安装最新的更新。 有关详细信息，请参阅[更新设备](/sccm/desktop-analytics/enroll-devices#update-devices)。  
 
     - 设备还需要让 Configuration Manager 客户端版本与更新汇总 2 1810 (4488598) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+
+    > [!Note]  
+    > 桌面分析不支持升级到 Windows 10 的长期维护服务频道 (LTSC)。 有关详细信息，请参阅[作为服务概述 Windows](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
+    >
+    > 桌面 Analytics 设计为最佳支持就地升级方案。 如果你需要从 32 位到 64 位体系结构，如做出重大更改，使用图像处理方案。 桌面进行分析洞察经典操作系统部署方案中，仍然有价值，但可以忽略就地升级特定指南。 有关详细信息，请参阅[部署企业操作系统使用 Configuration Manager 的方案](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems)。
 
 - Windows 诊断数据。 有关详细信息，请参阅下列文章：  
 

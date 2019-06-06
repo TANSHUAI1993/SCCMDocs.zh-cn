@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0e7c9fde7298d4733c2f3abd9555edb989d7cb66
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232311"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716203"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>将 Configuration Manager 数据导入 Microsoft Intune 
 
-适用范围：System Center Configuration Manager (Current Branch)    
+适用范围：  System Center Configuration Manager (Current Branch)    
 
 在仅限云的配置中[将混合 MDM 用户和设备迁移到 Intune 独立版](migrate-hybridmdm-to-intunesa.md)过程中的第一步，建议使用 Intune 数据导入程序工具。 如果需要，可以跳过这一步，并转到[准备 Intune 以便进行用户迁移](migrate-prepare-intune.md)阶段。 但是，该工具执行以下功能，可以在下一阶段节省大量时间：  
 
@@ -145,9 +145,9 @@ There are some Configuration Manager objects that the importer tool cannot impor
 #### <a name="find-the-collections-that-cant-be-imported"></a>查找无法导入的集合
 可以获取所有无法导入的集合列表，以便将它们添加到你的集合映射 .csv 文件中。 
 
-1. 运行数据导入程序工具，然后选择要导入的对象。 使用中的过程[第 1 阶段：发现 Configuration Manager 对象和收集数据](#phase-1:-discover-configuration-manager-objects-and-collect-data)和[阶段 2:解决问题，并选择要导入的对象](#phase-2:-resolve-issues-and-select-the-objects-to-import)发现和选择的对象。 然后，在“摘要”页上，选择“导出详细信息”来创建.csv 文件，其中包含选择要导入的所有内容（包括无法导入的对象和部署）的详细信息。  
+1. 运行数据导入程序工具，然后选择要导入的对象。 使用中的过程[第 1 阶段：发现 Configuration Manager 对象和收集数据](#phase-1-discover-configuration-manager-objects-and-collect-data)和[阶段 2:解决问题，并选择要导入的对象](#phase-2-resolve-issues-and-select-the-objects-to-import)发现和选择的对象。 然后，在“摘要”  页上，选择“导出详细信息”  来创建.csv 文件，其中包含选择要导入的所有内容（包括无法导入的对象和部署）的详细信息。  
 
-2. 在 Microsoft Excel 中打开 .csv 文件，并基于“类型”列的“部署”和“可导入”列的“否”来筛选数据。 集合名称列显示需要添加到集合映射文件以使这些部署可导入的所有集合。  
+2. 在 Microsoft Excel 中打开 .csv 文件，并基于“类型”  列的“部署”  和“可导入”  列的“否”  来筛选数据。 集合名称列显示需要添加到集合映射文件以使这些部署可导入的所有集合。  
 
 #### <a name="create-the-collection-mapping-file"></a>创建集合映射文件
 集合映射文件是一个逗号分隔值 (CSV) 文件，其中第一列是 Configuration Manager 集合名称，第二列是要用于该集合的 Azure AD 组名称。 若要为单个 Configuration Manager 集合指定多个 Azure AD 组，请使用该集合名称在 CSV 文件中创建多个行。 下面的示例是包含两个集合的 CSV 文件。 第一个集合映射到单个 Azure AD 组，而第二个集合映射到两个 Azure AD 组。
@@ -155,14 +155,14 @@ There are some Configuration Manager objects that the importer tool cannot impor
 ![集合映射 csv 文件示例](../media/migrate-collectionmapping.png)
 
 #### <a name="start-the-data-importer-tool-using-collection-mapping"></a>使用集合映射启动数据导入程序工具
-若要使用集合映射文件，必须使用 -CollectionMappingFile 命令行参数和到所创建的集合映射 .csv 文件的完整路径来启动数据导入程序工具。 例如：
+若要使用集合映射文件，必须使用 -CollectionMappingFile  命令行参数和到所创建的集合映射 .csv 文件的完整路径来启动数据导入程序工具。 例如：
 
 ```IntuneDataImporter.exe -CollectionMappingFile c:\Users\myuser\Documents\collectionmapping.csv```
 
 > [!Note]  
 > 数据导入程序不显示任何内容在任何向导页上，以指示集合映射文件已加载。 但是，该工具会显示在读取 .csv 文件时遇到的任何错误。 
 > 
-> 此外，在向导的“摘要”页上，可以查看“部署”类型。 该工具在“可导入”列中显示“是”，并在“说明”列中列出分配给对象的 Azure AD 组。  
+> 此外，在向导的“摘要”  页上，可以查看“部署”  类型。 该工具在“可导入”列中显示“是”  ，并在“说明”  列中列出分配给对象的 Azure AD 组。  
 
 
 ### <a name="phase-1-discover-configuration-manager-objects-and-collect-data"></a>第 1 阶段：发现 Configuration Manager 对象和收集数据
@@ -175,10 +175,10 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
 3. 选择是否要导入以前导出的数据集，或选择要导入的对象类型：  
 
-    - **从上次运行的 Intune 数据导入程序导入数据集导出**:选择**浏览**有关**导出数据文件夹**。 选择以前使用数据导入程序工具导出的数据集。 导入数据集的用户必须是导出数据的同一用户。 导入数据后，将在向导的“摘要”页上列出对象摘要。 如果摘要显示正确，请跳到[阶段 3:将所选的对象导入到 Intune](#phase-3-import-selected-objects-to-intune)。  
+    - **从上次运行的 Intune 数据导入程序导入数据集导出**:选择**浏览**有关**导出数据文件夹**。 选择以前使用数据导入程序工具导出的数据集。 导入数据集的用户必须是导出数据的同一用户。 导入数据后，将在向导的“摘要”  页上列出对象摘要。 如果摘要显示正确，请跳到[阶段 3:将所选的对象导入到 Intune](#phase-3-import-selected-objects-to-intune)。  
 
         > [!Note]  
-        > 发现和选择网站中要导入的对象后，可以将对象导出到向导“登录到 Intune”页上的数据集。 然后可以导入此页上的数据集。 因此使用已登录用户的 Windows 用户凭据进行加密的数据集仅导出的数据集的用户可以导入工具中的数据集。  
+        > 发现和选择网站中要导入的对象后，可以将对象导出到向导“登录到 Intune”  页上的数据集。 然后可以导入此页上的数据集。 因此使用已登录用户的 Windows 用户凭据进行加密的数据集仅导出的数据集的用户可以导入工具中的数据集。  
 
     - **选择要导入的对象类型**:提供你想要导入有关你的站点和对象的以下信息：  
 
@@ -186,7 +186,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
         - **站点代码**：为站点服务器提供站点代码。 可以在 Configuration Manager 控制台顶部找到三个字母的代码。  
 
-        - **对象类型要导入**:选择您希望该工具以收集的对象。 可以选择“选择全部”来选择所有对象，或者选择个别对象类型。  
+        - **对象类型要导入**:选择您希望该工具以收集的对象。 可以选择“选择全部”来选择所有对象，或者选择个别对象类型  。  
 
 4.  选择**下一步**开始发现站点上的对象。 此工具显示了每个对象类型的进度。  
 
@@ -201,7 +201,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
 在阶段 2 中，审阅工具查找到的对象，解决阻止将对象导入 Intune 的问题，并选择要导入的对象。 如果你解决问题，请返回到**发现环境**向导重新发现对象的页。 
 
-1. 单击“下一步”，审阅已收集的对象。 每个已收集的对象类型都有项目选择页面。  
+1. 单击“下一步”，审阅已收集的对象  。 每个已收集的对象类型都有项目选择页面。  
    <!--   > [!Tip]     
    > On each item selection page, you can create a filter to help you find the objects that you want to import. However, take note of the following:
    > - When you are on an item selection page and the view is filtered, the Select all checkboxes only apply to the displayed items. Any hidden objects because of a filter are not included when using the checkboxes.
@@ -223,7 +223,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
     - **已被取代**（适用于应用程序）：指定是否由另一个应用程序取代应用程序。 选择**显示被取代的应用**为被取代的应用显示在页面顶部的选项。  
 
-    - **说明**:提供有关为什么无法导入对象的信息。 “说明”列还显示有关已忽略设置（对于某些对象类型）的信息，但对象仍可在不使用这些设置的情况下导入。  
+    - **说明**:提供有关为什么无法导入对象的信息。 “说明”  列还显示有关已忽略设置（对于某些对象类型）的信息，但对象仍可在不使用这些设置的情况下导入。  
 
     - **配置基线**（适用于配置项目）：指定与配置项相关联的配置基线。  
 
@@ -250,14 +250,14 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
         3. 选择**启动**导出的数据。 导出完成后，选择**关闭**以完成向导并关闭数据导入程序。  
 
-        4. 具有 internet 访问权限使用相同的凭据从另一台计算机启动数据导入程序。 选择**导入以前导出的数据集**向导的第二页上。 一旦导入数据，向导将引导你进入“登录到 Intune”页。  
+        4. 具有 internet 访问权限使用相同的凭据从另一台计算机启动数据导入程序。 选择**导入以前导出的数据集**向导的第二页上。 一旦导入数据，向导将引导你进入“登录到 Intune”  页。  
 
     - **登录到 Intune**:使用全局管理员或 Intune 管理员帐户登录。 登录之后，导入过程将启动。  
 
         > [!Important]  
         > 首次测试使用试用租户的数据导入过程。 之后，确认所需已导入的数据，你可以转完成相同的过程与生产 Intune 租户。  
 
-2. “进度”页提供导入对象时的进度。 导入完成时，单击“下一步”。  
+2. “进度”页提供导入对象时的进度。 导入完成时，单击“下一步”  。  
 
 3. “完成”页上会列出已导入的对象。 检查在导入过程中遇到错误的任何对象的状态。 可以执行以下操作：  
 

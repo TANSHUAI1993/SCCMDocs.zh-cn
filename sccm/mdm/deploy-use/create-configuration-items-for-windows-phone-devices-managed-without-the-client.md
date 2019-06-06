@@ -10,36 +10,37 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b46cc49930d47439dc5e60b72e4bf5017829b9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a05fc1c07df8b95ad9305d199bf5abbb3eff3a1
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139215"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716175"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为未使用 System Center Configuration Manager 客户端管理的 Windows Phone 设备创建配置项目
+
 使用 System Center Configuration Manager **Windows Phone** 配置项目，为已在 Microsoft Intune 中注册或通过 Configuration Manager 本地管理的 Windows Phone 设备管理设置。  
   
-### <a name="to-create-a-windows-phone-configuration-item"></a>创建 Windows Phone 配置项目  
+## <a name="create-a-windows-phone-configuration-item"></a>创建 Windows Phone 配置项目  
   
-1. 在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中单击“资产和符合性”  。  
   
-2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置”  ，然后单击“配置项目”  。  
   
-3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目”  。  
   
-4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规”  页面上，指定配置项目的名称和可选描述。  
   
-5. 在“指定要创建的配置项目的类型” 下，选择“Windows Phone” 。  
+5. 在“指定要创建的配置项目的类型”  下，选择“Windows Phone”  。  
   
-6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”  。  
   
 7. 在向导的“支持的平台”  页面上，选择评估配置项目的特定 Windows Phone 平台。  
   
-8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows Phone 配置项目设置参考](#BKMK_Setref) 以了解详细信息，然后单击“下一步” 。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows Phone 配置项目设置参考](#windows-phone-configuration-item-settings-reference) 以了解详细信息，然后单击“下一步”  。  
   
    > [!TIP]  
-   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  复选框。  
   
 9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
   
@@ -47,13 +48,13 @@ ms.locfileid: "56139215"
   
     -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   
-    -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+    -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”  这一故障严重性。  
   
-    -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+    -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”  这一故障严重性。  
   
-    -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+    -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。  
   
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   
@@ -204,19 +205,19 @@ ms.locfileid: "56139215"
   
 ##### <a name="to-configure-a-wireless-network-connection"></a>配置无线网络连接  
   
-1.  在“配置移动设备无线通信设置”  页上，单击“添加” 。  
+1.  在“配置移动设备无线通信设置”  页上，单击“添加”  。  
   
 2.  在“无线网络连接”  对话框中，在移动设备上指定有关要设置的无线连接的以下信息：  
   
 |设置|更多信息|  
 |-------------|----------------------|  
 |**网络名称 (SSID)**||  
-|**网络连接**|从“Internet”  或“工作” 中选择。|  
+|**网络连接**|从“Internet”  或“工作”  中选择。|  
 |**身份验证**|从以下各项选择无线连接的身份验证方法：<br><br> - **打开**<br> - **共享**<br> - **WPA**<br> - **WPA-PSK**<br> - **WPA2**<br> - **WPA2-PSK**|  
 |**数据加密**|选择此连接使用的加密方法。 根据所选“身份验证”  方法，可选取的值将有所不同：<br><br> - **已禁用**<br> - **WEP**<br> - **TKIP**<br> - **AES**|  
-|**密钥索引**|选择“1”  到“4”  的将与“WEP”  的“数据加密” 设置一起使用的密钥索引。|  
+|**密钥索引**|选择“1”  到“4”  的将与“WEP”  的“数据加密”  设置一起使用的密钥索引。|  
 |**此网络连接到 Internet**|如果要提供使通过无线连接的移动设备连接到 Internet 的代理设置，请选择此选项。|  
-|**代理服务器设置**|根据需要为“HTTP”  、“WAP”  和“套接字” 指定“服务器”  和“端口” 设置。|  
+|**代理服务器设置**|根据需要为“HTTP”  、“WAP”  和“套接字”  指定“服务器”  和“端口”  设置。|  
 |**启用 802.1X 网络访问**|如果要通过指定一种 EAP 类型来保护连接，请选择此选项。|  
 |**EAP 类型**|选择要使用的 EAP 类型：<br><br> - **PEAP**<br> - **智能卡或证书**|  
     
@@ -224,11 +225,11 @@ ms.locfileid: "56139215"
 ###  <a name="certificates"></a>证书  
  让你导入证书以安装在移动设备上。  
   
- 单击“导入” ，然后指定以下值：  
+ 单击“导入”  ，然后指定以下值：  
   
--   “证书文件” – 单击“浏览”  ，然后选择要导入的带有“”扩展名  的证书文件。  
+-   “证书文件”  – 单击“浏览”  ，然后选择要导入的带有“”扩展名  的证书文件。  
   
--   “目标存储区” – 选择导入的证书文件将从其添加到移动设备的一个或多个目标存储区：  
+-   “目标存储区”  – 选择导入的证书文件将从其添加到移动设备的一个或多个目标存储区：  
   
     -   **根**  
   
@@ -242,7 +243,7 @@ ms.locfileid: "56139215"
   
     -   **对等**  
   
--   “角色” – 若选择“”  （软件发行者证书）作为目标存储区，则选择以下将与证书关联的角色：  
+-   “角色”  – 若选择“”  （软件发行者证书）作为目标存储区，则选择以下将与证书关联的角色：  
   
     -   **移动运营商**  
   
@@ -264,7 +265,7 @@ ms.locfileid: "56139215"
 |**用户帐户控制**|启用或禁用设备上的 Windows 用户帐户控制。|  
 |**网络防火墙**|启用或禁用 Windows 防火墙。|  
 |**更新**|选择将 Windows 软件更新下载至计算机的方式。 例如，可以自动下载更新，但让用户选择何时进行安装。|  
-|**更新的最小分类**|选择要下载到 Windows 计算机的更新的最小分类：“无” 、“重要” 或“推荐” 。|  
+|**更新的最小分类**|选择要下载到 Windows 计算机的更新的最小分类：“无”  、“重要”  或“推荐”  。|  
 |**SmartScreen**|启用或禁用 Windows 智能屏幕。|  
 |**病毒保护**|确保设备受防病毒软件保护|  
 |**病毒保护签名为最新**|确保防病毒软件签名已是最新版本。|
