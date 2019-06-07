@@ -2,7 +2,7 @@
 title: 故障排除桌面分析
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edb871cf9a12862f19109fe885bfb3a0e626f445
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: a1f54a2794b3a938366553c635e560ebe1adb320
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463076"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748131"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 
@@ -562,6 +562,20 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
    选择**验证**，然后选择**确定**以关闭导入应用窗口中。 选择**下一步**Azure 服务向导的应用页上。  
 
 若要继续在向导的其余部分**诊断数据**页上，请参阅[连接到服务](/sccm/desktop-analytics/connect-configmgr#bkmk_connect)。
+
+#### <a name="troubleshoot-app-in-configuration-manager"></a>在 Configuration Manager 中应用进行故障排除
+
+如果遇到问题，创建或导入应用程序，第一次检查**SMSAdminUI.log**特定错误的。 然后检查以下配置：
+
+- 已成功注册了该租户与 Desktop 分析服务。 有关详细信息，请参阅[如何设置桌面 Analytics](/sccm/desktop-analytics/set-up)。
+
+- 所有必需的终结点都可访问。 有关详细信息，请参阅[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)。
+
+- 请确保登录的用户具有正确权限。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。
+
+- 请确保，用户可以登录到 Azure 一般情况下。 此操作确定是否有任何常规的 Azure AD 身份验证问题。
+
+- 检查的状态消息**SMS_SERVICE_CONNECTOR**组件有关*Desktop 分析辅助*。
 
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader 应用程序角色

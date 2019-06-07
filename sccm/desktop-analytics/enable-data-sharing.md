@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 用于共享桌面分析诊断数据的参考指南。
-ms.date: 04/22/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a30dc89882146c892f5eeec1aacfc31efbfd038
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463063"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748250"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
@@ -56,6 +56,9 @@ ms.locfileid: "66463063"
 
 若要启用的数据共享，请配置代理服务器以允许以下终结点：
 
+> [!Important]  
+> 有关隐私和数据完整性，Windows 将检查 Microsoft SSL 证书与诊断数据终结点进行通信时。 SSL 截获和检查不可能实现。 若要使用 Desktop 分析，请从 SSL 检查中排除这些终结点。<!-- BUG 4647542 -->
+
 | 终结点  | 函数  |
 |-----------|-----------|
 | `https://v10c.events.data.microsoft.com` | 连接的用户体验和诊断组件终结点。 使用运行 Windows 10 的设备，版本 1703年或更高版本，与 2018年-09 累积更新或更高版本安装。 |
@@ -77,12 +80,6 @@ ms.locfileid: "66463063"
 | `https://office.pipe.aria.microsoft.com` | 将来提供的功能 <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | 用于自动检索设置，例如 CommercialId 附加到 Desktop 分析 （在 Configuration Manager 服务器角色） 的层次结构时。 |
 | `https://fef.msua06.manage.microsoft.com` | 用于同步设备集合成员身份、 部署计划和使用 Desktop 分析 （在 Configuration Manager 服务器角色） 的设备就绪状态。 |
-
-
-### <a name="ssl-inspection"></a>SSL 检查
-
-有关隐私和数据完整性，Windows 将检查 Microsoft SSL 证书与诊断数据终结点进行通信时。 SSL 截获和检查不可能实现。 若要使用 Desktop 分析，请从 SSL 检查中排除对以上终结点。
-
 
 
 ## <a name="proxy-server-authentication"></a>代理服务器身份验证

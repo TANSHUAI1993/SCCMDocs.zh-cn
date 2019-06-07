@@ -11,36 +11,37 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d511df5dc4b6e29a86d4eabacec9037ee204ecc
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: cadeb04e52e584cf260e84ee4bdd4ea6a07de23f
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176728"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748314"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
+
 使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
   
-### <a name="to-create-an-ios-and-mac-os-x-configuration-item"></a>若要创建 iOS 和 Mac OS X 配置项目  
+## <a name="create-an-ios-and-mac-os-x-configuration-item"></a>创建 iOS 和 Mac OS X 配置项目  
   
-1. 在 Configuration Manager 控制台中单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中单击“资产和符合性”  。  
   
-2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置”  ，然后单击“配置项目”  。  
   
-3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目”  。  
   
-4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规”  页面上，指定配置项目的名称和可选描述。  
   
-5. 在“指定要创建的配置项目的类型” 下，选择“iOS 和 Mac OS X” 。  
+5. 在“指定要创建的配置项目的类型”  下，选择“iOS 和 Mac OS X”  。  
   
-6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”  。  
   
 7. 在向导的“支持的平台”  页面上，选择将评估配置项目的特定 iOS 或 Mac OS X 平台。  
   
-8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [iOS 和 Mac OS X 配置项目设置参考](#BKMK_Setref) 以了解详细信息，然后单击“下一步” 。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [iOS 和 Mac OS X 配置项目设置参考](#ios-and-mac-os-x-configuration-item-settings-reference) 以了解详细信息，然后单击“下一步”  。  
   
    > [!TIP]  
-   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  复选框。  
   
 9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
   
@@ -48,13 +49,13 @@ ms.locfileid: "66176728"
   
     -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   
-    -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+    -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”  这一故障严重性。  
   
-    -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+    -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”  这一故障严重性。  
   
-    -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+    -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。  
   
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   
@@ -169,8 +170,8 @@ ms.locfileid: "66176728"
 |**加密备份**|允许加密向云服务的备份。|  
 |**文档同步**|允许文档同步到云服务。|  
 |**照片同步**|允许照片同步到云服务。| 
-|**iCloud 照片库**|如果设置为“否”，则禁止使用允许用户将照片和视频存储在云中的 iCloud 照片库。 如果设置为“否”，则从 iCloud 照片库未完全下载到设备的任何照片将从设备中删除。|
-|**iCloud 照片共享**|设置为“否”以禁用设备上的 iCloud 照片共享。|
+|**iCloud 照片库**|如果设置为“否”  ，则禁止使用允许用户将照片和视频存储在云中的 iCloud 照片库。 如果设置为“否”  ，则从 iCloud 照片库未完全下载到设备的任何照片将从设备中删除。|
+|**iCloud 照片共享**|设置为“否”  以禁用设备上的 iCloud 照片共享。|
 |**提交以继续其他设备上的活动**|允许用户继续在其他 iOS 或 Mac OS X 设备上的 iOS 设备上启动的工作。|
 |**将数据从托管应用同步到 iCloud**|允许你使用 Intune 管理的应用将数据同步到用户的 iCloud 帐户。|
 
@@ -197,7 +198,7 @@ ms.locfileid: "66176728"
   
 |设置名|详细信息|  
 |------------------|-------------|  
-|**要接受不受信任的 TLS 证书的用户**|如果为“已允许” ，则使用户接受这些证书。 如果为“已禁止” ，则自动拒绝不受信任的证书。|
+|**要接受不受信任的 TLS 证书的用户**|如果为“已允许”  ，则使用户接受这些证书。 如果为“已禁止”  ，则自动拒绝不受信任的证书。|
 |**允许激活锁定（仅限受监督模式）**|使用此设置可在你管理的**受监督的** iOS 设备上启用 iOS 激活锁定。 有关激活锁定的详细信息，请参阅[使用 System Center Configuration Manager 管理 iOS 激活锁定](../../mdm/deploy-use/manage-ios-activation-lock.md)。
 |**锁屏控制中心**|控制设备锁定时是否可以访问控制中心应用。|  
 |**锁屏通知视图**|控制设备锁定时是否可以查看通知。|  
@@ -239,7 +240,7 @@ ms.locfileid: "66176728"
   
         打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。  
   
-        **示例：** 应用商店中搜索**Microsoft Word for iPad**应用。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8。  
+        **示例：** 应用商店中搜索**Microsoft Word for iPad**应用。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8  。  
   
    -   **编辑** - 允许你编辑选定应用的名称、发布者和 URL。  
   
@@ -247,7 +248,7 @@ ms.locfileid: "66176728"
   
    -   **导入** - 导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用程序名称、发布者和应用 URL。  
   
-2. 完成后单击“下一步” 。  
+2. 完成后单击“下一步”  。  
   
    你可以使用以下任一报表监视相容和不相容的应用：  
   
@@ -275,8 +276,8 @@ ms.locfileid: "66176728"
      > [!TIP]
      >  若要查找应用的捆绑 ID，请在已安装此应用的 Mac 计算机上执行以下步骤：  
      > 
-     > 1. 打开安装应用的文件夹（例如，“/Applications” ）  
-     >    2.  选择 _<应用名称\>_.app 捆绑，然后选择“显示包内容”  
+     > 1. 打开安装应用的文件夹（例如，“/Applications”  ）  
+     >    2.  选择 _<应用名称\>_ .app 捆绑，然后选择“显示包内容”    
      >    3.  打开“Info.plist”  文件  
      >    4.  检查与“”   
      > 
@@ -288,7 +289,7 @@ ms.locfileid: "66176728"
   
    - **导入** - 导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用名称、发布者和应用捆绑 ID。  
   
-2. 完成后单击“下一步” 。  
+2. 完成后单击“下一步”  。  
   
    你可以使用以下任一报表监视相容和不相容的应用：  
   
@@ -306,9 +307,9 @@ ms.locfileid: "66176728"
   
 #### <a name="to-create-an-ios-and-mac-os-x-custom-profile"></a>若要创建 iOS 和 Mac OS X 自定义配置文件  
   
-1.  在“创建配置项目向导”  的“配置 iOS 和 Mac OS X 自定义配置文件设置” 页面上，指定以下信息：  
+1.  在“创建配置项目向导”  的“配置 iOS 和 Mac OS X 自定义配置文件设置”  页面上，指定以下信息：  
   
-    -   **自定义配置文件名称（向用户显示）**- 提供策略的名称，该名称将显示在设备上以及 Configuration Manager 报表中。  
+    -   **自定义配置文件名称（向用户显示）** - 提供策略的名称，该名称将显示在设备上以及 Configuration Manager 报表中。  
   
     -   **导入** - 选择一个从 Apple 配置器工具导出的文件。  
   
@@ -325,18 +326,18 @@ ms.locfileid: "66176728"
   
         -   **不报告** 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   
-        -   **信息** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+        -   **信息** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”  这一故障严重性。  
   
-        -   **警告** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+        -   **警告** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”  这一故障严重性。  
   
-        -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+        -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。  
   
-        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 #### <a name="how-to-create-a-configuration-profile-file"></a>如何创建配置文件  
  可以通过以下两种方法创建用于自定义策略的配置文件：  
   
--   从 Apple 配置器工具中导出文件（扩展名为“.mobileconfig” ）。  
+-   从 Apple 配置器工具中导出文件（扩展名为“.mobileconfig”  ）。  
   
 -   使用 [Apple 配置文件键引用](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html)中的相应架构自行创作文件。  
   
@@ -345,13 +346,13 @@ ms.locfileid: "66176728"
   
 #### <a name="to-configure-kiosk-mode-for-ios-devices"></a>若要为 iOS 设备配置展台模式  
   
-1. 在“创建配置项目向导”  的“创建适用于 iOS 设备的展台模式” 页上，指定以下信息：  
+1. 在“创建配置项目向导”  的“创建适用于 iOS 设备的展台模式”  页上，指定以下信息：  
   
    - **选择应用** - 选择允许在设备处于展台模式时运行的应用。 不允许在设备上运行其他应用。 选择：  
   
-     - “托管应用” – 单击“浏览”，然后选择托管应用。  
+     - “托管应用”  – 单击“浏览”，然后选择托管应用。  
   
-     - “应用商店应用” – 指定应用商店中应用的 URL，然后单击“获取应用 ID”  以填充“应用 ID”  字段。  
+     - “应用商店应用”  – 指定应用商店中应用的 URL，然后单击“获取应用 ID”  以填充“应用 ID”  字段。  
   
        查找的应用 URL 的方法：  
   
@@ -359,7 +360,7 @@ ms.locfileid: "66176728"
   
      - 复制页面 URL 并将此用作指定需在展台模式中运行的应用的 URL。  
   
-     - **示例：** 搜索**Microsoft Word for iPad**。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8。  
+     - **示例：** 搜索**Microsoft Word for iPad**。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8  。  
   
    - **触控** - 启用或禁用设备上的触摸屏。  
   
@@ -373,25 +374,25 @@ ms.locfileid: "66176728"
   
    - **自动锁定** - 启用或禁用设备的自动锁定。  
   
-   - **单声道音频** - 启用或禁用辅助功能设置“单声道音频”。  
+   - **单声道音频** - 启用或禁用辅助功能设置“单声道音频”  。  
   
-   - **语音朗读** - 启用或禁用辅助功能设置“语音朗读”，它能朗读设备上显示的文本。  
+   - **语音朗读** - 启用或禁用辅助功能设置“语音朗读”  ，它能朗读设备上显示的文本。  
   
    - **语音朗读调整** - 启用或禁用语音朗读调整，它可让你调整 VoiceOver 功能（例如，屏幕上文本的朗读速度）。  
   
-   - **缩放** - 启用或禁用“缩放”辅助功能设置，它可让你通过触摸来缩放设备显示。  
+   - **缩放** - 启用或禁用“缩放”辅助功能设置，它可让你通过触摸来缩放设备显示  。  
   
    - **缩放调整** - 启用或禁用可让你调整缩放功能的缩放调整。  
   
-   - **反转颜色** - 启用或禁用“反转颜色”辅助功能设置，它可调整显示效果以帮助有视觉障碍的用户。  
+   - **反转颜色** - 启用或禁用“反转颜色”辅助功能设置，它可调整显示效果以帮助有视觉障碍的用户  。  
   
    - **反转颜色调整** - 启用或禁用可让你调整反转颜色功能的反转颜色调整。  
   
-   - **辅助触点** - 启用或禁用“辅助触点”辅助功能设置，它可帮助用户执行可能难以执行的屏幕手势。  
+   - **辅助触点** - 启用或禁用“辅助触点”辅助功能设置，它可帮助用户执行可能难以执行的屏幕手势  。  
   
    - **辅助触点调整** - 启用或禁用可让你调整辅助触点功能的辅助触点调整。  
   
-   - **朗读所选项** - 启用或禁用“朗读所选项”辅助功能设置，它可朗读你选择的文本。  
+   - **朗读所选项** - 启用或禁用“朗读所选项”  辅助功能设置，它可朗读你选择的文本。  
   
    - **修正非符合性设置** - 选择是否要修正不符合要求的配置设置（如果支持）。  
   
@@ -399,13 +400,13 @@ ms.locfileid: "66176728"
   
      -   **不报告** 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   
-     -   **信息** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+     -   **信息** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”  这一故障严重性。  
   
-     -   **警告** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+     -   **警告** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”  这一故障严重性。  
   
-     -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+     -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。  
   
-     -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+     -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”  这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 ## <a name="see-also"></a>请参阅  
  [未使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

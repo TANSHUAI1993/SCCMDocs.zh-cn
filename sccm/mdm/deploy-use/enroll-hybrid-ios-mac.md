@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e7baf5d26bb823f3b02efb8e71cf4d34330d899
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 6aef8f927a2c4d3cb3eb7fecc4970cb19cbb83ed
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282386"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748261"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 iOS 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 利用 Configuration Manager 和 Intune，可以启用 iOS 和 macOS 设备注册，以允许 iPhone、iPad 和 Mac 用户访问公司电子邮件和资源。 用户安装 Intune 公司门户应用后，即可向其设备应用策略。 你必须先从 Apple 导入 Apple Push Notification 服务 (APNs) 证书，然后才能管理 iOS 和 Mac 设备。 此证书允许 Intune 通过建立与 Apple 设备管理服务的连接来管理 iOS 和 Mac 设备。  
 
@@ -34,18 +34,18 @@ ms.locfileid: "62282386"
 ## <a name="download-a-certificate-signing-request"></a>下载证书签名请求
 需要证书签名请求文件来请求 Apple 的 APNs 证书。  
 
-1.  在 Configuration Manager 控制台中的“管理”工作区中，转到“云服务”> “Microsoft Intune 订阅”。  
+1.  在 Configuration Manager 控制台中的“管理”工作区中，转到“云服务”> “Microsoft Intune 订阅”。     
 
-2.  在“主页”  选项卡上，单击“创建 APNs 证书请求” 。 “请求 Apple Push Notification 服务证书签名请求”  对话框随即打开。  
+2.  在“主页”  选项卡上，单击“创建 APNs 证书请求”  。 “请求 Apple Push Notification 服务证书签名请求”  对话框随即打开。  
 
-3.  “浏览”到要保存新的证书签名请求文件的路径。 本地保存证书签名请求文件。  
+3.  “浏览”  到要保存新的证书签名请求文件的路径。 本地保存证书签名请求文件。  
 
-4.  单击“下载” 。 下载新的 Microsoft Intune 证书签名请求文件，并由 Configuration Manager 保存。 证书签名请求文件用于从 Apple Push Certificates 门户请求信任关系证书。  
+4.  单击“下载”  。 下载新的 Microsoft Intune 证书签名请求文件，并由 Configuration Manager 保存。 证书签名请求文件用于从 Apple Push Certificates 门户请求信任关系证书。  
 
 ## <a name="request-an-mdm-push-certificate-from-apple"></a>请求 Apple 的 MDM Push Certificate
 MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设备之间建立信任关系。  
 
-1.  在浏览器中，转到 [Apple Push Certificates 门户](http://go.microsoft.com/fwlink/?LinkId=269844) 并使用贵公司 Apple ID 登录。 若要续订 APN 证书，必须在将来使用此 Apple ID。  
+1.  在浏览器中，转到 [Apple Push Certificates 门户](https://identity.apple.com/pushcert) 并使用贵公司 Apple ID 登录。 若要续订 APN 证书，必须在将来使用此 Apple ID。  
 
 2.  使用证书签名请求 (.csr) 文件完成向导。 下载 MDM Push Certificate 并在本地保存 pem 文件。 此证书 (.pem) 文件用于在 Apple 推送通知服务器和 Intune 的移动设备管理机构之间建立信任关系。  
 
@@ -55,12 +55,12 @@ MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设�
 ## <a name="enable-enrollment-and-upload-the-mdm-push-certificate"></a>启用注册并上传 MDM Push Certificate
 启用 iOS 注册，上传 APNs 证书。  
 
-1.  在“管理”工作区中的 Configuration Manager 控制台中，转到“云服务” > “Microsoft Intune 订阅”。  
+1.  在“管理”  工作区中的 Configuration Manager 控制台中，转到“云服务”   > “Microsoft Intune 订阅”  。  
 
-2.  在“主页”选项卡上的“订阅”组中，单击“配置平台” > “iOS”。  
+2.  在“主页”  选项卡上的“订阅”  组中，单击“配置平台”   > “iOS”  。  
 
 3.  在“Microsoft Intune 订阅属性”  对话框中，选择“iOS”  选项卡并单击选择“启用 iOS 注册”  复选框。  
-4.  单击“浏览” 并转到“从 Apple 下载的 APNs 证书(.cer)文件”。 Configuration Manager 会显示 APNs 证书信息。 单击“确定”，将 APN 证书保存到 Intune。  
+4.  单击“浏览”  并转到“从 Apple 下载的 APNs 证书(.cer)文件”。 Configuration Manager 会显示 APNs 证书信息。 单击“确定”  ，将 APN 证书保存到 Intune。  
 
 设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
@@ -73,9 +73,9 @@ MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设�
 - 使用[设备注册管理器帐户](enroll-devices-with-device-enrollment-manager.md)注册的设备
 
 ### <a name="to-enable-enrollment-restrictions"></a>启用注册限制的具体步骤
-1.  在“管理”工作区中的 Configuration Manager 控制台中，转到“云服务” > “Microsoft Intune 订阅”。
-2.  在“主页”选项卡上的“订阅”组中，单击“配置平台” > “iOS”。
-3.  选择“阻止个人拥有的设备”，限制为仅注册公司拥有的设备。
+1.  在“管理”  工作区中的 Configuration Manager 控制台中，转到“云服务”   > “Microsoft Intune 订阅”  。
+2.  在“主页”  选项卡上的“订阅”  组中，单击“配置平台”   > “iOS”  。
+3.  选择“阻止个人拥有的设备”  ，限制为仅注册公司拥有的设备。
 
 > [!div class="button"]
 > [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
