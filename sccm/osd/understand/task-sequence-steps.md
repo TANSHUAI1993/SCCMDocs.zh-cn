@@ -2,7 +2,7 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 05/03/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0003b80362dadc1105450d2ba526620c1fabf560
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613059"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355064"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -28,21 +28,21 @@ ms.locfileid: "65613059"
 
 #### <a name="properties-tab"></a>“属性”选项卡
 
-- **名称**：任务序列编辑器要求指定一个短名称，用于描述此步骤。 添加新步骤时，任务序列编辑器默认将名称设置为“Type”。 名称的长度不能超过 50 个字符。  
+- **名称**：任务序列编辑器要求指定一个短名称，用于描述此步骤。 添加新步骤时，任务序列编辑器默认将名称设置为“Type”。 名称  的长度不能超过 50 个字符。  
 
-- **说明**：（可选）指定有关此步骤的更多详细信息。 说明的长度不能超过 256 个字符。  
+- **说明**：（可选）指定有关此步骤的更多详细信息。 说明  的长度不能超过 256 个字符。  
 
-本文的其余部分将介绍每个任务序列步骤的“属性”选项卡上的其他设置。
+本文的其余部分将介绍每个任务序列步骤的“属性”选项卡上的其他设置  。
 
 #### <a name="options-tab"></a>“选项”选项卡  
 
 - **禁用此步骤**：任务序列在计算机上运行时，会跳过此步骤。 此步骤的图标在任务序列编辑器中灰显。  
 
-- 出错时继续：在运行该步骤时若出现错误，继续执行任务序列。 有关详细信息，请参阅[计划自动执行任务时的考虑事项](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups)。  
+-  出错时继续：在运行该步骤时若出现错误，继续执行任务序列。 有关详细信息，请参阅[计划自动执行任务时的考虑事项](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups)。  
 
 - **添加条件**：任务序列判断这些条件语句，以确定其是否运行该步骤。 有关使用任务序列变量作为条件的示例，请参阅[如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition)。  
 
-有关特定任务序列步骤的以下各节介绍了“选项”选项卡上的其他可能设置。
+有关特定任务序列步骤的以下各节介绍了“选项”选项卡上的其他可能设置  。
 
 
 
@@ -57,15 +57,15 @@ ms.locfileid: "65613059"
 - [OSDDataImageIndex](/sccm/osd/understand/task-sequence-variables#OSDDataImageIndex)  
 - [OSDWipeDestinationPartition](/sccm/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“应用数据映像”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“应用数据映像”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="image-package"></a>映像包
 
-选择“浏览”以指定供此任务序列使用的“映像包”。 在“选择包”对话框中选择要安装的包。 每个现有映像包的关联属性信息显示在对话框的底部。 使用下拉列表，从所选的“映像包”中选择要安装的“映像”。  
+选择“浏览”以指定供此任务序列使用的“映像包”   。 在“选择包”  对话框中选择要安装的包。 每个现有映像包的关联属性信息显示在对话框的底部。 使用下拉列表，从所选的“映像包”  中选择要安装的“映像”  。  
 
 > [!NOTE]  
 > 此任务序列操作将映像视为数据文件。 此操作不会执行任何安装来将映像作为 OS 进行启动。  
@@ -74,13 +74,13 @@ ms.locfileid: "65613059"
 
 配置下列选项之一：
 
-- 下一可用分区：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
+-  下一可用分区：使用此任务序列中尚未被“应用操作系统”  或“应用数据映像”  步骤作为目标的下一个顺序分区。  
 
-- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
+- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）   。  
 
-- 特定逻辑驱动器号：指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
+-  特定逻辑驱动器号：指定 Windows PE 分配给分区的“驱动器号”  。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
 
-- 变量中存储的逻辑驱动器号：指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
+-  变量中存储的逻辑驱动器号：指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”  任务序列步骤，此变量通常在“分区属性”  对话框的“高级”部分中设置。  
 
 #### <a name="delete-all-content-on-the-partition-before-applying-the-image"></a>应用映像之前删除分区中的所有内容  
 
@@ -92,11 +92,11 @@ ms.locfileid: "65613059"
 
 使用此步骤可下载驱动程序包中的所有驱动程序，并将其安装在 Windows OS 上。
 
-“应用驱动程序包”任务序列步骤使 Windows 可以使用驱动程序包中的所有设备驱动程序。 将此步骤添加到“应用操作系统”与“安装 Windows 和 ConfigMgr”步骤之间，使包中的驱动程序可以用于 Windows。 “应用驱动程序包”任务序列步骤也可以与独立媒体部署方案配合使用。  
+“应用驱动程序包”  任务序列步骤使 Windows 可以使用驱动程序包中的所有设备驱动程序。 将此步骤添加到“应用操作系统”与“安装 Windows 和 ConfigMgr”步骤之间，使包中的驱动程序可以用于 Windows   。 “应用驱动程序包”  任务序列步骤也可以与独立媒体部署方案配合使用。  
 
 将类似的设备驱动程序放入驱动程序包，并将其分发到合适的分发点。 例如，将一个制造商的所有驱动程序放入一个驱动程序包。 然后将该程序包分发到关联计算机可以对其进行访问的分发点。
 
-“应用驱动程序包”步骤可用于独立媒体。 此步骤也可用于安装一组特定的驱动程序。 这些类型的驱动程序包括 Windows 即插即用扫描检测不到的设备，例如网络打印机。  
+“应用驱动程序包”步骤可用于独立媒体  。 此步骤也可用于安装一组特定的驱动程序。 这些类型的驱动程序包括 Windows 即插即用扫描检测不到的设备，例如网络打印机。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。
 
@@ -108,15 +108,15 @@ ms.locfileid: "65613059"
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
 - [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> （从版本 1806 开始）  
 
-选择任务序列编辑器中的“添加”，选择“驱动程序”，然后选择“应用驱动程序包”以添加此步骤。
+选择任务序列编辑器中的“添加  ”，选择“驱动程序”  ，然后选择“应用驱动程序包”  以添加此步骤。
 
 ### <a name="properties"></a>属性
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="driver-package"></a>驱动程序包
 
-指定包含所需的设备驱动程序的驱动程序包。 选择“浏览”以启动“选择包”对话框。 选择要应用的现有驱动程序包。 关联的包属性显示在对话框底部。  
+指定包含所需的设备驱动程序的驱动程序包。 选择“浏览”  以启动“选择包”  对话框。 选择要应用的现有驱动程序包。 关联的包属性显示在对话框底部。  
 
 #### <a name="select-the-mass-storage-driver-within-the-package-that-needs-to-be-installed-before-setup-on-pre-windows-vista-operating-systems"></a>选择包中需要安装的大容量存储驱动程序，然后在 Windows Vista 以前的操作系统上安装
 
@@ -138,7 +138,7 @@ ms.locfileid: "65613059"
 
 ## <a name="BKMK_ApplyNetworkSettings"></a>应用网络设置  
 
-使用此步骤指定目标计算机的网络或工作组配置信息。 任务序列将这些值存储在相应的答案文件中。 Windows 安装程序在“安装 Windows 和 ConfigMgr”操作过程中使用该答案文件。  
+使用此步骤指定目标计算机的网络或工作组配置信息。 任务序列将这些值存储在相应的答案文件中。 Windows 安装程序在“安装 Windows 和 ConfigMgr”操作过程中使用该答案文件  。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。
 
@@ -155,15 +155,15 @@ ms.locfileid: "65613059"
 - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)  
 - [OSDWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDWorkgroupName)  
 
-选择任务序列编辑器中的“添加”，选择“设置”，然后选择“应用网络设置”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“设置”  ，然后选择“应用网络设置”  以添加此步骤。
 
 ### <a name="properties"></a>属性
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="join-a-workgroup"></a>加入工作组
 
-选择此选项，使目标计算机加入指定的工作组。 在“工作组”行中输入工作组的名称。 此值可被“捕获网络设置”任务序列步骤所捕获的值替代。
+选择此选项，使目标计算机加入指定的工作组。 在“工作组”  行中输入工作组的名称。 此值可被“捕获网络设置”  任务序列步骤所捕获的值替代。
 
 #### <a name="join-a-domain"></a>加入域
 
@@ -171,13 +171,13 @@ ms.locfileid: "65613059"
 
 #### <a name="account"></a>帐户
 
-选择“设置”以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”对话框中，使用下列格式输入用户名：`Domain\User`。 有关详细信息，请参阅[域连接帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。
+选择“设置”  以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”  对话框中，使用下列格式输入用户名：`Domain\User`。 有关详细信息，请参阅[域连接帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。
 
 #### <a name="adapter-settings"></a>适配器设置
 
-指定计算机中每个网络适配器的网络配置。 选择“新建”以打开“网络设置”对话框，然后指定网络设置。
+指定计算机中每个网络适配器的网络配置。 选择  “新建”以打开  “网络设置”对话框，然后指定网络设置。
 
-- 如果还使用“捕获网络设置”步骤，任务序列会将先前捕获的设置应用到网络适配器。
+- 如果还使用“捕获网络设置”步骤，任务序列会将先前捕获的设置应用到网络适配器  。
 - 如果任务序列先前没有捕获网络设置，则会应用在此步骤中指定的设置。
 - 任务序列将按 Windows 设备枚举顺序将这些设置应用到网络适配器。  
 - 任务序列不会立即将此步骤中指定的设置应用到计算机。
@@ -192,9 +192,9 @@ ms.locfileid: "65613059"
 使用此步骤，在目标计算机上安装 OS。
 
 > [!NOTE]  
-> “安装 Windows 和 ConfigMgr”步骤开始安装 Windows。
+> “安装 Windows 和 ConfigMgr”步骤开始安装 Windows  。
 
-在“应用操作系统”操作运行之后，它会将 OSDTargetSystemDrive 变量设置为包含 OS 文件的分区的驱动器号。  
+在“应用操作系统”  操作运行之后，它会将 OSDTargetSystemDrive  变量设置为包含 OS 文件的分区的驱动器号。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。
 
@@ -204,15 +204,15 @@ ms.locfileid: "65613059"
 - [OSDImageIndex](/sccm/osd/understand/task-sequence-variables#OSDImageIndex)  
 - [OSDTargetSystemDrive](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemDrive)  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“应用操作系统映像”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“应用操作系统映像”  以添加此步骤。
 
 此步骤执行的操作具体取决于使用 OS 映像还是 OS 升级包。  
 
 #### <a name="os-image-actions"></a>OS 映像操作
 
-使用 OS 映像时，“应用操作系统映像”步骤将执行以下操作：  
+使用 OS 映像时，“应用操作系统映像”步骤将执行以下操作  ：  
 
-1. 删除目标卷中的所有内容，\_SMSTSUserStatePath 变量指定的文件夹中的文件除外。  
+1. 删除目标卷中的所有内容，\_SMSTSUserStatePath  变量指定的文件夹中的文件除外。  
 
 2. 将指定的 .wim 文件的内容提取到指定目标分区。  
 
@@ -228,9 +228,9 @@ ms.locfileid: "65613059"
 
 #### <a name="os-upgrade-package-actions"></a>OS 升级包操作
 
-使用 OS 升级包时，“应用操作系统映像”步骤将执行以下操作：  
+使用 OS 升级包时，“应用操作系统映像”步骤将执行以下操作  ：  
 
-1. 删除目标卷中的所有内容，\_SMSTSUserStatePath 变量指定的文件夹中的文件除外。  
+1. 删除目标卷中的所有内容，\_SMSTSUserStatePath  变量指定的文件夹中的文件除外。  
 
 2. 准备答案文件：  
 
@@ -240,29 +240,29 @@ ms.locfileid: "65613059"
 
 ### <a name="properties"></a>属性
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="apply-operating-system-from-a-captured-image"></a>从捕获的映像应用操作系统
 
-安装捕获的 OS 映像。 选择“浏览”以打开“选择包”对话框。 然后选择要安装的现有映像包。 如果指定的映像包关联了多个映像，请从下拉列表选择将用于此部署的关联映像。 可以通过选中每个现有映像来查看有关该映像的基本信息。  
+安装捕获的 OS 映像。 选择“浏览”  以打开“选择包”  对话框。 然后选择要安装的现有映像包。 如果指定的映像包  关联了多个映像，请从下拉列表选择将用于此部署的关联映像。 可以通过选中每个现有映像来查看有关该映像的基本信息。  
 
 #### <a name="apply-operating-system-image-from-an-original-installation-source"></a>从原始安装源应用操作系统映像
 
-使用 OS 升级包安装 OS，这也是原始安装源。 选择“浏览”以打开“选择操作系统升级包”对话框。 然后选择要使用的现有 OS 升级包。 可以通过选中每个现有映像源来查看有关该映像的基本信息。 关联映像源属性显示在对话框底部的结果窗格中。 如果指定的包关联了多个版本，请使用下拉列表选择要使用的“版本”。  
+使用 OS 升级包安装 OS，这也是原始安装源。 选择“浏览”以打开“选择操作系统升级包”对话框   。 然后选择要使用的现有 OS 升级包。 可以通过选中每个现有映像源来查看有关该映像的基本信息。 关联映像源属性显示在对话框底部的结果窗格中。 如果指定的包关联了多个版本，请使用下拉列表选择要使用的“版本”  。  
 
 > [!NOTE]  
-> 操作系统升级包主要用于就地升级，而不用于 Windows 的全新安装。 在部署 Windows 的全新安装时，请使用“从捕获的映像应用操作系统”选项和安装源文件中的 install.wim。
+> 操作系统升级包主要用于就地升级，而不用于 Windows 的全新安装  。 在部署 Windows 的全新安装时，请使用“从捕获的映像应用操作系统”选项和安装源文件中的 install.wim   。
 >
-> 仍然支持通过操作系统升级包来部署 Windows 的全新安装，但这依赖于驱动程序与此方法兼容。 从 OS 升级包安装 Windows 时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。
+> 仍然支持通过操作系统升级包来部署 Windows 的全新安装，但这依赖于驱动程序与此方法兼容  。 从 OS 升级包安装 Windows 时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。
 >
-> 如果在 Windows PE 中安装时驱动程序不兼容，则使用原始安装源文件中的 install.wim 创建操作系统映像。 然后改为通过“从捕获的映像应用操作系统”选项部署。
+> 如果在 Windows PE 中安装时驱动程序不兼容，则使用原始安装源文件中的 install.wim 创建操作系统映像   。 然后改为通过“从捕获的映像应用操作系统”选项部署  。
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>使用无人参与或 Sysprep 答案文件进行自定义安装
 
-使用此选项提供 Windows 安装程序答案文件（unattend.xml、unattend.txt 或 sysprep.inf），取决于 OS 版本和安装方法。 你指定的文件可以包含 Windows 答案文件支持的任何标准的配置选项。 例如，可以使用它指定默认的 Internet Explorer 主页。 指定包含答案文件的包以及包中文件的关联路径。  
+使用此选项提供 Windows 安装程序答案文件（unattend.xml  、unattend.txt  或 sysprep.inf  ），取决于 OS 版本和安装方法。 你指定的文件可以包含 Windows 答案文件支持的任何标准的配置选项。 例如，可以使用它指定默认的 Internet Explorer 主页。 指定包含答案文件的包以及包中文件的关联路径。  
 
 > [!NOTE]  
-> 你提供的 Windows 安装程序答案文件可以包含形式为 `%varname%` 的嵌入任务序列变量，其中 varname 是指变量的名称。 “安装 Windows 和 ConfigMgr”步骤将变量字符串替换为实际变量值。 unattend.xml 答案文件的仅数字字段中不能使用这些嵌入的任务序列变量。  
+> 你提供的 Windows 安装程序答案文件可以包含形式为 `%varname%` 的嵌入任务序列变量，其中 varname  是指变量的名称。 “安装 Windows 和 ConfigMgr”  步骤将变量字符串替换为实际变量值。 unattend.xml 答案文件的仅数字字段中不能使用这些嵌入的任务序列变量。  
 
 如果不提供 Windows 安装程序答案文件，此任务序列将自动生成一个答案文件。  
 
@@ -270,24 +270,24 @@ ms.locfileid: "65613059"
 
 配置下列选项之一：  
 
-- 下一可用分区：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
+-  下一可用分区：使用此任务序列中尚未被“应用操作系统”  或“应用数据映像”  步骤作为目标的下一个顺序分区。  
 
-- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
+- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）   。  
 
-- **特定逻辑驱动器号**指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
+- **特定逻辑驱动器号**指定 Windows PE 分配给分区的“驱动器号”  。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
 
-- **变量中存储的逻辑驱动器号**指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
+- **变量中存储的逻辑驱动器号**指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”  任务序列步骤，此变量通常在“分区属性”  对话框的“高级”部分中设置。  
 
 ### <a name="options"></a>选项  
 
-除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置：  
+除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置  ：  
 
 #### <a name="access-content-directly-from-the-distribution-point"></a>直接从分发点访问内容
 
-将任务序列配置为直接从分发点访问 OS 映像。 例如，在部署操作系统到存储容量有限的嵌入式设备时使用此选项。 选择此选项后，同时在 OS 映像属性的“数据访问”选项卡上配置包共享设置。  
+将任务序列配置为直接从分发点访问 OS 映像。 例如，在部署操作系统到存储容量有限的嵌入式设备时使用此选项。 选择此选项后，同时在 OS 映像属性的“数据访问”  选项卡上配置包共享设置。  
 
 > [!NOTE]  
-> 此设置替代在“部署软件向导”的“分发点”页上配置的部署选项。 此替代仅适用于此步骤指定的 OS 映像，而非所有任务序列内容。  
+> 此设置替代在“部署软件向导”的“分发点”页上配置的部署选项   。 此替代仅适用于此步骤指定的 OS 映像，而非所有任务序列内容。  
 
 > [!IMPORTANT]  
 > 为了最大限度地确保安全，强烈建议不要选择此选项。 此选项主要用于存储容量有限的设备。 此选项并不意味着有助于提高任务序列的速度。 选择此选项后，不会为操作系统包验证包哈希。 因此无法确保包完整性，因为具有管理权限的用户可能改变或篡改包内容。
@@ -296,7 +296,7 @@ ms.locfileid: "65613059"
 
 ## <a name="BKMK_ApplyWindowsSettings"></a>应用 Windows 设置  
 
-使用此步骤配置目标计算机的 Windows 设置。 任务序列将这些值存储在相应的答案文件中。 Windows 安装程序在“安装 Windows 和 ConfigMgr”步骤过程中使用该答案文件。  
+使用此步骤配置目标计算机的 Windows 设置。 任务序列将这些值存储在相应的答案文件中。 Windows 安装程序在“安装 Windows 和 ConfigMgr”  步骤过程中使用该答案文件。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。  
 
@@ -312,19 +312,19 @@ ms.locfileid: "65613059"
 - [OSDServerLicenseMode](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseMode)  
 - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-input)  
 
-选择任务序列编辑器中的“添加”，选择“设置”，然后选择“应用 Windows 设置”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“设置”  ，然后选择“应用 Windows 设置”  以添加此步骤。
 
 ### <a name="properties"></a>属性
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="user-name"></a>用户名
 
-指定与目标计算机关联的已注册用户名。 此值可被“捕获 Windows 设置”任务序列步骤所捕获的值替代。  
+指定与目标计算机关联的已注册用户名。 此值可被“捕获 Windows 设置”  任务序列步骤所捕获的值替代。  
 
 #### <a name="organization-name"></a>组织名称
 
-指定与目标计算机关联的已注册组织名称。 此值可被“捕获 Windows 设置”任务序列步骤所捕获的值替代。  
+指定与目标计算机关联的已注册组织名称。 此值可被“捕获 Windows 设置”  任务序列步骤所捕获的值替代。  
 
 #### <a name="product-key"></a>产品密钥  
 
@@ -334,9 +334,9 @@ ms.locfileid: "65613059"
 
 指定授权模式。
 
-- 选择“每服务器”或“每用户”作为授权模式。  
-- 如果选择“每服务器”，则还需要指定每个许可协议将允许的最大连接数。  
-- 如果目标计算机不是服务器或你不想指定授权模式，请选择“不指定”。  
+- 选择“每服务器”  或“每用户”  作为授权模式。  
+- 如果选择“每服务器”，则还需要指定每个许可协议将允许的最大连接数  。  
+- 如果目标计算机不是服务器或你不想指定授权模式，请选择“不指定”  。  
 
 #### <a name="maximum-connections"></a>最大连接数
 
@@ -348,11 +348,11 @@ ms.locfileid: "65613059"
 
 #### <a name="enable-the-account-and-specify-the-local-administrator-password"></a>启用帐户并指定本地管理员密码  
 
-选择此选项，以使用指定密码启用本地管理员帐户。 在“密码”行上输入密码，并在“确认密码”行上确认密码。  
+选择此选项，以使用指定密码启用本地管理员帐户。 在“密码”  行上输入密码，并在“确认密码”  行上确认密码。  
 
 #### <a name="time-zone"></a>时区
 
-指定要在目标计算机上配置的时区。 此值可被“捕获 Windows 设置”任务序列步骤所捕获的值替代。  
+指定要在目标计算机上配置的时区。 此值可被“捕获 Windows 设置”  任务序列步骤所捕获的值替代。  
 
 
 
@@ -360,7 +360,7 @@ ms.locfileid: "65613059"
 
 使用此步骤匹配并安装驱动程序，作为 OS 部署的一部分。  
 
-“自动应用驱动程序”任务序列步骤执行以下操作：  
+“自动应用驱动程序”  任务序列步骤执行以下操作：  
 
 1. 扫描硬件并为系统上存在的所有设备查找即插即用 ID。  
 
@@ -374,10 +374,10 @@ ms.locfileid: "65613059"
 
     2. 当使用 OS 升级包作为原始安装源，任务序列会使用驱动程序的位置来配置 Windows 安装程序。  
 
-5. 在任务序列的“安装 Windows 和 ConfigMgr”步骤过程中，Windows 安装程序会查找此步骤暂存的驱动程序。  
+5. 在任务序列的“安装 Windows 和 ConfigMgr”  步骤过程中，Windows 安装程序会查找此步骤暂存的驱动程序。  
 
 > [!IMPORTANT]  
-> 独立媒体无法使用“自动应用驱动程序”步骤。 此方案中，任务序列未连接到 Configuration Manager 站点。  
+> 独立媒体无法使用“自动应用驱动程序”  步骤。 此方案中，任务序列未连接到 Configuration Manager 站点。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。
 
@@ -390,11 +390,11 @@ ms.locfileid: "65613059"
 - [SMSTSDriverRequestResolveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)  
 - [SMSTSDriverRequestSendTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
 
-选择任务序列编辑器中的“添加”，选择“驱动程序”，然后选择“自动应用驱动程序”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“驱动程序”  ，然后选择“自动应用驱动程序”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="install-only-the-best-matched-compatible-drivers"></a>仅安装最匹配的兼容驱动程序
 
@@ -425,7 +425,7 @@ ms.locfileid: "65613059"
 
 ## <a name="BKMK_CaptureNetworkSettings"></a>捕获网络设置  
 
-使用此步骤从运行该任务序列的计算机捕获 Microsoft 网络设置。 任务序列将这些设置保存在任务序列变量中。 这些设置替代“应用网络设置”步骤中配置的默认设置。  
+使用此步骤从运行该任务序列的计算机捕获 Microsoft 网络设置。 任务序列将这些设置保存在任务序列变量中。 这些设置替代“应用网络设置”步骤中配置的默认设置  。  
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
@@ -434,11 +434,11 @@ ms.locfileid: "65613059"
 - [OSDMigrateAdapterSettings](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)  
 - [OSDMigrateNetworkMembership](/sccm/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)  
 
-选择任务序列编辑器中的“添加”，选择“设置”，然后选择“捕获网络设置”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“设置”  ，然后选择“捕获网络设置”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="migrate-domain-and-workgroup-membership"></a>迁移域和工作组成员身份
 
@@ -456,7 +456,7 @@ ms.locfileid: "65613059"
 
 ## <a name="BKMK_CaptureOperatingSystemImage"></a>捕获操作系统映像  
 
-此步骤从引用计算机中捕获一个或多个映像。 任务序列在指定的网络共享中创建 Windows 映像 (.wim) 文件。 随后可以使用“添加操作系统映像包”向导将此映像导入 Configuration Manager 中，以便用于基于映像的 OS 部署。  
+此步骤从引用计算机中捕获一个或多个映像。 任务序列在指定的网络共享中创建 Windows 映像 (.wim) 文件。 随后可以使用“添加操作系统映像包”  向导将此映像导入 Configuration Manager 中，以便用于基于映像的 OS 部署。  
 
 Configuration Manager 将引用计算机上的每个卷（驱动器）捕获为 .wim 文件中的单独映像。 如果引用计算机有多个卷，则生成的 .wim 文件对于每个卷将包含单独的映像。 此步骤仅捕获格式化为 NTFS 或 FAT32 的卷。 其他格式的卷和 USB 卷会被忽略。  
 
@@ -476,11 +476,11 @@ Configuration Manager 将引用计算机上的每个卷（驱动器）捕获为 
 - [OSDImageVersion](/sccm/osd/understand/task-sequence-variables#OSDImageVersion)  
 - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“捕获操作系统映像”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“捕获操作系统映像”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="target"></a>目标  
 
@@ -500,19 +500,19 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 #### <a name="capture-operating-system-image-account"></a>捕获操作系统映像帐户  
 
-输入对指定的网络共享具有访问权限的 Windows 帐户。 选择“设置”以指定 Windows 帐户的名称。  
+输入对指定的网络共享具有访问权限的 Windows 帐户。 选择“设置”  以指定 Windows 帐户的名称。  
 
 
 
 ## <a name="BKMK_CaptureUserState"></a>捕获用户状态  
 
-此步骤使用用户状态迁移工具 (USMT) 从运行该任务序列的计算机捕获用户状态和设置。 此任务序列步骤与“还原用户状态”任务序列步骤一起使用。 此步骤终使用由 Configuration Manager 生成并管理的加密密钥加密 USMT 状态存储。  
+此步骤使用用户状态迁移工具 (USMT) 从运行该任务序列的计算机捕获用户状态和设置。 此任务序列步骤与“还原用户状态”  任务序列步骤一起使用。 此步骤终使用由 Configuration Manager 生成并管理的加密密钥加密 USMT 状态存储。  
 
 有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](/sccm/osd/get-started/manage-user-state)。  
 
-如果要将用户状态设置保存到状态迁移点或从其还原设置，可以将此步骤与“请求状态存储”和“发布状态存储”步骤一起使用。  
+如果要将用户状态设置保存到状态迁移点或从其还原设置，可以将此步骤与“请求状态存储”  和“发布状态存储”  步骤一起使用。  
 
-此步骤提供对最常用 USMT 选项的受限子网的控制。 使用 OSDMigrateAdditionalCaptureOptions 任务序列变量指定其他命令行选项。  
+此步骤提供对最常用 USMT 选项的受限子网的控制。 使用 OSDMigrateAdditionalCaptureOptions  任务序列变量指定其他命令行选项。  
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。  
 
@@ -527,11 +527,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - [OSDMigrateSkipEncryptedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-选择任务序列编辑器中的“添加”，选择“用户状态”，然后选择“捕获用户状态”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“用户状态”  ，然后选择“捕获用户状态”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="user-state-migration-tool-package"></a>用户状态迁移工具包
 
@@ -541,25 +541,25 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 迁移所有用户配置文件信息。 此选项为默认设置。  
 
-如果选择此选项，但在“还原用户状态”步骤中未选择“还原本地计算机用户配置文件”，任务序列将失败。 Configuration Manager 无法在不向新帐户分配密码的情况下迁移这些帐户。
+如果选择此选项，但在“还原用户状态”  步骤中未选择“还原本地计算机用户配置文件”  ，任务序列将失败。 Configuration Manager 无法在不向新帐户分配密码的情况下迁移这些帐户。
 
-如果使用“新建任务序列”向导的“安装现有映像包”选项，生成的任务序列将默认为“使用标准选项捕获所有用户配置文件”。 此默认任务序列不会选择“还原本地计算机用户配置文件”选项，也不会选择非域用户帐户。  
+如果使用“新建任务序列”向导的“安装现有映像包”选项，生成的任务序列将默认为“使用标准选项捕获所有用户配置文件”    。 此默认任务序列不会选择“还原本地计算机用户配置文件”  选项，也不会选择非域用户帐户。  
 
-选择“还原本地计算机用户配置文件”，并为要迁移的帐户提供密码。 在手动创建的任务序列中，此设置可在“还原用户状态”步骤下找到。 在由新建任务序列向导创建的任务序列中，可在步骤“还原用户文件和设置”向导页面下方找到此设置。  
+选择“还原本地计算机用户配置文件”  ，并为要迁移的帐户提供密码。 在手动创建的任务序列中，此设置可在“还原用户状态”  步骤下找到。 在由  新建任务序列向导创建的任务序列中，可在步骤“还原用户文件和设置”  向导页面下方找到此设置。  
 
 如果没有本地用户帐户，此设置不适用。  
 
 #### <a name="customize-how-user-profiles-are-captured"></a>自定义如何捕获用户配置文件
 
-选择此选项以指定迁移的自定义配置文件。 选择“文件”以选择 USMT 要在此步骤中使用的配置文件。 指定一个自定义 .xml 文件，该文件包含定义要迁移的用户状态文件的规则。  
+选择此选项以指定迁移的自定义配置文件。 选择“文件”  以选择 USMT 要在此步骤中使用的配置文件。 指定一个自定义 .xml 文件，该文件包含定义要迁移的用户状态文件的规则。  
 
 #### <a name="click-here-to-select-configuration-files"></a>单击此处选择配置文件
 
-选择此选项以便在想要用于捕获用户配置文件的 USMT 包中选择配置文件。 选择“文件”按钮以启动“配置文件”对话框。 要指定配置文件，请在“文件名”行中输入文件名称并选择“添加”按钮。  
+选择此选项以便在想要用于捕获用户配置文件的 USMT 包中选择配置文件。 选择“文件”  按钮以启动“配置文件”  对话框。 要指定配置文件，请在“文件名”  行中输入文件名称并选择“添加”  按钮。  
 
 #### <a name="enable-verbose-logging"></a>启用详细日志记录
 
-启用此选项以生成更详细的日志文件信息。 捕获状态时，任务序列默认生成日志 ScanState.log 并存储在任务序列日志文件夹 `%WinDir%\ccm\logs` 中。  
+启用此选项以生成更详细的日志文件信息。 捕获状态时，任务序列默认生成日志 ScanState.log  并存储在任务序列日志文件夹 `%WinDir%\ccm\logs` 中。  
 
 #### <a name="skip-files-using-encrypted-file-system"></a>使用加密文件系统跳过文件
 
@@ -569,13 +569,13 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 启用此选项以指定任何以下设置：  
 
-- 在无法捕获某些文件时继续：启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，且无法捕获某个文件，此步骤将失败。 默认情况下会启用此选项。  
+-  在无法捕获某些文件时继续：启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，且无法捕获某个文件，此步骤将失败。 默认情况下会启用此选项。  
 
 - **使用链接而非复制文件的方式在本地捕获：** 启用此设置以使用 NTFS 硬链接来捕获文件。  
 
     有关使用硬链接迁移数据的详细信息，请参阅 [硬链接迁移存储](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store)。  
 
-- 在脱机模式下捕获(仅针对 Windows PE)：启用此设置可在 Windows PE 而不是整个 OS 中捕获用户状态。  
+-  在脱机模式下捕获(仅针对 Windows PE)：启用此设置可在 Windows PE 而不是整个 OS 中捕获用户状态。  
 
 #### <a name="capture-by-using-volume-copy-shadow-services-vss"></a>使用卷影复制服务 (VSS) 进行捕获
 
@@ -585,7 +585,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 ## <a name="BKMK_CaptureWindowsSettings"></a>捕获 Windows 设置  
 
-使用此步骤从运行该任务序列的计算机捕获 Windows 设置。 任务序列将这些设置保存在任务序列变量中。 这些捕获的设置将替代“应用 Windows 设置”步骤中配置的默认设置。  
+使用此步骤从运行该任务序列的计算机捕获 Windows 设置。 任务序列将这些设置保存在任务序列变量中。 这些捕获的设置将替代“应用 Windows 设置”步骤中配置的默认设置  。  
 
 此任务序列步骤在 Windows PE 或完整 OS 中运行。  
 
@@ -598,11 +598,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)  
 - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-output)  
 
-选择任务序列编辑器中的“添加”，选择“设置”，然后选择“捕获 Windows 设置”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“设置”  ，然后选择“捕获 Windows 设置”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="migrate-computer-name"></a>迁移计算机名称
 
@@ -622,11 +622,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 使用此步骤验证目标计算机是否满足指定的部署先决条件。  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“检查就绪情况”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“检查就绪情况”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="ensure-minimum-memory-mb"></a>确保最小内存 (MB)
 
@@ -642,12 +642,12 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 #### <a name="ensure-current-os-to-be-refreshed-is"></a>确保要刷新的当前 OS
 
-验证目标计算机上安装的 OS 是否满足指定的要求。 此步骤将该设置默认设置为“客户端”。  
+验证目标计算机上安装的 OS 是否满足指定的要求。 此步骤将该设置默认设置为“客户端”  。  
 
 ### <a name="options"></a>选项
 
 > [!NOTE]  
-> 如果启用此步骤的“选项”选项卡上的“出错时继续”，则仅记录就绪情况检查结果。 如果检查失败，任务序列不会停止。  
+> 如果启用此步骤的“选项”选项卡上的“出错时继续”，则仅记录就绪情况检查结果   。 如果检查失败，任务序列不会停止。  
 
 
 
@@ -664,15 +664,15 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - [SMSConnectNetworkFolderPassword](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)  
 - [SMSConnectNetworkFolderPath](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“连接到网络文件夹”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“连接到网络文件夹”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="path"></a>路径  
 
-选择“浏览”以指定网络文件夹路径。 使用格式 `\\server\share`。
+选择“浏览”以指定网络文件夹路径  。 使用格式 `\\server\share`。
 
 #### <a name="drive"></a>驱动器  
 
@@ -680,7 +680,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 #### <a name="account"></a>帐户
 
-选择“设置”以指定有权连接到此网络文件夹的用户帐户。 有关任务序列网络文件夹连接帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account)。
+选择“设置”以指定有权连接到此网络文件夹的用户帐户  。 有关任务序列网络文件夹连接帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account)。
 
 
 
@@ -695,11 +695,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
-选择任务序列编辑器中的“添加”，选择“磁盘”，然后选择“禁用 BitLocker”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“禁用 BitLocker”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="current-operating-system-drive"></a>当前操作系统驱动器
 
@@ -723,20 +723,20 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 此步骤适用于任务序列，从而在以下方案中升级 OS：  
 
-- 若要使用可同时用于 x86 平台和 x64 平台的单一升级任务序列。 包括“准备升级”组中的两个“下载包内容”步骤。 在“选项”选项卡上指定条件，以检测客户端体系结构并仅下载适当的 OS 升级包。 配置每个“下载包内容”步骤，使其使用相同的变量。 将该变量用于“升级操作系统”步骤中的媒体路径。  
+- 若要使用可同时用于 x86 平台和 x64 平台的单一升级任务序列。 包括“准备升级”组中的两个“下载包内容”步骤   。 在“选项”  选项卡上指定条件，以检测客户端体系结构并仅下载适当的 OS 升级包。 配置每个“下载包内容”步骤，使其使用相同的变量  。 将该变量用于“升级操作系统”步骤中的媒体路径  。  
 
-- 若要动态下载适用的驱动程序包，请使用两个“下载包内容”步骤以及检测每个驱动程序包的相应硬件类型的条件。 配置每个“下载包内容”步骤，使其使用相同的变量。 将该变量用于“升级操作系统”步骤的驱动程序部分中的“预留内容”变量。  
+- 若要动态下载适用的驱动程序包，请使用两个“下载包内容”  步骤以及检测每个驱动程序包的相应硬件类型的条件。 配置每个“下载包内容”步骤，使其使用相同的变量  。 将该变量用于“升级操作系统”步骤的驱动程序部分中的“预留内容”变量   。  
 
 > [!NOTE]  
-> 在部署包含此步骤的任务序列时，请勿在部署软件向导的“分发点”页上为“部署选项”选择“在启动任务序列之前在本地下载所有内容”或“直接从分发点访问内容”。  
+> 在部署包含此步骤的任务序列时，请勿在部署软件向导的“分发点”  页上为“部署选项”  选择“在启动任务序列之前在本地下载所有内容”  或“直接从分发点访问内容”  。  
 
 此步骤在完整 OS 或 Windows PE 中运行。 Windows PE 中不提供将包保存在 Configuration Manager 客户端缓存中的选项。
 
-选择任务序列编辑器中的“添加”，选择“软件”，然后选择“下载包内容”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“下载包内容”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="select-package"></a>选择包  
 
@@ -746,17 +746,17 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 选择将包保存在下列位置之一：  
 
-- 任务序列工作目录：此位置也称为任务序列缓存。  
+-  任务序列工作目录：此位置也称为任务序列缓存。  
 
 - **Configuration Manager 客户端缓存：** 使用此选项可在客户端缓存中存储内容。 默认情况下，此路径为 `%WinDir%\ccmcache`。  
 
-- 自定义路径：任务序列引擎首先会将包下载到任务序列工作目录。 然后将内容移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。  
+-  自定义路径：任务序列引擎首先会将包下载到任务序列工作目录。 然后将内容移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。  
 
 #### <a name="save-path-as-a-variable"></a>将路径另存为一个变量
 
 将包路径保存到自定义任务序列变量。 然后在另一个任务序列步骤中使用此变量。
 
-Configuration Manager 向变量名称中添加数字后缀。 例如，指定变量 `%MyContent%` 作为自定义变量。 它是任务序列存储此步骤中所有引用内容的位置的根。 此内容可能包含多个包。 引用该变量时，添加数字后缀。 有关第一个包，请参阅 `%MyContent01%`。 在子序列步骤（如“升级操作系统”）中引用变量时，将使用 `%MyContent02%` 或 `%MyContent03%`，其中的数字对应“下载包内容”步骤罗列包的顺序。  
+Configuration Manager 向变量名称中添加数字后缀。 例如，指定变量 `%MyContent%` 作为自定义变量。 它是任务序列存储此步骤中所有引用内容的位置的根。 此内容可能包含多个包。 引用该变量时，添加数字后缀。 有关第一个包，请参阅 `%MyContent01%`。 在子序列步骤（如“升级操作系统”  ）中引用变量时，将使用 `%MyContent02%` 或 `%MyContent03%`，其中的数字对应“下载包内容”  步骤罗列包的顺序。  
 
 #### <a name="if-a-package-download-fails-continue-downloading-other-packages-in-the-list"></a>如果包下载失败，继续下载列表中的其他包
 
@@ -768,7 +768,7 @@ Configuration Manager 向变量名称中添加数字后缀。 例如，指定变
 
 使用此步骤在硬盘驱动器的至少两个分区上启用 BitLocker 加密。 第一个活动分区包含 Windows 启动代码。 另一个分区包含 OS。 启动分区必须保持为未加密状态。  
 
-在 Windows PE 中，使用“预设置 BitLocker”步骤可在驱动器上启用 BitLocker。 有关详细信息，请参阅[预设置 BitLocker](#BKMK_PreProvisionBitLocker)。  
+在 Windows PE 中，使用“预设置 BitLocker”  步骤可在驱动器上启用 BitLocker。 有关详细信息，请参阅[预设置 BitLocker](#BKMK_PreProvisionBitLocker)。  
 
 > [!NOTE]  
 > BitLocker 驱动器加密提供磁盘卷内容的低级加密。  
@@ -780,34 +780,34 @@ Configuration Manager 向变量名称中添加数字后缀。 例如，指定变
 - [OSDBitLockerRecoveryPassword](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
 - [OSDBitLockerStartupKey](/sccm/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
 
-当指定“仅 TPM”、“USB 上的 TPM 和启动密钥”或“TPM 和 PIN”时，受信任的平台模块 (TPM) 必须处于以下状态，然后才能运行“启用 BitLocker”步骤：  
+当指定“仅 TPM”、“USB 上的 TPM 和启动密钥”或“TPM 和 PIN”时，受信任的平台模块 (TPM) 必须处于以下状态，然后才能运行“启用 BitLocker”步骤     ：  
 
 - Enabled  
 - 已激活  
 - 允许的所有权  
 
-此步骤将完成剩余的 TPM 初始化。 余下的步骤无需实际操作或重新启动。 “启用 BitLocker”步骤（如有必要）以透明方式完成下列剩余的 TPM 初始化步骤：  
+此步骤将完成剩余的 TPM 初始化。 余下的步骤无需实际操作或重新启动。 “启用 BitLocker”  步骤（如有必要）以透明方式完成下列剩余的 TPM 初始化步骤：  
 
 - 创建认可密钥对  
 - 创建所有者授权值和 Active Directory 的证书，后者必须已扩展为支持此值  
 - 取得所有权  
 - 创建存储根密钥，或在已存在但不兼容时重置  
 
-如果希望任务序列等待“启用 BitLocker”完成驱动器加密过程，则选择“等待”选项。 如果不选择“等待”选项，则驱动器加密过程在后台进行。 任务序列即时执行下一步骤。  
+如果希望任务序列等待“启用 BitLocker”完成驱动器加密过程，则选择“等待”选项   。 如果不选择“等待”  选项，则驱动器加密过程在后台进行。 任务序列即时执行下一步骤。  
 
-BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数据驱动器）。 若要加密数据驱动器，首先加密 OS 驱动器并完成加密过程。 需执行此操作的原因是 OS 驱动器存储数据驱动器的密钥保护程序。 如果加密相同任务序列中的 OS 和数据驱动器，请在“启用 BitLocker”步骤中为 OS 驱动器选择“等待”选项。  
+BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数据驱动器）。 若要加密数据驱动器，首先加密 OS 驱动器并完成加密过程。 需执行此操作的原因是 OS 驱动器存储数据驱动器的密钥保护程序。 如果加密相同任务序列中的 OS 和数据驱动器，请在“启用 BitLocker”  步骤中为 OS 驱动器选择“等待”  选项。  
 
-如果硬盘已加密，但 BitLocker 处于禁用状态，则“启用 BitLocker”步骤会重新启用密钥保护程序，并快速完成。 在这种情况下不需要重新加密硬盘。  
+如果硬盘已加密，但 BitLocker 处于禁用状态，则“启用 BitLocker”步骤会重新启用密钥保护程序，并快速完成  。 在这种情况下不需要重新加密硬盘。  
 
-选择任务序列编辑器中的“添加”，选择“磁盘”，然后选择“启用 BitLocker”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“启用 BitLocker”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="choose-the-drive-to-encrypt"></a>选择要加密的驱动器
 
-指定要加密的驱动器。 若要加密当前 OS 驱动器，请选择“当前操作系统驱动器”。 然后配置下列密钥管理选项：  
+指定要加密的驱动器。 若要加密当前 OS 驱动器，请选择“当前操作系统驱动器”  。 然后配置下列密钥管理选项：  
 
 - **仅 TPM：** 选择此选项，以仅使用受信任的平台模块 (TPM)。  
 
@@ -815,9 +815,9 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 - **TPM 和 USB 上的启动密钥：** 选择此选项以使用 TPM 和存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
 
-- TPM 和 PIN：选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
+-  TPM 和 PIN：选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
 
-要加密特定非 OS 数据驱动器，请选择“特定驱动器”。 然后从列表中选择驱动器。  
+要加密特定非 OS 数据驱动器，请选择“特定驱动器”  。 然后从列表中选择驱动器。  
 
 #### <a name="use-full-disk-encryption"></a>使用全磁盘加密
 
@@ -826,7 +826,7 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 #### <a name="choose-where-to-create-the-recovery-key"></a>选择要创建恢复密钥的位置
 
-要在 Active Directory 中指定 BitLocker 创建和托管恢复密码的位置，请选择“在 Active Directory 中”。 此选项要求为 BitLocker 密钥托管扩展 Active Directory。 然后，BitLocker 可以在 Active Directory 中保存关联的恢复信息。 选择“请勿创建恢复密钥”，可以不创建密码。 创建密码为建议选项。  
+要在 Active Directory 中指定 BitLocker 创建和托管恢复密码的位置，请选择“在 Active Directory 中”  。 此选项要求为 BitLocker 密钥托管扩展 Active Directory。 然后，BitLocker 可以在 Active Directory 中保存关联的恢复信息。 选择“请勿创建恢复密钥”，可以不创建密码  。 创建密码为建议选项。  
 
 #### <a name="wait-for-bitlocker-to-complete-the-drive-encryption-process-on-all-drives-before-continuing-task-sequence-execution"></a>等待 BitLocker 完成所有驱动器上的驱动器加密过程之后，继续执行任务序列
 
@@ -841,7 +841,7 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 使用此步骤对目标计算机上的特定磁盘进行格式化和分区。  
 
 > [!IMPORTANT]  
-> 你为此步骤指定的所有设置均应用于单个特定磁盘。 若要对目标计算机上的另一个磁盘进行格式化和分区，则向该任务序列再添加一个“格式化磁盘并分区”步骤。  
+> 你为此步骤指定的所有设置均应用于单个特定磁盘。 若要对目标计算机上的另一个磁盘进行格式化和分区，则向该任务序列再添加一个“格式化磁盘并分区”步骤  。  
 
 此步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。  
 
@@ -852,11 +852,11 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 - [OSDPartitions](/sccm/osd/understand/task-sequence-variables#OSDPartitions)  
 - [OSDPartitionStyle](/sccm/osd/understand/task-sequence-variables#OSDPartitionStyle)  
 
-选择任务序列编辑器中的“添加”，选择“磁盘”，然后选择“格式化磁盘并分区”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“格式化磁盘并分区”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="disk-number"></a>磁盘编号
 
@@ -866,11 +866,11 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 要格式化的磁盘类型。 可以从下拉列表中选择两个选项：
 
-- 标准 (MBR)：主启动记录  
-- GPT：GUID 分区表  
+-  标准 (MBR)：主启动记录  
+-  GPT：GUID 分区表  
 
 > [!NOTE]  
-> 如果将磁盘类型从“标准 (MBR)”更改为“GPT”，并且分区布局包含扩展分区，则任务序列将从布局中删除所有扩展分区和逻辑分区。 任务序列编辑器会在更改磁盘类型前提示确认此操作。  
+> 如果将磁盘类型从“标准 (MBR)”更改为“GPT”，并且分区布局包含扩展分区，则任务序列将从布局中删除所有扩展分区和逻辑分区   。 任务序列编辑器会在更改磁盘类型前提示确认此操作。  
 
 #### <a name="volume"></a>Volume
 
@@ -879,12 +879,12 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 - 名称  
 - 剩余磁盘空间  
 
-若要创建新分区，请选择“新建”以启动“分区属性”对话框。 指定分区类型和大小，以及是否为启动分区。 若要修改现有分区，请选择要修改的分区，然后选择“属性”按钮。 有关如何配置硬盘分区的详细信息，请参阅下列其中一篇文章：  
+若要创建新分区，请选择“新建”  以启动“分区属性”  对话框。 指定分区类型和大小，以及是否为启动分区。 若要修改现有分区，请选择要修改的分区，然后选择“属性”  按钮。 有关如何配置硬盘分区的详细信息，请参阅下列其中一篇文章：  
 
 - [基于 UEFI/GPT 的硬盘分区](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
 - [基于 BIOS/MBR 的硬盘分区](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
 
-若要删除分区，请选择分区，然后选择“删除”。  
+若要删除分区，请选择分区，然后选择“删除”  。  
 
 
 
@@ -894,7 +894,7 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 应用程序必须符合以下条件：  
 
-- 应用程序的部署类型必须是 Windows Installer 或脚本安装程序。 不支持 Windows 应用程序包（.appx 文件）部署类型。  
+- 应用程序的部署类型必须是 Windows Installer  或脚本  安装程序。 不支持 Windows 应用程序包（.appx 文件）部署类型。  
 
 - 它必须在本地系统帐户而非用户帐户下运行。  
 
@@ -905,10 +905,10 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 当此步骤运行时，应用程序将检查部署类型的要求规则和检测方法的适用性。 根据此检查的结果，应用程序将安装适用的部署类型。 如果部署类型包含依赖关系，则对该依赖部署类型进行评估并将其作为此步骤的一部分进行安装。 独立媒体不支持应用程序依赖关系。  
 
 > [!NOTE]  
-> 要安装取代另一应用程序的应用程序，被取代的应用程序的内容文件必须可用。 否则任务序列步骤将失败。 例如，在客户端或捕获的映像中安装 Microsoft Visio 2010。 当运行“安装应用程序”步骤安装 Microsoft Visio 2013 时，Microsoft Visio 2010（被取代的应用程序）的内容文件必须在分发点上可用。 如果某个客户端或捕获映像未安装 Microsoft Visio，任务序列会安装 Microsoft Visio 2013，而不会检查 Microsoft Visio 2010 内容文件。  
+> 要安装取代另一应用程序的应用程序，被取代的应用程序的内容文件必须可用。 否则任务序列步骤将失败。 例如，在客户端或捕获的映像中安装 Microsoft Visio 2010。 当运行“安装应用程序”步骤安装 Microsoft Visio 2013 时，Microsoft Visio 2010（被取代的应用程序）的内容文件必须在分发点上可用  。 如果某个客户端或捕获映像未安装 Microsoft Visio，任务序列会安装 Microsoft Visio 2013，而不会检查 Microsoft Visio 2010 内容文件。  
 
 > [!NOTE]  
-> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled 和 SMSTSMPListRequestTimeout 任务序列变量。 这些变量指定任务序列重试安装应用程序之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。
+> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled  和 SMSTSMPListRequestTimeout  任务序列变量。 这些变量指定任务序列重试安装应用程序之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
@@ -919,11 +919,11 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
-选择任务序列编辑器中的“添加”，选择“软件”，然后选择“安装应用程序”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装应用程序”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，配置此部分描述的设置。  
+在此步骤的“属性”选项卡上，配置此部分描述的设置  。  
 
 #### <a name="install-the-following-applications"></a>安装以下应用程序
 
@@ -934,13 +934,13 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 - 仅当用户登录时  
 - 使用用户权限运行  
 
-这些应用程序不会出现在“选择要安装的应用程序”对话框中。
+这些应用程序不会出现在“选择要安装的应用程序”  对话框中。
 
 #### <a name="install-applications-according-to-dynamic-variable-list"></a>根据动态变量列表安装应用程序
 
 任务序列使用此基本变量名安装应用程序。 基本变量名称适用于为集合或计算机定义的任务序列变量。 这些变量指定任务序列为该集合或计算机安装的应用程序。 每个变量名称都由其通用的基名称和一个数字后缀（从 01 开始）组成。 每个变量的值都必须包含应用程序的名称，且没有其他任何内容。  
 
-为让任务序列使用动态变量列表安装应用程序，在应用程序“属性”的“常规”选项卡中启用以下设置：“允许通过安装应用程序任务序列操作安装此应用程序，而不是手动部署”。  
+为让任务序列使用动态变量列表安装应用程序，在应用程序“属性”  的“常规”  选项卡中启用以下设置：“允许通过安装应用程序任务序列操作安装此应用程序，而不是手动部署”  。  
 
 > [!NOTE]  
 > 对于独立媒体部署，无法使用动态变量列表安装应用程序。  
@@ -974,9 +974,9 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 ### <a name="options"></a>选项
 
 > [!NOTE]  
-> 在此步骤的“选项”选项卡上选择“出错时继续”时，该任务序列将在应用程序安装失败时继续。 如果不启用此选项，任务序列失败且不安装剩余的应用程序。  
+> 在此步骤的“选项”选项卡上选择“出错时继续”时，该任务序列将在应用程序安装失败时继续   。 如果不启用此选项，任务序列失败且不安装剩余的应用程序。  
 
-除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置：  
+除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置  ：  
 
 #### <a name="retry-this-step-if-computer-unexpectedly-restarts"></a>如果计算机意外重启，请重试此步骤
 
@@ -996,14 +996,14 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 
 - 它本身不能启动重新启动。 该软件必须使用标准的重新启动代码 (3010) 请求重新启动。 此行为可确保任务序列正确处理重新启动。 如果该软件不返回 3010 退出代码，则任务序列引擎将重启计算机。 重新启动后，任务序列自动继续。  
 
-部署 OS 时不支持使用“首先运行其他程序”选项安装从属程序的程序。 如果启用了选项“首先运行其他程序”，且其从属程序已在目标计算机上运行，则将运行从属程序且任务序列将继续。 但是，如果从属程序尚未在目标计算机上运行，则任务序列步骤将失败。  
+部署 OS 时不支持使用“首先运行其他程序”  选项安装从属程序的程序。 如果启用了选项“首先运行其他程序”，且其从属程序已在目标计算机上运行，则将运行从属程序且任务序列将继续  。 但是，如果从属程序尚未在目标计算机上运行，则任务序列步骤将失败。  
 
 > [!NOTE]  
 > 管理中心站点并没有任务序列期间启用软件分发代理所需的必要客户端配置策略。 当你在管理中心站点为任务序列创建独立媒体，而任务序列包含“安装包”  步骤时，CreateTsMedia.log 文件可能会出现以下错误：  
 >
 > `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`  
 >
-> 对于包括“安装包”步骤的独立媒体，请在已启用软件分发代理的主站点创建独立媒体。 或者，在“安装 Windows 和 ConfigMgr”步骤后及第一个“安装包”步骤前添加一个“运行命令行”步骤。 “运行命令行”步骤运行 WMIC 命令，以便在第一个“安装包”步骤之前启用软件分发代理。 在“运行命令行”步骤中使用以下命令：  
+> 对于包括“安装包”步骤的独立媒体，请在已启用软件分发代理的主站点创建独立媒体  。 或者，在“安装 Windows 和 ConfigMgr”步骤后及第一个“安装包”步骤前添加一个“运行命令行”步骤    。 “运行命令行”步骤运行 WMIC 命令，以便在第一个“安装包”步骤之前启用软件分发代理   。 在“运行命令行”步骤中使用以下命令  ：  
 >
 > `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
 >
@@ -1015,11 +1015,11 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 
 - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)（从版本 1806 开始）<!--1358493-->  
 
-选择任务序列编辑器中的“添加”，选择“软件”，然后选择“安装包”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装包”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="install-a-single-software-package"></a>安装单个软件包
 
@@ -1029,7 +1029,7 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 
 任务序列将使用此基本变量名称安装包。 基本变量名称适用于为集合或计算机定义的任务序列变量。 这些变量指定任务序列将为该集合或计算机安装的包。 每个变量名称都由其通用的基名称和一个数字后缀（从 001 开始）组成。 每个变量的值都必须包含包 ID 和软件名称，以冒号分隔。  
 
-为让任务序列使用动态变量列表安装软件，请在包“属性”的“高级”选项卡上启用以下设置：“允许在未部署的情况下从安装包任务序列中安装此应用程序”。  
+为让任务序列使用动态变量列表安装软件，请在包“属性”  的“高级”  选项卡上启用以下设置：“允许在未部署的情况下从安装包任务序列中安装此应用程序”  。  
 
 > [!NOTE]  
 > 对于独立媒体部署，无法使用动态变量列表安装软件包。  
@@ -1083,15 +1083,15 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 - [SMSTSWaitForSecondReboot](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)  
 
 > [!NOTE]  
-> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled 和 SMSTSMPListRequestTimeout 变量。 这些变量指定任务序列重试安装应用程序或软件更新之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
+> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled  和 SMSTSMPListRequestTimeout  变量。 这些变量指定任务序列重试安装应用程序或软件更新之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
 
-选择任务序列编辑器中的“添加”，选择“软件”，然后选择“安装软件更新”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装软件更新”  以添加此步骤。
 
 有关此步骤的更多建议和技术流程图，请参阅[安装软件更新](/sccm/osd/understand/install-software-updates)。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="required-for-installation---mandatory-software-updates-only"></a>安装要求 - 仅必需的软件更新
 
@@ -1109,18 +1109,18 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 
 在大多数情况下，使用默认设置来使用缓存的扫描结果。
 
-SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫描超时。 默认值为 30 分钟。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)。
+SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫描超时。 默认值为 30 分钟。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)。
 
 ### <a name="options"></a>选项  
 
-除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置：  
+除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置  ：  
 
 #### <a name="retry-this-step-if-computer-unexpectedly-restarts"></a>如果计算机意外重启，请重试此步骤
 
 如果其中一个更新意外重启计算机，请重试此步骤。 两次重试此步骤后将默认启用此设置。 可以指定 1 到 5 次重试。  
 
 > [!NOTE]  
-> 配置 SMSTSWaitForSecondReboot 变量，以指定此方案中任务序列在计算机重启后暂停的秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)。  
+> 配置 SMSTSWaitForSecondReboot  变量，以指定此方案中任务序列在计算机重启后暂停的秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)。  
 
 
 
@@ -1140,11 +1140,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [OSDJoinType](/sccm/osd/understand/task-sequence-variables#OSDJoinType)  
 - [OSDJoinWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“加入域或工作组”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“加入域或工作组”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="join-a-workgroup"></a>加入工作组
 
@@ -1158,7 +1158,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>输入有权限加入域的帐户
 
-选择“设置”以输入有权加入域的帐户的用户名和密码。 使用后述格式输入帐户：`Domain\account`。 有关任务序列域加入帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。  
+选择“设置”以输入有权加入域的帐户的用户名和密码  。 使用后述格式输入帐户：`Domain\account`。 有关任务序列域加入帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。  
 
 
 
@@ -1169,15 +1169,15 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 此步骤现在将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的 OS 映像时，都将安装新的 Configuration Manager 客户端。  
 
 > [!Note]  
-> 任务序列引擎仅在执行“生成并捕获引用操作系统映像”任务序列期间才会删除客户端。 其他捕获方法执行期间，如捕获媒体或自定义任务序列等，任务序列不会删除客户端。  
+> 任务序列引擎仅在执行“生成并捕获引用操作系统映像”任务序列期间才会删除客户端  。 其他捕获方法执行期间，如捕获媒体或自定义任务序列等，任务序列不会删除客户端。  
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“准备 ConfigMgr 客户端以便捕获”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“准备 ConfigMgr 客户端以便捕获”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-此步骤不需要“属性”选项卡上的任何设置。
+此步骤不需要“属性”  选项卡上的任何设置。
 
 
 
@@ -1192,11 +1192,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)  
 - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“准备 Windows 以便捕获”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“准备 Windows 以便捕获”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="automatically-build-mass-storage-driver-list"></a>自动生成大容量存储驱动程序列表
 
@@ -1228,11 +1228,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 > [!IMPORTANT]  
 > 预配 BitLocker 时的操作系统至少需为 Windows 7。 计算机还必须包含受支持且已启用的信任平台模块 (TPM)。  
 
-选择任务序列编辑器中的“添加”，选择“磁盘”，然后选择“预配 BitLocker”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“预配 BitLocker”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="apply-bitlocker-to-the-specified-drive"></a>将 BitLocker 应用于指定的驱动器
 
@@ -1251,16 +1251,16 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 ## <a name="BKMK_ReleaseStateStore"></a>发布状态存储  
 
-使用此步骤通知状态迁移点，捕获或还原操作已完成。 将此步骤与“请求状态存储”、“捕获用户状态”和“还原用户状态”等步骤结合使用。 可通过使用状态迁移点和用户状态迁移工具 (USMT)，使用这些步骤迁移用户状态数据。  
+使用此步骤通知状态迁移点，捕获或还原操作已完成。 将此步骤与“请求状态存储”、“捕获用户状态”和“还原用户状态”等步骤结合使用    。 可通过使用状态迁移点和用户状态迁移工具 (USMT)，使用这些步骤迁移用户状态数据。  
 
 有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](/sccm/osd/get-started/manage-user-state)。  
 
-如果使用“请求状态存储”步骤请求访问状态迁移点以捕获用户状态，此步骤将通知状态迁移点捕获过程已完成。 然后，状态迁移点将用户状态数据标记为可还原。 状态迁移点设置用户状态数据的访问控制权限，以便仅还原的计算机具有只读访问权限。  
+如果使用“请求状态存储”步骤请求访问状态迁移点以捕获用户状态，此步骤将通知状态迁移点捕获过程已完成   。 然后，状态迁移点将用户状态数据标记为可还原。 状态迁移点设置用户状态数据的访问控制权限，以便仅还原的计算机具有只读访问权限。  
 
-如果使用“请求状态存储”步骤请求访问状态迁移点以还原用户状态，此步骤将通知状态迁移点还原过程已完成。 然后，状态迁移点将激活其配置的数据保留配置。  
+如果使用“请求状态存储”步骤请求访问状态迁移点以还原用户状态，此步骤将通知状态迁移点还原过程已完成   。 然后，状态迁移点将激活其配置的数据保留配置。  
 
 > [!IMPORTANT]  
-> 为“请求状态存储”和“发布状态存储”步骤之间的所有步骤设置“出错时继续”。 每个“请求状态存储”步骤必须有一个匹配的“发布状态存储”步骤。  
+> 为“请求状态存储”  和“发布状态存储”  步骤之间的所有步骤设置“出错时继续”  。 每个“请求状态存储”步骤必须有一个匹配的“发布状态存储”步骤   。  
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。
 
@@ -1268,11 +1268,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-选择任务序列编辑器中的“添加”，选择“用户状态”，然后选择“发布状态存储”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“用户状态”  ，然后选择“发布状态存储”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-此步骤不需要“属性”选项卡上的任何设置。
+此步骤不需要“属性”  选项卡上的任何设置。
 
 
 
@@ -1282,7 +1282,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](/sccm/osd/get-started/manage-user-state)。  
 
-将此步骤与“发布状态存储”、“捕获用户状态”和“还原用户状态”等步骤结合使用。 可通过使用状态迁移点和用户状态迁移工具 (USMT) 使用这些步骤迁移计算机状态。  
+将此步骤与“发布状态存储”、“捕获用户状态”和“还原用户状态”等步骤结合使用    。 可通过使用状态迁移点和用户状态迁移工具 (USMT) 使用这些步骤迁移计算机状态。  
 
 > [!NOTE]  
 > 新建状态迁移点时，用户状态存储最多可能需要一小时才能使用。 要促进可用性，请调整状态迁移点上的任何属性设置以触发站点控制文件更新。  
@@ -1296,15 +1296,15 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [OSDStateSMPRetryTime](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-选择任务序列编辑器中的“添加”，选择“用户状态”，然后选择“请求状态存储”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“用户状态”  ，然后选择“请求状态存储”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="capture-state-from-the-computer"></a>从计算机捕获状态
 
-查找满足状态迁移点设置中所配置的最低要求的状态迁移点。 例如，“最大客户端数”和“最小可用磁盘空间量”。 此选项不保证在状态迁移时有足够空间可用。 此选项将请求访问状态迁移点，以便从计算机捕获用户状态和设置。  
+查找满足状态迁移点设置中所配置的最低要求的状态迁移点。 例如，“最大客户端数”和“最小可用磁盘空间量”   。 此选项不保证在状态迁移时有足够空间可用。 此选项将请求访问状态迁移点，以便从计算机捕获用户状态和设置。  
 
 如果 Configuration Manager 站点具有多个活动状态迁移点，此步骤将查找具有可用磁盘空间的状态迁移点。 任务序列将查询管理点，以便获得状态迁移点列表，然后计算每个点，直到找到满足最低要求的迁移点。  
 
@@ -1339,11 +1339,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [SMSRebootMessage](/sccm/osd/understand/task-sequence-variables#SMSRebootMessage)  
 - [SMSRebootTimeout](/sccm/osd/understand/task-sequence-variables#SMSRebootTimeout)  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“重启计算机”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“重启计算机”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="the-boot-image-assigned-to-this-task-sequence"></a>分配给此任务序列的启动映像
 
@@ -1369,16 +1369,16 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 ## <a name="BKMK_RestoreUserState"></a>还原用户状态  
 
-使用此步骤来启动用户状态迁移工具 (USMT) 将用户状态和设置还原到目标计算机。 将此步骤与“捕获用户状态”步骤结合使用。  
+使用此步骤来启动用户状态迁移工具 (USMT) 将用户状态和设置还原到目标计算机。 将此步骤与“捕获用户状态”步骤结合使用  。  
 
 有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](/sccm/osd/get-started/manage-user-state)。  
 
-将此步骤与“请求状态存储”和“发布状态存储”步骤结合使用，以使用状态迁移点保存或还原状态设置。 此选项始终使用由 Configuration Manager 生成并管理的加密密钥解密 USMT 状态存储。  
+将此步骤与“请求状态存储”和“发布状态存储”步骤结合使用，以使用状态迁移点保存或还原状态设置   。 此选项始终使用由 Configuration Manager 生成并管理的加密密钥解密 USMT 状态存储。  
 
-“还原用户状态”步骤提供对最常用 USMT 选项的受限子网的控制。 为其他命令行选项指定 OSDMigrateAdditionalRestoreOptions 变量。  
+“还原用户状态”步骤提供对最常用 USMT 选项的受限子网的控制  。 为其他命令行选项指定 OSDMigrateAdditionalRestoreOptions  变量。  
 
 > [!IMPORTANT]  
-> 如果将此步骤用于与 OS 部署方案无关的目的，请在“还原用户状态”步骤之后（紧接着）添加[重启计算机](#BKMK_RestartComputer)步骤。  
+> 如果将此步骤用于与 OS 部署方案无关的目的，请在“还原用户状态”  步骤之后（紧接着）添加[重启计算机](#BKMK_RestartComputer)步骤。  
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。
 
@@ -1392,11 +1392,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [OSDMigrateLocalAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-选择任务序列编辑器中的“添加”，选择“用户状态”，然后选择“还原用户状态”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“用户状态”  ，然后选择“还原用户状态”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="user-state-migration-tool-package"></a>用户状态迁移工具包
 
@@ -1404,11 +1404,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 #### <a name="restore-all-captured-user-profiles-with-standard-options"></a>使用标准选项还原所有捕获的用户配置文件
 
-使用标准选项还原捕获的用户配置文件。 要自定义 USMT 还原的选项，请选择“自定义用户配置文件捕获”。  
+使用标准选项还原捕获的用户配置文件。 要自定义 USMT 还原的选项，请选择“自定义用户配置文件捕获”  。  
 
 #### <a name="customize-how-user-profiles-are-restored"></a>自定义如何还原用户配置文件
 
-允许你自定义想要还原到目标计算机的文件。 选择“文件”以指定想要用于还原用户配置文件的 USMT 包中的配置文件。 要添加配置文件，请在“文件名”框中输入文件的名称，然后选择“添加”。 “文件”窗格列出 USMT 使用的配置文件。 指定的 .xml 文件用于定义 USMT 还原的用户文件。  
+允许你自定义想要还原到目标计算机的文件。 选择“文件”  以指定想要用于还原用户配置文件的 USMT 包中的配置文件。 要添加配置文件，请在“文件名”  框中输入文件的名称，然后选择“添加”  。 “文件”窗格列出 USMT 使用的配置文件。 指定的 .xml 文件用于定义 USMT 还原的用户文件。  
 
 #### <a name="restore-local-computer-user-profiles"></a>还原本地计算机用户配置文件
 
@@ -1420,7 +1420,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 #### <a name="enable-verbose-logging"></a>启用详细日志记录
 
-启用此选项以生成更详细的日志文件信息。 还原状态时，任务序列将生成日志 Loadstate.log 并默认存储在 `%WinDir%\ccm\logs` 文件夹的任务序列日志文件夹中。  
+启用此选项以生成更详细的日志文件信息。 还原状态时，任务序列将生成日志 Loadstate.log  并默认存储在 `%WinDir%\ccm\logs` 文件夹的任务序列日志文件夹中。  
 
 
 
@@ -1438,11 +1438,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)  
 - [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory)  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“运行命令行”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行命令行”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="command-line"></a>命令行
 
@@ -1457,7 +1457,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`  
 
 > [!NOTE]  
-> 若要成功运行，在命令行操作之前使用 cmd.exe /c 命令。 这些操作的示例包括输出重定向、管道和复制命令。  
+> 若要成功运行，在命令行操作之前使用 cmd.exe /c 命令  。 这些操作的示例包括输出重定向、管道和复制命令。  
 
 #### <a name="disable-64-bit-file-system-redirection"></a>禁用 64 位文件系统重定向
 
@@ -1474,7 +1474,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 `i386`  
 
 > [!NOTE]  
-> 可使用“浏览”按钮浏览本地计算机上的文件和文件夹。 选择的任何内容还必须在目标计算机上。 它必须在相同的位置，并具有相同的文件名和文件夹名称。  
+> 可使用“浏览”按钮浏览本地计算机上的文件和文件夹  。 选择的任何内容还必须在目标计算机上。 它必须在相同的位置，并具有相同的文件名和文件夹名称。  
 
 #### <a name="package"></a>包
 
@@ -1496,14 +1496,14 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 #### <a name="account"></a>帐户
 
-指定此步骤运行命令行时要使用的 Windows 用户帐户。 命令行将使用指定帐户的权限运行。 选择“设置”以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
+指定此步骤运行命令行时要使用的 Windows 用户帐户。 命令行将使用指定帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
 
 > [!IMPORTANT]  
-> 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log 文件将记录这一失败。  
+> 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log  文件将记录这一失败。  
 
 ### <a name="options"></a>选项  
 
-除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置：  
+除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置  ：  
 
 #### <a name="success-codes"></a>成功代码
 
@@ -1515,7 +1515,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 使用此步骤运行指定的 Windows PowerShell 脚本。  
 
-可以在完整 OS 或 Windows PE 中运行此步骤。 若要在 Windows PE 中运行此步骤，请在启动映像中启用 PowerShell。 从启动映像属性中的“可选组件”选项卡中启用 WinPE-PowerShell 组件。 有关如何修改启动映像的详细信息，请参阅[管理启动映像](/sccm/osd/get-started/manage-boot-images)。  
+可以在完整 OS 或 Windows PE 中运行此步骤。 若要在 Windows PE 中运行此步骤，请在启动映像中启用 PowerShell。 从启动映像属性中的“可选组件”  选项卡中启用 WinPE-PowerShell 组件。 有关如何修改启动映像的详细信息，请参阅[管理启动映像](/sccm/osd/get-started/manage-boot-images)。  
 
 > [!NOTE]  
 > 默认情况下，Windows Embedded 操作系统上未启用 PowerShell。  
@@ -1524,11 +1524,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters)（从版本 1902 开始）<!--3556028-->  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“运行 PowerShell 脚本”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行 PowerShell 脚本”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="package"></a>包
 
@@ -1563,7 +1563,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 
-以下示例包含无效的参数。 前两项是 Windows PowerShell 命令行参数（-NoLogo 和 -ExecutionPolicy Unrestricted）。 脚本不会使用这些参数。  
+以下示例包含无效的参数。 前两项是 Windows PowerShell 命令行参数（-NoLogo 和 -ExecutionPolicy Unrestricted）   。 脚本不会使用这些参数。  
 
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
@@ -1578,7 +1578,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 - **AllSigned**：只能运行由受信任的发布者签发的脚本  
 
-- Undefined：请勿定义任何执行策略  
+-  Undefined：请勿定义任何执行策略  
 
 - **Bypass**：加载所有配置文件并运行所有脚本。 如果从 Internet 下载未签名的脚本，Windows PowerShell 不会在运行脚本前提示需要权限。  
 
@@ -1596,7 +1596,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 从版本 1902 开始，指定脚本的起始文件夹，最多 127 个字符。 此文件夹可以是目标计算机上的绝对路径，也可以是包含包的分发点文件夹的相对路径。 此字段是可选的。  
 
 > [!NOTE]  
-> 可使用“浏览”按钮浏览本地计算机上的文件和文件夹。 选择的任何内容还必须在目标计算机上。 它必须在相同的位置，并具有相同的文件名和文件夹名称。  
+> 可使用“浏览”按钮浏览本地计算机上的文件和文件夹  。 选择的任何内容还必须在目标计算机上。 它必须在相同的位置，并具有相同的文件名和文件夹名称。  
 
 #### <a name="time-out"></a>超时
 
@@ -1617,14 +1617,14 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 #### <a name="account"></a>帐户
 
 <!-- 3556028 -->
-从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 脚本将使用指定帐户的权限运行。 选择“设置”以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
+从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 脚本将使用指定帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
 
 > [!IMPORTANT]  
-> 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log 文件将记录这一失败。  
+> 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log  文件将记录这一失败。  
 
 ### <a name="options"></a>选项  
 
-除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置：  
+除默认选项外，还可配置此任务序列步骤的“选项”选项卡上的以下其他设置  ：  
 
 #### <a name="success-codes"></a>成功代码
 
@@ -1640,7 +1640,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 此步骤运行另一个任务序列。 这将创建任务序列之间的父子关系。 使用子任务序列，可以创建更模块化、可重复使用的任务序列。
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“运行任务序列”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行任务序列”  以添加此步骤。
 
 ### <a name="specifications-and-limitations"></a>规范和限制
 
@@ -1652,25 +1652,25 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 - 对于单个任务序列操作，状态消息均按正常发送。  
 
-- 任务序列将条目写入 smsts.log 文件，包括在子任务序列启动时使其清晰明确的新日志条目。  
+- 任务序列将条目写入 smsts.log  文件，包括在子任务序列启动时使其清晰明确的新日志条目。  
 
 <!--the following points are from SCCMdocs issue #1079-->
 
 - 不能选择具有启动映像引用的任务序列。 对于需要启动映像的任何部署，请在父任务序列上指定它。  
 
-- 如果禁用子任务序列，部署将失败。 不能使用“出错时继续”选项来解决此限制。  
+- 如果禁用子任务序列，部署将失败。 不能使用“出错时继续”  选项来解决此限制。  
 
-- 如果子任务序列包含被视为“高影响力”的步骤，软件中心不会检测到它并会显示“高影响力”通知。 在“用户通知”选项卡上修改父任务序列的属性，以指定“这是具有高影响力的任务序列”。  
+- 如果子任务序列包含被视为“高影响力”  的步骤，软件中心不会检测到它并会显示“高影响力”通知。 在“用户通知”选项卡上修改父任务序列的属性，以指定“这是具有高影响力的任务序列”  。  
 
 - 如果子任务序列缺少包引用，那么查看父任务序列不会检测到此状态。 如果编辑父任务序列，则在对父任务序列进行更改时，它会检测子任务序列中缺少的任何引用。  
 
 ### <a name="properties"></a>属性
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="select-task-sequence-to-run"></a>选择要运行的任务序列
 
-选择“浏览”，并选择子任务序列。 “选择任务序列”对话框不会显示父任务序列。
+选择“浏览”  ，并选择子任务序列。 “选择任务序列”  对话框不会显示父任务序列。
 
 
 
@@ -1694,11 +1694,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 可以在完整 OS 或 Windows PE 中运行此步骤。  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“设置动态变量”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“设置动态变量”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="dynamic-rules-and-variables"></a>动态规则和变量
 
@@ -1720,12 +1720,12 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
     - **现有任务序列变量**：从现有任务序列变量的列表中选择一个或多个变量。 不可选择数组变量。  
 
-    - **自定义任务序列变量**：定义自定义任务序列变量。 你也可指定现有任务序列变量。 此设置有助于指定现有变量数组，如 OSDAdapter，因为变量数组不在现有任务序列变量的列表中。  
+    - **自定义任务序列变量**：定义自定义任务序列变量。 你也可指定现有任务序列变量。 此设置有助于指定现有变量数组，如 OSDAdapter  ，因为变量数组不在现有任务序列变量的列表中。  
 
-为规则选择变量后，为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“机密值”  来隐藏该变量的值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword 变量。  
+为规则选择变量后，为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“机密值”  来隐藏该变量的值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword  变量。  
 
 > [!IMPORTANT]  
-> 当使用“设置动态变量”步骤导入任务序列时，Configuration Manager 删除标记为“机密值”的所有变量值。 导入任务序列后请重新输入动态变量的值。  
+> 当使用“设置动态变量”步骤导入任务序列时，Configuration Manager 删除标记为“机密值”的所有变量值   。 导入任务序列后请重新输入动态变量的值。  
 
 
 
@@ -1740,11 +1740,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables)  
 - [任务序列变量](/sccm/osd/understand/task-sequence-variables)  
 
-选择任务序列编辑器中的“添加”，选择“常规”，然后选择“设置任务序列变量”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“设置任务序列变量”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="task-sequence-variable"></a>任务序列变量：
 
@@ -1776,7 +1776,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 此步骤使用 Windows PE 安装目录 `X:\Windows` 替换 sysprep.inf 或 unattend.xml 目录变量，例如 `%WINDIR%` 和 `%ProgramFiles%`。 任务序列会忽略使用这些环境变量指定的变量。  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“安装 Windows 和 ConfigMgr”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“安装 Windows 和 ConfigMgr”  以添加此步骤。
 
 ### <a name="step-actions"></a>步骤操作
 
@@ -1798,23 +1798,23 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
     3. 重新启动到部署的 OS。  
 
-    4. Windows 最小化安装使用先前指定的已禁用所有最终用户交互的 sysprep.inf 或 unattend.xml 答案文件运行。 如果使用“应用网络设置”步骤加入域，则该信息位于答案文件。 Windows 最小化安装会将计算机加入域。  
+    4. Windows 最小化安装使用先前指定的已禁用所有最终用户交互的 sysprep.inf 或 unattend.xml 答案文件运行。 如果使用“应用网络设置”步骤加入域，则该信息位于答案文件  。 Windows 最小化安装会将计算机加入域。  
 
 - 基于 Setup.exe 的安装。 运行 Setup.exe 会执行典型的 Windows 安装过程：  
 
-    1. 将“应用操作系统”步骤中指定的 OS 升级包复制到硬盘驱动器。  
+    1. 将“应用操作系统”步骤中指定的 OS 升级包复制到硬盘驱动器  。  
 
     2. 重新启动到新部署的 OS。  
 
-    3. Windows 最小化安装使用先前指定的已禁用所有用户界面设置的 sysprep.inf 或 unattend.xml 答案文件运行。 如果使用“应用网络设置”步骤加入域，则该信息位于答案文件。 Windows 最小化安装会将计算机加入域。  
+    3. Windows 最小化安装使用先前指定的已禁用所有用户界面设置的 sysprep.inf 或 unattend.xml 答案文件运行。 如果使用“应用网络设置”步骤加入域，则该信息位于答案文件  。 Windows 最小化安装会将计算机加入域。  
 
 #### <a name="set-up-the-configuration-manager-client"></a>安装 Configuration Manager 客户端  
 
 1. Windows 最小化安装结束后，任务序列将使用 setupcomplete.cmd 继续运行。  
 
-2. 根据在“应用 Windows 设置”步骤中选择的选项，启用或禁用本地管理员帐户。  
+2. 根据在“应用 Windows 设置”  步骤中选择的选项，启用或禁用本地管理员帐户。  
 
-3. 使用先前下载的包以及此步骤中指定的安装属性，安装 Configuration Manager 客户端。 客户端以“设置模式”进行安装。 此模式防止客户端在任务序列完成之前处理新策略请求。  
+3. 使用先前下载的包以及此步骤中指定的安装属性，安装 Configuration Manager 客户端。 客户端以“设置模式”进行安装。 此模式防止客户端在任务序列完成之前处理新策略请求。 有关详细信息，请参阅[预配模式](/sccm/osd/understand/provisioning-mode)。  
 
 4. 等待客户端完全可以操作。  
 
@@ -1828,15 +1828,15 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="client-package"></a>客户端包
 
-选择“浏览”，然后选择此步骤要使用的 Configuration Manager 客户端安装包。  
+选择“浏览”，然后选择此步骤要使用的 Configuration Manager 客户端安装包  。  
 
 #### <a name="use-pre-production-client-package-when-available"></a>如果可用，使用预生产客户端包
 
-如有可用的预生产客户端包，并且该计算机是试点集合的成员，则任务序列使用此包而非生产客户端包。 预生产客户端是在生产环境中用于测试的较新版本。 选择“浏览”，然后选择此步骤要使用的预生产客户端安装包。  
+如有可用的预生产客户端包，并且该计算机是试点集合的成员，则任务序列使用此包而非生产客户端包。 预生产客户端是在生产环境中用于测试的较新版本。 选择“浏览”，然后选择此步骤要使用的预生产客户端安装包  。  
 
 #### <a name="installation-properties"></a>安装属性
 
@@ -1847,7 +1847,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 ### <a name="options"></a>选项
 
 > [!NOTE]  
-> 请勿启用“选项”选项卡上的“出错时继续”。如果此步骤出错，不管是否启用此设置，任务序列都将失败。  
+> 请勿启用“选项”  选项卡上的“出错时继续”  。如果此步骤出错，不管是否启用此设置，任务序列都将失败。  
 
 
 
@@ -1865,11 +1865,11 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 - [_SMSTSOSUpgradeActionReturnCode](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)  
 - [OSDSetupAdditionalUpgradeOptions](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
 
-选择任务序列编辑器中的“添加”，选择“映像”，然后选择“升级操作系统”以添加此步骤。
+选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“升级操作系统”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
 
-在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
+在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
 
 #### <a name="upgrade-package"></a>升级包
 
@@ -1893,7 +1893,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 升级过程中将驱动程序添加到目标计算机。 此设置对应于 Windows 安装程序命令行选项 `/InstallDriver`。 驱动程序必须与 Windows 10 兼容。 指定下列选项之一：  
 
-- **驱动程序包：** 选择“浏览”并从列表中选择现有的驱动程序包。  
+- **驱动程序包：** 选择“浏览”  并从列表中选择现有的驱动程序包。  
 
 - **暂存内容：** 选择此选项以指定驱动程序包的位置。 可以指定本地文件夹、网络路径或任务序列变量。 将变量用作源路径时，必须在任务序列中提前设置其值。 例如，通过使用[下载包内容](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)步骤。  
 
@@ -1906,7 +1906,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 在不启动升级进程的情况下执行 Windows 安装程序兼容性扫描。 此设置对应于 Windows 安装程序命令行选项 `/Compat ScanOnly`。 使用此选项部署整个 OS 升级包。
 
 <!--SCCMDocs-pr issue 2812-->
-从版本 1806 开始，当启用此选项时，此步骤不会将 Configuration Manager 客户端置于预配模式。 Windows 安装程序在后台以无提示方式运行，且客户端将继续正常工作。
+从版本 1806 开始，当启用此选项时，此步骤不会将 Configuration Manager 客户端置于预配模式。 Windows 安装程序在后台以无提示方式运行，且客户端将继续正常工作。 有关详细信息，请参阅[预配模式](/sccm/osd/understand/provisioning-mode)。
 
 安装程序将退出代码作为扫描结果返回。 下表提供了一些常见的退出代码：  
 

@@ -11,12 +11,12 @@ ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dbb2b7fadf13a49c25e2eb9bb6fcc608d3869f6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7f096f9ff9baaff2411289c27282ab53eb697b0b
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495856"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354985"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中用于软件更新的图标
 
@@ -39,7 +39,7 @@ ms.locfileid: "65495856"
  没有操作问题。  
 
 ### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”列来识别过期的软件更新。  
+ ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”  列来识别过期的软件更新。  
 
  **描述：**  
 
@@ -50,7 +50,7 @@ ms.locfileid: "65495856"
  没有操作问题。
 
 ### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”列来识别被取代的软件更新。  
+ ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”  列来识别被取代的软件更新。  
 
  **描述：**  
 
@@ -58,7 +58,7 @@ ms.locfileid: "65495856"
 
 - 增强、改进或添加到由以前发布的一个或多个软件更新提供的修补程序。  
 
-- 提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在软件更新的取代文件包中。  
+- 提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在取代软件更新的文件包中。  
 
 - 换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft Office 的产品更新进行的修订可能会删除对较旧操作系统的支持，但会在初始软件更新版本中添加对新语言的额外支持。  
 
@@ -124,3 +124,8 @@ ms.locfileid: "65495856"
  **操作问题：**  
 
  当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，需要将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
+
+
+## <a name="next-steps"></a>后续步骤 
+
+[规划软件更新](/sccm/sum/plan-design/plan-for-software-updates)
