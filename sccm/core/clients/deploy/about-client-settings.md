@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3271c0fbd8673e33d7a7bf6a9c6da4b0ce978377
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: a9610024219107e81c4440a1e96780aaf300e20f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715725"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -295,7 +295,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 如果希望为用户提供更多时间（超过截止时间）来安装所需的应用程序或软件更新部署，请将此选项设置为“是”  。 此宽限期适用于计算机延期关闭以及用户需要安装大量应用程序或更新部署的情况。 例如，如果用户休假回来，客户端安装的应用程序部署已过期，而需要等待很长时间，此设置将有所帮助。
 
-设置 1 到 120 小时的宽限期。 将此设置和“根据用户偏好延迟此强制部署”的部署属性结合使用  。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。
+设置 1 到 120 小时的宽限期。 将此设置和“根据用户偏好延迟此强制部署”的部署属性结合使用  。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications#delay-enforcement-with-a-grace-period)。
 
 
 ## <a name="computer-restart"></a>计算机重启

@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 988e834de78bac64be43600ca73d0d51ff29bf4b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 332cdf00256ccfbac07b352c22b232edd4ba9363
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716152"
 ---
 # <a name="cmtrace"></a>CMTrace
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 可通过它查看和监视日志文件，包括以下类型：  
 
@@ -48,7 +48,7 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 
 ### <a name="file-menu"></a>“文件”菜单
 
-“文件”菜单中提供以下操作：  
+“文件”菜单中提供以下操作  ：  
 - [打开](#open)
 - [在服务器上打开](#open-on-server)
 - [打印](#print)
@@ -84,7 +84,7 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 #### <a name="preferences"></a>首选项
 配置 CMTrace 设置。 可用选项如下：  
 
-- “常规” 选项卡  
+- “常规”  选项卡  
 
      - **更新间隔**：控制 CMTrace 检查日志文件更改和加载新行的频率。 默认情况下，此值为 500 毫秒。  
 
@@ -92,22 +92,22 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 
      - **列**：配置日志视图中显示的列及其显示顺序。 默认情况下，它显示日志文本、组件、日期/时间和线程。  
 
-- “打印”选项卡  
+- “打印”选项卡   
 
      - **列**：配置它在打印日志文件时使用的列及其显示顺序。 默认情况下，打印的列与显示的列相同。  
 
      - **方向**：设置打印日志文件时的默认打印方向。 在“打印”对话框中覆盖此设置。 默认情况下，它使用“纵向”方向。  
  
-- “高级”选项卡  
+- “高级”选项卡   
 
      - **刷新间隔**：强制 CMTrace 在加载大量行时以指定的时间间隔更新日志视图。 默认情况下，此选项处于禁用状态且值为零。  
 
         > [!Note]  
-        > 一般情况下，请勿修改“刷新间隔”。 它可能会显著增加打开大型日志文件所需的时间。 
+        > 一般情况下，请勿修改“刷新间隔”  。 它可能会显著增加打开大型日志文件所需的时间。 
 
 
 ### <a name="tools-menu"></a>“工具”菜单
-“工具”菜单中提供以下操作：  
+“工具”菜单中提供以下操作  ：  
 - [查找](#find)
 - [查找下一个](#find-next)
 - [复制到剪贴板](#copy-to-clipboard)
@@ -115,8 +115,8 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 - [筛选器](#filter)
 - [错误查找](#error-lookup)
 - [暂停](#pause)
-- [显示/隐藏详细信息](#show/hide-details)
-- [显示/隐藏信息窗格](#show/hide-info-pane)
+- [显示/隐藏详细信息](#showhide-details)
+- [显示/隐藏信息窗格](#showhide-info-pane)
 
 #### <a name="find"></a>查找
 在打开的日志文件中搜索指定的文本字符串。  
@@ -136,7 +136,7 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 
 - 如果输入十进制数或十六进制数，CMTrace 会尝试将该值与“线程”列匹配。 此行为用于突出显示单个线程的处理，而不筛选掉可能与其交互的其他线程。  
 
-- 若要比较字符串大小写，请启用“区分大小写”选项。  
+- 若要比较字符串大小写，请启用“区分大小写”选项  。  
  
 #### <a name="filter"></a>筛选器
 根据指定条件显示或隐藏日志行。 将筛选器应用于四列中的任何一列，无论它们是否可见。 这些设置适用于每个打开的日志文件。 
@@ -176,7 +176,7 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 
 当你选中某行时，系统会使用 Windows 所选内容配色方案暂时突出显示该行。 
 
-突出显示的行符合你使用“工具”菜单中的“突出显示”选项定义的条件。 突出显示功能使用在“首选项”中指定的颜色。
+突出显示的行符合你使用“工具”菜单中的“突出显示”选项定义的条件   。 突出显示功能使用在“首选项”中指定的颜色  。
 
 CMTrace 使用红色背景和黄色文本颜色显示有错误的行。 在 CCM 格式日志中，日志条目具有一个将该条目指示为错误的显式类型值。 对于其他日志格式，CMTrace 会在每个条目中以不区分大小写的形式搜索与“error”匹配的所有文本字符串。
 
@@ -196,7 +196,7 @@ CMTrace 使用红色背景和黄色文本颜色显示有错误的行。 在 CCM 
 
 - 更易于阅读日志窗格中不完全可见的长条目  
 
-使用“工具”菜单上的“显示/隐藏信息窗格”选项显示或隐藏信息窗格。 如果信息窗格占用日志窗口的一半以上，CMTrace 会自动隐藏它。
+使用“工具”菜单上的“显示/隐藏信息窗格”选项显示或隐藏信息窗格   。 如果信息窗格占用日志窗口的一半以上，CMTrace 会自动隐藏它。
 
 
 ### <a name="progress-bar"></a>进度栏
@@ -219,7 +219,7 @@ CMTrace 支持[文件关联](#file-associations)和[拖放](#drag-and-drop)。
 
 ### <a name="file-associations"></a>文件关联 
 
-CMTrace 可以将自身与 .log 和 .lo_ 文件扩展名相关联。 程序启动时，它会检查注册表，确定它是否已与这些文件扩展名相关联。 如果 CMTrace 尚未与任何文件扩展名相关联，则会提示你将文件扩展名与 CMTrace 相关联。 如果选择“不要再对此询问我”，CMTrace 会在此计算机上运行时跳过此检查。
+CMTrace 可以将自身与 .log 和 .lo_ 文件扩展名相关联。 程序启动时，它会检查注册表，确定它是否已与这些文件扩展名相关联。 如果 CMTrace 尚未与任何文件扩展名相关联，则会提示你将文件扩展名与 CMTrace 相关联。 如果选择“不要再对此询问我”，CMTrace 会在此计算机上运行时跳过此检查  。
 
 
 ### <a name="drag-and-drop"></a>拖放
@@ -236,7 +236,7 @@ CMTrace 默认保存你打开的最后一个日志位置。 此行为在站点�
 
 第一次在客户端上启动它时，它默认为当前工作目录。 此位置可能是保存 CMTrace 的路径，也可能是类似于 `%userprofile%\Desktop` 的路径。 
 
-注册表项 `HKEY_CURRENT_USER\Software\Microsoft\Trace32` 中的“Last Directory”值可控制此默认位置。 如果在客户端上将此值设置为 `%windir%\CCM\Logs`，则 CMTrace 会在你第一次运行它时在该客户端日志位置中打开文件。
+注册表项 `HKEY_CURRENT_USER\Software\Microsoft\Trace32` 中的“Last Directory”值可控制此默认位置  。 如果在客户端上将此值设置为 `%windir%\CCM\Logs`，则 CMTrace 会在你第一次运行它时在该客户端日志位置中打开文件。
 
 
 ## <a name="see-also"></a>另请参阅

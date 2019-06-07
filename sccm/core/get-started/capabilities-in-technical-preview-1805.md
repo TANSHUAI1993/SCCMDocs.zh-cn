@@ -12,16 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ef05ac5a931addb5dd5a8dc7d1b04bd4d50e1c
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 07e69561580a22128cf9a5b7b97f33e10cbb0456
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443111"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716044"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager Technical Preview 1805 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -49,23 +49,23 @@ Steps to workaround, if any.
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence"></a>使用手动配置的任务序列阶段创建分阶段部署
 <!--1358148-->
-现在可以使用手动配置的任务序列阶段[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。 可以从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段。 
+现在可以使用手动配置的任务序列阶段[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。 可以从“创建分阶段部署”向导的“阶段”  选项卡添加最多 10 个其他阶段。 
 
 
 ### <a name="try-it-out"></a>试试看！
 按照说明创建在其中手动配置所有阶段的分阶段部署。 发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。 
 
-1. 在“软件库”工作区中，展开“操作系统”，并选择“任务序列”。  
+1. 在“软件库”工作区中，展开“操作系统”，并选择“任务序列”    。  
 
-2. 右键单击现有任务序列并选择“创建分阶段部署”。  
+2. 右键单击现有任务序列并选择“创建分阶段部署”  。  
 
-3. 在“常规”选项卡上，为分阶段部署提供名称、说明（可选），并选择“手动配置所有阶段”。  
+3. 在“常规”  选项卡上，为分阶段部署提供名称、说明（可选），并选择“手动配置所有阶段”  。  
 
-4. 在“阶段”选项卡上，单击“添加”。  
+4. 在“阶段”  选项卡上，单击“添加”  。  
 
-5. 指定该阶段**名称**，然后浏览到目标“阶段集合”。  
+5. 指定该阶段**名称**，然后浏览到目标“阶段集合”  。  
 
-6. 在“阶段设置”选项卡上，为每个计划设置选择一个选项，然后在完成后选择“下一步”。  
+6. 在“阶段设置”  选项卡上，为每个计划设置选择一个选项，然后在完成后选择“下一步”  。  
 
     - 上一阶段成功的标准（此选项对第一阶段禁用。）
         - **部署成功百分比**：指定根据上一阶段成功标准成功完成部署的设备所占的百分比。  
@@ -76,11 +76,11 @@ Steps to workaround, if any.
 
     - 设备成为目标后，安装软件
         - **尽快**：确定目标设备后立即设置设备上的安装截止时间。
-        - **截止时间(相对于确定目标设备的时间)**：确定目标设备后设置特定天数的安装截止时间。  
+        - **截止时间(相对于确定目标设备的时间)** ：确定目标设备后设置特定天数的安装截止时间。  
      
 7. 完成阶段设置向导。
 
-8. 在创建分阶段部署向导的“阶段”选项卡上，现在可以添加、删除、重新排序，或编辑此部署的各个阶段。  
+8. 在创建分阶段部署向导的“阶段”  选项卡上，现在可以添加、删除、重新排序，或编辑此部署的各个阶段。  
 
 9. 完成“创建分阶段部署”向导。  
 
@@ -88,9 +88,9 @@ Steps to workaround, if any.
 
 ## <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>对 Azure 资源管理器的云分发点支持
 <!--1322209-->
-在创建[云分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)实例时，向导现提供选项来创建“Azure 资源管理器部署”。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+在创建[云分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)实例时，向导现提供选项来创建“Azure 资源管理器部署”  。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
-云分发点向导仍提供使用 Azure 管理证书的“经典服务部署”选项。 若要简化资源的部署和管理，我们建议为所有新的云分发点使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有云分发点。
+云分发点向导仍提供使用 Azure 管理证书的“经典服务部署”  选项。 若要简化资源的部署和管理，我们建议为所有新的云分发点使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有云分发点。
 
 Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管理器部署模型。 使用 Azure 资源管理器部署创建新的云分发点，然后删除经典云分发点。 
 
@@ -107,18 +107,18 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 ### <a name="try-it-out"></a>试试看！  
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后选择“云分发点”。 单击功能区中的“创建云分发点”。   
+1. 在 Configuration Manager 控制台的“管理”  工作区中，展开“云服务”  ，然后选择“云分发点”  。 单击功能区中的“创建云分发点”  。   
 
-2. 在“常规”页上，选择“Azure 资源管理器部署”。 单击“登录”以使用 Azure 订阅管理员帐户进行身份验证。 该向导使用集成先决条件过程中存储的 Azure AD 订阅信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅。 单击“下一步” 。  
+2. 在“常规”  页上，选择“Azure 资源管理器部署”  。 单击“登录”  以使用 Azure 订阅管理员帐户进行身份验证。 该向导使用集成先决条件过程中存储的 Azure AD 订阅信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅。 单击“下一步”  。  
 
-3. 在“设置”页上，像往常一样提供服务器 PKI 证书文件。 此证书定义Azure 使用的云分发点服务 FQDN。 选择“区域”，然后选择资源组选项“新建”或“使用现有”。 输入新的资源组名称，或从下拉列表中选择现有资源组。  
+3. 在“设置”  页上，像往常一样提供服务器 PKI 证书文件  。 此证书定义Azure 使用的云分发点服务 FQDN  。 选择“区域”  ，然后选择资源组选项“新建”  或“使用现有”  。 输入新的资源组名称，或从下拉列表中选择现有资源组。  
 
 4. 完成向导。  
 
 > [!NOTE]  
-> 对于所选的 Azure AD 服务器应用，Azure 将分配订阅“参与者”权限。  
+> 对于所选的 Azure AD 服务器应用，Azure 将分配订阅“参与者”  权限。  
 
-使用服务连接点上的“cloudmgr.log”来监视服务部署进度。
+使用服务连接点上的“cloudmgr.log”  来监视服务部署进度。
 
 
 
@@ -151,12 +151,12 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 
 现在可以在启用共同管理后，将设备配置工作负荷从 Configuration Manager 转移到 Intune。 转移此工作负荷可以使用 Intune 部署 MDM 策略，同时继续使用 Configuration Manager 来部署应用程序。 
 
-要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”或“全部”。 有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
+要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”  或“全部”  。 有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
 
 > [!Note]  
-> 移动此工作负荷也会移动“资源访问”和“Endpoint Protection”工作负荷，这些工作负荷是设备配置工作负荷的子集。
+> 移动此工作负荷也会移动“资源访问”  和“Endpoint Protection”  工作负荷，这些工作负荷是设备配置工作负荷的子集。
 
-转移此工作负荷时，仍然可以将设置从 Configuration Manager 部署到共同托管设备，即使 Intune 为设备配置颁发机构。 此异常可用于配置组织所需但在 Intune 中尚不可用的设置。 在 Configuration Manager 配置基线上指定此异常。 创建基线时，或在现有基线属性的“常规”选项卡上，启用选项“即使是共同托管客户端也要始终应用此基线”。 
+转移此工作负荷时，仍然可以将设置从 Configuration Manager 部署到共同托管设备，即使 Intune 为设备配置颁发机构。 此异常可用于配置组织所需但在 Intune 中尚不可用的设置。 在 Configuration Manager 配置基线上指定此异常。 创建基线时，或在现有基线属性的“常规”  选项卡上，启用选项“即使是共同托管客户端也要始终应用此基线”  。 
 
 
 
@@ -175,22 +175,22 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 
 
 ### <a name="try-it-out"></a>试试看！
- 尝试完成任务。 然后发送[反馈](#bkmk_feedback)，以便我们了解其运作状况。
+ 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区。 选择“分发点”节点。 选择目标分发点，然后单击功能区中的“属性”。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区。 选择“分发点”  节点。 选择目标分发点，然后单击功能区中的“属性”  。  
 
-2. 在“常规”选项卡上，启用“调整下载速度以使用未使用的网络带宽(Windows LEDBAT)”。  
+2. 在“常规”  选项卡上，启用“调整下载速度以使用未使用的网络带宽(Windows LEDBAT)”  。  
 
 
 
 ## <a name="cloud-management-dashboard"></a>云管理仪表板
 <!--1358461-->
-新云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。  
+新云管理仪表板  为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。  
 
 下面的屏幕截图是云管理仪表板的一部分，显示了两个可用磁贴：  
 ![云管理仪表板磁贴 CMG 流量和当前联机客户端](media/1358461-cmg-dashboard.png)
 
-此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。
+此功能还包括用于实时验证的 CMG 连接分析器  ，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。
 
 
 ### <a name="prerequisites"></a>先决条件
@@ -204,21 +204,21 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 
 #### <a name="cloud-management-dashboard"></a>云管理仪表板
 
-在 Configuration Manager 控制台中，转到“监视”工作区。 选择“云管理”节点，并查看仪表板磁贴。  
+在 Configuration Manager 控制台中，转到“监视”  工作区。 选择“云管理”  节点，并查看仪表板磁贴。  
 
 #### <a name="cmg-connection-analyzer"></a>CMG 连接分析器
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”并选择“云管理网关”。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区。 展开“云服务”  并选择“云管理网关”  。  
 
-2. 选择目标 CMG 实例，然后选择功能区中的“连接分析器”。  
+2. 选择目标 CMG 实例，然后选择功能区中的“连接分析器”  。  
 
 3. 在 CMG 连接分析器窗口中，选择以下选项之一对服务进行身份验证：  
 
-     1. Azure AD 用户：使用此选项来模拟与登录到加入 Azure AD 的 Windows 10 设备的云端用户标识相同的通信。 单击“登录”以安全输入此 Azure AD 用户帐户的凭据。  
+     1.  Azure AD 用户：使用此选项来模拟与登录到加入 Azure AD 的 Windows 10 设备的云端用户标识相同的通信。 单击“登录”  以安全输入此 Azure AD 用户帐户的凭据。  
 
-     2. 客户端证书：使用此选项来模拟与具有[客户端身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate)的 Configuration Manager 客户端相同的通信。  
+     2.  客户端证书：使用此选项来模拟与具有[客户端身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate)的 Configuration Manager 客户端相同的通信。  
 
-4. 单击“启动”开始分析。 结果将显示在分析器窗口中。 选择一个条目，查看“说明”字段中的更多详细信息。  
+4. 单击“启动”  开始分析。 结果将显示在分析器窗口中。 选择一个条目，查看“说明”字段中的更多详细信息。  
 
 
 
@@ -257,12 +257,12 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 ### <a name="try-it-out"></a>试试看！
 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区，并选择“设备集合”。 选择目标集合，然后单击功能区中的“启动 CMPivot”，以便启动该工具。  
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”  工作区，并选择“设备集合”  。 选择目标集合，然后单击功能区中的“启动 CMPivot”  ，以便启动该工具。  
 
 2. 界面进一步提供有关使用该工具的信息。 
      - 可以在顶部手动输入查询字符串，或单击联机文档中的链接。
-     - 单击其中一个实体将其添加到查询字符串。 
-     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.microsoft.com/azure/kusto/query/)。
+     - 单击其中一个实体  将其添加到查询字符串。 
+     - 有关表运算符  、聚合函数  和标量函数  的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.microsoft.com/azure/kusto/query/)。
 
 
 
@@ -301,15 +301,15 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 ### <a name="prerequisites"></a>先决条件  
 
-- 针对 HTTP 客户端连接配置的管理点。 在站点系统角色属性的“常规”选项卡上设置此选项。  
+- 针对 HTTP 客户端连接配置的管理点。 在站点系统角色属性的“常规”  选项卡上设置此选项。  
 
-- 针对 HTTP 客户端连接配置的分发点。 在站点系统角色属性的“常规”选项卡上设置此选项。 请勿启用选项“允许客户端进行匿名连接”。  
+- 针对 HTTP 客户端连接配置的分发点。 在站点系统角色属性的“常规”  选项卡上设置此选项。 请勿启用选项“允许客户端进行匿名连接”  。  
 
 - 云管理网关。  
 
 - 将站点载入 Azure AD 以便进行云管理。  
 
-    - 如果你的站点已满足此先决条件，则需更新 Azure AD 应用程序。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure Active Directory 租户”。 选择 Azure AD 租户，再选择“应用程序”窗格中 Web 应用程序，然后单击功能区中的“更新应用程序设置”。  
+    - 如果你的站点已满足此先决条件，则需更新 Azure AD 应用程序。 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“云服务”  ，然后选择“Azure Active Directory 租户”  。 选择 Azure AD 租户，再选择“应用程序”  窗格中 Web 应用程序，然后单击功能区中的“更新应用程序设置”  。  
 
 - 运行 Windows 10 版本 1803 和加入 Azure AD 的客户端。 （从技术上讲，此要求仅适用于[方案 3](#bkmk_token3)。） 
 
@@ -317,16 +317,16 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 ### <a name="try-it-out"></a>试试看！
 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”。 选择一个站点，然后单击功能区中的“属性”。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  。 选择一个站点，然后单击功能区中的“属性”  。  
 
-2. 切换到“客户端计算机通信”选项卡。选择选项“HTTPS 或 HTTP”，然后启用新选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。  
+2. 切换到“客户端计算机通信”  选项卡。选择选项“HTTPS 或 HTTP”  ，然后启用新选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  。  
 
 参阅之前的[方案列表](#bkmk_token)进行验证。
 
 > [!Tip]
 > 在此版本中，请等待 30 分钟以便管理点从站点接收并配置新证书。
 
-可以在 Configuration Manager 控制台中查看这些证书。 转到“管理”工作区，展开“安全”，然后选择“证书”节点。 查找“SMS 发证”根证书，以及由 SMS 发证根颁发的站点服务器角色证书。
+可以在 Configuration Manager 控制台中查看这些证书。 转到“管理”  工作区，展开“安全”  ，然后选择“证书”  节点。 查找“SMS 发证”  根证书，以及由 SMS 发证根颁发的站点服务器角色证书。
 
 
 ### <a name="known-issues"></a>已知问题
@@ -334,7 +334,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 - 操作系统部署方案仍需要网络访问帐户。  
 
-- 快速反复启用和禁用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”可能会导致证书不正确地绑定到站点系统角色。 由“SMS 发证”证书颁发的任何证书都不会绑定到 Windows Server Internet Information Services (IIS) 中的网站。 若要解决此问题，请从 Windows 的 SMS 证书存储中删除由“SMS 发证”颁发的所有证书，然后重启 smsexec 服务。
+- 快速反复启用和禁用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  可能会导致证书不正确地绑定到站点系统角色。 由“SMS 发证”证书颁发的任何证书都不会绑定到 Windows Server Internet Information Services (IIS) 中的网站。 若要解决此问题，请从 Windows 的 SMS  证书存储中删除由“SMS 发证”颁发的所有证书，然后重启 smsexec 服务。
 
 
 
@@ -347,18 +347,18 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 有关 SCUP 工具一般用途的详细信息，请参阅 [System Center Updates Publisher](/sccm/sum/tools/updates-publisher)。
 
 ### <a name="prerequisites"></a>先决条件
-- 启用和部署“软件更新”组中的客户端设置 **“启用第三方软件更新”**。
+- 启用和部署“软件更新”  组中的客户端设置 **“启用第三方软件更新”** 。
 - 如果 WSUS 在软件更新点的单独服务器上，则必须在远程 WSUS 服务器上执行以下选项之一：
     - 启用 Windows 中的远程注册表服务  
     或
-    - 在注册表项 `HKLM\Software\Microsoft\Update Services\Server\Setup` 中，创建一个名为“EnableSelfSignedCertificates”的新 DWORD，值为 `1`。 
+    - 在注册表项 `HKLM\Software\Microsoft\Update Services\Server\Setup` 中，创建一个名为“EnableSelfSignedCertificates”  的新 DWORD，值为 `1`。 
 
 ### <a name="try-it-out"></a>试试看！
 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“站点配置”并选择“站点”。 选择顶层站点，单击功能区中的“配置站点组件”，然后选择“软件更新点”。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区。 展开“站点配置”  并选择“站点”  。 选择顶层站点，单击功能区中的“配置站点组件”  ，然后选择“软件更新点”  。  
 
-2. 切换到“第三方更新”选项卡。选择选项“启用第三方软件更新”，然后选择选项“Configuration Manager 自动管理证书”。
+2. 切换到“第三方更新”  选项卡。选择选项“启用第三方软件更新”  ，然后选择选项“Configuration Manager 自动管理证书”  。
 
 3. 继续执行典型 SCUP 工作流的其余部分以导入第三方软件更新目录，然后将更新部署到客户端。
 
@@ -369,7 +369,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 Windows 10 就地升级的默认任务序列模板现在包括在升级过程失败的情况下要添加的带建议操作的另一个新组。 这些操作有助于进行故障排除。
 
-### <a name="new-groups-under-run-actions-on-failure"></a>“在失败情况下运行操作”下的新组
+### <a name="new-groups-under-run-actions-on-failure"></a>“在失败情况下运行操作”  下的新组
 - **收集日志**：若要从客户端中收集日志，请在此组中添加步骤。 
     - 一种常见的做法是将日志文件复制到网络共享中。 若要建立此连接，请使用[连接到网络文件夹](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)步骤。 
     - 若要执行复制操作，请通过[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)或[运行 PowerShell 脚本](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)步骤来使用自定义脚本或实用工具。
@@ -383,7 +383,7 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
 - **运行诊断工具**：若要运行其他诊断工具，请在此组中添加步骤。 这些工具应在出现故障后尽可能快地自动收集系统中的其他信息。
     - 其中一个工具是 Windows [SetupDiag](/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可用于获取有关 Windows 10 升级失败原因的详细信息。
          - 在 Configuration Manager 中，[创建工具包](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program)。
-         - 向该组任务序列添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 使用“包”选项来引用该工具。 以下字符串是一个示例命令行：  
+         - 向该组任务序列添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 使用“包”  选项来引用该工具。 以下字符串是一个示例命令行  ：  
              `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`
 
 
@@ -418,7 +418,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 - 它现在支持脱机反馈。 从控制台保存反馈，然后通过连接 internet 的系统上传到 Microsoft。 使用位于 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` 中的新脱机反馈上载程序工具。 若要查看可用和所需的命令行选项，使用 `--help` 选项运行工具。 已连接的系统需要访问 **petrol.office.microsoft.com**。
 
 ### <a name="known-issues"></a>已知问题
-在连接 Internet 的计算机上的控制台内使用“发送笑脸”或“发送苦脸”时，可能会看到以下返回消息：“发送反馈时出错了”。 如果单击“更多详细信息”，它将显示以下文本：`{"Message":""}`。 此错误是由后端反馈系统中的响应的已知问题所导致的。 可以忽略此错误。 Microsoft 仍会收到你的反馈。 （如果详细信息显示其他消息，请使用脱机反馈选项在稍后重试发送反馈的步骤。）
+在连接 Internet 的计算机上的控制台内使用“发送笑脸”  或“发送苦脸”  时，可能会看到以下返回消息：“发送反馈时出错了”。 如果单击“更多详细信息”  ，它将显示以下文本：`{"Message":""}`。 此错误是由后端反馈系统中的响应的已知问题所导致的。 可以忽略此错误。 Microsoft 仍会收到你的反馈。 （如果详细信息显示其他消息，请使用脱机反馈选项在稍后重试发送反馈的步骤。）
 
 
 
@@ -448,9 +448,9 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 ### <a name="try-it-out"></a>试试看！
 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“站点配置”并选择“站点”。 选择顶层站点，单击功能区中的“配置站点组件”，然后选择“软件更新点”。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区。 展开“站点配置”  并选择“站点”  。 选择顶层站点，单击功能区中的“配置站点组件”  ，然后选择“软件更新点”  。  
 
-2. 切换到“取代规则”选项卡。启用到选项“运行 WSUS 清理向导”。 指定所需的取代行为。  
+2. 切换到“取代规则”  选项卡。启用到选项“运行 WSUS 清理向导”  。 指定所需的取代行为。  
 
 3. 查看 WSyncMgr.log 文件。
 

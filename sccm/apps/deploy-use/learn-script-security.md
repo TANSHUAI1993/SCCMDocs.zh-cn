@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 376d35ae0eaca282b9634e2c3eeb50b9c814f270
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124023"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748010"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>详细了解 PowerShell 脚本安全性
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 管理员有责任在其环境中验证建议的 PowerShell 和 PowerShell 参数使用情况。 以下是一些有用的资源，可以帮助管理员了解 PowerShell 的功能和潜在风险面。 这是为了帮助缓解潜在风险面，并允许使用安全脚本。
 
@@ -49,8 +49,6 @@ ms.locfileid: "56124023"
 
 [防止恶意代码注入](https://blogs.msdn.microsoft.com/powershell/2006/11/22/protecting-against-malicious-code-injection/)
 
-[来自 PowerShell 库的有关安全的信息](https://blogs.msdn.microsoft.com/powershell/2015/08/06/powershell-gallery-new-security-scan/)
-
 [PowerShell，蓝队，讨论深层脚本块日志记录、受保护的事件日志记录、反恶意软件扫描接口、安全代码生成 API](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 
 [对于 Windows 10，有一个用于反恶意软件扫描接口的 API](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)
@@ -60,12 +58,12 @@ ms.locfileid: "56124023"
 
 - 只允许使用预定义参数。
 - 使用正则表达式功能来验证允许的参数。
-    - 例如：如果只允许特定范围的值，则仅使用正则表达式检查可以位于该范围内的字符或值。
+    - 示例：如果只允许特定范围的值，则使用正则表达式仅检查可以构成该范围的这些字符或值。
     - 验证参数可以帮助防止用户尝试使用某些可以转义的字符，如引号。 请注意，可能存在多种引号，因此使用正则表达式来验证哪些已决定的字符是允许的通常比尝试定义所有不允许的输入更容易。
 - 在 PowerShell 库中利用 PowerShell 模块[“注入搜寻”](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0)。
     - 可能是误报，当某些内容被标记为可疑时会查找意向，以确定它是否是一个真正的问题。 
 - Microsoft Visual Studio 提供脚本分析器，可以帮助检查 PowerShell 语法。
-- 本视频的标题为：“DEF CON 25 - Lee Holmes - Get $pwnd：Attacking Battle Hardened Windows Server”，概述了可以避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- 本视频的标题为“DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server”，概述了可以避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>环境建议
 PowerShell 管理员的一般建议。
