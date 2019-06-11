@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748250"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821970"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
@@ -70,8 +70,6 @@ ms.locfileid: "66748250"
 | `https://watson.telemetry.microsoft.com` | Windows 错误报告 (WER)。 需要用来监视部署于 Windows 10，版本 1803年或更早版本的运行状况。 |
 | `https://umwatsonc.events.data.microsoft.com` | Windows 错误报告 (WER)。 所需的 Windows 10，1809年或更高版本中的设备运行状况报告。 |
 | `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows 错误报告 (WER)。 需要用来监视部署在 Windows 10 中，1809年或更高版本的运行状况。 |
-| `https://www.msftncsi.com` | Windows 错误报告 (WER)。 所需的设备运行状况检查的连接。 |
-| `https://www.msftconnecttest.com` | Windows 错误报告 (WER)。 所需的设备运行状况检查的连接。 |
 | `https://kmwatsonc.events.data.microsoft.com` | 在线崩溃分析。 所需的 Windows 10，1809年或更高版本中的设备运行状况报告。 |
 | `https://oca.telemetry.microsoft.com`  | 在线崩溃分析 (OCA)。 需要用来监视部署于 Windows 10，版本 1803年或更早版本的运行状况。 |
 | `https://login.live.com` | 所需的桌面 Analytics 提供更可靠的设备标识。 <br> <br>若要禁用最终用户的 Microsoft 帐户访问，而不是阻塞此终结点使用策略设置。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |

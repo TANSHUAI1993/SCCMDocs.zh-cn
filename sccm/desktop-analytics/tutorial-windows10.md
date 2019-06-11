@@ -2,7 +2,7 @@
 title: 教程-部署 Windows 10
 titleSuffix: Configuration Manager
 description: 使用桌面 Analytics 和 Configuration Manager 将 Windows 10 部署到试验组的教程。
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264545"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821954"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试运行
 
@@ -48,7 +48,7 @@ ms.locfileid: "66264545"
 
     有关详细信息，请参阅[Desktop 分析先决条件](/sccm/desktop-analytics/overview#prerequisites)。
 
-- Configuration Manager，版本 1810年更新汇总 2 (4488598) 或更高版本，具有**完全权限管理员**角色  
+- Configuration Manager，版本 1902年更新汇总 (4500571) 或更高版本，具有**完全权限管理员**角色  
 
 - 针对 Windows 10 的最新版本的安装介质
 
@@ -58,7 +58,7 @@ ms.locfileid: "66264545"
 
     - 最新的 Windows 10 累积质量更新  
 
-    - Configuration Manager 客户端版本 1810年更新汇总 2 (4488598) 或更高版本  
+    - Configuration Manager 客户端版本 1902年更新汇总 (4500571) 或更高版本  
 
 - 若要配置到 Windows 诊断数据级别的业务审批**增强 （受限）** 试验设备上  
 
@@ -77,8 +77,6 @@ ms.locfileid: "66264545"
     - `https://eaus2watcab02.blob.core.windows.net`  
     - `https://weus2watcab01.blob.core.windows.net`  
     - `https://weus2watcab02.blob.core.windows.net`  
-    - `https://www.msftncsi.com`  
-    - `https://www.msftconnecttest.com`  
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
@@ -100,7 +98,7 @@ ms.locfileid: "66264545"
 
 2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
 
-3. 上**确认你的订阅**页上，需符合条件的许可证的列表适用于 Windows 设备运行状况分析功能的桌面。 选择“下一步”继续操作。  
+3. 上**确认你的订阅**页上，需符合条件的许可证的列表适用于 Windows 设备运行状况分析功能的桌面。 选择“下一步”继续操作  。  
 
 4. 上**授予用户访问权限**页：
 
@@ -157,16 +155,16 @@ ms.locfileid: "66264545"
 
 ### <a name="update-configuration-manager"></a>更新 Configuration Manager
 
-安装 Configuration Manager 版本 1810年更新汇总 2 (4488598) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[更新的 Configuration Manager current branch，版本 1810年汇总](https://support.microsoft.com/help/4488598)。
+安装 Configuration Manager 版本 1902年更新汇总 (4500571) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[更新的 Configuration Manager current branch，版本 1902年汇总](https://support.microsoft.com/help/4500571)。
 
-1. 使用版本 1810 的更新汇总更新站点。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
+1. 将站点更新版本 1902年的更新汇总。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
 
 2. 更新客户端。 若要简化此过程，请考虑使用自动客户端升级。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade)。  
 
 
 ### <a name="connect-to-the-service"></a>连接到服务
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 选择**配置 Azure 服务**功能区中。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择**配置 Azure 服务**功能区中。  
 
 2. 上**Azure 服务**页上的 Azure 服务向导配置以下设置：  
 
@@ -176,7 +174,7 @@ ms.locfileid: "66264545"
 
     - 选择**Desktop 分析**从可用服务列表  
   
-   选择“下一步”。  
+   选择“下一步”  。  
 
 3. 上**应用程序**页上，选择相应**Azure 环境**。 然后选择**浏览**为 web 应用。
 
@@ -190,14 +188,14 @@ ms.locfileid: "66264545"
 
     - **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它是访问令牌中用于由 Configuration Manager 客户端请求服务的访问权限。 默认情况下，此值为 `https://ConfigMgrService`。  
 
-    - **密钥有效期**：从下拉列表中选择“1 年”或“2 年”。 默认值为一年。  
+    - **密钥有效期**：从下拉列表中选择“1 年”或“2 年”   。 默认值为一年。  
 
-    选择**登录**。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。
+    选择**登录**。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称  以供参考。
 
     > [!Note]  
     > 完成此步骤作为**公司管理员**。Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。  
 
-    选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框。 在服务器应用对话框中，选择**确定**。 然后选择**下一步**Azure 服务向导的应用页上。  
+    选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框  。 在服务器应用对话框中，选择**确定**。 然后选择**下一步**Azure 服务向导的应用页上。  
 
 6. 上**诊断数据**页上，配置以下设置：  
 
@@ -207,7 +205,7 @@ ms.locfileid: "66264545"
 
     - **允许诊断数据中的设备名称**： 选择**启用**  
   
-   选择“下一步”。 **可用的功能**页显示桌面的分析功能，可使用前一页中的诊断数据设置。 选择“下一步”。  
+   选择“下一步”  。 **可用的功能**页显示桌面的分析功能，可使用前一页中的诊断数据设置。 选择“下一步”  。  
 
 7. 上**集合**页上，配置以下设置：  
 
@@ -258,7 +256,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
     - **完成日期**:选择依据 Windows 应完全部署到所有目标设备的日期。  
 
-5. 选择“创建”。 其正在处理时，在部署计划列表中显示新的计划。 处理可以需要长达 48 小时，然后才能继续执行下一步。  
+5. 选择“创建”  。 其正在处理时，在部署计划列表中显示新的计划。 处理可以需要长达 48 小时，然后才能继续执行下一步。  
 
 6. 选择其名称以打开部署计划。  
 
@@ -302,9 +300,9 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
 ### <a name="bkmk_create-package"></a> 适用于 Windows 10 创建 OS 升级包
 
-1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统升级包”节点。  
+1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统升级包”节点    。  
 
-2. 在功能区的“主页”选项卡上的“创建”组中，选择“添加操作系统升级包”。 此操作将启动“添加操作系统升级向导”。  
+2. 在功能区的“主页”选项卡上的“创建”组中，选择“添加操作系统升级包”    。 此操作将启动“添加操作系统升级向导”。  
 
 3. 上**数据源**页上，指定网络**路径**安装源文件的操作系统升级包。 例如，`\\server\share\path`。  
 
@@ -319,7 +317,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
 接下来，将 OS 升级包分发到分发点。  
 
-1. 在列表中选择 OS 升级包。 在功能区的“主页”选项卡上，在“部署”组中，选择“分发内容”。 分发内容向导将打开。  
+1. 在列表中选择 OS 升级包。 在功能区的“主页”  选项卡上，在“部署”  组中，选择“分发内容”  。 分发内容向导将打开。  
 
 2. 上**常规**页上，验证列出的内容是你想要分发，然后选择的内容**下一步**。  
 
@@ -344,7 +342,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
     - **版本索引**：如果包中有多个 OS 版本索引可用，请选择所需的版本索引。 默认情况下，该向导会选择第一个索引。  
 
-    - **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (-) 将每五个字符分隔为一组。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
+    - **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (-) 将每五个字符分隔为一组。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX  。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
 
         > [!Note]  
         > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。
@@ -371,7 +369,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
     >
     > 此集合被保留的桌面分析部署计划设备。 不支持对此集合的手动更改。<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-5. 上**内容**页上，选择**添加**，然后选择**分发点**。 选择可用的分发点以承载安装内容，并选择**确定**。 然后选择“下一步”。  
+5. 上**内容**页上，选择**添加**，然后选择**分发点**。 选择可用的分发点以承载安装内容，并选择**确定**。 然后选择“下一步”  。  
 
 6. 上**部署设置**页上，选择**下一步**以接受默认设置。 （可用安装。）  
 

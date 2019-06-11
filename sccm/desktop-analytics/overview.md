@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的 Desktop 分析服务概述。
-ms.date: 06/04/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdeffb3b2d478e4984ef721655b78aee5c47c36f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 8dfa24f92ced6c69f90844e46dccf1df0e93f7a7
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716223"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821980"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -80,7 +80,7 @@ ms.locfileid: "66716223"
 
         - [**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)，或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上的权限若要创建新的资源组中的工作区的订阅。  
 
-- 配置管理器中，更新汇总 2 (4488598) 1810年版或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+- Configuration Manager，版本 1902年更新汇总 (4500571) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 
     - **完全权限管理员**角色在 Configuration Manager  
 
@@ -88,7 +88,7 @@ ms.locfileid: "66716223"
 
     - 安装最新的更新。 有关详细信息，请参阅[更新设备](/sccm/desktop-analytics/enroll-devices#update-devices)。  
 
-    - 设备还需要让 Configuration Manager 客户端版本与更新汇总 2 1810 (4488598) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+    - 设备还需要让 Configuration Manager 客户端版本 1902年更新汇总 (4500571) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 
     > [!Note]  
     > 桌面分析不支持升级到 Windows 10 的长期维护服务频道 (LTSC)。 有关详细信息，请参阅[作为服务概述 Windows](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。

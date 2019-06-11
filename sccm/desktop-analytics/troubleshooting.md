@@ -2,7 +2,7 @@
 title: 故障排除桌面分析
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 06/05/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1f54a2794b3a938366553c635e560ebe1adb320
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 32e3d1185ff1f93a988074cdbc8dd7a14a4dcba8
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748131"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822094"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 
@@ -95,7 +95,7 @@ ms.locfileid: "66748131"
 
 设备具有以下属性：
 
-- Configuration Manager 1810 或更高版本的客户端版本  
+- Configuration Manager 客户端版本 1902 或更高版本  
 - 没有配置错误  
 - 桌面分析过去 28 天内此设备收到完整的诊断数据  
 - 桌面分析具有一个完整的清单的设备的配置和安装的应用  
@@ -118,7 +118,7 @@ Configuration Manager 客户端需要配置和管理设备的桌面分析。 有
 
 #### <a name="missing-prerequisites"></a>缺少的必备组件
 
-Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
+Configuration Manager 客户端不是至少版本 1902 (5.0.8790)。
 
 更新到最新版本的客户端。 请考虑启用 Configuration Manager 站点的客户端自动升级。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade)。  
 
@@ -339,7 +339,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 没有为设备不同的 ID。 组策略使用此注册表项。 它将优先于配置管理器提供的 ID。  
 
-若要查看桌面 Analytics 门户中的商用 ID，请使用以下过程：
+<a name="bkmk_ViewCommercialID"></a> 若要查看桌面 Analytics 门户中的商用 ID，请使用以下过程：
 
 1. 转到桌面分析门户中，并选择**连接服务**全局设置组中。  
 
@@ -348,7 +348,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 ![在 Desktop 分析门户中的商业 ID 的屏幕截图](media/commercial-id.png)
 
 > [!Important]  
-> 仅**获取新 ID 密钥**时不能使用当前的一个。 如果你重新生成商用 ID，部署到设备的新 ID。 此过程可能会导致在转换期间丢失的诊断数据。  
+> 仅**获取新 ID 密钥**时不能使用当前的一个。 如果重新生成商用 ID，[重新注册你的设备的新 Id](/sccm/desktop-analytics/enroll-devices#device-enrollment)。此过程可能会导致在转换期间丢失的诊断数据。  
 
 #### <a name="windows-commercial-data-opt-in"></a>Windows 商业数据参加
 
@@ -604,14 +604,18 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 ## <a name="data-latency"></a>数据滞后时间
 
 <!-- 3846531 -->
-每日刷新桌面 Analytics 门户中的数据。 此刷新包括收集诊断数据从设备更改和对配置进行任何更改。 例如，当你更改的资产**升级决策**，它可能会导致更改到设备的就绪状态与安装该资产。
+当首次设置 Desktop 分析时，Configuration Manager 和桌面 Analytics 门户中的报表可能不会显示完整的数据立即。 可能需要 2-3 天的活动设备将诊断数据发送到 Desktop 分析服务，该服务处理数据，并与 Configuration Manager 站点同步时间。
 
-- **管理员更改**九个小时内通常由桌面 Analytics 服务处理。 例如，如果在下午 11:00 UTC 进行更改，在门户应反映这些更改之前 08:00 AM UTC 下一天。
+在同步时从 Configuration Manager 层次结构到 Desktop 分析的设备集合，它可能需要 10 分钟才会出现在桌面分析门户这些集合。  同样，当在桌面 Analytics 中创建部署计划，它可能需要 10 分钟才会出现在 Configuration Manager 层次结构的部署计划关联的新集合。  主站点创建集合，并与 Desktop 分析的管理中心站点同步。
 
-- **设备更改**检测到通过在 UTC 午夜本地时间中的通常包含在每日刷新。 通常是延迟的额外 23 小时与处理相比管理更改的设备更改相关联。
+在 Desktop 分析门户中，有两种类型的数据：**管理员数据**并**诊断数据**:
 
-如果未看到更改这些时间框架内更新，等待下一个每日刷新的另一个 24 小时。 如果您看到的更长的延迟，请检查服务运行状况仪表板。 如果该服务报告为正常运行，请联系 Microsoft 支持部门。
+- **管理员数据**指的是对工作区配置进行任何更改。  例如，当你更改的资产**升级决策**或**重要性**您要更改管理员数据。  这些更改通常具有组合的效果，因为它们可以更改安装的设备与资产相关的就绪状态。
 
-当首次设置 Desktop 分析时，Configuration Manager 和桌面 Analytics 门户中的图表可能不会显示完整的数据。 可能需要 2-3 天的活动设备将诊断数据发送到 Desktop 分析服务，该服务处理数据，并与 Configuration Manager 站点同步时间。
+- **诊断数据**指的是从客户端设备上传到 Microsoft 的系统元数据。  这是支持桌面分析并包含特性，例如设备清单和安全和功能更新状态的数据。
 
-在 Configuration Manager 层次结构中，可能需要 10 分钟后，新的集合来显示的部署计划。 主站点创建集合，并与 Desktop 分析的管理中心站点同步。<!-- 3896921 -->
+默认情况下，门户会自动提供的桌面分析中的所有数据都刷新每日。 此刷新诊断数据，以及对配置 （管理员数据） 进行任何更改进行了更改，通常通过 08:00 AM UTC Desktop 分析门户中每一天。
+
+对管理员数据进行更改，必须通过打开数据货币浮出控件并单击"应用更改"触发按需刷新的工作区中的管理员数据的能力。  此过程通常需要 15-60 分钟，具体取决于你的工作区的大小和需要流程对更改的范围。  请注意，请求按需数据刷新不会导致任何更改到诊断数据。  若要了解有关请求按需刷新的详细信息，请参阅我们的常见问题页。
+
+如果未看到上述时间范围内已更新的更改，等待另一个 24 小时后下, 一次每日刷新。 如果您看到的更长的延迟，请检查服务运行状况仪表板。 如果该服务报告为正常运行，请联系 Microsoft 支持部门。<!-- 3896921 -->

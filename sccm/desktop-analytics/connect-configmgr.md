@@ -2,7 +2,7 @@
 title: 连接 Configuration Manager
 titleSuffix: Configuration Manager
 description: 与 Desktop 分析连接的配置管理器操作方法指南。
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: 38391c5d922a33696dc10d761847e40c01e151cc
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463017"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822009"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析
 
@@ -29,11 +29,11 @@ ms.locfileid: "66463017"
 
 ## <a name="bkmk_hotfix"></a> 更新站点
 
-首先，请确保至少运行 Configuration Manager 站点版本 1810年。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。
+首先，请确保至少运行 Configuration Manager 站点版本 1902年。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。
 
-此外需要安装版本 1810年更新汇总 2 (4488598) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[Configuration Manager current branch，版本 1810年更新汇总 2](https://support.microsoft.com/help/4488598)。
+此外需要安装版本 1902年更新汇总 (4500571) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[更新的 Configuration Manager current branch，版本 1902年汇总](https://support.microsoft.com/help/4500571)。
 
-1. 使用版本 1810 的更新汇总更新站点。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
+1. 将站点更新版本 1902年的更新汇总。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
 
 2. 更新客户端。 若要简化此过程，请考虑使用自动客户端升级。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade)。  
 
@@ -83,7 +83,7 @@ ms.locfileid: "66463017"
 
 7. 上**诊断数据**页上，配置以下设置：  
 
-    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所需的所有[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从商业 ID 来检索**连接的服务**窗格中的[Desktop 分析门户](https://aka.ms/m365aprod)。  
+    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所需的所有[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从手动商用 ID 来检索[Desktop 分析门户](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID)。  
 
     - **Windows 10 诊断数据级别**： 选择至少**增强 （受限）**  
 
