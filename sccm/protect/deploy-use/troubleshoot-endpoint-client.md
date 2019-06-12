@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e0b8e6a522e367e17d6c13fad3896a6606d3e5c
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 4a8f1ca1484df0480a7923a8d3de64c1670aec6d
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176067"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748203"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -64,13 +64,13 @@ ms.locfileid: "66176067"
 
 3.  在“Internet 选项”  对话框中，单击“高级”  选项卡。  
 
-4.  在“重置 Internet Explorer 设置” 中单击“重置” ，然后再次单击“重置”  。  
+4.  在“重置 Internet Explorer 设置”  中单击“重置”  ，然后再次单击“重置”  。  
 
-5.  等待 Internet Explorer 完成重置设置，然后单击“确定” 。  
+5.  等待 Internet Explorer 完成重置设置，然后单击“确定”  。  
 
 6.  打开 Internet Explorer。  
 
-7.  打开 Microsoft Security Essentials，单击“更新”  选项卡，然后单击“更新” 。  
+7.  打开 Microsoft Security Essentials，单击“更新”  选项卡，然后单击“更新”  。  
 
 8.  如果问题仍然存在，请继续执行下一步。  
 
@@ -82,11 +82,11 @@ ms.locfileid: "66176067"
 
 3.  在“Internet 选项”  对话框中，单击“程序”  选项卡。  
 
-4.  在“默认 Web 浏览器” 中单击“设为默认” 。  
+4.  在“默认 Web 浏览器”  中单击“设为默认”  。  
 
 5.  单击" **确定**"。  
 
-6.  打开 Windows Defender 或 Endpoint Protection。 单击“更新”  选项卡，然后单击“更新” 。  
+6.  打开 Windows Defender 或 Endpoint Protection。 单击“更新”  选项卡，然后单击“更新”  。  
 
 7.  如果问题仍然存在，请继续执行下一步。  
 
@@ -102,17 +102,17 @@ ms.locfileid: "66176067"
 
 1. 停止自动更新服务  
 
-    1.  单击“开始”  ，搜索 **services.msc**，然后单击“确定” 。  
+    1.  单击“开始”  ，搜索 **services.msc**，然后单击“确定”  。  
 
-    2.  右键单击“自动更新服务” ，然后单击“停止” 。  
+    2.  右键单击“自动更新服务”  ，然后单击“停止”  。  
 
     3.  最小化“服务”管理单元。  
 
 2.  重命名 **SoftwareDistribution** 目录，如下所示：  
 
-    1.  单击“开始”  ，搜索  **cmd**，然后单击“确定” 。  
+    1.  单击“开始”  ，搜索  **cmd**，然后单击“确定”  。  
 
-    2.  键入 **cd %windir%**，然后按 **Enter**。  
+    2.  键入 **cd %windir%** ，然后按 **Enter**。  
 
     3.  键入 **ren SoftwareDistribution SDTemp**，然后按 **Enter**。  
 
@@ -122,15 +122,15 @@ ms.locfileid: "66176067"
 
     1.  最大化“服务”管理单元。  
 
-    2.  右键单击“自动更新服务” ，然后单击“启动” 。  
+    2.  右键单击“自动更新服务”  ，然后单击“启动”  。  
 
     3.  关闭“服务”管理单元窗口。  
 
 ### <a name="step-5-reset-the-microsoft-antivirus-update-engine-on-your-computer"></a>步骤 5：重置你的计算机上的 Microsoft 防病毒更新引擎  
 
-1.  单击“开始”  ，搜索  **cmd**，然后单击“确定” 。右键单击“命令提示符” ，然后选择“以管理员身份运行” 。  
+1.  单击“开始”  ，搜索  **cmd**，然后单击“确定”  。右键单击“命令提示符”  ，然后选择“以管理员身份运行”  。  
 
-2.  在“命令提示符”窗口中键入以下命令，然后在每个命令后面按 **Enter**  
+2.  在“命令提示符”  窗口中键入以下命令，然后在每个命令后面按 **Enter**  
 
      **Cd\\**  
 
@@ -143,27 +143,23 @@ ms.locfileid: "66176067"
 3.  重新启动计算机。  
 
 4.  打开 Windows Defender 或  
-          Endpoint Protection，单击“更新”选项卡，然后单击“更新”。  
+          Endpoint Protection，单击“更新”  选项卡，然后单击“更新”  。  
 
 5.  如果问题仍然存在，请继续执行下一步。  
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>步骤 6：手动安装病毒和间谍软件定义更新  
 
--   如果运行 32 位 Windows 操作系统，请从 [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342)) 手动下载最新更新。  
-
--   如果运行 64 位 Windows 操作系统，请从 [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)) 手动下载最新更新。  
-
--   单击“运行” 。 最新的更新将手动安装在你的计算机上。  
+-   [手动下载最新更新](https://www.microsoft.com/wdsi/definitions/)。  
 
 
 ### <a name="step-7-contact-support"></a>步骤 7：联系技术支持人员  
 
--   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](https://support.microsoft.com/contactus/) ()。  
+-   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](https://support.microsoft.com/contactus/)。  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>启动 Windows Defender 或 Endpoint Protection 服务  
  **症状**  
 
- 你收到一条消息，通知你“**Windows Defender 或 Endpoint Protection 未监视你的计算机，因为该程序的服务已停止。应该立即重新启动该程序。**” 
+ 你收到一条消息，通知你“**Windows Defender 或 Endpoint Protection 未监视你的计算机，因为该程序的服务已停止。应该立即重新启动该程序。** ” 
 
  **解决方案**  
 
@@ -175,9 +171,9 @@ ms.locfileid: "66176067"
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
-2.  搜索“Microsoft 反间谍软件服务” 。 右键单击该服务并选择“属性”  或者双击以打开该服务。  
+2.  搜索“Microsoft 反间谍软件服务”  。 右键单击该服务并选择“属性”  或者双击以打开该服务。  
 
-3.  检查以确保“启动类型”设置为“自动”。  
+3.  检查以确保“启动类型”  设置为“自动”  。  
 
 4.  单击“启动”  按钮以启动该服务。 如果“启动”  按钮不可用，请单击“停止”  按钮，然后单击“启动”  按钮以重新启动该服务。  
 
@@ -189,22 +185,20 @@ ms.locfileid: "66176067"
 
 2.  在安装的程序列表中，卸载所有第三方 Internet 安全程序。*  
 
-3.  重新启动计算机，然后尝试重新安装 Windows Defender 或   
+3.  重新启动计算机，然后尝试重新安装 Windows Defender 或  
           Endpoint Protection。  
 
 > [!NOTE]  
 >  有些 Internet 安全应用程序无法完全卸载。 可能需要下载并运行先前的安全应用程序的清理实用程序，才能将其完全删除。  
 
 > [!CAUTION]  
->  删除 Internet 安全程序后，你的计算机处于不受保护的状态。 如果删除现有 Internet 安全程序后，安装   
->       Endpoint Protection 时遇到问题，请通过在线提交案例联系 Windows Defender 或  
->       Endpoint Protection 支持人员（有关详细信息，请参阅[如何在线提交案例](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)）。  
+> 删除安全程序后，你的计算机处于不受保护的状态。 如果删除现有安全程序后遇到 Windows Defender 安装问题，请联系“安全”产品系列中的 Windows Defender 的 [Microsoft 支持部门](https://support.microsoft.com/supportforbusiness/productselection)   。  
 
 ### <a name="step-4-uninstallreinstall-endpoint-protection"></a>步骤 4：卸载/重新安装 Endpoint Protection  
 
 1.  单击“开始”  ，搜索 **appwiz.cpl**，然后按 **Enter**。  
 
-2.  在已安装的程序列表中，单击“Endpoint Protection” ，然后将其卸载。  
+2.  在已安装的程序列表中，单击“Endpoint Protection”  ，然后将其卸载。  
 
 3.  如果出现重启计算机的提示，请重新启动计算机，然后尝试重新安装 Endpoint Protection。  
 
@@ -213,13 +207,13 @@ ms.locfileid: "66176067"
 
 ### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>步骤 1：验证你的计算机是否连接到 Internet  
 
-1.  单击“开始” ，搜索 **ncpa.cpl**，然后按 **Enter**。  
+1.  单击“开始”  ，搜索 **ncpa.cpl**，然后按 **Enter**。  
 
-2.  右键单击连接名称，然后单击“状态” 。  
+2.  右键单击连接名称，然后单击“状态”  。  
 
-3.  如果你的计算机已连接，在 Windows XP 中连接状态将显示为“已连接” 、“已启用” 或“身份验证成功”  。 在 Windows Vista 和 Windows 7 中， **IPv4** 状态将显示为“Internet” 。  
+3.  如果你的计算机已连接，在 Windows XP 中连接状态将显示为“已连接”  、“已启用”  或“身份验证成功”  。 在 Windows Vista 和 Windows 7 中， **IPv4** 状态将显示为“Internet”  。  
 
-4.  如果计算机显示为未连接，则右键单击连接名称，然后单击“连接”、“启用”、“身份验证”或“修复”。  
+4.  如果计算机显示为未连接，则右键单击连接名称，然后单击“连接”  、“启用”  、“身份验证”  或“修复”  。  
 
 ### <a name="step-3-restart-your-computer"></a>步骤 3：重新启动计算机。  
 
@@ -240,7 +234,7 @@ ms.locfileid: "66176067"
 
 -   如果检测到的威胁位于 .zip 文件中，请浏览到该 .zip 文件，然后删除该文件，或者右键单击该文件并选择“使用 Windows Defender 扫描”  或“使用 Endpoint Protection 扫描”对其进行扫描。  如果 Windows Defender 或 Endpoint Protection 在该文件中检测到其他威胁，则会通知你这些威胁并允许你选择适当的操作。  
 
--   如果检测到的威胁位于网络共享中，请浏览到该网络共享，然后右键单击该网络共享并选择“使用 Windows Defender 扫描”或“使用 Endpoint Protection 扫描”对其进行扫描。 如果 Windows Defender 或 Endpoint Protection 在该网络共享中检测到其他威胁，则会通知你这些威胁并允许你选择适当的操作。  
+-   如果检测到的威胁位于网络共享中，请浏览到该网络共享，然后右键单击该网络共享并选择“使用 Windows Defender 扫描”  或“使用 Endpoint Protection 扫描”  对其进行扫描。 如果 Windows Defender 或 Endpoint Protection 在该网络共享中检测到其他威胁，则会通知你这些威胁并允许你选择适当的操作。  
 
 -   如果你不确定文件的来源，最佳解决方法之一是对计算机运行完全扫描。 完全扫描可能需要一段时间才能完成，但是 Windows Defender 或 Endpoint Protection 可以通过完全扫描查找感染源并清理感染源。  
 
@@ -281,11 +275,11 @@ ms.locfileid: "66176067"
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
-2.  右键单击“Windows Installer” ，然后单击“启动” 。 如果“启动”  不可用，但是“停止”  和“重新启动”  选项可用，则表明服务已经启动。  
+2.  右键单击“Windows Installer”  ，然后单击“启动”  。 如果“启动”  不可用，但是“停止”  和“重新启动”  选项可用，则表明服务已经启动。  
 
-3.  在“服务”  页上的“文件”  菜单中，单击“退出” 。  
+3.  在“服务”  页上的“文件”  菜单中，单击“退出”  。  
 
-4.  单击“开始”，然后搜索“命令提示符”。 右键单击“命令提示符” ，然后单击“以管理员身份运行” 。  
+4.  单击“开始”  ，然后搜索“命令提示符”  。 右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。  
 
 5.  键入 **MSIEXEC /REGSERVER**，然后按 **Enter**。  
 
@@ -298,11 +292,11 @@ ms.locfileid: "66176067"
 
 1.  单击“开始”  ，搜索 **msconfig**，然后按 **Enter**。  
 
-2.  在“一般”  选项卡上，单击“有选择的启动” ，然后清除“加载启动项”  复选框。  
+2.  在“一般”  选项卡上，单击“有选择的启动”  ，然后清除“加载启动项”  复选框。  
 
 3.  在“服务”  选项卡上，选中“隐藏所有 Microsoft 服务”  复选框，然后清除列表中剩余的所有服务的复选框。  
 
-4.  单击“确定” ，然后单击“重新启动”  以重新启动计算机。  
+4.  单击“确定”  ，然后单击“重新启动”  以重新启动计算机。  
 
 5.  尝试重新安装 Endpoint Protection。  
 

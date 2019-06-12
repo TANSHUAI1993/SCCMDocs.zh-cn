@@ -2,7 +2,7 @@
 title: 在桌面 Analytics 中的部署计划
 titleSuffix: Configuration Manager
 description: 了解桌面 Analytics 中的部署计划。
-ms.date: 05/14/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 88c78cef4717cc3a51a53b7fd5aba0cbefa93a8e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673284"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834927"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>有关桌面 Analytics 中的部署计划
 
@@ -48,7 +48,7 @@ ms.locfileid: "65673284"
 
 - 决定如何修复应用根据 Desktop 分析建议的问题  
 
-桌面分析每日刷新部署计划数据。 所做的任何更改可能不会显示 24 小时。 此类更改包括将重要性分配到应用程序，或选择要包括在试验中的设备。  
+默认情况下，桌面分析每日刷新部署计划数据。 部署计划，例如，分配到应用程序的重要性或选择要包含在试点范围内中的设备中的任何更改将花费最多 24 小时来处理。 若要加快此过程，请求按需数据刷新。 有关详细信息，请参阅[Desktop 分析常见问题](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。  
 
 连接到 Configuration Manager Desktop 分析后, 选择部署计划中的集合。 然后此集成可以将 Windows 部署到基于桌面分析数据的集合。
 

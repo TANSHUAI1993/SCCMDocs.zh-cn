@@ -2,7 +2,7 @@
 title: 如何创建部署计划
 titleSuffix: Configuration Manager
 description: 用于在桌面 Analytics 中创建部署计划的操作方法指南。
-ms.date: 01/25/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,21 +12,21 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b65a700f5c9cdf3225dfb2ecd3c48d76119110f2
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208035"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834914"
 ---
-# <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>如何在桌面 Analytics 中创建部署计划 
+# <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>如何在桌面 Analytics 中创建部署计划
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 本文提供用于在桌面 Analytics 中创建部署计划的步骤。 在开始之前，请首先[了解有关部署计划](/sccm/desktop-analytics/about-deployment-plans)。
 
-按照此项目以使用 Desktop 分析以创建用于部署 Windows 10 和 Office 365 专业增强版计划中的步骤。 Windows 10、 Office 365 ProPlus，和 / 或创建部署计划。
+按照此项目以使用 Desktop 分析以创建用于部署 Windows 10 计划中的步骤。
 
 1. 打开[Desktop 分析门户](https://aka.ms/m365aprod)。 使用凭据至少具有**工作区参与者**权限。  
 
@@ -38,15 +38,15 @@ ms.locfileid: "62208035"
 
     - **名称**：部署计划的唯一名称  
 
-    - **产品和版本**:选择的产品和版本来部署。 Microsoft 建议在一起，创建适用于 Office 和 Windows 的部署计划并使用最新版本。  
+    - **产品和版本**:选择要部署的 Windows 10 版本。 Microsoft 建议创建使用最新版本的部署计划。  
 
     - **设备组**:选择一个或多个组，然后选择**设置为目标组**。 与分组**SCCM**作为源是集合从 Configuration Manager 同步。  
 
-    - **准备情况规则**:这些规则帮助确定哪些设备有资格获得升级。 
+    - **准备情况规则**:这些规则帮助确定哪些设备有资格获得升级。  
 
-    - **完成日期**:选择按其 Windows 和 Office 应完全部署到所有目标设备的日期。  
+    - **完成日期**:选择依据 Windows 应完全部署到所有目标设备的日期。  
 
-5. 选择“创建”。 其正在处理时，在部署计划列表中显示新的计划。 处理可以需要长达 48 小时，然后才能继续执行下一步。   
+5. 选择“创建”  。 其正在处理时，在部署计划列表中显示新的计划。 若要加快处理，请求按需数据刷新。 有关详细信息，请参阅[Desktop 分析常见问题](/sccm/desktop-analytics/faq##can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。  
 
 6. 选择其名称以打开部署计划。  
 
@@ -54,15 +54,13 @@ ms.locfileid: "62208035"
 
     1. 上**应用程序**选项卡上，选择此选项可以仅显示**未检查**资产。  
 
-    2. 选择每个应用，并选择**编辑**。 您可以选择多个应用在同一时间编辑。   
+    2. 选择每个应用，并选择**编辑**。 您可以选择多个应用在同一时间编辑。  
 
-    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证外接程序，选择**严重**或**重要**。 它不会验证加载项标记为**不重要**。 请考虑[兼容性风险](/sccm/desktop-analytics/compat-risk)和其他计划见解分配重要性级别时。  
+    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证应用程序，选择**严重**或**重要**。 它不会验证应用程序标记为**不重要**。 请考虑[兼容性风险](/sccm/desktop-analytics/compat-risk)和其他计划见解分配重要性级别时。  
 
         如果将分配重要性级别，您还可以选择升级决策。  
 
     4. 选择**保存**时完成。  
-
-    5. 重复这些步骤**Office 加载项**。  
 
 8. 在部署计划菜单上，在**准备**组中，选择**标识试点**。  
 

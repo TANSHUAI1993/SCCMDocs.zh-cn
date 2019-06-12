@@ -2,7 +2,7 @@
 title: 教程-部署 Windows 10
 titleSuffix: Configuration Manager
 description: 使用桌面 Analytics 和 Configuration Manager 将 Windows 10 部署到试验组的教程。
-ms.date: 06/07/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821954"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834775"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试运行
 
@@ -256,7 +256,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
     - **完成日期**:选择依据 Windows 应完全部署到所有目标设备的日期。  
 
-5. 选择“创建”  。 其正在处理时，在部署计划列表中显示新的计划。 处理可以需要长达 48 小时，然后才能继续执行下一步。  
+5. 选择“创建”  。 其正在处理时，在部署计划列表中显示新的计划。 若要加快处理，请求按需数据刷新。 有关详细信息，请参阅[Desktop 分析常见问题](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。
 
 6. 选择其名称以打开部署计划。  
 

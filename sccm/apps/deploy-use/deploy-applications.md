@@ -2,7 +2,7 @@
 title: 部署应用程序
 titleSuffix: Configuration Manager
 description: 创建或模拟将应用程序部署到设备或用户集合
-ms.date: 05/01/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7550987d9b9679085ad5b546274d0c503b9e28ac
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
-ms.translationtype: HT
+ms.openlocfilehash: 5760b36ddb29c39d6887afb61445f1353f46bbec
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403397"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715670"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署应用程序
 
@@ -161,6 +161,12 @@ ms.locfileid: "66403397"
 
 在截止时间之后，客户端将在用户配置的第一个非业务窗口中安装应用程序，用户以该宽限期为依据配置了该窗口。 但是，用户仍可打开软件中心并在任何时间安装该应用程序。 一旦过了宽限期，对于未完成的部署，强制将恢复为正常行为。
 
+![宽限期时间线的关系图](media/grace-period.svg)
+
+<!-- SCCMDocs issue #1599 -->
+
+> [!Note]  
+> 大多数情况下，此功能可解决用户外出时设备电源关闭的情况。 从技术上讲，宽限期从客户端在部署截止时间后获取策略开始。 如果停止 Configuration Manager 客户端服务 (CcmExec)，然后在部署截止时间后的某个时间重新启动该服务，则会发生相同的行为。
 
 ### <a name="bkmk_deploy-ux"></a> 部署“用户体验”设置 
 
