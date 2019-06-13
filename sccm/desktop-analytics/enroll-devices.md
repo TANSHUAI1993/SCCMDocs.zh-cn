@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 959061a764cff9f27defc4c0b0bf4eaa45b70afd
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: bec55b8da942750af78b1d3ce01c8a01a9d13a6c
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822021"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038759"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
@@ -127,7 +127,7 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
 2. 上**诊断数据**页上，根据需要对以下设置进行更改：  
 
-    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所需的所有[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从手动商用 ID 来检索[Desktop 分析门户](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID)。   
+    - **商用 ID**： 此值应自动填充你的组织 id。 如果没有，请确保你的代理服务器配置为允许所需的所有[终结点](/sccm/desktop-analytics/enable-data-sharing#endpoints)然后再继续。 或者，从手动商用 ID 来检索[Desktop 分析门户](/sccm/desktop-analytics/monitor-connection-health#bkmk_ViewCommercialID)。   
 
     - **Windows 10 诊断数据级别**:有关详细信息，请参阅[诊断数据级别](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)。  
 
