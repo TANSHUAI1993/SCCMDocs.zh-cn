@@ -2,7 +2,7 @@
 title: 连接 Configuration Manager
 titleSuffix: Configuration Manager
 description: 与 Desktop 分析连接的配置管理器操作方法指南。
-ms.date: 06/07/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdfed49a68963dc0d46a38810f0ac9dc8041d3fc
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 7925bf44c78b6f8d51797145b5ae463ac3498eea
+ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038775"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141056"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析
 
@@ -44,6 +44,9 @@ ms.locfileid: "67038775"
 使用此过程将配置管理器连接到桌面 Analytics，并配置设备设置。 此过程是一次性的过程来将你的层次结构附加到云服务。  
 
 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择**配置 Azure 服务**功能区中。  
+
+    > [!Tip]  
+    > 在 Configuration Manager 控制台中，转到**软件库**工作区中，然后选择**Desktop 分析服务**节点。 中*Desktop 分析新手？* 框中，选择的第二个链接*将 Configuration Manager 连接到 Desktop 分析服务*。  
 
 2. 上**Azure 服务**页上的 Azure 服务向导配置以下设置：  
 

@@ -10,21 +10,21 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 735b5d4d50c09edaeef85a72f6a5aa5f82241762
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c36a52b5f3bc32cc5e8c725d1a12de6ce467c310
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501283"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748297"
 ---
 # <a name="upgrade-to-configuration-manager"></a>升级到 Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 从运行 System Center 2012 Configuration Manager 的站点和层次结构就地升级到 Configuration Manager Current Branch。 在从 System Center 2012 Configuration Manager 升级之前，必须准备这些站点。 此准备工作需要删除可能会阻止成功升级的特定配置。 如果涉及多个站点，则按升级顺序依次升级。  
 
 > [!TIP]  
-> 管理 Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
+> 管理 Configuration Manager 站点和层次结构基础结构时，术语“升级”  、“更新”  和“安装”  用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 
 
@@ -132,7 +132,7 @@ Configuration Manager 无法升级具有管理点数据库副本的主站点。 
 
 有关详细信息，请参阅下列文章：  
 
-- System Center 2012 Configuration Manager：[为管理点配置数据库副本](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846234\(v=technet.10)  
+- System Center 2012 Configuration Manager：[为管理点配置数据库副本](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846234\(v=technet.10\))  
 
 - Configuration Manager Current Branch：[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)  
 
@@ -154,14 +154,14 @@ Configuration Manager 无法升级使用网络负载均衡 (NLB) 群集来托管
 
 有关站点维护任务的详细信息，请参阅以下文章：  
 
-- System Center 2012 Configuration Manager：[规划站点操作](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712686\(v=technet.10)  
+- System Center 2012 Configuration Manager：[规划站点操作](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712686\(v=technet.10\))  
 
 - Configuration Manager Current Branch：[维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)  
 
 #### <a name="run-setup-prerequisite-checker"></a>运行安装程序先决条件检查程序
 在升级站点之前，请运行独立于安装程序的**先决条件检查程序**，验证站点是否满足先决条件。 稍后升级该站点时会再次运行必备组件检查程序。  
 
-如果使用 2016 年 10 月发行的 1606 版基线介质，独立的先决条件检查会对要升级到 Configuration Manager 的 Current Branch 和 Long-Term Servicing Branch (LTSB) 的站点进行评估。 由于 LTSB 不支持某些功能，在 ConfigMgrPrereq.log 中可能会看到以下类似条目：
+如果使用 2016 年 10 月发行的 1606 版基线介质，独立的先决条件检查会对要升级到 Configuration Manager 的 Current Branch 和 Long-Term Servicing Branch (LTSB) 的站点进行评估。 由于 LTSB 不支持某些功能，在 ConfigMgrPrereq.log  中可能会看到以下类似条目：
 - `INFO: The site is a LTSB edition.`
 - `Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. Asset Intelligence is not supported on the LTSB edition. You must uninstall the Asset Intelligence synchronization point site system role before you can continue.`
 
@@ -172,7 +172,7 @@ Configuration Manager 无法升级使用网络负载均衡 (NLB) 群集来托管
 有关详细信息，请参阅[先决条件检查程序](/sccm/core/servers/deploy/install/prerequisite-checker)和[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。  
 
 #### <a name="download-prerequisite-files-and-redistributable-files-for-configuration-manager"></a>下载 Configuration Manager 的先决条件文件和可再发行文件
-使用安装程序下载程序下载 Configuration Manager 的先决条件可再发行文件、语言包和最新产品更新。  
+使用安装程序下载程序  下载 Configuration Manager 的先决条件可再发行文件、语言包和最新产品更新。  
 
 有关信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。  
 
@@ -301,9 +301,9 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 - **软件中心**  
     下列软件中心项目被重置为它们的默认值：  
 
-    - “工作信息” 被重置为周一到周五从凌晨 5:00  到晚上 10:00  Monday 到晚上 10:00 Friday.  
+    - “工作信息”  被重置为周一到周五从凌晨 5:00  到晚上 10:00  Monday 到晚上 10:00 Friday.  
 
-    - “计算机维护”  的值被设置为“当我的计算机处于演示模式时暂停软件中心活动” 。  
+    - “计算机维护”  的值被设置为“当我的计算机处于演示模式时暂停软件中心活动”  。  
     
     - “远程控制”  的值被设置为分配到计算机的客户端设置中的值。  
 
@@ -383,32 +383,32 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 1. 验证运行安装程序的用户是否具有以下安全权限：  
 
-    - 站点服务器上的本地“管理员”权限  
+    - 站点服务器上的本地“管理员”  权限  
 
-    - 如果站点数据库服务器是站点服务器的远程服务器，则为该服务器上的本地“管理员”权限。  
+    - 如果站点数据库服务器是站点服务器的远程服务器，则为该服务器上的本地“管理员”  权限。  
 
 2. 在站点服务器上，打开以下程序：`<ConfigMgSourceMedia>\SMSSETUP\BIN\X64\Setup.exe`。 此操作将打开 Configuration Manager 安装向导。  
 
-3. 阅读“准备工作”页上的信息，并选择“下一步”。  
+3. 阅读“准备工作”  页上的信息，并选择“下一步”  。  
 
-4. 在“入门”页上，选择“升级此 Configuration Manager 站点”，然后选择“下一步”。  
+4. 在“入门”  页上，选择“升级此 Configuration Manager 站点”  ，然后选择“下一步”  。  
 
-5. “产品密钥”页：  
+5. “产品密钥”  页：  
 
-    如果以前安装了 Configuration Manager 评估版，则可以选择“安装此产品的许可版本”。 然后输入 Configuration Manager 的完整安装产品密钥。 此操作将站点转换为完整版。  
+    如果以前安装了 Configuration Manager 评估版，则可以选择“安装此产品的许可版本”  。 然后输入 Configuration Manager 的完整安装产品密钥。 此操作将站点转换为完整版。  
 
-    还可以指定许可协议的“软件保障到期日期”，方便向你提醒该日期。 如果在设置期间未输入此值，则稍后可在 Configuration Manager 控制台中指定。  
+    还可以指定许可协议的“软件保障到期日期”  ，方便向你提醒该日期。 如果在设置期间未输入此值，则稍后可在 Configuration Manager 控制台中指定。  
 
     > [!NOTE]  
     > Microsoft 不会验证所输入的到期日期，且不会使用此日期验证许可证。 可以使用该日期作为到期日期提醒。 Configuration Manager 会定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，才有资格使用这些额外的更新。    
 
     有关详细信息，请参阅[许可和分支](/sccm/core/understand/learn-more-editions)。
 
-6. 在“Microsoft 软件许可条款”页上，阅读并接受许可条款，然后选择“下一步”。  
+6. 在“Microsoft 软件许可条款”  页上，阅读并接受许可条款，然后选择“下一步”  。  
 
-7. 在“先决条件许可”页上，阅读并接受先决条件软件许可条款，然后选择“下一页”。 安装程序将在必需时下载该软件并将其自动安装到站点系统或客户端上。 在可以继续进入到下一页之前，同意所有条款。  
+7. 在“先决条件许可”  页上，阅读并接受先决条件软件许可条款，然后选择“下一页”  。 安装程序将在必需时下载该软件并将其自动安装到站点系统或客户端上。 在可以继续进入到下一页之前，同意所有条款。  
 
-8. 在“先决条件下载”页上，指定安装程序是从 Internet 下载最新的内容还是使用以前下载的文件。 此内容包括先决条件可再发行文件、语言包以及最新产品更新。 如果以前通过使用安装程序下载程序下载了文件，请选择“使用以前下载的文件”  并指定下载文件夹。 有关详细信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。  
+8. 在“先决条件下载”  页上，指定安装程序是从 Internet 下载最新的内容还是使用以前下载的文件。 此内容包括先决条件可再发行文件、语言包以及最新产品更新。 如果以前通过使用安装程序下载程序下载了文件，请选择“使用以前下载的文件”  并指定下载文件夹。 有关详细信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。  
 
     > [!NOTE]  
     > 在使用以前下载的文件时，请验证下载文件夹的路径是否包含文件的最新版本。  
@@ -418,11 +418,11 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
     > [!IMPORTANT]  
     > 每个版本的 Configuration Manager 都不能使用其之前版本的 Configuration Manager 的语言包。 若要启用对所升级的 Configuration Manager 站点上的某种语言的支持，必须使用该新版本的语言包版本。 例如，在从 System Center 2012 Configuration Manager 升级到 Configuration Manager Current Branch 的过程中，如果语言包的 Current Branch 版本不适用于所下载的先决条件文件，则无法安装对该语言的支持。  
 
-10. 在“客户端语言选择”  页上，查看当前为站点安装的语言的列表。 为客户端计算机选择此站点上可用的其他语言，或清除不再希望在此站点上支持的语言。 指定是否为移动设备客户端启用所有客户端语言，然后单击“下一步” 。 默认情况下，“英语”处于选定状态，并且无法删除。  
+10. 在“客户端语言选择”  页上，查看当前为站点安装的语言的列表。 为客户端计算机选择此站点上可用的其他语言，或清除不再希望在此站点上支持的语言。 指定是否为移动设备客户端启用所有客户端语言，然后单击“下一步”  。 默认情况下，“英语”处于选定状态，并且无法删除。  
 
-11. 在“设置摘要”页上，查看配置。 准备好后，选择“下一步”启动先决条件检查程序，针对站点升级验证服务器准备情况。  
+11. 在“设置摘要”  页上，查看配置。 准备好后，选择“下一步”  启动先决条件检查程序，针对站点升级验证服务器准备情况。  
 
-12. 在“先决条件安装检查”页上，如果未列出任何问题，请选择“下一步”以升级站点和站点系统角色。 
+12. 在“先决条件安装检查”  页上，如果未列出任何问题，请选择“下一步”  以升级站点和站点系统角色。 
 
     如果先决条件检查程序发现问题，请选择列表上的项目以了解有关如何解决该问题的详细信息。 在继续安装程序之前，请解决列表中状态为“错误”  的所有项目。 解决问题之后，单击“运行检查”  以重启先决条件检查。 你也可以打开系统驱动器根目录中的 ConfigMgrPrereq.log 文件以查看先决条件检查程序结果。 日志文件可以包含用户界面上未显示的额外信息。 有关安装先决条件规则和说明的列表，请参阅[先决条件检查程序](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。
 
@@ -433,19 +433,19 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 1. 验证运行安装程序的管理用户是否具有以下安全权限：  
 
-    - 辅助站点服务器上的本地“管理员”权限  
+    - 辅助站点服务器上的本地“管理员”  权限  
 
-    - 父主站点上的“基础结构管理员”或“完全权限管理员”安全角色  
+    - 父主站点上的“基础结构管理员”  或“完全权限管理员”  安全角色  
 
-    - 辅助站点的站点数据库上的系统管理员 (SA) 权限  
+    - 辅助站点的站点数据库上的系统管理员 (SA  ) 权限  
 
-2. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+2. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点    。  
 
-3. 选择要升级的辅助站点。 在功能区的“主页”选项卡上，在“站点”组中，选择“升级”。  
+3. 选择要升级的辅助站点。 在功能区的“主页”  选项卡上，在“站点”  组中，选择“升级”  。  
 
-4. 选择“是”以确认决定，并开始升级辅助站点。  
+4. 选择“是”  以确认决定，并开始升级辅助站点。  
 
-辅助站点升级在后台运行。 升级完成后，在 Configuration Manager 控制台中确认状态。 选择辅助站点服务器，然后在功能区的“主页”选项卡上，在“站点”组中，选择“显示安装状态”。  
+辅助站点升级在后台运行。 升级完成后，在 Configuration Manager 控制台中确认状态。 选择辅助站点服务器，然后在功能区的“主页”  选项卡上，在“站点”  组中，选择“显示安装状态”  。  
 
 
 

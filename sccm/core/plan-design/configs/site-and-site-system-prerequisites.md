@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d719f35ced60d868cd527dc82769595457d69228
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 6bb18dbb093f6182186f648bcde02407f3c14c5a
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499401"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038594"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 基于 Windows 的计算机要求特定配置，以支持用作 Configuration Manager 站点系统服务器。 
 
@@ -137,7 +137,7 @@ ms.locfileid: "65499401"
 
 #### <a name="remote-registry-service"></a>远程注册表服务  
 
-- 在安装 Configuration Manager 站点的过程中，在托管站点数据库的计算机上启用“远程注册表”服务。  
+- 在安装 Configuration Manager 站点的过程中，在托管站点数据库的计算机上启用“远程注册表”服务  。  
 
 #### <a name="sql-server"></a>SQL Server  
 
@@ -161,6 +161,7 @@ ms.locfileid: "65499401"
 
 - 如果使用的是[管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)，那么托管 SMS 提供程序角色的服务器需要 .NET 4.5.2 或更高版本  <!-- SCCMDocs issue #1203 -->
 
+- Web 服务器 (IIS)
 
 ##  <a name="bkmk_2012acwspreq"></a>应用程序目录网站点  
 
@@ -324,7 +325,7 @@ ms.locfileid: "65499401"
 
 <!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 当分发点传输内容时，它将使用内置于 Windows 的“后台智能传输服务”(BITS) 进行传输。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。  
+> 当分发点传输内容时，它将使用内置于 Windows 的“后台智能传输服务”(BITS) 进行传输  。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。  
 
 
 
@@ -617,5 +618,5 @@ ms.locfileid: "65499401"
 
 <!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 当分发点传输内容时，它将使用内置于 Windows 操作系统的“后台智能传输服务” (BITS) 进行传输。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。   
+> 当分发点传输内容时，它将使用内置于 Windows 操作系统的“后台智能传输服务”  (BITS) 进行传输。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。   
 

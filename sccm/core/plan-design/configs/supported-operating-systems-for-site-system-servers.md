@@ -2,7 +2,7 @@
 title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
-ms.date: 04/16/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e505562ac8a0d34f1b58bd0b6210b4630a6c825
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 871f007bd1ee0e38635e03a6b17a9125758553af
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499323"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429808"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager 站点系统服务器支持的操作系统
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
 本文详细介绍了可用于托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
@@ -213,11 +213,13 @@ ms.locfileid: "65499323"
 
     -   此 OS 上的分发点不支持 EFI 模式下客户端计算机的网络启动。 支持具有 BIOS 或具有旧模式下的 EFI 启动的客户端计算机。  
 
+> [!Warning]  
+> Windows Server 2008 不支持 TLS 1.2。 若在环境中启用此协议，Windows Server 2008 计算机将不再与该站点通信。 有关详细信息，请参阅[如何为 Configuration Manager 启用 TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2)。  
 
 
 ## <a name="bkmk_client"></a>客户端 OS 版本
 
-以下客户端 OS 版本支持用作分发点 <sup>[说明 1](#bkmk_note1)</sup>：  
+以下客户端 OS 版本支持用作分发点 <sup>[说明 1](#bkmk_note1)</sup>  ：  
 
 - Windows 10（x86 和 x64）：专业版和企业版
 - Windows 8.1（x86 和 x64）：Professional 和 Enterprise
@@ -225,13 +227,13 @@ ms.locfileid: "65499323"
 
 此支持存在以下限制：  
 
-- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
+- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点  。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
 
 
 
 ## <a name="bkmk_core"></a>服务器核心安装
 
-支持将以下服务器 OS 版本的服务器核心安装用作一个分发点： 
+支持将以下服务器 OS 版本的服务器核心安装用作一个分发点  ： 
 
 - Windows Server 2019（从 Configuration Manager 版本 1810 开始）  
 - Windows Server 版本 1809（从 Configuration Manager 版本 1810 开始）  
@@ -243,7 +245,7 @@ ms.locfileid: "65499323"
 
 此支持存在以下限制：  
 
-- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
+- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点  。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
 
 
 

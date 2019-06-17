@@ -2,7 +2,7 @@
 title: 运行状况监视
 titleSuffix: Configuration Manager
 description: 了解运行状况状态监视桌面 Analytics 中的工作方式。
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,14 +12,17 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 834b7d30aa5331ae73125e1cdfc3c9c7095d58b7
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 6a95d1cca34dec9a17487e10d980f7e458186106
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255144"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145789"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>在桌面 Analytics 中监视的运行状况状态
+
+> [!Note]  
+> 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 为您[将更新部署到生产](/sccm/desktop-analytics/deploy-prod)，使用 Desktop 分析来帮助监视你的设备的运行状况状态。 本文详细介绍运行状况监视的工作原理。
 
@@ -30,21 +33,21 @@ ms.locfileid: "62255144"
 > [!NOTE]  
 > 桌面 Analytics 仅从设备提供可用作分母的使用情况数据收集运行状况数据。 这意味着它不包括运行 Windows 7 和 Windows 10 的设备不是设置共享的增强 （受限） 级别的诊断数据。 如果超过 10%的运行 Windows 10 的设备设置为共享在增强 （受限） 以外的级别的诊断数据**监视运行状况**页的标题区域中显示一条警告。  
 
-若要查看有关特定应用、 外接程序，或咨询宏的详细信息，请在列表中选择。 
+若要查看有关特定应用的详细信息，请在列表中选择。
 
 
 
-## <a name="apps-and-office-apps"></a>应用和 Office 应用
+## <a name="apps"></a>应用
 
 ![在桌面 Analytics 中对应用的运行状况状态因素](media/monitor-health-status-factors.png)
 
-桌面分析监视应用和 Office 应用的以下运行状况状态因素：
+桌面分析监视应用的以下运行状况状态因素：
 
 - **出现故障的设备百分比**:过去两周内，为此特定应用程序发生崩溃的设备数除以在其使用该应用的设备数。 此视图可以查看应用程序稳定性是否已增加或减少新操作系统版本上。 桌面分析计算下面的设置此百分比：  
 
     - **更新后**:已更新到部署计划中指定的目标 OS 版本的设备。 若要减少具有足够的数据资产的数量，桌面 Analytics 中收集所有更新设备，这些的数据。 此集部署计划中不包括这些设备。  
 
-    - **更新前**:设备上的操作系统版本早于部署计划中指定的内容。 此列表不包括运行 Windows 7 的设备。   
+    - **更新前**:设备上的操作系统版本早于部署计划中指定的内容。 此列表不包括运行 Windows 7 的设备。  
 
     - **商业平均**:平均值 (avg) 在所有商业设备上崩溃率。 在计算此平均值*所有*版本的应用程序。 如果你的版本显示故障率高于商业平均水平，可能有更稳定版本可用。  
 
@@ -56,7 +59,7 @@ ms.locfileid: "62255144"
 
 - **其他版本**:此应用程序的备用版本的列表。 对于每个版本，它显示在你的组织和商业平均水平的故障率的相对更改。 如果发现使用较低的故障率应用程序的更高版本，更新应用程序可能会帮助。  
 
-    它还演示了是否版本都具有**准备用于 Windows**信号。 有关详细信息，请参阅[Windows 应用程序的兼容性风险](/sccm/desktop-analytics/compat-risk#risk-assessment-engine)。  
+    它还演示了是否版本都具有**准备用于 Windows**信号。 有关详细信息，请参阅[兼容性评估](/sccm/desktop-analytics/compat-assessment#risk-assessment-engine)。  
 
 - **热门问题**:按实例计数最常见失败 Id 的列表。 失败 ID 标识与故障相关联的堆栈跟踪。 当应用程序供应商寻求支持时，可以使用此 ID。  
 
@@ -65,66 +68,8 @@ ms.locfileid: "62255144"
 如果您发现您无法解决的严重运行状况回归，更改应用的**升级决策**到**无法**。 此操作阻止将来部署更新到与此资产的设备。
 
 
-
-## <a name="office-add-ins"></a>Office 加载项
-
-![有关 Office 外接程序的运行状况状态因素的屏幕截图](media/office-add-in-health-status-factors.png)
-
-桌面分析监视 Office 加载项的以下运行状况状态因素：
-
-- **包含事件的设备百分比**:事件是指可防止外接程序无法正常工作。 例如，它将无法加载或无响应。 此部分显示在过去两周内的设备数量上的所选加载项出现事件除以其上安装外接程序的设备数。 桌面分析计算下面的设置此百分比：  
-
-    - **更新后**:已更新到部署计划中指定的目标 Office 版本的设备。 若要减少具有足够的数据资产的数量，桌面 Analytics 中收集所有更新设备，这些的数据。 此集部署计划中不包括这些设备。  
-
-    - **更新前**:运行任何版本的 Office 以前的部署计划的目标版本的设备。 <!-- This does not include {include min version of Office}  --> 若要评估的外接程序的运行状况，比较此指标**更新后**百分比。  
-
-    - **商业平均**:在相同版本的 Office 使用相同版本的外接程序的所有商业设备上的平均值 (avg) 事件速率。 使用此速率以与你的组织中的设备进行比较。 如果该外接程序版本时遇到较高的事件率超过商业平均值，您可能导致事件的某些环境因素。  
-
-- **包含事件的会话 %**:类似于前面的但过去两周内包含的会话百分比崩溃的计数。  
-
-若要确定加载项的运行状况状态，桌面分析时，可要求至少三个设备的设备事件速率和至少为 10 个会话事件速率。 有关这两种速率，它将进行比较之前和之后要确定是否存在回归值。 无回归被视为用于实现目标。 
-
-桌面分析计算 Office 外接程序基于设备和会话使用以下矩阵的事件速率的组合的总体运行状况的状态：
-
-|  | 对设备的崩溃数据不足  | 正常运行的设备故障指标 | 设备故障指标中的回归 |
-|----------------|---------------------|-----------------------|------------------------|
-| **与事件会话的数据不足**| 数据不足| 会议目标 | 数据不足 |
-| **与事件会话的正常指标** | 会议目标 | 会议目标 | 会议目标 |
-| **回归指标中的与事件会话** | 数据不足 | 会议目标 | 需要注意 |
-
-
-Office 外接程序的详细信息页还包括以下详细信息来帮助你解决： 
-
-- **最近的事件**:外接程序事件最近发生的设备的列表。 使用此列表来收集日志或尝试更广泛推出之前尝试修复这些特定的设备上解决此问题。  
-
-
-
-## <a name="office-macros"></a>Office 宏
-
-![公告的 Office 宏的运行状况状态因素的屏幕截图](media/office-macros-health-status-factors.png)
-
-桌面的分析报告运行状况*宏公告*。 宏的建议是在包含宏的 Office 文件中检测到潜在问题。 这些问题是特定于 Office 应用程序。 例如，Word、 Excel、 PowerPoint 或 Visio。 
-
-桌面分析监视 Office 宏的以下运行状况状态因素：
-
-- **%的设备编译错误**:过去两周，设备上与咨询相关的错误数除以检测到该建议的设备数的宏启用期间发生。 桌面分析计算下面的设置此百分比： 
-
-    - **更新后**:在其的 Office 版本是相同的部署计划的目标设备  
-
-    - **更新前**:运行任何版本的 Office 早于部署计划的目标设备  
-
-    - **商业平均**:作为部署计划的目标运行相同版本的 Office 的所有商业设备平均值 (avg)  
-
-- **使用运行时错误的设备百分比**类似于前面，但对于在过去两周内，除以检测到该建议的设备数的宏执行期间出现的错误相关的安全公告的设备。  
-
-Office 宏的详细信息页还包括以下详细信息来帮助你解决： 
-
-- **最近的事件**:设备的宏最近出现运行时和编译错误的列表。 使用此列表来收集日志或尝试更广泛推出之前尝试修复这些特定的设备上解决此问题。
-
-
-
 ## <a name="see-also"></a>另请参阅
 
-- [用于 Windows 桌面 Analytics 中的应用程序兼容性风险](/sccm/desktop-analytics/compat-risk)  
+- [在桌面 Analytics 中的兼容性评估](/sccm/desktop-analytics/compat-assessment)  
 
 - [如何将部署到生产环境且 Desktop 分析](/sccm/desktop-analytics/deploy-prod)  

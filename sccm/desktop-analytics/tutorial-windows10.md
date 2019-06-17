@@ -2,7 +2,7 @@
 title: 教程-部署 Windows 10
 titleSuffix: Configuration Manager
 description: 使用桌面 Analytics 和 Configuration Manager 将 Windows 10 部署到试验组的教程。
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: d8b73deb60cf88f0bdf428bb87250ce115a1084b
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834775"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145817"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试运行
 
@@ -94,7 +94,7 @@ ms.locfileid: "66834775"
 
 使用此过程中登录到桌面分析并将其配置你的订阅中。 此过程是一次性的过程来为你的组织设置 Desktop 分析。  
 
-1. 在 Microsoft 365 设备管理中打开桌面分析门户，以用户身份**全局管理员**权限。 选择**启动**。  
+1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**权限。 选择**启动**。  
 
 2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
 
@@ -232,7 +232,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
 使用此过程在桌面 Analytics 中创建部署计划。
 
-1. 打开[Desktop 分析门户](https://aka.ms/m365aprod)。 使用凭据至少具有**工作区参与者**权限。  
+1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)。 使用凭据至少具有**工作区参与者**权限。  
 
 2. 选择**部署计划**管理组中。  
 
@@ -266,7 +266,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
     2. 选择每个应用，并选择**编辑**。 您可以选择多个应用在同一时间编辑。  
 
-    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证应用程序，选择**严重**或**重要**。 它不会验证应用程序标记为**不重要**。 请考虑[兼容性风险](/sccm/desktop-analytics/compat-risk)和其他计划见解分配重要性级别时。  
+    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证应用程序，选择**严重**或**重要**。 它不会验证应用程序标记为**不重要**。 评估其[兼容性](/sccm/desktop-analytics/compat-assessment)和其他计划见解分配重要性级别时。  
 
         如果将分配重要性级别，您还可以选择升级决策。  
 

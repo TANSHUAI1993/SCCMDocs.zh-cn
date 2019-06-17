@@ -2,7 +2,7 @@
 title: 在桌面 Analytics 中的部署计划
 titleSuffix: Configuration Manager
 description: 了解桌面 Analytics 中的部署计划。
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88c78cef4717cc3a51a53b7fd5aba0cbefa93a8e
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: a8080d89995b6ed10efd996b4ad757151e315c74
+ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834927"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141036"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>有关桌面 Analytics 中的部署计划
 
@@ -62,6 +62,43 @@ ms.locfileid: "66834927"
 
 - 低安装计数阈值为 Windows 应用。 如果百分比大于此阈值更高版本的计算机上安装应用，部署计划将标记应用作为**Noteworthy**。 此标记表示可以决定要在试验阶段测试是非常重要。  
 
+
+## <a name="plan-assets"></a>计划资产
+
+<!-- 4670224 -->
+
+虽然[资产](/sccm/desktop-analytics/about-assets)区域还显示设备和应用，**计划资产**特定部署计划下的区域包括的其他信息。
+
+### <a name="devices"></a>设备
+
+请参阅**Windows 升级决策**为部署计划中每个设备。
+
+Windows 升级到决策**替换为设备**可能是由于以下原因之一导致：
+
+- 它未通过所需的 Windows 10 处理器检查。 有关详细信息，请参阅[最低硬件要求](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)。
+- 它具有 BIOS 块
+- 它没有足够的内存
+- 在系统上的启动关键组件已被阻止的驱动程序
+- 不能升级的特定品牌和型号
+- 没有显示类组件与具有以下属性的所有驱动程序块：
+    - 不重写
+    - 新的操作系统版本中没有任何驱动程序
+    - 它不是已在 Windows 更新
+- 阻止升级的系统上没有另一个即插即用 play 组件
+- 使用了 XP 模拟驱动程序某个无线组件
+- 具有活动连接的网络组件将失去其驱动程序。 换而言之，升级后它可能会丢失网络连接。
+
+### <a name="apps"></a>应用
+
+设置**升级决策**并将**重要性**在此计划中部署此应用程序。 有关详细信息，请参阅[如何创建部署计划](/sccm/desktop-analytics/create-deployment-plans)。
+
+在应用程序的详细信息，还可以看到以下信息：建议、 兼容性风险因素和 Microsoft 的已知问题。 使用此信息来帮助集**升级决策**。 有关详细信息，请参阅[兼容性评估](/sccm/desktop-analytics/compat-assessment)。
+
+显示为桌面分析的应用*值得注意*基于部署计划的就绪状态规则的低安装计数阈值。 有关详细信息，请参阅[准备情况规则](/sccm/desktop-analytics/create-deployment-plans#readiness-rules)。
+
+### <a name="drivers"></a>驱动程序
+
+请参阅此部署计划中包含的驱动程序的列表。 设置**升级决策**，查看 Microsoft 的建议，请参阅兼容性风险因素。
 
 
 ## <a name="importance"></a>重要性

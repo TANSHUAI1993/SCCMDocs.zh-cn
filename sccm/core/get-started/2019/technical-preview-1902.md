@@ -10,17 +10,18 @@ ms.assetid: a3aac306-85d6-4cad-92bb-8ad9f920565e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9881e2e08485063305e7482120cac63de44fa35
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ad6d6af8b647293d5995a402951cc08b23d7fc71
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138511"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038732"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1902"></a>Configuration Manager 技术预览版 1902 中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager 技术预览 1902 版中提供的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。 
 

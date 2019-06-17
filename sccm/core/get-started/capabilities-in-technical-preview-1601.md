@@ -12,22 +12,22 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa96b497ce942430c5a8391eefd41e939c634ae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: be84e7bfae54cf3099b588cce35b01a424c45b8f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56143667"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716000"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍 System Center Configuration Manager Technical Preview 1601 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
--   使用“客户端更新选项”将预生产客户端升级到生产客户端时，复选框的文本显示客户端版本为零 (0)，而不是实际的客户端内部版本号。 正确的预生产客户端版本显示在该选项的上方，该版本为你选择此选项后升级到生产客户端的版本号。  
+-   使用“客户端更新选项”  将预生产客户端升级到生产客户端时，复选框的文本显示客户端版本为零 (0)，而不是实际的客户端内部版本号。 正确的预生产客户端版本显示在该选项的上方，该版本为你选择此选项后升级到生产客户端的版本号。  
 
 -   更新到 Technical Preview 1601 并选择在预生产集合中测试 Configuration Manager 客户端时，不会升级该集合的客户端包。 此问题仅针对 Technical Preview 1601。  
 
@@ -78,11 +78,11 @@ ms.locfileid: "56143667"
 
     -   [Azure AD 自动注册的先决条件](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
-    要使用该选项，你必须在 Configuration Manager 中创建具有以下所述特定规则的合规性策略，并在 Intune 控制台中设置条件访问策略。  此外，为确保仅允许合规的电脑访问，必须将 Windows 电脑要求设置为“设备必须合规”选项。 下面是适用于 System Center Configuration manager 管理的 PC 的合规性策略规则。  
+    要使用该选项，你必须在 Configuration Manager 中创建具有以下所述特定规则的合规性策略，并在 Intune 控制台中设置条件访问策略。  此外，为确保仅允许合规的电脑访问，必须将 Windows 电脑要求设置为“设备必须合规”  选项。 下面是适用于 System Center Configuration manager 管理的 PC 的合规性策略规则。  
 
     -   **需要在 Azure ActiveDirectory 中注册：** 此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
-    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新。  
+    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新  。  
 
     -   **需要使用 BitLocker 驱动器加密功能：** 此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
@@ -93,13 +93,13 @@ ms.locfileid: "56143667"
 
 -   **使用运行状况证明服务的条件访问：** 现在可以根据运行状况证明服务报告的设备运行状况来限制对电子邮件和 0365 服务的访问。  此外，设备健康状况报告中包含由 Intune 管理的设备。  
 
-    在 configuration manager 控制台中添加了新的合规性规则，该规则允许你根据设备的健康状况指定应允许还是阻止设备进行访问。  要创建此规则，请打开“创建合规性策略向导”，然后添加新规则。  选择“运行状况证明服务报告为正常”作为条件，并将值设置为“True”。  这可以确保只有报告为健康的设备才可以访问你的公司资源。 有关运行状况证明服务和如何在 Intune 中报告设备的运行状况的详细信息，请参阅[设备运行状况证明](#bkmk_devicehealth)。  
+    在 configuration manager 控制台中添加了新的合规性规则，该规则允许你根据设备的健康状况指定应允许还是阻止设备进行访问。  要创建此规则，请打开“创建合规性策略向导”  ，然后添加新规则。  选择“运行状况证明服务报告为正常”  作为条件，并将值设置为“True”  。  这可以确保只有报告为健康的设备才可以访问你的公司资源。 有关运行状况证明服务和如何在 Intune 中报告设备的运行状况的详细信息，请参阅[设备运行状况证明](/sccm/core/get-started/capabilities-in-technical-preview-1512#bkmk_devicehealth)。  
 
 -   **新符合性策略设置：** 新符合性策略设置有助于提高用于访问公司电子邮件和 SharePoint 服务的设备的安全性：  
 
     -   **需要自动更新：** 可以要求运行 Windows 8.1 或更高版本的设备允许自动安装更新，还可以指定要安装的更新的类别。  你可以选择仅安装标记为重要的更新，或者安装所有建议的更新。  
 
-         要创建自动更新规则，请打开“创建合规性策略向导”，然后添加新规则。  选择“所需更新的最小分类”作为条件，并将值设置为以下可用值之一：“无”、“建议”和“重要”。  
+         要创建自动更新规则，请打开“创建合规性策略向导”  ，然后添加新规则。  选择“所需更新的最小分类”作为条件，并将值设置为以下可用值之一  ：“无”、“建议”和“重要”    。  
 
         -   **无：** 不自动安装更新。  
 
@@ -107,13 +107,13 @@ ms.locfileid: "56143667"
 
         -   **重要：** 仅安装归类为重要的更新。  
 
-    -   **需要提供密码来解锁移动设备：** 如果该设置设定为“是”，那么最终用户必须输入密码才能访问他们的设备。  
+    -   **需要提供密码来解锁移动设备：** 如果该设置设定为“是”，那么最终用户必须输入密码才能访问他们的设备  。  
 
-         要为解锁移动设备的密码创建规则，请打开“创建合规性策略向导”，然后添加新规则。 选择“需要提供密码来解锁空闲设备”作为条件，并将值设置为“True”。  
+         要为解锁移动设备的密码创建规则，请打开“创建合规性策略向导”  ，然后添加新规则。 选择“需要提供密码来解锁空闲设备”  作为条件，并将值设置为“True”  。  
 
     -   **需要提供密码之前处于非活动状态的分钟数：** 指定用户必须重新输入密码前的空闲时间。  
 
-         要创建此规则，请打开“创建合规性策略向导”，然后添加新规则。 选择“需要提供密码之前处于非活动状态的分钟数”作为条件，并将值设置为以下可用选项之一：1 分钟、5 分钟、15 分钟、30 分钟、1 小时。  
+         要创建此规则，请打开“创建合规性策略向导”  ，然后添加新规则。 选择“需要提供密码之前处于非活动状态的分钟数”作为条件，并将值设置为以下可用选项之一  ：1 分钟、5 分钟、15 分钟、30 分钟、1 小时。  
 
 -   **替代默认规则 - 始终允许已注册 Intune 且合规的设备访问本地 Exchange：**  
 
@@ -122,7 +122,7 @@ ms.locfileid: "56143667"
 
      以下平台支持此功能：Windows Phone 8 及更高版本、iOS 6 及更高版本。 Android 4.0 及更高版本、Samsung KNOX Standard 4.0 及更高版本。  
 
-     要使用此选项，请转到本地 Exchange 的“配置条件访问策略向导”的“常规”页面。  
+     要使用此选项，请转到本地 Exchange 的“配置条件访问策略向导”  的“常规”  页面。  
 
 ##  <a name="bkmk_clientStatus"></a>客户端联机状态  
 从技术预览 1601 版开始，可以在 Configuration Manager 控制台上一眼识别客户端是联机还是脱机。 通过控制台设备列表中已更新的图标和列，你可以评估你的环境中客户端的状态，由此识别问题区域及其他需要你注意的问题。  
@@ -145,7 +145,7 @@ ms.locfileid: "56143667"
 
 ### <a name="to-view-client-online-status"></a>要查看客户端联机状态  
 
-1. 在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备”。  
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备”  。  
 
 2. 在列标题中右键单击，然后单击一个客户端联机状态字段，以便将其添加到设备视图。 这些字段是：  
 
@@ -183,15 +183,15 @@ ms.locfileid: "56143667"
 #### <a name="try-it-out"></a>试试看！  
  满足上述先决条件后，必须创建使用 iOS 部署类型的 Configuration Manager 应用程序。 你使用的应用程序必须支持应用程序配置。 请参阅应用程序的供应商文档了解你可以配置哪些特定项目（名称/值对）。  
 
- 然后，在应用程序部署过程中将应用程序配置策略与 iOS 部署类型相关联。 还可以为现有应用程序和集合部署“应用程序配置策略”节点的策略。  
+ 然后，在应用程序部署过程中将应用程序配置策略与 iOS 部署类型相关联。 还可以为现有应用程序和集合部署“应用程序配置策略”  节点的策略。  
 
  尝试完成以下任务，然后使用本主题顶部附近的反馈信息，让我们知道它们的工作方式：  
 
 -   如果你的 iOS 应用程序支持应用程序配置，请查阅该应用程序供应商的文档以了解配置此应用程序所必须指定的名称和值对。  
 
--   启动“创建应用程序配置策略”向导。 在向导的“iOS 策略”页面，请尝试添加从应用程序供应商文档找到的名称和值对，或者导入包含所需的值的 XML 文件。  
+-   启动“创建应用程序配置策略”  向导。 在向导的“iOS 策略”  页面，请尝试添加从应用程序供应商文档找到的名称和值对，或者导入包含所需的值的 XML 文件。  
 
--   在“部署软件”向导的“应用程序配置策略”页面，将创建的应用程序配置策略与应用程序中兼容的部署类型相关联。  
+-   在“部署软件”  向导的“应用程序配置策略”  页面，将创建的应用程序配置策略与应用程序中兼容的部署类型相关联。  
 
 ##  <a name="bkmk_compliance1601"></a>对合规性设置的改进  
  在 1601 技术预览版中，我们添加了对以下功能的支持：  
@@ -199,20 +199,20 @@ ms.locfileid: "56143667"
 ### <a name="microsoft-edge-browser-settings"></a>Microsoft Edge 浏览器设置  
  已将新的 Microsoft Edge 浏览器设置添加到 **Windows 8.1 和 Windows 10**配置项目（设置仅适用于 Windows 10 设备）。  
 
- 要查看这些新设置，请在“创建配置项目”向导的配置项目“设备设置”页面中选择“Microsoft Edge”。  
+ 要查看这些新设置，请在“创建配置项目”  向导的配置项目“设备设置”  页面中选择“Microsoft Edge”  。  
 
  有关详细信息，请参阅[如何为不使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  
 
 ### <a name="compliance-settings-for-windows-10-team-devices"></a>Windows 10 Team 设备的合规性设置  
  使用这些新的合规性设置来配置运行 Windows 10 Team 的设备，例如 Surface Hub 设备。  
 
- 要查看这些新设置，请在“创建配置项目”向导的配置项目“设备设置”页面中选择“Windows 10 协同版”。  
+ 要查看这些新设置，请在“创建配置项目”  向导的配置项目“设备设置”  页面中选择“Windows 10 协同版”  。  
 
  有关详细信息，请参阅[如何为不使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  
 
 ### <a name="android---kiosk-mode-for-samsung-knox-standardbr-hybrid"></a>Android - Samsung KNOX 标准版的展台模式<br />混合  
  你可以使用展台模式锁定设备，从而只允许某些功能运行。 例如，你可以让设备只运行一个指定的托管应用，也可以禁用设备上的音量按钮。 这些设置可用于设备的演示模型，也可用于专门执行一个功能的设备（如销售点设备）。 这些设置不适用于 **Windows 8.1 和 Windows 10** 配置项目中的 Samsung KNOX 标准版设备（设置仅适用于 Windows 10 设备）。  
 
- 要查看这些新设置，请在“创建配置项目”向导的配置项目“设备设置”页面中选择“展台模式 - Samsung KNOX”。  
+ 要查看这些新设置，请在“创建配置项目”  向导的配置项目“设备设置”  页面中选择“展台模式 - Samsung KNOX”  。  
 
  有关详细信息，请参阅[如何为不使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  

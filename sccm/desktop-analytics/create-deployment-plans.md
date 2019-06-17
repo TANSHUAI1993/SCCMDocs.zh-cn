@@ -2,7 +2,7 @@
 title: 如何创建部署计划
 titleSuffix: Configuration Manager
 description: 用于在桌面 Analytics 中创建部署计划的操作方法指南。
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b65a700f5c9cdf3225dfb2ecd3c48d76119110f2
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: dc94bf46630e2770385b5efaffb431135e3667c7
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834914"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67146041"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>如何在桌面 Analytics 中创建部署计划
 
@@ -26,9 +26,11 @@ ms.locfileid: "66834914"
 
 本文提供用于在桌面 Analytics 中创建部署计划的步骤。 在开始之前，请首先[了解有关部署计划](/sccm/desktop-analytics/about-deployment-plans)。
 
-按照此项目以使用 Desktop 分析以创建用于部署 Windows 10 计划中的步骤。
+## <a name="create-a-plan-for-windows-10"></a>适用于 Windows 10 创建计划
 
-1. 打开[Desktop 分析门户](https://aka.ms/m365aprod)。 使用凭据至少具有**工作区参与者**权限。  
+按照本部分使用 Desktop 分析来创建用于部署 Windows 10 计划中的步骤。
+
+1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)。 使用凭据至少具有**工作区参与者**权限。  
 
 2. 选择**部署计划**管理组中。  
 
@@ -42,7 +44,7 @@ ms.locfileid: "66834914"
 
     - **设备组**:选择一个或多个组，然后选择**设置为目标组**。 与分组**SCCM**作为源是集合从 Configuration Manager 同步。  
 
-    - **准备情况规则**:这些规则帮助确定哪些设备有资格获得升级。  
+    - **准备情况规则**:这些规则帮助确定哪些设备有资格获得升级。 有关详细信息，请参阅[准备情况规则](#readiness-rules)。  
 
     - **完成日期**:选择依据 Windows 应完全部署到所有目标设备的日期。  
 
@@ -56,7 +58,7 @@ ms.locfileid: "66834914"
 
     2. 选择每个应用，并选择**编辑**。 您可以选择多个应用在同一时间编辑。  
 
-    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证应用程序，选择**严重**或**重要**。 它不会验证应用程序标记为**不重要**。 请考虑[兼容性风险](/sccm/desktop-analytics/compat-risk)和其他计划见解分配重要性级别时。  
+    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证应用程序，选择**严重**或**重要**。 它不会验证应用程序标记为**不重要**。 评估其[兼容性](/sccm/desktop-analytics/compat-assessment)和其他计划见解分配重要性级别时。  
 
         如果将分配重要性级别，您还可以选择升级决策。  
 
@@ -70,9 +72,30 @@ ms.locfileid: "66834914"
 
         对于桌面分析如何使这些建议的详细信息中的右上角选择信息图标**标识试点**窗格。
 
+## <a name="readiness-rules"></a>准备情况规则
+
+这些规则帮助您确定哪些设备有资格获得的就地升级。 在创建部署计划或更高版本对其进行编辑时，可以设置这些规则。
+
+若要更改的准备情况规则：
+
+1. 在 Desktop 分析门户中，选择部署计划。
+1. 名称旁边，选择**编辑**。
+1. 选择**准备情况规则**。
+1. 选择**Windows OS**。
+1. 必要时，进行更改，然后选择**保存**。
+
+有关**Windows OS**升级，有两个规则：设备驱动程序和 Windows 应用程序。
+
+### <a name="device-drivers"></a>设备驱动程序
+
+配置是否将设备从 Windows Update 中获取驱动程序。 此值是**关闭**默认情况下。 使用适用于企业的 Windows 更新来管理更新包括驱动程序时，请启用此规则。 如果正在使用 Configuration Manager 来管理软件更新，将此规则设置为**关闭**。
+
+### <a name="windows-applications"></a>Windows 应用程序
+
+显示为桌面分析的应用*值得注意*基于低安装计数阈值。 在部署计划的准备情况规则中设置此阈值。 默认情况下，此阈值是**2.0%** 。 你可以将值从`0.0`到`10.0`。
 
 
-### <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>后续步骤
 
 转到下一步的文章，将部署到试运行的设备。
 > [!div class="nextstepaction"]  
