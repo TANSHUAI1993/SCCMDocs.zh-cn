@@ -10,14 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18e2e43e9bb768f81233fb2d2deda0ae05c1961
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 5ee3d2c35424820658f91628b5f6e23be41498b2
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145838"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159144"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>如何将部署到试运行时使用 Desktop 分析
 
@@ -58,12 +57,9 @@ Desktop 分析的好处之一是帮助标识设备，可提供因素范围最广
     - 所有 IT 设备
     - 首席执行官 office
 - 在中**全局试点**设置，则包含**所有 IT 设备**集合。 排除**首席执行官 office**集合。
-- 创建部署计划，并选择**所有 Windows 10 客户端**集合。
-- 你**试验包含设备**列表包含下面的设备设置：
-    - 全局试验包含列表中的任何设备：**所有 IT 设备**
-    - 也是部署计划的目标组的一部分的集合：**所有 Windows 10 客户端**
-- 从桌面分析中排除**其他推荐的设备**列表中全局试验的任何设备*排除*列表：**首席执行官 office**
-- 只有前两个集合都被视为试点的一部分。 成功升级到这些组和资产后*准备好*，桌面分析中的设备同步**首席执行官 office**到 Configuration Manager 生产集合的集合。
+- 创建部署计划，并选择**所有 Windows 10 客户端**集合作为你**目标组**。
+- **试验包含设备**列表中包含的设备的子集上你**目标组**:**所有 Windows 10 客户端**也是在全局试点*包含*列表：**所有 IT 设备**  
+- **其他建议的设备**列表包含一组设备从您**目标组**的重要资产提供最大覆盖范围和冗余。  桌面分析从此列表中全局试验的任何设备不包括*排除*列表：**首席执行官 office**
 
 
 ## <a name="address-issues"></a>解决问题
@@ -117,12 +113,9 @@ Configuration Manager 使用 Desktop 分析中的数据创建试验和生产部�
     > [!Note]  
     > 使用默认设置为**会自动开始此阶段后延迟期 （以天为单位）** 。 若要启动的第二个阶段，必须满足以下条件：
     >
-    > 1. 试验设备需要升级，然后发送后修改了诊断数据。
     > 1. 第一阶段达到**部署成功百分比**成功标准。 在分阶段部署配置此设置。
     > 1. 您需要检查并在桌面 Analytics，以将标记为重要和关键资产升级决策*准备*。 有关详细信息，请参阅[查看需要升级决策的资产](/sccm/desktop-analytics/deploy-prod#bkmk_review)。
     > 1. 同步到 Configuration Manager 集合满足任何生产设备的桌面分析*准备*条件。
-    >
-    > 当配置管理器分阶段部署将自动移动到下一阶段，仅适用于桌面 Analytics 同步生产集合中的设备。
 
 > [!Important]  
 > 这些集合继续作为其成员身份的更改进行同步。 例如，如果您确定问题与一个资产并将其标记为**无法**，与该资产的设备不再满足*准备*条件。 这些设备将从生产部署集合中删除。
@@ -138,7 +131,7 @@ Configuration Manager 使用 Desktop 分析中的数据创建试验和生产部�
 
 - **升级决策完整**:以下状态之一：
     - 值得注意的内容资产的设备**准备好**或**准备进行修正**
-    - 设备状态**已阻止**，**替换为设备**或**重新安装设备**
+    - 设备状态**已阻止**， [**替换为设备**](/sccm/desktop-analytics/about-deployment-plans#plan-assets)或**重新安装设备**
 
 - **未检查**:值得注意的内容的资产的设备**未检查**或**评审正在进行中**
 

@@ -10,14 +10,13 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 499d24e20b8220e685cb7aed9adea3f21caa12ae
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 805cb79a1986457f04b11fa5f99b30ec098be99b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039738"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159202"
 ---
 # <a name="how-to-close-your-account"></a>如何关闭你的帐户
 

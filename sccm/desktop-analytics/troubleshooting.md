@@ -10,14 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acaefcf2c505786dcc65fa7c74063765ca2fe0cf
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038646"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158992"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析的疑难解答
 
@@ -43,7 +42,7 @@ ms.locfileid: "67038646"
 
 
 
-## <a name="monitor-connection-health"></a>监视连接运行状况
+## <a name="monitor-connection-health"></a>监视器连接运行状况
 
 使用**连接运行状况**仪表板在 Configuration Manager 中向下钻取到类别的设备运行状况。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Desktop 分析服务**节点，然后选择**连接运行状况**仪表板。  
 
@@ -52,29 +51,7 @@ ms.locfileid: "67038646"
 
 ## <a name="log-files"></a>日志文件
 
-使用以下日志文件来帮助解决与桌面 Analytics 与 Configuration Manager 集成的问题。
-
-
-### <a name="service-connection-point"></a>服务连接点
-
-以下日志文件位于以下目录中的服务连接点： `C:\Program Files\Configuration Manager\Logs\M365A`:
-
-| 日志 | 描述 |
-|---------|---------|
-| **M365ADeploymentPlanWorker.log** | 有关从桌面分析部署计划同步的信息的云服务到本地 Configuration Manager |
-| **M365ADeviceHealthWorker.log** | 有关设备运行状况的信息将从 Configuration Manager 上传到 Microsoft 云 |
-| **M365AUploadWorker.log** | 有关集合和设备的信息将从 Configuration Manager 上传到 Microsoft 云 |
-| **SmsAdminUI.log** | 有关 Configuration Manager 控制台活动，例如，配置 Azure 云服务的信息  |
-
-
-### <a name="configuration-manager-client"></a>Configuration Manager 客户端
-
-以下日志文件位于以下目录中的 Configuration Manager 客户端： `C:\Windows\CCM\logs`:
-
-| 日志 | 描述 |
-|---------|---------|
-| **M365AHandler.log** | 有关桌面分析设置策略的信息 |
-
+有关详细信息，请参阅[Desktop 分析的日志文件](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
 ### <a name="enable-verbose-logging"></a>启用详细日志记录
 

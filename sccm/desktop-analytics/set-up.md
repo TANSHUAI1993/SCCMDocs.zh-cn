@@ -10,14 +10,13 @@ ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a54a6ad56e8ae7504314e5147f4d4d5b0b726562
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: c7c899f56829d63cebc29518cbeb7497b6a203cd
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145980"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158938"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
 

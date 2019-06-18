@@ -10,14 +10,13 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7925bf44c78b6f8d51797145b5ae463ac3498eea
-ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
+ms.openlocfilehash: fb16dd6e802c58f042b7eee8ae782e7118dabf1c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141056"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159187"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析
 

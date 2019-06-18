@@ -10,14 +10,13 @@ ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8080d89995b6ed10efd996b4ad757151e315c74
-ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
+ms.openlocfilehash: 8e1f084f1f3fdfd8b51caa7db696a841ffbf2e57
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141036"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159248"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>有关桌面 Analytics 中的部署计划
 

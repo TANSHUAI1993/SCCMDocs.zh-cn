@@ -1,5 +1,5 @@
 ---
-title: 监视连接运行状况
+title: 监视器连接运行状况
 titleSuffix: Configuration Manager
 description: 如何进行桌面分析在 Configuration Manager 中监视连接运行状况和设备状态的详细信息。
 ms.date: 06/11/2019
@@ -10,16 +10,15 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7dc9b67dbf57c1803ed732f36e1cb110260146d
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 1c5d2af3cf97d6093037e248eff3447035ff413f
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039728"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159060"
 ---
-# <a name="monitor-connection-health"></a>监视连接运行状况
+# <a name="monitor-connection-health"></a>监视器连接运行状况
 
 使用**连接运行状况**仪表板在 Configuration Manager 中向下钻取到类别的设备运行状况。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Desktop 分析服务**节点，然后选择**连接运行状况**仪表板。  
 

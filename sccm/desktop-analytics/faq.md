@@ -10,14 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1187688813c2d7a3308ed5ed53e29cb90640dda8
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: 9daf94a21b66fa0137e0a6bf041f10c87c64c34e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834841"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159082"
 ---
 # <a name="desktop-analytics-faq"></a>桌面 Analytics 常见问题解答
 

@@ -10,14 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 972ccf97590cb7662b5bf0a8e5bd3acb410f5766
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: b0e47541d7acf5e1f5a74a58f6d39603bfcb9269
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145806"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159235"
 ---
 # <a name="assets-in-desktop-analytics"></a>在桌面 Analytics 中的资产
 

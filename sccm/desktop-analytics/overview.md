@@ -10,14 +10,13 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8dfa24f92ced6c69f90844e46dccf1df0e93f7a7
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: a298bd0504ea719d6b60d2c86692942d6ba989b8
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821980"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159034"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 

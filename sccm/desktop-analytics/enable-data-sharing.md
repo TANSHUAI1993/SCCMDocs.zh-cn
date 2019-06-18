@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 用于共享桌面分析诊断数据的参考指南。
-ms.date: 06/05/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: 3eff032113b92055b32cb81c6cae9363c368a421
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821970"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159095"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
@@ -61,6 +60,7 @@ ms.locfileid: "66821970"
 
 | 终结点  | 函数  |
 |-----------|-----------|
+| `https://aka.ms` | 用于定位服务 |
 | `https://v10c.events.data.microsoft.com` | 连接的用户体验和诊断组件终结点。 使用运行 Windows 10 的设备，版本 1703年或更高版本，与 2018年-09 累积更新或更高版本安装。 |
 | `https://v10.events.data.microsoft.com` | 连接的用户体验和诊断组件终结点。 设备运行 Windows 10，版本 1803 版，或更高版本，使用_而无需_2018年 09 累积更新的安装。 |
 | `https://v10.vortex-win.data.microsoft.com` | 连接的用户体验和诊断组件终结点。 由运行 Windows 10 版本 1709年或更早版本的设备。 |

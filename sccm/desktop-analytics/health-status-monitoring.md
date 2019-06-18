@@ -10,14 +10,13 @@ ms.assetid: 343dbe2a-597c-4719-b7ac-45b1f39b49ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a95d1cca34dec9a17487e10d980f7e458186106
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 5dc3123763430dc35d566b68e3c1c04762d26de5
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145789"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159050"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>在桌面 Analytics 中监视的运行状况状态
 

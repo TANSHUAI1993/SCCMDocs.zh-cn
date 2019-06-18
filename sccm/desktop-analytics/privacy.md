@@ -10,14 +10,13 @@ ms.assetid: b5606f15-f589-485c-a599-cdabf1a9e7ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb109bc126902f4d68b876860e8d5ec3ff514bb8
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 08c8837bf71e0f3ff2a19290880d33ac28eed039
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67146017"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159024"
 ---
 # <a name="desktop-analytics-data-privacy"></a>桌面的分析数据隐私
 

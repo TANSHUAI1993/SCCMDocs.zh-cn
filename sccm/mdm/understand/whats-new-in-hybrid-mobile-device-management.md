@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a4cfbc7e9db5f4402278b73c2ca7ea1d869953
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MT
+ms.openlocfilehash: c0b8d24e536348ed853762cb5aa620e76495e064
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355037"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159441"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -201,7 +201,7 @@ Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 +
 #### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>新的帮助和支持 Windows 10 公司门户中体验
 
 <!--1488939-->  
-新的公司门户帮助和支持页面可以帮助用户进行故障排除和请求应用程序和访问问题的帮助。 在新页中，它们可以通过电子邮件发送错误和诊断日志的详细信息并查找其组织的支持人员详细信息。 它们还会发现其中包含指向相关的 Intune 文档常见问题部分。 有关详细信息和屏幕截图，请参阅[获取帮助和支持 Windows 10 公司门户中的](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp)。
+新的公司门户帮助和支持页面可以帮助用户进行故障排除和请求应用程序和访问问题的帮助。 在新页中，它们可以通过电子邮件发送错误和诊断日志的详细信息并查找其组织的支持人员详细信息。 它们还会发现其中包含指向相关的 Intune 文档常见问题部分。 有关详细信息和屏幕截图，请参阅[获取帮助和支持 Windows 10 公司门户中的](https://docs.microsoft.com/intune-user-help/help-support-windows-cpapp)。
 
 #### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>某些 BitLocker 设置支持 Windows 10 专业版
 
@@ -376,7 +376,7 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 #### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>更多在适用于 Windows 的公司门户应用中同步的机会
 
 <!--2683177-->  
-适用于 Windows 的公司门户应用现在可以启动直接从 Windows 任务栏和 「 开始 」 菜单同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 若要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标。 在菜单选项中，选择“同步此设备”  。 （此菜单也称为跳转列表。）公司门户将打开“设置”页并启动同步  。有关更新过程的信息，请参阅[手动同步 Windows 设备](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu)。
+适用于 Windows 的公司门户应用现在可以启动直接从 Windows 任务栏和 「 开始 」 菜单同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 若要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标。 在菜单选项中，选择“同步此设备”  。 （此菜单也称为跳转列表。）公司门户将打开“设置”页并启动同步  。有关更新过程的信息，请参阅[手动同步 Windows 设备](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu)。
 
 
 
