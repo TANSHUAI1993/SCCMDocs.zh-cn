@@ -56,6 +56,20 @@ conceptualContent:
     - text: 运行 PowerShell 脚本
       url: https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts
       itemType: how-to-guide
+  - title: 桌面分析
+    links:
+    - text: 概述
+      url: https://docs.microsoft.com/sccm/desktop-analytics/overview
+      itemType: overview
+    - text: 将 Windows 10 部署到试点
+      url: https://docs.microsoft.com/sccm/desktop-analytics/tutorial-windows10
+      itemType: tutorial
+    - text: 设置桌面分析
+      url: https://docs.microsoft.com/sccm/desktop-analytics/set-up
+      itemType: how-to-guide
+    footerLink:
+      text: 查看更多
+      url: https://docs.microsoft.com/sccm/desktop-analytics/overview
   - title: 基础结构简化
     links:
     - text: 站点服务器高可用性
@@ -151,34 +165,6 @@ conceptualContent:
     footerLink:
       text: 查看更多
       url: https://docs.microsoft.com/sccm/protect/understand/protect-data-and-site-infrastructure
-  - title: 开发
-    links:
-    - text: PowerShell
-      url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
-      itemType: learn
-    - text: SDK 概念
-      url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
-      itemType: overview
-    - text: SDK 参考
-      url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
-      itemType: learn
-    - text: SQL 视图
-      url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
-      itemType: learn
-  - title: 工具
-    links:
-    - text: 支持中心
-      url: https://docs.microsoft.com/sccm/core/support/support-center
-      itemType: how-to-guide
-    - text: MDT
-      url: https://docs.microsoft.com/sccm/mdt/
-      itemType: how-to-guide
-    - text: 包转换管理器
-      url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
-      itemType: learn
-    footerLink:
-      text: 查看更多
-      url: https://docs.microsoft.com/sccm/core/support/tools
 additionalContent:
   sections:
   - title: Configuration Manager 社区和支持
@@ -198,14 +184,35 @@ additionalContent:
     - title: 产品支持
       summary: 从 Microsoft 支持获得专业帮助
       url: https://aka.ms/cmcbsupport
-    - title: Reddit 上的 ConfigMgr
-      summary: 通过社区了解详细信息
-      url: https://www.reddit.com/r/sccm
+  - title: 其他内容
+    items:
+    - title: 开发
+      summary: >
+        [PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) <br/>
+
+        [SDK 概念](https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk) <br/>
+
+        [SDK 参考](https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference) <br/>
+
+        [SQL 视图](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views)
+    - title: 工具
+      summary: >
+        [支持中心](https://docs.microsoft.com/sccm/core/support/support-center) <br/>
+
+        [MDT](https://docs.microsoft.com/sccm/mdt/) <br/>
+
+        [包转换管理器](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) <br/>
+
+        [查看更多 >](https://docs.microsoft.com/sccm/core/support/tools)
+    - title: 其他社区站点
+      summary: >
+        [Reddit 上的 ConfigMgr](https://www.reddit.com/r/sccm) <br/>
+
+        [Facebook 上的 ConfigMgr 专业人员组](https://www.facebook.com/groups/ConfigMgr2012) <br/>
   footer: 在我们的网站上发现了问题？ [请告诉我们](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)！
-metadata:
-  ms.openlocfilehash: bf3248bb4e4169ca86741d1936398005d3fd1fd5
-  ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
-  ms.translationtype: HT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/07/2019
-  ms.locfileid: "66463805"
+ms.openlocfilehash: 68055069b363adadc54b5cae7843f4225b3d10e7
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159563"
