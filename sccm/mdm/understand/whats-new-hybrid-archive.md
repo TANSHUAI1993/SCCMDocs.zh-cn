@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27df5154a55717a06924bc906edd2c7f6a4f9a2b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
-ms.translationtype: HT
+ms.openlocfilehash: 78926fb271bf1663dbd497f1894e3b4acbffd08b
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158366"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194637"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
@@ -113,7 +113,7 @@ ms.locfileid: "67158366"
 
 - [Android for Work 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
 - [针对不符合应用的符合性设置](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
-- [PFX 证书创建和分发以及 S/MIME 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [PFX 证书创建和分发以及 S/MIME 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702#mobile-device-management)
 - [混合 MDM 的创建向导中，Android 和 iOS 版本不再作为目标](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
 
 Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合功能：
@@ -192,7 +192,7 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 - **解决了以下问题：iOS 设备处于非活动状态，或管理控制台无法与其通信**
 
-  如果用户设备与 Intune 失去联系，可向用户提供新的故障排除步骤，帮助其重新获得访问公司资源的权限。 请参阅[设备处于非活动状态，或管理控制台无法与其通信](https://docs.microsoft.com/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them)。
+  如果用户设备与 Intune 失去联系，可向用户提供新的故障排除步骤，帮助其重新获得访问公司资源的权限。 请参阅[设备处于非活动状态，或管理控制台无法与其通信](https://docs.microsoft.com/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them)。
 
 ### <a name="new-in-configuration-manager-technical-preview-1701"></a>Configuration Manager Technical Preview 1701 中的新增功能
 
@@ -571,7 +571,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
   现在，常见操作（如“停用/擦除”  、“重置密码”  、“远程锁定”  和“绕过激活锁定”  ）可在从“资产和合规性”  工作区访问的“远程设备操作”  菜单中找到
 
-  有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1605 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1605)中的[远程设备操作的新体验](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions)。  
+  有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1605 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1605)中的[远程设备操作的新体验](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_Remote)。  
 
 - **适用于企业的 Windows 应用商店应用**
 
@@ -635,7 +635,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 - **从 Configuration Manager 控制台查找、管理和分发用于 Windows 10 设备的适用于企业的 Windows 应用商店应用**
 
 
-  Configuration Manager Technical Preview 1604 中提供对适用于企业的 Windows 应用商店的支持，以帮助查找和管理应用，并将其分发到所管理的 Windows 10 设备。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1604 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1604)中的[管理从适用于企业的 Windows 应用商店批量采购的应用](/sccm/core/get-started/capabilities-in-technical-preview-1604#manage-volume-purchased-apps-from-the-windows-store-for-business)。  
+  Configuration Manager Technical Preview 1604 中提供对适用于企业的 Windows 应用商店的支持，以帮助查找和管理应用，并将其分发到所管理的 Windows 10 设备。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1604 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1604)中的[管理从适用于企业的 Windows 应用商店批量采购的应用](/sccm/core/get-started/capabilities-in-technical-preview-1604#BKMK_WindowsVPP)。  
 
 - **适用于 Android 设备的 SmartLock 设置**
 

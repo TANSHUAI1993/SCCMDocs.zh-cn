@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0b8d24e536348ed853762cb5aa620e76495e064
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
-ms.translationtype: HT
+ms.openlocfilehash: da4798b958e0fd66e53024a2a104a67b3c1b93ea
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159441"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194594"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -646,7 +646,7 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
 ### <a name="new-in-configuration-manger-technical-preview-1711"></a>Configuration Manager Technical Preview 1711 中的新增功能
 
 - **Windows 10 的新符合性策略选项**   
-  现在可以为 Windows 10 设备配置新的符合性策略选项。 新的设置包括防火墙、用户帐户控制、Windows Defender 防病毒和操作系统内部版本版本控制的策略。 有关详细信息，请参阅[适用于 Windows 10 的新符合性策略选项](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10)。
+  现在可以为 Windows 10 设备配置新的符合性策略选项。 新的设置包括防火墙、用户帐户控制、Windows Defender 防病毒和操作系统内部版本版本控制的策略。 有关详细信息，请参阅[适用于 Windows 10 的新符合性策略选项](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)。
 
 
 
@@ -704,7 +704,7 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
   <!--1428681-->    
 
 - **块不受支持的 Samsung Knox 设备注册**   
-  公司门户应用仅尝试注册受支持的 Samsung Knox 设备。 若要避免阻止 MDM 注册的 KNOX 激活错误，只有在[由 Samsung 发布的设备列表](https://www.samsungknox.com/knox-supported-devices/knox-workspace)中显示设备时才会尝试进行设备注册。 Samsung 设备可以有支持 KNOX 的型号，而其他设备则没有。 在采购和部署之前，需与设备经销商验证 Knox 的兼容性。 可以在 [Android 和 Samsung KNOX Standard 策略设置](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices)中找到经验证的设备的完整列表。
+  公司门户应用仅尝试注册受支持的 Samsung Knox 设备。 若要避免阻止 MDM 注册的 KNOX 激活错误，只有在[由 Samsung 发布的设备列表](https://www.samsungknox.com/knox-supported-devices/knox-workspace)中显示设备时才会尝试进行设备注册。 Samsung 设备可以有支持 KNOX 的型号，而其他设备则没有。 在采购和部署之前，需与设备经销商验证 Knox 的兼容性。 您可以找到经验证的设备的完整列表[会自动使用的 Samsung Knox 移动注册来注册 Android 设备](https://docs.microsoft.com/intune/android-samsung-knox-mobile-enroll#prerequisites)。
   <!-- 1490695 -->     
 
 - **不再支持 Android 4.3 及更低版本**     
@@ -712,7 +712,7 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
   <!--1171126, 1326920 -->     
 
 - **告知最终用户可以在注册设备上看到哪些设备信息**     
-  我们将在所有公司门户应用的“设备详细信息”屏幕中添加“所有权类型”  。 此信息允许用户直接从[公司可以看到哪些信息？](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)一文中找到隐私的相关详情。 此改进将在不久的将来在所有公司门户应用中推出。 我们在 [9 月](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017)宣布了适用于 iOS 的此功能。 
+  我们将在所有公司门户应用的“设备详细信息”屏幕中添加“所有权类型”  。 此信息允许用户直接从[公司可以看到哪些信息？](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)一文中找到隐私的相关详情。 此改进将在不久的将来在所有公司门户应用中推出。 我们在 [9 月](#september-2017)宣布了适用于 iOS 的此功能。 
   <!--1165314-->     
 
 

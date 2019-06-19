@@ -2,7 +2,7 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 05/28/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MTE75
+ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
+ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355064"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046992"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -1525,6 +1525,9 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters)（从版本 1902 开始）<!--3556028-->  
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行 PowerShell 脚本”  以添加此步骤。
+
+> [!Note]  
+> 使用采用 Unicode 格式的已签名 PowerShell 脚本。 默认的 ANSI 格式不适用于这一步。
 
 ### <a name="properties"></a>属性  
 
