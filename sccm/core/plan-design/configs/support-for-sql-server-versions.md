@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 367ab11340ef36b0caaf23e84f26bdda921ee158
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499481"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834753"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -227,7 +227,8 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ### <a name="sql-server-clr-integration"></a>SQL Server CLR 集成  
   站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 此选项在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)  
 
-
+### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
+ 站点间复制和单个主站点都需要 SQL Server Service Broker。 
 
 ##  <a name="bkmk_optional"></a> SQL Server 可选配置  
  以下配置对使用完整 SQL Server 安装的每个数据库是可选的。  

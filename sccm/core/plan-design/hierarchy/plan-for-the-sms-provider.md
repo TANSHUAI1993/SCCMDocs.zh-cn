@@ -2,7 +2,7 @@
 title: 规划 SMS 提供程序
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 SMS 提供程序站点系统角色。
-ms.date: 05/21/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31818bf0b639db4172e090a68a704380208781ca
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 0458d4b3c1b406a14f1492ed4df91933436cb9a6
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176993"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038600"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要管理 Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，当安装管理中心站点或主站点时，SMS 提供程序会安装在站点服务器上。 
 
@@ -32,7 +32,7 @@ SMS 提供程序是 Windows Management Instrumentation (WMI) 提供程序，它�
 
 - 每个管理中心站点和主站点上都必须至少具有一个 SMS 提供程序。 你可以根据需要安装其他提供程序。  
 
-- “SMS 管理员”  安全组提供对 SMS 提供程序的访问权限。 Configuration Manager 在站点服务器和安装了 SMS 提供程序实例的每台计算机上自动创建此组。 有关详细信息，请参阅 [SMS 管理员](/sccm/core/plan-design/hierarchy/accounts#sms-admins)。  
+- “SMS 管理员”安全组提供对 SMS 提供程序的访问权限。 Configuration Manager 在站点服务器和安装了 SMS 提供程序实例的每台计算机上自动创建此组。 有关详细信息，请参阅 [SMS 管理员](/sccm/core/plan-design/hierarchy/accounts#sms-admins)。  
 
 - 辅助站点不支持 SMS 提供程序角色。  
 
@@ -40,7 +40,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
 SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返回控制台用户有权查看的信息。  
 
-从 1810 版开始，SMS 提供程序现通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”  。 此 REST API 可用于取代自定义 Web 服务访问站点信息。 有关详细信息，请参阅[管理服务](#bkmk_admin-service)。 
+从 1810 版开始，SMS 提供程序现通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。 有关详细信息，请参阅[管理服务](#bkmk_admin-service)。 
 
 > [!IMPORTANT]  
 >  当站点的 SMS 提供程序的每个实例都处于脱机状态时，Configuration Manager 控制台无法连接到该站点。  
@@ -63,6 +63,10 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
 -   至少有 650 MB 可用磁盘空间用于支持 Windows ADK 组件。 有关 Windows ADK 和 SMS 提供程序的详细信息，请参阅 [OS 部署要求](#BKMK_WAIKforSMSProv)。  
 
+-   启用 Windows 服务器角色“Web 服务器 (IIS)”  
+
+    > [!Note]  
+    > 每个 SMS 提供程序都会尝试安装需要证书的[管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)。 此服务具有对 IIS 的依赖，以便将该证书绑定到 HTTPS 端口 443。 如果启用[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)，那么此站点将使用 IIS API 绑定该证书。 如果站点使用 PKI，那么你需要在 SMS 提供程序上将 PKI 证书手动绑定到 IIS 中。  
 
 
 ##  <a name="bkmk_location"></a>位置  
@@ -78,11 +82,11 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
 若要查看站点的每个 SMS 提供程序的位置，请执行以下操作： 
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点    。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
 
-2. 从列表中选择所需的站点，然后选择功能区中的“属性”  。  
+2. 从列表中选择所需的站点，然后选择功能区中的“属性”。  
 
-3. 在站点“属性”的“常规”选项卡中，查看“SMS 提供程序位置”字段    。    
+3. 在站点“属性”的“常规”选项卡中，查看“SMS 提供程序位置”字段。    
 
 
 每个 SMS 提供程序支持多个请求中的同时连接。 对这些连接仅有的限制是 Windows 可用的服务器连接数量，以及服务器上满足连接请求的可用资源。  
@@ -155,13 +159,13 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
 若要配置此设置，请使用以下步骤：
 
-1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
 
-2. 选择功能区中的“层次结构设置”  。  
+2. 选择功能区中的“层次结构设置”。  
 
-3. 切换到“身份验证”选项卡  。选择所需的[“身份验证级别”](#authentication-levels)，然后选择“确定”  。  
+3. 切换到“身份验证”选项卡。选择所需的[“身份验证级别”](#authentication-levels)，然后选择“确定”。  
 
-    - 仅在必要时选择“添加”以排除特定用户或组  。 有关详细信息，请参阅[排除](#exclusions)。  
+    - 仅在必要时选择“添加”以排除特定用户或组。 有关详细信息，请参阅[排除](#exclusions)。  
 
 
 ### <a name="authentication-levels"></a>身份验证级别
@@ -177,7 +181,7 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
 ### <a name="exclusions"></a>排除
 
-从层次结构设置的“身份验证”  选项卡中，也可以排除某些用户或组。 请谨慎使用此选项。 例如，当特定用户要求访问 Configuration Manager 控制台但无法使用要求的级别对 Windows 进行身份验证时。 对于在系统帐户的上下文下运行的自动化或服务，它可能也是必需的。
+从层次结构设置的“身份验证”选项卡中，也可以排除某些用户或组。 请谨慎使用此选项。 例如，当特定用户要求访问 Configuration Manager 控制台但无法使用要求的级别对 Windows 进行身份验证时。 对于在系统帐户的上下文下运行的自动化或服务，它可能也是必需的。
 
 
 
@@ -257,9 +261,9 @@ Configuration Manager WMI 架构定义 SMS 提供程序的结构。 架构命名
 > [!Note]  
 > 在该 Configuration Manager 版本中，SMS 提供程序 API 是预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
 
-从 1810 版开始，SMS 提供程序通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”  。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
+从 1810 版开始，SMS 提供程序通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
 
- 管理服务 URL 格式为 `https://<servername>/AdminService/wmi/<ClassName>`，其中 `<servername>` 为安装 SMS 提供程序的服务器，`<ClassName>` 为有效 Configuration Manager WMI 类名称。 在 1810 版中，此类名不带 `SMS_` 前缀。 在 1902 版及更高版本中，此类名与 WMI 类名相同。 
+管理服务 URL 格式为 `https://<servername>/AdminService/wmi/<ClassName>`，其中 `<servername>` 为安装 SMS 提供程序的服务器，`<ClassName>` 为有效 Configuration Manager WMI 类名称。 在 1810 版中，此类名不带 `SMS_` 前缀。 在 1902 版及更高版本中，此类名与 WMI 类名相同。 
 
 例如：
 - 1810：`https://servername/AdminService/wmi/Site`
@@ -275,11 +279,11 @@ Configuration Manager WMI 架构定义 SMS 提供程序的结构。 架构命名
 
 借助它，也可以通过 OData 连接器选项访问 PowerBI 中的站点数据。 
 
-管理服务将其活动记录到 adminservice.log  文件。
+管理服务将其活动记录到 adminservice.log 文件。
 
 ### <a name="enable-the-administration-service-through-the-cmg"></a>通过 CMG 启用管理服务
 
-SMS 提供程序  显示为角色，其中包含允许通过云管理网关 (CMG) 进行通信的选项。 此设置的当前用途是通过来自远程设备的电子邮件启用应用程序批准。 有关详细信息，请参阅[批准应用程序](/sccm/apps/deploy-use/app-approval)。
+SMS 提供程序显示为角色，其中包含允许通过云管理网关 (CMG) 进行通信的选项。 此设置的当前用途是通过来自远程设备的电子邮件启用应用程序批准。 有关详细信息，请参阅[批准应用程序](/sccm/apps/deploy-use/app-approval)。
 
 #### <a name="prerequisites"></a>先决条件
 - 托管 SMS 提供程序的服务器需要 .NET 4.5.2 或更高版本。  
@@ -294,11 +298,11 @@ SMS 提供程序  显示为角色，其中包含允许通过云管理网关 (CMG
     - 将基于 PKI 的证书手动绑定到承载 SMS 提供程序角色的服务器上的 IIS 中的端口 443  
 
 #### <a name="process-to-enable-the-api-through-the-cmg"></a>通过 CMG 启用 API 的过程
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点    。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点。  
 
-2. 选择具有 SMS 提供程序  角色的服务器。  
+2. 选择具有 SMS 提供程序角色的服务器。  
 
-3. 在细节窗格中，选择“SMS 提供程序”  角色，然后在“站点角色”  选项卡的功能区中选择“属性”  。  
+3. 在细节窗格中，选择“SMS 提供程序”角色，然后在“站点角色”选项卡的功能区中选择“属性”。  
 
-4. 选择“允许管理服务的 Configuration Manager 云管理网关通信”选项  。  
+4. 选择“允许管理服务的 Configuration Manager 云管理网关通信”选项。  
 

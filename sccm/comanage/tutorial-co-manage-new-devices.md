@@ -3,8 +3,8 @@ title: 教程：为基于 Internet 的新 Windows 10 设备启用共同管理
 titleSuffix: Configuration Manager
 description: 为 Windows 10 设备配置共同管理以使用 Configuration Manager 和 Intune。
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 3c02a9c05e2c7d24654684f122edcd3eb5a84e06
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737349"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834863"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>教程：为基于 Internet 的新设备启用共同管理
 通过共同管理，可以保持完善的流程，以便使用 Configuration Manager 管理组织中的电脑。 同时，通过使用 Intune 在云上投入，实现安全性和新式预配。 
@@ -392,7 +392,7 @@ Azure 配置、站点系统角色和客户端设置配置就绪后，可以配�
 例如，C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi   
 
 4. 选择“应用信息”，然后指定以下详细信息：
-   - **描述**：配置管理器客户端  
+   - **描述**：Configuration Manager 客户端  
 
    - **发布者**：Microsoft  
 

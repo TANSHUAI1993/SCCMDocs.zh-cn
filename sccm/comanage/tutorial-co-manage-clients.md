@@ -2,21 +2,21 @@
 title: 教程：为现有 Configuration Manager 客户端启用共同管理
 titleSuffix: Configuration Manager
 description: 在已使用 Configuration Manager 管理 Windows 10 设备时，在 Microsoft Intune 中配置共同管理。
-ms.date: 03/08/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
 ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 8b19f54d60ed0594be4a51b5abcef69304a27ece
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737290"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834765"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：为现有 Configuration Manager 客户端启用共同管理
 通过共同管理，可以保持完善的流程，以便使用 Configuration Manager 管理组织中的电脑。 同时，通过使用 Intune 在云上投入，实现安全性和新式预配。  
@@ -98,14 +98,13 @@ ms.locfileid: "57737290"
 4. 在“概述”页上，选择“下一步”。
 5. 在“连接到 Azure AD”页上，输入 Azure AD 租户的全局管理员凭据。
 6. 在“设备选项”页上，选择“配置混合 Azure AD 联接”，然后选择“下一步”。
-7. 在“SCP’页上，对于想要 Azure AD Connect 配置服务连接点 (SCP) 的每个本地林，执行以下步骤，然后选择“下一步”：  
+7. 在“设备操作系统”页上，选择 Active Directory 环境中的设备所使用的操作系统，然后选择“下一步”。  
+
+   可以选择支持 Windows 下层加入域的设备的选项，但请记住，仅 Windows 10 支持设备的共同管理。
+8. 在“SCP’页上，对于想要 Azure AD Connect 配置服务连接点 (SCP) 的每个本地林，执行以下步骤，然后选择“下一步”：  
    1. 选择林。  
    2. 选择身份验证服务。  如果具有联盟域，选择 AD FS 服务器，除非贵组织具有专门的 Windows 10 客户端且已配置计算机/设备同步或组织正在使用 [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)。  
    3. 单击“添加”以输入企业管理员凭据。  
-8. 在“设备操作系统”页上，选择 Active Directory 环境中的设备所使用的操作系统，然后选择“下一步”。  
-
-   可以选择支持 Windows 下层加入域的设备的选项，但请记住，仅 Windows 10 支持设备的共同管理。
-
 9. 如果有托管域，则跳过此步骤。  
 
    在“联合身份验证配置”页上，输入 AD FS 管理员的凭据，然后选择“下一步”。

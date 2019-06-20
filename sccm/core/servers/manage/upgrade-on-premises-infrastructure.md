@@ -2,7 +2,7 @@
 title: 升级本地基础结构
 titleSuffix: Configuration Manager
 description: 了解如何升级基础结构（例如 SQL Server）和站点系统的操作系统。
-ms.date: 11/27/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac4f22b6da6f0ed3c743848efc5477577376116b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a361ff057d6448169088f383ac8373673a97294d
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500939"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834969"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
@@ -211,6 +211,8 @@ Configuration Manager 支持将 SQL Server 就地升级到以下版本：
 
 - SQL Server 2014  
 
+这包括在辅助站点上将 SQL Server Express 升级到更新版本的 SQL Server Express。
+
 升级托管站点数据库的 SQL Server 的版本时，必须按以下顺序升级在站点处使用的 SQL Server 版本：
 
 1. 首先升级管理中心站点处的 SQL Server  
@@ -219,7 +221,7 @@ Configuration Manager 支持将 SQL Server 就地升级到以下版本：
 
 3. 最后升级父主站点。 这些站点包括向管理中心站点报告的子主站点和是层次结构的顶层站点的独立主站点。  
 
-
+ 
 ### <a name="sql-server-cardinality-estimation-level"></a>SQL Server 基数估计级别   
 
 从 SQL Server 早期版本升级站点数据库时，如果现有 SQL基数估计级别是此 SQL Server 实例允许的最小级别，数据库则会保留此级别。 使用兼容级别低于允许级别的数据库升级 SQL Server 会自动将数据库设置为 SQL Server 允许的最低兼容级别。

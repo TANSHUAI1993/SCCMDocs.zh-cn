@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4bb3cfa86275562ad46c4fdc988719a493f42bf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8c6a6e8a346c53d1f2bc8abdc2c2f2d0b9fafb64
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499066"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834881"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>将网络位置定义为 System Center Configuration Manager 的边界
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 边界是网络上的位置，其中包含你要管理的设备。 设备所在的边界相当于 Active Directory 站点，或由安装在设备上的 Configuration Manager 客户端指定的网络 IP 地址。
  - 你可以手动创建单个边界。 但是，Configuration Manager 不支持以边界的形式直接输入超网。 作为替代，请使用 IP 地址范围边界类型。
@@ -37,36 +37,37 @@ Configuration Manager 边界是网络上的位置，其中包含你要管理的�
 
 ## <a name="to-create-a-boundary"></a>创建边界  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “层次结构尊重” > “边界”  
+1.  在 Configuration Manager 控制台中，单击“管理”   > “层次结构尊重”   > “边界”   
 
-2.  在“主页”  选项卡上的“创建”  组中，单击“创建边界”  **Boundary.**。  
+2.  在“主页”  选项卡上的“创建”  组中，单击“创建边界”  **Boundary.** 。  
 
 3.  在“创建边界”对话框的“常规”  选项卡上，你可以指定“描述”  以便通过友好名称或引用来标识边界。  
 
 4.  为此边界选择“类型”  ：  
 
-    -   如果选择“IP 子网” ，你必须为此边界指定“子网 ID”  。  
+    -   如果选择“IP 子网”  ，你必须为此边界指定“子网 ID”  。  
         > [!TIP]  
         >  你可以指定“网络”  和“子网掩码”  以便自动指定“子网 ID”  。 在保存边界时，只会保存子网 ID 值。  
 
-    -   如果选择“Active Directory 站点” ，则必须指定或“浏览”  到站点服务器的本地林中的 Active Directory 站点。  
+    -   如果选择“Active Directory 站点”  ，则必须指定或“浏览”  到站点服务器的本地林中的 Active Directory 站点。  
+        
+        - 如果为边界指定 Active Directory 站点，则边界包括作为该 Active Directory 站点成员的每个 IP 子网。 如果 Active Directory 站点的配置在 Active Directory 中发生变化，则此边界中包括的网络位置也会更改。  
 
-        > [!IMPORTANT]  
-        >  如果为边界指定 Active Directory 站点，则边界包括作为该 Active Directory 站点成员的每个 IP 子网。 如果 Active Directory 站点的配置在 Active Directory 中发生变化，则此边界中包括的网络位置也会更改。  
+        - Active Directory 站点边界不适用于纯 AzureAD 客户端。 如果它们在本地漫游，那么在仅使用 AD 站点定义的情况下，它们将不属于任何边界。
 
-    -   如果选择“IPv6 前缀” ，你必须以 IPv6 前缀格式指定“前缀”  。  
+    -   如果选择“IPv6 前缀”  ，你必须以 IPv6 前缀格式指定“前缀”  。  
 
-    -   如果选择“IP 地址范围” ，你必须指定包括 IP 子网的一部分或包括多个 IP 子网的“起始 IP 地址”  和“结束 IP 地址”  。    
+    -   如果选择“IP 地址范围”  ，你必须指定包括 IP 子网的一部分或包括多个 IP 子网的“起始 IP 地址”  和“结束 IP 地址”  。    
 
 5.  单击“确定”  保存新边界。  
 
 ## <a name="to-configure-a-boundary"></a>配置边界  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “层次结构尊重” > “边界”  
+1.  在 Configuration Manager 控制台中，单击“管理”   > “层次结构尊重”   > “边界”   
 
 2.  选择要修改的边界。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”  选项卡上的“属性”  组中，单击“属性”  。  
 
 4.  在边界的“属性”  对话框中，选择“常规”  选项卡以编辑边界的“描述”  或“类型”  。 你也可以通过编辑边界的网络位置来更改边界的作用域。 例如，对于 Active Directory 站点边界，你可以指定新的 Active Directory 站点名称。  
 
@@ -77,8 +78,8 @@ Configuration Manager 边界是网络上的位置，其中包含你要管理的�
 
 6.  选择“边界组”  选项卡以修改此边界的边界组成员身份：  
 
-    -   要将此边界添加到一个或多个边界组，请单击“添加” ，选中一个或多个边界组的复选框，然后单击“确定” 。  
+    -   要将此边界添加到一个或多个边界组，请单击“添加”  ，选中一个或多个边界组的复选框，然后单击“确定”  。  
 
-    -   要从某个边界组中删除此边界，请选择该边界组，然后单击“删除” 。  
+    -   要从某个边界组中删除此边界，请选择该边界组，然后单击“删除”  。  
 
 7.  单击“确定”  关闭边界属性并保存配置。  

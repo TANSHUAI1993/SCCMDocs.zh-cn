@@ -2,7 +2,7 @@
 title: 规划 Windows Embedded 设备的客户端部署
 titleSuffix: Configuration Manager
 description: 在 System Center Configuration Manager 中规划 Windows Embedded 设备的客户端部署。
-ms.date: 04/23/2017
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ba85b6d1e545f467816b3e8dddeec04ae4192a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1fd221ecb62a74e9ff3a56815fbdeacdd27ca026
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123679"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038328"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
@@ -76,11 +76,14 @@ ms.locfileid: "56123679"
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 
-> **对于仅使用 FBWF 和 UWF 的设备：** 当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥以确保客户端继续与管理点通信。 在这些设备上配置以下例外：  
+> **对于仅使用 FBWF 和 UWF 的设备：** 当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥才能确保客户端继续与管理点进行通信。 在这些设备上配置以下例外：  
 > 
 > - c:\Windows\System32\Microsoft\Protect  
 >   -   c:\ProgramData\Microsoft\Crypto  
 >   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+
+> [!NOTE]
+> 除上述“重要”框中记录的异常之外，Configuration Manager 客户端无需其他异常。 添加其他与 Configuration Manager 或 WMI (WBEM) 相关的异常可能会导致 Configuration Manager 出现故障，包括设备陷入服务模式或设备遇到重启循环。 非必要的异常包括 Configuration Manager 客户端目录、CCMcache 目录、CCMSetup 目录、任务序列缓存目录、WBEM 目录、以及 Configuration Manager 相关的注册表项。
 
  有关在 Configuration Manager 中部署和管理启用写入筛选器的 Windows Embedded 设备的示例场景，请参阅[在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例场景](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)。  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ffed5e06cca06c5976ac81eecfaca53032bdbc2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: abb8e846598a9ae0d69eb1b134911ec83006b966
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140072"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834909"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -39,7 +39,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 拉取分发点还使用此帐户从远程林中的源分发点下载内容。  
 
-从 1806 版开始，某些方案不再需要网络访问帐户。 可使站点使用增强型 HTTP 与 Azure Active Directory 身份验证。<!--1358228--> 
+从 1806 版开始，某些方案不再需要网络访问帐户。 可使站点搭配使用增强型 HTTP 和 Azure Active Directory 身份验证。<!--1358228--> 
 
 有关详细信息，请参阅[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)。
 
@@ -88,14 +88,16 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 
 ## <a name="delivery-optimization"></a>传递优化
-<!-- 1324696 -->使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。 客户端设置将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 有关详细信息，请参阅[传递优化](/sccm/core/clients/deploy/about-client-settings#delivery-optimization)客户端设置。
+<!-- 1324696 -->
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。 客户端设置将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 有关详细信息，请参阅[传递优化](/sccm/core/clients/deploy/about-client-settings#delivery-optimization)客户端设置。
 
 对于 Windows 10 质量更新，传递优化是[优化 Windows 10 更新传递](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)快速安装文件的推荐技术。
 
 
 
 ## <a name="windows-ledbat"></a>Windows LEDBAT
-<!--1358112--> Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络拥挤控制功能，可帮助管理后台网络传输。 对于在受支持版本的 Windows Server 上运行的分发点，请启用一个选项以帮助调整网络流量。 然后，客户端仅在允许的情况下使用网络带宽。 
+<!--1358112-->
+Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络拥塞控制功能，可帮助管理后台网络传输。 对于在受支持版本的 Windows Server 上运行的分发点，请启用一个选项以帮助调整网络流量。 然后，客户端仅在允许的情况下使用网络带宽。 
 
 有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)博客文章。
 
@@ -134,13 +136,15 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
     -   要求面向 Internet 的分发点接受 HTTPS。  
 
-    -   可使用云分发点。  
+    -   可使用云分发点或云管理网关 (CMG)。  
+    
+        *   从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)。
 
 -   **工作组**：  
 
     -   要求分发点接受 HTTPS。  
 
-    -   可使用云分发点。  
+    -   可使用云分发点或 CMG。  
 
 
 
