@@ -2,7 +2,7 @@
 title: 创建应用程序
 titleSuffix: Configuration Manager
 description: 使用部署类型、检测方法和安装软件要求创建应用程序。
-ms.date: 05/08/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c54eb02fe3de3246a7c8ed15e7589fcd4d9b1c9b
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 6302ca8e1f01f51bef09df2175c4525effd89a7e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264432"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834819"
 ---
 # <a name="create-applications-in-configuration-manager"></a>在 Configuration Manager 中创建应用程序
 
@@ -312,9 +312,25 @@ Configuration Manager 应用程序可定义有关应用程序的元数据。 应
 
 4.  单击“确定”以关闭“检测规则”对话框   。  
 
-为部署类型创建多个检测方法时，通过将子句组合在一起来创建更复杂的逻辑。 
+如果创建多个检测方法用于一个部署类型，可以通过将子句组合在一起来创建更复杂的逻辑。  
 
-继续转至下一节，了解如何将自定义脚本用作检测方法。 或者跳到部署类型的[用户体验](#bkmk_dt-ux)选项。
+#### <a name="group-detection-clauses-optional"></a>组合检测方法子句（可选） 
+
+1.  对一个部署类型创建三个或更多检测方法子句。  
+
+2.  依次选择两个或更多连续子句和“组合”  。 你会看到关联列中添加有括号，用于指明组的开始位置和结束位置。  
+
+    例如： 
+
+    | 连接器  |  ( | 子句           |  )  | 
+    |------------|----|------------------|-----| 
+    |            |    | MSI 产品代码 |     | 
+    | 或         | (  | file1.text 存在|     | 
+    | 且        |    | file2.txt 存在 | )   | 
+
+3.  若要删除组，请依次选择已组合的子句和“取消组合”  。  
+
+继续  转到下一部分，了解如何将自定义脚本用作检测方法。 或跳到  部署类型对应的[“用户体验”](#bkmk_dt-ux)选项。
 
 
 #### <a name="bkmk_detect-script"></a> 使用自定义脚本检查部署类型的状态  
