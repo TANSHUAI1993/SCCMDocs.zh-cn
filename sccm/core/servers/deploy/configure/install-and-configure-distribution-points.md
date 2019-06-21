@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97ea227d1e64bf4e264be6429457aba99ca4833b
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.openlocfilehash: 21ed29204a5ed41e54a12a1294bc9582d3e6eaa1
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403419"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252328"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -481,11 +481,11 @@ ms.locfileid: "66403419"
 
 管理为其分配此分发点的边界组。 将分发点添加到至少一个边界组中。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将此分发点用作内容源位置。
 
-配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组  。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组  。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
 选择“添加”  ，然后从列表中选择现有边界组。
 
-要为此分发点创建新边界组，请选择“创建”  。 有关如何创建和配置边界组的详细信息，请参阅[边界组的过程](/sccm/core/servers/deploy/configure/boundary-groups#procedures-for-boundary-groups)。
+要为此分发点创建新边界组，请选择“创建”  。 有关如何创建和配置边界组的详细信息，请参阅[边界组的过程](/sccm/core/servers/deploy/configure/boundary-group-procedures)。
 
 编辑以前安装的分发点的属性时，请管理“启用按需分发”选项  。 此选项允许 Configuration Manager 在客户端请求时自动将内容分发到此服务器。 有关详细信息，请参阅[按需内容分发](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution)。
 

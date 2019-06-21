@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 194a26a4fee7a8a7c97a91db4b579c9db03c1787
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7836e1779acbfdfbb66d6eac57bc7797abd52563
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129776"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286483"
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-[Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) 是一组解决方案，使你能够深入了解当前环境状态。 环境中的 Windows 设备向 Microsoft 报告数据，你可以通过这些解决方案访问和分析数据。 例如，通过将[升级就绪情况](/sccm/core/clients/manage/upgrade-readiness)连接到 Configuration Manager，可以直接访问 Configuration Manager 控制台的“监视”工作区中的数据。
+[Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) 是一组解决方案，使你能够深入了解当前环境状态。 环境中的 Windows 设备向 Microsoft 报告数据，你可以通过这些解决方案访问和分析数据。 例如，通过将[升级就绪情况](/sccm/core/clients/manage/upgrade-readiness)连接到 Configuration Manager，可以直接访问 Configuration Manager 控制台的“监视”  工作区中的数据。
 
 Windows Analytics 使用的数据不会直接传输到 Configuration Manager 站点服务器。 客户端计算机将数据发送到 Windows 云服务。 然后此服务会将相关数据将传输到组织的其中一个工作区中托管的 Windows Analytics 解决方案。 然后，Configuration Manager 会通过上下文链接将你定向到 Web 门户中的相关数据。 它也可以直接显示作为连接到 Configuration Manager 的解决方案一部分的数据。
 
@@ -33,29 +33,29 @@ Windows Analytics 使用的数据不会直接传输到 Configuration Manager 站
 
 ## <a name="configure-clients-to-report-data-to-windows-analytics"></a>将客户端配置为向 Windows Analytics 报告数据
 
-对于向 Windows Analytics 报告数据的客户端设备，向其配置商用 ID 键。 此键是托管 Windows Analytics 数据的 Azure Log Analytics 工作区。 还必须将设备配置为以适合你想要使用的特定解决方案的级别来报告数据。 
+对于向 Windows Analytics 报告数据的客户端设备，向其配置商用 ID 键  。 此键是托管 Windows Analytics 数据的 Azure Log Analytics 工作区。 还必须将设备配置为以适合你想要使用的特定解决方案的级别来报告数据。 
 
 ### <a name="configure-windows-analytics-client-settings"></a>配置 Windows Analytics 客户端设置
 配置 Windows Analytics： 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，然后选择“客户端设置”节点。  
-2. 在功能区中，选择“创建自定义设备客户端设置”。  
-3. 向此自定义设备客户端设置策略添加“Windows Analytics”组。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区，然后选择“客户端设置”  节点。  
+2. 在功能区中，选择“创建自定义设备客户端设置”  。  
+3. 向此自定义设备客户端设置策略添加“Windows Analytics”  组。  
 
 有关创建自定义设备客户端设置的详细信息，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
-选择“Windows Analytics”设置选项卡，然后配置以下设置：  
+选择“Windows Analytics”  设置选项卡，然后配置以下设置：  
 
 #### <a name="manage-windows-telemetry-settings-with-configuration-manager"></a>使用 Configuration Manager 管理 Windows 遥测设置
-将此设置配置为“是”以在 Windows 客户端上配置 Windows 诊断数据设置。   
+将此设置配置为“是”  以在 Windows 客户端上配置 Windows 诊断数据设置。   
 
 #### <a name="commercial-id-key"></a>商用 ID 键
 商用 ID 键可用于将你管理的设备中的信息映射到托管你组织的 Windows Analytics 数据的 Log Analytics 工作区。 如果已配置用于升级就绪情况的商用 ID 键，请使用此 ID。 如果还没有配置商用 ID 键，请参阅[复制商用 ID 键](https://docs.microsoft.com/windows/deployment/update/windows-analytics-get-started#copy-your-commercial-id-key)。
 
 #### <a name="windows-10-telemetry"></a>Windows 10 遥测
-有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization##diagnostic-data-level)。
+有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)。
 
 > [!Note]  
-> 还可以将 Windows 10 数据收集级别设置为“增强(受限)”。 该设置使你能够在环境中获得对设备的可操作见解，而无需设备通过 Windows 10 版本 1709 或更高版本报告“增强”级别的所有数据。 “增强(受限)”级别包括来自基本级别的指标，以及从与 Windows Analytics 相关的“增强”级别中收集的数据子集。
+> 还可以将 Windows 10 数据收集级别设置为“增强(受限)”  。 该设置使你能够在环境中获得对设备的可操作见解，而无需设备通过 Windows 10 版本 1709 或更高版本报告“增强”  级别的所有数据。 “增强(受限)”级别包括来自基本级别的指标，以及从与 Windows Analytics 相关的“增强”级别中收集的数据子集。
 
 #### <a name="windows-81-and-earlier-telemetry"></a>Windows 8.1 和早期的遥测   
 有关详细信息，请参阅 [Windows 7、 Windows 8 和 Windows 8.1 评估程序遥测事件和字段](https://go.microsoft.com/fwlink/?LinkID=822965)。

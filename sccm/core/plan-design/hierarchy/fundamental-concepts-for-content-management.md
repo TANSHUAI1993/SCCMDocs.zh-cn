@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abb8e846598a9ae0d69eb1b134911ec83006b966
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: bf0b57ad1753d797b163b0016517cdad09459013
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834909"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251622"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 支持可靠的工具和选项系统来管理软件内容。 软件部署（如应用程序、包、软件更新和 OS 部署）都需要内容。 Configuration Manager 将内容存储在站点服务器和分发点上。 在不同位置间传输此内容时需要大量网络带宽。 为有效地规划和使用内容管理基础结构，首先了解可用选项和配置。 然后考虑如何使用它们以最好地适应网络环境和内容部署需求。  
 
@@ -58,7 +58,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 
 ## <a name="binary-differential-replication"></a>二进制差异复制  
- 二进制差异复制 (BDR) 有时称为增量复制。 它用于将更新分发给先前部署到其他站点或远程分发点的内容。 要支持 BDR 减少对带宽的使用，请在分发点上安装“远程差分压缩”功能。 有关详细信息，请参阅[分发点先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)。
+ 二进制差异复制 (BDR) 有时称为增量复制。 它用于将更新分发给先前部署到其他站点或远程分发点的内容。 要支持 BDR 减少对带宽的使用，请在分发点上安装“远程差分压缩”功能  。 有关详细信息，请参阅[分发点先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)。
 
  BDR 将用于发送已分发内容更新的网络带宽降至最低。 每次更改文件时，它仅重新发送新的或更改的内容，而不是发送整个内容源文件集。  
 
@@ -70,7 +70,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 支持在层次结构中的每个父站点和子站点之间进行 BDR。 在站点内，支持在站点服务器及其常规分发点之间进行 BDR。 但是，拉取分发点和云分发点不支持通过 BDR 来传输内容。 拉取分发点支持文件级增量，传输新的文件，但不是文件内的块。
 
-应用程序始终使用二进制差异复制。 BDR 对于包是可选的，默认情况下未启用。 要对包使用 BDR，请为每个包启用此功能。 创建或编辑包时，选择“启用二进制差异复制”选项。   
+应用程序始终使用二进制差异复制。 BDR 对于包是可选的，默认情况下未启用。 要对包使用 BDR，请为每个包启用此功能。 创建或编辑包时，选择“启用二进制差异复制”选项  。   
 
 
 
@@ -101,7 +101,7 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)博客文章。
 
-有关如何将 Windows LEDBAT 与 Configuration Manager 分发点一起使用的详细信息，在[配置分发点的常规设置时](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)，请参阅设置“调整下载速度以使用未使用的网络带宽 (Windows LEDBAT)”。
+有关如何将 Windows LEDBAT 与 Configuration Manager 分发点一起使用的详细信息，在[配置分发点的常规设置时](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)，请参阅设置“调整下载速度以使用未使用的网络带宽 (Windows LEDBAT)”  。
 
 
 
@@ -185,15 +185,15 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 标准分发点支持一系列配置和功能：  
 
-- 可使用“计划”或“带宽限制”等控件辅助控制此传输。  
+- 可使用“计划”或“带宽限制”等控件辅助控制此传输   。  
 
-- 使用其他选项，包括“预留内容”和“拉取分发点”以最小化和控制网络消耗。  
+- 使用其他选项，包括“预留内容”和“拉取分发点”以最小化和控制网络消耗   。  
 
-- “BranchCache”、“对等缓存”和“传递优化”是对等技术，用于减少部署内容时使用的网络带宽。  
+- “BranchCache”、“对等缓存”和“传递优化”是对等技术，用于减少部署内容时使用的网络带宽    。  
 
-- OS 部署有不同的配置，例如 [PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint) 和[多播](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)  
+- OS 部署有不同的配置，例如 [PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint) 和[多播](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)    
 
-- “移动设备”的选项   
+- “移动设备”的选项    
   
 云分发点和拉取分发点支持许多此类配置，但具有特定于各分发点变体的限制。  
 
@@ -232,9 +232,9 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 对于无法从与其当前边界组关联的分发点找到内容的客户端，可进行回退，使用与临近边界组关联的内容源位置。 若要实现回退，临近边界组与客户端的当前边界组必须存在定义的关系。 此关系包含配置的时间，此时间后，无法在本地找到内容的客户端才可在搜索中包含来自临近边界组的内容源。
 
-不再使用首选分发点概念，且无法再使用或执行“允许回退内容源位置”设置。
+不再使用首选分发点概念，且无法再使用或执行“允许回退内容源位置”  设置。
 
-有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
 
 
@@ -252,22 +252,22 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 ## <a name="network-connection-speed-to-content-source"></a>到内容源的网络连接速度  
  在 Configuration Manager Current Branch 中，客户端查找带内容的分发点的方式已发生诸多变化。 这些更改包括到内容源的网络速度。 
 
-不再使用将分发点定义为“快”或“慢”的网络连接速度。 相反，与边界组关联的各站点系统都被视为相同的系统。
+不再使用将分发点定义为“快”  或“慢”  的网络连接速度。 相反，与边界组关联的各站点系统都被视为相同的系统。
 
-有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
 
 
 ## <a name="on-demand-content-distribution"></a>按需内容分发  
  按需内容分发是个别应用程序和包部署的选项。 此选项可将内容按需分发到首选服务器。  
 
--   要为部署启用此设置，请启用以下选项：将此包的内容分发到首选分发点。  
+-   要为部署启用此设置，请启用以下选项：将此包的内容分发到首选分发点  。  
 
 -   为部署启用此选项后，如果客户端请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
 
 -   尽管这会触发 Configuration Manager 将内容自动分发到客户端首选分发点，但客户端仍可在首选分发点接收到部署之前从其他分发点获取该内容。 若出现该行为，该内容将在该分发点上显示，供搜寻该部署的下一个客户端使用。  
 
-有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
 
 

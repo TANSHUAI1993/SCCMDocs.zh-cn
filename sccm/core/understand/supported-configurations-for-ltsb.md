@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e185244bda88c317e0157618f066056a817a1a82
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ac26a9b161f869ec3f6410f9f6fb9e5edbc9f8f8
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141885"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194031"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
-适用范围：System Center Configuration Manager (Long-Term Servicing Branch)
+适用范围：  System Center Configuration Manager (Long-Term Servicing Branch)
 
 使用本主题中的信息，了解哪些操作系统和产品依赖项受 Configuration Manager 的 Long-Term Servicing Branch (LTSB) 支持。
 如果未在本主题或 LTSB 特定主题中另行声明，适用于 Current Branch 版本 1606 的相同配置和限制同样适用于 LTSB。  发生冲突时，使用适用于所使用版本的信息。 通常，LTSB 受到的限制比 Current Branch 更多。
@@ -49,7 +49,7 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2012 R2 (x64)：标准版、数据中心版
 - Windows Server 2012 (x64)：标准版、数据中心版
 - 带 SP1 的 Windows Server 2008 R2 (x64)：Standard、Enterprise、Datacenter
-- 带 SP2 的 Windows Server 2008（x86、x64）：标准版、企业版、数据中心版（参见注释 1）
+- 带 SP2 的 Windows Server 2008（x86、x64）：标准版、企业版、数据中心版（参见注释 1） 
 - Windows 10 企业版 2015 长期服务（x86、x64）
 - Windows 10 企业版 2016 长期服务（x86、x64）
 - Windows 8.1（x86 和 x64）：Professional、Enterprise
@@ -163,13 +163,13 @@ Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供
 
 **要求和限制：**  
 
--   若要查看适用于 Linux 和 UNIX 客户端的操作系统文件依赖项，请参阅[将客户端部署到 Linux 和 UNIX 服务器的先决条件](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu)。  
+-   若要查看适用于 Linux 和 UNIX 客户端的操作系统文件依赖项，请参阅[将客户端部署到 Linux 和 UNIX 服务器的先决条件](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#BKMK_ClientDeployPrereqforLnU)。  
 -   有关运行 Linux 或 UNIX 的计算机支持的管理功能概述，请参阅[在 System Center Configuration Manager 中如何将客户端部署到 UNIX 和 Linux 服务器](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)。  
 -   对于支持的 Linux 和 UNIX 版本，列出的版本包括所有后续的次要版本。 例如，若指示支持 CentOS 版本 6，则其中还包括 CentOS 6 的任何后续次要版本，如 CentOS 6.3。 同样，若列出对使用 Service Pack 的操作系统（例如 SUSE Linux Enterprise Server 11 SP1）的支持，则其还支持包括该操作系统后续的 Service Pack。
 -   有关客户端安装包和通用代理的信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 UNIX 和 Linux 服务器](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)。
 
 
-**支持的版本：**   
+**支持的版本：**    
 使用指示的 .tar 文件，支持以下版本。  
 ### <a name="aix"></a>AIX  
 

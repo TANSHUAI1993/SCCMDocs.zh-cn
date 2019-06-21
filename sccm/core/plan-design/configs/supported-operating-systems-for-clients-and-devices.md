@@ -11,22 +11,22 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c6b47c99199458c902f1f56ccc3d5007dfd126eb
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499337"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251542"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
  Configuration Manager 支持在 Windows、Mac、Linux 和 UNIX 计算机上安装客户端软件。  
 
 #### <a name="requirements-and-limitations-for-all-clients"></a>对所有客户端的要求和限制  
 
--   不支持更改任意 Configuration Manager 服务的启动类型或“登录身份”设置。 此更改可能会阻止关键服务正常运行。    
+-   不支持更改任意 Configuration Manager 服务的启动类型或“登录身份”  设置。 此更改可能会阻止关键服务正常运行。    
 
 -   不支持在根以外的其他帐户下的计算机上安装或运行适用于 Linux 或 UNIX 的 Configuration Manager 客户端，或适用于 Mac 的客户端。 这样做可能会阻止关键服务正常运行。  
 
@@ -94,7 +94,7 @@ Windows Server 半年频道版本是服务器核心安装，如 Windows Server �
  Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没有 Windows Server 正式认证。 对于 Windows Server Datacenter Edition 专属问题，我们未提供 Configuration Manager 修补程序支持。 若要详细了解 Windows Server 认证计划，请参阅 [Windows Server Catalog](https://www.windowsservercatalog.com/)。 
 
 #### <a name="bkmk_note2"></a>注释 2
- 若要支持[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)。  
+ 若要支持[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)。  
 
 #### <a name="bkmk_note3"></a>注释 3
  任何版本的 Windows Server Core 都不支持新的软件中心应用。<!--SCCMDocs issue 683-->
@@ -332,7 +332,7 @@ Windows Server 半年频道版本是服务器核心安装，如 Windows Server �
 
 ### <a name="requirements-and-limitations"></a>要求和限制
 
--   在层次结构顶层站点上配置服务连接点。  
+-   在层次结构顶层站点上配置服务连接点  。  
 
 
 ### <a name="supported-operating-systems"></a>支持的操作系统
@@ -361,7 +361,7 @@ Configuration Manager 支持连接到 Exchange Server 的设备的有限管理�
 
 ### <a name="supported-versions-of-exchange-server"></a>受支持的 Exchange Server 版本
 
-- **Exchange Online (Office 365)**：此版本包括 Business Productivity Online Standard Suite  
+- **Exchange Online (Office 365)** ：此版本包括 Business Productivity Online Standard Suite  
 
 - **Exchange Server 2016**（从版本 1802 开始）  
 

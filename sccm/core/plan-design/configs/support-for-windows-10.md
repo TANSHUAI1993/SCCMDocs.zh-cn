@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ac15d0039377d4635e531052abcec72503b1c4
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 67c7c84850d22d7f73a745c61b0c1cb577088f83
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974187"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251683"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -30,7 +30,7 @@ ms.locfileid: "65974187"
 > [!Tip]
 > 如同支持 Windows 10 版本一样支持作为客户端的 Windows Server 内部版本。 例如，Windows Server 2016 是与 Windows 10 LTSB 2016 相同的内部版本，Windows Server 版本 1803 是与 Windows 10 版本 1803 相同的内部版本。
 >
-> 有关作为站点系统的 Windows Server 的详细信息，请参阅 [Configuration Manager 站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#the-server-core-installation-of-windows-server-version-1803)。
+> 有关作为站点系统的 Windows Server 的详细信息，请参阅 [Configuration Manager 站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_core)。
 
 
 

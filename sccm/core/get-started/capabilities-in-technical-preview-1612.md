@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a41f144909ba946d3c3bc2f00a1573cad2c9b850
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: c15b387ec9f2048a923eb220b6c8e3e1fdccded8
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933328"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286300"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
@@ -54,7 +54,7 @@ ms.locfileid: "65933328"
 | **3** |  数据仓库服务点可传输和储存数据仓库数据库中的一份已同步数据的副本。 |  
 | **A** |  通过使用内置报表，可提出数据请求，该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
 | **B** |   大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
-| **C** | 报表通过使用类别为**数据仓库**的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
+| **C** | 报表通过使用类别  为**数据仓库**的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>数据仓库服务点和数据库的必备组件
 - 层次结构必须安装 Reporting Services 点站点系统角色。
@@ -64,36 +64,36 @@ ms.locfileid: "65933328"
 - 支持的数据库需满足以下要求：
   - 使用 SQL Server 2012 或更高版本、Enterprise Edition 或 Datacenter Edition。
   - 位于默认或命名的实例上
-  - 位于 SQL Server 群集上。 尽管此配置应可正常工作，但尚未经过测试，因此支持人员正尽其最大努力。
+  - 位于 SQL Server 群集  上。 尽管此配置应可正常工作，但尚未经过测试，因此支持人员正尽其最大努力。
   - 与站点数据库或 Reporting Services 点数据库共存时。 但是，我们建议在单独的服务器上进行安装。  
 - 用作 *Reporting Services 点帐户*的帐户必须具有对数据仓库数据库的 **db_datareader** 权限。  
-- SQL Server AlwaysOn 可用性组上不支持该数据库。
+- SQL Server AlwaysOn 可用性组  上不支持该数据库。
 
 ### <a name="install-the-data-warehouse"></a>安装数据仓库
-通过使用“添加站点系统角色向导”或“创建站点系统服务器向导”，在管理中心站点或主站点上安装数据仓库站点系统角色。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 层次结构支持此角色的多个实例，但是每个站点仅支持一个实例。  
+通过使用“添加站点系统角色向导”  或“创建站点系统服务器向导”  ，在管理中心站点或主站点上安装数据仓库站点系统角色。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 层次结构支持此角色的多个实例，但是每个站点仅支持一个实例。  
 
 安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称（类似[将数据仓库数据库迁移到新的 SQL Server ](#move-the-data-warehouse-database)时采取的操作），Configuration Manager 不会创建新的数据库，而是使用指定的数据库。
 
 #### <a name="configurations-used-during-installation"></a>安装期间使用的配置
 使用以下信息完成站点系统角色的安装：
 
-“系统角色选择”页面：  
+“系统角色选择”  页面：  
 必须先安装 Reporting Services 点，然后向导才能显示选择和安装数据仓库服务点的选项。
 
-“常规”页：以下常规信息为必需信息：
+“常规”  页：以下常规信息为必需信息：
 - **Configuration Manager 数据库设置：**   
   - **服务器名称** - 指定承载站点数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **数据库名称** - 指定站点数据库的名称。
-  - **验证** - 单击“验证”可确保已成功连接站点数据库。
+  - **验证** - 单击“验证”  可确保已成功连接站点数据库。
 </br></br>
 - **数据仓库数据库设置：**
   - **服务器名称** - 指定承载数据仓库服务点和数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **数据库名称** - 指定数据仓库数据库的 FQDN。  Configuration Manager 将使用此名称创建数据库。 如果指定 SQL server 实例上已存在的数据库名称，则 Configuration Manager 将使用该数据库。
-  - **验证** - 单击“验证”可确保已成功连接站点数据库。
+  - **验证** - 单击“验证”  可确保已成功连接站点数据库。
 
-“同步设置”页面：   
+“同步设置”  页面：   
 - **数据设置：**
-  - **要同步的复制组** – 选择要同步的数据组。 有关各种类型数据组的信息，请参阅[数据库复制](/sccm/core/servers/manage/data-transfers-between-sites#a-namebkmkdbrepa-database-replication)和[站点间数据传输](/sccm/core/servers/manage/data-transfers-between-sites)中的**分布式视图**。
+  - **要同步的复制组** – 选择要同步的数据组。 有关各种类型数据组的信息，请参阅[数据库复制](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep)和[站点间数据传输](/sccm/core/servers/manage/data-transfers-between-sites)中的**分布式视图**。
   - **包含同步的表** – 指定要同步的每个附加表的名称。 使用逗号分隔多个表。 除选择的复制组外，还会从站点数据库同步这些表。
   - **排除同步的表** - 从同步的复制组中指定各个表的名称。 从中排除所指定的表。 使用逗号分隔多个表。
 - **同步设置：**
@@ -109,7 +109,7 @@ ms.locfileid: "65933328"
 -   **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 ### <a name="reporting"></a>报表
-安装数据仓库站点系统角色之后，可在 Reporting Services 点上找到以下报告，其类别为**数据仓库**：
+安装数据仓库站点系统角色之后，可在 Reporting Services 点上找到以下报告，其类别  为**数据仓库**：
 
 |报告                   | 详细信息                                  |
 |-------------------------|------------------------------------------|
@@ -119,7 +119,7 @@ ms.locfileid: "65933328"
 | **常规软件清单报表**  | 查看特定计算机的所有软件清单。|
 | **基础结构运行状况概述**  |显示 Configuration Manager 基础结构运行状况概述。|
 | **检测到的恶意软件列表**  |查看组织中检测到的恶意软件。|
-| 软件分发摘要报表 | 特定播发和计算机的软件分发摘要。|
+|  软件分发摘要报表 | 特定播发和计算机的软件分发摘要。|
 
 ### <a name="move-the-data-warehouse-database"></a>迁移数据仓库数据库
 使用以下步骤将数据仓库数据库移到新的 SQL Server：
@@ -172,7 +172,7 @@ ms.locfileid: "65933328"
 2. **删除模式**：使用 **/delete** 开关运行工具时，工具将以删除模式运行。
 
    - 以此模式运行工具时，可从分发点的内容库删除指定分发点上的孤立内容。
-   -  删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
+   -  删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”  ；若不删除，请选择“否”  ；或者选择“删除所有”  ，跳过后续提示并删除所有孤立内容。  
    </br>
 
    我们建议在假设模式下运行该工具，并查看生成的日志文件，然后再使用 /delete 开关运行该工具。  
@@ -188,7 +188,7 @@ ms.locfileid: "65933328"
 **已知问题** 运行该工具时，当任何程序包或部署失败或正在进行时，可能会返回以下错误：
 -  *System.InvalidOperationException：由于未完全安装包 <packageID>，因此无法清理此内容库。*
 
-解决方法：无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
+ 解决方法：无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
 
 
 
@@ -208,22 +208,22 @@ ms.locfileid: "65933328"
 ## <a name="improvements-for-in-console-search"></a>控制台中搜索功能的改进
 根据 User Voice 反馈，我们对控制台中搜索功能作出以下改进：
  - **对象路径：**  
-  现在，很多对象都支持名为**对象路径**的新列。  当用户搜索并将此列包括在显示结果中时，可以查看每个对象的路径。 例如，如果在应用程序节点搜索应用，并且同时要搜索子节点，结果窗格中的对象路径列将向用户显示每个返回对象的路径。   
+  现在，很多对象都支持名为**对象路径**的新列。  当用户搜索并将此列包括在显示结果中时，可以查看每个对象的路径。 例如，如果在应用程序节点搜索应用，并且同时要搜索子节点，结果窗格中的对象路径  列将向用户显示每个返回对象的路径。   
 
 - **保留搜索文本：**  
   在搜索文本框中输入文本，然后在搜索子节点和搜索当前节点之间切换时，已键入的文本会保留，并且仍然可用于新搜索而无需重新键入。
 
 - **保留搜索子节点的决策：**  
- 现在，更改使用的节点时，会保留对搜索当前节点或所有子节点所选择的选项。   这一新特点意味着在控制台执行操作时无需不断重置决策。  默认情况下，打开控制台选项时，将仅搜索当前节点。
+ 现在，更改使用的节点时，会保留对搜索当前节点  或所有子节点  所选择的选项。   这一新特点意味着在控制台执行操作时无需不断重置决策。  默认情况下，打开控制台选项时，将仅搜索当前节点。
 
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>如果指定的程序正在运行，则阻止安装应用程序。
 现在，用户可在部署类型属性配置一列可执行文件（扩展名为 .exe），如果该文件正在运行，则将阻止安装应用程序。 尝试安装后，用户将看到对话框，要求其关闭阻止安装的进程。
 
 ### <a name="try-it-out"></a>试试看
 配置一列可执行文件
-1.  在任何部署类型的属性页上，选择“安装程序处理”选项卡。
-2.  单击“添加”，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
-3.  单击“确定”以关闭部署类型属性对话框。
+1.  在任何部署类型的属性页上，选择“安装程序处理”  选项卡。
+2.  单击“添加”  ，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
+3.  单击“确定”  以关闭部署类型属性对话框。
 
 现在，向用户或设备部署此应用程序，但其中一个添加的可执行文件正在运行时，最终用户会看到“软件中心”对话框，告知用户由于某个应用程序正在运行而导致安装失败。
 
@@ -233,16 +233,16 @@ ms.locfileid: "65933328"
 
 ## <a name="windows-store-for-business-support-in-configuration-manager"></a>Configuration Manager 中适用于企业的 Windows 应用商店支持
 
-现在可在适用于企业的 Windows 应用商店中以“可用”为部署目的，将联机许可应用部署到运行 Configuration Manager 客户端的电脑。
+现在可在适用于企业的 Windows 应用商店中以“可用”  为部署目的，将联机许可应用部署到运行 Configuration Manager 客户端的电脑。
 有关更多详细信息，请参阅[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)。
 
 此功能支持当前仅适用于运行 Windows 10 RS2 预览版的电脑。
 
 ## <a name="return-to-previous-page-when-a-task-sequence-fails"></a>任务序列失败时返回上一页
-现在，运行任务序列出现故障时，可以返回到上一页面。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”按钮：
+现在，运行任务序列出现故障时，可以返回到上一页面。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”  按钮：
 
-- 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
-- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”使任务序列再次搜索内容。
+- 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”  以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
+- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”  使任务序列再次搜索内容。
 
 ## <a name="express-installation-files-support-for-windows-10-updates"></a>Windows 10 更新的快速安装文件支持
 我们在 Configuration Manager 中添加了对 Windows 10 更新的快速安装文件支持。 如果使用支持版本的 Windows 10，现在可通过 Configuration Manager 设置只下载当前月份 Windows 10 累计更新和上一月份更新之间的增量文件。 当前，在 Configuration Manager Current Branch 中，每个月都会下载完整的 Windows 10 累积更新（包括先前月份的所有更新）。 使用快速安装文件，所需下载文件更小，在客户端上安装更快速。
@@ -253,16 +253,16 @@ ms.locfileid: "65933328"
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>在服务器上启用 Windows 10 更新的快速安装文件下载
 若要开始同步 Windows 10 快速安装文件的元数据，则必须在软件更新点属性中将其启用。
-1.  在 Configuration Manager 控制台中，导航到“管理” > “站点配置” > “站点”。
+1.  在 Configuration Manager 控制台中，导航到“管理”   > “站点配置”   > “站点”  。
 2.  选择管理中心站点或独立主站点。
-3.  在“主页”  选项卡上的“设置”  组中，单击“配置站点组件” ，再单击“软件更新点” 。 在“更新文件”选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”。
+3.  在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，再单击“软件更新点”  。 在“更新文件”  选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”  。
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>启用客户端对下载并安装快速安装文件的支持
 若要在客户端上启用快速安装文件支持，则必须在客户端设置的软件更新分区中启用客户端上的快速安装文件。 这将创建新的 HTTP 侦听器，该侦听器会侦听在指定的端口下载快速安装文件的请求。 在客户端上部署客户端设置启用此功能后，会尝试下载当前月份的 Windows 10 累计更新和上一月份的更新之间的增量文件（客户端必须运行支持快速安装文件的 Windows 10 版本）。
 1.  在“软件更新点组件”属性中启用快速安装文件支持（上一过程）。
-2.  在 Configuration Manager 控制台中，导航到“管理” > “客户端设置”。
-3.  选择相应的客户端设置，然后在“主页”选项卡上，单击“属性”。
-4.  选择“软件更新”页，将“在客户端上启用快速更新安装”设置配置为“是”，并将“下载快速更新内容所用端口”设置配置为客户端上 HTTP 侦听器所使用的端口。
+2.  在 Configuration Manager 控制台中，导航到“管理”   > “客户端设置”  。
+3.  选择相应的客户端设置，然后在“主页”  选项卡上，单击“属性”  。
+4.  选择“软件更新”  页，将“在客户端上启用快速更新安装”  设置配置为“是”  ，并将“下载快速更新内容所用端口”  设置配置为客户端上 HTTP 侦听器所使用的端口。
 
 
 ## <a name="odata-endpoint-data-access"></a>OData 终结点数据访问
@@ -275,9 +275,9 @@ ms.locfileid: "65933328"
 
 必须对站点启用 OData 终结点，然后才可使用该终结点。
 
-1.  转到“管理” > “站点配置” > “站点”。
-2.  选择主站点，然后单击“属性”。
-3.  在主站点属性页的“常规”选项卡上，单击“对此站点上所有提供程序启用 REST 终结点”，然后单击“确定”。
+1.  转到“管理”   > “站点配置”   > “站点”  。
+2.  选择主站点，然后单击“属性”  。
+3.  在主站点属性页的“常规”选项卡上，单击“对此站点上所有提供程序启用 REST 终结点”  ，然后单击“确定”  。
 
 在个人偏好的 OData 查询查看器中，请尝试类似于以下示例的查询，以在 Configuration Manager 中返回各种对象：
 
@@ -291,7 +291,7 @@ ms.locfileid: "65933328"
 | 获取集合中的用户 | `http://localhost/CMRestProvider/Collection('SMS00001')/User` |
 
 > [!NOTE]
-> 此表中所示的示例查询使用 localhost 作为 URL 中的主机名称，并且可在运行 SMS 提供程序的计算机上使用。 如果要在另一台计算机运行查询，请将 localhost 替换为已安装 SMS 提供程序的服务器的 FQDN。
+> 此表中所示的示例查询使用 localhost  作为 URL 中的主机名称，并且可在运行 SMS 提供程序的计算机上使用。 如果要在另一台计算机运行查询，请将 localhost 替换为已安装 SMS 提供程序的服务器的 FQDN。
 
 ## <a name="azure-active-directory-onboarding"></a>Azure Active Directory 载入
 
@@ -301,8 +301,8 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 
 #### <a name="to-create-the-connection"></a>创建连接：
 
-2. 在“管理”工作区中，选择“云服务” > “Azure Active Directory” > “添加 Azure Active Directory”。
-2. 选择“登录”，创建与 Azure AD 的连接。
+2. 在“管理”  工作区中，选择“云服务”   > “Azure Active Directory”   > “添加 Azure Active Directory”  。
+2. 选择“登录”  ，创建与 Azure AD 的连接。
 
 #### <a name="configuration-manager-client-requirements"></a>Configuration Manager 客户端要求
 
@@ -310,8 +310,8 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 
 - 必须完成 Azure AD 载入流程，且客户端开始必须连接到公司网络，以便获取连接信息。
 - 客户端必须都已加入域（已在 Active Directory 中注册）和已加入云域（已在 Azure AD 中注册）。
-- 必须运行 [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery)。
-- 必须修改 Configuration Manager 客户端，以允许用户策略请求通过 Internet，并将更改部署到客户端。 尽管尚未完成用户策略所需的配置更改，但由于此客户端更改发生在客户端设备上，因此可以通过云管理网关部署更改。
+- 必须运行 [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)。
+- 必须修改 Configuration Manager 客户端，以允许用户策略请求通过 Internet，并将更改部署到客户端。 尽管尚未完成用户策略所需的配置更改，但由于此客户端更改发生在客户端设备上  ，因此可以通过云管理网关部署更改。
 - 管理点必须配置为使用 HTTPS，以保护网络中的令牌，并且必须已安装 .Net 4.5。
 
 进行这些配置更改后，便可创建用户策略并将客户端移动到 Internet 以测试策略。 通过云管理网关的用户策略请求将使用基于 Azure AD 令牌的身份验证进行身份验证。

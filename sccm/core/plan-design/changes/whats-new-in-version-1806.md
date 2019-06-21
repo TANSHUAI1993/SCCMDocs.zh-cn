@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03368d543b539b018ba581277cb0ba7e6e8cb251
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: deb27df76bb3ed6fc9c6338f302fcc612443cee9
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933498"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251916"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1806 更新作为控制台中更新提供。 将此更新应用于运行 1706、1710 或 1802 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -105,7 +105,7 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
 ### <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>对 Azure 资源管理器的云分发点支持
 <!--1322209-->
-在你创建云分发点时，向导现在提供用于创建“Azure 资源管理器部署”的选项。 Azure 资源管理器是一个现代平台，用于以单个实体（称为资源组）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。 
+在你创建云分发点时，向导现在提供用于创建“Azure 资源管理器部署”  的选项。 Azure 资源管理器是一个现代平台，用于以单个实体（称为资源组）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。 
 
 云分发点的功能文档也进行了修订和补充。 有关详细信息，请参阅下列文章：
 - [使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)   
@@ -114,7 +114,7 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
 ### <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>请求分发点支持将云分发点作为源  
 <!--1321554-->
-许多客户在远程或分支机构使用拉取分发点，这些分发点跨 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用云分发点作为源。 现在，当你在分发点属性的“请求分发点”选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
+许多客户在远程或分支机构使用拉取分发点，这些分发点跨 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用云分发点作为源。 现在，当你在分发点属性的“请求分发点”  选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
 
 有关详细信息，请参阅[使用请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
@@ -169,7 +169,7 @@ Configuration Manager 能更高效地确定对等缓存源是否已漫游到其�
 <!--1356889,1358228-->
 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
 
-此版本包括对客户端与站点系统之间的通信方式的改进。 在站点属性上，选择“客户端计算机通信”选项卡中的“HTTPS 或 HTTP”选项，然后启用新选项以“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
+此版本包括对客户端与站点系统之间的通信方式的改进。 在站点属性上，选择“客户端计算机通信”选项卡中的“HTTPS 或 HTTP”选项，然后启用新选项以“将 Configuration Manager 生成的证书用于 HTTP 站点系统”    。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
 
 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
@@ -192,7 +192,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 <!--1358461-->
 新的云管理仪表板提供了云管理网关 (CMG) 使用情况的集中式视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。   
 
-此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 
+此功能还包括用于实时验证的 CMG 连接分析器  ，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 
 
 有关详细信息，请参阅 [Monitor CMG](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway) 文章的以下部分：  
 - [云管理仪表板](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
@@ -217,7 +217,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD 不需要受信任的根证书
 <!--503899-->
-当创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。
+当创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。
 
 
 
@@ -225,7 +225,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 ### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>通过 Microsoft Intune 为共同托管设备同步 MDM 策略
 <!--1357377-->
-当你切换共同管理工作负荷时，共同管理设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步。 
+当你切换共同管理工作负荷时，共同管理设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步  。 
 
 有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](/sccm/comanage/how-to-switch-workloads)。
 
@@ -239,7 +239,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 - **移动应用**<!--1357892-->：所有从 Intune 部署的应用在公司门户中都可用。 从 Configuration Manager 部署的应用在软件中心可用。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。  
 
-要转移工作负荷，请转到共同管理属性页并将工作负荷滚动条从 Configuration Manager 移到“试点”或“全部”。 
+要转移工作负荷，请转到共同管理属性页并将工作负荷滚动条从 Configuration Manager 移到“试点”或“全部”   。 
 
 有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/comanage/overview)。
 
@@ -308,7 +308,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 ### <a name="uninstall-application-on-approval-revocation"></a>在批准撤消时卸载应用程序
 <!--1357891-->
-当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”。 
+当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”  。 
 
 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_approval)。
 
@@ -328,13 +328,13 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 此版本包括对分阶段部署的以下改进：  
 
 #### <a name="create-a-phased-deployment-with-manually-configured-phases"></a>使用手动配置的阶段创建分阶段部署
-<!--1358148--> 对于任务序列，现可在创建分阶段部署时手动配置阶段。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段。 你仍然可以自动创建默认的两阶段部署。 
+<!--1358148--> 对于任务序列，现可在创建分阶段部署时手动配置阶段。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段  。 你仍然可以自动创建默认的两阶段部署。 
 
 有段详细信息，请参阅[使用手动配置的阶段创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual)。
 
 #### <a name="phased-deployment-status"></a>分阶段部署状态
 <!--1358577-->
-分阶段部署现在提供本地监视体验。 从“监视”工作区中的“部署”节点，选择分阶段部署，然后单击功能区中的“分阶段部署状态”。 
+分阶段部署现在提供本地监视体验。 从“监视”  工作区中的“部署”  节点，选择分阶段部署，然后单击功能区中的“分阶段部署状态”  。 
 
 有关详细信息，请参阅[管理和监视分阶段部署](/sccm/osd/deploy-use/manage-monitor-phased-deployments)。  
 
@@ -354,14 +354,14 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
 
 ### <a name="improvements-to-pxe-enabled-distribution-points"></a>对已启用 PXE 的分发点的改进
 <!--1357580-->
-在分发点属性的“PXE”选项卡上，选中“在没有 Windows 部署服务的情况下启用 PXE 响应者”。 此选项在分发点上启用 PXE 响应方，而不需要 Windows 部署服务 (WDS)。 由于 WDS 不是必需的，因此已启用 PXE 的分发点可以是客户端或服务器 OS，包括 Windows Server Core。 这个新的 PXE 响应方服务支持 IPv6，还增强了远程办公室中已启用 PXE 的分发点的灵活性。 
+在分发点属性的“PXE”  选项卡上，选中“在没有 Windows 部署服务的情况下启用 PXE 响应者”  。 此选项在分发点上启用 PXE 响应方，而不需要 Windows 部署服务 (WDS)。 由于 WDS 不是必需的，因此已启用 PXE 的分发点可以是客户端或服务器 OS，包括 Windows Server Core。 这个新的 PXE 响应方服务支持 IPv6，还增强了远程办公室中已启用 PXE 的分发点的灵活性。 
 
 有关详细信息，请参阅[在分发点上启用 PXE](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。
 
 
 ### <a name="network-access-account-not-required-for-some-scenarios"></a>某些方案不需要网络访问帐户
 <!--1358278,1358279-->
-[增强型 HTTP 站点系统](#bkmk_ehttp)功能还会删除网络访问帐户上的一些依赖项。 当启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的新选项时，以下方案不需用网络访问帐户从分发点下载内容：  
+[增强型 HTTP 站点系统](#bkmk_ehttp)功能还会删除网络访问帐户上的一些依赖项。 当启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的新选项时，以下方案不需用网络访问帐户从分发点下载内容  ：  
 
 - 从启动媒体或 PXE 运行的任务序列
 - 从软件中心运行的任务序列  
@@ -375,31 +375,31 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>屏蔽任务序列变量中存储的敏感数据
  <!--1358330-->
- 在**设置任务序列变量**步骤中，选择新选项“不显示此值”。 
+ 在**设置任务序列变量**步骤中，选择新选项“不显示此值”  。 
 
  有关详细信息，请参阅[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)。 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>在执行任务序列的“运行命令步骤”期间屏蔽程序名称
  <!--1358493-->
- 若要防止显示或记录潜在的敏感数据，请配置任务序列变量 OSDDoNotLogCommand。  
+ 若要防止显示或记录潜在的敏感数据，请配置任务序列变量 OSDDoNotLogCommand  。  
 
  有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)。 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>安装驱动程序时 DISM 参数的任务序列变量
  <!--516679/2840016-->
- 若要为 DISM 指定其他命令行参数，请使用新的任务序列变量 OSDInstallDriversAdditionalOptions。 
+ 若要为 DISM 指定其他命令行参数，请使用新的任务序列变量 OSDInstallDriversAdditionalOptions  。 
 
  有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)。 
 
 #### <a name="option-to-use-full-disk-encryption"></a>“使用全磁盘加密”选项
  <!--SCCMDocs-pr issue 2671-->
- “启用 BitLocker”和“预配 BitLocker”步骤现在都包含“使用完整磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 
+ “启用 BitLocker”  和“预配 BitLocker”  步骤现在都包含“使用完整磁盘加密”  选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 
 
  有关详细信息，请参阅[启用 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) 和[预配 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)。 
 
 #### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>未对 Windows 10 升级兼容性扫描启用客户端预配模式
  <!--SCCMDocs-pr issue 2812-->
- 现在，如果你启用“在不启动升级的情况下执行 Windows 安装程序兼容性扫描”选项，“升级操作系统”任务序列步骤不会将 Configuration Manager 客户端置于预配模式下。
+ 现在，如果你启用“在不启动升级的情况下执行 Windows 安装程序兼容性扫描”  选项，“升级操作系统”  任务序列步骤不会将 Configuration Manager 客户端置于预配模式下。
 
  有关详细信息，请参阅[升级操作系统](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)
 
@@ -425,19 +425,19 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)  
 
 > [!Note]  
-> 1806 中不再需要应用程序目录站点和 Web 服务点角色，但该角色依然受支持。 
+> 1806 中不再需要应用程序目录站点和 Web 服务点角色，但该角色依然受支持   。 
 > 
-> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持  。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 
 ### <a name="specify-the-visibility-of-the-application-catalog-website-link-in-software-center"></a>指定应用程序目录网站链接在软件中心的可见性
 <!--1358214-->
-使用客户端设置来控制“打开应用程序目录网站”链接是否显示在软件中心的“安装状态”节点中。  
+使用客户端设置来控制“打开应用程序目录网站”  链接是否显示在软件中心的“安装状态”  节点中。  
 
 有关详细信息，请参阅[软件中心客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)。
 
 > [!Note]  
-> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持  。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 
 ### <a name="custom-tab-for-webpage-in-software-center"></a>软件中心用于网页的自定义选项卡
@@ -474,12 +474,12 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
 <!--1357933-->
 将软件更新部署到设备，而无需先下载并将内容分发到分发点。 当处理非常大的更新内容时，或者当始终希望客户端从 Microsoft 更新云服务中获取内容时，此功能很有用。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。 
 
-有关详细信息，请参阅[手动部署软件更新](/sccm/sum/deploy-use/manually-deploy-software-updates)或[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)时的“无部署包”选项。
+有关详细信息，请参阅[手动部署软件更新](/sccm/sum/deploy-use/manually-deploy-software-updates)或[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)时的“无部署包”选项  。
 
 
 ### <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>通过软件更新体系结构更新自动部署规则
  <!--1322266-->
-现在可以筛选自动部署规则 (ADR)，以排除 Itanium 和 ARM64 等体系结构。 在“创建自动部署规则向导”的软件更新页面上，现可使用“体系结构”属性筛选器。 
+现在可以筛选自动部署规则 (ADR)，以排除 Itanium 和 ARM64 等体系结构。 在“创建自动部署规则向导”的软件更新页面上，现可使用“体系结构”属性筛选器   。 
 
 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
 
@@ -496,7 +496,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 ### <a name="new-software-updates-compliance-report"></a>新的软件更新符合性报告
 <!--1357775-->
-软件更新符合性报告传统上包含最近未联系站点的客户端中的数据。 你可以通过“符合性 9 - 总体运行状况和符合性”这一新报告按“正常运行”客户端筛选特定软件更新组的符合性结果。 此报告显示你环境中的活动客户端的更真实的符合性状态。 
+软件更新符合性报告传统上包含最近未联系站点的客户端中的数据。 你可以通过“符合性 9 - 总体运行状况和符合性”这一新报告按“正常运行”客户端筛选特定软件更新组的符合性结果  。 此报告显示你环境中的活动客户端的更真实的符合性状态。 
 
 有关详细信息，请参阅[软件更新报告](/sccm/sum/deploy-use/monitor-software-updates#BKMK_SUReports)。
 
@@ -537,15 +537,15 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 ### <a name="copy-asset-details-from-monitoring-views"></a>支持从监视视图中复制资产详细信息
 <!--1357856-->
-“监视”工作区的以下区域现支持复制文本：  
+“监视”  工作区的以下区域现支持复制文本：  
 
-- 在“部署”节点中，选择部署，然后单击“查看状态”。 在“部署状态”视图的“资产详细信息”窗格中，选择一个或多个设备。  
+- 在“部署”节点中，选择部署，然后单击“查看状态”   。 在“部署状态”视图的“资产详细信息”窗格中，选择一个或多个设备  。  
 
-- 展开“分发状态”节点，然后选择“内容状态”。 选择一个软件，然后单击“查看状态”。 在“内容状态”视图的“资产详细信息”窗格中，选择一个或多个分发点。 
+- 展开“分发状态”节点，然后选择“内容状态”   。 选择一个软件，然后单击“查看状态”  。 在“内容状态”视图的“资产详细信息”窗格中，选择一个或多个分发点  。 
 
-右键单击资产，并选择“复制”。 此操作将选定的资产复制为包含完整详细信息的逗号分隔列表。 键盘快捷方式 CTRL + C 也适用于这些视图。 
+右键单击资产，并选择“复制”  。 此操作将选定的资产复制为包含完整详细信息的逗号分隔列表。 键盘快捷方式 CTRL + C 也适用于这些视图   。 
 
-有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)。
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#copy-details-in-monitoring-views)。
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Surface 仪表板的改进
@@ -554,9 +554,9 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 - 选中特定图表部分时，Surface 仪表板现在会显示相关设备列表：  
 
-   - 单击“Surface 设备所占百分比”磁贴将打开 Surface 设备列表。  
+   - 单击“Surface 设备所占百分比”磁贴将打开 Surface 设备列表  。  
 
-   - 单击“前五个固件版本”磁贴中的栏，将打开带有特定固件版本的 Surface 设备列表。  
+   - 单击“前五个固件版本”磁贴中的栏，将打开带有特定固件版本的 Surface 设备列表  。  
 
 - 当从 Surface 仪表板查看这些设备列表时，可以右键单击设备以执行常见操作。  
 
@@ -565,9 +565,9 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 ### <a name="view-the-currently-signed-on-user-for-a-device"></a>查看设备的当前已登录用户
 <!--1358202-->
-现在，“资产和符合性”工作区的“设备”节点默认显示“当前已登录用户”列。 它还会显示任何特定于集合的设备列表。 此值与[客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus)同步保持最新。 当用户注销时，客户端会清除此值。 如果没有用户登录，则值为空。 
+现在，“资产和符合性”  工作区的“设备”  节点默认显示“当前已登录用户”  列。 它还会显示任何特定于集合的设备列表。 此值与[客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus)同步保持最新。 当用户注销时，客户端会清除此值。 如果没有用户登录，则值为空。 
 
-有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)。
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#view-users-for-a-device)。
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台提交反馈  
@@ -575,7 +575,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 发送笑脸！ 现在可以就你的体验直接告知 Configuration Manager 团队。 从 Configuration Manager 控制台发送反馈很简单。 我们希望听到你的所有反馈：表扬、问题和建议。 在 Configuration Manager 控制台中，单击功能区上方右上角的笑脸按钮。 该反馈将直接提交给 Configuration Manager 的 Microsoft 产品团队。 虽然仍然支持使用 Windows 10 反馈中心，但最好使用控制台内部的反馈机制。  
 
-有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)和[产品反馈](/sccm/core/understand/find-help#BKMK_1806Feedback)。
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#send-feedback)和[产品反馈](/sccm/core/understand/find-help#BKMK_1806Feedback)。
 
 
 
@@ -609,7 +609,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 >
 >  了解详细信息：    
 >   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
 

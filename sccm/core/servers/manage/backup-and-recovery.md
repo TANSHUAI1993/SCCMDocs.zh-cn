@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501220"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252242"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并最大程度降低数据丢失的风险。  
 
@@ -36,18 +36,18 @@ ms.locfileid: "65501220"
 
      例如，可以从作为 Microsoft SQL Server 维护计划一部分创建的备份还原站点数据库。 还可以使用通过使用 Data Protection Manager 创建的备份来备份站点数据库。  
 
--   从版本 1806 开始，安装处于被动模式的额外站点服务器。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。 虽然此角色并不能消除规划和实施备份和恢复操作的需要，但它可以显著减少在必要时恢复站点的工作量。  
+-   从版本 1806 开始，安装处于被动模式的额外站点服务器  。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充  。 在需要时可立即使用被动模式下的站点服务器。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。 虽然此角色并不能消除规划和实施备份和恢复操作的需要，但它可以显著减少在必要时恢复站点的工作量。  
   
 
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>使用 Data Protection Manager 来备份站点数据库
 可以使用 System Center Data Protection Manager (DPM) 备份 Configuration Manager 站点数据库。
 
-在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”页上，从数据源列表中选择 SMS 编写器服务。 然后选择站点数据库作为适当的成员。 有关使用 DPM 的详细信息，请参阅 [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) 文档库。  
+在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”  页上，从数据源列表中选择 SMS 编写器服务。 然后选择站点数据库作为适当的成员。 有关使用 DPM 的详细信息，请参阅 [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) 文档库。  
 
 > [!IMPORTANT]  
 >  对于使用命名实例的 SQL Server 群集，Configuration Manager 不支持 DPM 备份。 它支持使用默认 SQL Server 实例的 SQL Server 群集上的 DPM 备份。  
 
-还原站点数据库之后，请按照安装程序中的步骤进行操作以恢复站点。 要使用通过 Data Protection Manager 备份的站点数据库，请选择“使用已手动恢复的站点数据库”恢复选项。  
+还原站点数据库之后，请按照安装程序中的步骤进行操作以恢复站点。 要使用通过 Data Protection Manager 备份的站点数据库，请选择“使用已手动恢复的站点数据库”  恢复选项。  
 
 
 
@@ -60,37 +60,37 @@ ms.locfileid: "65501220"
 -   备份特定文件夹和文件
 -   备份 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-计划至少每 5 天运行一次默认站点备份任务。 此计划是因为 Configuration Manager 使用为期 5 天的 SQL Server 更改跟踪保持期。 有关详细信息，请参阅 [SQL Server 更改跟踪保留期](/sccm/protect/understand/recover-sites#bkmk_SQLretention)。
+计划至少每 5 天运行一次默认站点备份任务。 此计划是因为 Configuration Manager 使用为期 5 天的 SQL Server 更改跟踪保持期  。 有关详细信息，请参阅 [SQL Server 更改跟踪保留期](/sccm/core/servers/manage/recover-sites#sql-server-change-tracking-retention-period)。
 
-要简化备份过程，可以创建 AfterBackup.bat 文件。 备份任务成功完成后，此脚本会自动运行备份后操作。 使用 AfterBackup.bat 文件将备份快照存档到安全位置。 也可以使用 AfterBackup.bat 文件将文件复制到备份文件夹，或启动其他备份任务。  
+要简化备份过程，可以创建 AfterBackup.bat 文件  。 备份任务成功完成后，此脚本会自动运行备份后操作。 使用 AfterBackup.bat 文件将备份快照存档到安全位置。 也可以使用 AfterBackup.bat 文件将文件复制到备份文件夹，或启动其他备份任务。  
 
 可以备份管理中心站点和主站点。 辅助站点或站点系统服务器没有备份任务。
 
 当 Configuration Manager 备份服务运行时，它会按照备份控制文件中定义的指令进行操作：`<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`。 你可以修改备份控制文件来更改备份服务的行为。  
 > [!NOTE]
-> 对 Smsbkup.ctl 所做的修改将在重启站点服务器上的服务 SMS_SITE_VSS_WRITER 后应用。
+> 对 Smsbkup.ctl  所做的修改将在重启站点服务器上的服务 SMS_SITE_VSS_WRITER 后应用。
 
 站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
 
 #### <a name="to-enable-the-site-backup-maintenance-task"></a>启用站点备份维护任务  
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+1.  在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
 
 2.  选择要在其中启用站点备份维护任务的站点。  
 
-3.  单击功能区中的“站点维护任务”。  
+3.  单击功能区中的“站点维护任务”  。  
 
-4.  选择“备份站点服务器”任务，然后单击“编辑”。  
+4.  选择“备份站点服务器”任务，然后单击“编辑”   。  
 
-5.  选择“启用此任务”选项。 单击“设置路径”以指定备份目标。 有下列选项：  
+5.  选择“启用此任务”选项  。 单击“设置路径”以指定备份目标  。 有下列选项：  
 
     > [!IMPORTANT]  
     >  为了帮助防止篡改备份文件，请将文件存储在安全的位置。 最安全的备份路径是本地驱动器，因此可以在文件夹上设置 NTFS 文件权限。 Configuration Manager 不会对备份路径中存储的备份数据进行加密。  
 
-    -   **站点服务器上用于站点数据和数据库的本地驱动器**：指定任务将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的“写入”NTFS 文件权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的“写入”NTFS 权限。  
+    -   **站点服务器上用于站点数据和数据库的本地驱动器**：指定任务将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的“写入”NTFS 文件权限  。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的“写入”NTFS 权限  。  
 
-    -   **站点数据和数据库的网络路径(UNC 名称)**：指定任务将站点和站点数据库的备份文件存储在指定的网络路径中。 在备份任务运行之前创建共享。 站点服务器的计算机帐户必须具有对共享网络文件夹的“写入”NTFS 和共享权限。 如果 SQL Server 安装在另一台计算机上，则 SQL Server 的计算机帐户必须具有相同的权限。  
+    -   **站点数据和数据库的网络路径(UNC 名称)** ：指定任务将站点和站点数据库的备份文件存储在指定的网络路径中。 在备份任务运行之前创建共享。 站点服务器的计算机帐户必须具有对共享网络文件夹的“写入”NTFS 和共享权限  。 如果 SQL Server 安装在另一台计算机上，则 SQL Server 的计算机帐户必须具有相同的权限。  
 
-    -   **站点服务器和 SQL Server 上的本地驱动器**：指定任务将站点的备份文件存储在站点服务器的本地驱动器上的指定路径中。 该任务将站点数据库的备份文件存储在站点数据库服务器的本地驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
+    -   **站点服务器和 SQL Server 上的本地驱动器**：指定任务将站点的备份文件存储在站点服务器的本地驱动器上的指定路径中。 该任务将站点数据库的备份文件存储在站点数据库服务器的本地驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”  NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”  NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
     > [!NOTE]  
     >   只有在指定了备份目标的网络路径时，用于浏览到备份目标的选项才可用。  
@@ -101,20 +101,20 @@ ms.locfileid: "65501220"
 
     如果在为备份配置的同一站点服务器上运行 Configuration Manager 控制台，则备份任务将为计划使用本地时间。 从另一台计算机运行 Configuration Manager 控制台时，备份任务为计划使用协调世界时 (UTC)。  
 
-7.  选择在站点备份任务失败时是否创建警报。 选择后，Configuration Manager 会为备份失败创建严重警报。 可以在“监视”工作区的“警报”节点中查看这些警报。  
+7.  选择在站点备份任务失败时是否创建警报。 选择后，Configuration Manager 会为备份失败创建严重警报。 可以在“监视”工作区的“警报”节点中查看这些警报   。  
 
 #### <a name="verify-that-the-backup-site-server-maintenance-task-is-running"></a>验证备份站点服务器维护任务是否正在运行  
 
 -   检查该任务创建的备份目标文件夹中的文件上的时间戳。 验证时间戳是否更新为上次计划运行任务的时间。  
 
--   转到“监视”工作区的“组件状态”节点。 查看 SMS_SITE_BACKUP 的状态消息。 站点备份成功完成后，会看到消息 ID 5035。 此消息表示站点备份已完成且没有任何错误。  
+-   转到“监视”工作区的“组件状态”节点   。 查看 SMS_SITE_BACKUP 的状态消息  。 站点备份成功完成后，会看到消息 ID 5035  。 此消息表示站点备份已完成且没有任何错误。  
 
--   将备份任务配置为在失败时创建警报后，请在“监视”工作区的“警报”节点中查找备份失败警报。  
+-   将备份任务配置为在失败时创建警报后，请在“监视”工作区的“警报”节点中查找备份失败警报   。  
 
--   在站点服务器上打开 Windows 资源管理器并浏览到 `<ConfigMgrInstallationFolder>\Logs`。 查看“Smsbkup.log”以了解警告和错误。 站点备份成功完成后，日志会显示消息 ID 为 `STATMSG: ID=5035` 的 `Backup completed`。  
+-   在站点服务器上打开 Windows 资源管理器并浏览到 `<ConfigMgrInstallationFolder>\Logs`。 查看“Smsbkup.log”以了解警告和错误  。 站点备份成功完成后，日志会显示消息 ID 为 `STATMSG: ID=5035` 的 `Backup completed`。  
 
     > [!TIP]  
-    >  如果备份维护任务失败，则可以通过停止并重启 SMS_SITE_BACKUP Windows 服务来重启备份任务。  
+    >  如果备份维护任务失败，则可以通过停止并重启 SMS_SITE_BACKUP Windows 服务来重启备份任务  。  
 
 
 
@@ -132,11 +132,11 @@ ms.locfileid: "65501220"
 
 
 ## <a name="using-the-afterbackupbat-file"></a>使用 AfterBackup.bat 文件  
-成功备份站点后，备份任务会自动尝试运行名为 AfterBackup.bat 的脚本。 在 `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` 中的站点服务器上手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在于正确的文件夹中，则该文件会在备份任务完成后自动运行。
+成功备份站点后，备份任务会自动尝试运行名为 AfterBackup.bat 的脚本  。 在 `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` 中的站点服务器上手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在于正确的文件夹中，则该文件会在备份任务完成后自动运行。
 
 AfterBackup.bat 文件可以让你在每个备份操作结束时存档备份快照。 它可以自动执行不属于备份站点服务器维护任务的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。
 
-如果不存在 AfterBackup.bat 文件，则备份任务会跳过该文件，并且不会对备份操作产生影响。 要验证备份任务是否成功运行了此脚本，请转到“监视”工作区的“组件状态”节点，并查看 SMS_SITE_BACKUP 的状态消息。 如果任务成功启动了 AfterBackup.bat 命令文件，则将看到消息 ID 5040。  
+如果不存在 AfterBackup.bat 文件，则备份任务会跳过该文件，并且不会对备份操作产生影响。 要验证备份任务是否成功运行了此脚本，请转到“监视”工作区的“组件状态”节点，并查看 SMS_SITE_BACKUP 的状态消息    。 如果任务成功启动了 AfterBackup.bat 命令文件，则将看到消息 ID 5040  。  
 
 > [!TIP]  
 >  要使用 AfterBackup.bat 存档站点服务器备份文件，必须在批处理文件中使用复制命令工具。 其中一个此类工具是 Windows Server 中的 [Robocopy ](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy)。 例如，使用以下命令创建 AfterBackup.bat 文件：`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
@@ -178,7 +178,7 @@ System Center Updates Publisher 是可以管理自定义软件更新的独立工
 
 #### <a name="back-up-the-updates-publisher-database"></a>备份 Updates Publisher 数据库  
 
-1.  在运行 Updates Publisher 的计算机上，浏览到 `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` 中的 Updates Publisher 数据库文件 Scupdb.sdf。 每个运行 Updates Publisher 的用户都有不同的数据库文件。  
+1.  在运行 Updates Publisher 的计算机上，浏览到 `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` 中的 Updates Publisher 数据库文件 Scupdb.sdf  。 每个运行 Updates Publisher 的用户都有不同的数据库文件。  
 
 2.  将数据库文件复制到备份目标。 例如，如果备份目标为 `E:\ConfigMgr_Backup`，则可以将 Updates Publisher 数据库文件复制到 `E:\ConfigMgr_Backup\SCUP`。  
 
@@ -192,13 +192,13 @@ System Center Updates Publisher 是可以管理自定义软件更新的独立工
 
 ### <a name="determine-the-folders-used-to-store-user-state-migration-data"></a>确定用于存储用户状态迁移数据的文件夹  
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点。  
+1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点    。  
 
-2.  选择托管状态迁移角色的站点系统。 然后在“站点系统角色”窗格中选择“状态迁移点”。  
+2.  选择托管状态迁移角色的站点系统。 然后在“站点系统角色”窗格中选择“状态迁移点”   。  
 
-3.  单击功能区中的“属性”。  
+3.  单击功能区中的“属性”  。  
 
-4.  “常规”选项卡上的“文件夹详细信息”部分中列出了存储用户状态迁移数据的文件夹。  
+4.  “常规”  选项卡上的“文件夹详细信息”  部分中列出了存储用户状态迁移数据的文件夹。  
 
 
 
@@ -208,7 +208,7 @@ SMS 编写器是一项在备份过程中与 Windows 卷影复制服务 (VSS) 进
 ### <a name="process"></a>过程  
 1. SMS 编写器向 VSS 服务注册，并绑定到其接口和事件。 
 2. 当 VSS 广播事件时，或者，如果它将特定通知发送到 SMS 编写器，SMS 编写器将响应通知并执行适当的操作。 
-3. SMS 编写器会读取位于 `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` 中的备份控制文件 smsbkup.ctl，并确定要备份的文件和数据。 
+3. SMS 编写器会读取位于 `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` 中的备份控制文件 smsbkup.ctl，并确定要备份的文件和数据  。 
 4. SMS 编写器会构建由各种组件组成的元数据，这些组件包括 SMS 注册表项和子项中的特定数据。 
     a. 当请求元数据时，它会将元数据发送到 VSS。 
     b. 然后，VSS 会将元数据发送到发出请求的应用程序，即 Configuration Manager 备份管理器。 
@@ -220,7 +220,7 @@ SMS 编写器是一项在备份过程中与 Windows 卷影复制服务 (VSS) 进
 将自动安装 SMS 编写器服务。 当 VSS 应用程序请求备份或还原时，该服务必须正在运行。  
 
 ### <a name="writer-id"></a>编写器 ID  
-SMS 编写器的编写器 ID 为：03ba67dd-dc6d-4729-a038-251f7018463b。  
+SMS 编写器的编写器 ID 为：03ba67dd-dc6d-4729-a038-251f7018463b  。  
 
 ### <a name="permissions"></a>权限  
 SMS 编写器服务必须采用本地系统帐户运行。  

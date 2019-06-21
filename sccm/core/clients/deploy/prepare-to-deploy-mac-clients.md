@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49edf86f855c934d29ae0ed1101bb319278ccc7c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f9ead2348e96856d006c8041705c4b4e30c145e9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141045"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286819"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 按照下列步骤，请确保已准备好[将 Configuration Manager 客户端部署到 Mac 计算机](/sccm/core/clients/deploy/deploy-clients-to-macs)。
 
@@ -28,7 +28,7 @@ ms.locfileid: "56141045"
 
 ## <a name="mac-prerequisites"></a>Mac 先决条件
 
-Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载适用于其他操作系统的客户端。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载适用于其他操作系统的客户端  。  
 
 有关支持的版本列表，请参阅[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers)。
 
@@ -44,9 +44,9 @@ Configuration Manager Mac 客户端始终执行证书吊销检查。 不能禁�
 
 在 Mac 计算机上安装 Configuration Manager 客户端之前，请决定安装客户端证书的方式：  
 
--   通过使用 [CMEnroll 工具](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac)注册 Configuration Manager。 注册过程不支持自动证书续订。 在证书过期之前重新注册 Mac 计算机。  
+-   通过使用 [CMEnroll 工具](/sccm/core/clients/deploy/deploy-clients-to-macs#client-and-certificate-automation-with-cmenroll)注册 Configuration Manager。 注册过程不支持自动证书续订。 在证书过期之前重新注册 Mac 计算机。  
 
--   [使用与 Configuration Manager 无关的证书请求和安装方法](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。  
+-   [使用与 Configuration Manager 无关的证书请求和安装方法](/sccm/core/clients/deploy/deploy-clients-to-macs#bkmk_external)。  
 
 有关 Mac 客户端证书要求的详细信息，请参阅 [Configuration Manager 的 PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
 
@@ -73,7 +73,7 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
 可在管理点、分发点和注册代理点的 Web 服务器证书中指定站点系统的 Internet FQDN 值。
 
-有关示例部署的详细信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书。](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)  
+有关示例部署的详细信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书。](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)  
 
 
 
@@ -85,9 +85,9 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
 -   分发点  
 
-有关创建和安装管理点的客户端证书的示例部署，请参阅[为 Windows 计算机部署客户端证书](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
+有关创建和安装管理点的客户端证书的示例部署，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
 
-有关创建和安装分发点的客户端证书的示例部署，请参阅[为分发点部署客户端证书](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)。  
+有关创建和安装分发点的客户端证书的示例部署，请参阅[为分发点部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)。  
 
 > [!IMPORTANT]  
 >  要将客户端部署到运行 macOS Sierra 的设备上，必须正确配置管理点证书的使用者名称。 例如，使用管理点服务器的 FQDN。  
@@ -96,9 +96,9 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
 ## <a name="prepare-the-client-certificate-template-for-macs"></a>为 Mac 准备客户端证书模板  
 
-对于在 Mac 计算机上注册证书的用户帐户，证书模板必须具有“读取”和“注册”权限。  
+对于在 Mac 计算机上注册证书的用户帐户，证书模板必须具有“读取”和“注册”权限   。  
 
-有关详细信息，请参阅[为 Mac 计算机部署客户端证书](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1)。  
+有关详细信息，请参阅[为 Mac 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1)。  
 
 
 
@@ -121,25 +121,25 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
 这些站点系统角色必须位于主站点中。  
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点。 然后选择具有正确站点系统角色的服务器。  
+1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点    。 然后选择具有正确站点系统角色的服务器。  
 
-2.  在细节窗格中选择“管理点”角色，然后选择功能区中的“属性”。 在“管理点属性”窗口中，配置以下选项：  
+2.  在细节窗格中选择“管理点”角色，然后选择功能区中的“属性”   。 在“管理点属性”窗口中，配置以下选项：   
 
-    1.  选择“HTTPS”。  
+    1.  选择“HTTPS”  。  
 
-    2.  选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”。 这些选项需要 Internet 或 Intranet FQDN。  
+    2.  选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”   。 这些选项需要 Internet 或 Intranet FQDN。  
 
-    3.  选择“允许移动设备和 Mac 计算机使用此管理点”。  
+    3.  选择“允许移动设备和 Mac 计算机使用此管理点”  。  
 
-    4. 选择“确定”以保存此配置。  
+    4. 选择“确定”以保存此配置  。  
 
-3.  在“服务器和站点系统角色”节点的细节窗格中，选择“分发点”角色，然后在功能区中选择“属性”。 在“分发点属性”窗口中，配置以下选项：  
+3.  在“服务器和站点系统角色”节点的细节窗格中，选择“分发点”角色，然后在功能区中选择“属性”   。 在“分发点属性”窗口中，配置以下选项：   
 
-    -   选择“HTTPS”。  
+    -   选择“HTTPS”  。  
 
-    -   选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”。 这些选项需要 Internet 或 Intranet FQDN。  
+    -   选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”   。 这些选项需要 Internet 或 Intranet FQDN。  
 
-    -   选择“导入证书”，浏览到导出的客户端分发点证书文件，然后指定密码。  
+    -   选择“导入证书”  ，浏览到导出的客户端分发点证书文件，然后指定密码。  
 
 4.  对管理 Mac 计算机的主站点中的所有管理点和分发点重复此过程。  
 
@@ -157,7 +157,7 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
 -   [现有站点系统服务器](/sccm/core/servers/deploy/configure/install-site-system-roles#bkmk_Install)    
 
-在任一情况下，在“系统角色选择”页上，从可用角色列表中选择“注册代理点”和“注册点”。  
+在任一情况下，在“系统角色选择”页上，从可用角色列表中选择“注册代理点”和“注册点”    。  
 
 
 

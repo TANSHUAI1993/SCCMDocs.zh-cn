@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: c6a64a007462c8619e05b3002611bb72581b6f92
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158992"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285720"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析的疑难解答
 
@@ -82,7 +82,7 @@ ms.locfileid: "67158992"
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>创建并应用导入 Configuration Manager
 
-如果无法从配置 Azure 服务向导配置管理器中创建此 Azure AD 应用程序，使用以下步骤手动创建和导入应用程序为 Configuration Manager。
+完成后[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)上桌面分析门户中，使用以下步骤来手动创建和导入应用程序为 Configuration Manager 如果无法从配置 Azure 服务创建此 Azure AD 应用向导。
 
 #### <a name="create-app-in-azure-ad"></a>在 Azure AD 中创建应用
 

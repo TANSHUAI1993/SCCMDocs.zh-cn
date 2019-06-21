@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d817bf27302b0a894eb834c747fb3bbcb0ad3fa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141181"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158335"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
@@ -32,21 +32,21 @@ ms.locfileid: "56141181"
 
 此预览版在 Configuration Manager 控制台中引入了新反馈选项。 借助“反馈”选项，可通过 Configuration Manager UserVoice 反馈网站直接向开发团队发送反馈。  
 
-> 可在以下位置找到“反馈”选项：
+> 可在以下位置找到“反馈”  选项：
 > -  在功能区中每个节点的“主页”选项卡的最左侧。  
 >    ![功能区](./media/feedback-home.png)
 
 -  右键单击控制台中的任何对象时。   
     ![右键单击选项](./media/feedback-option.png)   
 
-选择“反馈”将打开浏览器，并转到 https://configurationmanager.uservoice.com/forums/300492-ideasConfiguration Manager UserVoice 反馈网站。
+选择“反馈”将打开浏览器，并转到 https://configurationmanager.uservoice.com/forums/300492-ideas Configuration Manager UserVoice 反馈网站  。
 ##  <a name="changes-for-updates-and-servicing"></a>更新和维护服务的更改
 以下是此预览版引入的功能。
 
 **简化更新选项**  
 下次当你的基础架构有资格下载两个或多个更新时，将仅下载最新更新。 例如，如果当前站点版本比最新可用版本低两个或更多版本，将仅自动下载最新版本的更新。  
 
-仍可选择下载并安装其他可用更新，即使它们不是最新版本。 但是，你将收到此更新已由较新更新替换的警告。 若要下载可下载的更新，在控制台中选择更新，然后单击“下载”。
+仍可选择下载并安装其他可用更新，即使它们不是最新版本。 但是，你将收到此更新已由较新更新替换的警告。 若要下载可下载  的更新，在控制台中选择更新，然后单击“下载”  。
 
 **针对较旧更新的清理功能得到改进**   
 已添加自动清理功能，可从站点服务器上的“EasySetupPayload”文件夹中删除不需要的下载文件。  
@@ -56,7 +56,7 @@ ms.locfileid: "56141181"
 从此版本开始，当对等缓存源计算机满足以下任一条件时，对等缓存源计算机将拒绝对内容的请求：  
  -  处于低电量模式。
  -  请求内容时 CPU 负载超过 80%。
- -  磁盘 I/O 的 AvgDiskQueueLength 超过 10。
+ -  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
  -  该计算机没有其他可用连接。   
 
 使用 System Center Configuration Manager SDK 时，可以使用对等源功能的客户端代理配置类 (*SMS_WinPEPeerCacheConfig*) 配置这些设置。
@@ -77,7 +77,7 @@ ms.locfileid: "56141181"
 -   在加入到 Azure AD 的 Azure VM 上运行的 Configuration Manager 站点。
 -   在同一 Azure AD 环境中运行的 Configuration Manager 客户端。
 
-若要配置 Azure AD 域服务，请参阅 [Azure AD 域服务入门](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)。
+若要配置 Azure AD 域服务，请参阅 [Azure AD 域服务入门](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
 
 ### <a name="discover-resources"></a>发现资源
 设置 Configuration Manager 以在 Azure AD 中运行后，可以使用以下 Active Directory 发现方法搜索 Azure AD 寻找资源：  
@@ -87,7 +87,7 @@ ms.locfileid: "56141181"
 
 对于使用的每种方法，请编辑 LDAP 查询以搜索 Azure AD OU 结构，而不是本地 Active Directory 常用的容器。 这要求你对查询作出指示，让其在 Azure 订阅中搜索 Active Directory。  
 
-下面的示例使用 contoso.onmicrosoft.com 的 Azure AD：
+下面的示例使用 contoso.onmicrosoft.com  的 Azure AD：
 - **系统发现**   
   Azure AD 将设备存储在 **AADDC 计算机** OU 下。  进行下列配置：  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
@@ -106,7 +106,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件性访问设备符合性策略改进
 
-当用户使用非符合性应用列表中的应用时，新的设备符合性策略规则可用于帮助阻止对支持条件性访问的公司资源的访问。 当添加新的符合性规则“无法安装的应用”时，可由管理员定义非符合性应用列表。 将应用添加到非符合性列表时，此规则要求管理员输入“应用名称”、“应用 ID”和“应用发布者”（可选）。 此设置仅适用于 iOS 和 Android 设备。
+当用户使用非符合性应用列表中的应用时，新的设备符合性策略规则可用于帮助阻止对支持条件性访问的公司资源的访问。 当添加新的符合性规则“无法安装的应用”  时，可由管理员定义非符合性应用列表。 将应用添加到非符合性列表时，此规则要求管理员输入“应用名称”  、“应用 ID”  和“应用发布者”  （可选）。 此设置仅适用于 iOS 和 Android 设备。
 
 此外，这可帮助组织缓解使用不安全应用导致的数据泄漏，并防止通过某些应用过度使用数据。
 
@@ -121,9 +121,9 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 从此预览版开始，如果超过 20%（默认值）托管客户端使用反恶意软件客户端（即 Windows Defender 或 Endpoint Protection 客户端）的过期版本，Configuration Manager Endpoint Protection 将发出警报。
 
 ### <a name="try-it-out"></a>试试看
-确保使用客户端设置策略的所有桌面和服务器客户端上均已启用 Endpoint Protection。 现在，可通过转到“资产和符合性” > “概述” > “设备” > “所有桌面和服务器客户端”来查看“反恶意软件客户端版本”和“Endpoint Protection 部署状态”。 若要查看警报，请在“监视”工作区中查看“警报”。 如果超过 20% 托管客户端运行反恶意软件的过期版本，将显示“反恶意软件客户端版本已过期”警报。 此警报不会出现在“监视” > “概述”选项卡中。若要更新过期的反恶意软件客户端，可启用反恶意软件客户端的软件更新。
+确保使用客户端设置策略的所有桌面和服务器客户端上均已启用 Endpoint Protection。 现在，可通过转到“资产和符合性”   > “概述”   > “设备”   > “所有桌面和服务器客户端”  来查看“反恶意软件客户端版本”  和“Endpoint Protection 部署状态”  。 若要查看警报，请在“监视”  工作区中查看“警报”  。 如果超过 20% 托管客户端运行反恶意软件的过期版本，将显示“反恶意软件客户端版本已过期”警报。 此警报不会出现在“监视”   > “概述”  选项卡中。若要更新过期的反恶意软件客户端，可启用反恶意软件客户端的软件更新。
 
-若要配置生成警报的百分比，请展开“监视” > “警报” > “所有警报”，双击“反恶意软件客户端已过期”，然后修改“如果具有过期版本的反恶意软件客户端的托管客户端百分比超过以下值，发出警报”选项。
+若要配置生成警报的百分比，请展开“监视”   > “警报”   > “所有警报”  ，双击“反恶意软件客户端已过期”  ，然后修改“如果具有过期版本的反恶意软件客户端的托管客户端百分比超过以下值，发出警报”  选项。
 
 ## <a name="compliance-assessment-for-windows-update-for-business-updates"></a>Windows Update for Business 更新的符合性评估
 现在，可以配置符合性策略更新规则，将 Windows Update for Business 评估结果包含在条件性访问评估中。
@@ -132,24 +132,24 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ### <a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>允许 Windows Update for Business 管理 Windows 10 更新
 若要收集 Windows Update for Business 更新的符合性评估信息，请按照以下步骤配置客户端代理设置，以显式允许 Windows Update for Business 管理 Windows 10 更新。
-1. 在 Configuration Manager 控制台中，转到“管理” > “客户端设置”。
-2. 在客户端设置的属性中，请转至“软件更新”，然后对“使用 Windows Update for Business 管理 Windows 10 更新”设置选择“是”。
+1. 在 Configuration Manager 控制台中，转到“管理” > “客户端设置”   。
+2. 在客户端设置的属性中，请转至“软件更新”  ，然后对“使用 Windows Update for Business 管理 Windows 10 更新”  设置选择“是”  。
 
 ### <a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>创建 Windows Update for Business 评估的符合性策略
-1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “符合性设置” > “符合性策略”。
-2. 单击“创建符合性策略”或选择现有的符合性策略进行修改。
-3. 在“常规”页上提供名称和说明，选择“使用 Configuration Manager 客户端管理的设备的符合性规则”，设置用于报告的不符合性严重程度，然后单击“下一步”。
-4. 在“支持的平台”页上，选择“Windows 10”，然后单击“下一步”。
-5. 在“规则”页上，单击“新建...”，然后对“条件”选择“需要 Windows Update for Business 符合性”。 “值”设置自动设置为“true”。
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”   > “符合性设置”   > “符合性策略”  。
+2. 单击“创建符合性策略”  或选择现有的符合性策略进行修改。
+3. 在“常规”页上提供名称和说明，选择“使用 Configuration Manager 客户端管理的设备的符合性规则”  ，设置用于报告的不符合性严重程度，然后单击“下一步”  。
+4. 在“支持的平台”页上，选择“Windows 10”  ，然后单击“下一步”  。
+5. 在“规则”页上，单击“新建...”  ，然后对“条件”  选择“需要 Windows Update for Business 符合性”  。 “值”  设置自动设置为“true”  。
 
 新的策略将在  “资产和符合性”工作区的  “符合性策略”节点处显示。
 
 ### <a name="deploy-a-compliance-policy"></a>部署合规性策略
-1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “符合性设置”然后单击“符合性策略”。
-2. 在“主页”选项卡上的“部署”组中，单击“部署”。
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”   > “符合性设置”  然后单击“符合性策略”  。
+2. 在“主页”  选项卡上的“部署”  组中，单击“部署”  。
 3. 在“部署符合性策略”  对话框中，单击  “浏览”以选择要将策略部署到的用户集合。
    此外，当策略不合规时可以选择选项以生成警报，还可配置将按其评估策略符合性的计划。
-4. 完成后，请单击“确定” 。
+4. 完成后，请单击“确定”  。
 
 ### <a name="monitor-the-compliance-policy"></a>监视合规性策略
 创建符合性策略后，可以在 Configuration Manager 控制台中监视符合性结果。 有关详细信息，请参阅[监视合规性策略](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)。
@@ -168,16 +168,16 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 > [!NOTE]
 > 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
 
-1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
-2. 选择要编辑的任务序列，然后单击“属性”。
-3. 在“用户通知”选项卡上，选择“这是影响重大的任务序列”。
+1. 在 Configuration Manager 控制台中，转到“软件库”   > “操作系统”   > “任务序列”  。
+2. 选择要编辑的任务序列，然后单击“属性”  。
+3. 在“用户通知”  选项卡上，选择“这是影响重大的任务序列”  。
 
 ### <a name="create-a-custom-notification-for-high-risk-deployments"></a>创建高风险部署的自定义通知
-1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
-2. 选择要编辑的任务序列，然后单击“属性”。
-3. 在“用户通知”选项卡上，选择“使用自定义文本”。
+1. 在 Configuration Manager 控制台中，转到“软件库”   > “操作系统”   > “任务序列”  。
+2. 选择要编辑的任务序列，然后单击“属性”  。
+3. 在“用户通知”  选项卡上，选择“使用自定义文本”  。
    > [!NOTE]
-   >  只能在已选择“这是影响重大的任务序列”时设置用户通知文本。
+   >  只能在已选择“这是影响重大的任务序列”  时设置用户通知文本。
 
 4. 配置下列设置（每个文本框最多 255 个字符）：
 
@@ -198,29 +198,29 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ### <a name="configure-software-center-properties"></a>配置软件中心属性
 使用以下过程配置软件中心中显示的任务序列的详细信息。 这些详细信息仅供参考。  
-1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
-2. 选择要编辑的任务序列，然后单击“属性”。
-3. 在“常规”选项卡上，可使用软件中心的以下设置：
+1. 在 Configuration Manager 控制台中，转到“软件库”   > “操作系统”   > “任务序列”  。
+2. 选择要编辑的任务序列，然后单击“属性”  。
+3. 在“常规”  选项卡上，可使用软件中心的以下设置：
    - **需要重启**：让用户了解安装期间是否需要重启。
-   - **下载大小(MB)**：指定任务序列在软件中心中显示多少兆字节。  
-   - **预计运行时间(分钟)**：指定任务序列在软件中心中显示的预计运行时间（以分钟为单位）。
+   - **下载大小(MB)** ：指定任务序列在软件中心中显示多少兆字节。  
+   - **预计运行时间(分钟)** ：指定任务序列在软件中心中显示的预计运行时间（以分钟为单位）。
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>在安装应用程序之前检查运行的可执行文件
 
-在部署类型的*<deployment type name>*“属性”对话框中的“安装行为”选项卡中，现在可以指定一个或多个可执行文件，如果运行此类文件，将阻止安装部署类型。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
+在部署类型的 *<deployment type name>* “属性”  对话框中的“安装行为”选项卡中，现在可以指定一个或多个可执行文件，如果运行此类文件，将阻止安装部署类型。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
 
 ### <a name="try-it-out"></a>试试看。
 
-1.  在 Configuration Manager 部署类型的属性中，选择“安装行为”选项卡。
-2.  选择“添加”可添加要查看的一个或多个可执行文件名称。 还可以添加显示名称，以便用户轻松识别列表中的应用程序。
-3.  如果部署是必需的，在部署软件向导中，可以选择自动关闭在“部署类型属性”对话框的“安装行为”选项卡中指定的任何运行中的可执行文件。
+1.  在 Configuration Manager 部署类型的属性中，选择“安装行为”  选项卡。
+2.  选择“添加”  可添加要查看的一个或多个可执行文件名称。 还可以添加显示名称，以便用户轻松识别列表中的应用程序。
+3.  如果部署是必需的，在部署软件向导中，可以选择自动关闭在“部署类型属性”对话框的“安装行为”选项卡中指定的任何运行中的可执行文件  。
 
-如果应用程序已部署为“可用”，最终用户尝试安装应用程序时，系统会提示其先关闭指定的任何运行中的可执行文件，然后才能继续安装。
+如果应用程序已部署为“可用”  ，最终用户尝试安装应用程序时，系统会提示其先关闭指定的任何运行中的可执行文件，然后才能继续安装。
 
-如果应用程序已部署为“必需”，且已选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”选项，他们将看到一个对话框，通知他们在应用程序安装截止时间到达时将自动关闭指定的可执行文件。 可在“客户端设置” > “计算机代理”中计划这些对话框。 如果不希望最终用户看到这些消息，请选择部署属性的“用户体验”选项卡上的“在软件中心和所有通知中隐藏”。
+如果应用程序已部署为“必需”  ，且已选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”  选项，他们将看到一个对话框，通知他们在应用程序安装截止时间到达时将自动关闭指定的可执行文件。 可在“客户端设置”   > “计算机代理”  中计划这些对话框。 如果不希望最终用户看到这些消息，请选择部署属性的“用户体验”  选项卡上的“在软件中心和所有通知中隐藏”  。
 
-如果应用程序已部署为“必需”，且未选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”选项，如果一个或多个指定的应用程序在运行中，则应用安装将失败。
+如果应用程序已部署为“必需”  ，且未选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”  选项，如果一个或多个指定的应用程序在运行中，则应用安装将失败。
 
 ## <a name="create-pfx-certificates-with-s-mime-support"></a>创建具有 S MIME 支持的 PFX 证书
 
@@ -266,7 +266,8 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 - **预测键盘**（仅限监督模式下）
 - **自动更正**（仅限监督模式下）
 - **键盘拼写检查**（仅限监督模式下）
-- **键盘快捷方式**（仅限监督模式下）<!--- - **Enterprise app trust settings modification** --->
+- **键盘快捷方式**（仅限监督模式下）
+  <!--- - **Enterprise app trust settings modification** --->
 - **仅使用 Apple Configurator 和 iTunes 安装应用**（仅限监督模式下）
 - **自动下载应用**（仅限监督模式下）
 - **更改“查找我的朋友”应用设置**（仅限监督模式下）
@@ -299,12 +300,12 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
 #### <a name="enable-android-for-work-management"></a>启用 Android for Work 管理
 1. 在 https://accounts.google.com/SignUp 创建 Google 帐户，作为 Android for Work 管理员帐户，此帐户将与此 Intune 租户的所有 Android for Work 管理任务相关联。 可以是在管理 Android 设备的管理员中共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
 2. 通过将 Google 帐户绑定到在 Configuration Manager 中托管的 Intune 租户来启用 Android 注册：
-   1. 转到“管理” > “概述” > “云服务” > “Microsoft Intune 订阅”，然后选择 Intune 订阅。
-   2. 在功能区中，单击“配置平台” > “Android”，并确保已选中“启用 Android 注册”。
-   3. 在功能区中，单击“配置平台” > “Android for Work”。
-   4. 在对话框中，单击“在 Intune 控制台中配置 Android for Work”。 Intune 控制台将在 Web 浏览器中打开。
+   1. 转到“管理”   > “概述”   > “云服务”   > “Microsoft Intune 订阅”  ，然后选择 Intune 订阅。
+   2. 在功能区中，单击“配置平台”   > “Android”  ，并确保已选中“启用 Android 注册”  。
+   3. 在功能区中，单击“配置平台”   > “Android for Work”  。
+   4. 在对话框中，单击“在 Intune 控制台中配置 Android for Work”  。 Intune 控制台将在 Web 浏览器中打开。
    5. 使用你的 Intune 管理员凭据登录 Intune 门户。
-   6. 单击“配置”，打开 Google Play 的 Android for Work 网站。
+   6. 单击“配置”  ，打开 Google Play 的 Android for Work 网站。
    7. 在 Google 登录页上，输入步骤 1 中的 Google 帐户凭据，然后提供你的公司信息。
 3. 返回 Intune 门户时，Android for Work 已启用，Android for Work 设备有三个注册选项：
    - **将所有设备作为 Android 设备管理** -（已禁用）所有 Android 设备（包括支持 Android for Work 的设备）均将注册为传统的 Android 设备
@@ -312,24 +313,24 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
    - **仅针对这些组中的用户将受支持设备作为 Android for Work 设备管理** -（测试中）可使 Android for Work 管理面向有限的一组用户。 只有注册支持 Android for Work 的设备的所选组的成员能注册为 Android for Work 设备。 其他所有成员均注册为 Android 设备。
   
 > [!NOTE]
-> 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要测试 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”。
+> 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”  选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要测试 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”  。
 
 
-  若要启用 Android for Work 注册，必须选择底部的两个选择之一。 “仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项要求首先设置 Azure Active Directory 安全组。
+  若要启用 Android for Work 注册，必须选择底部的两个选择之一。 “仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”  选项要求首先设置 Azure Active Directory 安全组。
 
 完成绑定后，将在 Intune 门户中看到帐户名和组织名称；此时，可关闭两个浏览器。
 
 #### <a name="approve-and-deploy-android-for-work-apps"></a>批准和部署 Android for Work 应用
 使用以下步骤在 Play for Work 应用商店中批准应用，将其同步到 Configuration Manager 控制台，然后将其部署到托管的 Android for Work 设备中。 若要将应用部署到用户的工作配置文件中，需要在 Play for Work 中批准该应用，然后将应用与 Configuration Manager 控制台同步。
 
-1. 打开浏览器并转到： https://play.google.com/work。
+1. 打开浏览器并转到： https://play.google.com/work 。
 2. 使用绑定到你的 Intune 租户的 Google 管理员帐户登录。
-3. 浏览要在你的环境中部署的应用，然后对每个应用单击“批准”。
-4. 在 Configuration Manager 控制台中，转到“管理员” > “概述” > “云服务” > “Android for Work”，然后单击“同步”。
-5. 等待应用同步（最多 10 分钟），然后转到“软件库” > “概述” > “应用程序管理” > “应用商店应用的许可证信息”。
-6. 单击从 Play for Work 同步的应用，然后单击“创建应用程序”。
-7. 完成该向导，然后单击“关闭”。
-8. 转到“软件库” > “概述” > “应用程序管理” > “应用程序”，选择 Android for Work 应用，然后照常部署。
+3. 浏览要在你的环境中部署的应用，然后对每个应用单击“批准”  。
+4. 在 Configuration Manager 控制台中，转到“管理员”   > “概述”   > “云服务”   > “Android for Work”  ，然后单击“同步”  。
+5. 等待应用同步（最多 10 分钟），然后转到“软件库”   > “概述”   > “应用程序管理”   > “应用商店应用的许可证信息”  。
+6. 单击从 Play for Work 同步的应用，然后单击“创建应用程序”  。
+7. 完成该向导，然后单击“关闭”  。
+8. 转到“软件库”   > “概述”   > “应用程序管理”   > “应用程序”  ，选择 Android for Work 应用，然后照常部署。
 
 若要将 Play for Work 应用与 Configuration Manager 同步，必须在 Play for Work 网站上至少批准一个应用。
 
@@ -345,7 +346,7 @@ Android for Work 具有配置项的两个设置组：
 - 应用请求特定权限的行为
 - 工作配置文件内的应用程序的通知是否在锁定屏幕上可见
 
-若要尝试此操作，可通过标准的工作流创建配置项，在“常规”页上选择“Android for Work”，并为每个设置组配置设置，将配置项添加到基线，然后照常部署。 这些设置仅适用于注册为 Android for Work 的设备，不适用于注册为 Android 的设备。
+若要尝试此操作，可通过标准的工作流创建配置项，在“常规”  页上选择“Android for Work”  ，并为每个设置组配置设置，将配置项添加到基线，然后照常部署。 这些设置仅适用于注册为 Android for Work 的设备，不适用于注册为 Android 的设备。
 
 #### <a name="perform-selective-wipe"></a>执行选择性擦除
 只能选择性擦除注册为 Android for Work 的设备，因为你只管理工作配置文件。 这可防止擦除个人配置文件。 在 Android for Work 设备上执行选择性擦除将删除工作配置文件（包括所有应用和数据）并注销设备。

@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e6e603210342f5acc3e66328fca95e964dde2bf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9d35558da6b25bba16b84c931b0254436ac3dd1e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495520"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285535"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1802 更新作为控制台中更新提供。 将此更新应用于运行 1702、1706 或 1710 版的站点。 <!-- baseline only statement: -->安装新站点时，它也可作为基准版本提供。
 
@@ -35,7 +35,7 @@ Configuration Manager Current Branch 的 1802 更新作为控制台中更新提�
 >  了解详细信息：    
 >   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [在站点上安装更新](/sccm/core/servers/manage/updates)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 1802 版中的更改和新功能的详细信息。  
 
@@ -115,14 +115,14 @@ Configuration Manager 1802 中提供以下见解：
 
 ### <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>云管理网关支持 Azure 资源管理器
 <!-- 1324735 -->
-在创建[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG) 实例时，向导现提供选项来创建“Azure 资源管理器部署”。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。 有关详细信息，请参阅 [CMG 拓扑设计](/sccm/core/clients/manage/plan-cloud-management-gateway#azure-resource-manager)。
+在创建[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG) 实例时，向导现提供选项来创建“Azure 资源管理器部署”  。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。 有关详细信息，请参阅 [CMG 拓扑设计](/sccm/core/clients/manage/plan-cloud-management-gateway#azure-resource-manager)。
 
 > [!IMPORTANT]
 > 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
 
 ### <a name="improvements-to-cloud-management-gateway"></a>云管理网关的改进  
 
-- 从此版本开始，“云管理网关”不再是预发行功能。  
+- 从此版本开始，“云管理网关”不再是预发行功能  。  
 
 - 功能文档已经过修订和增强。 有关详细信息，请参阅下列文章：
     - [规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
@@ -135,7 +135,7 @@ Configuration Manager 1802 中提供以下见解：
 
 ### <a name="configure-hardware-inventory-to-collect-strings-larger-than-255-characters"></a>配置硬件清单以收集超过 255 个字符的字符串
 <!-- 1357389 -->
-可以针对硬件清单属性将字符串长度配置为超过 255 个字符。 此更改仅适用于新添加的类和不为键的硬件清单属性。 有关详细信息，请参阅文章[扩展硬件清单](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255)。 
+可以针对硬件清单属性将字符串长度配置为超过 255 个字符。 此更改仅适用于新添加的类和不为键的硬件清单属性。 有关详细信息，请参阅文章[扩展硬件清单](/sccm/core/clients/manage/inventory/extend-hardware-inventory#bkmk_GreaterThan255)。 
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Linux 和 Unix 客户端支持的弃用公告
  <!--510139-->
@@ -143,7 +143,7 @@ Microsoft 计划从现在起大约一年后弃用 System Center Configuration Ma
 
 ### <a name="surface-device-dashboard"></a>Surface 设备仪表板
 <!--1355788-->
-Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息。 在控制台中，转到“监视” > “Surface 设备”。 可以查看以下项：
+Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息。 在控制台中，转到“监视” > “Surface 设备”   。 可以查看以下项：
 - Surface 百分比
 - Surface 型号百分比
 - 前五个固件版本
@@ -158,11 +158,11 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 ### <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>使用共同管理将 Endpoint Protection 工作负荷转移到 Intune
 <!-- 1357365 -->
- 启用共同管理后，Endpoint Protection 工作负荷可以转换到 Intune。 若要转移 Endpoint Protection 工作负荷，请转到共同管理属性页，并将滚动条从 Configuration Manager 移动到“试点”或“所有”。 若要详细了解工作负载，请参阅[共同管理工作负载](/sccm/comanage/workloads)。 有关共同管理的详细信息，请参阅 [Windows 10 设备共同管理](/sccm/comanage/overview)。
+ 启用共同管理后，Endpoint Protection 工作负荷可以转换到 Intune。 若要转移 Endpoint Protection 工作负荷，请转到共同管理属性页，并将滚动条从 Configuration Manager 移动到“试点”  或“所有”  。 若要详细了解工作负载，请参阅[共同管理工作负载](/sccm/comanage/workloads)。 有关共同管理的详细信息，请参阅 [Windows 10 设备共同管理](/sccm/comanage/overview)。
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的共同管理仪表板
 <!--1356648-->
-从此版本开始，可以查看包含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。 有关详细信息，请参阅文章[共同管理仪表板](/sccm/core/clients/manage/client-management-dashboard)。 
+从此版本开始，可以查看包含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。 有关详细信息，请参阅文章[共同管理仪表板](/sccm/comanage/how-to-monitor#co-management-dashboard)。 
 
 
 ## <a name="compliance-settings"></a>符合性设置
@@ -177,15 +177,15 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 ### <a name="allow-user-interaction-when-installing-an-application"></a>允许在安装应用程序时进行用户交互
 <!-- 1356976 -->
-允许最终用户在任务序列运行期间与应用程序安装进行交互。 例如，运行安装过程会提示最终用户各种选项。 某些应用程序安装程序无法关闭用户提示或安装过程需要仅用户知道的特定配置值。 此功能可用于处理这些安装方案。 有关详细信息，请参阅[指定部署类型的用户体验选项](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type)。
+允许最终用户在任务序列运行期间与应用程序安装进行交互。 例如，运行安装过程会提示最终用户各种选项。 某些应用程序安装程序无法关闭用户提示或安装过程需要仅用户知道的特定配置值。 此功能可用于处理这些安装方案。 有关详细信息，请参阅[指定部署类型的用户体验选项](/sccm/apps/deploy-use/create-applications#bkmk_dt-ux)。
 
 ### <a name="do-not-automatically-upgrade-superseded-applications"></a>不自动升级被取代的应用程序
 <!-- 1351266 -->
-将应用程序部署配置为不自动升级任何被取代的版本。 现在，创建部署时，在“部署软件向导”的“部署设置”页中，对于“可用”安装目的，可启用或禁用“自动升级此应用程序的任何被取代版本”选项。 有关详细信息，请参阅[指定部署设置](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings)。
+将应用程序部署配置为不自动升级任何被取代的版本。 现在，创建部署时，在“部署软件向导”  的“部署设置”  页中，对于“可用”  安装目的，可启用或禁用“自动升级此应用程序的任何被取代版本”  选项。 有关详细信息，请参阅[指定部署设置](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings)。
 
 ### <a name="approve-application-requests-for-users-per-device"></a>审批每台设备的用户的应用程序请求
 <!-- 1357015 -->
-从此版本开始，当用户请求需要审批的应用程序时，特定设备名称现为请求的一部分。 如果管理员批准请求，则用户只能在该设备上安装应用程序。 用户必须提交另一个请求才能在另一台设备上安装应用程序。 有关详细信息，请参阅[指定部署设置](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings)。
+从此版本开始，当用户请求需要审批的应用程序时，特定设备名称现为请求的一部分。 如果管理员批准请求，则用户只能在该设备上安装应用程序。 用户必须提交另一个请求才能在另一台设备上安装应用程序。 有关详细信息，请参阅[指定部署设置](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings)。
 
  > [!Note]  
  > 这是一个可选功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。  
@@ -193,14 +193,14 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 ### <a name="run-scripts-improvements"></a>运行脚本的改进 
 <!-- 1236459 -->
- 从此版本开始，“运行脚本”不再是预发行功能。 脚本输出现在使用 JSON 格式返回。 有关详细信息，请参阅[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)。
+ 从此版本开始，“运行脚本”不再是预发行功能  。 脚本输出现在使用 JSON 格式返回。 有关详细信息，请参阅[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)。
 
 
 ## <a name="operating-system-deployment"></a>操作系统部署
 
 ### <a name="windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway"></a>通过云管理网关执行的 Windows 10 就地升级任务序列
 <!-- 1357149 -->
-Windows 10 [就地升级任务序列](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)现在支持部署到通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)托管的基于 Internet 的客户端。 此功能可让远程用户更轻松地升级到 Windows 10，而无需连接公司网络。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg)。
+Windows 10 [就地升级任务序列](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)现在支持部署到通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)托管的基于 Internet 的客户端。 此功能可让远程用户更轻松地升级到 Windows 10，而无需连接公司网络。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>对 Windows 10 就地升级任务序列的改进
 <!-- 1357425 -->
@@ -240,11 +240,11 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 
 ### <a name="hide-installed-applications-in-software-center"></a>在软件中心隐藏安装的应用程序
 <!--1357592-->
-安装的应用程序现在可以在软件中心隐藏。 在客户端设置下启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。 安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。  仍可以在安装状态选项卡下查看已安装的应用程序。[在软件中心隐藏安装的应用程序](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled)提供其他详细信息。   
+安装的应用程序现在可以在软件中心隐藏。 在客户端设置下启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。 安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。  仍可以在安装状态选项卡下查看已安装的应用程序。[在软件中心隐藏安装的应用程序](/sccm/core/clients/deploy/about-client-settings#bkmk_HideInstalled)提供其他详细信息。   
 
 ### <a name="hide-unapproved-applications-in-software-center"></a>在软件中心隐藏未批准的应用程序
  <!--1355146-->
-启用此客户端设置选项后，软件中心将隐藏需要批准的用户可用应用程序。  [在软件中心隐藏未批准的应用程序](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved)提供其他详细信息。  
+启用此客户端设置选项后，软件中心将隐藏需要批准的用户可用应用程序。  [在软件中心隐藏未批准的应用程序](/sccm/core/clients/deploy/about-client-settings#bkmk_HideUnapproved)提供其他详细信息。  
 
 ### <a name="software-center-shows-user-additional-compliance-information"></a>软件中心显示用户的其他符合性信息
 <!-- 1235616 -->
@@ -263,15 +263,15 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 
 ### <a name="report-for-default-browser-counts"></a>默认浏览器计数报表
 <!-- 1357830 -->
-现在提供了一个新报表来显示将特定 Web 浏览器作为 Windows 默认浏览器的客户端计数。 请参阅“软件 - 公司和产品”报表组中的“默认浏览器计数”报表。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#software---companies-and-products)。
+现在提供了一个新报表来显示将特定 Web 浏览器作为 Windows 默认浏览器的客户端计数。 请参阅“软件 - 公司和产品”报表组中的“默认浏览器计数”报表   。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#software---companies-and-products)。
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot 设备信息报表
 <!-- 1351442 -->
-Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 一种向 Windows Autopilot 注册现有设备的方法是，将设备信息上传到适用于企业和适用于教育的 Microsoft Store。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”报表节点中的新报表“Windows Autopilot 设备信息”收集和报告此设备信息。 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#windows-autopilot)，以准备进行共同管理。
+Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 一种向 Windows Autopilot 注册现有设备的方法是，将设备信息上传到适用于企业和适用于教育的 Microsoft Store。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”  报表节点中的新报表“Windows Autopilot 设备信息”  收集和报告此设备信息。 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#windows-autopilot)，以准备进行共同管理。
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>特定集合的 Windows 10 维护服务详细信息报表
 <!--1357653-->
-“特定集合的 Windows 10 维护服务详细信息”报表显示与特定集合的 Windows 10 维护服务相关的常规信息。 此报表显示 Windows 10 设备的资源 ID、NetBIOS 名称、OS 名称、OS 版本名称、内部版本、OS 分支和服务状态。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#operating-system)
+“特定集合的 Windows 10 维护服务详细信息”报表显示与特定集合的 Windows 10 维护服务相关的常规信息  。 此报表显示 Windows 10 设备的资源 ID、NetBIOS 名称、OS 名称、OS 版本名称、内部版本、OS 分支和服务状态。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#operating-system)
 
 
 

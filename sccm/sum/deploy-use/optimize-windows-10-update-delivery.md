@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 667dfda7f03c5c39f8a0a2e4ffc2ba38bddf5a0e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 6d037baba858b3aacc3724e99a66819197b1dd89
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500133"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194519"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
@@ -24,7 +24,7 @@ ms.locfileid: "65500133"
 
 对于许多客户而言，使用 Configuration Manager 获取且及时了解 Windows 10 月度更新的成功途径从良好的内容分发策略开始。 月度质量更新的大小可能是大型组织关心的一个原因。 某些技术旨在帮助降低带宽和网络负载以优化更新传递。 本文将介绍这些技术，对它们进行比较，并提供帮助你决定使用哪种技术的建议。  
  
-Windows 10 提供了几种类型的更新。 有关详细信息，请参阅 [Windows Update for Business 中的更新类型](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types)。 本文重点介绍 Windows 10 质量更新和 Configuration Manager。 
+Windows 10 提供了几种类型的更新。 有关详细信息，请参阅 [Windows Update for Business 中的更新类型](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types)。 本文重点介绍 Windows 10  质量更新和 Configuration Manager。 
 
 
 ## <a name="express-update-delivery"></a>快速更新传递
@@ -52,12 +52,12 @@ Configuration Manager 支持许多对等技术，包括：
 
 ### <a name="windows-delivery-optimization"></a>Windows 传递优化
 
-[传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是 Windows 10 中内置的主要下载技术和对等分发方法。 Windows 10 客户端可以从下载相同更新的本地网络上的其他设备获取内容。 使用 [Windows 传递优化选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#delivery-optimization-options)，你可以配置客户端以进行分组。 此分组允许组织标识可能满足对等请求的最佳候选设备。 传递优化显著降低了用于使设备保持最新的总体带宽，同时缩短了下载时间。
+[传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是 Windows 10 中内置的主要下载技术和对等分发方法。 Windows 10 客户端可以从下载相同更新的本地网络上的其他设备获取内容。 使用 [Windows 传递优化选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)，你可以配置客户端以进行分组。 此分组允许组织标识可能满足对等请求的最佳候选设备。 传递优化显著降低了用于使设备保持最新的总体带宽，同时缩短了下载时间。
 
 > [!NOTE]  
 > 传递优化是一种云托管解决方案。 要利用其对等功能，需具有对传递优化云服务的 Internet 访问。  
 
-为获得最佳结果，你可能需要将传递优化[下载模式](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode)设置为组 (2) 并定义组 ID。 在组模式下，对等可以跨属于同一组的设备之间的内部子网，包括远程办公室中的设备。 使用[组 ID 选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#select-the-source-of-group-ids)创建独立于域和 AD DS 站点的自己的自定义组。 对于希望通过传递优化实现最佳带宽优化的大多数组织，建议使用组下载模式。
+为获得最佳结果，你可能需要将传递优化[下载模式](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode)设置为  组 (2) 并定义  组 ID。 在组模式下，对等可以跨属于同一组的设备之间的内部子网，包括远程办公室中的设备。 使用[组 ID 选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)创建独立于域和 AD DS 站点的自己的自定义组。 对于希望通过传递优化实现最佳带宽优化的大多数组织，建议使用组下载模式。
 
 当客户端在不同网络中漫游时，手动配置这些组 ID 很有挑战性。 Configuration Manager 版本 1802 添加了一项新功能，即通过[将边界组与传递优化集成](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization)来简化此过程的管理。 当唤醒某个客户端后，它会与其管理点进行通信以获取策略，并提供其网络和边界组信息。 Configuration Manager 为每个边界组创建唯一 ID。 该站点使用客户端的位置信息，通过 Configuration Manager 边界 ID 自动配置客户端的传递优化组 ID。 当客户端漫游到其他边界组时，它会与其管理点进行通信，并使用新的边界组 ID 自动重新配置。 通过此集成，传递优化可以利用 Configuration Manager 边界组信息查找从中下载更新的对等。
 
@@ -124,7 +124,7 @@ Windows 更新代理 (WUA) 首先请求快速内容。 如果无法安装快速�
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>为什么快速文件 (.psf) 存储在 ccmcache 文件夹的 Configuration Manager 对等源上时如此之大？
 
-快速文件 (.psf) 是稀疏文件。 要确定文件在磁盘上实际使用的空间，请检查文件的“占用空间”属性。 “占用空间”属性应远小于大小值。  
+快速文件 (.psf) 是稀疏文件。 要确定文件在磁盘上实际使用的空间，请检查文件的  “占用空间”属性。 “占用空间”属性应远小于大小值。  
 
 
 #### <a name="does-configuration-manager-support-express-installation-files-with-windows-10-feature-updates"></a>Configuration Manager 是否支持使用 Windows 10 功能更新的快速安装文件？
@@ -141,7 +141,7 @@ Windows 更新代理 (WUA) 首先请求快速内容。 如果无法安装快速�
 
 是。 如果使用以下软件更新部署选项，则客户端在回退到云服务时仍会使用快速更新和传递优化：  
 
-如果软件更新在当前、相邻或站点组中的分发点上不可用，请从 Microsoft 更新下载内容
+ 如果软件更新在当前、相邻或站点组中的分发点上不可用，请从 Microsoft 更新下载内容
 
 
 #### <a name="why-is-express-file-content-not-downloaded-for-existing-updates-after-i-enable-express-file-support"></a>我启用快速文件支持后，为什么未下载现有更新的快速文件内容？ 
@@ -150,7 +150,7 @@ Windows 更新代理 (WUA) 首先请求快速内容。 如果无法安装快速�
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>有没有办法查看使用传递优化从对等下载了多少内容？
-Windows 10 版本 1703（及更高版本）包括两个新的 PowerShell cmdlet：Get-DeliveryOptimizationPerfSnap 和 Get-DeliveryOptimizationStatus。 这些 cmdlet 可以更深入地了解传递优化和缓存使用情况。 有关详细信息，请参阅[用于分析使用情况的 Windows PowerShell cmdlet](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#windows-powershell-cmdlets-for-analyzing-usage)
+Windows 10 版本 1703（及更高版本）包括两个新的 PowerShell cmdlet：  Get-DeliveryOptimizationPerfSnap 和 Get-DeliveryOptimizationStatus  。 这些 cmdlet 可以更深入地了解传递优化和缓存使用情况。 有关详细信息，请参阅[交付优化适用于 Windows 10 更新](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>客户端如何通过网络与传递优化进行通信？

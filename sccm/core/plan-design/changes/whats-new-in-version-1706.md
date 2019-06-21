@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177037"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285779"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
@@ -30,7 +30,7 @@ System Center Configuration Manager Current Branch 的更新 1706 作为控制�
 >  了解详细信息：    
 >   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 以下各节提供有关 Configuration Manager 版本 1706 中引入的更改和新功能的详细信息。  
 
@@ -59,7 +59,7 @@ Version 1706 drops support for the following products:
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进
 <!-- 1352094 -->
 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。 这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
-  -   Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
+  -   Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
   -   此版本不支持故障转移后使用异步提交副本作为站点数据库。
 有关详细信息，请参阅[准备使用 Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
@@ -92,7 +92,7 @@ Version 1706 drops support for the following products:
       - 适用于企业的 Windows 应用商店  ：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
 
 
-  可通过使用 [Azure 服务器 Web 应用](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication)提供订阅和配置详情来完成此操作，否则需要在每次使用 Azure 设置新 Configuration Manager 组件或服务时输入这些详细信息。 有关详细信息，请参阅 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)。
+  可通过使用 [Azure 服务器 Web 应用](/azure/app-service/app-service-authentication-overview)提供订阅和配置详情来完成此操作，否则需要在每次使用 Azure 设置新 Configuration Manager 组件或服务时输入这些详细信息。 有关详细信息，请参阅 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)。
 
 -   在 Internet 上使用 Azure AD 对客户端进行身份验证以访问 Configuration Manager 站点。 Azure AD 使你不再需要配置和使用客户端身份验证证书。 它需要云管理网关站点系统角色。 有关详细信息，请参阅[使用 Azure AD 从 Internet 安装并分配 Configuration Manager 客户端以进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。
 
@@ -102,7 +102,7 @@ Version 1706 drops support for the following products:
 
 ### <a name="peer-cache-improvements"></a>对等缓存功能改进
 <!-- 1252345 -->
-对等缓存功能不再使用网络访问帐户对来自对等项的下载请求进行身份验证。 客户端仍然需要此帐户时，需要注意这一点。 启动到 WinPE 然后从对等缓存源访问内容的客户端仍然需要此帐户。 有关详细信息，请参阅[对等缓存的要求和注意事项](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)。
+对等缓存功能不再使用网络访问帐户对来自对等项的下载请求进行身份验证。 客户端仍然需要此帐户时，需要注意这一点。 启动到 WinPE 然后从对等缓存源访问内容的客户端仍然需要此帐户。 有关详细信息，请参阅[对等缓存的要求和注意事项](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements)。
 
 
 <!-- ## Migration  -->

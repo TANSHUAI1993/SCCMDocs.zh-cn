@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f70373f1fea7928e801c0ccdbbe75cf96e54d20
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: 2fba1d6793b2b285cc9874de316bb2c435a526e8
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933523"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252302"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -41,8 +41,8 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - [创建与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
 - [配置站点以使用可用性组](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
-- [可以从托管站点数据库的可用性组添加或删除同步副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
-- [配置异步提交副本](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [可以从托管站点数据库的可用性组添加或删除同步副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members)  
+- [配置异步提交副本](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-replica)  
 - [从异步提交副本恢复站点](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
 - [可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
@@ -85,7 +85,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 在可用性组中使用与 SQL Server 版本支持的数量和类型相同的副本。
 
-- 可以使用异步提交副本来恢复同步副本。 有关详细信息，请参阅[站点数据库恢复选项](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)。  
+- 可以使用异步提交副本来恢复同步副本。 有关详细信息，请参阅[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)。  
 
     > [!Warning]  
     > Configuration Manager 不支持*故障转移*使用异步提交副本作为站点数据库。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014)。  

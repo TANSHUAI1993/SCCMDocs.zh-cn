@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34e0ae19fc7bb3680a148fd5e4ac52feb294963f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 08ab6cebbe44ecad8b8ce15691dd83217ada3ce9
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121305"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194136"
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>管理 Configuration Manager 的 Long Term Servicing Branch
 
-适用范围：System Center Configuration Manager (Long-Term Servicing Branch)
+适用范围：  System Center Configuration Manager (Long-Term Servicing Branch)
 
 使用 System Center Configuration Manager 的 Long Term Servicing Branch (LTSB) 时，可以参阅下列内容，了解会对基础结构管理方式产生影响的重要更改。
 
@@ -47,7 +47,7 @@ LTSB 支持使用修补程序安装程序和更新注册工具，这与 Current 
 
 虽然不从 CD.Latest 文件夹运行安装文件用于站点扩展，但仍将 CD.Latest 文件夹用于站点恢复，并且当第一个 LTSB 是管理中心站点时，仍安装新的子主站点。
 
-若要详细了解网站扩展，请参阅[扩展独立主网站](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#expand-a-stand-alone-primary-site)。 有关 CD.Latest 文件夹的详细信息，请参阅 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)。
+若要详细了解网站扩展，请参阅[扩展独立主网站](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand)。 有关 CD.Latest 文件夹的详细信息，请参阅 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)。
 
 
 ## <a name="recovery"></a>恢复

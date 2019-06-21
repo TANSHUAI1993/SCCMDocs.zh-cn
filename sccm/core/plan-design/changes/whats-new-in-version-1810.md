@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2be7c446d8ce522d587f970d1fd432f648ab3f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: fb7206020ff0a31cbf853ac1513e806c5bc05165
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499626"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251951"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1810 更新作为控制台中更新提供。 将此更新应用于运行 1710、1802 或 1806 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.--> 本文汇总了 Configuration Manager 1810 版中的更改和新增功能。  
 
@@ -76,7 +76,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 
 - **SQL 更改跟踪清除**：一项新检查，检查站点数据库是否有 SQL 更改跟踪数据的积压工作 (backlog)。 有关详细信息（包括验证和清除此积压工作的过程），请参阅 [SQL 更改跟踪清除](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)。 <!--SCCMDocs-pr issue 3023-->  
 
-- **SQL Native Client 版本**：对于支持 TLS 1.2 的 SQL Native Client 版本，将更新此先决条件检查。 最低版本是 [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402)。 有关详细信息，请参阅 [SQL Native Client 版本](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。 <!--SCCMDocs-pr issue 3094-->  
+- **SQL Native Client 版本**：对于支持 TLS 1.2 的 SQL Native Client 版本，将更新此先决条件检查。 最低版本是 [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402)。 有关详细信息，请参阅 [SQL Native Client 版本](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client)。 <!--SCCMDocs-pr issue 3094-->  
 
 - **Windows 群集节点上的站点系统**：Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 有关详细信息，请参阅 [Windows 故障转移群集](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)。 <!--1359132-->  
 
@@ -84,7 +84,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 ### <a name="new-permission-for-client-notification-actions"></a>客户端通知操作的新权限
 
 <!--SCCMDocs-pr issue #2972-->
-客户端通知操作现在需要 SMS_Collection 类上的“通知资源”权限。 默认情况下，以下内置角色具有此权限：
+客户端通知操作现在需要 SMS_Collection 类上的“通知资源”  权限。 默认情况下，以下内置角色具有此权限：
 
 - 完全权限管理员  
 - 基础结构管理员  
@@ -112,7 +112,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 ### <a name="management-insights-rule-for-peer-cache-source-client-version"></a>对等缓存源客户端版本的管理见解规则
 
 <!-- 1358008 -->
-“管理见解”节点使用新规则来确定用作对等缓存源但尚未从 1806 之前的客户端版本升级的客户端。 新规则是“将对等缓存源升级到最新版本的 Configuration Manager 客户端”，并且是新“主动维护”规则组的一部分。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“采取措施”打开显示客户端列表的设备视图。
+“管理见解”  节点使用新规则来确定用作对等缓存源但尚未从 1806 之前的客户端版本升级的客户端。 新规则是“将对等缓存源升级到最新版本的 Configuration Manager 客户端”，并且是新“主动维护”规则组的一部分   。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“采取措施”  打开显示客户端列表的设备视图。
 
 有关详细信息，请参阅[管理见解](/sccm/core/servers/manage/management-insights)。
 
@@ -130,7 +130,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 ### <a name="new-option-to-perform-client-notification-from-devices-node"></a>从“设备”节点执行“客户端通知”的新选项
 
 <!--1317364-->
-在 1810 推出前，“客户端通知”选项仅在“设备集合”节点中可用，或仅在查看设备集合的成员资格时可用。 现在，可以直接从“设备”节点执行“客户端通知”。 不再要求必须在集合成员资格视图内。
+在 1810 推出前，“客户端通知”  选项仅在“设备集合”节点中可用，或仅在查看设备集合的成员资格时可用。 现在，可以直接从“设备”  节点执行“客户端通知”  。 不再要求必须在集合成员资格视图内。
 
 有关详细信息，请参阅[客户端通知](/sccm/core/clients/manage/client-notification)。
 
@@ -140,9 +140,9 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 <!--3607726, fka 1358981-->
 集合评估行为中的以下更改可改进站点性能：  
 
-- 以前，在基于查询的集合上配置计划时，站点将继续评估查询，无论你是否启用了“在此集合上计划完全更新”的集合设置。 若要完全禁用计划，必须将计划更改为“无”。 现在，当你禁用此设置时，站点将清除计划。 若要指定对计划进行集合评估，请启用“在此集合上计划完全更新”的选项。  
+- 以前，在基于查询的集合上配置计划时，站点将继续评估查询，无论你是否启用了“在此集合上计划完全更新”  的集合设置。 若要完全禁用计划，必须将计划更改为“无”  。 现在，当你禁用此设置时，站点将清除计划。 若要指定对计划进行集合评估，请启用“在此集合上计划完全更新”  的选项。  
 
-- 你无法禁用“所有系统”等内置集合的评估，但现在可以配置计划。 此行为使你能够在满足你的业务需求的同时自定义此操作。
+- 你无法禁用“所有系统”  等内置集合的评估，但现在可以配置计划。 此行为使你能够在满足你的业务需求的同时自定义此操作。
 
 有关详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections#bkmk_create)。
 
@@ -171,11 +171,11 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 <!--1358980-->
 通过增加以下更多详细信息，共同管理仪表板功能得到了增强：  
 
-- “共同管理注册状态”磁贴包含了其他状态
+- “共同管理注册状态”磁贴包含了其他状态 
 
-- 带有漏斗图的新增“共同管理状态”磁贴显示了注册过程的状态
+- 带有漏斗图的新增“共同管理状态”磁贴显示了注册过程的状态 
 
-- 新增一个显示“注册错误”计数的磁贴
+- 新增一个显示“注册错误”计数的磁贴 
 
 ![显示了前四个磁贴的共同托管仪表板的屏幕截图](media/1358980-comgmt-dashboard.png)
 
@@ -185,7 +185,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 ### <a name="improvements-to-internet-based-client-setup"></a>对基于 Internet 的客户端设置的改进
 
 <!--3607731, fka 1359181-->
-此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端设置过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。
+此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端设置过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME  和 SMSSiteCode  。
 
 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client)。
 
@@ -204,7 +204,7 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 ### <a name="repair-applications"></a>修复应用程序
 
 <!--1357866-->
-指定 Windows 安装程序和脚本安装程序部署类型的修复命令行。 然后，如果在部署中启用该选项，则可以在软件中心中使用新按钮“修复”应用程序。 当为应用程序配置修复程序时，用户可以从软件中心启动命令。
+指定 Windows 安装程序和脚本安装程序部署类型的修复命令行。 然后，如果在部署中启用该选项，则可以在软件中心中使用新按钮“修复”应用程序  。 当为应用程序配置修复程序时，用户可以从软件中心启动命令。
 
 有关详细信息，请参阅[创建应用程序](/sccm/apps/deploy-use/create-applications#bkmk_dt-content)和[部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings)。
 
@@ -260,21 +260,21 @@ Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows
 ### <a name="improvements-to-driver-maintenance"></a>对驱动程序维护的改进
 
 <!--3607716, fka 1358270-->
-驱动程序包现在具有用于“制造商”和“模型”的其他元数据字段。 使用这些字段可标记驱动程序包的信息，以帮助进行常规任务管理，或标识可以删除的旧的及重复的驱动程序。
+驱动程序包现在具有用于“制造商”和“模型”的其他元数据字段   。 使用这些字段可标记驱动程序包的信息，以帮助进行常规任务管理，或标识可以删除的旧的及重复的驱动程序。
 
 有关详细信息，请参阅[管理驱动程序](/sccm/osd/get-started/manage-drivers)。
 
 ### <a name="improvements-to-windows-10-servicing-plan-filters"></a>对 Windows 10 维护计划筛选器的改进
 
 <!--3098809, 3113836, 3204570 -->
-已向 Windows 10 维护计划添加其他筛选器。 现在可以按“体系结构”、“产品类别”进行筛选（如果升级“被取代”）。
+已向 Windows 10 维护计划添加其他筛选器。 现在可以按“体系结构”  、“产品类别”  进行筛选（如果升级“被取代”  ）。
 
 有关详细信息，请参阅 [Windows 10 维护服务计划](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan)。
 
 ### <a name="new-task-sequence-variable-for-last-action-name"></a>最后一个操作名称的新任务序列变量
 
 <!--SCCMDocs-pr issue #2964-->
-任务序列与任务序列变量 _SMSTSLastActionRetCode 一起设置新变量“_SMSTSLastActionName”。 它还会将此值记录到 smsts.log 文件中。 对任务序列进行故障排除时，此新变量十分有用。 当步骤失败时，自定义脚本可以包含步骤名称和返回代码。
+任务序列与任务序列变量 _SMSTSLastActionRetCode 一起设置新变量“_SMSTSLastActionName”  。 它还会将此值记录到 smsts.log 文件中。 对任务序列进行故障排除时，此新变量十分有用。 当步骤失败时，自定义脚本可以包含步骤名称和返回代码。
 
 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSLastActionName)。
 
@@ -293,9 +293,9 @@ Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>软件更新的维护时段的改进
 
 <!--vso2839307-->
-以下客户端设置位于“软件更新”组中，以控制维护时段中软件更新的安装行为：当“软件更新”维护时段可用时，在“所有部署”维护时段中启用更新安装
+以下客户端设置位于“软件更新”  组中，以控制维护时段中软件更新的安装行为：当“软件更新”维护时段可用时，在“所有部署”维护时段中启用更新安装 
 
-默认情况下，此选项为“否”以与现有行为保持一致。 请将其更改为“是”，以允许客户端使用其他可用的维护时段来安装软件更新。
+默认情况下，此选项为“否”以与现有行为保持一致  。 请将其更改为“是”，以允许客户端使用其他可用的维护时段来安装软件更新  。
 
 有关详细信息，请参阅[软件更新客户端设置](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint)。
 
@@ -319,9 +319,9 @@ WSUS 清理任务现在在辅助站点上运行。 用于已到期更新的 WSUS
 ### <a name="improvement-to-lifecycle-dashboard"></a>生命周期仪表板的改进
 
 <!--1358702-->
-产品生命周期仪表板现包含 System Center 2012 Configuration Manager 及更高版本的信息。
+产品生命周期仪表板现包含 System Center 2012 Configuration Manager 及更高版本的信息  。
 
-此外，还有新的报表，“生命周期 05A - 产品生命周期仪表板”。 它包括与控制台中仪表板类似的信息。
+此外，还有新的报表，“生命周期 05A - 产品生命周期仪表板”  。 它包括与控制台中仪表板类似的信息。
 
 有关此仪表板的更多信息，请参阅[使用产品生命周期仪表板](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)。
 
@@ -340,7 +340,7 @@ WSUS 清理任务现在在辅助站点上运行。 用于已到期更新的 WSUS
 ### <a name="configuration-manager-administrator-authentication"></a>Configuration Manager 管理员身份验证
 
 <!--1357013-->
-现在可以为管理员指定访问 Configuration Manager 站点的最低身份验证级别。 此功能强制管理员以要求的级别登录到 Windows。 若要配置此设置，请查找“层次结构设置”中的“身份验证”选项卡。
+现在可以为管理员指定访问 Configuration Manager 站点的最低身份验证级别。 此功能强制管理员以要求的级别登录到 Windows。 若要配置此设置，请查找“层次结构设置”  中的“身份验证”  选项卡。
 
 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)。
 
@@ -348,7 +348,7 @@ WSUS 清理任务现在在辅助站点上运行。 用于已到期更新的 WSUS
 ### <a name="support-center"></a>支持中心
 
 <!--1357489-->
-使用支持中心排除客户端故障、查看实时日志，或者捕获 Configuration Manager 客户端计算机状态供日后分析。 支持中心是合并多个管理员故障排除工具的单一工具。 在站点服务器的 cd.latest\SMSSETUP\Tools\SupportCenter 文件夹中找到支持中心安装程序。
+使用支持中心排除客户端故障、查看实时日志，或者捕获 Configuration Manager 客户端计算机状态供日后分析。 支持中心是合并多个管理员故障排除工具的单一工具。 在站点服务器的 cd.latest\SMSSETUP\Tools\SupportCenter  文件夹中找到支持中心安装程序。
 
 有关详细信息，请参阅[支持中心](/sccm/core/support/support-center)。
 
@@ -356,7 +356,7 @@ WSUS 清理任务现在在辅助站点上运行。 用于已到期更新的 WSUS
 ### <a name="management-insights-dashboard"></a>管理见解仪表板
 
 <!--1357979-->
-“管理见解”节点现在包括一个图形仪表板。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 该仪表板具有以下磁贴：
+ “管理见解”节点现在包括一个图形仪表板。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 该仪表板具有以下磁贴：
 
 - **管理见解索引**：跟踪管理见解规则的总体进度。 该索引为加权平均值。 关键规则最为重要。 此索引为可选规则提供的加权最低。  
 
@@ -376,9 +376,9 @@ WSUS 清理任务现在在辅助站点上运行。 用于已到期更新的 WSUS
 <!--1359068-->
 CMPivot 包括以下改进：
 
-- 保存收藏夹查询  
+- 保存收藏夹查询   
 
-- 在“查询摘要”选项卡上，选择“故障”或“脱机”设备的计数，然后选择“创建集合”选项。
+- 在“查询摘要”选项卡上，选择“故障”或“脱机”设备的计数，然后选择“创建集合”选项。 
 
 有关 CMPivot 其他性能和故障诊断改进的详细信息，请参阅[脚本改进](#bkmk_scripts)。
 
@@ -406,9 +406,9 @@ CMPivot 包括以下改进：
 ### <a name="sms-provider-api"></a>SMS 提供程序 API
 
 <!--3607711, fka 1321523-->
-SMS 提供程序现通过 HTTPS 提供对 WMI 的只读 API 互操作性访问权限，这称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
+SMS 提供程序现通过 HTTPS 提供对 WMI 的只读 API 互操作性访问权限，这称为“管理服务”  。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
 
-SMS 提供程序显示为角色，其中包含允许通过云管理网关进行通信的选项。 此设置的当前用途是通过来自远程设备的电子邮件启用应用程序批准。
+SMS 提供程序显示为角色，其中包含允许通过云管理网关进行通信的选项  。 此设置的当前用途是通过来自远程设备的电子邮件启用应用程序批准。
 
 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)。
 
@@ -453,7 +453,7 @@ SMS 提供程序显示为角色，其中包含允许通过云管理网关进行�
 > 了解详细信息：
 >
 > - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
-> - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
 

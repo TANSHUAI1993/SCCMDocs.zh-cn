@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5e6aca35dcadf145c0b93f0c984767099eb8960
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: ca1c06a5778bf168b216474f65d79e5c4c636e61
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083562"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159311"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文介绍了使用 Configuration Manager 实现进行安全规划时要考虑的原理。 它包括以下部分：  
 
@@ -66,7 +66,7 @@ ms.locfileid: "65083562"
 
 ### <a name="bkmk_plan-ehttp"></a> 增强型 HTTP  
 
- 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说颇具挑战性。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 自版本 1806 开始，可启用此站点以使用“增强型 HTTP”。 此配置通过结合使用自签名证书和 Azure AD 来支持站点系统上的 HTTPS。 此配置不需要 PKI。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
+ 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说颇具挑战性。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 自版本 1806 开始，可启用此站点以使用“增强型 HTTP”  。 此配置通过结合使用自签名证书和 Azure AD 来支持站点系统上的 HTTPS。 此配置不需要 PKI。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
 
 
 ### <a name="bkmk_plan-cmgcdp"></a> CMG 和 CDP 证书
@@ -94,7 +94,7 @@ ms.locfileid: "65083562"
 
 #### <a name="to-install-clients-with-a-copy-of-the-site-server-signing-certificate"></a>安装客户端与站点服务器签名证书的副本  
 
-1.  在主站点服务器上找到站点服务器签名证书。 证书存储在 Windows 的 SMS 证书存储中。 它具有使用者名称“站点服务器”和友好名称“站点服务器签名证书”。  
+1.  在主站点服务器上找到站点服务器签名证书。 证书存储在 Windows 的 SMS 证书存储中  。 它具有使用者名称“站点服务器”和友好名称“站点服务器签名证书”   。  
 
 2.  导出无私钥的证书，安全地存储文件并只从受保护的通道中访问它。  
 
@@ -157,7 +157,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 1.  证书颁发者列表：证书链接至管理点信任的根 CA。  
 
-2.  证书在“个人” 默认证书存储中。  
+2.  证书在“个人”  默认证书存储中。  
 
 3.  该证书有效、没有被吊销，并且尚未过期。 有效性检查还验证私钥是否可访问。  
 
@@ -179,7 +179,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 在大多数情况下，Configuration Manager 客户端会正确标识唯一适合的 PKI 证书。 但是，若情况并非如此，而是根据客户端身份验证功能选择证书时，可设置下列两种替代选择方法：  
 
-- 在客户端证书的“使用者名称”中进行部分字符串匹配。 此方法不区分大小写。 如果你在使用者字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀（例如 contoso.com）选择证书，则该方法很适用。 但是，你可使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
+- 在客户端证书的“使用者名称”中进行部分字符串匹配。 此方法不区分大小写。 如果你在使用者字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀（例如 contoso.com  ）选择证书，则该方法很适用。 但是，你可使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
 
   > [!NOTE]
   >  你无法将与使用者可选名称 (SAN) 匹配的部分字符串用作站点设置。 虽然可使用 CCMSetup 为 SAN 指定部分字符串匹配，但在下列情况下将由站点属性对其进行覆盖：  
@@ -217,7 +217,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 -   如果失败的连接是通过 HTTP 进行的：则客户端尝试使用自签名客户端证书通过 HTTP 再次连接。  
 
-为了帮助标识唯一的 PKI 客户端证书，也可以指定自定义存储，而不是在“计算机”存储中指定“个人”默认值。 但必须独立于 Configuration Manager 创建此存储。 必须能够将证书部署到此自定义存储并在有效期到期之前续订证书。  
+为了帮助标识唯一的 PKI 客户端证书，也可以指定自定义存储，而不是在“计算机”  存储中指定“个人”  默认值。 但必须独立于 Configuration Manager 创建此存储。 必须能够将证书部署到此自定义存储并在有效期到期之前续订证书。  
 
 有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
 
@@ -230,7 +230,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 1. 安装 Configuration Manager 站点并对其进行配置，使站点系统接受 HTTPS 和 HTTP 客户端连接。  
 
-2. 配置站点属性中的“客户端计算机通信”选项卡，从而“站点系统设置”为“HTTP 或 HTTPS”，然后选择“在可用时使用 PKI 客户端证书(客户端身份验证功能)”。  有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
+2. 配置站点属性中的“客户端计算机通信”  选项卡，从而“站点系统设置”  为“HTTP 或 HTTPS”  ，然后选择“在可用时使用 PKI 客户端证书(客户端身份验证功能)”  。  有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
 
 3. 试运行客户端证书的 PKI 推出。 有关部署示例，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
 
@@ -240,15 +240,15 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 6. 通过查看“设备”  节点的“资产和符合性”  工作区中的“客户端证书”  列，来跟踪使用客户端 PKI 证书的客户端的数目。  
 
-    还可将 Configuration Manager HTTPS 准备情况评估工具 (cmHttpsReadiness.exe) 部署到计算机。 然后，使用这些报表查看可结合使用 Configuration Manager 和客户端 PKI 证书的计算机数量。  
+    还可将 Configuration Manager HTTPS 准备情况评估工具 (cmHttpsReadiness.exe) 部署到计算机  。 然后，使用这些报表查看可结合使用 Configuration Manager 和客户端 PKI 证书的计算机数量。  
 
    > [!NOTE]
-   >  安装 Configuration Manager 客户端时，CMHttpsReadiness.exe 工具将安装在 `%windir%\CCM` 文件夹中。 运行此工具时可使用以下命令行选项：  
+   >  安装 Configuration Manager 客户端时，CMHttpsReadiness.exe 工具将安装在 `%windir%\CCM` 文件夹中  。 运行此工具时可使用以下命令行选项：  
    > 
-   > - `/Store:<name>`：此选项与 CCMCERTSTORE client.msi 属性相同  
-   > - `/Issuers:<list>`：此选项与 CCMCERTISSUERS client.msi 属性相同    
-   > - `/Criteria:<criteria>`：此选项与 CCMCERTSEL client.msi 属性相同    
-   > - `/SelectFirstCert`：此选项与 CCMFIRSTCERT client.msi 属性相同    
+   > - `/Store:<name>`：此选项与 CCMCERTSTORE client.msi 属性相同   
+   > - `/Issuers:<list>`：此选项与 CCMCERTISSUERS client.msi 属性相同     
+   > - `/Criteria:<criteria>`：此选项与 CCMCERTSEL client.msi 属性相同     
+   > - `/SelectFirstCert`：此选项与 CCMFIRSTCERT client.msi 属性相同     
    > 
    >   有关详细信息，请参阅[关于客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。  
 
@@ -256,7 +256,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
    1.  将 PKI Web 服务器证书部署到为站点运行其他管理点的成员服务器，并在 IIS 中配置该证书。 有关详细信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。  
 
-   2.  在此服务器上安装管理点角色，并针对“HTTPS”  配置管理点属性中的“客户端连接” 选项。  
+   2.  在此服务器上安装管理点角色，并针对“HTTPS”  配置管理点属性中的“客户端连接”  选项。  
 
 8. 进行监视并使用 HTTPS 验证具有 PKI 证书的客户端是否使用新管理点。 可使用 IIS 日志记录或性能计数器进行验证。  
 
@@ -275,7 +275,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
  Configuration Manager 受信任的根密钥提供了一种机制供 Configuration Manager 客户端验证站点系统是否属于其层次结构。 每个站点服务器都会生成站点交换密钥以与其他站点通信。 层次结构内顶层站点中的站点交换密钥称为受信任的根密钥。  
 
- Configuration Manager 中受信任的根密钥的功能类似于公钥基础结构中的根证书。 由受信任的根密钥的私钥签名的任何内容，均将沿层次结构向下受到进一步信任。 客户端将受信任的根密钥的副本存储在 root\ccm\locationservices WMI 命名空间中。 
+ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结构中的根证书。 由受信任的根密钥的私钥签名的任何内容，均将沿层次结构向下受到进一步信任。 客户端将受信任的根密钥的副本存储在 root\ccm\locationservices WMI 命名空间中  。 
 
  例如，站点向管理点颁发证书，该证书使用受信任根密钥的私钥进行签名。 该站点与客户端共享其受信任的根密钥的公钥。 然后，客户可区分其层次结构中的管理点和不在其层次结构中的管理点。   
 
@@ -307,7 +307,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 1.  在站点服务器上的文本编辑器中打开以下文件：`<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  找到 SMSPublicRootKey= 条目。 复制该行中的密钥，关闭文件而不进行任何更改。  
+2.  找到 SMSPublicRootKey= 条目  。 复制该行中的密钥，关闭文件而不进行任何更改。  
 
 3.  创建新文本文件，并粘贴从 mobileclient.tcf 文件中复制的密钥信息。  
 
@@ -323,7 +323,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 1.  在站点服务器上的文本编辑器中打开以下文件：`<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  找到 SMSPublicRootKey= 条目。 复制该行中的密钥，关闭文件而不进行任何更改。  
+2.  找到 SMSPublicRootKey= 条目  。 复制该行中的密钥，关闭文件而不进行任何更改。  
 
 3.  使用接受 Client.msi 属性的任何安装方法来安装客户端。 指定以下 client.msi 属性：`SMSPublicRootKey=<key>`，其中 `<key>` 是从 mobileclient.tcf 复制的字符串。  
 
@@ -341,14 +341,14 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
  (Get-WmiObject -Namespace root\ccm\locationservices -Class TrustedRootKey).TrustedRootKey
 ```
 
-返回的字符串是受信任的根密钥。 验证它是否与站点服务器上 mobileclient.tcf 文件中的 SMSPublicRootKey 值匹配。  
+返回的字符串是受信任的根密钥。 验证它是否与站点服务器上 mobileclient.tcf 文件中的 SMSPublicRootKey 值匹配  。  
 
 
 ### <a name="bkmk_trk-reset"></a>删除或替换受信任的根密钥  
 
- 使用 client.msi 属性 RESETKEYINFORMATION = TRUE 从客户端删除受信任的根密钥。 
+ 使用 client.msi 属性 RESETKEYINFORMATION = TRUE 从客户端删除受信任的根密钥  。 
 
- 若要替换受信任的根密钥，请将客户端与新的受信任根密钥一起重新安装。 例如，使用客户端请求或指定 client.msi 属性 SMSPublicRootKey。  
+ 若要替换受信任的根密钥，请将客户端与新的受信任根密钥一起重新安装。 例如，使用客户端请求或指定 client.msi 属性 SMSPublicRootKey  。  
 
  有关这些安装属性的详细信息，请参阅[关于客户端安装参数和属性](/sccm/core/clients/deploy/about-client-installation-properties)。
 
@@ -441,7 +441,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 - [终结点之间的通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 - [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176015"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286166"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1709 中的功能
 
@@ -118,7 +118,7 @@ ms.locfileid: "66176015"
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Azure 上 Intune 中适用于共同管理设备的可用远程操作
 如果为 Windows 10 设备启用了共同管理，在 Azure 上的 Intune 中可以执行以下远程操作：  
-- [恢复出厂设置](https://docs.microsoft.com/intune/devices-wipe#factory-reset)
+- [恢复出厂设置](https://docs.microsoft.com/intune/devices-wipe#wipe)
 - [选择性擦除](https://docs.microsoft.com/intune/apps-selective-wipe)
 - [删除设备](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
 - [重启设备](https://docs.microsoft.com/intune/device-restart)
@@ -174,7 +174,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ 
 
 将使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https://sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https://ConfigMgrServer”
+ccmsetup.msi CCMSETUPCMD="/mp: https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https://sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https://ConfigMgrServer”
 
 > [!Tip]
 >可通过使用以下步骤查找站点的命令行参数：     

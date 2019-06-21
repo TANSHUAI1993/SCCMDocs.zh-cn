@@ -10,20 +10,20 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb6071e576a12773c0aa5627dad80700db843f43
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8cae90ec8a6120b2a9fcbdb25d7aecbf66bcaae8
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496106"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285817"
 ---
 # <a name="whats-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 引入了自 System Center 2012 Configuration Manager 以来的重要更改。 本文确定了 System Center Configuration Manager 基线版本 1511 中的显著更改和新增功能。 若要了解有关 System Center Configuration Manager 后续更新中引入的更改，请参阅 [System Center Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
 
-2015 年 12 月发布的 System Center Configuration Manager（版本 1511）是 Microsoft 发布的当前 Configuration Manager 产品的初始版本。 它通常被称为 System Center Configuration Manager Current Branch。 Current Branch 表明此版本支持产品增量更新。 它还提供区分 Configuration Manager 此发布版本和早期版本的方法。  
+2015 年 12 月发布的 System Center Configuration Manager（版本 1511）是 Microsoft 发布的当前 Configuration Manager 产品的初始版本。 它通常被称为 System Center Configuration Manager Current Branch。 Current Branch  表明此版本支持产品增量更新。 它还提供区分 Configuration Manager 此发布版本和早期版本的方法。  
 
 System Center Configuration Manager：  
 
@@ -37,7 +37,7 @@ System Center Configuration Manager：
 
 ##  <a name="bkmk_updates"></a> Configuration Manager 的控制台内更新  
 
-System Center Configuration Manager 使用称为“更新和服务”的控制台中服务方法，可轻松找到并安装建议的更新。  
+System Center Configuration Manager 使用称为“更新和服务”  的控制台中服务方法，可轻松找到并安装建议的更新。  
 
 一些版本只用作现有站点的更新（在 Configuration Manager 控制台内），而无法用于安装新 Configuration Manager 站点。 例如，仅可从 Configuration Manager 控制台获取 1810 更新。 它用于更新已运行 System Center Configuration Manager 版本的站点。
 
@@ -45,7 +45,7 @@ System Center Configuration Manager 使用称为“更新和服务”的控制�
 
 
 若要详细了解如何使用更新，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)。  
-若要详细了解基线版本，请参阅[基线版本和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
+若要详细了解基线版本，请参阅[基线版本和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
 
 
 
@@ -106,7 +106,7 @@ Configuration Manager 引入了新功能，用于在使用新软件升级站点�
 
 请注意以下 OS 部署变更：
 
-- 在“创建任务序列向导”中，新增以下任务序列类型：通过升级包升级操作系统。 它创建将计算机从 Windows 7、Windows 8 或 Windows 8.1 升级到 Windows 10 的步骤。 有关详细信息，请参阅[将 Windows 升级到最新版本](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)。  
+- 在“创建任务序列向导”中，新增以下任务序列类型：通过升级包升级操作系统  。 它创建将计算机从 Windows 7、Windows 8 或 Windows 8.1 升级到 Windows 10 的步骤。 有关详细信息，请参阅[将 Windows 升级到最新版本](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)。  
 
 - 现在可以在部署操作系统时使用 Windows PE 对等缓存。 如果运行任务序列来部署 OS，计算机可使用 Windows PE 对等缓存从对等缓存源中获取内容，而无需从分发点下载内容。 此行为有助于最大限度减小没有本地分发点的分支机构方案中的 WAN 流量。 有关信息，请参阅[准备 Windows PE 对等缓存来减少 WAN 流量](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic)。  
 
@@ -136,7 +136,7 @@ Configuration Manager 引入了新功能，用于在使用新软件升级站点�
 
 - Configuration Manager 现在可以为计算机检测软件更新管理方法差异。 具体而言，它可以区分连接到适用于企业的 Windows 更新 (WUfB) 的 Windows 10 计算机和连接到 WSUS 的计算机。 **UseWUServer** 属性为新属性，它指定了计算机是否由 WUfB 管理。 你可以在集合中使用此设置从软件更新管理中删除这些计算机。 有关详细信息，请参阅 [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)。  
 
-- 现在可从 Configuration Manager 控制台计划和运行 WSUS 清理任务。 在“软件更新点组件”属性中，如果你选择运行 WSUS 清理任务，它便会在下一次软件更新同步时运行。 过期的软件更新被设置为，在 WSUS 服务器上处于拒绝状态，计算机上的 Windows 更新代理不再扫描这些软件更新。 有关详细信息，请参阅 [Schedule and run the WSUS clean up task](/sccm/sum/deploy-use/software-updates-maintenance)。  
+- 现在可从 Configuration Manager 控制台计划和运行 WSUS 清理任务。 在“软件更新点组件”  属性中，如果你选择运行 WSUS 清理任务，它便会在下一次软件更新同步时运行。 过期的软件更新被设置为，在 WSUS 服务器上处于拒绝状态，计算机上的 Windows 更新代理不再扫描这些软件更新。 有关详细信息，请参阅 [Schedule and run the WSUS clean up task](/sccm/sum/deploy-use/software-updates-maintenance)。  
 
 
 

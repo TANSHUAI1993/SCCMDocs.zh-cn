@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 600b786bbb2f718868c5d08c722621682582f4e1
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 726df4e6ddbfc34194fd25951d6dbafd1e9008ad
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500648"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159544"
 ---
 # <a name="create-certificate-profiles"></a>创建证书配置文件
 
@@ -25,7 +25,7 @@ ms.locfileid: "65500648"
 
 使用 Configuration Manager (SCCM) 中的证书配置文件，为受管理设备预配访问公司资源所需的证书。 创建证书配置文件前，请按照 [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md)（设置 System Center Configuration Manager 的证书基础结构）中所述的内容设置证书基础结构。  
 
-本主题介绍如何创建受信任的根和 SCEP 证书配置文件。 若要创建 PFX 证书配置文件，请参阅 [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
+本主题介绍如何创建受信任的根和 SCEP 证书配置文件。 若要创建 PFX 证书配置文件，请参阅 [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)（创建 PFX 证书配置文件）。
 
 创建证书配置文件：
 
@@ -38,11 +38,11 @@ ms.locfileid: "65500648"
 
 ## <a name="start-the-create-certificate-profile-wizard"></a>启动“创建证书配置文件向导”  
 
-1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”。  
+1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”  。  
 
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，展开“公司资源访问” ，然后单击“证书配置文件” 。  
+2.  在“资产和符合性”  工作区中，展开“符合性设置”  ，展开“公司资源访问”  ，然后单击“证书配置文件”  。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件” 。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件”  。  
 
 ## <a name="provide-general-information-about-the-certificate-profile"></a>提供有关证书配置文件的一般信息  
 
@@ -58,9 +58,9 @@ ms.locfileid: "65500648"
 
 -   **简单证书注册协议 (SCEP) 设置**：如果要通过使用简单证书注册协议和网络设备注册服务角色服务为用户或设备请求证书，请选择此证书配置文件类型。
 
--   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅[导入 PFX 证书配置文件](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)。
+-   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅[导入 PFX 证书配置文件](/sccm/mdm/deploy-use/import-pfx-certificate-profiles)。
 
--   **个人信息交换 PKCS #12 (PFX) 设置 - 创建**：选择此项可使用证书颁发机构处理 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
+-   **个人信息交换 PKCS #12 (PFX) 设置 - 创建**：选择此项可使用证书颁发机构处理 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)（创建 PFX 证书配置文件）。
 
 
 ## <a name="configure-a-trusted-ca-certificate"></a>配置受信任的 CA 证书  
@@ -93,17 +93,17 @@ ms.locfileid: "65500648"
 
 1. 在“创建证书配置文件向导”的“SCEP 服务器”  页上，指定将通过 SCEP 颁发证书的 NDES 服务器的 URL。 你可以选择基于证书注册点站点系统服务器的配置自动分配 NDES URL，也可以手动添加 URL。  
 
-2. 完成“创建证书配置文件向导”的“SCEP 注册”页。
+2. 完成“创建证书配置文件向导”的“SCEP 注册”  页。
 
    -  **重试**：指定设备向运行网络设备注册服务的服务器自动重试证书请求的次数。 此设置支持 CA 管理程序在证书请求被接受之前必须对其进行批准的方案。 此设置通常用于安全性很高的环境或者你有独立颁发 CA（而不是企业 CA）的情况。 你还可以将此设置用于测试用的，以便能够在颁发 CA 处理证书请求之前检查证书请求选项。 将此设置与“重试延迟(分钟)”  设置一起使用。  
 
-   -   **重试延迟(分钟)**：在颁发 CA 处理证书请求之前，指定在使用 CA 管理程序批准时每次注册尝试之间的间隔（以分钟为单位）。 如果将管理程序批准用于测试目的，你将可能需要指定一个较低的值，以便在批准证书请求之后你不会等待很长时间来让设备重试请求。 但是，如果在生产网络上使用管理程序批准，你将可能需要指定较高的值，以便为 CA 管理员留出足够的时间来检查以及批准或拒绝待定审批。  
+   -   **重试延迟(分钟)** ：在颁发 CA 处理证书请求之前，指定在使用 CA 管理程序批准时每次注册尝试之间的间隔（以分钟为单位）。 如果将管理程序批准用于测试目的，你将可能需要指定一个较低的值，以便在批准证书请求之后你不会等待很长时间来让设备重试请求。 但是，如果在生产网络上使用管理程序批准，你将可能需要指定较高的值，以便为 CA 管理员留出足够的时间来检查以及批准或拒绝待定审批。  
 
-   -   **续订阈值(%)**：指定设备请求证书续订之前剩余的证书有效期限的百分比。  
+   -   **续订阈值(%)** ：指定设备请求证书续订之前剩余的证书有效期限的百分比。  
 
-   -   **密钥存储提供程序(KSP)**：指定将存储证书密钥的位置。 可以选择下列值之一：  
+   -   **密钥存储提供程序(KSP)** ：指定将存储证书密钥的位置。 可以选择下列值之一：  
 
-   -   **安装到受信任的平台模块(TPM) (如果存在)**：将密钥安装到 TPM。 如果 TPM 不存在，则该密钥将安装到软件密钥的存储提供程序。  
+   -   **安装到受信任的平台模块(TPM) (如果存在)** ：将密钥安装到 TPM。 如果 TPM 不存在，则该密钥将安装到软件密钥的存储提供程序。  
 
    -   **安装到受信任的平台模块(TPM)，否则失败**：将密钥安装到 TPM。 如果 TPM 模块不存在，则安装将失败。  
 
@@ -119,7 +119,7 @@ ms.locfileid: "65500648"
 
 3. 在“创建证书配置文件向导”的“证书属性”  页上，指定下列信息：  
 
-   -   **证书模板名称**：单击“浏览”  选择网络设备注册服务配置为使用并且已添加到颁发 CA 的证书模板的名称。 若要成功浏览到证书模板，用于运行 System Center Configuration Manager 控制台的用户帐户必须对证书模板具有“读取”权限。 或者，如果你无法使用“浏览” ，请键入证书模板的名称。  
+   -   **证书模板名称**：单击“浏览”  选择网络设备注册服务配置为使用并且已添加到颁发 CA 的证书模板的名称。 若要成功浏览到证书模板，用于运行 System Center Configuration Manager 控制台的用户帐户必须对证书模板具有“读取”权限。 或者，如果你无法使用“浏览”  ，请键入证书模板的名称。  
 
    > [!IMPORTANT]
    >   
@@ -131,7 +131,7 @@ ms.locfileid: "65500648"
 
    -   如果你键入证书模板的名称，请确保该名称与运行网络设备注册服务的服务器的注册表中所列证书模板名称之一完全匹配。 确保指定证书模板名称，而不是证书模板显示名称。  
 
-   若要查找证书模板的名称，请浏览到以下项：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP。 你将看到作为 **EncryptionTemplate**、 **GeneralPurposeTemplate**和 **SignatureTemplate**的值而列出的证书模板。 默认情况下，所有三个证书模板的值为“IPSECIntermediateOffline” ，映射为模板显示名称“IPSec (脱机请求)” 。  
+   若要查找证书模板的名称，请浏览到以下项：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP。 你将看到作为 **EncryptionTemplate**、 **GeneralPurposeTemplate**和 **SignatureTemplate**的值而列出的证书模板。 默认情况下，所有三个证书模板的值为“IPSECIntermediateOffline”  ，映射为模板显示名称“IPSec (脱机请求)”  。  
 
    > [!WARNING]  
    > 
@@ -144,12 +144,12 @@ ms.locfileid: "65500648"
     
    > [!NOTE]  
    > 
-   > 选择“IMEI 号码”或“序列号”，可以区分同一用户拥有的不同设备。 例如，这些设备可以共享公用名，但不可共享 IMEI 号码或序列号。 如果设备不报告 IMEI 号码或序列号，则使用公用名颁发证书。
+   > 选择“IMEI 号码”  或“序列号”  ，可以区分同一用户拥有的不同设备。 例如，这些设备可以共享公用名，但不可共享 IMEI 号码或序列号。 如果设备不报告 IMEI 号码或序列号，则使用公用名颁发证书。
 
    -   **使用者可选名称**：指定 System Center Configuration Manager 在证书请求中为使用者可选名称 (SAN) 自动创建值的方式。 例如，你选择了用户证书类型，则可以在使用者可选名称中包括用户主体名称 (UPN)。  如果将使用客户端证书向网络策略服务器进行验证，则必须将使用者可选名称设置为 UPN。  
 
    > [!NOTE]  
-   >  - iOS 设备在 SCEP 证书中支持有限的使用者名称格式和使用者可选名称。 如果指定的格式不受支持，则不会在 iOS 设备上注册证书。 当配置要部署到 iOS 设备的 SCEP 证书配置文件时，请为“使用者名称格式”  以及“DNS 名称” 、“电子邮件地址” 或“使用者可选名称”  的“UPN”  使用“公用名” 。  
+   >  - iOS 设备在 SCEP 证书中支持有限的使用者名称格式和使用者可选名称。 如果指定的格式不受支持，则不会在 iOS 设备上注册证书。 当配置要部署到 iOS 设备的 SCEP 证书配置文件时，请为“使用者名称格式”  以及“DNS 名称”  、“电子邮件地址”  或“使用者可选名称”  的“UPN”  使用“公用名”  。  
 
    -   **证书有效期**：如果对发证 CA 运行允许自定义有效期的 certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE 命令，则可以指定证书过期之前剩余的时间量。 有关此命令的详细信息，请参阅主题 [Certificate infrastructure in System Center Configuration Manager](../../protect/deploy-use/certificate-infrastructure.md)（System Center Configuration Manager 中的证书基础结构）。  
 
@@ -161,14 +161,14 @@ ms.locfileid: "65500648"
 
        -   **数字签名**：仅在数字签名帮助保护密钥时允许交换密钥。  
 
-   如果通过使用“浏览” 选择了证书模板，你可能无法更改这些设置，除非选择其他证书模板。  
+   如果通过使用“浏览”  选择了证书模板，你可能无法更改这些设置，除非选择其他证书模板。  
 
-   你选择的证书模板必须配置有以上一个或两个密钥用法选项。 否则，你将在证书注册点日志文件“Crp.log”  中看到“CSR 和质询中的密钥用法不匹配” 消息。  
+   你选择的证书模板必须配置有以上一个或两个密钥用法选项。 否则，你将在证书注册点日志文件“Crp.log”  中看到“CSR 和质询中的密钥用法不匹配”  消息。  
 
 
-- **密钥大小(位)**：选择以位为单位的密钥大小。  
+- **密钥大小(位)** ：选择以位为单位的密钥大小。  
 
-- **扩展密钥用法**：单击“选择”为证书的预期目的添加值。 大多数情况下，证书将需要“客户端身份验证”  以便用户或设备能够向服务器进行验证。 但，你可以根据需要添加任何其他密钥用法。  
+- **扩展密钥用法**：单击“选择”  为证书的预期目的添加值。 大多数情况下，证书将需要“客户端身份验证”  以便用户或设备能够向服务器进行验证。 但，你可以根据需要添加任何其他密钥用法。  
 
 
 - **哈希算法**：选择要与此证书一起使用的可用哈希算法类型之一。 选择连接设备支持的最高级别安全性。  
@@ -186,7 +186,7 @@ ms.locfileid: "65500648"
 ##  <a name="specify-supported-platforms-for-the-certificate-profile"></a>为证书配置文件指定支持的平台  
 
 1. 在“创建证书配置文件向导”的“支持的平台”  页上，选择将在其中安装证书配置文件的操作系统。 或者，单击“全选”  以将证书配置文件安装到所有可用操作系统。
-2. 查看向导的“摘要”页面，并选择“完成”。 
+2. 查看向导的“摘要”  页面，并选择“完成”  。 
  
  
-新的证书配置文件会显示在“资产和符合性”工作区的“证书配置文件”节点中，并已准备好部署到用户或设备，如 [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)（如何在 System Center Configuration Manager 中部署配置文件）中所述。  
+新的证书配置文件会显示在“资产和符合性”  工作区的“证书配置文件”  节点中，并已准备好部署到用户或设备，如 [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)（如何在 System Center Configuration Manager 中部署配置文件）中所述。  

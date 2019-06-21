@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 666cb86e4acbb46956f768655637d3185fc5df71
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ab1c8e462e22206177e4907df3c5549ec9ba1692
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497181"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194218"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在积极开发中。 可能会在移出预发行类别后，对它们进行更改。
 
@@ -30,11 +30,11 @@ ms.locfileid: "65497181"
 
 同意使用预发行功能之后，才能使用。 同意是对每个层次结构执行的一次性操作，不能撤消。 除非同意，否则不能启用更新随附的新的预发行功能。 启用预发行功能后，将无法关闭。
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
 
-2. 单击功能区中的“层次结构设置”。  
+2. 单击功能区中的“层次结构设置”  。  
 
-3. 在“层次结构设置属性”的“常规”选项卡上，启用“同意使用预发行功能”的选项。 单击" **确定**"。  
+3. 在“层次结构设置属性”的“常规”选项卡上，启用“同意使用预发行功能”的选项   。 单击" **确定**"。  
 
 
 
@@ -45,10 +45,10 @@ ms.locfileid: "65497181"
 #### <a name="if-you-have-given-consent"></a>如果已同意
 在“更新和维护服务向导”中，启用预发行功能。 请选择预发行功能，就像选择任何其他功能那样。     
 
-（可选）等待稍后从“管理”工作区的“更新和维护服务”下的“功能”节点中启用预发行功能。 选择一项功能，然后在功能区中单击“开”。 同意后才可使用该选项。
+（可选）等待稍后从“管理”工作区的“更新和维护服务”下的“功能”节点中启用预发行功能    。 选择一项功能，然后在功能区中单击“开”  。 同意后才可使用该选项。
 
 #### <a name="if-you-havent-given-consent"></a>如果尚未同意
-在“更新和维护服务向导”中，预发行功能可见，但不能启用。 安装更新后，这些功能在“功能”节点中可见。 但是，只有同意后才能启用。
+在“更新和维护服务向导”中，预发行功能可见，但不能启用。 安装更新后，这些功能在“功能”节点中可见  。 但是，只有同意后才能启用。
 
 
 > [!Important]  
@@ -83,14 +83,14 @@ ms.locfileid: "65497181"
 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
 | [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
 | [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | 版本 1802 | 版本 1806 |
-| [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  版本 1710 | 版本 1802 |
+| [运行任务序列步骤](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338--> |  版本 1710 | 版本 1802 |
 | [Windows Defender 攻击防护](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | 版本 1710 | 版本 1802 |
 | [用于条件访问符合性策略的设备运行状况证明评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | 版本 1710 | 版本 1802 |
 | [创建并运行 Windows PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | 版本 1706 | 版本 1802 |
 | [管理 Microsoft Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | 版本 1706 | 版本 1710 |
 | [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | 版本 1702 | ![尚未发行](media/red_x.png) |
 | [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | 版本 1702 | 版本 1710 |
-| [在安装应用程序前检查是否有正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | 版本 1702 | 版本 1706 |
+| [在安装应用程序前检查是否有正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check) <!--1284624--> | 版本 1702 | 版本 1706 |
 | [数据仓库服务点](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | 版本 1702 | 版本 1706 |
 | [用于向客户端进行内容分发的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | 版本 1610 | 版本 1710 |
 | [云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | 版本 1610 | 版本 1802 |

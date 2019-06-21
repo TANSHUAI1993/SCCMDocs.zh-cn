@@ -12,16 +12,16 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e29269bab2ed1a75f00848a59f3345d0a8c071
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 89ba5d63b1a033db49da73cc0df3fa0a41f2b696
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495156"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285858"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1702 作为控制台内更新提供，用于运行版本 1602, 1606 或 1610 的以前安装的站点。 安装新部署时，也可将其作为基准版本使用。
 
@@ -30,7 +30,7 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 >  了解详细信息：    
 >   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1702 中引入的更改和新功能的详细信息。  
 
@@ -38,9 +38,9 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
 
 版本 1702 删除了对以下产品的支持：
-- **SQL Server 2008 R2**，针对站点数据库服务器。 在 2015 年 7 月 10 日[首次公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 SQL Server 仍受支持。
-- **Windows Server 2008 R2**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。  
-- **Windows Server 2008**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)要弃用支持。
+- **SQL Server 2008 R2**，针对站点数据库服务器。 在 2015 年 7 月 10 日[首次公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 SQL Server 仍受支持。
+- **Windows Server 2008 R2**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。  
+- **Windows Server 2008**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os)要弃用支持。
 - **Windows XP Embedded**，作为客户端操作系统。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)要弃用。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。
 
 
@@ -64,14 +64,14 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
  可以使用控制台内反馈选项将反馈直接发送到开发团队。
 
- 可在以下位置找到“反馈”选项：
+ 可在以下位置找到“反馈”  选项：
 - 在功能区中每个节点的“主页”选项卡的最左侧。  
   ![功能区](./media/feedback-home.png)
 
 - 右键单击控制台中的任何对象时。   
    ![右键单击选项](./media/feedback-option.png)   
 
-  选择“反馈”将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://go.microsoft.com/fwlink/?linkid=617029)。
+  选择“反馈”  将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://go.microsoft.com/fwlink/?linkid=617029)。
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>更新和维护服务的更改
@@ -89,7 +89,7 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 - **简化更新选项**  
   下次当你的基础架构有资格下载两个或多个更新时，将仅下载最新更新。 例如，如果当前站点版本比最新可用版本低两个或更多版本，将仅自动下载最新版本的更新。  
 
-  可选择下载并安装其他可用更新，即使它们不是最新版本。 如果下载了较旧的版本，你将收到此更新已由较新更新替换的警告。 若要下载可下载的更新，在控制台中选择更新，然后单击“下载”。
+  可选择下载并安装其他可用更新，即使它们不是最新版本。 如果下载了较旧的版本，你将收到此更新已由较新更新替换的警告。 若要下载可下载  的更新，在控制台中选择更新，然后单击“下载”  。
 
 - **针对较旧更新的清理功能得到改进**   
   已添加自动清理功能，可从站点服务器上的“EasySetupPayload”文件夹中删除不需要的下载文件。 因为这是在版本 1702 中引入的，所以在安装后续更新后（如更新汇总或未来的更新版本）开始清理工作。  
@@ -107,7 +107,7 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
  从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，将会拒绝对内容的请求：  
   -  处于低电量模式。
   -  请求内容时 CPU 负载超过 80%。
-  -  磁盘 I/O 的 AvgDiskQueueLength 超过 10。
+  -  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
   -  该计算机没有其他可用连接。   
 有关详细信息，请参阅 [Configuration Manager 客户端的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)中的**对等缓存源的有限访问**。   
 
@@ -118,7 +118,7 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>将 OMS 连接器与 Azure Government 云结合使用
-可以使用 OMS 连接器连接到 Microsoft Azure Government 云中的 OMS Log Analytics。 这要求你在安装 OMS 连接器前修改配置文件，以将连接器与 Government 云结合使用。 有关详细信息，请参阅[将 OMS 连接器与 Azure Government 云结合使用](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig)。
+可以使用 OMS 连接器连接到 Microsoft Azure Government 云中的 OMS Log Analytics。 这要求你在安装 OMS 连接器前修改配置文件，以将连接器与 Government 云结合使用。 有关详细信息，请参阅[将 OMS 连接器与 Azure Government 云结合使用](/sccm/core/clients/manage/sync-data-log-analytics)。
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>将软件更新点添加到边界组。
 从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
@@ -145,11 +145,11 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 ### <a name="check-for-running-executable-files-before-installing-an-application"></a>在安装应用程序之前检查运行的可执行文件
 
-在部署类型的“属性”对话框的“安装行为”选项卡中，现在可以指定一个或多个可执行文件，如果运行此类文件，将阻止安装部署类型。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
+在部署类型的“属性”  对话框的“安装行为”  选项卡中，现在可以指定一个或多个可执行文件，如果运行此类文件，将阻止安装部署类型。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
 
-如果应用程序已部署为“可用”，最终用户尝试安装应用程序时，系统会提示其先关闭指定的任何运行中的可执行文件，然后才能继续安装。
+如果应用程序已部署为“可用”  ，最终用户尝试安装应用程序时，系统会提示其先关闭指定的任何运行中的可执行文件，然后才能继续安装。
 
-如果应用程序已部署为“必需”，且已选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”选项，他们将看到一个对话框，通知他们在应用程序安装截止时间到达时将自动关闭指定的可执行文件。
+如果应用程序已部署为“必需”  ，且已选择“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何运行中的可执行文件”  选项，他们将看到一个对话框，通知他们在应用程序安装截止时间到达时将自动关闭指定的可执行文件。
 
 ### <a name="app-management-improvements-for-hybrid-mdm"></a>针对混合 MDM 的应用管理改进
 
@@ -183,13 +183,13 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 有关详细信息，请参阅[配置影响重大的任务序列设置](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#set-a-task-sequence-as-a-high-impact-task-sequence)
 
 ### <a name="return-to-previous-page-when-a-task-sequence-fails"></a>任务序列失败时返回上一页
-现在，运行任务序列出现故障时，可以返回到上一页面。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”按钮：
+现在，运行任务序列出现故障时，可以返回到上一页面。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”  按钮：
 
-- 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
-- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”使任务序列再次搜索内容。
+- 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”  以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
+- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”  使任务序列再次搜索内容。
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>为可用部署和任务序列预先缓存内容
-从版本 1702 开始，对于可用的部署和任务序列，可以选择使用预先缓存内容。 借助预先缓存内容，用户可选择允许客户端在收到部署后立即下载适用的内容。 因此，当用户在软件中心中单击“安装”时，内容便已就绪，并且安装可以快速启动，因为内容位于本地硬盘上。 有关详细信息，请参阅[配置预先缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。
+从版本 1702 开始，对于可用的部署和任务序列，可以选择使用预先缓存内容。 借助预先缓存内容，用户可选择允许客户端在收到部署后立即下载适用的内容。 因此，当用户在软件中心中单击“安装”  时，内容便已就绪，并且安装可以快速启动，因为内容位于本地硬盘上。 有关详细信息，请参阅[配置预先缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换到 UEFI
 Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
@@ -197,7 +197,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>对“安装应用程序任务”序列步骤的改进
 此版本引入了以下改进：
 - 在**安装应用程序**任务序列步骤中，将可安装的应用程序的最大数量增加到 99 个。 以前的最大数量为 9 个应用程序。
-- 在任务序列编辑器中向“安装应用程序”任务序列步骤添加应用程序时，现在可以从“选择要安装的应用程序”窗格中选择多个应用程序。
+- 在任务序列编辑器中向“安装应用程序”  任务序列步骤添加应用程序时，现在可以从“选择要安装的应用程序”  窗格中选择多个应用程序。
 
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>对“自动应用驱动程序”任务序列所做的改进
 在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
@@ -225,7 +225,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)。
 
 > [!IMPORTANT]
-> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
+> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”  。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>管理 Windows 10 更新的快速安装文件
 从版本 1702 起，Configuration Manager 支持 Windows 10 更新的快速安装文件。 如果使用支持版本的 Windows 10，可通过 Configuration Manager 设置只下载本月的 Windows 10 累积更新和上月更新之间的更改。 在没有快速安装文件的情况下，Configuration Manager 每个月都会下载完整的 Windows 10 累积更新（包括先前月份的所有更新）。 使用快速安装文件，所需下载文件更小，在客户端上安装更快速。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。
@@ -310,7 +310,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 ### <a name="conditional-access-device-compliance-policy-improvements"></a>条件性访问设备符合性策略改进
 
-当用户使用非符合性应用列表中的应用时，新的设备符合性策略规则可用于帮助阻止对支持条件性访问的公司资源的访问。 当添加新的符合性规则“无法安装的应用”时，可由管理员定义非符合性应用列表。 将应用添加到非符合性列表时，此规则要求管理员输入“应用名称”、“应用 ID”和“应用发布者”（可选）。 此设置仅适用于 iOS 和 Android 设备。
+当用户使用非符合性应用列表中的应用时，新的设备符合性策略规则可用于帮助阻止对支持条件性访问的公司资源的访问。 当添加新的符合性规则“无法安装的应用”  时，可由管理员定义非符合性应用列表。 将应用添加到非符合性列表时，此规则要求管理员输入“应用名称”  、“应用 ID”  和“应用发布者”  （可选）。 此设置仅适用于 iOS 和 Android 设备。
 
 此外，这可帮助组织缓解使用不安全应用导致的数据泄漏，并防止通过某些应用过度使用数据。
 
@@ -326,7 +326,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ## <a name="protect-devices"></a>保护设备
 
 ### <a name="detect-outdated-antimalware-client-versions"></a>检测过时的反恶意软件客户端版本
-从版本 1702 开始，可以配置警报，以确保 Endpoint Protection 客户端不会过时。 有关详细信息，请参阅[过时的恶意软件客户端警报](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions)。
+从版本 1702 开始，可以配置警报，以确保 Endpoint Protection 客户端不会过时。 有关详细信息，请参阅[过时的恶意软件客户端警报](/sccm/protect/deploy-use/endpoint-configure-alerts#alert-for-outdated-malware-client)。
 
 ### <a name="device-health-attestation-updates"></a>设备运行状况证明更新
 适用于本地客户端的设备运行状况证明服务现在可以从管理点进行配置和管理。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bed079e0037ea09afaf050ef08de16523678970
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: 79730167346490350a7536c6badb5f0bc0fa85f4
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429830"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252279"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -773,7 +773,7 @@ Configuration Manager 对以下站点系统角色使用 SQL Server Native Client
 
 SQL Server 至少为管理中心站点和主站点保留 8 GB 的内存，并至少为辅助站点保留 4 GB 的内存。
 
-有关详细信息，请参阅[如何使用 SQL Server Management Studio 配置内存选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd)。
+有关详细信息，请参阅[如何使用 SQL Server Management Studio 配置内存选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)。
 
 > [!NOTE]  
 > 此检查不适用于辅助站点上的 SQL Server Express。 此版本仅限制为保留 1 GB 内存。  

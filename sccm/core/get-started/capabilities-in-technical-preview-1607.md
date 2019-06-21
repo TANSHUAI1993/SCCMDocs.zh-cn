@@ -12,16 +12,16 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 416f26f3e424eccdfa024d7a87c07fc5aa39c8fc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ac91fa1e9c4f4a8610ab3a0815ea6437eb29862c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140994"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158226"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1607 版中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍了 System Center Configuration Manager Technical Preview 1607 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
@@ -54,11 +54,11 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 
 根据以下规则应用软件中心的自定义品牌：
 
-1. 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”客户端设置“软件中心中显示的组织名称”中指定的组织名称。 有关说明，请参阅[如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。
+1. 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”  客户端设置“软件中心中显示的组织名称”  中指定的组织名称。 有关说明，请参阅[如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。
 
 2. 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)。
 
-3. 如果已配置 Microsoft Intune 订阅并将其连接到 Configuration Manager 环境，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅[配置 Microsoft Intune 订阅](/mdm/deploy-use/configure-intune-subscription)。
+3. 如果已配置 Microsoft Intune 订阅并将其连接到 Configuration Manager 环境，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅[配置 Microsoft Intune 订阅](/sccm/mdm/deploy-use/configure-intune-subscription)。
 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>对多个 PXE 启动的部署使用相同的网络适配器
 在 Technical Preview 版本 1607 中，当使用以太网适配器映射多个设备（如在多个设备上使用的 USB 以太网适配器）时，可以启用允许输入以太网适配器的硬件标识符的新设置。 在执行 PXE 安装和客户端注册时，Configuration Manager 忽略列表中的硬件标识符。
@@ -66,12 +66,12 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 有关此问题的详细信息，请参阅 [Configuration Manager OSD Support Team Blog](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)（Configuration Manager OSD 支持团队博客）。  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>启用该功能可管理重复硬件标识符  
-1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “更新与维护服务” > “功能”。
-2. 在显示窗格中，选择“管理重复硬件标识符”。
-3. 在“主页”选项卡上的“功能”组中，单击“打开”。
+1. 在 Configuration Manager 控制台中，转到“管理”   > “概述”   > “云服务”   > “更新与维护服务”   > “功能”  。
+2. 在显示窗格中，选择“管理重复硬件标识符”  。
+3. 在“主页”  选项卡上的“功能”  组中，单击“打开”  。
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>添加 Configuration Manager 可忽略的硬件标识符  
-1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “站点配置” > “站点”。
-2. 在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。
-3. 转到“客户端批准和冲突的记录”选项卡。
-4. 单击“重复硬件标识符”部分中的“添加”，以添加新的硬件标识符。
+1. 在 Configuration Manager 控制台中，转到“管理”   > “概述”   > “站点配置”   > “站点”  。
+2. 在“主页”  选项卡上的“站点”  组中，单击“层次结构设置”  。
+3. 转到“客户端批准和冲突的记录”  选项卡。
+4. 单击“重复硬件标识符”  部分中的“添加”  ，以添加新的硬件标识符。

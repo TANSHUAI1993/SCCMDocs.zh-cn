@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d427571db52f19e9d1e45648bdf2cc66b6c6d9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9bdca6ded291ca6e32194c61ce24b33b690489cb
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141266"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286253"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
@@ -54,16 +54,16 @@ ms.locfileid: "56141266"
 
 使用以下 URL 格式在特定应用程序中打开软件中心：
 
-Softwarecenter:SoftwareId= 应用程序标识符
+Softwarecenter:SoftwareId= 应用程序标识符  
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>如何获取应用程序的应用程序标识符。
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。
-2.  在“软件库”工作区中，展开“应用程序管理”，然后单击“应用程序”。
-3.  在“应用程序”视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”。 此时列表中将显示每个应用程序的唯一 ID。
-4.  请注意要提供链接的应用程序的“CI 唯一 ID”，例如：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+1.  在 Configuration Manager 控制台中，单击“软件库”  。
+2.  在“软件库”工作区中，展开“应用程序管理”  ，然后单击“应用程序”  。
+3.  在“应用程序”  视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”  。 此时列表中将显示每个应用程序的唯一 ID。
+4.  请注意要提供链接的应用程序的“CI 唯一 ID”，例如  ：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5.  然后，删除应用程序 GUID 后的所有文本，在本例中为 **/2**。 剩下的即为应用程序标识符。
-6.  最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=**。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
+6.  最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=** 。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
 
 通过使用此链接，最终用户可直接在指定的应用程序中打开软件中心。
 
@@ -83,7 +83,7 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 
 在 Technical Preview 1703 中，使用此向导仅可配置适用于企业的 Windows 应用商店 (WSfB)。  通过使用其单独的工作流配置其他云服务。
 
--   使用本预览主题中的信息替换 Current Branch 主题[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的[设置适用于企业的 Windows 应用商店同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization)部分中的配置步骤。
+-   使用本预览主题中的信息替换 Current Branch 主题[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的[设置适用于企业的 Windows 应用商店同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)部分中的配置步骤。
 
 -   有关 Web 应用的详细信息，请参阅 [Azure 应用服务中的身份验证和授权](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。
 
@@ -99,37 +99,37 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 
 ### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>使用向导配置 WSfB 云服务
 
-1. 在控制台中，转到“管理” > “概述” > “云服务管理” > “Azure” > “Azure 服务”，然后选择“配置 Azure 服务”以启动“Azure 服务向导”。
+1. 在控制台中，转到“管理”   > “概述”   > “云服务管理”   > “Azure”   > “Azure 服务”  ，然后选择“配置 Azure 服务”  以启动“Azure 服务向导”  。
 
-2. 在“Azure 服务”页上，选择要配置的服务，然后单击“下一步”。 此预览版仅可配置 WSfB。
+2. 在“Azure 服务”  页上，选择要配置的服务，然后单击“下一步”  。 此预览版仅可配置 WSfB。
 
-3. 在“常规”页上，提供“Azure 服务名称”的友好名称和可选说明，然后单击“下一步”。
+3. 在“常规”  页上，提供“Azure 服务名称”  的友好名称和可选说明，然后单击“下一步”  。
 
-4. 在“应用”页上，指定 Azure 环境，然后单击“浏览”打开“服务器应用”窗口。
+4. 在“应用”  页上，指定 Azure 环境，然后单击“浏览”  打开“服务器应用”窗口。
 
-5. 在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。
+5. 在“服务器应用”  窗口中，选择要使用的服务器应用，然后单击“确定”  。
    服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
-   - **创建**：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
-   - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 “验证”信息后，单击“确定”以继续。  </br></br>
+   - **创建**：若要创建新的服务器应用，请单击“创建”  。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
+   - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”  。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 “验证”  信息后，单击“确定”  以继续。  </br></br>
 
-6. 查看“信息”页，并根据指示完成所有额外步骤和配置。 这些配置是通过 Configuration Manager 使用服务所必需的。
+6. 查看“信息”  页，并根据指示完成所有额外步骤和配置。 这些配置是通过 Configuration Manager 使用服务所必需的。
    例如，若要配置 WSfB：
 
    1. 在 Azure 中，必须将 Configuration Manager 注册为 Web 应用程序或 Web API 并记录客户端 ID。 还可以指定用于管理工具 (Configuration Manager) 的客户端密钥。
 
    2.    在 WSfB 控制台中，必须将 Configuration Manager 配置为存储管理工具并启用对脱机许可应用的支持，然后购买至少一个应用。   </br>
 
-   准备好继续后，单击“下一步”。
+   准备好继续后，单击“下一步”  。
 
-7. 在“应用配置”页上，完成此服务的应用目录和语言配置，然后单击“下一步”。
-8. 完成向导后，Configuration Manager 控制台将显示已将“适用于企业的 Windows 应用商店”配置为“云服务类型”。
+7. 在“应用配置”  页上，完成此服务的应用目录和语言配置，然后单击“下一步”  。
+8. 完成向导后，Configuration Manager 控制台将显示已将“适用于企业的 Windows 应用商店”  配置为“云服务类型”  。
 
 现可利用 [Current Branch 内容](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的其余部分从 WSfB 管理应用，以同步、创建、部署和管理适用于企业的 Windows 应用商店应用。
 
 ### <a name="modify-a-cloud-service-configuration"></a>修改云服务配置
 可以查看和编辑云服务属性以修改配置。
 
-在控制台中，转到“管理” > “概述” > “云服务管理” > “Azure” > “Azure 服务”，然后选择“配置 Azure 服务”，选择一个“云服务”，然后选择“属性”。
+在控制台中，转到“管理”   > “概述”   > “云服务管理”   > “Azure”   > “Azure 服务”  ，然后选择“配置 Azure 服务”  ，选择一个“云服务”，然后选择“属性”  。
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换为 UEFI
 Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
@@ -147,9 +147,9 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 - 必须已将站点配置为使用 Upgrade Readiness 云服务。 有关详细信息，请参阅 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 ### <a name="configure-windows-analytics-client-settings"></a>配置 Windows Analytics 客户端设置
-若要配置 Windows Analytics，请在 Configuration Manager 控制台中依次转到“管理” > “客户端设置”，双击“创建自定义设备客户端设置”，然后选中“Windows Analytics”。  
+若要配置 Windows Analytics，请在 Configuration Manager 控制台中依次转到“管理”   > “客户端设置”  ，双击“创建自定义设备客户端设置”  ，然后选中“Windows Analytics”  。  
 
-然后，转到“Windows Analytics”设置选项卡，配置进行以下设置：
+然后，转到“Windows Analytics”  设置选项卡，配置进行以下设置：
 - **商用 ID**  
 商用 ID 键可用于将你管理的设备中的信息映射到托管你组织的 Windows Analytics 数据的 OMS 工作区。 如果已配置用于 Upgrade Readiness 的商用 ID 键，请使用此 ID。 如果还没有配置商用 ID 键，请参阅[生成商用 ID 键]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)。
 

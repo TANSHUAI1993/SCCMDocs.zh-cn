@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31779b3588617816df4309461ed7715b20b0abd4
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 5600743af8acc0da121454aef2d90167c3ded5fa
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57558025"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286622"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -37,11 +37,11 @@ ms.locfileid: "57558025"
 
 从 1802 版开始，使用 Configuration Manager 可收集和报告 Microsoft Store 商业版和教育版所需的设备信息。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 它用于在 Microsoft Store 中注册设备以支持 Windows Autopilot。 
 
-1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报告”节点，展开“报表”，然后选择“硬件 - 常规”节点。  
+1. 在 Configuration Manager 控制台中，转到“监视”  工作区，展开“报告”  节点，展开“报表”  ，然后选择“硬件 - 常规”  节点。  
 
-2. 运行“Windows Autopilot 设备信息”报表并查看结果。  
+2. 运行“Windows Autopilot 设备信息”报表  并查看结果。  
 
-3. 在报表查看器中，选择“导出”图标，并选择“CSV (逗号分隔)”选项。  
+3. 在报表查看器中，选择“导出”图标，并选择“CSV (逗号分隔)”选项   。  
 
 4. 在保存该文件后，将数据上传到 Microsoft Store 商业版和教育版。  
 
@@ -63,11 +63,11 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 ### <a name="get-the-command-line-from-configuration-manager"></a>从 Configuration Manager 获取命令行
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“共同管理”节点。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“云服务”  ，然后选择“共同管理”  节点。  
 
-2. 选择共同管理对象，然后选择功能区中的“属性”。  
+2. 选择共同管理对象，然后选择功能区中的“属性”  。  
 
-3. 在“启用”选项卡上，复制命令行。 将其粘贴到记事本，保存以供下一过程使用。  
+3. 在“启用”选项卡上，复制命令行  。 将其粘贴到记事本，保存以供下一过程使用。  
 
 命令行示例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
 
@@ -88,9 +88,9 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 - 如果使用自己的 PKI SSL 证书且 CRL 未发布到 Internet，则需要以下参数：  
     - /noCRLCheck  
     
-     有关详细信息，请参阅[规划 CRL](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
+     有关详细信息，请参阅[规划 CRL](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)  
 
-从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。<!--3607731-->
+从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME  和 SMSSiteCode  。<!--3607731-->
 
 > [!Note]
 > 如果已从 Intune 部署 Configuration Manager 客户端，请使用新命令行和新 MSI 更新 Intune 应用。 <!-- SCCMDocs-pr issue 3084 -->
@@ -105,11 +105,11 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 1. 转到 [Azure 门户](https://portal.azure.com)，然后打开 Intune 页。  
 
-2. 选择“客户端应用” > “应用” > “添加”。  
+2. 选择“客户端应用” > “应用” > “添加”    。  
 
-3. 在“其他”下，选择“业务线应用”。  
+3. 在“其他”下，选择“业务线应用”   。  
 
-4. 上传 ccmsetup.msi 应用包文件。 此文件位于 Configuration Manager 站点服务器上的以下文件夹中：`<ConfigMgr installation directory>\bin\i386`。  
+4. 上传 ccmsetup.msi 应用包文件  。 此文件位于 Configuration Manager 站点服务器上的以下文件夹中：`<ConfigMgr installation directory>\bin\i386`。  
 
     > [!Tip]  
     > 更新站点时，请确保同时在 Intune 中更新此应用。  

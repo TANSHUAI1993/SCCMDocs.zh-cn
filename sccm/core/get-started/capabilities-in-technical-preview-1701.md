@@ -12,16 +12,16 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edec748950b4601c4f5889f180f74c158171b33
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b2d72e0134bdc4f7033ff37c54bed4898fce6832
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136807"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286198"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1701 中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 
 
@@ -55,17 +55,17 @@ ms.locfileid: "56136807"
   仅在客户端无法获取其当前软件更新点和启动回退时，已具有软件更新点的客户端才会开始使用这个新边界组行为。
   切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
 
-- **回退时间配置：** 此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
+- **回退时间配置：** 此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”  和“从不回退”  ，可以针对不同边界组关系进行配置。
 
   但是，客户端可将客户端尝试连接到其当前软件更新点的当前行为保留 2 小时，然后再启动回退以查找可用的新软件更新点。
 
-  客户端使用回退时，将使用回退的边界组配置创建可用软件更新点的池。 该池包括客户端当前边界组、邻居边界组和客户端站点默认边界组中的所有软件更新点。
+  客户端使用回退时，将使用回退的边界组配置创建可用软件更新点的池。 该池包括客户端当前边界组  、邻居边界组  和客户端站点默认边界组  中的所有软件更新点。
 
 - **配置默认站点边界组：**  
-  考虑将软件更新点添加到 Default-Site-Boundary-Group&lt;sitecode>。 这可确保非另一边界组成员的客户端可回退以查找软件更新点。
+  考虑将软件更新点添加到 Default-Site-Boundary-Group&lt;sitecode>  。 这可确保非另一边界组成员的客户端可回退以查找软件更新点。
 
 
-若要管理边界组的软件更新点，请使用 [Current Branch 文档中的流程](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)，但请记住，你可以配置的回退时间还不能用于软件更新点。
+若要管理边界组的软件更新点，请使用 [Current Branch 文档中的流程](/sccm/core/servers/deploy/configure/boundary-group-procedures)，但请记住，你可以配置的回退时间还不能用于软件更新点。
 
 
 ## <a name="hardware-inventory-collects-uefi-information"></a>硬件清单将收集 UEFI 信息
@@ -73,8 +73,8 @@ ms.locfileid: "56136807"
 
 ## <a name="improvements-to-operating-system-deployment"></a>对操作系统部署的改进
 我们对操作系统部署做了以下改进，大部分改进根据用户语音反馈进行的。
-- [**支持更多应用程序执行“安装应用程序”任务序列步骤**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t)：增加了应用程序的最大数量，因此可以在“安装应用程序”任务序列步骤中安装最多 99 个应用程序。 以前的最大数量为 9 个应用程序。
-- [**在“安装应用”任务序列步骤中选择多个应用**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step)：在任务序列编辑器中向“安装应用程序”任务序列步骤添加应用程序时，现在可从“选择要安装的应用程序”面板选择多个应用程序。
+- [**支持更多应用程序执行“安装应用程序”任务序列步骤**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t)：增加了应用程序的最大数量，因此可以在“安装应用程序”任务序列步骤中安装最多 99 个应用程序  。 以前的最大数量为 9 个应用程序。
+- [**在“安装应用”任务序列步骤中选择多个应用**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step)：在任务序列编辑器中向“安装应用程序”任务序列步骤添加应用程序时，现在可从“选择要安装的应用程序”面板选择多个应用程序  。
 - [**对独立介质设置到期日期**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media)：创建独立介质时，可使用新选项对介质设置可选开始日期和到期日期。 默认情况下，这些设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于过期时间，则独立介质不会启动。 也可通过使用 New-CMStandaloneMedia PowerShell cmdlet 启用这些选项。
 - [**对独立介质中的其他内容的支持**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic)：在独立介质中现在支持其他内容。 可选择将额外的包、驱动程序包和应用程序，以及任务序列中引用的其他内容暂存在介质中。 以前，仅任务序列中引用的内容才暂存在独立介质中。
 - [**自动应用驱动程序任务序列步骤的可配置超时**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout)：在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
@@ -93,12 +93,12 @@ ms.locfileid: "56136807"
 
 ## <a name="validate-device-health-attestation-data-via-management-points"></a>通过管理点验证设备运行状况证明数据
 
-从此预览版本开始，可配置管理点以验证云或本地运行状况证明服务的运行状况证明报告数据。 通过“管理点组件属性”对话框中的新“高级选项”，可“添加”、“编辑”或“删除”“本地设备运行状况证明服务 URL”。 还可将客户端代理的“自定义设备设置”指定为“使用本地运行状况证明服务”。  将此设置设为“是”将启用向本地管理点（而不是基于云的服务）报告。
+从此预览版本开始，可配置管理点以验证云或本地运行状况证明服务的运行状况证明报告数据。 通过“管理点组件属性”  对话框中的新“高级选项”  ，可“添加”  、“编辑”  或“删除”  “本地设备运行状况证明服务 URL”  。 还可将客户端代理的“自定义设备设置”  指定为“使用本地运行状况证明服务”  。  将此设置设为“是”  将启用向本地管理点（而不是基于云的服务）报告。
 
 ### <a name="try-it-out"></a>试试看
 
-- **在管理点上启用本地设备运行状况证明**<br>  在 Configuration Manager 控制台中，导航到管理点，打开“管理点组件属性”，然后单击“高级选项”选项卡。单击“添加”，然后为“本地设备运行状况证明服务 URL”指定本地 URL（如 https://10.10.10.10) 。
-- **为客户端代理启用本地管理点运行状况证明报告**<br>在 Configuration Manager 控制台中，选择“管理” > “客户端设置”，然后双击或创建新的“自定义设备设置”。 选择“计算机代理”，然后将“使用本地运行状况证明服务”设为“是”。 如果将“启用与设备运行状况证明服务的通信”设为“是”，并将“使用本地运行状况证明”设为“否”，则管理点将使用基于云的设备运行状况证明服务。
+- **在管理点上启用本地设备运行状况证明**<br>  在 Configuration Manager 控制台中，导航到管理点，打开“管理点组件属性”  ，然后单击“高级选项”  选项卡。单击“添加”，然后为“本地设备运行状况证明服务 URL”指定本地 URL（如 https://10.10.10.10)   。
+- **为客户端代理启用本地管理点运行状况证明报告**<br>在 Configuration Manager 控制台中，选择“管理”   > “客户端设置”  ，然后双击或创建新的“自定义设备设置”  。 选择“计算机代理”  ，然后将“使用本地运行状况证明服务”  设为“是”  。 如果将“启用与设备运行状况证明服务的通信”  设为“是”  ，并将“使用本地运行状况证明”  设为“否”  ，则管理点将使用基于云的设备运行状况证明服务。
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>将 OMS 连接器用于 Microsoft Azure 政府云
 在此 Technical Preview 中，现在可使用 Microsoft Operations Management Suite (OMS) 连接器连接 Microsoft Azure 政府云上的 OMS 工作区。  
@@ -110,22 +110,22 @@ ms.locfileid: "56136807"
 
    **编辑：**
 
-   将设置名称 FairFaxArmResourceID 的值更改为等于“<https://management.usgovcloudapi.net/”>
+   将设置名称 FairFaxArmResourceID  的值更改为等于“<https://management.usgovcloudapi.net/”>
 
-   - **初始：**&lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+   - **初始：** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;value>&lt;/value>   
      &lt;/setting>
 
-   - **编辑后：**     
+   - **编辑后：**      
      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
      &lt;/setting>
 
-   将设置名称 FairFaxAuthorityResource 的值更改为等于“<https://login.microsoftonline.com/>”
+   将设置名称 FairFaxAuthorityResource 的值更改为等于“<https://login.microsoftonline.com/>” 
 
-   - **原始：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+   - **原始：** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
      &lt;value>&lt;/value>
 
-   - **编辑后：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+   - **编辑后：** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
      &lt;value><https://login.microsoftonline.com/&lt;/value>>
 
 2. 保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 871f007bd1ee0e38635e03a6b17a9125758553af
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: 0a83b55726903369677d3daf04f7c879b3660c06
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429808"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251663"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager 站点系统服务器支持的操作系统
 
@@ -181,7 +181,7 @@ ms.locfileid: "66429808"
 
 *适用于 Windows Server 2008 R2 Service Pack 1：Standard、Enterprise 和 Datacenter*
 
-根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os)。  
 
 > [!Important]  
 > 对 Windows Server 2008 R2 的支持延长至 2020 年 1 月 14 日结束。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 
@@ -199,7 +199,7 @@ ms.locfileid: "66429808"
 
 *适用于 Windows Server 2008 Service Pack 2（x86 和 x64）：Standard、Enterprise 和 Datacenter*
 
-如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中详细所述，Windows Server 2008 Service Pack 2 (SP2) 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中详细所述，Windows Server 2008 Service Pack 2 (SP2) 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os)。  
 
 > [!Important]  
 > 对 Windows Server 2008 R2 的支持延长至 2020 年 1 月 14 日结束。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 

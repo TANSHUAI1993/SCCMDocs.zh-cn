@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bb478eb875e97d8e3088e50daab8538113b40c5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139579"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67193953"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -40,7 +40,7 @@ System Center Configuration Manager 的三个可用分支：Current Branch、Lon
 
 Microsoft 计划每年发布几次 System Center Configuration Manager Current Branch 的更新。 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。 我们会在整个支持期内始终提供技术支持。 但是，我们的支持结构是动态的，会发展为两个不同的服务阶段，具体取决于最新 Current Branch 版本的可用性。 （有关详细信息，请参阅名为[对 System Center Configuration Manager Current Branch 版本的支持](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported)的主题。 较新版本的更新以控制台内更新的形式提供。
 
-若要将 Current Branch 作为新站点进行安装，请使用[基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)。 也可使用基线介质从 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升级。 对此介质的访问权取决于组织对 System Center Configuration Manager 的许可方式。 
+若要将 Current Branch 作为新站点进行安装，请使用[基线介质](/sccm/core/servers/manage/updates#bkmk_Baselines)。 也可使用基线介质从 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升级。 对此介质的访问权取决于组织对 System Center Configuration Manager 的许可方式。 
 
 还可使用基线介质安装充当 Current Branch 评估版的新站点。 评估版不需要许可证。 评估版可使用 180 天。 它支持升级到 Current Branch 的许可版。 如果想仅安装评估版，可通过 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)获取。
 
@@ -76,14 +76,14 @@ Current Branch 的初始版本是版本 1511。 后续更新包括版本 1602 �
 ##  <a name="long-term-servicing-branch"></a>Long Term Servicing Branch 
 此分支已获许在生产中使用，面向正在使用 Current Branch 且允许其 Configuration Manager 软件保障 (SA) 或等效订阅权限在 2016 年 10 月 1 日后过期的 Configuration Manager 客户。 有关软件保障和许可选项的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)以及 [Configuration Manager 分支和许可的常见问题解答](/sccm/core/understand/product-and-licensing-faq)。
 
-LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功能的控制台中更新。 但是，提供了关键安全修补程序。 要安装 LTSB，必须使用随附在 System Center 2016 中的版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)。 更高的基准版本不支持安装 LTSB。
+LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功能的控制台中更新。 但是，提供了关键安全修补程序。 要安装 LTSB，必须使用随附在 System Center 2016 中的版本 1606 [基线介质](/sccm/core/servers/manage/updates#bkmk_Baselines)。 更高的基准版本不支持安装 LTSB。
 
-若要将 LTSB 安装为新站点或通过升级受支持的 Configuration Manager 2012 站点来安装 LTSB，可以使用随附在 System Center 2016 中的版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
+若要将 LTSB 安装为新站点或通过升级受支持的 Configuration Manager 2012 站点来安装 LTSB，可以使用随附在 System Center 2016 中的版本 1606 [基线介质](/sccm/core/servers/manage/updates#bkmk_Baselines)。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 
 > [!TIP]  
 > 若要了解 System Center 2016，请参阅 [System Center 2016 文档](https://docs.microsoft.com/system-center/index)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。  
 >  
-> 若要在批量许可服务中心 (VLSC) 查找 System Center Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索“`System Center 2016`”，然后选择“System Center 2016 Datacenter”或“System Center 2016 Standard”。  
+> 若要在批量许可服务中心 (VLSC) 查找 System Center Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索“`System Center 2016`”，然后选择“System Center 2016 Datacenter”或“System Center 2016 Standard”    。  
 >  
 > 也可从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。  
 
@@ -117,7 +117,7 @@ LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
   若要转换，必须具有与 Microsoft 签署的可用的软件保障协议。 有关详细信息，请参阅以下链接：
   - [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md)
   - [System Center Configuration Manager 的许可和分支](learn-more-editions.md)
-  - [基准和更新版本](/sccm/core/servers/manage/updates#baseline-and-update-versions) 
+  - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - 无法将 LTSB 转换为 Technical Preview Branch。 Technical Preview Branch 是单独安装，不需要许可证。
 -   不可将 Current Branch 的评估版升级到 LTSB 安装。
 
@@ -126,7 +126,7 @@ LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
 ## <a name="technical-preview-branch"></a>Technical Preview Branch
 Technical Preview Branch 适用于实验室环境。 了解并试用正在为 Configuration Manager 开发的最新功能。 它不支持在生产环境中使用，并且不需要软件保障许可证协议。
 
-若要安装运行 Technical Preview Branch 的新站点，请使用最新 [Technical Preview Branch 的基线介质](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview)。 安装 Technical Preview Branch 后，每月提供作为控制台中更新的新版本。
+若要安装运行 Technical Preview Branch 的新站点，请使用最新 [Technical Preview Branch 的基线介质](/sccm/core/get-started/technical-preview#bkmk_install)。 安装 Technical Preview Branch 后，每月提供作为控制台中更新的新版本。
 
 
 ### <a name="features-of-the-technical-preview-branch"></a>Technical Preview Branch 的功能
@@ -137,7 +137,7 @@ Technical Preview Branch 适用于实验室环境。 了解并试用正在为 Co
 
 
 ### <a name="limitations"></a>限制
--  [有限支持](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview)，仅包括单个主站点和最多 10 个客户端。  
+-  [有限支持](/sccm/core/get-started/technical-preview#bkmk_reqs)，仅包括单个主站点和最多 10 个客户端。  
 -  不能升级到 Current Branch 或 LTSB。
 -  不支持以下行为：
    - 使用迁移将数据导入或导出到另一个 Configuration Manager 安装
@@ -158,9 +158,9 @@ Technical Preview Branch 适用于实验室环境。 了解并试用正在为 Co
 ## <a name="identify-your-version-and-branch"></a>识别版本和分支
 
 ### <a name="version"></a>版本   
-若要查看站点的版本，请转到控制台左上角的“关于 System Center Configuration Manager”。 对话框会显示站点版本。 有关站点版本的列表，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
+若要查看站点的版本，请转到控制台左上角的“关于 System Center Configuration Manager”  。 对话框会显示站点版本  。 有关站点版本的列表，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
 
 ### <a name="branch"></a>分支
-若要确认站点分支，请转到控制台中的“管理” > “站点配置” > “站点”，并打开“层次结构设置”。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，则该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。
+若要确认站点分支，请转到控制台中的“管理” > “站点配置” > “站点”，并打开“层次结构设置”     。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，则该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。
 
 有关 Configuration Manager 不同版本的详细信息，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。

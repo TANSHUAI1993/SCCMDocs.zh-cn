@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
-ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
-ms.translationtype: HT
+ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046992"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285601"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -171,7 +171,7 @@ ms.locfileid: "67046992"
 
 #### <a name="account"></a>帐户
 
-选择“设置”  以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”  对话框中，使用下列格式输入用户名：`Domain\User`。 有关详细信息，请参阅[域连接帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。
+选择“设置”  以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”  对话框中，使用下列格式输入用户名：`Domain\User`。 有关详细信息，请参阅[域连接帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account)。
 
 #### <a name="adapter-settings"></a>适配器设置
 
@@ -462,7 +462,7 @@ Configuration Manager 将引用计算机上的每个卷（驱动器）捕获为 
 
 引用计算机上安装的 OS 必须是 Configuration Manager 支持的 Windows 版本。 使用 SysPrep 工具在引用计算机上准备 OS。 安装的 OS 卷和启动卷必须是相同的卷。  
 
-指定对选定网络共享具有写入权限的帐户。 有关此捕获 OS 映像帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account)。
+指定对选定网络共享具有写入权限的帐户。 有关此捕获 OS 映像帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account)。
 
 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。
 
@@ -680,7 +680,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 #### <a name="account"></a>帐户
 
-选择“设置”以指定有权连接到此网络文件夹的用户帐户  。 有关任务序列网络文件夹连接帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account)。
+选择“设置”以指定有权连接到此网络文件夹的用户帐户  。 有关任务序列网络文件夹连接帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account)。
 
 
 
@@ -731,6 +731,9 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 > 在部署包含此步骤的任务序列时，请勿在部署软件向导的“分发点”  页上为“部署选项”  选择“在启动任务序列之前在本地下载所有内容”  或“直接从分发点访问内容”  。  
 
 此步骤在完整 OS 或 Windows PE 中运行。 Windows PE 中不提供将包保存在 Configuration Manager 客户端缓存中的选项。
+
+> [!NOTE]  
+> **下载包内容**任务不支持与独立媒体配合使用。 有关详细信息，请参阅[不受支持的独立媒体的操作](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media)。  
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“下载包内容”  以添加此步骤。
 
@@ -1158,7 +1161,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>输入有权限加入域的帐户
 
-选择“设置”以输入有权加入域的帐户的用户名和密码  。 使用后述格式输入帐户：`Domain\account`。 有关任务序列域加入帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。  
+选择“设置”以输入有权加入域的帐户的用户名和密码  。 使用后述格式输入帐户：`Domain\account`。 有关任务序列域加入帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account)。  
 
 
 

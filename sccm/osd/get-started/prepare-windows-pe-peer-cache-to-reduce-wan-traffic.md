@@ -2,7 +2,7 @@
 title: 准备 Windows PE 对等缓存来减少 WAN 流量
 titleSuffix: Configuration Manager
 description: Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。
-ms.date: 10/06/2016
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bedaeed065121e18089cb6b1847397ba5cfdb35a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 80dffb04d7f6ef097ad5b629690e704d1c9a263f
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128749"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286571"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>准备 Windows PE 对等缓存以减少 System Center Configuration Manager 中的 WAN 流量
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在 System Center Configuration Manager 中部署新的操作系统时，运行任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。  
 
@@ -64,9 +64,11 @@ ms.locfileid: "56128749"
 
 -   Configuration Manager 客户端必须能够通过网络上的以下端口进行通信：  
 
-    -   初始网络广播的端口，用于查找对等缓存源。 默认情况下，这是端口 8004。  
+    -   初始网络广播的端口，用于查找对等缓存源。 默认情况下，这是 UDP 端口 8004。  
 
-    -   用于从对等缓存源（HTTP 和 HTTPS）下载内容的端口。 默认情况下，此端口是 8003。  
+    -   用于从对等缓存源（HTTP 和 HTTPS）下载内容的端口。 默认情况下，这是 TCP 端口 8003。  
+    
+        有关详细信息，请参阅[用于连接的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp)。  
 
         > [!TIP]  
         >  客户端将使用 HTTPS 来下载可用的内容。 但是，HTTP 或 HTTPS 使用相同的端口号。  
@@ -92,16 +94,16 @@ ms.locfileid: "56128749"
 
 ### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>配置 Windows PE 对等缓存源计算机  
 
-1. 在 Configuration Manager 控制台中，导航到“管理” > “客户端设置”，然后创建一个新的“自定义客户端设备设置”，或编辑现有设置对象。 你还可以对“默认客户端设置”  对象进行此配置。  
+1. 在 Configuration Manager 控制台中，导航到“管理”   > “客户端设置”  ，然后创建一个新的“自定义客户端设备设置”  ，或编辑现有设置对象。 你还可以对“默认客户端设置”  对象进行此配置。  
 
    > [!TIP]  
    >  使用自定义设置对象管理将接收此配置的客户端。 例如，你可能希望避免在到处奔走的用户的笔记本电脑上进行此配置。 经常移动的系统不适合作为向其他对等缓存客户端提供内容的源。  
    >   
-   >  另请记住，将此设置配置为“默认客户端设置” 的一部分时，此配置适用于环境中的所有客户端。  
+   >  另请记住，将此设置配置为“默认客户端设置”  的一部分时，此配置适用于环境中的所有客户端。  
 
-2. 在“客户端缓存设置”下，将“在完整操作系统中启用 Configuration Manager 客户端以共享内容”设置为“是”。  
+2. 在“客户端缓存设置”下，将“在完整操作系统中启用 Configuration Manager 客户端以共享内容”设置为“是”    。  
 
-   -   默认情况下，仅 HTTP 处于启用状态。 如果你想要让客户端可以通过 HTTPS 下载内容，请将“启用 HTTPS 以进行客户端对等通信”  设置为“是” 。  
+   -   默认情况下，仅 HTTP 处于启用状态。 如果你想要让客户端可以通过 HTTPS 下载内容，请将“启用 HTTPS 以进行客户端对等通信”  设置为“是”  。  
 
    -   默认情况下，用于广播的端口设置为 8004，用于内容下载的端口设置为 8003。 你可以更改这两个端口。  
 

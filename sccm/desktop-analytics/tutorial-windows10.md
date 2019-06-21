@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 102890f9e4b96328f117779ba63e9c72bf8f5d15
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 9f49955fed92061fb856a5ff49203f1fa6c9d186
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158948"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285626"
 ---
-# <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试运行
+# <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
@@ -221,6 +221,9 @@ ms.locfileid: "67158948"
 8. 完成向导。  
 
 Configuration Manager 创建一个设置策略来配置目标集合中的设备。 此策略包括要使设备能够向 Microsoft 发送数据的诊断数据设置。 默认情况下，客户端每隔一小时更新策略。 收到后的新设置，它可以是几个小时，更多数据之前在桌面 Analytics 中可用。
+
+> [!Note]  
+> 有关这些设置的详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 监视桌面分析你的设备的配置。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Desktop 分析服务**节点，然后选择**连接运行状况**仪表板。  
 

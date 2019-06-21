@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52e3384f1922e1a8322f316fd99bdd967e34b131
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 88b192163ac7a947f73ff658f7bafbfc1bfd5e14
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496230"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285878"
 ---
 # <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Configuration Manager 站点服务器已删除和已弃用的内容
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文介绍 Configuration Manager 站点服务器的支持中删除的，或者将在未来更新中删除（弃用）的产品和操作系统。 针对可能会影响使用 Configuration Manager 的将来更改提出早期通知。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "65496230"
 > [!Important]  
 > Windows Server 2008 R2 SP1 的扩展支持结束日期为 2020 年 1 月 14 日。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 
 
-可以将站点服务器 OS 从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。 有关详细信息，请参阅[就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2)。  
+可以将站点服务器 OS 从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。 有关详细信息，请参阅[就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeSiteSrv)。  
 
 
 #### <a name="bkmk_note2"></a> 注释 2：带 SP2 的 Windows Server 2008
@@ -62,9 +62,9 @@ ms.locfileid: "65496230"
 
 如果需要升级 SQL Server 版本，建议采用以下由易到难的方法：
 
-1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。  
+1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeDBSrv)（推荐）。  
 
-2. 在一台新计算机上安装 SQL Server 的新版本。 然后使用 Configuration Manager 安装程序的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)指向新 SQL Server 上的站点服务器。  
+2. 在一台新计算机上安装 SQL Server 的新版本。 然后使用 Configuration Manager 安装程序的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig)指向新 SQL Server 上的站点服务器。  
 
 3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。  
 

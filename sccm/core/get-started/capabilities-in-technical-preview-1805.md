@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07e69561580a22128cf9a5b7b97f33e10cbb0456
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 4da8ff0e4d35284c5b1f2f465da468677cdfbb65
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716044"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286068"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
@@ -101,7 +101,7 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 ### <a name="prerequisites"></a>先决条件  
 - 与 [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) 集成。 不需要 Azure AD 用户发现。  
 
-- [云分发点要求](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_PrereqsCloudDP)相同，除了 Azure 管理证书。  
+- [云分发点要求](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_requirements)相同，除了 Azure 管理证书。  
 
 
 ### <a name="try-it-out"></a>试试看！  
@@ -216,7 +216,7 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 
      1.  Azure AD 用户：使用此选项来模拟与登录到加入 Azure AD 的 Windows 10 设备的云端用户标识相同的通信。 单击“登录”  以安全输入此 Azure AD 用户帐户的凭据。  
 
-     2.  客户端证书：使用此选项来模拟与具有[客户端身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate)的 Configuration Manager 客户端相同的通信。  
+     2.  客户端证书：使用此选项来模拟与具有[客户端身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth)的 Configuration Manager 客户端相同的通信。  
 
 4. 单击“启动”  开始分析。 结果将显示在分析器窗口中。 选择一个条目，查看“说明”字段中的更多详细信息。  
 
@@ -288,7 +288,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 [加入 Azure AD 的设备](/azure/active-directory/device-management-introduction#azure-ad-joined-devices)能够通过云管理网关 (CMG) 与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。   
 
 > [!Note]  
-> 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个启用了 HTTPS 的管理点。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
+> 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个启用了 HTTPS 的管理点。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
 
 #### <a name="bkmk_token2"></a> 方案 2：客户端到分发点
 <!--1358228-->

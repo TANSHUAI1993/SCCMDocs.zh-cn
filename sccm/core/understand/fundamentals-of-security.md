@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1fbe25f492cd9b4ae36939d5aa5e78cee6be0bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a6c6f931271d8cc8f69e3c65de8c4932f5ab5c95
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119851"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159273"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager 安全性的基础知识
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文总结了任何 Configuration Manager 环境的以下基本安全组件：
 - [安全层](#bkmk_layers)
@@ -81,9 +81,9 @@ Configuration Manager 的安全性包括以下层：
 
  Configuration Manager 使用基于角色的管理来帮助保护对象（如集合、部署和站点）。 此管理模式为所有站点和站点设置集中定义及管理层次结构范围的安全访问设置。 
 
- 管理员将“安全角色”分配给管理用户和组权限。 权限连接到不同的 Configuration Manager 对象类型，用于创建或更改客户端设置等。 
+ 管理员将“安全角色”分配给管理用户和组权限  。 权限连接到不同的 Configuration Manager 对象类型，用于创建或更改客户端设置等。 
 
- 管理用户负责管理且特定于“安全作用域”组的实例对象，如安装 Microsoft Office 的应用程序。 
+ 管理用户负责管理且特定于“安全作用域”组的实例对象，如安装 Microsoft Office 的应用程序  。 
 
  安全角色、安全作用域和集合的组合定义管理用户可以查看和管理的对象。 Configuration Manager 为典型的管理任务安装某些默认安全角色。 创建自己的安全角色来满足特定业务需求。  
 
@@ -127,4 +127,4 @@ Configuration Manager 的安全性包括以下层：
 
 - [终结点之间的通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  

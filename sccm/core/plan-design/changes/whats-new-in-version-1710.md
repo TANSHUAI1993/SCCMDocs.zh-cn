@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b966654712dbe670ea200fbb4c975df26ecac542
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 43fdf80a9876c6cfe4b07b3e3df2756fdf64f8d9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495578"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285791"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1710 作为控制台内更新提供，用于运行版本 1610、1702 或 1706 的以前安装的站点。
 
@@ -35,7 +35,7 @@ System Center Configuration Manager Current Branch 的更新 1710 作为控制�
 >  了解详细信息：    
 >   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [在站点上安装更新](/sccm/core/servers/manage/updates)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1710 中引入的更改和新功能的详细信息。  
 
@@ -130,7 +130,7 @@ Version 1710 drops support for the following products:
 ### <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>限制 Windows 10 增强遥测只发送与 Windows Analytics 设备运行状况相关的数据
 <!-- 1356148 -->
 
-现在可以将 Windows 10 遥测数据收集级别设置为“增强(受限)”。 该设置使你能够在环境中获得对设备的可操作见解，而无需设备通过 Windows 10 版本 1709 或更高版本报告“增强”遥测级别的所有数据。
+现在可以将 Windows 10 遥测数据收集级别设置为“增强(受限)”  。 该设置使你能够在环境中获得对设备的可操作见解，而无需设备通过 Windows 10 版本 1709 或更高版本报告“增强”  遥测级别的所有数据。
 
 有关详细信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
@@ -172,8 +172,8 @@ Version 1710 drops support for the following products:
 
 
 - 每个平台均有其自己的工作流，这意味着新的 VPN 配置文件仅包含平台支持的设置。
-- 如今，“支持的平台”页在“常规”页后显示。  现在于设置属性值之前选择平台。
-- 如果将平台设置为“Android”、“Android for Work”或“Windows Phone 8.1”，则不需要“支持的平台”页，该页也不会显示。
+- 如今，“支持的平台”页在“常规”页后显示   。  现在于设置属性值之前选择平台。
+- 如果将平台设置为“Android”、“Android for Work”或“Windows Phone 8.1”，则不需要“支持的平台”页，该页也不会显示     。
 - 基于 Configuration Manager 客户端的工作流已与基于混合移动设备 (MDM) 客户端的 Windows 10 工作流相结合，它们支持相同的设置。
 - 每个平台工作流仅包含适用于该工作流的设置。  例如，Android 工作流包含适用于 Android 的设置；Android 工作流中将不再显示适用于 iOS 或 Windows 10 移动版的设置。
 - “自动 VPN”页已过时且已删除。
@@ -206,7 +206,7 @@ Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书
 <!-- 1355092 -->
 下面是三个与设备防护策略相关的更改：
 
-- 设备防护策略已被重命名为 Windows Defender 应用程序控制策略。 因此，举例来说，“创建设备防护策略”向导现命名为“创建 Windows Defender 应用程序控制策略”向导。
+- 设备防护策略已被重命名为 Windows Defender 应用程序控制策略。 因此，举例来说，“创建设备防护策略”向导  现命名为“创建 Windows Defender 应用程序控制策略”向导  。
 - 使用 Windows 版本 1709 Fall Creators Update 的设备无需重启就能应用 Windows Defender 应用程序控制策略。 重新启动仍是默认设置，但你可以[关闭重启](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)。
 - 可以[将设备设置为自动运行](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)受 Intelligent Security Graph 信任的软件。
 

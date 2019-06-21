@@ -4,22 +4,22 @@ description: 使用本文解答有关云管理网关的常见问题
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/02/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71c30e6770d667426a0aabbf03043d6fb44ecced
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 6a7b4350cbd220393318eb6c8b5eae2a5bee05fc
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083190"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286803"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>有关云管理网关的常见问题解答
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文解答了有关云管理网关的常见问题。 有关详细信息，请参阅[规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。
 
@@ -33,10 +33,9 @@ ms.locfileid: "65083190"
 
 ### <a name="do-i-need-azure-expressroute"></a>我需要 Azure ExpressRoute 吗？
 
-通过 [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) 可将本地网络扩展到 Microsoft 云中。 ExpressRoute 或其他此类虚拟网络连接对 Configuration Manager 云管理网关不是必需的。 云管理网关的设计允许基于 Internet 的客户端通过 Azure 服务与本地站点系统进行通信，而无需其他网络配置。 有关详细信息，请参阅[规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+否。 通过 [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) 可将本地网络扩展到 Microsoft 云中。 ExpressRoute 或其他此类虚拟网络连接对 Configuration Manager 云管理网关不是必需的。 云管理网关的设计允许基于 Internet 的客户端通过 Azure 服务与本地站点系统进行通信，而无需其他网络配置。 有关详细信息，请参阅[规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
 
-如果组织使用 ExpressRoute，则安全性最佳做法是隔离云管理网关的 Azure 订阅。 此配置可确保云管理网关服务不以这种方式意外连接。 有关详细信息，请参阅[云管理网关的安全和隐私](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)。
-
+<!-- SCCMDocs#1659 -->
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>我需要维护 Azure 虚拟机吗？
 

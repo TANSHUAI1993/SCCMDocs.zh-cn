@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71fab49dc6ba5d949aeaf48145e1f7d0446c0f91
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: f707eb4b4fabf98d6e436f038f932515749c35c4
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355007"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194450"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>使用 PXE 和 Configuration Manager 通过网络部署 Windows
 
@@ -126,7 +126,7 @@ ms.locfileid: "66355007"
 
 - **可用部署**：可用部署要求用户在目标计算机旁。 用户必须按 F12 键继续执行 PXE 启动过程  。 如果由于用户不在场而未按 F12，则计算机将启动到当前 OS，或者将从下一个可用启动设备启动计算机  。
 
-通过清除分配给 Configuration Manager 集合或计算机的上一个 PXE 部署的状态，可以重新部署所需的 PXE 部署。 有关清除所需的 PXE 部署  操作的详细信息，请参阅[管理客户端](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)或[管理集合](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections)。 此操作将重置该部署的状态并重新安装最新的所需部署。
+通过清除分配给 Configuration Manager 集合或计算机的上一个 PXE 部署的状态，可以重新部署所需的 PXE 部署。 有关清除所需的 PXE 部署  操作的详细信息，请参阅[管理客户端](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)或[管理集合](/sccm/core/clients/manage/collections/manage-collections#bkmk_device)。 此操作将重置该部署的状态并重新安装最新的所需部署。
 
 > [!IMPORTANT]  
 > PXE 协议不安全。 请确保 PXE 服务器和 PXE 客户端位于物理安全网络上（例如数据中心），以便防止站点出现未经授权的访问。

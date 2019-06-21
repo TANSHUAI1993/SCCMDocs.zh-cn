@@ -11,22 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53803d154a871739c5dd8cf7eaff4eebf92fd651
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: bd6abbb6b4a11bb9b412b6a2ad1c2f8e5d648c59
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083421"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67193968"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>关于站点和层次结构基础结构的升级、更新和安装
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
-管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。
+管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”  “更新”  和“安装”  用于描述三种不同概念。
 
 ## <a name="upgrade"></a>Upgrade
-如果要将 Configuration Manager 2012 站点或层次结构转换为运行 System Center Configuration Manager 的站点或层次结构，则使用“升级”或“就地升级”。
+如果要将 Configuration Manager 2012 站点或层次结构转换为运行 System Center Configuration Manager 的站点或层次结构，则使用“升级”  或“就地升级”  。
 如果要将 System Center 2012 Configuration Manager 升级为 System Center Configuration Manager，请继续使用同一服务器托管站点和站点服务器，并保留 Configuration Manager 的现有数据和配置。  这不同于[迁移](/sccm/core/migration/migrate-data-between-hierarchies)，迁移是一种在使用安装到新硬件的 System Center Configuration Manager 站点的同时，保留托管设备相关配置和数据的方式。
 
 有关详细信息，请参阅[升级到 System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。
@@ -34,12 +34,12 @@ ms.locfileid: "65083421"
 
 
 ## <a name="update"></a>更新
-“更新”用于安装 System Center Configuration Manager 的控制台中更新，还用于带外更新，带外更新指无法从 Configuration Manager 控制台中传递的更新。 控制台中更新可修改 Current Branch 站点（或 Technical Preview 站点）的版本，使其可运行更高版本。 例如，如果站点运行版本 1806，你可以安装版本 1810 的更新。 更新还可以安装已知问题的修补程序，无需修改站点版本。      
+“更新”  用于安装 System Center Configuration Manager 的控制台中更新，还用于带外更新，带外更新指无法从 Configuration Manager 控制台中传递的更新。 控制台中更新可修改 Current Branch 站点（或 Technical Preview 站点）的版本，使其可运行更高版本。 例如，如果站点运行版本 1806，你可以安装版本 1810 的更新。 更新还可以安装已知问题的修补程序，无需修改站点版本。      
 
 通常情况下，更新会将安全修补程序、质量改进和新功能添加到现有部署。 如果使用 Technical Preview Branch，则更新可安装更新版本的 Technical Preview。
 -   从层次结构的顶层站点开始，选择安装控制台中更新的时间。
 - 可安装能从控制台中获取的任何更新。 例如，如果站点运行版本 1802，并且同时提供了 1806 和 1810，你应考虑安装版本 1810，因为每个版本都包括了以前发布的版本中首次提供的功能。
-- 顶层站点完成安装新更新后，子主站点将自动启动更新过程。 但是，可设置[服务时段](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers)以控制更新的执行时间。
+- 顶层站点完成安装新更新后，子主站点将自动启动更新过程。 但是，可设置[服务时段](/sccm/core/servers/manage/service-windows)以控制更新的执行时间。
 - 辅助站点不会自动安装更新。 相反，请从 Configuration Manager 控制台中手动启动更新。
 
 有关详细信息，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)和 [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview)。
@@ -47,7 +47,7 @@ ms.locfileid: "65083421"
 
 
 ## <a name="install"></a>安装
-如果要从零开始创建新的 Configuration Manager 层次结构，或将额外站点添加到现有层次结构，则使用“安装”。  
+如果要从零开始创建新的 Configuration Manager 层次结构，或将额外站点添加到现有层次结构，则使用“安装”  。  
 
 安装新的主站点或中心管理站点时，使用的 setup.exe 及其相关源文件的位置取决于你的安装方案。
 

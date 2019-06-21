@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb18dbb093f6182186f648bcde02407f3c14c5a
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: daee7a247fd12637736caa9c341798950a66c786
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038594"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251856"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -558,7 +558,7 @@ ms.locfileid: "67038594"
 
 ##  <a name="bkmk_2008"></a> Windows Server 2008 R2 和 Windows Server 2008 的先决条件  
 
-如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息所述，Windows Server 2008 和 Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已删除和已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息所述，Windows Server 2008 和 Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已删除和已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os)。  
 
 站点服务器或大多数站点系统角色不支持这些 OS 版本。 分发点站点系统角色（包括拉取分发点）以及 PXE 和多播仍然支持这些 OS 版本。
 

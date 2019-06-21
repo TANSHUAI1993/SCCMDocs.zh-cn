@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd2a745f7fc158739898930c9d05ea40724879b1
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 410c056b22bc4c52010e941a244cffa1fc3b2dff
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176099"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194106"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 适用范围：  System Center Configuration Manager (Current Branch)
@@ -136,11 +136,11 @@ ms.locfileid: "66176099"
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>我了解并能接受基于云的分发点的限制，但不想将管理点置于 DMZ 内，即使这是支持基于 Internet 的客户端所需的。 是否有其他选择？
-可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)）。
+可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#cloud_proxy)）。
 
 云管理网关提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端  。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 部署并配置好该服务后，客户端便可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
 
-接着可以开始在环境中使用云管理网关，并向我们提供反馈以帮助优化该服务。 有关预发行功能的信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)。
+接着可以开始在环境中使用云管理网关，并向我们提供反馈以帮助优化该服务。 有关预发行功能的信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
 ### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>我还听说，在版本 1610 中引入了另一个名为“对等缓存”的新功能作为预发布功能。 此功能是否与 BranchCache 不同？ 应选择哪一种？
 是的，完全不同。 [对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)是 100% 本机 Configuration Manager 技术，而 BranchCache 是 Windows 的一个功能。 两者各有各自的用途；BranchCache 使用广播来查找所需的内容，而“对等缓存”则使用 Configuration Manager 常规分发工作流和边界组设置。

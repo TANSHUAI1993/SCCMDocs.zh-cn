@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33055f0962ef1220d41a2c8ee463cb2380ff60db
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 5396ec603cab4b16e0d0c7e538618d1e757ab62f
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715951"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286186"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
 
@@ -118,7 +118,7 @@ ms.locfileid: "66715951"
 ## <a name="improvements-for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进  
 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。  这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
 
-- Configuration Manager 支持使用异步提交副本来恢复同步副本。  请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
+- Configuration Manager 支持使用异步提交副本来恢复同步副本。  请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
 
 - 此版本不支持故障转移后使用异步提交副本作为站点数据库。
   > [!CAUTION]  
@@ -130,7 +130,7 @@ ms.locfileid: "66715951"
 若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）请参阅 [SQL Server 文档](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))，了解有关如何将辅助副本添加到可用性组的信息。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用异步副本恢复站点
-使用异步副本恢复站点数据库之前，必须停止活动主站点，防止到站点数据库的其他写入。 停止站点后，可以使用异步副本替代[手动恢复的数据库](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)。
+使用异步副本恢复站点数据库之前，必须停止活动主站点，防止到站点数据库的其他写入。 停止站点后，可以使用异步副本替代[手动恢复的数据库](/sccm/core/servers/manage/recover-sites#use-a-site-database-that-has-been-manually-recovered)。
 
 若要停止该站点，可以使用[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)来停止站点服务器上的密钥服务。 使用命令行：**Preinst.exe /stopsite**   
 
@@ -245,7 +245,7 @@ ms.locfileid: "66715951"
 ### <a name="install-the-cm-client-from-the-internet"></a>从 Internet 安装 CM 客户端
 
 在开始之前，请确保客户端安装源文件已本地存储在用于安装此客户端的设备上。
-然后，使用[如何将客户端部署到 System Center Configuration Manager 中的 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually)中的说明，使用以下安装命令行（将示例中的值替换为你自己的值）：
+然后，使用[如何将客户端部署到 System Center Configuration Manager 中的 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)中的说明，使用以下安装命令行（将示例中的值替换为你自己的值）：
 
 ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver> 
 
@@ -255,7 +255,7 @@ ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAP
 - **SMSMP**：查找管理点的名称，管理点可位于 Intranet 上。
 - **SMSSiteCode**：Configuration Manager 站点的站点代码。
 - AADTENANTID、AADTENANTNAME   ：链接到 Configuration Manager 的 Azure AD 租户的 ID 和名称。 可以通过从加入 Azure AD 的设备上的命令提示符处运行 dsregcmd.exe /status 找到上述内容。
-- **AADCLIENTAPPID**：Azure AD 客户端应用 ID。 有关查找此内容的帮助，请参阅[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)。
+- **AADCLIENTAPPID**：Azure AD 客户端应用 ID。 有关查找此内容的帮助，请参阅[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
 - **AADResourceUri**：载入的 Azure AD 服务器应用的标识符 URI。
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>使用 Azure 服务向导配置与 OMS 的连接
@@ -266,11 +266,11 @@ ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAP
 -   Configuration Manager 连接到 OMS 以实现[日志分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)或[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)等功能。
 
 ### <a name="prerequisites-for-the-oms-connector"></a>OMS 连接器的先决条件
-配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites)先决条件并无任何区别。 此处重复了该信息：  
+配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](/sccm/core/clients/manage/sync-data-log-analytics#prerequisites-for-the-log-analytics-connector)先决条件并无任何区别。 此处重复了该信息：  
 
 -   向 OMS 提供 Configuration Manager 权限。
 
--   必须在托管[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)下的[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)的计算机上安装 OMS 连接器。
+-   必须在托管[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes)下的[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)的计算机上安装 OMS 连接器。
 
 -   必须为在服务连接点上安装的 OMS 安装 Microsoft Monitoring Agent 以及 OMS 连接器。 必须将代理和 OMS 连接器配置为使用相同的 **OMS 工作区**。 若要安装代理，请参阅 OMS 文档中的[下载并安装代理](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)。
 -   安装连接器和代理后，必须配置 OMS 以使用 Configuration Manager 数据。 为此，请在 OMS 门户中[导入 Configuration Manager 集合](/azure/log-analytics/log-analytics-sccm#import-collections)。

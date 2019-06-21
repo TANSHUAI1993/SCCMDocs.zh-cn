@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ceb7f7156c505e73db3fba0d02d60ec044958846
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 4314432655c8fa560c804075980cef78b270ec30
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716126"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252085"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1902 的清单
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-使用 Configuration Manager 的 Current Branch 时，可安装版本为 1902 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement:-->（由于版本 1902 也可用作[基线介质](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)，因此，可使用该安装介质安装新层次结构的第一个站点。）
+使用 Configuration Manager 的 Current Branch 时，可安装版本为 1902 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement:-->（由于版本 1902 也可用作[基线介质](/sccm/core/servers/manage/updates#bkmk_Baselines)，因此，可使用该安装介质安装新层次结构的第一个站点。）
 
 若要获取版本 1902 的更新，必须在层次结构的顶级站点上使用服务连接点。 站点系统角色可处于任一模式（联机或脱机）。 层次结构从 Microsoft 下载更新包之后，可在控制台中找到它。 在“管理”工作区中，选择“更新和维护服务”节点   。
 
@@ -34,7 +34,7 @@ ms.locfileid: "66716126"
 
     -   当代理服务器设置阻止从 [http://silverlight.dlservice.microsoft.com](http://silverlight.dlservice.microsoft.com )、 http://download.microsoft.com 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
 
-有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)。
+有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#bkmk_inconsole)。
 
 有关 Current Branch 版本的详细信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
 
@@ -92,7 +92,7 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 如果先更新站点，再更新 Windows ADK，请参阅[利用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)。
 
 #### <a name="review-sql-server-native-client-version"></a>查看 SQL Server Native Client 版本
-必须安装 SQL Server 2012 Native Client 的最低版本，其中包括对 TLS 1.2 的支持。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。
+必须安装 SQL Server 2012 Native Client 的最低版本，其中包括对 TLS 1.2 的支持。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client)。
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>查看站点和层次结构状态以寻找未解决的问题 
 由于现有的操作问题，站点更新可能会失败。 在更新站点前，请解决以下系统的所有操作问题：  
@@ -160,7 +160,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 > 运行先决条件检查程序时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。
 
 #### <a name="update-sites"></a>更新站点   
-现已准备好为层次结构开始更新安装。 有关安装更新的详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)。
+现已准备好为层次结构开始更新安装。 有关安装更新的详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)。
 
 你有可能计划在常规工作时间外安装更新。 确定过程将对业务操作造成最小影响的时间。 安装更新及其操作会重新安装站点组件和站点系统角色。
 

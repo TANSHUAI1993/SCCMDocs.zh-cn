@@ -12,16 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4735678e9a6a42dedc676a8a0223af0ac8d6b81b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ad04b54d3284abc210da273458077889f45735f3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135899"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286064"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1803 中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager Technical Preview 1803 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -43,19 +43,21 @@ ms.locfileid: "56135899"
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>请求分发点支持将云分发点作为源  
-<!--1321554--> 许多客户在远程办公室或分支机构使用[请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)，这些分发点通过 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)作为源。 现在，当你在分发点属性的“请求分发点”选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
+<!--1321554-->
+许多客户在远程办公室或分支机构使用[请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)，这些分发点通过 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)作为源。 现在，当你在分发点属性的“请求分发点”  选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
 
 ### <a name="prerequisites"></a>先决条件
 - 请求分发点需要访问 Internet 才能与 Microsoft Azure 通信。
 - 必须内容将分发到源云分发点。
 
 > [!Note]  
-> 此功能确实会对你的 Azure 数据存储和网络出口订阅收取费用。 有关详细信息，请参阅[使用基于云的分发的成本](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_CloudDPCost)。
+> 此功能确实会对你的 Azure 数据存储和网络出口订阅收取费用。 有关详细信息，请参阅[使用基于云的分发的成本](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)。
 
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>客户端对等缓存中的部分下载支持可降低 WAN 利用率
-<!--1357346--> 客户端对等缓存源现可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。 
+<!--1357346-->
+客户端对等缓存源现在可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。 
 
 ### <a name="example-scenario"></a>示例方案
 Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (HQ) 和分支机构。 边界组之间有 30 分钟的回退关系。 该站点的管理点和分发点都位于 HQ 边界中。 分支机构所在地没有本地分发点。 分支机构的四个客户端中有两个配置为对等缓存源。 
@@ -77,11 +79,11 @@ Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (H
 
 
 ### <a name="try-it-out"></a>试试看！
- 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果。
+ 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果   。
 
 1. 按常规设置[边界组](/sccm/core/servers/deploy/configure/boundary-groups)和[对等缓存源](/sccm/core/plan-design/hierarchy/client-peer-cache)。
-2. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”。 单击功能区中的“层次结构设置”。 
-3. 在“常规”选项卡上，启用“配置客户端对等缓存源以将内容分成多个部分”选项。 
+2. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  。 单击功能区中的“层次结构设置”  。 
+3. 在“常规”  选项卡上，启用“配置客户端对等缓存源以将内容分成多个部分”  选项。 
 4. 创建必需的内容部署。  
 
    > [!Note]  
@@ -93,48 +95,50 @@ Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (H
 
 
 ## <a name="maintenance-windows-in-software-center"></a>软件中心的维护时段
-<!--1358131--> 软件中心现在显示下一个计划性维护时段。 在“安装状态”选项卡上，将视图从“全部”切换为“即将进行”。 它显示时间范围和计划部署列表。 如果没有将来的维护时段，则该列表为空。 
+<!--1358131-->
+软件中心现在显示下一个计划性维护时段。 在“安装状态”选项卡上，将视图从“全部”切换为“即将进行”。 它显示时间范围和计划部署列表。 如果没有将来的维护时段，则该列表为空。 
 
 ![软件中心的“安装状态”选项卡上显示即将进行的部署的列表](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>软件中心用于网页的自定义选项卡
-<!--1358132--> 现在可以在软件中心创建自定义选项卡来打开网页。 此功能可让你以一致、可靠的方式向最终用户展示内容。 以下列表包含几个示例：
+<!--1358132-->
+现在可以在软件中心创建自定义选项卡来打开网页。 此功能可让你以一致、可靠的方式向最终用户展示内容。 以下列表包含几个示例：
 - 联系 IT 部门：有关如何联系组织 IT 部门的信息
 - IT 支持中心：IT 自助操作，如搜索知识库或开启支持票证。
 - 最终用户文档：面向组织中的用户的文章，涉及各种 IT 主题，例如使用应用程序或升级到 Windows 10。
 
 
 ### <a name="try-it-out"></a>试试看！
- 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果。
+ 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果   。
 
-1. 在 Configuration Manager 控制台的“管理”工作区的“客户端设置”节点中，打开“默认客户端设置”策略。
-2. 选择“软件中心”组。
-3. 对于“软件中心设置”，单击“自定义”。
-4. 切换到“选项卡”选项卡。
-5. 启用“为软件中心指定自定义选项卡”选项。
-    1. 在“选项卡名称”文本字段中输入名称。 该名称是软件中心向用户展示的名称。
-    2. 在“内容 URL”文本字段中输入有效的 URL。 此 URL 是用户单击此选项卡时软件中心显示的内容。
+1. 在 Configuration Manager 控制台的“管理”  工作区的“客户端设置”  节点中，打开“默认客户端设置”  策略。
+2. 选择“软件中心”  组。
+3. 对于“软件中心设置”  ，单击“自定义”  。
+4. 切换到“选项卡”  选项卡。
+5. 启用“为软件中心指定自定义选项卡”  选项。
+    1. 在“选项卡名称”  文本字段中输入名称。 该名称是软件中心向用户展示的名称。
+    2. 在“内容 URL”  文本字段中输入有效的 URL。 此 URL 是用户单击此选项卡时软件中心显示的内容。
 
 > [!Tip]  
 > 软件中心使用 Internet Explorer 组件来呈现网页。
 
 ## <a name="enable-third-party-software-update-support-on-clients"></a>对客户端启用第三方软件更新支持
 
-现在可以为 Configuration Manager 客户端配置第三方软件更新。 当你为 SUP 组件属性“启用第三方软件更新”时，SUP 将下载 WSUS 用于第三方更新的签名证书。 <!--1357605-->
+现在可以为 Configuration Manager 客户端配置第三方软件更新。 当你为 SUP 组件属性“启用第三方软件更新”  时，SUP 将下载 WSUS 用于第三方更新的签名证书。 <!--1357605-->
 
-选择客户端设置中的“启用第三方软件更新”后，它会执行以下操作： 
+选择客户端设置中的“启用第三方软件更新”  后，它会执行以下操作： 
 - 在客户端上，它会设置“允许 Intranet Microsoft 更新服务位置的签名更新”策略 
 - 将签名证书安装到客户端上受信任的发布者库。 
 
 ### <a name="try-it-out"></a>试试看！
- 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果。
+ 尝试完成任务。 然后从功能区的“主文件夹”选项卡发送“反馈”，让我们了解其效果   。
 
-1. 在 Configuration Manager 层次结构中最顶层的站点上，转到“管理”节点，依次展开“站点配置”和“站点”。
-2. 右键单击最顶层的站点服务器，依次选择“配置站点组件”和“软件更新点”。
-3. 单击“第三方更新”选项卡，选中“启用第三方软件更新”。
-4. 打开“客户端设置”，转到“软件更新”的设置。
-5. 确保“启用第三方软件更新”设置为“是”。
+1. 在 Configuration Manager 层次结构中最顶层的站点上，转到“管理”  节点，依次展开“站点配置”  和“站点”  。
+2. 右键单击最顶层的站点服务器，依次选择“配置站点组件”  和“软件更新点”  。
+3. 单击“第三方更新”  选项卡，选中“启用第三方软件更新”  。
+4. 打开“客户端设置”  ，转到“软件更新”  的设置。
+5. 确保“启用第三方软件更新”  设置为“是”  。
 
 ## <a name="enable-copypaste-of-asset-details-from-monitoring-views"></a>支持从监视视图中复制/粘贴资产详细信息
 作为 [User Voice 反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det)的结果，你现在可以在部署和分发状态监视视图的资产详细信息窗格中启用复制/粘贴功能。  <!--1357552-->

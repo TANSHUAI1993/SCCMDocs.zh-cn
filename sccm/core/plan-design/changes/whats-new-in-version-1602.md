@@ -12,16 +12,16 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18cfb826c3ed495439fde63b62e52e6fc07067b4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 43a976e04358a176852d72301335b14cf484ed3c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496041"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158806"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 的更新 1602 作为控制台内部更新提供，用于以前安装的、运行版本 1511 的站点。 版本 1511 是用于安装新 Configuration Manager 站点的初始基准版本。  
@@ -30,7 +30,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 > [!TIP]  
 >  了解详细信息：  
 >   
->   -   [安装新站点](/sccm/core/servers/deploy/install)（使用基准版本，如 1511）  
+>   -   [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
 >   -   [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602）  
 
  以下各节提供有关 Configuration Manager 版本 1602 中引入的更改和新功能的详细信息。  
@@ -57,13 +57,13 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 ### <a name="windows-10-servicing"></a>Windows 10 维护服务  
  Configuration Manager 1602 版新增了以下 Windows 10 维护服务的改进功能：  
 
--   为维护服务计划提供了新筛选器选项，可用于筛选“语言”、“必需”和“标题”。 只有满足指定条件的升级项才会添加到关联部署中。  
+-   为维护服务计划提供了新筛选器选项，可用于筛选“语言”  、“必需”  和“标题”  。 只有满足指定条件的升级项才会添加到关联部署中。  
 
--   对软件更新同步选择“升级”时，将会显示警告。 此警告将说明：必须首先具有适用于 Windows Server Update Services (WSUS) 4.0 的[修补程序 3095113](https://support.microsoft.com/kb/3095113)，而后同步软件才能成功更新以及 Windows 10 维护服务才能正常工作。 从警告消息中可以转到关联的知识库文章。  
+-   对软件更新同步选择“升级”  时，将会显示警告。 此警告将说明：必须首先具有适用于 Windows Server Update Services (WSUS) 4.0 的[修补程序 3095113](https://support.microsoft.com/kb/3095113)，而后同步软件才能成功更新以及 Windows 10 维护服务才能正常工作。 从警告消息中可以转到关联的知识库文章。  
 
--   可用的 Windows 10 升级现在仅显示在 Configuration Manager 控制台的“Windows 10 维护服务” \ “所有 Windows 10 更新”节点中。 这些更新不再显示在控制台的“软件更新” \ “所有软件更新”节点中。  
+-   可用的 Windows 10 升级现在仅显示在 Configuration Manager 控制台的“Windows 10 维护服务”   \ “所有 Windows 10 更新”  节点中。 这些更新不再显示在控制台的“软件更新”   \ “所有软件更新”  节点中。  
 
--   维护服务计划被视为高风险部署，“选择集合”窗口将仅显示满足在站点属性中配置的部署验证设置的自定义集合。 有关详细信息，请参阅 [用于管理 System Center Configuration Manager 的高风险部署的设置](../../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
+-   维护服务计划被视为高风险部署，“选择集合”  窗口将仅显示满足在站点属性中配置的部署验证设置的自定义集合。 有关详细信息，请参阅 [用于管理 System Center Configuration Manager 的高风险部署的设置](../../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
 
 -   现在 Windows 10 升级包的用户将收到一条消息，告知他们正在升级操作系统。  
 
@@ -94,7 +94,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
 -   Microsoft Outlook  
 
-可在 Configuration Manage 控制台的“应用程序”节点中找到这些应用。  
+可在 Configuration Manage 控制台的“应用程序”  节点中找到这些应用。  
 
  关于部署应用程序的详细信息，请参阅[如何使用 System Center Configuration Manager 部署应用程序](../../../apps/deploy-use/deploy-applications.md)。  
 
@@ -133,7 +133,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
  有关详细信息，请参阅 [System Center Configuration Manager 中的设备合规性策略](../../../protect/deploy-use/device-compliance-policies.md)。  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>确保已注册且合规的设备始终有权访问 Exchange 内部部署  
- 选中以下选项时，允许已在 Intune 中注册且符合合规性策略的设备访问本地 Exchange：**替代默认规则 - 始终允许已注册 Intune 且合规的设备访问本地 Exchange：**。 Exchange 内部部署的“配置条件访问策略向导”的“常规页面”提供了此规则。
+ 选中以下选项时，允许已在 Intune 中注册且符合合规性策略的设备访问本地 Exchange：**替代默认规则 - 始终允许已注册 Intune 且合规的设备访问本地 Exchange：** 。 Exchange 内部部署的“配置条件访问策略向导”  的“常规页面”  提供了此规则。
 
  此规则将覆盖“默认规则”，这意味着，即使将“默认规则”设置为隔离或阻止访问，已注册并符合要求的设备也仍然能够访问内部部署的 Exchange。 当你希望已注册且合规的设备始终可通过内部部署的 Exchange 访问电子邮件时，使用该设置。   
 
@@ -147,12 +147,12 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
  有关详细信息，请参阅[如何在 System Center Configuration Manager 中监视客户端](../../../core/clients/manage/monitor-clients.md)。  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>从软件中心刷新 PC 计算机和用户策略  
- 已将新选项“同步策略”添加到软件中心的“选项” > “计算机维护”页面，该操作可让电脑刷新其 Configuration Manager 计算机和用户策略。  
+ 已将新选项“同步策略”  添加到软件中心的“选项”   > “计算机维护”  页面，该操作可让电脑刷新其 Configuration Manager 计算机和用户策略。  
 
 ### <a name="software-center-branding-changes"></a>软件中心品牌更改  
  你可以更改软件中心内显示的颜色、组织名称和图标。 根据以下规则应用这些设置：  
 
-- 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”客户端设置中指定的组织名称，称为“软件中心中显示的组织名称”。  
+- 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”  客户端设置中指定的组织名称，称为“软件中心中显示的组织名称”  。  
 
 - 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。  
 
@@ -186,7 +186,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
     -   高级：允许用户修改自动示例文件提交设置。  
 
-    此外，在 Endpoint Protection 反恶意软件政策的“排除设置”部分中，现有“排除文件和文件夹”设置现在允许设备排除。  
+    此外，在 Endpoint Protection 反恶意软件政策的“排除设置”部分中，现有“排除文件和文件夹”  设置现在允许设备排除。  
 
 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](../../../protect/deploy-use/endpoint-antimalware-policies.md)。  
 

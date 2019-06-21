@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 9d697427fe9cfa774cc7baca6563d6c1cc285c8b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612790"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159384"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文列出了 Configuration Manager 使用的网络端口。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用任何端口筛选技术，请验证所需端口是否可用。 这些端口筛选技术包括防火墙、路由器、代理服务器或 IPsec。   
 
@@ -130,7 +130,7 @@ Configuration Manager 不允许为以下通信类型配置端口：
 |Windows PE 对等缓存广播|8004|--|  
 |Windows PE 对等缓存下载|--|8003|  
 
-有关详细信息，请参阅 [Windows PE 对等缓存](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source)。
+有关详细信息，请参阅 [Windows PE 对等缓存](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic#BKMK_PeerCacheRequirements)。
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> 客户端 -- > Configuration Manager 网络设备注册服务 (NDES) 策略模块   
@@ -734,7 +734,7 @@ Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端�
 
 
 #### <a name="bkmk_note5"></a> 注释 5：站点服务器和站点系统之间的通信
-默认情况下，站点服务器和站点系统之间的通信是双向的。 站点服务器启动通信以配置站点系统，然后大部分站点系统连接回站点服务器以发送状态信息。 Reporting Services 点和分发点不会发送状态信息。 如果在安装站点系统后选择站点系统属性页上的“要求站点服务器启动到此站点系统的连接” ，则该系统不会启动与站点服务器的通信。 相反，站点服务器会启动通信，并使用站点系统安装帐户执行站点系统服务器的身份验证。  
+默认情况下，站点服务器和站点系统之间的通信是双向的。 站点服务器启动通信以配置站点系统，然后大部分站点系统连接回站点服务器以发送状态信息。 Reporting Services 点和分发点不会发送状态信息。 如果在安装站点系统后选择站点系统属性页上的“要求站点服务器启动到此站点系统的连接”  ，则该系统不会启动与站点服务器的通信。 相反，站点服务器会启动通信，并使用站点系统安装帐户执行站点系统服务器的身份验证。  
 
 #### <a name="bkmk_note6"></a> 注释 6：动态端口
 动态端口使用由 OS 版本定义的一系列端口号。 这些端口也称为临时端口。 有关默认端口范围的详细信息，请参阅 [Service overview and network port requirements for Windows（Windows 的服务概述和网络端口要求）](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)。  
