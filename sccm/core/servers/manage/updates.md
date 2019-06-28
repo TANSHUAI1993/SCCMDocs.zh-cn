@@ -12,20 +12,20 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bb875529224655fb56aeea5636bf92c7ddaf8b2c
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.sourcegitcommit: 9d186b8b9ff652d5ea8a5d352f3f793f11db66f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/26/2019
 ms.locfileid: "66822064"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新和服务
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-Configuration Manager 使用称为“更新和服务”的控制台中服务方法。 通过此控制台中方法，可轻松找到并安装 Configuration Manager 基础结构的建议更新。 控制台内服务由带外更新（如修补程序）补充。 带外更新适用于需要解决其环境特定问题的客户。  
+Configuration Manager 使用称为“更新和服务”的控制台中服务方法  。 通过此控制台中方法，可轻松找到并安装 Configuration Manager 基础结构的建议更新。 控制台内服务由带外更新（如修补程序）补充。 带外更新适用于需要解决其环境特定问题的客户。  
 
 > [!TIP]  
-> “升级”、“更新”和“安装”这三个术语在 Configuration Manager 中用于描述三个独立概念。 若要详细了解每个术语的使用方法，请参阅[关于升级、更新和安装](/sccm/core/understand/upgrade-update-install)。  
+> “升级”、“更新”和“安装”这三个术语在 Configuration Manager 中用于描述三个独立概念    。 若要详细了解每个术语的使用方法，请参阅[关于升级、更新和安装](/sccm/core/understand/upgrade-update-install)。  
 
 
 ##  <a name="bkmk_Baselines"></a> 基准和更新版本  
@@ -46,7 +46,7 @@ Configuration Manager 使用称为“更新和服务”的控制台中服务方�
 
 - 手动在控制台中将辅助站点更新到新的更新版本。  
 
-安装更新时，更新会将该版本的安装文件存储在站点服务器上名为 CD.Latest 的文件夹中。 有关这些文件的详细信息，请参阅 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)。  
+安装更新时，更新会将该版本的安装文件存储在站点服务器上名为 CD.Latest 的文件夹中  。 有关这些文件的详细信息，请参阅 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)。  
 
 - 在站点恢复期间，使用 CD.Latest 文件夹中的文件。 另外，层次结构不再运行基准版本时，请使用这些文件来安装其他站点。  
 
@@ -71,7 +71,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> <sup>备注 1：</sup>在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，基线介质在以下版本中提供：
+> <sup>备注 1：</sup>  在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，基线介质在以下版本中提供：
 >
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
@@ -95,7 +95,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 #### <a name="how-to-check-the-version"></a>如何检查版本
 
-若要查看 Configuration Manager 站点的版本，请转到控制台左上角的“关于 System Center Configuration Manager”。 对话框会显示站点和控制台版本。  
+若要查看 Configuration Manager 站点的版本，请转到控制台左上角的“关于 System Center Configuration Manager”  。 对话框会显示站点和控制台版本。  
 
 > [!Note]  
 > 从 1802 版开始，控制台版本现在与站点版本略有不同。 控制台的次要版本现在对应于 Configuration Manager 发行版。 例如，在 Configuration Manager 1802 版中，初始站点版本为 5.0.8634.1000，初始控制台版本为 5.**1802**.1082.1700。 内部版本号 (1082) 和修订版本号 (1700) 可能会随 1802 发行版的未来修补程序而变化。
@@ -103,7 +103,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 ## <a name="bkmk_inconsole"></a> 控制台中更新和服务  
 
-使用 Configuration Manager Current Branch 的生产就绪型安装时，可通过“更新和维护服务”渠道获得大部分更新。 此方法可标识、下载并提供适用于当前基础结构版本和配置的更新。 它仅包含 Microsoft 为所有客户推荐的更新。
+使用 Configuration Manager Current Branch 的生产就绪型安装时，可通过“更新和维护服务”渠道获得大部分更新  。 此方法可标识、下载并提供适用于当前基础结构版本和配置的更新。 它仅包含 Microsoft 为所有客户推荐的更新。
 
 这些更新包括：  
 
@@ -132,7 +132,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 Configuration Manager 可为你发现新的更新。 使用 Microsoft 云服务同步 Configuration Manager 服务连接点时，注意以下行为：  
 
-- 当服务连接点处于联机模式时，站点每天都会与 Microsoft 同步。 它会自动确定适用于基础结构的新更新。 要下载更新和可再发行的文件，承载服务连接点站点系统角色的计算机需使用“系统”上下文访问以下 Internet 位置：go.microsoft.com 和 download.microsoft.com。 有关服务连接点使用的其他位置的详细信息，请参阅 [Internet 访问要求](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)。  
+- 当服务连接点处于联机模式时，站点每天都会与 Microsoft 同步。 它会自动确定适用于基础结构的新更新。 要下载更新和可再发行的文件，承载服务连接点站点系统角色的计算机需使用“系统”上下文访问以下 Internet 位置：go.microsoft.com 和 download.microsoft.com  。 有关服务连接点使用的其他位置的详细信息，请参阅 [Internet 访问要求](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)。  
 
 - 当服务连接点处于脱机模式时，请使用服务连接工具手动与 Microsoft 云同步。 有关详细信息，请参阅[使用服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)。  
 
