@@ -2,7 +2,7 @@
 title: 桌面分析的疑难解答
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 06/11/2019
+ms.date: 06/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a64a007462c8619e05b3002611bb72581b6f92
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 271803e42ba20d8d0340754b3167210414423014
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285720"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463811"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析的疑难解答
 
@@ -56,7 +56,7 @@ ms.locfileid: "67285720"
 ### <a name="enable-verbose-logging"></a>启用详细日志记录
 
 1. 对服务连接点，请转到以下注册表项： `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
-2. 设置**LogLevel**值设为 `0`  
+2. 设置**LoggingLevel**值设为 `0`  
 3. （可选）在站点数据库上运行以下 SQL 命令：  
 
     ```SQL
@@ -86,42 +86,43 @@ ms.locfileid: "67285720"
 
 #### <a name="create-app-in-azure-ad"></a>在 Azure AD 中创建应用
 
-1. 打开[Azure 门户](http://portal.azure.com)公司管理员权限的用户，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
+1. 打开[Azure 门户](http://portal.azure.com)具有的用户身份*全局管理员*权限，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新的注册**。  
 
 2. 在中**创建**面板中，配置以下设置：  
 
     - **名称**： 唯一名称标识的应用，例如： `Desktop-Analytics-Connection`  
 
-    - **应用程序类型**:**Web 应用 / API**  
+    - **支持的帐户类型**:**此组织目录中只 (Contoso) 的帐户**
 
-    - **登录 URL**： 此值不是使用由配置管理器中，但所需的 Azure AD。 输入一个唯一且有效的 URL，例如： `https://configmgrapp`  
+    - **重定向 URI （可选）** :**Web**  
+
+    <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-   选择“创建”  。  
+    选择**注册**。  
 
-3. 选择应用，并记下**应用程序 ID**。 此值是用于配置 Configuration Manager 连接的 GUID。  
+3. 选择的应用，请注意**应用程序 （客户端） ID**并**目录 （租户） ID**。 值是用于配置 Configuration Manager 连接的 Guid。  
 
-4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。
+4. 在中**管理**菜单中，选择**证书和机密**。 选择**新的客户端机密**。 输入**描述**，指定过期持续时间，并选择**添加**。 复制**值**的密钥，用于进行配置的配置管理器连接。
 
     > [!Important]  
     > 这是唯一的机会来复制密钥值。 如果您不立即将其复制，需要创建另一个密钥。  
     >
     > 将密钥值保存在安全的位置。  
 
-5. 在应用上**设置**面板中，选择**所需的权限**。  
+5. 在中**管理**菜单中，选择**API 权限**。  
 
-    1. 上**所需的权限**面板中，选择**添加**。  
+    1. 上**API 的权限**面板中，选择**添加权限**。  
 
-    2. 在中**添加 API 访问权限**面板中，**选择 API**。  
+    2. 在中**请求 API 的权限**面板中，切换到**我的组织使用的 Api**。  
 
-    3. 搜索**配置管理器微服务**API。 选择它，，然后选择**选择**。  
+    3. 搜索并选择**配置管理器微服务**API。  
 
-    4. 上**启用访问权限**面板中，选择这两个应用程序权限：**CM 集合数据写入**并**读取 CM 集合数据**。 然后选择**选择**。  
+    4. 选择**应用程序权限**组。 展开**CmCollectionData**，并选择这两个以下权限：**CM 集合数据写入**并**读取 CM 集合数据**。  
 
-    5. 上**添加 API 访问权限**面板中，选择**完成**。  
+    5. 选择**添加权限**。  
 
-6. 上**所需的权限**页上，选择**授予权限**。 选择**是**。  
+6. 上**API 的权限**面板中，选择**授予管理员同意...** .选择**是**。  
 
-7. 复制 Azure AD 租户 id。 此值是用于配置 Configuration Manager 连接的 GUID。 选择**Azure Active Directory**在主菜单中，然后选择**属性**。 复制**Directory ID**值。  
 
 #### <a name="import-app-in-configuration-manager"></a>导入应用程序在配置管理器
 
@@ -182,7 +183,7 @@ ms.locfileid: "67285720"
 
 3. 在中**添加权限**面板中，配置以下设置：  
 
-    - **角色**:**Log Analytics 读者**  
+    - **角色**:**读取器**  
 
     - **分配其访问权限**:**Azure AD 用户、 组或应用程序**  
 

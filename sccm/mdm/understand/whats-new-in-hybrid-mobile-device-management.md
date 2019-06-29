@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 05/28/2019
+ms.date: 06/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da4798b958e0fd66e53024a2a104a67b3c1b93ea
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: c269e5f90588634e51f1d3f1e31767b11a038503
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194594"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463780"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -45,6 +45,14 @@ ms.locfileid: "67194594"
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
+
+## <a name="june-2019"></a>2019 年 6 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>查看新公司门户网页上的所有已安装的应用 
+<!-- 4224326-->
+公司门户网站的新**已安装的应用**页列出了用户的设备安装的所有托管的应用 （必需和可用）。 除了分配类型，用户可以看到应用的发布服务器、 发布、 日期和当前安装状态。 如果尚未对所做的任何应用必需或可用你的用户，则会不看到一条消息说明的任何安装了应用的公司。 若要查看新视图，请转到[公司门户网站](https://portal.manage.microsoft.com)然后单击**已安装的应用**。  
 
 
 ## <a name="may-2019"></a>2019 年 5

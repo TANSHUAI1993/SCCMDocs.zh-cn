@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f49955fed92061fb856a5ff49203f1fa6c9d186
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 0700644f9548ea588821141a34abc6d249909cdf
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285626"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463740"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -101,24 +101,20 @@ ms.locfileid: "67285626"
 
 4. 上**授予用户访问权限**页：
 
-    - **执行要管理目录角色为你的用户桌面 Analytics**:桌面分析自动分配**工作区所有者**并**工作区参与者**到组**Desktop 分析管理员**角色。 如果这些组已经**全局管理员**，没有任何更改。  
+    - **允许桌面 Analytics，以管理你的名义目录角色**:桌面分析自动分配**工作区所有者** **Desktop 分析管理员**角色。 如果这些组已经**全局管理员**，没有任何更改。  
 
-        如果不选择此选项，则桌面分析仍将用户添加为两个安全组的成员。 一个**全局管理员**需要手动分配**Desktop 分析管理员**角色的用户。  
+        如果不选择此选项，桌面分析仍将用户添加为安全组的成员。 一个**全局管理员**需要手动分配**Desktop 分析管理员**角色的用户。  
 
         有关如何将 Azure Active Directory 中的管理员角色权限和权限分配给分配的详细信息**Desktop 分析管理员**，请参阅[在 Azure 中的管理员角色权限Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
 
-    - 桌面分析会预先配置 Azure Active Directory 中的两个安全组：  
+    - 桌面分析会预先配置**工作区所有者**Azure Active Directory 来创建和管理工作区和部署计划中的安全组。 
 
-        - **工作区所有者**:要创建和管理工作区的安全组。 这些帐户需要对 Azure 订阅所有者访问权限。  
-
-        - **工作区参与者**:要创建和管理此工作区中的部署计划的安全组。 它们不需要任何其他的 Azure 访问权限。  
-
-        若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
+        若要将用户添加到组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**部分。 完成后，选择**下一步**。
 
 5. 在到页**设置工作区**:  
 
     > [!Note]  
-    > 完成此步骤作为**工作区所有者**或**参与者**。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。  
+    > 若要完成此步骤中，用户所需**工作区所有者**权限和其他访问权限的 Azure 订阅和资源组。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。  
 
     - 选择你的 Azure 订阅。  
 
@@ -192,7 +188,7 @@ ms.locfileid: "67285626"
     选择**登录**。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称  以供参考。
 
     > [!Note]  
-    > 完成此步骤作为**公司管理员**。Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。  
+    > 完成此步骤作为**全局管理员**。Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。  
 
     选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框  。 在服务器应用对话框中，选择**确定**。 然后选择**下一步**Azure 服务向导的应用页上。  
 
