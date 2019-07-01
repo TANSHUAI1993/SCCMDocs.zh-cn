@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5600743af8acc0da121454aef2d90167c3ded5fa
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: a4dd872e803e1d2925f011a60be5d1ee924ca555
+ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286622"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398852"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -60,6 +60,9 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 ## <a name="install-the-configuration-manager-client"></a>安装 Configuration Manager 客户端
 
 对于第二种方式中基于 Internet 的设备，需要在 Intune 中创建一个应用。 将此应用部署到尚不是 Configuration Manager 客户端的 Windows 10 设备。 
+
+> [!Note]  
+> 在将此应用部署到设备之前，必须确保设备信任 CMG 服务器身份验证证书。 有关详细信息，请参阅[针对客户端的 CMG 受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot)。 如果设备不信任 CMG 服务器身份验证证书，你将在客户端的 ccmsetup.log 中看到 WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA 错误。
 
 ### <a name="get-the-command-line-from-configuration-manager"></a>从 Configuration Manager 获取命令行
 

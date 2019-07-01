@@ -5,18 +5,18 @@ description: 在 Configuration Manager 生产环境中使用软件更新之前�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4100bca2f1cd1f770c2e739ec229dc020d5d8d8
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: 7404e97cd1ef9c68f80904b5ba26373605c7c751
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329577"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285453"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -52,7 +52,7 @@ ms.locfileid: "58329577"
     - 将 WsusPool 队列长度增加到 2000
     - 将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）。 例如，如果默认限制是 1,843,200 KB，则将其增加到 7,372,800。 有关详细信息，请参阅 [Configuration Manager 支持团队博客文章](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/)。  
 
-    要详细了解软件更新点的硬件要求，请参阅[推荐的站点系统硬件](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems)。  
+    要详细了解软件更新点的硬件要求，请参阅[推荐的站点系统硬件](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems)。  
 
 
 ### <a name="bkmk_sum-capacity-obj"></a>软件更新对象的容量规划  
@@ -60,7 +60,7 @@ ms.locfileid: "58329577"
 使用下列容量信息来规划软件更新对象：  
 
 #### <a name="limit-of-1000-software-updates-in-a-deployment"></a>部署中 1000 个软件更新的限制  
-将每个软件更新部署的软件更新数量限制为 1000 个。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
+将每个软件更新部署的软件更新数量限制为 1000 个。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态  。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
 
 配置基线中的软件更新数量也限制为 1000。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
 
@@ -90,7 +90,7 @@ ms.locfileid: "58329577"
 
 在 Configuration Manager 主站点上添加多个软件更新点以提供容错。 软件更新点的故障转移设计与管理点设计中使用的纯随机化模型不同。 与管理点设计不同，当客户端切换到新的软件更新点时，软件更新点设计中存在客户端和网络性能成本。 当客户端切换到新的 WSUS 服务器来扫描软件更新时，将会使目录大小增加，并产生关联的客户端和网络性能需求。 因此，客户端将保留与其成功扫描的最后一个软件更新点的关联。  
 
-你在主站点上安装的第一个软件更新点是在主站点上添加的所有其他软件更新点的同步源。 添加了软件更新点并开始同步后，从“监视”工作区的“软件更新点同步状态”节点中查看软件更新点和同步源的状态。  
+你在主站点上安装的第一个软件更新点是在主站点上添加的所有其他软件更新点的同步源。 添加了软件更新点并开始同步后，从“监视”工作区的“软件更新点同步状态”节点中查看软件更新点和同步源的状态   。  
 
 软件更新点未能配置为站点的同步源时，请手动删除失败的角色。 然后选择新的软件更新点用作同步源。 有关详细信息，请参阅[删除软件更新点站点系统角色](../get-started/remove-a-software-update-point.md)。  
 
@@ -151,25 +151,27 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 活动软件更新点出现问题时，请将 Configuration Manager 客户端切换到新的软件更新点。 仅当客户端从管理点接收多个软件更新点时，才会发生此更改。
 
 > [!IMPORTANT]    
-> 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 在开始此更改之前，请检查边界组配置，确保软件更新点位于正确的边界组中。 有关详细信息，请参阅[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。  
+> 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 在下一步在软件更新扫描周期期间，客户端切换到新的软件更新点。<!-- SCCMDocs#1537 -->
+>
+> 在开始此更改之前，请检查边界组配置，确保软件更新点位于正确的边界组中。 有关详细信息，请参阅[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。  
 >
 > 切换到新的软件更新点会产生额外的网络流量。 流量大小取决于 WSUS 配置设置，例如同步的分类和产品或使用共享 WSUS 数据库。 如果打算切换多个设备，请考虑在维护时段执行此操作。 客户端使用新的软件更新点进行扫描时，这一时间安排可减少对网络的影响。  
 
 #### <a name="process-to-switch-software-update-points"></a>切换软件更新点的流程  
 开始在设备集合上进行此更改。 一旦触发，客户端就会在下次扫描时查找另一个软件更新点。  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性”工作区，并选择“设备集合”节点。  
+1.  在 Configuration Manager 控制台中，转到“资产和符合性”  工作区，并选择“设备集合”  节点。  
 
-2.  选择目标集合。 在功能区的“主页”选项卡上的“集合”组中，单击“客户端通知”，然后单击“切换到下一个软件更新点”。  
+2.  选择目标集合。 在功能区的“主页”选项卡上的“集合”组中，单击“客户端通知”，然后单击“切换到下一个软件更新点”     。  
 
 
 ###  <a name="BKMK_SUP_CrossForest"></a> 不受信任林中的软件更新点  
 
 在站点上创建一个或多个软件更新点，以支持不受信任的林中的客户端。 要添加另一个林中的软件更新点，请先在该林中安装和配置 WSUS 服务器。 然后启动向导以添加具有软件更新点站点系统角色的 Configuration Manager 站点服务器。 在向导中，配置下列设置以成功连接到不受信任林中的 WSUS：  
 
--   指定可访问不受信任的林中的 WSUS 服务器的站点系统安装帐户。  
+-   指定可访问不受信任的林中的 WSUS 服务器的站点系统安装帐户  。  
 
--   指定要连接到 WSUS 帐户的 WSUS 服务器连接帐户。  
+-   指定要连接到 WSUS 帐户的 WSUS 服务器连接帐户  。  
 
 例如，你在具有两个软件更新点（SUP01 和 SUP02）的林 A 中具有主站点。 对于同一主站点，林 B 中还有两个软件更新点（SUP03 和 SUP04）。切换到下一个软件更新点时，客户端会优先考虑来自同一林的服务器。  
 
@@ -221,7 +223,7 @@ Configuration Manager 支持使用 Windows 10 更新的快速安装文件。 快
 #### <a name="clients-download-content-from-the-internet"></a>客户端从 Internet 下载内容
 将软件更新部署到客户端时，请配置部署，使客户端从 Microsoft 更新云服务下载内容。 当客户端无法从另一内容源下载内容时，它们仍可以从 Internet 下载内容。 
 
-自 1806 版本起，无需在部署软件更新时创建部署包。 如果你选择“无部署包”选项，客户端仍可从本地源下载内容（若有），但通常是从 Microsoft 更新服务下载内容。<!--1357933-->
+自 1806 版本起，无需在部署软件更新时创建部署包。 如果你选择“无部署包”  选项，客户端仍可从本地源下载内容（若有），但通常是从 Microsoft 更新服务下载内容。<!--1357933-->
 
 基于 Internet 的客户端始终从 Microsoft 更新云服务中下载内容。 请不要将软件更新部署包分发到云分发点。 使用云分发点存储需要付费，但客户端不会下载这些包。 
 
@@ -235,7 +237,7 @@ Configuration Manager 与 WSUS 集成，后者本身支持 Microsoft 发布的�
 有关详细信息，请参阅 [修改和取代应用程序](/sccm/apps/deploy-use/revise-and-supersede-applications)。
 
 #### <a name="third-party-software-updates"></a>第三方软件更新
-自版本 1806 起，可使用 Configuration Manager 控制台中的“第三方软件更新目录”节点来订阅第三方目录、将更新发布到软件更新点，以及将它们部署到客户端。<!--1352101-->
+自版本 1806 起，可使用 Configuration Manager 控制台中的“第三方软件更新目录”  节点来订阅第三方目录、将更新发布到软件更新点，以及将它们部署到客户端。<!--1352101-->
 
 有关详细信息，请参阅[软件更新](/sccm/sum/deploy-use/third-party-software-updates)。
 
@@ -260,7 +262,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 在满足 WSUS 的最低要求且具备 Configuration Manager 站点系统支持的配置的站点系统上安装软件更新点角色。  
 
--   要详细了解针对 Windows Server WSUS 服务器角色的最低要求，请参阅[查看注意事项和系统要求](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#BKMK_1.1)。  
+-   要详细了解针对 Windows Server WSUS 服务器角色的最低要求，请参阅[查看注意事项和系统要求](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)。  
 
 -   有关 Configuration Manager 站点系统支持的配置的详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
 
@@ -269,11 +271,11 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 在为软件更新点角色配置的所有站点系统服务器上安装受支持的 WSUS 版本。 如果未在站点服务器上安装软件更新点，则请在站点服务器上安装 WSUS 管理控制台。 站点服务器可通过此组件与软件更新点上运行的 WSUS 通信。  
 
-在 Windows Server 2012 或更高版本上使用 WSUS 时，请配置其他权限，让 Configuration Manager 中的 WSUS Configuration Manager 组件能够连接到 WSUS。 此组件定期执行运行状况检查。 请选择下述某个选项来配置所选权限：  
+在 Windows Server 2012 或更高版本上使用 WSUS 时，请配置其他权限，让 Configuration Manager 中的 WSUS Configuration Manager 组件能够连接到 WSUS  。 此组件定期执行运行状况检查。 请选择下述某个选项来配置所选权限：  
 
 -   将“SYSTEM”  帐户添加到“WSUS 管理员”  组  
 
--   添加“NT AUTHORITY\SYSTEM”帐户作为 WSUS 数据库 (SUSDB) 的用户。 配置最低限度的 webService 数据库角色成员身份。  
+-   添加“NT AUTHORITY\SYSTEM”帐户作为 WSUS 数据库 (SUSDB) 的用户  。 配置最低限度的 webService 数据库角色成员身份。  
   
 要详细了解如何在 Windows Server 上安装 WSUS，请参阅[安装 WSUS 服务器角色](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)。  
 
@@ -299,7 +301,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 ####  <a name="BKMK_WSUSandSSL"></a> 决定是否将 WSUS 配置为使用 SSL  
 使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。 有关详细信息，请参阅在 WSUS 文档中的[在 WSUS 服务器上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 一文。 
 
-在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。  
+在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项  。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。  
 
 
 ###  <a name="BKMK_ConfigureFirewalls"></a> 配置防火墙  
@@ -315,44 +317,10 @@ Configuration Manager 管理中心站点上的软件更新点与软件更新点�
 
 
 #### <a name="restrict-access-to-specific-domains"></a>限制对特定域的访问  
-如果组织禁止对活动软件更新点与 Internet 之间的防火墙上的部分地址开放端口和协议，请限制对以下域的访问，以便 WSUS 和自动更新可与 Microsoft 更新通信：  
 
--   `http://windowsupdate.microsoft.com`  
+如果你的组织将网络通信限制与 internet 使用防火墙或代理设备，你需要允许访问 internet 的终结点的活动软件更新点。 然后 WSUS 和自动更新可以与 Microsoft 更新云服务通信。
 
--   `http://*.windowsupdate.microsoft.com`  
-
--   `https://*.windowsupdate.microsoft.com`  
-
--   `http://*.update.microsoft.com`  
-
--   `https://*.update.microsoft.com`  
-
--   `http://*.windowsupdate.com`  
-
--   `http://download.windowsupdate.com`  
-
--   `http://download.microsoft.com`  
-
--   `http://*.download.windowsupdate.com`  
-
--   `http://test.stats.update.microsoft.com`  
-
--   `http://ntservicepack.microsoft.com`  
-
-在下述情况下，可能需要向两个站点系统之间的防火墙添加以下地址： 
-- 如果子站点具有软件更新点 
-- 如果站点上具有基于 Internet 的远程活动软件更新点
-
-  **子站点上的软件更新点**  
-
-- `http://<FQDN for software update point on child site>`  
-
-- `https://<FQDN for software update point on child site>`  
-
-- `http://<FQDN for software update point on parent site>`  
-
-- `https://<FQDN for software update point on parent site>`  
-
+有关详细信息，请参阅[Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum)。
 
 
 ##  <a name="BKMK_SyncSettings"></a> 规划同步设置  
@@ -377,17 +345,17 @@ Configuration Manager 中的软件更新同步会根据所配置的条件下载�
 
     -  在主站点中安装的第一个软件更新点为默认的软件更新点，并且会与管理中心站点同步。 主站点中的其他软件更新点与主站点中的默认软件更新点同步。  
 
-    - 当软件更新点与 Microsoft 更新或上游更新服务器断开连接时，请配置同步源，使其不与已配置的同步源进行同步。 转而，请将其配置为使用 WSUSUtil 工具的导出和导入功能来同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](../get-started/synchronize-software-updates-disconnected.md)。  
+    - 当软件更新点与 Microsoft 更新或上游更新服务器断开连接时，请配置同步源，使其不与已配置的同步源进行同步。 转而，请将其配置为使用 WSUSUtil 工具的导出和导入功能来同步软件更新  。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](../get-started/synchronize-software-updates-disconnected.md)。  
 
--   **WSUS 报告事件**：客户端计算机上的 Windows 更新代理可为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
+-   **WSUS 报告事件**：客户端计算机上的 Windows 更新代理可为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项  。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
 
 
 ###  <a name="BKMK_SyncSchedule"></a> 同步计划  
 
-仅在 Configuration Manager 层次结构中顶级站点的软件更新点上配置同步计划。 配置同步计划后，软件更新点会在你指定的日期和时间与同步源同步。 借助自定义计划，你可同步软件更新来优化环境。 请注意 WSUS 服务器、站点服务器和网络的性能需求。 例如，每周在凌晨 2:00 同步一次。 或者，通过使用 Configuration Manager 控制台中“所有软件更新”或“软件更新组”节点的“同步软件更新”操作，在顶级站点上手动启动同步。  
+仅在 Configuration Manager 层次结构中顶级站点的软件更新点上配置同步计划。 配置同步计划后，软件更新点会在你指定的日期和时间与同步源同步。 借助自定义计划，你可同步软件更新来优化环境。 请注意 WSUS 服务器、站点服务器和网络的性能需求。 例如，每周在凌晨 2:00 同步一次。 或者，通过使用 Configuration Manager 控制台中“所有软件更新”或“软件更新组”节点的“同步软件更新”操作，在顶级站点上手动启动同步    。  
 
 > [!TIP]  
->  使用适合你环境的时间来安排软件更新同步进行运行。 一种常见的方案是将同步计划设置为在每月第二个星期二的 Microsoft 常规软件更新发布后不久运行。 这一天通常被称为“周二补丁日”。 如果使用 Configuration Manager 提供 Endpoint Protection 和 Windows Defender 定义及引擎更新，请考虑将同步计划设置为每天运行一次。  
+>  使用适合你环境的时间来安排软件更新同步进行运行。 一种常见的方案是将同步计划设置为在每月第二个星期二的 Microsoft 常规软件更新发布后不久运行。 这一天通常被称为“周二补丁日”  。 如果使用 Configuration Manager 提供 Endpoint Protection 和 Windows Defender 定义及引擎更新，请考虑将同步计划设置为每天运行一次。  
 
 软件更新点同步成功后，它向子站点发送同步请求。 如果主站点中有其他软件更新点，则向每个软件更新点发送一个同步请求。 此过程在层次结构中的每个站点上重复发生。  
 
@@ -455,7 +423,7 @@ Configuration Manager 支持同步以下更新类别：
 -   如果禁止在生产环境中部署取代的软件更新。  
 
     > [!NOTE]  
-    > - 在 Configuration Manager 1806 版之前，当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 客户端继续扫描已过期的更新，直到手动或通过自定义脚本拒绝更新。  自 Configuration Manager 1806 版之后，Configuration Manager 还会拒绝 WSUS 中被取代的更新。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
+    > - 在 Configuration Manager 1806 版之前，当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”   。 客户端继续扫描已过期的更新，直到手动或通过自定义脚本拒绝更新。  自 Configuration Manager 1806 版之后，Configuration Manager 还会拒绝 WSUS 中被取代的更新。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
     > - 从 Configuration Manager 版本 1810年开始，可以指定用于取代规则行为**功能更新**分开**非功能更新**。
 
 ###  <a name="BKMK_UpdateLanguages"></a> 语言  
@@ -465,9 +433,9 @@ Configuration Manager 支持同步以下更新类别：
 - 为软件更新下载的软件更新文件语言  
 
 #### <a name="software-update-file"></a>软件更新文件  
-在软件更新点的属性中为“软件更新文件”设置配置语言。 此设置提供在站点下载软件更新时可用的默认语言。 每次下载或部署软件更新时，都请修改默认选择的语言。 在下载过程中，会将配置的语言的软件更新文件下载到部署包源位置（如果有采用所选语言的软件更新文件）。 接下来，它们将被复制到站点服务器上的内容库中。 然后，它们将分发到为包配置的分发点。  
+在软件更新点的属性中为“软件更新文件”设置配置语言  。 此设置提供在站点下载软件更新时可用的默认语言。 每次下载或部署软件更新时，都请修改默认选择的语言。 在下载过程中，会将配置的语言的软件更新文件下载到部署包源位置（如果有采用所选语言的软件更新文件）。 接下来，它们将被复制到站点服务器上的内容库中。 然后，它们将分发到为包配置的分发点。  
 
-使用环境中最常用的语言配置软件更新文件语言设置。 例如，你站点中的客户端主要对 Windows 或应用程序使用英语或日语。 该站点几乎不使用其他语言。 下载或部署软件更新时，请仅在“软件更新文件”列中选择英语和日语。 通过此操作，你可使用部署和下载向导的“语言选择”页面上的默认设置。 此操作还可防止下载不需要的更新文件。 请在 Configuration Manager 层次结构中的每个软件更新点上配置此设置。  
+使用环境中最常用的语言配置软件更新文件语言设置。 例如，你站点中的客户端主要对 Windows 或应用程序使用英语或日语。 该站点几乎不使用其他语言。 下载或部署软件更新时，请仅在“软件更新文件”列中选择英语和日语  。 通过此操作，你可使用部署和下载向导的“语言选择”页面上的默认设置  。 此操作还可防止下载不需要的更新文件。 请在 Configuration Manager 层次结构中的每个软件更新点上配置此设置。  
 
 #### <a name="summary-details"></a>摘要详细信息  
 在同步过程中，将采用你指定的语言为软件更新更新摘要详细信息（软件更新元数据）。 元数据提供软件更新相关信息，例如：
@@ -499,7 +467,7 @@ Configuration Manager 支持同步以下更新类别：
 
 使用 Configuration Manager 部署和安装需要重启的软件更新时，客户端会计划挂起的重启并显示重启对话框。
 
-Configuration Manager 软件更新存在挂起的重启时，Windows 10 计算机的 Windows 电源选项中提供“更新并重启”和“更新并关闭”选项。 使用上述任一选项后，计算机重启后不显示重启对话框。
+Configuration Manager 软件更新存在挂起的重启时，Windows 10 计算机的 Windows 电源选项中提供“更新并重启”和“更新并关闭”选项   。 使用上述任一选项后，计算机重启后不显示重启对话框。
 
 
 

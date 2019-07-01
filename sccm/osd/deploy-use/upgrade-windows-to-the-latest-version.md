@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c118c50eccf7fdb443a54f630d2d5698836d44f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 36304b836dbedcb411310d5f0dd8d0f0a8fd91f1
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135494"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194468"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 升级到最新版本
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 本文介绍在 Configuration Manager 中升级计算机操作系统的步骤。 你可以在不同的部署方法（如独立媒体或软件中心）中进行选择。 “就地升级”方案具有以下特点：  
 
@@ -37,7 +37,7 @@ ms.locfileid: "56135494"
 
 
 > [!Note]  
-> 从 1802 版开始，Windows 10 就地升级任务序列支持部署到通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)托管的基于 Internet 的客户端。 此功能可让远程用户更轻松地升级到 Windows 10，无需连接 Intranet。 有关详细信息，请参阅[通过 CMG 部署 Windows 10 就地升级](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg)。 <!-- 1357149 -->
+> 从 1802 版开始，Windows 10 就地升级任务序列支持部署到通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)托管的基于 Internet 的客户端。 此功能可让远程用户更轻松地升级到 Windows 10，无需连接 Intranet。 有关详细信息，请参阅[通过 CMG 部署 Windows 10 就地升级](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy)。 <!-- 1357149 -->
 
 
 
@@ -81,7 +81,7 @@ ms.locfileid: "56135494"
   使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤自动升级操作系统。  
 
    > [!NOTE]  
-   > 通常使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤来创建任务序列，将操作系统升级到 Windows 10。 任务序列包括升级操作系统步骤以及用于处理端到端升级过程的其他建议步骤和组。 但是，可以创建自定义任务序列并添加 [升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)任务序列步骤以升级操作系统。 这是将操作系统升级到 Windows 10 所需的唯一步骤。 如果选择此方法，还要在升级操作系统步骤后添加[重启计算机](../understand/task-sequence-steps.md#BKMK_RestartComputer)步骤来完成升级。 请务必使用“当前安装的默认操作系统”设置，将计算机重启到已安装的操作系统而不是 Windows PE。  
+   > 通常使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤来创建任务序列，将操作系统升级到 Windows 10。 任务序列包括升级操作系统步骤以及用于处理端到端升级过程的其他建议步骤和组。 但是，可以创建自定义任务序列并添加 [升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)任务序列步骤以升级操作系统。 这是将操作系统升级到 Windows 10 所需的唯一步骤。 如果选择此方法，还要在升级操作系统步骤后添加[重启计算机](../understand/task-sequence-steps.md#BKMK_RestartComputer)步骤来完成升级。 请务必使用“当前安装的默认操作系统”  设置，将计算机重启到已安装的操作系统而不是 Windows PE。  
 
 
 

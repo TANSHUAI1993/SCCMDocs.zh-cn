@@ -2,7 +2,7 @@
 title: 创建和运行脚本
 titleSuffix: Configuration Manager
 description: 在客户端设备上创建并运行 Powershell 脚本。
-ms.date: 03/13/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc22c66cfa4cf4e628dce7bf3cb268464610c933
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 7dc4351cf092437d81f0f30ed6b450ed1cb1efe2
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198439"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286537"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -72,11 +72,11 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 ## <a name="run-script-authors-and-approvers"></a>“运行脚本”的创建者和审批者
 
-“运行脚本”使用了“脚本创建者”和“脚本审批者”的概念，分别作为实现脚本和执行脚本的角色   。 将创建者和审批者两个角色进行区分，使“运行脚本”这个强大的工具能够进行重要过程检查。 还有一个“脚本运行者”角色允许执行脚本，但不允许创建或批准脚本  。 请参阅[为脚本创建安全角色](#bkmk_ScriptRoles)。
+“运行脚本”使用了“脚本创建者”和“脚本审批者”的概念，分别作为实现脚本和执行脚本的角色   。 将创建者和审批者两个角色进行区分，使“运行脚本”这个强大的工具能够进行重要过程检查。 还有“脚本运行器”  角色，它允许执行脚本，但不允许创建或审批脚本。 请参阅[为脚本创建安全角色](#bkmk_ScriptRoles)。
 
 ### <a name="scripts-roles-control"></a>脚本角色控制
 
-默认情况下，用户不能批准他们创建的脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以关闭辅助批准，方便进行测试。
+默认情况下，用户不能批准他们创建了一个脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以禁用辅助审批，以方便进行测试。
 
 ### <a name="approve-or-deny-a-script"></a>“批准”或“拒绝”脚本
 
@@ -85,7 +85,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 1. 在 Configuration Manager 控制台中，单击“软件库”  。
 2. 在“软件库”  工作区中，单击“脚本”  。
 3. 在“脚本”  列表中，选择想要批准或拒绝的脚本，然后在“主页”  选项卡“脚本”  组中，单击“批准/拒绝”  。
-4. 在“批准或拒绝脚本”对话框中，选择“批准”或“拒绝”脚本    。 （可选）输入有关你决定的注释。  如果拒绝脚本，它将无法在客户端设备上运行。 <br>
+4. 在“批准或拒绝脚本”对话框中，选择“批准”或“拒绝”脚本    。 （可选）输入有关你决定的注释。  如果你拒绝脚本，它将无法在客户端设备上运行。 <br>
 ![脚本 - 批准](./media/run-scripts/RS-approval.png)
 1. 完成向导。 在“脚本”  列表中可以看到“批准状态”  列中发生的变化，具体要取决于你执行的操作。
 
@@ -106,7 +106,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 “运行脚本”使用安全作用域（Configuration Manager 中的一项现有功能）通过分配代表用户组的标记来控制脚本的创作和执行。 有关使用安全作用域的详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。
 
 ## <a name="bkmk_ScriptRoles"></a>为脚本创建安全角色
-默认情况下，用于运行脚本的三个安全角色不在 Configuration Manager 中创建。 要创建脚本运行者、脚本创建者和脚本审批者角色，请执行下列所述步骤。
+默认情况下，三个用于运行脚本的安全角色不是在 Configuration Manager 中创建的。 要创建脚本运行者、脚本创建者和脚本审批者角色，请执行下列所述步骤。
 
 1. 在 Configuration Manager 控制台中，转到“管理” >“安全性” >“安全角色”   
 2. 右键单击一个角色，然后单击“复制”  。 复制的角色已分配有权限。 确保仅获取所需的权限。 
@@ -172,7 +172,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 5. 完成向导。 新脚本将显示在“脚本”  列表，且状态显示为“正等待审批”  。 在客户端设备上运行此脚本之前，必须先批准它。 
 
 > [!IMPORTANT]
-> 避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](/sccm/core/clients/manage/manage-clients#Restart-clients)可以帮助识别需要重启的设备。 
+> 避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](/sccm/core/clients/manage/manage-clients#restart-clients)可以帮助识别需要重启的设备。 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>脚本参数
@@ -181,7 +181,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 在“创建脚本”  对话框中，单击“脚本”下的“脚本参数”   。
 
-你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。 如果脚本中有默认参数，它将在参数 UI 中枚举，你可以设置它。 Configuration Manager 不会覆盖默认值，因为它永远不会直接修改脚本。 可以将此视为 UI 中提供的“预先填充的建议值”，但 Configuration Manager 在运行时不提供对“默认”值的访问。 这可以通过编辑脚本以具有正确的默认值来解决。 <!--17694323-->
+你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。 如果脚本中有默认参数，它将在参数 UI 中进行枚举，你可以设置它。 Configuration Manager 不会覆盖默认值，因为它永远不会直接修改脚本。 可以将此视为 UI 中提供的“预先填充的建议值”，但 Configuration Manager 在运行时不提供对“默认”值的访问。 这可以通过编辑脚本以具有正确的默认值来解决。 <!--17694323-->
 
 >[!IMPORTANT]
 > 参数值不能包含单引号。 </br></br>
@@ -190,11 +190,11 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 ### <a name="parameter-validation"></a>参数验证
 
-脚本中的每一个参数都有一个“脚本参数属性”对话框，可以在此处添加该参数的验证信息  。 添加验证信息后，如果为参数输入了和验证不符的值，那么将收到错误消息。
+脚本中的每一个参数都有一个“脚本参数属性”对话框，可以在此处添加该参数的验证信息  。 在添加验证后，若要输入不符合验证要求的参数值，应该会看到错误。
 
 #### <a name="example-firstname"></a>示例：FirstName 
 
-在此示例中，你可以设置字符串参数“FirstName”的属性  。
+在此示例中，可以设置字符串参数 FirstName  的属性。
 
 ![脚本参数 - 字符串](./media/run-scripts/RS-parameters-string.png)
 
@@ -241,9 +241,32 @@ New-Item $FileName -type file
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
+## <a name="bkmk_psedit"></a> 编辑或复制 PowerShell 脚本
+<!--3705507-->
+（随版本 1902 一起引入）   
+可以编辑  或复制  用于“运行脚本”  功能的现有 PowerShell 脚本。 现在可以直接编辑想要更改的脚本，而无需重新创建脚本。 这两种操作都使用与创建新脚本时所使用的相同向导体验。 编辑或复制脚本时，Configuration Manager 不会保留审批状态。
+
+> [!Tip]  
+> 请勿编辑在客户端上主动运行的脚本。 它们不会完成原始脚本的运行，并且可能无法从这些客户端获取预期的结果。  
+
+### <a name="edit-a-script"></a>编辑脚本
+
+1. 转到**脚本**节点下的**软件库**工作区。
+1. 选择要编辑，然后单击的脚本**编辑**功能区中。 
+1. 更改或重新导入你的脚本**脚本的详细信息**页。
+1. 单击**下一步**若要查看**摘要**然后**关闭**完成后编辑。
+
+### <a name="copy-a-script"></a>复制脚本
+
+1. 转到**脚本**节点下的**软件库**工作区。
+1. 选择的脚本进行复制，然后单击**复制**功能区中。
+1. 重命名中的脚本**脚本名称**字段并使你可能需要的任何其他编辑。
+1. 单击**下一步**若要查看**摘要**然后**关闭**完成后编辑。
+
+
 ## <a name="run-a-script"></a>运行脚本
 
-经批准后，脚本就可以在单个设备或集合上运行。 脚本开始执行后，它通过会在一小时内超时的高优先级系统快速启动。 然后使用状态消息系统返回脚本结果。
+经批准后，脚本就可以在单个设备或集合上运行。 在脚本开始执行后，它便会通过一小时超时的高优先级系统快速启动。 然后使用状态消息系统返回脚本结果。
 
 要为脚本选择目标集合：
 
@@ -263,7 +286,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>脚本监视
 
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 脚本状态数据将作为[删除过期客户端操作维护任务](../../core/servers/manage/reference-for-maintenance-tasks.md)的一部分或删除脚本任务的一部分进行清理。<br>
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 自版本 1710 起，可以在脚本执行时实时监视脚本，也可以返回到给定“运行脚本”功能执行报告。 脚本状态数据将作为[删除过期客户端操作维护任务](../../core/servers/manage/reference-for-maintenance-tasks.md)的一部分或删除脚本任务的一部分进行清理。<br>
 
 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -305,13 +328,13 @@ Microsoft Windows 10 Enterprise
 
 - 从 Configuration Manager 1802 版开始，脚本输出重新使用 JSON 格式。 此格式一致返回可读的脚本输出。 
 - 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
-- 由于脚本输出截断为 4 KB，因此请避免返回大型脚本输出。 <!--508488-->
-- 在低级别版本的客户端上运行 Configuration Manager 1802 版或更高版本时，某些脚本输出格式设置功能可能不可用。 <!--508487-->
+- 避免返回大型脚本输出，因为它会截断为 4KB。 <!--508488-->
+- 在低级别版本的客户端上运行 Configuration Manager 版本 1802 或更高版本时，一些包含脚本输出格式设置的功能不可用。 <!--508487-->
     - 如果 Configuration Manager 客户端版本低于 1802，你会得到一个字符串输出。
     -  对于 Configuration Manager 客户端 1802 及更高版本，你会得到 JSON 格式。
         - 例如，你可能得到两个结果，在一个客户端版本上显示 TEXT，在另一个版本上显示 "TEXT"（输出括在双引号中），这两个结果将作为两个不同的类别放入图表中。
-        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含版本低于 1802 的客户端，另一个集合包含 1802 及更高版本的客户端。 或者，你可以将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 
-- 将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 <!--508377-->
+        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含版本低于 1802 的客户端，另一个集合包含 1802 及更高版本的客户端。 也可以将脚本中的枚举对象转换为字符串值，这样它们就能以 JSON 格式正确显示。 
+- 将脚本中的枚举对象转换为字符串值，这样它们就能以 JSON 格式正确显示。 <!--508377-->
 
    ![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
 
