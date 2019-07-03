@@ -3,6 +3,12 @@ title: System Center Configuration Manager
 summary: 关于 Configuration Manager 的官方产品文档
 metadata:
   ms.topic: hub-page
+  ms.openlocfilehash: 5839951dd659da3f88598def010330a50b1b4cf9
+  ms.sourcegitcommit: 65c8b29797bc0173f97b1b1144492d093a30ebb7
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 06/24/2019
+  ms.locfileid: "67344723"
 highlightedContent:
   items:
   - title: 新增功能
@@ -212,9 +218,3 @@ additionalContent:
 
         [Facebook 上的 ConfigMgr 专业人员组](https://www.facebook.com/groups/ConfigMgr2012) <br/>
   footer: 在我们的网站上发现了问题？ [请告诉我们](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)！
-ms.openlocfilehash: 5839951dd659da3f88598def010330a50b1b4cf9
-ms.sourcegitcommit: 65c8b29797bc0173f97b1b1144492d093a30ebb7
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344723"
