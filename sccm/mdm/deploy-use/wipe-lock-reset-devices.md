@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc2b995c763aa54e1d47ee38ab2d250554f5a29
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a50dd4df66292837cd7a3667a0790c04ebddb9a
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136018"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516020"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>使用 Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
 
@@ -51,11 +51,11 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 #### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择需停用/擦除的设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“停用/擦除”  。  
 
 
 
@@ -140,11 +140,11 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 #### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择需停用/擦除的设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“停用/擦除”  。  
 
 
 
@@ -152,7 +152,7 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 Windows 8.1 和 Windows RT 8.1 支持选择性擦除加密文件系统 (EFS) 加密的内容。 下列各项适用于启用 EFS 的内容的选择性擦除：  
 
-- 仅选择性擦除由 EFS 通过与 Intune 帐户相同的 Internet 域保护的应用和数据。 有关详细信息，请参阅 [设备数据管理的 Windows 选择性擦除](http://technet.microsoft.com/library/dn486874.aspx)。  
+- 仅选择性擦除由 EFS 通过与 Intune 帐户相同的 Internet 域保护的应用和数据。 有关详细信息，请参阅 [设备数据管理的 Windows 选择性擦除](https://technet.microsoft.com/library/dn486874.aspx)。  
 
 - 如果对与 EFS 关联的域进行了任何更改，则更改可能要花费长达 48 小时，之后才能对使用新域的应用和数据进行选择性擦除。  
 
@@ -173,7 +173,7 @@ EFS 选择性擦除当前支持的数据和应用：
 
 - 确保通过移动设备应用管理分发了应用，以便成功擦除应用。  
 
-- 对于 iOS，将设置“允许备份到 iCloud”配置为“不允许”，以使用户无法使用 iCloud 还原内容。  
+- 对于 iOS，将设置“允许备份到 iCloud”  配置为“不允许”  ，以使用户无法使用 iCloud 还原内容。  
 
 - 如果帐户已停用一年，那么 Intune 将停用该帐户，并将执行选择性擦除。  
 
@@ -200,19 +200,19 @@ EFS 选择性擦除当前支持的数据和应用：
 
 #### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 中远程重置移动设备上的密码  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择要重置密码的一台或多台设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“密码重置”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“密码重置”  。  
 
 #### <a name="to-show-the-state-of-the-passcode-reset"></a>显示密码重置状态  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择要显示密码重置状态的一台或多台设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“显示密码状态”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“显示密码状态”  。  
 
 
 
@@ -234,22 +234,22 @@ EFS 选择性擦除当前支持的数据和应用：
 
 #### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>通过 Configuration Manager 控制台远程锁定移动设备  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择要锁定的一台或多台设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“远程锁定”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“远程锁定”  。  
 
 #### <a name="to-show-the-state-of-the-remote-lock"></a>显示远程锁定状态  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
 
 2. 选择要显示远程锁定状态的设备。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“显示远程锁定状态”。  
+3. 选择“设备组”  中的“远程设备操作”  ，然后选择“显示远程锁定状态”  。  
 
 
 
 ## <a name="see-also"></a>另请参阅  
 
-[Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)（设备数据管理的 Windows 选择性擦除）   
+[Windows Selective Wipe for Device Data Management](https://technet.microsoft.com/library/dn486874.aspx)（设备数据管理的 Windows 选择性擦除）   

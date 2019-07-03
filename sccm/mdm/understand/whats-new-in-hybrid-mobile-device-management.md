@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 06/24/2019
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c269e5f90588634e51f1d3f1e31767b11a038503
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 2dd14e7beaef6fe636ea220de557a866e547a602
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463780"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516228"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -50,9 +50,23 @@ ms.locfileid: "67463780"
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>查看新公司门户网页上的所有已安装的应用 
+#### <a name="new-view-lets-users-see-all-managed-apps-installed-on-device"></a>新视图允许用户查看所有托管的设备上安装的应用程序
+
+<!-- 2352913 -->
+对于 Windows 公司门户现在列出了所有托管的应用 （必需和可用） 安装在用户的设备上的。 用户还可以看到尝试和挂起的应用安装和及其当前状态。 如果尚未对应用程序必需或可用你的用户，他们将不看到一条消息说明的任何安装了应用的公司。
+
+若要查看新视图，转到公司门户的导航窗格中，并选择**应用程序** > **已安装的应用**。 然后进行排序或筛选该列表由以下属性之一：
+
+- 名称
+- 键入
+- 发布服务器
+- 上次更新时间
+- 安装状态
+
+#### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>查看新公司门户网页上的所有已安装的应用
+
 <!-- 4224326-->
-公司门户网站的新**已安装的应用**页列出了用户的设备安装的所有托管的应用 （必需和可用）。 除了分配类型，用户可以看到应用的发布服务器、 发布、 日期和当前安装状态。 如果尚未对所做的任何应用必需或可用你的用户，则会不看到一条消息说明的任何安装了应用的公司。 若要查看新视图，请转到[公司门户网站](https://portal.manage.microsoft.com)然后单击**已安装的应用**。  
+公司门户网站的新**已安装的应用**页列出了用户的设备安装的所有托管的应用 （必需和可用）。 除了分配类型，用户可以看到应用的发布服务器、 发布、 日期和当前安装状态。 如果尚未对所做的任何应用必需或可用你的用户，则会不看到一条消息说明的任何安装了应用的公司。 若要查看新视图，请转到[公司门户网站](https://portal.manage.microsoft.com)，然后选择**已安装的应用**。  
 
 
 ## <a name="may-2019"></a>2019 年 5
@@ -119,9 +133,6 @@ Windows 公司门户应用现在具有标记为一个新页面**设备**。 **�
 
 <!-- 2751523 -->
 在使用 Intune 中注册的 Windows 设备[Windows 批量注册](https://docs.microsoft.com/intune/windows-bulk-enroll)（预配包） 将能够使用公司门户应用安装可用的应用程序。 有关公司门户应用的详细信息，请参阅[手动添加 Windows 10 公司门户](https://docs.microsoft.com/intune/store-apps-company-portal-app)并[如何配置 Microsoft Intune 公司门户应用](https://docs.microsoft.com/intune/company-portal-app)。
-
-> [!Note]  
-> 此功能不是尚未完全部署到所有客户。 如果无法在批量注册设备上使用公司门户，你可能需要等待，直到此更改会发布到你的帐户。
 
 #### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>使用自动生成的背景显示应用程序图标
 
