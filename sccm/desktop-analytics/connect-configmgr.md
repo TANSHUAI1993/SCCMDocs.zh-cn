@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb16dd6e802c58f042b7eee8ae782e7118dabf1c
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 098c83678585984bbe3dbeddf167e24116afd86b
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159187"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562026"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析
 
@@ -61,7 +61,7 @@ ms.locfileid: "67159187"
 
 4. 如果有现有应用程序想要重复使用此服务，从列表中，选择它，然后选择**确定**。  
 
-5. 在大多数情况下，可以使用此向导创建桌面 Analytics 连接的应用。 选择“创建”  。<!-- 3572123 -->  
+5. 在大多数情况下，可以使用此向导创建桌面 Analytics 连接的应用。 选择“创建”。 <!-- 3572123 -->  
 
     > [!Tip]  
     > 如果无法通过此向导创建应用程序，可以在 Azure AD 中手动创建应用程序，然后导入 Configuration Manager。 有关详细信息，请参阅[创建和导入应用程序为 Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager)。  
@@ -107,6 +107,16 @@ ms.locfileid: "67159187"
     - **目标集合中的设备使用用户身份验证代理进行出站通信**:默认情况下，此值是**否**。 如果需要在环境中，将设置为**是**。  
 
     - **选择要与桌面 Analytics 同步的特定集合**:选择**外**以包括其他集合从你**目标集合**层次结构。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  <!-- 4097528 -->  
+
+        > [!Tip]  
+        > 选择集合窗口中显示仅受限制的集合**目标集合**。
+        >
+        > 在以下示例中，集合选择作为目标集合。 然后添加其他集合，可看到集合： CollectionB 和 CollectionC。 不能添加 CollectionD。
+        >
+        > - 集合： 受限制**所有系统**集合
+        >     - CollectionB： 受集合限制
+        >         - 受 CollectionB CollectionC： 限制
+        > - CollectionD： 受**所有系统**集合
 
         > [!Important]  
         > 这些集合继续作为其成员身份的更改进行同步。 例如，你的部署计划使用一组与 Windows 7 的成员身份规则。 在这些设备升级到 Windows 10 和 Configuration Manager 将评估集合成员身份时，这些设备将删除超出集合和部署计划。  

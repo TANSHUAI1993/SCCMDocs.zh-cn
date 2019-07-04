@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 用于共享桌面分析诊断数据的参考指南。
-ms.date: 06/17/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e7456472c17d61ce42ffaf2109a3254bde1280
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
-ms.translationtype: HT
+ms.openlocfilehash: c5ba70b39330fd21077f5b7997e8aa92a1c57f42
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551260"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561999"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
@@ -33,6 +33,12 @@ ms.locfileid: "67551260"
 当 Configuration Manager 将使用 Desktop 分析时，你还使用它来管理设备上的诊断数据级别。 为获得最佳体验，使用配置管理器。
 
 在 Desktop 分析的基本功能工作**基本**诊断数据级别。 不会为更新的设备获取使用情况或运行状况数据，而不启用**增强 （受限）** 级别。 Microsoft 建议您启用**增强 （受限）** 诊断数据级别。 有关详细信息，请参阅[Windows 10 增强的诊断数据的事件和使用的 Windows Analytics 字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields))。
+
+> [!Important]   
+> Microsoft 已为您提供工具和资源，让你控制您的隐私的有力承诺。 因此，Microsoft 不会从位于欧洲国家/地区 （EEA 和瑞士） 设备收集以下数据：
+>
+> - 从 Windows 8.1 设备的 Windows 诊断数据
+> - 适用于 Windows 7 的应用使用情况数据
 
 有关详细信息，请参阅[Desktop 分析隐私](/sccm/desktop-analytics/privacy)。
 
