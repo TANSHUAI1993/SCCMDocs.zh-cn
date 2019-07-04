@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271803e42ba20d8d0340754b3167210414423014
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 246ee2c314df3d942d40d16ac9953580fed32803
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463811"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551246"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析的疑难解答
 
@@ -57,14 +57,6 @@ ms.locfileid: "67463811"
 
 1. 对服务连接点，请转到以下注册表项： `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. 设置**LoggingLevel**值设为 `0`  
-3. （可选）在站点数据库上运行以下 SQL 命令：  
-
-    ```SQL
-    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
-    ```
-
-4. 重新启动**SMS_EXECUTIVE**服务在站点服务器上
-
 
 
 ## <a name="bkmk_AzureADApps"></a> Azure AD 应用程序

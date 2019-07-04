@@ -1,7 +1,7 @@
 ---
-title: 为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
+title: 为使用 Intune 管理的 iOS 和 macOS 设备创建配置项目
 titleSuffix: Configuration Manager
-description: 使用 System Center Configuration Manager iOS 和 Mac OS X 配置项管理 iOS and Mac OS X 设备的设置。
+description: 使用 System Center Configuration Manager iOS 和 macOS 配置项目来管理 iOS 和 macOS 设备的设置。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cadeb04e52e584cf260e84ee4bdd4ea6a07de23f
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: a528ef0e53744f5cac466cd08bf2426089a15907
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748314"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551508"
 ---
-# <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
+# <a name="how-to-create-configuration-items-for-ios-and-macos-devices-managed-with-intune"></a>如何创建使用 Intune 管理的 iOS 和 macOS 设备的配置项目
 
-使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
+使用 System Center Configuration Manager **iOS 和 macOS**配置项目管理由 Configuration Manager 在 Microsoft Intune 或本地管理中注册的 iOS 和 macOS 设备的设置。  
   
-## <a name="create-an-ios-and-mac-os-x-configuration-item"></a>创建 iOS 和 Mac OS X 配置项目  
+## <a name="create-an-ios-and-macos-configuration-item"></a>创建 iOS 和 macOS 的配置项目  
   
 1. 在 Configuration Manager 控制台中单击“资产和符合性”  。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "66748314"
   
 4. 在“创建配置项目向导”  的“常规”  页面上，指定配置项目的名称和可选描述。  
   
-5. 在“指定要创建的配置项目的类型”  下，选择“iOS 和 Mac OS X”  。  
+5. 下**指定你想要创建的配置项目的类型**，选择**iOS 和 macOS**。  
   
 6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”  。  
   
-7. 在向导的“支持的平台”  页面上，选择将评估配置项目的特定 iOS 或 Mac OS X 平台。  
+7. 上**支持的平台**页将评估配置项目的向导，请选中特定 iOS 或 macOS 平台。  
   
-8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [iOS 和 Mac OS X 配置项目设置参考](#ios-and-mac-os-x-configuration-item-settings-reference) 以了解详细信息，然后单击“下一步”  。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅[iOS 和 macOS 的配置项目设置参考](#ios-and-mac-os-x-configuration-item-settings-reference)此主题以了解详细信息，然后单击**下一步**。  
   
    > [!TIP]  
    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  复选框。  
@@ -66,7 +66,7 @@ ms.locfileid: "66748314"
   
     可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
   
-##  <a name="ios-and-mac-os-x-configuration-item-settings-reference"></a>iOS 和 Mac OS X 配置项目设置参考  
+##  <a name="ios-and-macos-configuration-item-settings-reference"></a>iOS 和 macOS 的配置项目设置参考  
   
 ###  <a name="password"></a>Password  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66748314"
 |**修改密码**(仅限监控模式)|允许添加、更改或删除设备密码。|
   
 ###  <a name="device"></a>设备  
- 这些设置适用于 iOS 和 Mac OS X 设备。  
+ 这些设置适用于 iOS 和 macOS 设备。  
   
 |设置名|详细信息|  
 |------------------|-------------|  
@@ -172,7 +172,7 @@ ms.locfileid: "66748314"
 |**照片同步**|允许照片同步到云服务。| 
 |**iCloud 照片库**|如果设置为“否”  ，则禁止使用允许用户将照片和视频存储在云中的 iCloud 照片库。 如果设置为“否”  ，则从 iCloud 照片库未完全下载到设备的任何照片将从设备中删除。|
 |**iCloud 照片共享**|设置为“否”  以禁用设备上的 iCloud 照片共享。|
-|**提交以继续其他设备上的活动**|允许用户继续在其他 iOS 或 Mac OS X 设备上的 iOS 设备上启动的工作。|
+|**提交以继续其他设备上的活动**|允许用户继续的 iOS 设备上另一台 iOS 或 macOS 设备上开始的工作。|
 |**将数据从托管应用同步到 iCloud**|允许你使用 Intune 管理的应用将数据同步到用户的 iCloud 帐户。|
 
   
@@ -258,14 +258,14 @@ ms.locfileid: "66748314"
   
   有关如何使用报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
   
-###  <a name="compliant-and-noncompliant-apps-mac-os-x"></a>符合和不符合的应用 (Mac OS X)  
- 允许你指定公司里符合或不符合 Mac OS X 应用的列表。 然后可使用报表来显示安装了不符合应用的设备和关联的用户。  
+###  <a name="compliant-and-noncompliant-apps-macos"></a>符合和不符合应用 (macOS)  
+ 允许你指定符合和不符合公司的 macOS 应用的列表。 然后可使用报表来显示安装了不符合应用的设备和关联的用户。  
   
  不能在同一配置项目中同时指定符合和不符合应用。  
   
 #### <a name="to-specify-the-compliant-or-noncompliant-apps-list"></a>指定符合和不符合应用列表  
   
-1. 在“符合和不符合的应用 (Mac OS X)”  页面上，指定以下信息：  
+1. 上**符合和不符合应用 (macOS)** 页上，指定以下信息：  
   
    - **不符合应用列表** - 如果想要指定将报告为不符合应用（如果用户安装）的应用的列表，则选择此选项。  
   
@@ -299,15 +299,15 @@ ms.locfileid: "66748314"
   
   有关如何使用报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
   
-### <a name="ios-and-mac-os-x-custom-profile-settings"></a>iOS 和 Mac OS X 自定义配置文件设置  
- 使用“iOS 和 Mac OS X 自定义配置文件设置”  将你借助 [Apple 配置器工具](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) 创建的设置部署到 iOS 和 Mac OS X 设备。 使用此工具可以创建控制这些设备的操作的许多设置，并将其导出到配置的配置文件中。 然后可将此配置的配置文件导入到 iOS 和 Mac OS X 自定义配置文件，并将这些设置部署到组织中的用户和设备。  
+### <a name="ios-and-macos-custom-profile-settings"></a>iOS 和 macOS 自定义配置文件设置  
+ 使用**iOS 和 macOS 自定义配置文件**将使用创建的设置部署[Apple 配置器工具](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)到 iOS 和 macOS 设备。 使用此工具可以创建控制这些设备的操作的许多设置，并将其导出到配置的配置文件中。 然后可以导入此配置配置文件转换为 iOS 和 macOS 自定义配置文件，并在组织中部署到用户和设备的设置。  
   
 > [!NOTE]  
->  确保在要部署配置文件的设备上从 Apple 配置器工具导出的设置与 iOS 或 Mac OS X 版本兼容。 有关如何解析不兼容的设置的信息，可搜索 [Apple 开发人员](https://developer.apple.com/) 网站上的配置的配置文件参考和移动设备管理协议参考。  
+>  确保从 Apple Configurator 工具导出的设置与 iOS 或 macOS 上部署该配置文件的设备的版本兼容。 有关如何解析不兼容的设置的信息，可搜索 [Apple 开发人员](https://developer.apple.com/) 网站上的配置的配置文件参考和移动设备管理协议参考。  
   
-#### <a name="to-create-an-ios-and-mac-os-x-custom-profile"></a>若要创建 iOS 和 Mac OS X 自定义配置文件  
+#### <a name="to-create-an-ios-and-macos-custom-profile"></a>若要创建 iOS 和 macOS 自定义配置文件  
   
-1.  在“创建配置项目向导”  的“配置 iOS 和 Mac OS X 自定义配置文件设置”  页面上，指定以下信息：  
+1.  上**配置 iOS 和 macOS 自定义配置文件设置**页**创建配置项目向导**，指定以下信息：  
   
     -   **自定义配置文件名称（向用户显示）** - 提供策略的名称，该名称将显示在设备上以及 Configuration Manager 报表中。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "66748314"
     -   **报表的不符合性严重性** - 指定此合规性策略被评估为不符合时报告的严重性级别。 可用的严重性级别如下：  
   
         > [!NOTE]  
-        >  当 Mac OS X 设备处于休眠模式时，策略和配置文件无法被传递，也无法列出它们的清单。 因此在下一次从休眠模式中唤醒设备之前，Configuration Manager 控制台可能会暂时显示状态“策略设置错误”。  
+        >  MacOS 设备处于睡眠模式下时，无法传递或已列出清单策略和配置文件。 因此在下一次从休眠模式中唤醒设备之前，Configuration Manager 控制台可能会暂时显示状态“策略设置错误”。  
   
         -   **不报告** 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   

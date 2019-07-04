@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3eff032113b92055b32cb81c6cae9363c368a421
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
-ms.translationtype: MT
+ms.openlocfilehash: 94e7456472c17d61ce42ffaf2109a3254bde1280
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159095"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551260"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据
 
@@ -73,9 +73,6 @@ ms.locfileid: "67159095"
 | `https://kmwatsonc.events.data.microsoft.com` | 在线崩溃分析。 所需的 Windows 10，1809年或更高版本中的设备运行状况报告。 |
 | `https://oca.telemetry.microsoft.com`  | 在线崩溃分析 (OCA)。 需要用来监视部署于 Windows 10，版本 1803年或更早版本的运行状况。 |
 | `https://login.live.com` | 所需的桌面 Analytics 提供更可靠的设备标识。 <br> <br>若要禁用最终用户的 Microsoft 帐户访问，而不是阻塞此终结点使用策略设置。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
-| `https://nexusrules.officeapps.live.com` | 将来提供的功能 <!-- Used to request dynamic diagnostic data events from Office clients. This data is useful for drill-down and diagnostics purposes in the Desktop Analytics portal --> |
-| `https://nexus.officeapps.live.com` | 将来提供的功能 <!-- Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 earlier than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
-| `https://office.pipe.aria.microsoft.com` | 将来提供的功能 <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | 用于自动检索设置，例如 CommercialId 附加到 Desktop 分析 （在 Configuration Manager 服务器角色） 的层次结构时。 |
 | `https://fef.msua06.manage.microsoft.com` | 用于同步设备集合成员身份、 部署计划和使用 Desktop 分析 （在 Configuration Manager 服务器角色） 的设备就绪状态。 |
 

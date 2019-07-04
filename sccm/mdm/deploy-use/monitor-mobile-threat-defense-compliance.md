@@ -11,46 +11,46 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 9b77fabc6ea4f5823777e932011313c5e2de1acf
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228399"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551309"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**监视移动威胁防御符合性**
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 ## <a name="to-monitor-the-overall-compliance-status"></a>监视整体符合性状态
 
 监视移动威胁防御状态：
 
-1.  在 Configuration Manager 控制台中，单击“监视”工作区。
+1.  在 Configuration Manager 控制台中，单击“监视”  工作区。
 
-2.  在“监视”工作区中，单击“安全”节点。
+2.  在“监视”  工作区中，单击“安全”  节点。
 
 可以看到含有不同威胁级别的符合性状态的摘要，该摘要以可视化图的形式显示。 可以单击图表的独立部分以查看详细信息，如： 
 
 - 被平台报告为不符合的设备数
 - 与设备符合性状态相关的任何错误
 
-![](http://i.imgur.com/bmPsiWk.png)
+![设备威胁保护仪表板](device-threat-protection-dashboard.png)
 
 ## <a name="to-monitor-the-individual-compliance-status"></a>监视单个合规性状态
 
 还可以看到各个设备状态：
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”工作区。
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”  工作区。
 
-2.  单击“设备”。
+2.  单击“设备”  。
 
 > [!TIP] 
-> 可以添加“设备威胁合规性”和“设备威胁级别”列，以查看状态。 默认情况下，这些列不会显示。
+> 可以添加“设备威胁合规性”  和“设备威胁级别”  列，以查看状态。 默认情况下，这些列不会显示。
 
 ## <a name="device-threat-protection-tab"></a>设备威胁防护选项卡
 
-此外，在“设备”屏幕上，可以选择特定设备，然后单击“设备威胁防护”选项卡，以提供有关设备符合性状态的更多信息。 查看下面的列说明及其预期值，以帮助你分析设备符合性状态。
+此外，在“设备”  屏幕上，可以选择特定设备，然后单击“设备威胁防护”  选项卡，以提供有关设备符合性状态的更多信息。 查看下面的列说明及其预期值，以帮助你分析设备符合性状态。
 
 > [!IMPORTANT] 
 > 设备威胁防护选项卡仅在所选设备为移动设备时才会显示。
