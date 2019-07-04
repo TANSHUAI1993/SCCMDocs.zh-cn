@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 322eff398726b2c799164ea369e01519dc62ec8f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4340f21ad257bfe311915edaa918e704832e3e77
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137198"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286442"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>将升级就绪情况与 Configuration Manager 集成
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 升级就绪情况是 [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness) 的一部分。 可以使用它来访问和分析环境中的设备对升级至 Windows 10 的准备情况。 将升级就绪情况与 Configuration Manager 集成，以便在 Configuration Manager 控制台中访问客户端升级兼容性数据。 然后使用此数据创建集合，并设定要升级或修正的设备。
 
@@ -30,13 +30,13 @@ ms.locfileid: "56137198"
 
 升级就绪情况依赖于 Windows Analytics 数据。 为了使升级就绪情况接收充足的数据，请配置以下先决条件：
 
-- 为所有客户端配置“商用 ID 键”  
+- 为所有客户端配置“商用 ID 键”   
 
 - 配置 Windows 10 客户端以便 Windows Analytics 报告至少基本级别的数据  
 
 - 对于运行 Windows 7 或 8.1 的客户端：  
 
-    - 安装更新，如[升级就绪情况入门](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started#deploy-the-compatibility-update-and-related-kbs)中所述  
+    - 安装更新，如[升级就绪情况入门](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started)中所述  
 
     - 启用 Windows Analytics 客户端设置  
 
@@ -49,18 +49,18 @@ ms.locfileid: "56137198"
 
 ## <a name="connect-configuration-manager-to-upgrade-readiness"></a>将 Configuration Manager 连接至 Upgrade Readiness
 
-使用 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)简化用于 Configuration Manager 的 Azure 服务的配置过程。 若要将 Configuration Manager 和升级就绪情况相连，请在 [Azure 门户](https://portal.azure.com)中创建“Web 应用/API”类型的 Azure Active Directory (Azure AD) 应用注册。 有关如何创建应用注册的详细信息，请参阅[向 Azure AD 租户注册应用程序](/azure/active-directory/active-directory-app-registration)。 
+使用 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)简化用于 Configuration Manager 的 Azure 服务的配置过程。 若要将 Configuration Manager 和升级就绪情况相连，请在 [Azure 门户](https://portal.azure.com)中创建“Web 应用/API”  类型的 Azure Active Directory (Azure AD) 应用注册。 有关如何创建应用注册的详细信息，请参阅[向 Azure AD 租户注册应用程序](/azure/active-directory/active-directory-app-registration)。 
 
 在 Azure 门户中，向新注册的 Web 应用提供以下权限：
-- 向包含升级就绪情况数据的 Log Analytics 工作区的资源组提供读者权限
-- 向托管升级就绪情况数据的 Log Analytics 工作区提供参与者权限
+- 向包含升级就绪情况数据的 Log Analytics 工作区的资源组提供读者  权限
+- 向托管升级就绪情况数据的 Log Analytics 工作区提供参与者  权限
 
 Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure AD 进行安全通信，并将你的基础结构连接至升级就绪情况数据。
 
 > [!IMPORTANT]  
-> 将权限赋予应用本身，而不是 Azure AD 用户标识。 它是代表 Configuration Manager 基础结构访问数据的注册应用。 要授予权限，需要在分配权限时，在“添加用户”区域中搜索应用注册的名称。 
+> 将权限赋予应用本身，而不是 Azure AD 用户标识。 它是代表 Configuration Manager 基础结构访问数据的注册应用。 要授予权限，需要在分配权限时，在“添加用户”  区域中搜索应用注册的名称。 
 > 
-> 此过程与向 Configuration Manager 提供 Log Analytics 权限相同。 在使用 Azure 服务向导将应用注册导入 Configuration Manager 之前，必须完成这些步骤。
+> 此过程与向 Configuration Manager 提供 Log Analytics 权限相同。 在使用 Azure 服务向导将应用注册导入 Configuration Manager 之前，必须完成这些步骤。 
 > 
 > 有关详细信息，请参阅[将 Configuration Manager 连接到 Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm)。
 
@@ -69,13 +69,13 @@ Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure
 
 按照[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)中的说明，导入上述创建的 Web 应用注册，从而创建和升级就绪情况之间的连接。 
 
-如果 Web 应用导入成功并且 Azure 门户的权限分配正确，“配置”页将预填充以下值：   
+如果 Web 应用导入成功并且 Azure 门户的权限分配正确，“配置”  页将预填充以下值：   
 -  Azure 订阅  
 -  Azure 资源组  
 -  Windows Analytics 工作区  
 
 多个资源组或工作区现支持下列情况： 
-- 如果注册的 Azure AD Web 应用在多个资源组上拥有“参与者”权限   
+- 如果注册的 Azure AD Web 应用在多个资源组上拥有“参与者”  权限   
 - 如果所选资源组具有多个 Log Analytics 工作区  
 
 
@@ -84,7 +84,7 @@ Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure
 
 将 Upgrade Readiness 与 Configuration Manager 进行集成后，可查看客户端升级就绪状态的分析。
 
-1. 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“升级就绪情况”节点。  
+1. 在 Configuration Manager 控制台中，转到“监视”  工作区，然后选择“升级就绪情况”  节点。  
 
 2. 查看数据。 例如：  
     - 升级就绪状态  
@@ -96,7 +96,7 @@ Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure
 
 > [!Note]  
 > 该站点将数据与升级就绪情况同步，每周一次。<!--SCCMDocs issue 732--> 手动触发同步：
-> 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。  
+> 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。  
 > 2. 从列表中选择升级就绪情况连接。  
 > 3. 在功能区中，选择要同步的选项。  
 

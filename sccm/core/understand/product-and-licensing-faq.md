@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9f43311ea3d36132d8cf77c0c576ad3f0e2cd93
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 01fa13c907b451a3539ca8169c3a04ebbaa1b92c
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558093"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145773"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
-适用范围：System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)
+适用范围：  System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)
 
-此常见问题解答涉及通过 Microsoft 批量许可计划提供的 Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> 的产品许可和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
+此常见问题解答涉及通过 Microsoft 批量许可计划提供的 Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx) 的产品许可<!-- this link doesn't work without some language code --> 和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
 
 有关 Configuration Manager 功能的详细信息，请参阅[产品页面](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。
 
@@ -38,21 +38,21 @@ Current Branch 是提供活动服务模型的 Configuration Manager 的生产就
 LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件保障或等效订阅权限过期的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允许软件保障或等效订阅权限过期的客户必须卸载 Configuration Manager 的 Current Branch。 如果客户对 Configuration Manager 具有永久许可权限，则可在过期时安装并使用 Configuration Manager 最新版的 LTSB 版本。
 
 
-### <a name="bkmk_licensing-acronyms"></a>我知道许可内容中使用的 SA 和 L&SA。 这些首字母缩写词在 Configuration Manager 中的含义是什么？    
+### <a name="bkmk_licensing-acronyms"></a>我知道许可内容中使用的 SA  和 L&SA  。 这些首字母缩写词在 Configuration Manager 中的含义是什么？    
 
-软件保障 (SA) 和许可证和软件保障 (L&SA) 是授权使用 Configuration Manager 的许可选项。 SA 选项适用于从之前的协议续订 SA 范围的客户。 L&SA 选项适用于购买新的许可证和 SA 范围的客户。
+软件保障  (SA) 和许可证和软件保障  (L&SA) 是授权使用 Configuration Manager 的许可选项。 SA 选项适用于从之前的协议续订 SA 范围的客户。 L&SA 选项适用于购买新的许可证和 SA 范围的客户。
 
-- **软件保障 (SA)**：客户必须在 Configuration Manager 许可证上具有可用 SA 或具有等效的订阅权限，才可安装和使用 Configuration Manager 的 Current Branch。    
+- **软件保障 (SA)** ：客户必须在 Configuration Manager 许可证上具有可用 SA 或具有等效的订阅权限，才可安装和使用 Configuration Manager 的 Current Branch。    
 
-    - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
+    - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限  。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
 
-- **Microsoft 许可证和软件保障 (L&SA)**：购买新的 Configuration Manager 许可证的客户必须获取 L&SA（许可证和 SA 范围）。   
+- **Microsoft 许可证和软件保障 (L&SA)** ：购买新的 Configuration Manager 许可证的客户必须获取 L&SA（许可证和 SA 范围）。   
 
     - SA 授予使用 Current Branch 的权限。
 
     - 如果 SA 过期，你仍拥有 Configuration Manager 的许可证，但无法再使用 Current Branch。 有关详细信息，请参阅[如果 SA 过期且拥有 L&SA，我可使用的功能是什么？](#bkmk_sa-expires)
 
-有关许可证产品/服务的详细信息，请参阅[购买方式](https://www.microsoft.com/en-us/licensing/licensing-programs)<!--this link doesn't work without some language code-->和[许可产品条款](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64)。  
+有关许可证产品/服务的详细信息，请参阅[购买方式](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> 和[许可产品条款](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64)。  
 
 
 ### <a name="bkmk_equiv-sub"></a>我遇到了术语“等效订阅”，这是指什么计划？   
@@ -71,12 +71,12 @@ EMS 授予使用 Configuration Manager Current Branch 和 Long-Term Service Bran
 
 如果 SA 在 2016 年 10 月 1 日前过期并保留了 Configuration Manager 的永久许可证，则继续使用的唯一选择是安装和使用 System Center 2012 R2 Configuration Manager 及其可用的服务包。 SA 过期时需要卸载 Current Branch，并重新安装该产品的早期版本。 不支持从 Configuration Manager Current Branch 迁移到或降级为 Configuration Manager 的早期版本。   
 
-如果使用 System Center Endpoint Protection，且 SA 已过期，则必须将其卸载。 System Center Endpoint Protection 不提供 *L（许可证）* 权限，也不提供永久权限。<!--506238--> 
+如果使用 System Center Endpoint Protection，且 SA 已过期，则必须将其卸载。 System Center Endpoint Protection 不提供  L（许可证）权限，也不提供永久权限。<!--506238--> 
 
 
 ### <a name="bkmk_owncb"></a>我是否“拥有”Current Branch？   
 
-否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 L&SA，当 SA 过期时，你仅具有 L（许可证）权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可以使用 Configuration Manager LTSB 代替 Current Branch。 如果 SA 在 2016 年 10 月 1 日之前过期，还可以使用 System Center 2012 R2 Configuration Manager。
+否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 L&SA  ，当 SA  过期时，你仅具有 L（许可证）  权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可以使用 Configuration Manager LTSB 代替 Current Branch。 如果 SA 在 2016 年 10 月 1 日之前过期，还可以使用 System Center 2012 R2 Configuration Manager。
 
 
 ### <a name="bkmk_standalone"></a>是否可以单独购买 Configuration Manager，而不购买 SA？      
@@ -86,7 +86,7 @@ EMS 授予使用 Configuration Manager Current Branch 和 Long-Term Service Bran
 
 ### <a name="bkmk_update-rights"></a>我发现我的控制台中提供 Configuration Manager 的更新，如版本 1810。 我是否有权安装它？   
 
-如果你拥有可用 SA，则有权安装它。 如果没有可用 SA，卸载 Current Branch，然后安装 Configuration Manager 的 LTSB。 LTSB 不会接收 Configuration Manager 增量版本的更新，但会接收基于支持生命周期的安全更新。
+如果你拥有可用 SA  ，则有权安装它。 如果没有可用 SA，卸载 Current Branch，然后安装 Configuration Manager 的 LTSB。 LTSB 不会接收 Configuration Manager 增量版本的更新，但会接收基于支持生命周期的安全更新。
 
 
 ### <a name="bkmk_csp"></a>我通过云解决方案提供商 (CSP) 购买了 EMS 或 Microsoft 365，是否有权使用 Configuration Manager？ 
@@ -96,7 +96,7 @@ EMS 授予使用 Configuration Manager Current Branch 和 Long-Term Service Bran
 
 ### <a name="bkmk_expiration-date"></a>订阅结束日期是否与 SA 过期日期相同？    
 
-如果 SA 或订阅处于可用状态，则有权使用 Configuration Manager Current Branch。 可用订阅等效于具有可用 SA，但没有永久“L”（许可证）。 订阅结束后，卸载 Current Branch。 此时，你无权使用 LTSB。  
+如果 SA  或订阅处于可用状态，则有权使用 Configuration Manager Current Branch。 可用订阅等效于具有可用 SA，但没有永久“L”（许可证）   。 订阅结束后，卸载 Current Branch。 此时，你无权使用 LTSB。  
 
 
 ### <a name="bkmk_sql"></a>随 Configuration Manager 一起提供的 SQL 技术关联的使用权限有哪些？    

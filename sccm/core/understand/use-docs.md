@@ -2,7 +2,7 @@
 title: 如何使用文档
 titleSuffix: Configuration Manager
 description: 了解关于使用 Configuration Manager 技术文档库的技巧。
-ms.date: 09/07/2018
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19681e8a84c35a2b26fa85e7d1227bead3ea42d5
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 085f91bfb99bcfabbcdee8083fb3a3089a33057e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716139"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285667"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager 文档
 
@@ -57,7 +57,8 @@ ms.locfileid: "66716139"
 
 - 查找时遇到问题？ [提供反馈！](#bkmk_docfeedback) 提出问题时，请提供使用的搜索引擎、尝试搜索的关键字以及目标文章。 此反馈有助于 Microsoft 优化内容以实现更好的搜索。  
 
-
+> [!TIP] 
+> 从 Configuration Manager 版本 1902 起，新“社区”工作区包含“文档”节点。   此节点包含有关 Configuration Manager 文档和支持文章的最新信息。 有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard)
 
 ## <a name="bkmk_docfeedback"></a> 反馈
 

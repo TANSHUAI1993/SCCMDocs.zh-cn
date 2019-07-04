@@ -7,27 +7,27 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfc10695dc238e7020fd9d1b777ce62d80324beb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 401565308ac78e1d6db047eca7cda63715474764
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133480"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158874"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 的更新 1606 作为控制台内部更新提供，用于以前安装的、运行版本 1511 或 1602 的站点。 版本 1511 是用于安装新 Configuration Manager 站点的初始基准版本。
 > [!TIP]  
 >  了解详细信息：  
 >   
->  -   [安装新站点](/sccm/core/servers/deploy/install)（使用基准版本，如 1511）  
+>  -   [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
 >  -   [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602 或 1606）  
 
  以下各节提供有关 Configuration Manager 版本 1606 中引入的更改和新功能的详细信息。  
@@ -43,7 +43,7 @@ Configuration Manager 控制台中的更新和维护服务节点更改如下：
 
 - **节点名称更改：**
 
-    在“监视”工作区中，已将“站点服务状态”节点重命名为“更新和服务状态”。
+    在“监视”  工作区中，已将“站点服务状态”  节点重命名为“更新和服务状态”  。
 - **更多安装状态详细信息：**
 
     查看站点的更新安装状态时，控制台现在会显示以下操作的单独详细信息：
@@ -55,19 +55,19 @@ Configuration Manager 控制台中的更新和维护服务节点更改如下：
   此外，现提供了每个步骤的更详细信息，包括可查看详细信息的日志文件。  
 -   **用于重试先决条件失败的新选项：**
 
-    在“管理”和“监视”这两个工作区中，“更新和维护服务”节点都在功能区上包含了一个名为“忽略先决条件警告”的新按钮。
+    在“管理”  和“监视”  这两个工作区中，“更新和维护服务”  节点都在功能区上包含了一个名为“忽略先决条件警告”  的新按钮。
 
-    如果安装更新时不使用“忽略先决条件警告”选项（位于更新向导中），更新安装会因出现警告而中止，之后可从功能区选择“忽略先决条件警告”。 这可触发更新的自动继续安装。  
+    如果安装更新时不使用“忽略先决条件警告”选项（位于更新向导中），更新安装会因出现警告而中止，之后可从功能区选择“忽略先决条件警告”  。 这可触发更新的自动继续安装。  
 
 
 
 - **更清楚的更新视图：**
 
-    在“更新和维护服务”节点中，现在仅能看到最近安装的更新以及任何可供安装的新更新。 若要查看以前安装的更新，请单击显示在功能区中的新“历史记录”按钮。  
+    在“更新和维护服务”  节点中，现在仅能看到最近安装的更新以及任何可供安装的新更新。 若要查看以前安装的更新，请单击显示在功能区中的新“历史记录”  按钮。  
 
 -   **重命名的预生产选项：**
 
-    在“更新和维护服务”节点中，“客户端选项”按钮现称为“提升预生产客户端”。
+    在“更新和维护服务”  节点中，“客户端选项”  按钮现称为“提升预生产客户端”  。
 
 
 ###  <a name="pre-release-features"></a>预发行功能
@@ -93,7 +93,7 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 
 ### <a name="support-for-cache-size-in-client-settings"></a>在客户端设置中支持缓存大小
 
-现在，可以使用 Configuration Manager 控制台中的“客户端设置”在客户端计算机上配置缓存文件夹的大小。 以前，只能在安装或重新安装客户端软件时设置客户端缓存大小。 现在，可以将缓存大小指定为客户端设置（默认或自定义），然后将这些设置应用于客户端上的下一个策略更新，无需重新安装客户端。 有关详细信息，请参阅 [为 Configuration Manager 客户端配置客户端缓存](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。
+现在，可以使用 Configuration Manager 控制台中的“客户端设置”  在客户端计算机上配置缓存文件夹的大小。 以前，只能在安装或重新安装客户端软件时设置客户端缓存大小。 现在，可以将缓存大小指定为客户端设置（默认或自定义），然后将这些设置应用于客户端上的下一个策略更新，无需重新安装客户端。 有关详细信息，请参阅 [为 Configuration Manager 客户端配置客户端缓存](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。
 
 ## <a name="on-premises-mobile-device-management"></a>本地移动设备管理
 
@@ -119,9 +119,9 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 ### <a name="software-center-user-interface"></a>软件中心用户界面
 
 软件中心用户界面已简化，可实现更轻松的发现。
-*  “安装状态”和“已安装的软件”选项卡已合并为一个“安装状态”选项卡。
-*  “更新”、“操作系统”和“应用程序”已分为 3 个单独的选项卡。
-* 现在可以一次选择多个更新进行安装，或者可以通过单击“全部安装”一次性安装所有更新。
+*  “安装状态”  和“已安装的软件”  选项卡已合并为一个“安装状态”  选项卡。
+*  “更新”  、“操作系统”  和“应用程序”  已分为 3 个单独的选项卡。
+* 现在可以一次选择多个更新进行安装，或者可以通过单击“全部安装”  一次性安装所有更新。
 
 ### <a name="content-status-links"></a>内容状态链接
 在应用程序或包的属性上，现有一个链接可以转到该对象的状态。
@@ -139,17 +139,17 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 有关详细信息，请参阅[在 Configuration Manager 中规划软件更新](../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs)。
 
 ### <a name="restart-options-for-windows-10-clients-after-software-update-installation"></a>在软件更新安装之后重启 Windows 10 客户端的选项
-需要重启的软件更新已使用 Configuration Manager 进行部署并已安装在计算机上时，将计划挂起的重启。 还会显示重启对话框。 从 Configuration Manager 版本 1606 开始，只要 Configuration Manager 软件更新存在挂起的重启，就可使用“更新并重启”和“更新并关闭”选项。 Windows 10 计算机的 Windows 电源选项中提供这些选项。 使用这些选项中的某一个后，计算机重启后将不再显示重启对话框。
+需要重启的软件更新已使用 Configuration Manager 进行部署并已安装在计算机上时，将计划挂起的重启。 还会显示重启对话框。 从 Configuration Manager 版本 1606 开始，只要 Configuration Manager 软件更新存在挂起的重启，就可使用“更新并重启”  和“更新并关闭”  选项。 Windows 10 计算机的 Windows 电源选项中提供这些选项。 使用这些选项中的某一个后，计算机重启后将不再显示重启对话框。
 
 有关详细信息，请参阅[在 System Center Configuration Manager 中规划软件更新](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions)。
 
 ### <a name="run-software-updates-compliance-scan-immediately-after-a-client-installs-software-updates-and-restarts"></a>客户端安装软件更新并重启后，立即运行软件更新符合性扫描
-现可在客户端安装软件更新并重启后，立即运行符合性扫描。 若要为部署进行此设置，请在部署软件更新向导的“用户体验”页上，选择“如果此部署中的任何更新需要重启系统，则在重启之后运行更新部署评估周期”。 这可使客户端检查在客户端重启之后变为适用状态的其他软件更新，然后在相同维护时段期间安装它们（并成为符合状态）。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)或[手动部署软件更新](/sccm/sum/deploy-use/manually-deploy-software-updates)。
+现可在客户端安装软件更新并重启后，立即运行符合性扫描。 若要为部署进行此设置，请在部署软件更新向导的“用户体验”  页上，选择“如果此部署中的任何更新需要重启系统，则在重启之后运行更新部署评估周期”  。 这可使客户端检查在客户端重启之后变为适用状态的其他软件更新，然后在相同维护时段期间安装它们（并成为符合状态）。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)或[手动部署软件更新](/sccm/sum/deploy-use/manually-deploy-software-updates)。
 
 ## <a name="operating-system-deployment"></a>操作系统部署
 
 ### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>对运行任务序列步骤的改进：安装软件更新
-使用“根据缓存的扫描结果评估软件更新”这一新设置可选择对软件更新进行完整扫描，而不是使用缓存的扫描结果。 有关详细信息，请参阅 [System Center Configuration 中的任务序列步骤](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)。
+使用“根据缓存的扫描结果评估软件更新”  这一新设置可选择对软件更新进行完整扫描，而不是使用缓存的扫描结果。 有关详细信息，请参阅 [System Center Configuration 中的任务序列步骤](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)。
 
 此外，还可使用新任务序列变量 **SMSTSSoftwareUpdateScanTimeout**。 通过此变量，可在安装软件更新任务序列步骤期间控制软件更新扫描的超时时间。 默认值为 30 分钟。 有关详细信息，请参阅 [System Center Configuration Manager 中的任务序列内置变量](../../../osd/understand/task-sequence-built-in-variables.md)。
 
@@ -166,7 +166,7 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 ## <a name="compliance-settings"></a>符合性设置
 
 ### <a name="smart-lock-setting-for-android-devices"></a>适用于 Android 设备的 Smart Lock 设置
-已将“允许 Smart Lock 和其他信任代理”这一新设置添加到 Android 和 Samsung KNOX Standard 配置项目。
+已将“允许 Smart Lock 和其他信任代理”  这一新设置添加到 Android 和 Samsung KNOX Standard 配置项目。
 
 此设置允许控制兼容的 Android 设备上的 Smart Lock 功能。 如果设备处于可信位置，则使用此手机功能（有时称为“信任代理”）可禁用或绕过设备锁屏界面密码。 例如，可信位置可能是它连接到特定蓝牙设备时，或者靠近 NFC 标签时。 可以使用此设置防止用户配置 Smart Lock。
 
@@ -199,11 +199,11 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 有关详细信息，请参阅[使用 System Center Configuration Manager 管理 iOS 激活锁](../../../mdm/deploy-use/manage-ios-activation-lock.md)。
 
 
-### <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
+### <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 高级威胁防护
 
-Endpoint Protection 可以帮助管理和监视 Windows Defender 高级威胁防护 (ATP)。 Windows Defender ATP 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 Configuration Manager 策略可帮助载入和监视运行 Windows 10 版本 1607（内部版本 14328）或更高版本的托管计算机。
+Endpoint Protection 可以帮助管理和监视 Microsoft Defender 高级威胁防护 (ATP)。 Microsoft Defender ATP 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 Configuration Manager 策略可帮助载入和监视运行 Windows 10 版本 1607（内部版本 14328）或更高版本的托管计算机。
 
-有关详细信息，请参阅[Windows Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)。
+有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)。
 
 ### <a name="device-categories"></a>设备类别
 可创建设备类别，可将其用于配合使用 Configuration Manager 和 Microsoft Intune 时自动在设备集合中放置设备。 然后要求用户在 Intune 中注册设备时选择某个设备类别。 此外，还可从 Configuration Manager 控制台中更改设备类别。
@@ -223,4 +223,4 @@ Endpoint Protection 可以帮助管理和监视 Windows Defender 高级威胁防
 有关详细信息，请参阅 [System Center Configuration Manager 的运行状况证明](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers)。  
 
 ## <a name="remote-control"></a>远程控制
-在远程控制会话中从共享剪贴板传输内容前，允许用户选择接受或拒绝文件传输。 用户在每个会话中只需授予一次权限，而查看者无法授予自己继续文件传输的权限。 可在“管理”工作区中找到此新设置。 转到“客户端设置”，然后在“默认设置”中打开“远程工具”窗格。
+在远程控制会话中从共享剪贴板传输内容前，允许用户选择接受或拒绝文件传输。 用户在每个会话中只需授予一次权限，而查看者无法授予自己继续文件传输的权限。 可在“管理”  工作区中找到此新设置。 转到“客户端设置”  ，然后在“默认设置”  中打开“远程工具”  窗格。

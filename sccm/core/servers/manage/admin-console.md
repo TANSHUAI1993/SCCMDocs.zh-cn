@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 04/03/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb58662350caec9fd1a08295c93c3811893048a9
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 3fc9e6fad0b7be3762b3d642c94c4cf17266e0b3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802421"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285740"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 管理员使用 Configuration Manager 控制台管理 Configuration Manager 环境。 本文介绍导航控制台的基础知识。  
 
@@ -32,7 +32,7 @@ ms.locfileid: "59802421"
 
 要连接到其他站点服务器，请按以下步骤操作： 
 
-1. 选择[功能区](#ribbon)顶部的箭头，然后选择“连接到新站点”。  
+1. 选择[功能区](#ribbon)顶部的箭头，然后选择“连接到新站点”  。  
 
     ![将控制台连接到新站点](media/connect-to-a-new-site.png)  
 
@@ -54,7 +54,7 @@ ms.locfileid: "59802421"
 
 ### <a name="workspaces"></a>工作区
 
-Configuration Manager 控制台中有四个工作区：  
+Configuration Manager 控制台中有四个工作区  ：  
 
 - **资产和符合性**  
 
@@ -66,28 +66,28 @@ Configuration Manager 控制台中有四个工作区：
 
 ![带上下文菜单的 Configuration Manager 工作区](media/configuration-manager-workspaces.png)  
 
-选择向下箭头并选择“导航窗格选项”，可对工作区按钮重新进行排序。 选中某个项“上移”或“上移”。 单击“重置”还原默认按钮顺序。  
+选择向下箭头并选择“导航窗格选项”，可对工作区按钮重新进行排序  。 选中某个项“上移”或“上移”   。 单击“重置”还原默认按钮顺序  。  
 
  ![用于对工作区重新排序的“导航窗格选项”窗口](media/navigation-pane-options.png)  
 
-选择“显示更少按钮”可最小化工作区按钮。 列表中的最后一个工作区首先最小化。 选择已最小化的按钮并选择“显示更多按钮”即可将按钮恢复为原始大小。   
+选择“显示更少按钮”可最小化工作区按钮  。 列表中的最后一个工作区首先最小化。 选择已最小化的按钮并选择“显示更多按钮”即可将按钮恢复为原始大小  。   
 
 ![Configuration Manager 控制台中最小化的工作区](media/workspace-buttons.png)  
 
 
 ### <a name="nodes"></a>节点
 
-工作区是一系列节点。 其中一个节点是“软件库”工作区中的“软件更新组”节点。 
+工作区是一系列节点  。 其中一个节点是“软件库”工作区中的“软件更新组”节点   。 
 
 在节点中可选择箭头以最小化导航窗格。  
 
 ![示例节点和突出显示的最小化箭头](media/software-update-groups-node.png)  
 
-当导航窗格处于最小化时，使用“导航栏”在控制台中移动。  
+当导航窗格处于最小化时，使用“导航栏”在控制台中移动  。  
 
 ![最小化的 Configuration Manager 导航窗格](media/minimized-navigation-pane.png)  
 
-在控制台中，节点有时会被整理到文件夹中。 通常直接单击文件夹即可转到“导航索引”或“仪表板”。  
+在控制台中，节点有时会被整理到文件夹中。 通常直接单击文件夹即可转到“导航索引”或“仪表板”   。  
 
 ![Configuration Manager 软件更新导航索引](media/software-updates-navigation-index.png)  
 
@@ -124,7 +124,7 @@ Configuration Manager 控制台中有四个工作区：
 
 ### <a name="prerequisites-to-view-connected-consoles"></a>查看已连接控制台的先决条件
 
-- 帐户需要 SMS_Site 对象的读取权限 
+- 帐户需要 SMS_Site 对象的读取权限   
 - 需要在 SMS 提供程序服务器上安装 IIS <!---SCCMDocs-pr issue 1326--> 
 - 启用 SMS 提供程序以使用证书。<!--SCCMDocs-pr issue 3135--> 使用以下选项之一：  
 
@@ -133,9 +133,9 @@ Configuration Manager 控制台中有四个工作区：
 
 ### <a name="view-connected-consoles"></a>查看已连接控制台
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区。  
+1. 在 Configuration Manager 控制台中，转到“管理”  工作区。  
 
-2. 展开“安全”并选择“控制台连接”节点。  
+2. 展开“安全”并选择“控制台连接”节点   。  
 
 3. 查看具有以下属性的最近连接：  
 
@@ -143,9 +143,69 @@ Configuration Manager 控制台中有四个工作区：
     - 计算机名
     - 已连接的站点代码
     - 控制台版本
-    - 上次连接时间：用户上一次打开控制台的时间
+    - 上次连接时间：用户上一次打开控制台的时间 
 
 ![查看 Configuration Manager 控制台连接](media/console-connections.png) 
+
+
+## <a name="bkmk_notify"></a> Configuration Manager 控制台通知
+<!--3556016, fka 1318035-->
+从 Configuration Manager 版本 1902 起，控制台将通知你以下事件：
+
+- Configuration Manager 本身有可用的更新
+- 环境中发生生命周期和维护事件
+
+此通知位于功能区下方控制台窗口顶部的栏。 Configuration Manager 更新可用时，它将替换以前的体验。 这些控制台内通知仍显示关键信息，但不会干扰你在控制台中的工作。 不能消除重要通知。 控制台在标题栏的新通知区域中显示所有通知。
+
+![控制台中的通知栏和标志](./media/1318035-notify-eval-version-expired.png)
+
+### <a name="configure-a-site-to-show-non-critical-notifications"></a>配置站点以显示非重要通知
+
+可以从各个站点的属性中配置站点，以显示非重要通知。
+
+1.  在“管理”工作区中，展开“站点配置”，然后单击“站点”节点    。
+1. 选择想要为其配置非重要通知的站点。
+1. 在功能区中，单击“属性”  。
+1. 在“警报”选项卡上，选择“为非重要站点运行状况更改启用控制台通知”选项   。
+   - 如果启用此设置，则所有控制台用户都会看到重要、警告和信息通知。 默认情况下将启用此设置。  
+   - 如果禁用此设置，控制台用户只能看到重要通知。  
+
+大多数控制台的通知都是按会话操作的。 控制台在用户启动查询时会对其进行评估。 要查看通知中的更改，请重启控制台。 如果用户关闭非重要通知，则在控制台重启时它会再次通知（如果仍然适用）。
+
+以下通知每五分钟重新评估一次：
+- 站点处于维护模式  
+- 站点处于恢复模式  
+- 站点处于升级模式  
+
+通知遵循基于角色的管理的权限。 例如，如果用户没有权限查看 Configuration Manager 更新，则用户看不到这些通知。
+
+某些通知具有相关操作。 例如，如果控制台版本与站点版本不匹配，请选择“安装新控制台版本”  。 此操作将启动控制台安装程序。 
+
+以下通知最适用于技术预览分支：  
+
+- 评估版本将在 30 天内到期（警告）：评估版本在 30 天内即将到期  
+- 评估版已过期（重要）：已超过评估版本的到期日期  
+- 控制台版本不匹配（重要）：控制台版本与站点版本不匹配  
+- 有可用的站点更新（警告）：有一个新的更新包可用  
+
+有关详细信息和疑难解答帮助，请参阅控制台计算机上的 SmsAdminUI.log 文件  。 默认情况下，此日志文件位于以下路径：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`。
+
+## <a name="bkmk_doc-dashboard"></a> 控制台中的文档仪表板
+<!--3556019 FKA 1357546-->
+
+从 Configuration Manager 版本 1902 起，新“社区”工作区包含“文档”节点。   此节点包含有关 Configuration Manager 文档和支持文章的最新信息。 它包括以下部分：  
+
+### <a name="product-documentation-library"></a>产品文档库
+
+-  推荐：重要文章的手动特选列表。
+-  趋势：上个月的最热门文章。
+-  最近更新：上个月修订的文章。
+
+### <a name="support-articles"></a>支持文章
+
+-  疑难解答文章：用来帮助排查 Configuration Manager 组件和功能问题的演练指南。
+-  新的和更新的支持文章：过去两个月新的或更新的支持文章。
+
 
 ## <a name="command-line-options"></a>命令行选项
 
@@ -160,8 +220,65 @@ Configuration Manager 控制台提供下列命令行选项：
 |`/sms:NoRestore`|控制台忽略之前保留的节点导航。|  
 
 
-
 ## <a name="tips"></a>提示
+
+### <a name="search-device-views-using-mac-address"></a>使用 MAC 地址搜索设备视图
+<!--3600878-->
+（从版本 1902 中引入） 
+
+可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列  。 使用搜索字段添加“MAC 地址”搜索条件  。
+
+### <a name="maximize-the-browse-registry-window"></a>将浏览注册表窗口最大化
+<!--3594151 includes all MMS 1902 console changes-->
+（从版本 1902 中引入） 
+1. 在“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”节点    。 
+1. 选择具有检测方法的部署类型的应用程序。 例如，Windows Installer 检测方法。 
+1. 在详细信息窗格中，切换到“部署类型”选项卡  。 
+1. 打开部署类型的属性，然后切换到“检测方法”选项卡  。选择“添加子句”  。 
+1. 将“设置类型”更改为“注册表”，然后选择“浏览”以打开“浏览注册表”窗口     。 可将此窗口最大化。  
+
+### <a name="go-to-the-collection-from-an-application-deployment"></a>从应用程序部署转到集合
+
+（从版本 1902 中引入） 
+1. 在“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”节点    。 
+1. 选择应用程序。 在详细信息窗格中，切换到“部署”选项卡  。
+1. 选择部署，然后在“部署”选项卡的功能区中选择新的“集合”选项  。此操作将视图切换到作为部署目标的集合。
+   - 在此视图中右键单击部署上的上下文菜单也可以执行此操作。
+
+### <a name="edit-a-task-sequence-by-default"></a>默认情况下编辑任务序列
+
+（从版本 1902 中引入） 
+
+在“软件库”工作区中，展开“操作系统”，选择“任务序列”节点    。 打开默认序列时，默认操作是“编辑”  。 默认操作以前为“属性”  。  
+
+### <a name="remove-content-from-monitoring-status"></a>从监视状态中删除内容
+（从版本 1902 中引入） 
+
+1. 在“监视”工作区中，展开“分发状态”，然后选择“内容状态”    。
+1. 选择列表中的项，然后选择功能区中的“查看状态”选项  。 
+1. 在“资产详细信息”窗格中，右键单击分发点，然后选择新选项“删除”  。 此操作会从选定的分发点中删除此内容。
+
+### <a name="views-sort-by-integer-values"></a>视图按整数值排序
+（从版本 1902 中引入） 
+
+我们改进了各个视图对数据排序的方式。 例如，在“监视”工作区的“部署”节点中，以下列现在按数字而不是字符串值排序   ：  
+
+- 错误数
+- 正在进行的数量
+- 其他数量
+- 成功数
+- 未知数量  
+
+### <a name="move-the-warning-for-a-large-number-of-results"></a>移动警告以获得大量结果
+（从版本 1902 中引入） 
+
+在控制台中选择返回 1,000 个以上结果的节点时，Configuration Manager 将显示以下警告：
+
+> Configuration Manager 返回了大量结果。 可使用搜索缩小结果范围。 或者，单击此处可查看最多 100000 个结果。
+ 
+此警告和搜索字段之间现在有额外的空白区域。 此次移动有助于防止无意中选择该警告，从而显示更多结果。 
+
+
 
 ### <a name="send-feedback"></a>发送反馈
 <!--1357542-->
@@ -180,7 +297,7 @@ Configuration Manager 控制台提供下列命令行选项：
 ### <a name="assets-and-compliance-workspace"></a>资产和符合性工作区
 
 #### <a name="view-users-for-a-device"></a>查看设备的用户
-自 1806 版起，“设备”节点中提供了以下列：  
+自 1806 版起，“设备”节点中提供了以下列  ：  
 
 - **主要用户** <!--1357280-->  
 
@@ -205,11 +322,11 @@ Configuration Manager 控制台提供下列命令行选项：
 
 #### <a name="copy-details-in-monitoring-views"></a>复制监视视图中的详细信息
 <!--1357856-->
-从版本 1806 开始，从“资产详细信息”窗格复制以下监视节点的信息：  
+从版本 1806 开始，从“资产详细信息”窗格复制以下监视节点的信息  ：  
 
-- 内容分发状态  
+- 内容分发状态   
 
-- 部署状态  
+- 部署状态   
 
 ![部署状态视图，复制资产详细信息](media/1810-deployment-status.PNG)
 

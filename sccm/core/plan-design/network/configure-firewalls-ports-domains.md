@@ -1,8 +1,8 @@
 ---
-title: 防火墙和域
+title: 网络基础结构
 titleSuffix: Configuration Manager
-description: 设置防火墙、端口和域以准备 System Center Configuration Manager 通信。
-ms.date: 2/6/2017
+description: 设置防火墙、端口和域以准备 Configuration Manager 通信。
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,22 +11,44 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1bec1e86d6b9144b6448bd098c471300a799947
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 60a24e06d650b0e25007fb8490eb0c7d8c1996a1
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499255"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285610"
 ---
-# <a name="set-up-firewalls-ports-and-domains-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 设置防火墙、端口和域
+# <a name="network-infrastructure-considerations-for-configuration-manager"></a>Configuration Manager 的网络基础结构注意事项
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-若要准备网络以支持 System Center Configuration Manager，请计划设置基础结构（如防火墙）以传递 Configuration Manager 所使用的通信。  
+要准备网络以支持 Configuration Manager，你可能需要配置一些基础结构组件。 例如，打开防火墙端口以传递 Configuration Manager 使用的通信。  
 
-|注意事项|详细信息|  
-|-------------------|-------------|  
-|不同的 Configuration Manager 功能所使用的**端口和协议**。 某些端口是必需的，而其他的**域和服务**则可以自定义。|大多数 Configuration Manager 通信使用常见的端口，比如用于 HTTP 通信的端口 80 或用于 HTTPS 通信的端口 443。 但是，[某些站点系统角色支持使用自定义网站](/sccm/core/plan-design/network/websites-for-site-system-servers)和自定义端口。<br /><br /> **部署 Configuration Manager 之前**，请确定计划使用的端口并相应地设置防火墙。<br /><br /> 安装 Configuration Manager 后，**如果需要更改端口**，请勿忘记更新设备和网络上的防火墙，以及从 Configuration Manager 中更改端口的配置。<br /><br /> 有关详细信息，请参阅： </br>- [如何配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md) </br>- [Configuration Manager 中使用的端口](../../../core/plan-design/hierarchy/ports.md) </br>- [服务连接点的 Internet 访问要求](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)|  
-|站点服务器和客户端可能需要使用的**域和服务**。|Configuration Manager 功能可能需要站点服务器和客户端有权访问 Internet 上的特定服务和域，如 Windowsudpate.microsoft.com 或 Microsoft Intune 服务。<br /><br /> 如果将使用 Microsoft Intune 管理移动设备，那么还必须设置对 [Intune 所需的端口和域](https://docs.microsoft.com/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)的访问权限。|  
-|用于站点系统服务器和用于客户端通信的**代理服务器** 。 你可以对不同的站点系统服务器和客户端指定单独的代理服务器。|因为这些配置是在安装站点系统角色或客户端时所做的，因此只需注意代理服务器配置，以供将来配置站点系统角色和客户端时参考。<br /><br /> 如果不能确定你的部署是否将需要使用代理服务器，请查看 [System Center Configuration Manager 中的代理服务器支持](../../../core/plan-design/network/proxy-server-support.md)以了解可以使用代理服务器的站点系统角色和客户端操作的相关信息。|   
-|  
+## <a name="ports-and-protocols"></a>端口和协议
+
+不同的 Configuration Manager 功能使用不同的网络端口。 有些端口是必需的，有些可以自定义。
+
+大多数 Configuration Manager 通信使用常见的端口，比如用于 HTTP 的端口 80 或用于 HTTPS 的端口 443。 某些站点系统角色支持使用自定义网站和自定义端口。 有关详细信息，请参阅[站点系统服务器网站](/sccm/core/plan-design/network/websites-for-site-system-servers)。
+
+部署 Configuration Manager 之前，请确定计划使用的端口，并根据需要设置防火墙。
+
+安装 Configuration Manager 后，如果需要更改端口，请勿忘记更新设备和网络上的防火墙。 还可以在 Configuration Manager 中更改端口的配置。
+
+有关详细信息，请参阅下列文章：
+
+- [如何配置客户端通信端口](/sccm/core/clients/deploy/configure-client-communication-ports)
+- [Configuration Manager 中使用的端口](/sccm/core/plan-design/hierarchy/ports)
+
+
+## <a name="internet-access-requirements"></a>Internet 访问要求
+
+某些 Configuration Manager 功能依赖 Internet 连接来获取完整功能。 如果组织使用防火墙或代理设备限制与 Internet 的网络通信，请确保允许使用必要的终结点。
+
+有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints)
+
+
+## <a name="proxy-servers"></a>代理服务器
+
+你可以对不同的站点系统服务器和客户端指定单独的代理服务器。 在安装站点系统角色或客户端时进行这些配置，或以后根据需要进行更改。
+
+有关详细信息，请参阅[代理服务器支持](/sccm/core/plan-design/network/proxy-server-support)。

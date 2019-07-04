@@ -2,7 +2,7 @@
 title: 服务连接点
 titleSuffix: Configuration Manager
 description: 了解此 Configuration Manager 站点系统角色，并了解和规划其使用范围。
-ms.date: 08/01/2018
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1173a8bec0ab05c3519d04430adddab129389b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: af65085590d8b02d6b3a020668566a334de42f13
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499113"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285570"
 ---
 # <a name="about-the-service-connection-point-in-configuration-manager"></a>关于 Configuration Manager 中的服务连接点
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 服务连接点是一个站点系统角色，为层次结构提供几个重要的功能。 设置服务连接点之前，需了解和规划它的使用范围。 规划使用可能会影响设置此站点系统角色的方式：  
 
@@ -52,21 +52,21 @@ ms.locfileid: "65499113"
 ##  <a name="bkmk_modes"></a>操作模式  
 服务连接点支持两种操作模式：  
 
-- 在联机模式下，服务连接点每 24 小时自动检查一次是否有更新。 它会自动下载可用于当前基础结构和产品版本的更新，使其在 Configuration Manager 控制台中可用。  
+- 在联机模式下，服务连接点每 24 小时自动检查一次是否有更新  。 它会自动下载可用于当前基础结构和产品版本的更新，使其在 Configuration Manager 控制台中可用。  
 
-- 在“脱机模式”下，服务连接点不会连接到 Microsoft 云服务。 要手动导入可用更新，请使用[服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)。  
+- 在“脱机模式”下，服务连接点不会连接到 Microsoft 云服务  。 要手动导入可用更新，请使用[服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)。  
 
 安装了服务连接点之后，如果在联机或脱机模式之间进行更改，必须首先重新启动 Configuration Manager SMS_Executive 服务的 SMS_DMP_DOWNLOADER 线程，此更改才会生效。 可使用 Configuration Manager 服务管理器仅重新启动 SMS_Executive 服务的 SMS_DMP_DOWNLOADER 线程。 也可以重新启动 Configuration Manager 的 SMS_Executive 服务，从而重新启动大多数站点组件。 或者可以等待计划任务（如站点备份）停止，然后为你重新启动 SMS_Executive 服务。  
 
-若要使用 Configuration Manager 服务管理器，请在控制台中转至“监视” > “系统状态” > “组件状态”，选择“启动”，然后选择“Configuration Manager 服务管理器”。 在服务管理器中：  
+若要使用 Configuration Manager 服务管理器，请在控制台中转至“监视”   > “系统状态”   > “组件状态”  ，选择“启动”  ，然后选择“Configuration Manager 服务管理器”  。 在服务管理器中：  
 
-- 在导航窗格中，依次展开站点和“组件”，然后选择要重新启动的组件。  
+- 在导航窗格中，依次展开站点和“组件”  ，然后选择要重新启动的组件。  
 
-- 在细节窗格中，右键单击该组件，然后选择“查询”。  
+- 在细节窗格中，右键单击该组件，然后选择“查询”  。  
 
-- 确认该组件的状态之后，再次右键单击该组件，选择“停止”。  
+- 确认该组件的状态之后，再次右键单击该组件，选择“停止”  。  
 
-- 再次查询组件，确认它已停止。 再次右键单击该组件，然后选择“开始”。  
+- 再次查询组件，确认它已停止  。 再次右键单击该组件，然后选择“开始”  。  
 
 > [!IMPORTANT]  
 > 将 Microsoft Intune 订阅添加到服务连接点的过程会自动将站点系统角色设置为联机状态。 使用 Intune 订阅进行设置时，服务连接点不支持脱机模式。  
@@ -79,56 +79,18 @@ ms.locfileid: "65499113"
 
 - 站点服务器上的分发管理器使用该站点系统安装帐户来传输服务连接点的更新。
 
-##  <a name="bkmk_urls"></a> Internet 访问要求  
-若要启用操作，托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙必须通过 HTTPS 的传出端口“TCP 443”和 HTTP 的传出端口“TCP 80”与以下 Internet 位置传递通信。 服务连接点也支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。 如果需要配置 Web 代理帐户，请参阅：[代理服务器支持](/sccm/core/plan-design/network/proxy-server-support)。
 
-> [!TIP]  
-> 服务连接点在连接到 go.microsoft.com 或 manage.Microsoft.com 时使用 Microsoft Intune 服务。 存在以下已知问题：如果未在服务连接点上安装 Baltimore CyberTrust 根证书、该证书已过期或损坏，则 Intune 连接器会遇到连接问题。 有关详细信息，请参阅 [服务连接点不下载更新](https://support.microsoft.com/help/3187516)。  
+## <a name="bkmk_urls"></a> Internet 访问要求  
 
-#### <a name="updates-and-servicing"></a>更新和服务
+如果你的组织使用防火墙或代理设备限制与 Internet 的网络通信，则需要允许服务连接点访问 Internet 终结点。
 
-- `*.akamaiedge.net`  
+有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp)。
 
-- `*.akamaitechnologies.com`  
-
-- `*.manage.microsoft.com`  
-
-- `go.microsoft.com`  
-
-- `blob.core.windows.net`  
-
-- `download.microsoft.com`  
-
-- `download.windowsupdate.com`  
-
-- `sccmconnected-a01.cloudapp.net`  
-
-- `configmgrbits.azureedge.net`  
-
-#### <a name="microsoft-intune"></a>Microsoft Intune
-
-- `*manage.microsoft.com`  
-
-- `https://bspmts.mp.microsoft.com/V`  
-
-- `https://login.microsoftonline.com/{TenantID}`  
-
-#### <a name="windows-10-servicing"></a>Windows 10 维护服务
-
-- `download.microsoft.com`  
-
-- `https://go.microsoft.com/fwlink/?LinkID=619849`  
-
-- `dl.delivery.mp.microsoft.com`  
-
-#### <a name="azure-services"></a>Azure 服务
-
-- `management.azure.com`  
 
 ## <a name="install-the-service-connection-point"></a>安装服务连接点
-运行“安装程序”以安装层次结构的顶层站点时，可以选择安装服务连接点。
+运行“安装程序”  以安装层次结构的顶层站点时，可以选择安装服务连接点。
 
-安装程序运行后，或者重新安装站点系统角色时，请使用“添加站点系统角色”向导或“创建站点系统服务器”向导，以在位于层次结构顶层站点（管理中心站点或独立主站点）的服务器上安装站点系统。 这两个向导都位于控制台的“主页”选项卡中的“管理” > “站点配置” > “服务器和站点系统角色”上。
+安装程序运行后，或者重新安装站点系统角色时，请使用“添加站点系统角色”  向导或“创建站点系统服务器”  向导，以在位于层次结构顶层站点（管理中心站点或独立主站点）的服务器上安装站点系统。 这两个向导都位于控制台的“主页”  选项卡中的“管理”   > “站点配置”   > “服务器和站点系统角色”  上。
 
 
 

@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9477db29a93cd8d4a8a7c9b48be8be563bbe25a6
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 5fb11ac9ffbacfc37b69cb91d34a6885f44abe08
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264493"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286648"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -118,9 +118,11 @@ ms.locfileid: "66264493"
 
 <!--1357892-->
 
-从 Configuration Manager 1806 版开始，使用 Intune 在共同管理的 Windows 10 设备上管理客户端应用。 转移此工作负荷之后，任何从 Intune 部署的可用应用在公司门户中也变得可用。 从 Configuration Manager 部署的应用在软件中心可用。
+从 Configuration Manager 1806 版开始，使用 Intune 在共同管理的 Windows 10 设备上管理客户端应用和 PowerShell 脚本。 转移此工作负荷之后，任何从 Intune 部署的可用应用在公司门户中也变得可用。 从 Configuration Manager 部署的应用在软件中心可用。
+
 
 有关 Intune 功能的详细信息，请参阅[什么是 Microsoft Intune 应用管理？](https://docs.microsoft.com/intune/app-management)。
+
 
 > [!Note]  
 > 客户端应用工作负载是预发行版功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  

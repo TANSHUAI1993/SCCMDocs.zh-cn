@@ -11,24 +11,24 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd2336ecef4af05d253c413f0402d5a83414df97
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 2041f51714cbed7a9c9a1a3ad14bbb2d8c697ae4
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038701"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285972"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
-适用范围：System Center Configuration Manager（技术预览版）
+适用范围：  System Center Configuration Manager（技术预览版）
 
 本文提供了有关 Configuration Manager 的每月技术预览分支的详细信息。 技术预览版介绍 Microsoft 正在开发的新功能。 它介绍 Configuration Manager 当前分支中尚未包含的新功能。 这些功能可能最终会包含在当前分支的更新中。 在我们最终发布这些功能前，我们希望你试用这些功能并向我们提供反馈。  
 
 由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
-此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1901 为 2019 年 (19) 的 1 月 (01)。 单独的文章专用于详细介绍每个预览版的单独功能。  
+此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1901 为 2019 年 (19) 的 1 月 (01)  。 单独的文章专用于详细介绍每个预览版的单独功能。  
 
-有关 Configuration Manager 的当前版本 中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
+有关 Configuration Manager 的当前版本  中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
 
 > [!Tip]  
 > 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
@@ -36,7 +36,7 @@ ms.locfileid: "67038701"
 ## <a name="bkmk_reqs"></a>要求和限制  
 
 > [!IMPORTANT]  
-> 技术预览版仅授权用于实验室环境。 Microsoft 可能无法提供支持服务，预览软件中某些功能可能不可用。 此外，相对于面向市场提供的软件，预览版软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
+> 技术预览版仅授权用于实验室环境。 Microsoft 可能无法提供支持服务，技术预览中某些功能可能不可用。 此外，相对于面向市场提供的软件，技术预览软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
 
 有关大多数产品的先决条件，请使用[支持的配置](/sccm/core/plan-design/configs/supported-configurations)中的信息。 以下是适用于技术预览分支的例外情况：  
 
@@ -64,13 +64,13 @@ ms.locfileid: "67038701"
 - 不支持从此预览分支更新到当前分支。  
 
     > [!Note]  
-    > 更新可用于预览版本时，仍从 Configuration Manager 控制台的“更新与维护服务”节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的[安装 Configuration Manager 更新包](https://www.youtube.com/embed/KBd_EGFbUT8)。  
+    > 更新可用于预览版本时，仍从 Configuration Manager 控制台的“更新与维护服务”  节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的[安装 Configuration Manager 更新包](https://www.youtube.com/embed/KBd_EGFbUT8)。  
 
 - 它仅支持独立主站点。 不支持管理中心站点、多个主站点或辅助站点。  
 
 Configuration Manager 的技术预览分支支持以下产品和技术：
 
-- 它仅支持 SQL Server 的以下版本：  
+- 它仅支持 SQL Server  的以下版本：  
 
     - SQL Server 2017（带累积更新 2 或更高版本）
     - SQL Server 2016（不带服务包或更高版本）

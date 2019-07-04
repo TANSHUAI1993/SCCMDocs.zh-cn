@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5994eb6ab241e35bd0b4c4ecceb9fe6c4ef35a00
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: fc52acadacf8ea8e97d23820d521b831bcc31892
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176038"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158792"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -178,6 +178,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |InventoryAgent.log|记录客户端上的硬件清单、软件清单和检测信号发现操作的活动。|  
 |LocationCache.log|记录客户端的位置缓存使用和维护的活动。|  
 |LocationServices.log|记录用于查找管理点、软件更新点和分发点的客户端活动。|  
+|M365AHandler.log|有关桌面分析设置策略的信息|
 |MaintenanceCoordinator.log|记录客户端的一般维护任务的活动。|  
 |Mifprovider.log|记录管理信息格式 (MIF) 文件的 WMI 提供程序的活动。|  
 |mtrmgr.log|监视所有软件计数过程。|  
@@ -580,6 +581,23 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |SMSdpmon.log|记录有关在分发点上配置的分发点运行状况监视计划任务的详细信息。|站点系统角色|  
 |smsdpprov.log|记录有关提取从主站点接收的压缩文件的详细信息。 此日志由远程分发点的 WMI 提供程序生成。|未与站点服务器共置的分发点计算机|  
 |smsdpusage.log|记录有关运行的 smsdpusage.exe 的详细信息，并收集分发点使用情况摘要报告的数据。|站点系统角色|  
+
+
+### <a name="desktop-analytics"></a>桌面分析
+
+使用以下日志文​​件来帮助解决与 Configuration Manager 集成的桌面分析问题。
+
+服务连接点上的日志文件位于以下目录中：`%ProgramFiles%\Configuration Manager\Logs\M365A`。
+Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDir%\CCM\logs`。
+
+| 日志 | 说明 |带有日志文件的计算机|
+|---------|---------|---------|
+| M365ADeploymentPlanWorker.log | 有关部署计划从桌面分析云服务同步到本地 Configuration Manager 的信息 |服务连接点|
+| M365ADeviceHealthWorker.log | 有关从 Configuration Manager 到 Microsoft 云的设备运行状况上载的信息 |服务连接点|
+| M365AHandler.log | 有关桌面分析设置策略的信息 |客户端|
+| M365AUploadWorker.log | 有关从 Configuration Manager 到 Microsoft 云的收集和设备上载的信息 |服务连接点|
+| SmsAdminUI.log | 有关 Configuration Manager 控制台活动（例如配置 Azure 云服务）的信息  |服务连接点|
+
 
 ###  <a name="BKMK_DiscoveryLog"></a>发现  
 下表列出的日志文件包含与发现相关的信息。  

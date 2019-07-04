@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9610024219107e81c4440a1e96780aaf300e20f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715725"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286854"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -59,7 +59,8 @@ ms.locfileid: "66715725"
 
 ### <a name="configure-branchcache"></a>配置 BranchCache
 
-设置客户端计算机的 [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache)。 若要允许客户端上的 BranchCache 缓存，请将“启用 BranchCache”  设置为“是”  。
+设置客户端计算机的 [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
+)。 若要允许客户端上的 BranchCache 缓存，请将“启用 BranchCache”  设置为“是”  。
 
 - **启用 BranchCache**：在客户端计算机上启用 BranchCache。
 
@@ -78,11 +79,11 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 启用用于 Configuration Manager 客户端的[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)。 选择“是”  ，然后指定客户端通过其与对等计算机通信的端口。
 
-- **用于初始网络广播的端口**（默认 8004）：Configuration Manager 在 Windows PE 或完整的 Windows OS 中使用此端口。 Windows PE 中的任务序列引擎先发送广播来获取内容位置，再启动任务序列。<!--SCCMDocs issue 910-->
+- **用于初始网络广播的端口**（默认 UDP 8004）：Configuration Manager 在 Windows PE 或完整的 Windows OS 中使用此端口。 Windows PE 中的任务序列引擎先发送广播来获取内容位置，再启动任务序列。<!--SCCMDocs issue 910-->
 
-- **用于从对等机下载内容的端口**（默认 8003）：Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量。 如果使用其他防火墙，则必须手动配置规则以允许此流量。
+- **用于从对等机下载内容的端口**（默认 TCP 8003）：Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量。 如果使用其他防火墙，则必须手动配置规则以允许此流量。  
 
-
+    有关详细信息，请参阅[用于连接的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp)。  
 
 ## <a name="client-policy"></a>客户端策略  
 
@@ -162,7 +163,7 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 ### <a name="user-notifications-for-required-deployments"></a>所需部署的用户通知
 
-有关以下三个设置的详细信息，请参阅[所需部署的用户通知](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments)：
+有关以下三个设置的详细信息，请参阅[所需部署的用户通知](/sccm/apps/deploy-use/deploy-applications#bkmk_notify)：
 
 - **部署截止时间大于 24 小时，每(小时)提醒用户**
 - **部署截止时间少于 24 小时，每(小时)提醒用户**
@@ -205,7 +206,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="organization-name-displayed-in-software-center"></a>软件中心中显示的组织名称
 
-键入用户在软件中心中看到的名称。 此品牌信息有助于用户将此应用程序识别为受信任的源。 有关此设置优先级的详细信息，请参阅[软件中心品牌打造](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center)。  
+键入用户在软件中心中看到的名称。 此品牌信息有助于用户将此应用程序识别为受信任的源。 有关此设置优先级的详细信息，请参阅[软件中心品牌打造](/sccm/apps/plan-design/plan-for-software-center#branding-software-center)。  
 
 ### <a name="use-new-software-center"></a>使用新的软件中心
 
@@ -384,7 +385,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 要启用基于用户注册旧设备，请将此选项设置为“是”，然后配置以下设置  ：
 
-- **注册配置文件**：选择“设置配置文件”  ，创建或选择一个注册配置文件。 有关详细信息，请参阅[为注册配置客户端设置](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment)。
+- **注册配置文件**：选择“设置配置文件”  ，创建或选择一个注册配置文件。 有关详细信息，请参阅[为注册配置客户端设置](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings)。
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>允许用户注册新式设备
 
@@ -865,8 +866,8 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 选择“是”  可基于 Configuration Manager 收集的使用情况信息自动创建用户设备相关性。  
 
 ### <a name="allow-user-to-define-their-primary-devices"></a>允许用户定义其主要设备
-
-当此设置为“是”  时，用户可在软件中心内标识自己的主要设备。
+<!--3485366-->
+当此设置为“是”  时，用户可在软件中心内标识自己的主要设备。 有关详细信息，请参阅[软件中心用户指南](/sccm/core/understand/software-center#work-information)。
 
 
 

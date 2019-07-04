@@ -2,7 +2,7 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 05/28/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17ba88f318f09e0ddc3f61873c881338741b8ccd
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: 03610ad219a8ae89de63b87499d4ee9c628a271d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822033"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285653"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -94,28 +94,29 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 ## <a name="bkmk_cloud"></a>云附加管理
 
 ### <a name="stop-cloud-service-when-it-exceeds-threshold"></a>超过阈值时停止云服务
+
 <!--3735092-->
-现在，当数据传输总量超过限制时，Configuration Manager 可停止云管理网关 (CMG) 服务。 CMG 始终提供提醒，以便在使用量达到警告或严重级别时触发通知。 此新选项将关闭云服务，以帮助降低由于使用量陡升而意外导致的 Azure 成本。 
+***[6 月 18 日更新]*** 现在，当数据传输总量超过限制时，Configuration Manager 可停止云管理网关 (CMG) 服务。 CMG 始终提供提醒，以便在使用量达到警告或严重级别时触发通知。 此新选项将关闭云服务，以帮助降低由于使用量陡升而意外导致的 Azure 成本。
 
-在 CMG 上[设置出站流量警告](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts)，然后启用“在服务超过临界阈值时停止该服务”选项  。  
-
-<!-- For more information, see [Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts). -->
+有关详细信息，请参阅[当 CMG 超过阈值时停止](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#bkmk_stop)。
 
 
 ### <a name="use-azure-resource-manager-for-cloud-services"></a>使用云服务适用的 Azure 资源管理器
+
 <!--3605704-->
-从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 该版本是支持创建这些 Azure 部署的最后一个版本。 
+***[6 月 17 日更新]*** 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 该版本是支持创建这些 Azure 部署的最后一个版本。
 
 现有部署将继续使用。 从此 Current Branch 版本起，Azure 资源管理器是用于云管理网关和云分发点的新实例的唯一部署机制。
 
-<!-- For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).   -->
+有关详细信息，请参阅[适用于云管理网关的 Azure 资源管理器](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。
 
 
 ### <a name="add-cloud-management-gateway-to-boundary-groups"></a>将云管理网关添加到边界组
-<!--3640932-->
-现在可以将云管理网关 (CMG) 与边界组关联。 此配置允许客户端根据边界组关系默认或回退到 CMG 以进行客户端通信。 在分支机构和 VPN 方案中，这一行为特别有用。 可以使客户端流量不使用昂贵且速度缓慢的 WAN 链接，改为使用更快的 Internet 链接以指向 Microsoft Azure。
 
-<!-- For more information, see [Plan for the CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). -->
+<!--3640932-->
+***[6 月 18 日更新]*** 现在可以将云管理网关 (CMG) 与边界组关联。 此配置允许客户端根据边界组关系默认或回退到 CMG 以进行客户端通信。 在分支机构和 VPN 方案中，这一行为特别有用。 可以使客户端流量不使用昂贵且速度缓慢的 WAN 链接，改为使用更快的 Internet 链接以指向 Microsoft Azure。
+
+有关详细信息，请参阅 [CMG 层次结构设计](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design)和[设置 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#configure-boundary-groups)。
 
 
 
@@ -130,9 +131,9 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="edit-or-copy-powershell-scripts"></a>编辑或复制 PowerShell 脚本
 <!--3705507-->
-现在可以“编辑”  或“复制”  与运行脚本功能一起使用的现有 PowerShell 脚本。 现在可以直接编辑想要更改的脚本，而无需重新创建脚本。 这两种操作都使用与创建新脚本时所使用的相同向导体验。 编辑或复制脚本时，Configuration Manager 不会保留审批状态。 
+***[6 月 20 日更新]*** 现在可以“编辑”或“复制”  与运行脚本功能一起使用的现有 PowerShell 脚本。  现在可以直接编辑想要更改的脚本，而无需重新创建脚本。 这两种操作都使用与创建新脚本时所使用的相同向导体验。 编辑或复制脚本时，Configuration Manager 不会保留审批状态。 
 
-<!-- For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts). -->
+有关详细信息，请参阅[运行脚本](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_psedit)。
 
 
 
@@ -332,11 +333,11 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="configure-user-device-affinity-in-software-center"></a>在软件中心中配置用户设备相关性
 <!--3485366-->
-借助从版本 1806 开始的[软件中心基础结构改进](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements)，大多数方案不再需要应用程序目录站点服务器角色。 某些客户仍依赖应用程序目录来允许用户将其主要设备设置为用户设备相关性。 
+***[6 月 18 日更新]*** 借助从版本 1806 开始的[软件中心基础结构改进](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements)，大多数方案不再需要应用程序目录站点服务器角色。 某些客户仍依赖应用程序目录来允许用户将其主要设备设置为用户设备相关性。 
 
 现在，用户可以在软件中心中设置其主要设备。 此操作使其成为 Configuration Manager 中设备的主要用户。
 
-<!-- For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). -->
+有关详细信息，请参阅[将用户和设备与用户设备相关性进行链接](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。 
 
 
 ### <a name="configure-default-views-in-software-center"></a>在软件中心配置默认视图
@@ -435,25 +436,25 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="bkmk_console"></a> 对 Configuration Manager 控制台的改进
 <!--3594151-->
-根据中西部管理峰会 (MMS) Desert 版本 2018 的客户反馈，此版本包含对 Configuration Manager 控制台的以下改进：
+***[6 月 20 日更新]*** 根据中西部管理峰会 (MMS) Desert 版本 2018 的客户反馈，此版本包含对 Configuration Manager 控制台的以下改进：
 - 将应用程序检测方法浏览注册表窗口最大化
 - 从应用程序部署转到集合
 - 从监视状态中删除内容
 - “监视”  工作区的“部署”  节点中，视图按整数值排序
 - 移动警告以获得大量结果
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#tips)。
 
 
 ### <a name="configuration-manager-console-notifications"></a>Configuration Manager 控制台通知
 <!--3556016, fka 1318035-->
-为了更好地了解情况以便采取适当的操作，Configuration Manager 控制台现在会通知以下事件：
+***[已更新]*** 为了更好地了解情况以便采取适当的操作，Configuration Manager 控制台现在会通知以下事件：
 - Configuration Manager 本身有可用的更新
 - 环境中发生生命周期和维护事件
 
-此通知位于功能区下方控制台窗口顶部的栏。 Configuration Manager 更新可用时，它将替换以前的体验。 这些控制台内通知仍显示关键信息，但不会干扰你在控制台中的工作。 不能消除重要通知。 控制台在标题栏的新通知区域中显示所有通知。 
+此通知位于功能区下方控制台窗口顶部的栏。 Configuration Manager 更新可用时，它将替换以前的体验。 这些控制台内通知仍显示关键信息，但不会干扰你在控制台中的工作。 不能消除重要通知。 控制台在标题栏的新通知区域中显示所有通知。
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console)。
 
 
 ### <a name="confirmation-of-console-feedback"></a>确认控制台反馈
@@ -472,14 +473,16 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="in-console-documentation-dashboard"></a>控制台内文档仪表板
 <!--3556019, fka 1357546-->
-新“社区”工作区中新增了一个“文档”节点。   此节点包含有关 Configuration Manager 文档和支持文章的最新信息。
+***[6 月 20 日更新]*** 新“社区”工作区中新增了一个“文档”节点。   此节点包含有关 Configuration Manager 文档和支持文章的最新信息。
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard)。
 
 
 ### <a name="search-device-views-using-mac-address"></a>使用 MAC 地址搜索设备视图
 <!--3600878-->
-现在可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列  。 使用搜索字段添加“MAC 地址”搜索条件  。 
+***[6 月 20 日更新]*** 现在可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列  。 使用搜索字段添加“MAC 地址”搜索条件  。 
+
+有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#tips)。
 
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>使用 .NET 4.7 以改进控制台的辅助功能
@@ -514,10 +517,10 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1902 发行说明](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps)。
 
-<!-- 
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4486457).
+从 2019 年 6 月 17 日开始，以下更新汇总 (4500571) 在控制台中可用：[Configuration Manager Current Branch（版本 1902）更新汇总](https://support.microsoft.com/help/4500571)。
 
 
+<!--
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
@@ -541,7 +544,7 @@ The following additional hotfixes are available to address specific issues:
 >
 >  了解详细信息：    
 >   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
 
