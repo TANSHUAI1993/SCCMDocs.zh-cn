@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9167ece07e751302fb221a7b0fe2757386346b5f
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: a64a9ee6808354caaee9eadca0ad18e851a3eb71
+ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194487"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398869"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -88,10 +88,8 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 - 使用公钥基础结构 (PKI) 中的企业 CA 颁发的证书。 大多数企业 PKI 实现会向 Windows 客户端添加受信任的根 CA。 例如，在组策略中使用 Active Directory 证书服务。 如果从客户端不自动信任的 CA 颁发 CMG 服务器身份验证证书，请将 CA 受信任的根证书添加到基于 Internet 的客户端。  
 
-    - 还可以使用 Configuration Manager 证书配置文件在客户端上预配证书。 有关详细信息，请参阅[证书配置文件简介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
-
-> [!Note]  
-> 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872-->  
+    - 还可以使用 Configuration Manager 证书配置文件在客户端上预配证书。 有关详细信息，请参阅[证书配置文件简介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。
+    - 如果打算[从 Intune 安装 Configuration Manager 客户端](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)，还可以使用 Intune 证书配置文件在客户端上预配证书。 有关详细信息，请参阅[配置证书配置文件](https://docs.microsoft.com/intune/certificates-configure)。
 
 ### <a name="bkmk_serverauthpublic"></a>由公共提供程序颁发的服务器身份验证证书
 
@@ -146,6 +144,9 @@ CMG 连接点要求此证书将客户端请求安全地转发到 HTTPS 管理点
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
 CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受信任的根证书链。 可指定两个受信任的根 CA 和四个中间（从属）CA。 请务必添加信任链中的所有证书。 例如，若客户端身份验证证书由中间 CA 颁发，请同时添加中间和根 CA 证书。
+
+> [!Note]  
+> 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 
 #### <a name="export-the-client-certificates-trusted-root"></a>导出客户端证书的受信任根
 

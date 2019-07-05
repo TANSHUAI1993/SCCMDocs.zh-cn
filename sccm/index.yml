@@ -3,12 +3,12 @@ title: System Center Configuration Manager
 summary: 关于 Configuration Manager 的官方产品文档
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 5839951dd659da3f88598def010330a50b1b4cf9
-  ms.sourcegitcommit: 65c8b29797bc0173f97b1b1144492d093a30ebb7
+  ms.openlocfilehash: fdea6b136b93cc3afe62a9fd16efa365d9467b16
+  ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/24/2019
-  ms.locfileid: "67344723"
+  ms.lasthandoff: 07/04/2019
+  ms.locfileid: "67562061"
 highlightedContent:
   items:
   - title: 新增功能
@@ -195,26 +195,29 @@ additionalContent:
   - title: 其他内容
     items:
     - title: 开发
-      summary: >
-        [PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) <br/>
-
-        [SDK 概念](https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk) <br/>
-
-        [SDK 参考](https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference) <br/>
-
-        [SQL 视图](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views)
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
+        text: SDK 概念
+      - url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
+        text: SDK 参考
+      - url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
+        text: SQL 视图
     - title: 工具
-      summary: >
-        [支持中心](https://docs.microsoft.com/sccm/core/support/support-center) <br/>
-
-        [MDT](https://docs.microsoft.com/sccm/mdt/) <br/>
-
-        [包转换管理器](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) <br/>
-
-        [查看更多 >](https://docs.microsoft.com/sccm/core/support/tools)
+      links:
+      - url: https://docs.microsoft.com/sccm/core/support/support-center
+        text: 支持中心
+      - url: https://docs.microsoft.com/sccm/mdt/
+        text: MDT
+      - url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
+        text: 包转换管理器
+      - url: https://docs.microsoft.com/sccm/core/support/tools
+        text: 查看更多 >
     - title: 其他社区站点
-      summary: >
-        [Reddit 上的 ConfigMgr](https://www.reddit.com/r/sccm) <br/>
-
-        [Facebook 上的 ConfigMgr 专业人员组](https://www.facebook.com/groups/ConfigMgr2012) <br/>
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: Reddit 上的 ConfigMgr
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Facebook 上的 ConfigMgr 专业人员组
   footer: 在我们的网站上发现了问题？ [请告诉我们](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)！

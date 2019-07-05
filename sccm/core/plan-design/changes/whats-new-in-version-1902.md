@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03610ad219a8ae89de63b87499d4ee9c628a271d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 66b89dd0f077e776cc0abe5f24062e017de5acc1
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285653"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314429"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -342,7 +342,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="configure-default-views-in-software-center"></a>在软件中心配置默认视图
 <!--3612112-->
-此版本的 Configuration Manager 进一步迭代自定义软件中心的方式：
+***[更新于 6/20]*** 此版本的 Configuration Manager 进一步迭代自定义软件中心的方式：
  
 - 将应用程序的默认布局设置为磁贴或列表  
 
@@ -354,7 +354,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 在客户端设置的“软件中心”  组中指定这些设置。
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
+有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults)。
 
 
 

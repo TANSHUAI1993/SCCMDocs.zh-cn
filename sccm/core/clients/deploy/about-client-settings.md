@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 0c6bffc94abecb5f700fbb7236c923f26f3a0de0
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286854"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314411"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -652,6 +652,17 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 例如，如果你的组织不使用符合性策略，并且你希望在软件中心隐藏“设备符合性”选项卡，请将“启用‘设备符合性’选项卡”设置为“否”   。
 
+### <a name="bkmk_swctr_defaults"></a> 在软件中心配置默认视图
+<!--3612112-->
+（从版本 1902 中引入） 
+
+- 将“默认应用程序筛选器”配置为对“所有”应用程序或仅对“必要”    应用程序应用。  
+
+    - 软件中心始终使用默认设置。 用户可以更改此筛选器，但软件中心不会保留其首选项。  
+
+ - 将“默认应用程序视图用”设置为“平铺视图”或“列表视图”    。 
+
+    - 如果用户更改此配置，则软件中心以后会保留用户的首选项。 
 
 
 ## <a name="software-deployment"></a>软件部署  
