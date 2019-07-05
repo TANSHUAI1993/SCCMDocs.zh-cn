@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c3058eed3cd7fe4430824d5a55f155694a2ed44
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: eddce66fe58ca44ece7e9c2f15a5f602ad7a78d7
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177017"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516092"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>了解客户端如何查找 System Center Configuration Manager 的站点资源和服务
 
@@ -132,12 +132,12 @@ MP 列表是客户端的首选服务定位源，因为它是客户端先前标�
 随后客户端会随机选择要使用的新管理点。  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-加入域的客户端可以将 AD DS 用于服务定位。 这要求站点 [将数据发布到 Active Directory](http://technet.microsoft.com/library/hh696543.aspx)。  
+加入域的客户端可以将 AD DS 用于服务定位。 这要求站点 [将数据发布到 Active Directory](https://technet.microsoft.com/library/hh696543.aspx)。  
 
 当以下所有条件为 true 时，客户端可将 AD DS 用于服务定位：  
 
 -   Active Directory [架构已扩展](https://technet.microsoft.com/library/mt345589.aspx)或已针对 System Center 2012 Configuration Manager 进行了扩展。  
--   [配置 Active Directory 林以进行发布](http://technet.microsoft.com/library/hh696542.aspx)，并配置 Configuration Manager 站点以进行发布。  
+-   [配置 Active Directory 林以进行发布](https://technet.microsoft.com/library/hh696542.aspx)，并配置 Configuration Manager 站点以进行发布。  
 -   客户端计算机是 Active Directory 域的成员，并可访问全局编录服务器。  
 
 如果客户端在 AD DS 中找不到用于服务定位的管理点，那么它会尝试使用 DNS。  
@@ -149,7 +149,7 @@ Intranet 上的客户端可将 DNS 用于服务定位。 这要求层次结构�
 -   未扩展 AD DS 架构以支持 Configuration Manager。
 -   Intranet 上的客户端位于没有为 Configuration Manager 发布启用的林中。  
 -   你的客户端位于工作组计算机上，并且未针对仅 Internet 的客户端管理对这些客户端进行配置。 （针对 Internet 配置的工作组客户端只与面向 Internet 的管理点通信，并且不会将 DNS 用于服务定位。）  
--   你可以 [将客户端配置为从 DNS 中查找管理点](http://technet.microsoft.com/library/gg682055)。  
+-   你可以 [将客户端配置为从 DNS 中查找管理点](https://technet.microsoft.com/library/gg682055)。  
 
 当一个站点将管理点的服务定位记录发布到 DNS 时：  
 

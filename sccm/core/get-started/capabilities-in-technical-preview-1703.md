@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bdca6ded291ca6e32194c61ce24b33b690489cb
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: bc5ebcbec87edf52d7ca7d3f9e6f4341ec60c191
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286253"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515829"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
@@ -159,4 +159,4 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 - 选择**选择加入 Windows 7、8 和 8.1 设备上的商业数据收集**   
 若要了解选择加入后从这些操作系统中收集的数据，请从 Microsoft 下载并参阅 PDF 文件 [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965)（Windows 7、Windows 8 和 Windows 8.1 评估人员遥测事件和字段）。
 
-- **配置 Internet Explorer 数据收集**：在运行 Windows 8.1 或更低版本的设备上，启用 Internet Explorer 数据收集后，Upgrade Readiness 可以检测可能会阻止顺利升级到 Windows 10 的 Web 应用程序不兼容问题。 可以每 Internet 区域启用一次 Internet Explorer 数据收集。 有关 Internet 区域的详细信息，请参阅[关于 URL 安全区域](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx)。
+- **配置 Internet Explorer 数据收集**：在运行 Windows 8.1 或更低版本的设备上，启用 Internet Explorer 数据收集后，Upgrade Readiness 可以检测可能会阻止顺利升级到 Windows 10 的 Web 应用程序不兼容问题。 可以每 Internet 区域启用一次 Internet Explorer 数据收集。 有关 Internet 区域的详细信息，请参阅[关于 URL 安全区域](https://msdn.microsoft.com/library/ms537183(v=vs.85).aspx)。

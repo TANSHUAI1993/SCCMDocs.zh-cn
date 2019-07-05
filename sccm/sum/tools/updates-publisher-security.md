@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535feb67e700acd5b799c696aa366343581e70fd
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: db60b7cf6332e778279b494b2922cd621983c20c
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145740"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516294"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 
@@ -36,7 +36,7 @@ ms.locfileid: "67145740"
 
 3.  选择“另一台计算机”  ，键入更新服务器的名称或单击“浏览”  找到更新服务器计算机，然后依次单击“完成”  、“关闭”  和“确定”  。
 
-4.  依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”     。
+4.  依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”    。
 
 5.  在结果窗格中，右键单击相应证书，然后依次单击“所有任务”  和“导出”  。
 
@@ -46,7 +46,7 @@ ms.locfileid: "67145740"
 
 8.  如果使用的是自签名证书（如“WSUS 发布者自签名”  ），请右键单击“受信任的根证书颁发机构”  ，然后依次单击“所有任务”  和“导入”  。 使用第 6 步中的导出文件完成“证书导入向导”。
 
-9.  右键单击“证书(更新服务器名称)”，单击“连接到另一台计算机”，输入 Updates Publisher 计算机的计算机名称，然后单击“确定”     。
+9.  右键单击“证书(更新服务器名称)”，单击“连接到另一台计算机”，输入 Updates Publisher 计算机的计算机名称，然后单击“确定”    。
 
 10. 如果 Updates Publisher 计算机远离更新服务器，请重复执行第 7-9 步，将证书导入 Updates Publisher 计算机上的证书存储。
 
@@ -66,7 +66,7 @@ ms.locfileid: "67145740"
 
 3. 选择“另一台计算机”  ，键入更新服务器的名称或单击“浏览”  找到更新服务器计算机，然后依次单击“完成”  、“关闭”  和“确定”  。
 
-4. 依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”     。
+4. 依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”    。
 
 5. 右键单击结果窗格中的证书，然后依次单击“所有任务”  和“导出”  。 使用默认设置完成“证书导出向导”  ，创建包含向导中指定的名称和位置的导出证书文件。
 
@@ -77,7 +77,7 @@ ms.locfileid: "67145740"
    -   对于证书颁发机构 (CA) 颁发的证书：将证书添加到“受信任的发布者”  证书存储中。
 
    > [!NOTE]
-   > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](https://docs.microsoft.com/en-us/previous-versions/bb530967(v=technet.10))。
+   > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10))。
 
 
 

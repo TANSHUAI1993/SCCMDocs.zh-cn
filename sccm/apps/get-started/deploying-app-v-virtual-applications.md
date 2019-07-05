@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8bd4b938690ebc3c370e3ae7a5e9152b9330430
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 4598b89429ec3a9bd3bed31f57a6b681f88063cf
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286512"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515823"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 App-V 虚拟应用程序
 
@@ -148,7 +148,7 @@ Configuration Manager 中的 App-V 虚拟环境允许所部署的虚拟应用程
 有关 App-V 动态套件合成的详细信息，请参阅 App-V 文档。  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>将 App-V 4.6 应用程序转换为 App-V 5 应用程序  
-APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用 APP-V 4.6 排序的应用程序。 但是，App-V 5 包含一个包转换工具，可用于转换应用程序。 有关详细信息，请参见 [App-V 5 文档](http://technet.microsoft.com/library/jj713472.aspx)。  
+APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用 APP-V 4.6 排序的应用程序。 但是，App-V 5 包含一个包转换工具，可用于转换应用程序。 有关详细信息，请参见 [App-V 5 文档](https://technet.microsoft.com/library/jj713472.aspx)。  
 
 使用下列步骤将 App-V 4.6 应用程序转换为 App-V 5 应用程序：  
 
@@ -179,7 +179,7 @@ APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用
 
 如果要利用 Configuration Manager 部署 App-V 5 虚拟应用程序，则在你创建 App-V 5 部署类型时，所有三个文件都必须位于相同的文件夹中。 如果文件夹中有多个文件，则 Configuration Manager 将使用最新的文件。  
 
-有关详细信息，请参见 [App-V 5 文档](http://technet.microsoft.com/library/jj713466.aspx)。  
+有关详细信息，请参见 [App-V 5 文档](https://technet.microsoft.com/library/jj713466.aspx)。  
 
 ##  <a name="app-v-local-interaction"></a>App-V 本地交互  
 在一些应用程序部署方案中，某些应用程序以本地方式安装在客户端计算机上，而另一些应用程序则作为虚拟应用程序部署到相同的客户端计算机上。 默认情况下，以本地方式安装的应用程序无法看到虚拟化的应用程序，也无法直接与它们通信。 这是 App-V 提供的应用程序隔离功能的预期行为。 本地交互是 App-V 客户端的一项功能，可以为每个应用程序启用此功能，以便允许以本地方式安装且便于客户端计算机上运行的应用程序看到虚拟化的应用程序并与其通信。 Configuration Manager 和 App-V 完全支持本地交互。  
@@ -187,7 +187,7 @@ APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用
 有关 App-V 本地交互功能的详细信息，请参阅 App-V 文档。  
 
 ##  <a name="app-v-5-shared-content-store"></a>App-V 5 共享内容存储  
-Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信息，请参阅 [规划 App-V 5.0 共享内容存储 (SCS)](http://technet.microsoft.com/library/jj713431.aspx)。  
+Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信息，请参阅 [规划 App-V 5.0 共享内容存储 (SCS)](https://technet.microsoft.com/library/jj713431.aspx)。  
 
 ##  <a name="monitoring-virtual-applications"></a>监视虚拟应用程序  
 

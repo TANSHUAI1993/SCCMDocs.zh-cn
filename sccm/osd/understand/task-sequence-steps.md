@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: e862fe4907d5e480fd8a19c28d890987f73240fa
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285601"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463792"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -1774,7 +1774,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 使用此步骤执行从 Windows PE 到新 OS 的转换。 此任务序列步骤是在部署任何 OS 时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新 OS 中，并为任务序列在新 OS 中继续执行做好准备。  
 
-此步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。  
+此步骤是负责过渡到完整的操作系统从 Windows PE 任务序列。 运行该步骤在 Windows PE 和完整的 OS 中由于此转换。 但是，由于在 Windows PE 中启动转换，它可以仅添加 Windows PE 部分的任务序列期间。  
 
 在此步骤中使用以下任务序列变量：  
 

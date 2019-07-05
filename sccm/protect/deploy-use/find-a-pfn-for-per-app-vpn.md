@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d932a4f0bdec3d9bfadbe6c45c12c6f91865a70
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7021175062a80dffa48a599266fd257c0967e806
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494441"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551405"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>查找每应用 VPN 的包系列名称 (PFN)
 
@@ -31,8 +31,9 @@ ms.locfileid: "65494441"
 
 Get-appxpackage 的语法是：
 
-` Parameter Set: __AllParameterSets`
-` Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]`
+```
+Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]
+```
 
 > [!NOTE]
 > 可能需要以管理员身份运行 PowerShell 才能检索 PFN
@@ -75,12 +76,12 @@ Get-appxpackage 的语法是：
 3.  单击应用的链接。 请注意，访问的 URL 末尾有一串字母。 在本示例中，URL 如下所示：`https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
 4.  在不同的选项卡上，粘贴以下 URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`，将 `<app id>` 替换为从 https://www.microsoft.com/en-us/store/apps 获取的应用 ID，即步骤 3 中 URL 末尾的一串字母。 在本示例（OneNote 的示例）中，将粘贴：`https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`。
 
-在 Microsoft Edge 中，将显示所需信息；在 Internet Explorer 中，单击“打开”，查看信息。 第一行提供 PFN 值。 本示例的结果如下所示：
+在 Microsoft Edge 中，将显示所需信息；在 Internet Explorer 中，单击“打开”，  查看信息。 第一行提供 PFN 值。 本示例的结果如下所示：
 
-
-`{`
-`  "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",`
-`  "packageIdentityName": "Microsoft.Office.OneNote",`
-`  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
-`  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
-`}`
+```json
+{
+  "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",
+  "packageIdentityName": "Microsoft.Office.OneNote",
+  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",
+  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+}

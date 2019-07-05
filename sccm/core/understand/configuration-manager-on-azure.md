@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 410c056b22bc4c52010e941a244cffa1fc3b2dff
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: f4efea7baf7820c4edfb61882b14812336c85518
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194106"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516169"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 适用范围：  System Center Configuration Manager (Current Branch)
@@ -153,26 +153,26 @@ ms.locfileid: "67194106"
 很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本： https://azure.microsoft.com/pricing/calculator/
 
 ## <a name="additional-resources"></a>其他资源
-基础知识： http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/ 
+基础知识： https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/ 
 
 **Azure VM 计算机类型：**
  - Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM 定价： http://azure.microsoft.com/pricing/details/virtual-machines/  
- - 存储定价： http://azure.microsoft.com/pricing/details/storage/
+ - VM 定价： https://azure.microsoft.com/pricing/details/virtual-machines/  
+ - 存储定价： https://azure.microsoft.com/pricing/details/storage/
 
 **磁盘性能注意事项：**    
- - 高级磁盘简介： http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - 高级磁盘深层信息： http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - 高级磁盘简介： https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - 高级磁盘深层信息： https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
  - 有关图表的最大大小和存储性能目标的综合信息： https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据： http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据： https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性：**
  - Azure IaaS 运行时间 SLA： https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
  - 可用性集说明： https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **连接性：**
- - Express Route 与Azure VPN： http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route 定价： http://azure.microsoft.com/pricing/details/expressroute/
- - Express Route 详情： http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Express Route 与Azure VPN： https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+ - Express Route 定价： https://azure.microsoft.com/pricing/details/expressroute/
+ - Express Route 详情： https://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

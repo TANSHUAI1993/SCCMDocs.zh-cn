@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e9f851f6dcd21de261729215bad196233610272
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 78fdf0a07d1a299f7d10a0325b48f0c1fcfde2e3
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127671"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516001"
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>通过构建你自己的实验室环境来评估 System Center Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
  了解如何创建实验室环境来评估 System Center Configuration Manager 在组织中的使用。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "56127671"
  构建此实验室，你将获得一个用于工作的功能性环境。 但是，此环境不会针对系统性能、硬盘空间管理和 SQL Server 存储等因素进行优化。  
 
 ##  <a name="BKMK_EvalRec"></a> 构建实验室前的推荐读物  
- [System Center Configuration Manager 文档](http://docs.microsoft.com/sccm/)中提供了大量内容。 建议用户在开始构建实验室前，阅读此库的以下主题：  
+ [System Center Configuration Manager 文档](https://docs.microsoft.com/sccm/)中提供了大量内容。 建议用户在开始构建实验室前，阅读此库的以下主题：  
 
 -   在 [System Center Configuration Manager 简介](../../core/understand/introduction.md)中，可以了解 Configuration Manager 控制台、最终用户门户和示例方案的核心概念。  
 
