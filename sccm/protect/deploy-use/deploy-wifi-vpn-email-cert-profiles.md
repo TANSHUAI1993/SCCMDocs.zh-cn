@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5c6d0d06328ae73921a80b090dffd1fb711d8b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4e876041d67263b0b5db2acdfdef0ffa1ff318ef
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500564"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551421"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署配置文件
 
@@ -24,7 +24,7 @@ ms.locfileid: "65500564"
 
 必须将配置文件部署到一个或多个集合，然后才能使用这些配置文件。  
 
- 使用“部署 Wi-fi 配置文件”、“部署 VPN 配置文件”、“部署 Exchange ActiveSync 配置文件”或“部署证书配置文件”对话框可配置这些配置文件的部署。 在配置过程中，你可以定义将向其中部署配置文件的集合，以及指定对配置文件的符合性进行评估的频率。  
+ 使用“部署 Wi-fi 配置文件”  、“部署 VPN 配置文件”  、“部署 Exchange ActiveSync 配置文件”  或“部署证书配置文件”  对话框可配置这些配置文件的部署。 在配置过程中，你可以定义将向其中部署配置文件的集合，以及指定对配置文件的符合性进行评估的频率。  
 
 > [!NOTE]
 >  如果部署多个公司资源访问配置文件到同一个用户时，会出现下列行为：  
@@ -43,26 +43,26 @@ ms.locfileid: "65500564"
 ## <a name="deploying--profiles"></a>部署配置文件  
 
 
-1.  在 System Center Configuration Manager 控制台中，选择“资产和符合性”。  
+1.  在 System Center Configuration Manager 控制台中，选择“资产和符合性”  。  
 
-2.  在“资产和符合性” 工作区中，展开“符合性设置”，展开“公司资源访问”，然后选择合适的配置文件类型，如“Wi-Fi 配置文件”。  
+2.  在“资产和符合性”  工作区中，展开“符合性设置”  ，展开“公司资源访问”  ，然后选择合适的配置文件类型，如“Wi-Fi 配置文件”  。  
 
-3.  在配置文件列表中，选择要部署的配置文件，然后在“主页”选项卡上的“部署”组中单击“部署”。  
+3.  在配置文件列表中，选择要部署的配置文件，然后在“主页”  选项卡上的“部署”  组中单击“部署”  。  
 
 4.  在部署配置文件对话框中，指定下列信息：  
 
-    -   **集合** - 单击“浏览”以选择要在其中部署配置文件的集合。  
+    -   **集合** - 单击“浏览”  以选择要在其中部署配置文件的集合。  
 
     -   **生成警报** - 启用此选项以配置一个警报，如果在指定日期和时间之前配置文件符合性小于指定百分比，则生成该警报。 你也可以指定是否希望将警报发送到 System Center Operations Manager。  
 
-    -   -   **随机延迟(小时)**：（仅适用于包含简单证书注册协议设置的证书配置文件）指定一个延迟时段以避免对网络设备注册服务进行过度处理。 默认值为 **64** 小时。  
+    -   -   **随机延迟(小时)** ：（仅适用于包含简单证书注册协议设置的证书配置文件）指定一个延迟时段以避免对网络设备注册服务进行过度处理。 默认值为 **64** 小时。  
 
-    -   **指定此 <type> 配置文件的符合性评估计划** - 指定在客户端计算机上对部署的配置文件进行评估所依据的计划。 该计划可以是简单计划或自定义计划。  
+    -   “指定此 \<类型> 配置文件的符合性评估计划”  - 指定在客户端计算机上对部署的配置文件进行评估所依据的计划。 该计划可以是简单计划或自定义计划。  
 
         > [!NOTE]  
         >  当用户登录时，客户端计算机将评估配置文件。  
 
-5.  单击“确定”关闭对话框并创建部署。
+5.  单击“确定”  关闭对话框并创建部署。
 
 ### <a name="see-also"></a>另请参阅  
 

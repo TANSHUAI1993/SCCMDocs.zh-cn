@@ -11,19 +11,19 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94cbbb7616588fa88bae9ae71f5b5f53dd4a4d63
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9346e95e3fa66e9f24d1bfc3711917c3d2146e5e
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500363"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551356"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager 中的 Windows Hello 企业版设置
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 <!--1245704-->
-通过 Configuration Manager，可与 Windows Hello 企业版（旧称为“Microsoft Passport for Windows”，也是 Windows 10 设备的替代登录方法）集成。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。 在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。
+通过 Configuration Manager，可与 Windows Hello 企业版（旧称为“Microsoft Passport for Windows”，也是 Windows 10 设备的替代登录方法）集成。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。 在 Hello 企业版中，可以使用“用户手势”取代密码进行登录  。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。
 
 
 > [!Important]  
@@ -58,7 +58,7 @@ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：
 
 ## <a name="configure-a-windows-hello-for-business-profile"></a>配置 Windows Hello for Business 配置文件  
 
-在 Configuration Manager 控制台的“公司资源访问”下，右键单击“Windows Hello 企业版配置文件”，然后选择“新建”以启动配置文件向导。 提供向导请求的设置，在最终页上查看并确认设置，然后单击“关闭”。 设置的示例可能如下所示：  
+在 Configuration Manager 控制台的“公司资源访问”  下，右键单击“Windows Hello 企业版配置文件”  ，然后选择“新建”  以启动配置文件向导。 提供向导请求的设置，在最终页上查看并确认设置，然后单击“关闭”  。 设置的示例可能如下所示：  
 
 ![Windows Hello 企业版策略向导，显示可用设置列表](../media/Hello-for-Business-settings.png)
 
@@ -72,14 +72,14 @@ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：
 
 -   在证书配置文件中，选择使用智能卡登录 EKU 的模板。  
 
--   如果想要在 Windows Hello 企业版密钥容器中存储证书配置文件，而证书配置文件使用智能卡登录 EKU，则必须配置以下密钥注册的权限，以确保证书验证正确。
+-   如果想要在 Windows Hello 企业版密钥容器中存储证书配置文件，而证书配置文件使用智能卡登录 EKU，则必须配置以下密钥注册的权限，以确保证书验证正确  。
 必须首先创建了**密钥管理**组，并将所有 Configuration Manager 管理点计算机添加为此组的成员。
 
 一些配置可能不需要配置权限，或可能需要进一步配置。 请参阅下表，获取更多帮助：
 
 |Windows 客户端版本|Configuration Manager 1602 或 1606|Configuration Manager 1610|Configuration Manager 1702 或更高版本|
 |-|-|-|-|
-|Windows 10 周年更新|无需修补程序<br><br>无需权限<br><br>无需 Windows 架构更新|无需修补程序（见“警告”）<br><br>无需权限<br><br>无需 Windows 架构更新|配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|
+|Windows 10 周年更新|无需修补程序<br><br>无需权限<br><br>无需 Windows 架构更新|无需修补程序（见“警告”  ）<br><br>无需权限<br><br>无需 Windows 架构更新|配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|
 |Windows 10 创意者更新或更高版本|不支持|安装[此修补程序](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|
 
 > [!WARNING]
@@ -88,16 +88,16 @@ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：
 ## <a name="to-configure-permissions"></a>配置权限的具体步骤
 
 1.  以域管理员身份或使用等效的凭据登录到域控制器或管理工作站。
-2.  打开“Active Directory 用户和计算机”。
-3.  从导航窗格中，右键单击你的域名，然后单击“属性”。
-4.  在“*<domain name>* 属性”对话框的“安全”选项卡上，单击“高级”。 如果未显示“安全”选项卡，则从“Active Directory 用户和计算机”的“视图”菜单中打开“高级功能”。
-5.  单击“添加” 。
-6.  在“*<domain name>* 的权限条目”对话框中，单击“选择主体”。
-7.  在“选择用户、计算机、服务帐户或组”对话框中，在“输入要选择的对象名称”文本框中键入“密钥管理”。 单击" **确定**"。
-8.  从“适用于”列表中，选择“后代用户对象”。
-9.  滚动到页面底部并单击“全部清除”。
-10. 在“属性”部分中，选择“读取 msDS-KeyCredentialLink”。
-11. 单击“确定”三次以完成任务。
+2.  打开“Active Directory 用户和计算机”  。
+3.  从导航窗格中，右键单击你的域名，然后单击“属性”  。
+4.  在 \<域名>  “属性”  对话框的“安全”  选项卡上，单击“高级”  。 如果未显示“安全”选项卡，则从“Active Directory 用户和计算机”的“视图”菜单中打开“高级功能”     。
+5.  单击“添加”  。
+6.  在 \<域名>  “权限条目”  对话框中，选择“选择主体”  。
+7.  在“选择用户、计算机、服务帐户或组”  对话框中，在“输入要选择的对象名称”  文本框中键入“密钥管理”  。 单击" **确定**"。
+8.  从“适用于”  列表中，选择“后代用户对象”  。
+9.  滚动到页面底部并单击“全部清除”  。
+10. 在“属性”  部分中，选择“读取 msDS-KeyCredentialLink”  。
+11. 单击“确定”  三次以完成任务。
 
 
 ## <a name="next-steps"></a>后续步骤
