@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6658f0b7a65027715975e6075e5c18a430d38405
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 96cf6f4dcfa878bb1ecafb7187dc6e9b29755509
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463731"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623385"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
 
@@ -29,7 +29,7 @@ ms.locfileid: "67463731"
 
 ## <a name="initial-onboarding"></a>初始载入
 
-1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**角色。 选择**启动**。  
+1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**角色。 选择**启动**。 如果系统提示您输入邀请代码，使用： `DesktopAnalyticsRocks!`
 
     > [!Tip]  
     > 若要从 Configuration Manager 控制台中访问桌面分析门户，请转到**软件库**工作区中，选择**Desktop 分析服务**节点，然后选择**计划部署**。

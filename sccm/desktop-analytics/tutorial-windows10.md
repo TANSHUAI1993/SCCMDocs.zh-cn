@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0700644f9548ea588821141a34abc6d249909cdf
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: d564a5161011a1af0a4ec70f9bf7b45d87dd9dcb
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463740"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623145"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -93,7 +93,7 @@ ms.locfileid: "67463740"
 
 使用此过程中登录到桌面分析并将其配置你的订阅中。 此过程是一次性的过程来为你的组织设置 Desktop 分析。  
 
-1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**权限。 选择**启动**。  
+1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**权限。 选择**启动**。  如果系统提示您输入邀请代码，使用： `DesktopAnalyticsRocks!`
 
 2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
 
@@ -254,7 +254,7 @@ Configuration Manager 在创建连接的 60 分钟内同步集合。 在 Desktop
 
     - **完成日期**:选择依据 Windows 应完全部署到所有目标设备的日期。  
 
-5. 选择“创建”  。 其正在处理时，在部署计划列表中显示新的计划。 若要加快处理，请求按需数据刷新。 有关详细信息，请参阅[Desktop 分析常见问题](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。
+5. 选择“创建”。  其正在处理时，在部署计划列表中显示新的计划。 若要加快处理，请求按需数据刷新。 有关详细信息，请参阅[Desktop 分析常见问题](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。
 
 6. 选择其名称以打开部署计划。  
 

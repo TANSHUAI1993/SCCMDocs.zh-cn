@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dc3123763430dc35d566b68e3c1c04762d26de5
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 4b32105304354e9b9d4473451a32f52162f80d02
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159050"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623339"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>在桌面 Analytics 中监视的运行状况状态
 
@@ -58,7 +58,7 @@ ms.locfileid: "67159050"
 
 - **其他版本**:此应用程序的备用版本的列表。 对于每个版本，它显示在你的组织和商业平均水平的故障率的相对更改。 如果发现使用较低的故障率应用程序的更高版本，更新应用程序可能会帮助。  
 
-    它还演示了是否版本都具有**准备用于 Windows**信号。 有关详细信息，请参阅[兼容性评估](/sccm/desktop-analytics/compat-assessment#risk-assessment-engine)。  
+    它还演示了是否版本都具有**准备用于 Windows**信号。 有关详细信息，请参阅[兼容性评估](compat-assessment.md#driver-risk-assessment)。  
 
 - **热门问题**:按实例计数最常见失败 Id 的列表。 失败 ID 标识与故障相关联的堆栈跟踪。 当应用程序供应商寻求支持时，可以使用此 ID。  
 
