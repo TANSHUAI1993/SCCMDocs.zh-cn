@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158335"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551238"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
@@ -158,7 +158,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>针对影响重大的任务序列，改进软件中心设置和消息通知
 本版本包括针对影响重大的任务序列，对软件中心设置和通知消息进行的以下改进：
 
-- 在任务序列的属性中，现可将任何任务序列（包括非操作系统任务序列）配置为高风险部署。 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
+- 在任务序列的属性中，现可将任何任务序列（包括非操作系统任务序列）配置为高风险部署。 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
 - 在任务序列的属性中，可以选择针对影响重大的部署，使用默认通知消息或创建自定义通知消息。
 - 在任务序列的属性中，可以配置软件中心属性，其中包括设置必要的重启、任务序列的下载大小和预计运行时间。
 - 对于就地升级，默认的重大影响部署消息指示你的应用、数据和设置将自动迁移。 以前，任何操作系统安装的默认消息均指示所有应用、数据和设置将丢失，但这样的消息实际上并不适用于就地升级。
@@ -166,7 +166,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 ### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>将任务序列设置为影响重大的任务序列
 使用下列过程将任务序列设置为“影响重大”。
 > [!NOTE]
-> 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
+> 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
 
 1. 在 Configuration Manager 控制台中，转到“软件库”   > “操作系统”   > “任务序列”  。
 2. 选择要编辑的任务序列，然后单击“属性”  。
@@ -208,7 +208,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>在安装应用程序之前检查运行的可执行文件
 
-在部署类型的 *<deployment type name>* “属性”  对话框中的“安装行为”选项卡中，现在可以指定一个或多个可执行文件，如果运行此类文件，将阻止安装部署类型。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
+在部署类型的“\<部署类型名称>  属性”  对话框中，现在可以在“安装行为”选项卡上指定一个或多个可执行文件（如果运行此类文件，将阻止安装部署类型）。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
 
 ### <a name="try-it-out"></a>试试看。
 

@@ -2,7 +2,7 @@
 title: Azure AD 身份验证工作流
 titleSuffix: Configuration Manager
 description: 在具有 Azure Active Directory 身份验证的 Windows 10 设备上安装 Configuration Manager 客户端过程的详细信息
-ms.date: 05/24/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c422e5134ca798c1a5422cd518d550ed4c188e9a
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 8bb386aea70253fa033f59ab85732e0b99987c16
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213798"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550965"
 ---
 # <a name="azure-ad-authentication-workflow"></a>Azure AD 身份验证工作流
 
@@ -91,7 +91,7 @@ MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.CO
 下列条目将被记录到 CCM_STS.log  ：
 
 ```
-Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0aebad80-77d2-4f0a-9639-676ee4764bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
 
 Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
 ```
@@ -127,3 +127,85 @@ Appending CCM Token to the header.
 - 找不到 WPJ 证书：客户端已在 Azure AD 中注册，但未加入到 Azure AD
 
 使用 /NoCRLCheck 仅适用于启动 ccmsetup。 为了使客户端能够完全正常工作，应在 Internet 上发布 CRL。 作为一种解决方法，可以在站点的客户端通信配置上禁用 CRL 检查。 否则，在位置服务刷新安全设置之后，客户端将停止与服务器通信。
+
+
+## <a name="client-registration"></a>客户端注册
+
+![Azure AD 注册工作流关系图](media/azure-ad-registration-workflow.png)  
+
+### <a name="1-configuration-manager-client-request-registration"></a>1.Configuration Manager 客户端请求注册
+
+ClientIDManagerStartup.log  记录下列条目：
+
+```
+[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ...        
+Registering client using AAD auth.  
+```
+
+### <a name="2-configuration-manager-request-azure-ad-token-to-register-client"></a>2.Configuration Manager 请求获取用于注册客户端的 Azure AD 令牌
+
+ADALOperationProvider.log  记录下列条目：
+```
+Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
+Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000' 
+
+```
+
+#### <a name="21-configuration-manager-client-is-registered"></a>2.1 Configuration Manager 客户端已注册  
+
+ClientIDManagerStartup.log  记录下列条目：
+
+```
+[RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3  
+```
+
+> [!NOTE]  
+> 在客户端注册期间，证书验证始终运行。 即使要使用 Azure AD 身份验证方法注册客户端，也会发生此过程。
+
+
+### <a name="3-configuration-manager-client-token-request"></a>3.Configuration Manager 客户端令牌请求
+
+在站点注册客户端后，客户端便会请求获取 CCM 令牌。 CCM 令牌针对本地系统帐户 (S-1-5-18) 进行加密，并缓存 8 小时。 8 小时后，令牌到期，客户端请求令牌续订。
+
+ClientIDManagerStartup.log  记录下列条目：
+
+```
+Getting CCM Token from STS server 'MP.MYCORP.COM'   
+Getting CCM Token from https://MP.MYCORP.COM/CCM_STS
+...
+Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'   
+```
+
+#### <a name="31-cmg-gets-request"></a>3.1 CMG 获取请求
+
+下列条目将被记录到 IIS.log  ：
+
+```
+RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
+```
+
+#### <a name="32-cmg-forwards-request-to-cmg-connection-point"></a>3.2 CMG 将请求转发到 CMG 连接点
+
+下列条目将被记录到 CMGService.log  ：
+
+```
+RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  RequestSize: 1081595 Bytes  ResponseCount: 769     ResponseSize: 36143 Bytes  AverageElapsedTime: 3945 ms
+```
+
+#### <a name="33-cmg-connection-point-transforms-cmg-client-request-to-management-point-client-request"></a>3.3 CMG 连接点将 CMG 客户端请求转换为管理点客户端请求
+
+以下条目将被记录到 SMS_CLOUD_PROXYCONNECTOR.log  ：
+
+```
+MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
+```
+
+#### <a name="34-management-point-verifies-user-token-in-site-database"></a>3.4 管理点验证站点数据库中的用户令牌
+
+下列条目将被记录到 CCM_STS.log  ：
+
+```
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+
+Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
+```

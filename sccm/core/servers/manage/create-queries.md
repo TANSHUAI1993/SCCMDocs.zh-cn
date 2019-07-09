@@ -11,89 +11,85 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 204a560ec621ca210a31441ce72a6d79311df2d3
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 2356547d01df346b8b5db090ea8690377c8d0dc8
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214770"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551032"
 ---
-# <a name="how-to-create-queries-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建查询
+# <a name="create-queries-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建查询
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-可以使用本主题来帮助在 System Center Configuration Manager 中创建或导入查询。  
+本文介绍了如何在 System Center Configuration Manager 中创建和导入查询。  
 
-##  <a name="BKMK_Create"></a> 如何创建查询  
- 使用此过程有助于在 Configuration Manager 中创建查询。  
+##  <a name="BKMK_Create"></a> 创建查询  
+ 若要在 Configuration Manager 中创建查询，请使用以下过程。  
 
-#### <a name="to-create-a-query"></a>若要创建查询  
+1.  在 Configuration Manager 控制台中，选择“监视”  。  
 
-1.  在 Configuration Manager 控制台中，选择“监视”。  
+2.  在“监视”  工作区中，选择“查询”  。 在“主页”  选项卡上，选择“创建”  组中的“创建查询”  。  
 
-2.  在“监视”工作区中，选择“查询”。 然后，在“主页”选项卡的“创建”组中，选择“创建查询”。  
+3.  在“创建查询向导”  的“常规”  选项卡中，为查询指定唯一名称和可选注释。  
 
-3.  在“创建查询向导”的“常规”选项卡中，为查询指定一个唯一的名称和可选备注。  
+4.  若要导入现有查询以用作新查询的基础，请选择“导入查询语句”  。 在“浏览查询”  对话框中，依次选择要导入的查询和“确定”  。  
 
-4.  如果你想要导入现有查询以用作新查询的基础，请选择“导入查询语句”。 在“浏览查询”对话框框中，选择你想要导入的一个现有查询，然后选择“确定”。  
-
-5.  在“对象类型”列表中，选择希望查询返回的对象类型。 下表描述了可以搜索的一些对象类型的示例：  
+5.  在“对象类型”  列表中，选择希望查询返回的对象类型。 下表列出了一些可搜索的对象类型示例：  
 
     |对象类型|说明|  
     |-----------------|-----------------|  
-    |**系统资源**|用于搜索典型的系统属性，例如设备的 NetBIOS 名称、客户端版本、客户端 IP 地址和 Active Directory 域服务信息。|  
-    |**用户资源**|用于搜索典型的用户信息，例如用户名、用户组名和安全组名。|  
-    |**部署**|用于搜索部署的典型属性，例如部署名称、计划和部署到的集合。|  
+    |**系统资源**|用于搜索典型系统特性，如设备的 NetBIOS 名称、客户端版本、客户端 IP 地址和 Active Directory 域服务信息。|  
+    |**用户资源**|用于搜索典型用户信息，如用户名、用户组名和安全组名。|  
+    |**部署**|用于搜索典型部署特性，如部署名称、计划和部署到的集合。|  
 
-6.  选择“编辑查询语句”，以打开“查询名称”*&lt;\>* “语句属性”对话框。  
+6.  选择“编辑查询语句”  ，以打开“&lt;查询名称\> 语句属性”  对话框。  
 
-7.  在“查询名称”*&lt;\>* “语句属性”对话框的“常规”选项卡中，指定此查询返回的属性和显示方式。 选择“新建”图标，以添加新属性。 还可以选择“显示查询语言”，以直接以 WMI 查询语言 (WQL) 输入或编辑查询。 有关 WMI 查询的示例，请参阅本主题中的 [Example WQL queries](#BKMK_Example) 部分。  
+7.  在“&lt;查询名称\> 语句属性”  对话框的“常规”  选项卡中，指定此查询返回的特性，以及它们应该如何显示。 选择“新建”  图标，以添加新特性。 也可以选择“显示查询语言”  ，以直接用 WMI 查询语言 (WQL) 输入或编辑查询。 有关 WMI 查询示例，请参阅本文的[示例 WQL 查询](#BKMK_Example)部分。  
 
     > [!TIP]  
-    > 可以使用以下 MSDN 参考文档来帮助您构造您自己的 WQL 查询：  
+    > 可以参阅下面的参考文档，它们有助于你构造自己的 WQL 查询：  
     >   
     > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [WHERE 子句](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
     > -   [WQL 运算符：](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
-8.  在“查询名称”*&lt;\>* “语句属性”对话框的“条件”选项卡中，指定用于优化查询结果的条件。 例如，可以只返回查询结果中包含 **XYZ** 站点代码的资源。 可以配置多个查询条件。  
+8.  在“&lt;查询名称\> 语句属性”  对话框的“条件”  选项卡中，指定用于优化查询结果的条件。 例如，可以只返回包含站点代码 XYZ  的资源。 可以配置多个查询条件。  
 
     > [!IMPORTANT]  
-    > 如果创建的查询中未包含任何条件，查询将在“所有系统”集合中返回所有设备。  
+    > 如果创建的查询中未包含任何条件，查询将在“所有系统”  集合中返回所有设备。  
 
-9. 在“查询名称”*&lt;\>* “语句属性”对话框的“联接”选项卡中，可以将两个不同属性的数据合并到查询结果中。 虽然在为查询结果选择不同的属性时，Configuration Manager 会自动创建查询联接，但“联接”选项卡提供了更多高级选项。 下表中列出了 System Center 2012 Configuration Manager 支持的属性类：  
+9. 在“&lt;查询名称\> 语句属性”  对话框的“联接”  选项卡中，可以将两个不同特性的数据合并到查询结果中。 虽然在为查询结果选择不同的属性时，Configuration Manager 会自动创建查询联接，但“联接”  选项卡提供了更多高级选项。 Configuration Manager 支持下面这些特性类：  
 
     |联接类型|说明|  
     |---------------|-----------------|  
-    |内部|只显示匹配的结果 - 始终由自动创建的联接使用。|  
+    |内部|仅显示匹配结果。 始终由自动创建的联接使用。|  
     |左|显示基属性的所有结果，同时，只显示联接属性的匹配结果。|  
-    |右|对于联接属性显示所有结果，而对于基属性只显示匹配结果。|  
-    |完整|对于基属性和联接属性均显示所有结果。|  
+    |右|显示联接特性的所有结果，以及基特性的匹配结果。|  
+    |完整|显示基特性和联接特性的所有结果。|  
 
-     有关如何联接运算的详细信息，请参阅 SQL Server 文档。  
+     若要详细了解如何使用联接运算，请参阅 SQL Server 文档。  
 
-10. 选择“确定”，关闭“查询名称”*&lt;\>* “语句属性”对话框。  
+10. 选择“确定”  ，以关闭“&lt;查询名称\> 语句属性”  对话框。  
 
-11. 在“创建查询向导”中的“常规”选项卡中，指定是否将此查询的结果不限制于一个集合中的成员、是否限制于指定集合中的成员，或是否每次运行查询时提示输入集合。  
+11. 在“创建查询向导”  的“常规”  选项卡中，指定此查询的结果是不限于集合成员、限于指定集合的成员，还是在查询每次运行时提示输入集合。  
 
-12. 完成向导以创建查询。 新查询显示在“监视”工作区中的“查询”节点中。  
+12. 完成向导以创建查询。 新查询显示在“监视”  工作区的“查询”  节点中。  
 
-##  <a name="BKMK_Import"></a>如何导入查询  
- 使用此过程来帮助将查询导入到 Configuration Manager 中。 有关如何导出查询的信息，请参阅[如何在 System Center Configuration Manager 中管理查询](../../../core/servers/manage/manage-queries.md)。  
+##  <a name="BKMK_Import"></a> 导入查询  
+ 若要将查询导入 Configuration Manager 中，请使用以下过程。 有关如何导出查询的信息，请参阅[如何在 System Center Configuration Manager 中管理查询](../../../core/servers/manage/manage-queries.md)。  
 
-#### <a name="to-import-a-query"></a>若要导入查询  
+1.  在 Configuration Manager 控制台中，选择“监视”  。  
 
-1.  在 Configuration Manager 控制台中，选择“监视”。  
+2.  在“监视”  工作区中，选择“查询”  。 在“主页”  选项卡上，选择“创建”  组中的“导入对象”  。  
 
-2.  在“监视”工作区中，选择“查询”。 在“主页”选项卡的“创建”组中，选择“导入对象”。  
+3.  在“导入对象向导”  的“MOF 文件名”  页中，选择“浏览”  ，以选择包含要导入的查询的托管对象格式 (MOF) 文件。  
 
-3.  在“导入对象向导”中的“MOF 文件名”页面中，选择“浏览”，以选择包含要导入的查询的托管对象格式 (MOF) 文件。  
-
-4.  查看关于要导入的查询的信息，然后完向导。 新查询显示在“监视”工作区中的“查询”节点中。  
+4.  审阅要导入的查询的相关信息，再完成向导。 新查询显示在“监视”  工作区的“查询”  节点中。  
 
 ##  <a name="BKMK_Example"></a> Example WQL queries
 
-本部分包含可在你的层次结构中使用或因其他目的修改的 WMI 查询示例。 要使用这些查询，请在“查询语句属性”对话框中选择“显示查询语言”。 然后，将查询复制并粘贴到“查询语句”字段。  
+此部分收录了示例 WQL 查询，可以在层次结构中使用它们，也可以出于其他目的修改它们。 若要使用这些查询，请依次选择“查询语句属性”  对话框中的“显示查询语言”  。 然后，将查询复制并粘贴到“查询语句”  字段中。  
 
 > [!TIP]  
 > 使用 `%` 通配符来表示任何字符串。 例如，`%Visio%` 将返回 Microsoft Office Visio 2010。  
@@ -114,7 +110,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### <a name="computers-with-a-specific-software-package-installed"></a>安装特定软件包的计算机  
 
-使用以下查询来返回安装了特定软件包的所有计算机的 NetBIOS 名称和软件包名称。 本示例显示了已安装某个版本的 Microsoft Visio 的所有计算机。 用想要查询的软件包代替 `Microsoft%Visio%`。  
+使用以下查询来返回安装了特定软件包的所有计算机的 NetBIOS 名称和软件包名称。 此示例返回已安装 Microsoft Visio 版本的所有计算机。 用想要查询的软件包代替 `Microsoft%Visio%`。  
 
 > [!TIP]  
 > 此查询通过使用 Windows 控制面板中程序列表中显示的名称来搜索软件包。  
@@ -128,7 +124,7 @@ SMS_R_System.ResourceId where
 SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
-### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>特定 Active Directory 域服务组织单位中的计算机
+### <a name="computers-in-a-specific-active-directory-domain-services-organizational-unit"></a>特定 Active Directory 域服务组织单位中的计算机
 
 使用以下查询来返回指定组织单位 (OU) 中所有计算机的 NetBIOS 名称和 OU 名称。 用想要查询的 OU 的名称代替文本 `OU Name`。  
 
@@ -150,13 +146,13 @@ SMS_R_System where SMS_R_System.NetbiosName like "ABC%"
 
 ###  <a name="BKMK_DeviceType"></a>特定类型的设备
 
-设备类型存储在 Configuration Manager 数据库中，在 **sms_r_system** 资源类型和 **AgentEdition** 属性名称下。 使用以下查询来仅检索与指定设备类型的代理版本匹配的设备：  
+设备类型存储在 Configuration Manager 数据库中，在 **sms_r_system** 资源类型和 **AgentEdition** 属性名称下。 若要仅检索与指定设备类型的代理版本匹配的设备，请使用以下查询：  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-为 &lt;Device ID\> 选择下列其中一个值：  
+对 &lt;设备 ID\> 使用下列值之一：  
 
 |设备类型|AgentEdition 的值|  
 |-----------------|---------------------------|  
@@ -179,7 +175,7 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 |Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
 
- 例如，如果想要查询只返回 Mac 计算机，请使用以下查询：  
+ 例如，若要只返回 Mac 计算机，请使用以下查询：  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  

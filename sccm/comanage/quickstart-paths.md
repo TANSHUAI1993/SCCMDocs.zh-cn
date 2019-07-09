@@ -2,7 +2,7 @@
 title: 共同管理的路径
 titleSuffix: Configuration Manager
 description: 了解设置共同管理的两种主要方法的先决条件。
-ms.date: 01/14/2019
+ms.date: 06/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803f05dd14da8d280f08f2bcf3608865f384d273
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 4c34cf73133086f08cb390f39ab4fe715dfcefd2
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754653"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550668"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路径
 
@@ -35,7 +35,10 @@ ms.locfileid: "56754653"
 
 以下是需要设置的选项：
 - 混合 Azure AD
-    - 使用传递身份验证 (PTA) 的Active Directory 联合身份验证服务 (ADFS)
+    - 以下 [Azure AD 混合标识选项](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin)之一：  
+       - 含[无缝单一登录 (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) 的[密码哈希同步](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization)
+       - 含[无缝单一登录 (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) 的[直通身份验证](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
+       - [联合 SSO（含 Active Directory 联合身份验证服务 (AD FS)）](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium 许可证
     - 配置混合 Azure AD 联接（选择一个选项）：
