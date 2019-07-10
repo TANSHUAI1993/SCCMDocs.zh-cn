@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78926fb271bf1663dbd497f1894e3b4acbffd08b
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 7821951461fc03598e91f22a54a49fd3b0c0cf6e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194637"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678615"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
@@ -460,14 +460,14 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 以下功能以前可在 Configuration Manager Technical Preview 版本中使用，现在可在 Intune 和 Configuration Manager (Current Branch) 1606 版本的混合部署中使用。
 
 * 从 Configuration Manager 控制台查找、管理和分发用于 Windows 10 设备的适用于企业的 Windows 应用商店应用 ([1604](#new-in-1604-technical-preview))
-*   适用于 Android 设备的 SmartLock 设置 ([1604](#new-in-1604-technical-preview))
-*   Windows 10 设备的应用触发的 VPN ([1605](#new-in-1605-technical-preview))
-*   远程设备操作的新体验 ([1605](#new-in-1605-technical-preview))
-*   适用于企业的 Windows 应用商店应用 ([1605](#new-in-1605-technical-preview))
-*   批量采购应用的一般改进 ([1605](#new-in-1605-technical-preview))
-*   Windows 信息保护 (WIP) ([1605](#new-in-1605-technical-preview))
-*   预声明具有 IMEI 或 iOS 序列号的企业自有设备 ([1605](#new-in-1605-technical-preview))
-*   自动将设备分类到集合 ([1606](#new-in-1606-technical-preview))
+* 适用于 Android 设备的 SmartLock 设置 ([1604](#new-in-1604-technical-preview))
+* Windows 10 设备的应用触发的 VPN ([1605](#new-in-1605-technical-preview))
+* 远程设备操作的新体验 ([1605](#new-in-1605-technical-preview))
+* 适用于企业的 Windows 应用商店应用 ([1605](#new-in-1605-technical-preview))
+* 批量采购应用的一般改进 ([1605](#new-in-1605-technical-preview))
+* Windows 信息保护 (WIP) ([1605](#new-in-1605-technical-preview))
+* 预声明具有 IMEI 或 iOS 序列号的企业自有设备 ([1605](#new-in-1605-technical-preview))
+* 自动将设备分类到集合 ([1606](#new-in-1606-technical-preview))
 
 有关新功能的信息，请参阅指定的 Technical Preview 版本的文档。
 
@@ -740,9 +740,9 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 如果运行 Configuration Manager 2012 SP1 或 R2 RTM 的混合部署，建议在 2017 年 4 月 10 日前升级到 Configuration Manager (Current Branch) 或 Configuration Manager 2012（R2 SP1 或 SP2）的最新支持 Service Pack，以避免服务中断。
 
 其他资源：
--   [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--   [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--   [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+- [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+- [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+- [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### <a name="windows-phone-8-company-portal-upload-deprecated"></a>已弃用的 Windows Phone 8 公司门户上传
 2016 年 10 月 25 日 

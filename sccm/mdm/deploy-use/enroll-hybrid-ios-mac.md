@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aef8f927a2c4d3cb3eb7fecc4970cb19cbb83ed
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 6c6573ce4faf893e30eac070efd963dc7465e20e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748261"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678834"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 iOS 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
@@ -73,9 +73,9 @@ MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设�
 - 使用[设备注册管理器帐户](enroll-devices-with-device-enrollment-manager.md)注册的设备
 
 ### <a name="to-enable-enrollment-restrictions"></a>启用注册限制的具体步骤
-1.  在“管理”  工作区中的 Configuration Manager 控制台中，转到“云服务”   > “Microsoft Intune 订阅”  。
-2.  在“主页”  选项卡上的“订阅”  组中，单击“配置平台”   > “iOS”  。
-3.  选择“阻止个人拥有的设备”  ，限制为仅注册公司拥有的设备。
+1. 在“管理”  工作区中的 Configuration Manager 控制台中，转到“云服务”   > “Microsoft Intune 订阅”  。
+2. 在“主页”  选项卡上的“订阅”  组中，单击“配置平台”   > “iOS”  。
+3. 选择“阻止个人拥有的设备”  ，限制为仅注册公司拥有的设备。
 
 > [!div class="button"]
 > [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)

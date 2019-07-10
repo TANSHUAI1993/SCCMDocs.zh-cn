@@ -11,25 +11,25 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2980cef8a39f790dbb94ab85fa025eeb04f4f996
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8214793cb724f029892de40bc1191cdc25ed0ec5
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286885"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678650"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 > [!Important]  
-> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 从 1902 Intune 服务版本，应在 2019 年 2 月，末尾开始新客户不能创建新的混合连接。 
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 自 1902 Intune 服务版本起，预计在 2019 年 2 月底，新客户便无法新建混合连接。 
 > <!--Intune feature 2683117-->  
 > 自从一年多前在 Azure 上推出以来，Intune 已经增加了数百个客户要求和市场领先的新服务功能。 Intune 现在提供的功能远远超过了混合移动设备管理 (MDM)。 Azure 上的 Intune 为你的企业移动需求提供了更深入集成的简化管理体验。
 > 
 > 因此，大多数客户选择 Azure 上的 Intune 而不是混合 MDM。 随着越来越多的客户迁移到云，使用混合 MDM 的客户数量持续减少。 因此，Microsoft 将在 2019 年 9 月 1 日停用混合 MDM 服务产品。 请计划[迁移到 Azure 上的 Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) 以满足你的 MDM 需求。 
 > 
-> 此更改不会影响本地 Configuration Manager 或[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。 如果你不确定自己是否在使用混合 MDM，请转到 Configuration Manager 控制台中的“管理”工作区，展开“云服务”，然后单击“Microsoft Intune 订阅。 如果设置了 Microsoft Intune 订阅，那么你的租户已针对混合 MDM 进行了配置。
+> 此更改不会影响本地 Configuration Manager 或[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。 如果你不确定自己是否在使用混合 MDM，请转到 Configuration Manager 控制台中的“管理”  工作区，展开“云服务”  ，然后单击“Microsoft Intune 订阅  。 如果设置了 Microsoft Intune 订阅，那么你的租户已针对混合 MDM 进行了配置。
 > 
 > **这会对我产生哪些影响？**
 > 
@@ -88,16 +88,14 @@ ms.locfileid: "62286885"
 
 -   使用内置报表收集软件清单  
 
-若要阅读有关哪些新功能可用于混合 MDM 的信息，请参阅[混合移动设备管理中的新增功能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management)。
-
 
 
 ## <a name="hybrid-mdm-enrollment"></a>混合 MDM 注册
 
 若要对设备进行混合管理，设备必须向该服务注册。 设备的注册方式取决于设备类型、所有权和所需的管理级别。
 
-- **"自带设备办公"(BYOD)**:用户注册其个人电话、 平板电脑  
+- **"自带设备办公"(BYOD)** :用户注册其个人电话、 平板电脑  
 
-- **企业拥有的设备 (COD)**:启用管理方案，如远程擦除、 共享的设备或设备的用户关联  
+- **企业拥有的设备 (COD)** :启用管理方案，如远程擦除、 共享的设备或设备的用户关联  
 
 - 如果使用本地或在云中托管的 [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager)，则无需注册即可启用简单的 Intune 管理。 还可使用 [Intune 客户端软件](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)管理 Windows 电脑。

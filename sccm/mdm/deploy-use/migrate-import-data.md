@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7c9fde7298d4733c2f3abd9555edb989d7cb66
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 18c8bab6b072a9df2dea9c9f67d844b8481d314e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716203"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678221"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>将 Configuration Manager 数据导入 Microsoft Intune 
 
@@ -24,11 +24,11 @@ ms.locfileid: "66716203"
 
 在仅限云的配置中[将混合 MDM 用户和设备迁移到 Intune 独立版](migrate-hybridmdm-to-intunesa.md)过程中的第一步，建议使用 Intune 数据导入程序工具。 如果需要，可以跳过这一步，并转到[准备 Intune 以便进行用户迁移](migrate-prepare-intune.md)阶段。 但是，该工具执行以下功能，可以在下一阶段节省大量时间：  
 
-1.  收集有关从 Configuration Manager 层次结构选择的对象的数据。  
+1. 收集有关从 Configuration Manager 层次结构选择的对象的数据。  
 
-2.  提供可以选择导入的对象详细信息以及无法导入某个对象的原因信息。  
+2. 提供可以选择导入的对象详细信息以及无法导入某个对象的原因信息。  
 
-3.  将所选的对象导入 Microsoft Intune 租户。  
+3. 将所选的对象导入 Microsoft Intune 租户。  
 
 数据导入程序工具不会更改以任何方式在 Configuration Manager 环境。 可以将对象导入到 Intune，并验证一切按预期方式而无需使混合 MDM 设备处于不受管理状态的风险。 
 
@@ -114,7 +114,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
 在运行数据导入程序工具之前，须使用全局管理员帐户在 Azure 中为数据导入程序工具授权，让其能够访问资源。 然后可以通过使用全局管理员或 Intune 管理员帐户运行该工具。   
 
-1.  全局管理员必须运行该工具首次使用以下参数： `IntuneDataImporter.exe -GlobalConsent`  
+1. 全局管理员必须运行该工具首次使用以下参数： `IntuneDataImporter.exe -GlobalConsent`  
 
 2. 该工具启动时，使用具有在 Azure 中的全局管理员角色的帐户登录。  
 
@@ -165,7 +165,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 > 此外，在向导的“摘要”  页上，可以查看“部署”  类型。 该工具在“可导入”列中显示“是”  ，并在“说明”  列中列出分配给对象的 Azure AD 组。  
 
 
-### <a name="phase-1-discover-configuration-manager-objects-and-collect-data"></a>第 1 阶段：发现 Configuration Manager 对象和收集数据
+### <a name="phase-1-discover-configuration-manager-objects-and-collect-data"></a>阶段 1：发现 Configuration Manager 对象和收集数据
 
 在阶段 1 中，选择要发现的对象并让该工具收集有关所选对象的信息。 
 
@@ -188,7 +188,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
         - **对象类型要导入**:选择您希望该工具以收集的对象。 可以选择“选择全部”来选择所有对象，或者选择个别对象类型  。  
 
-4.  选择**下一步**开始发现站点上的对象。 此工具显示了每个对象类型的进度。  
+4. 选择**下一步**开始发现站点上的对象。 此工具显示了每个对象类型的进度。  
 
     - 当工具发现没有与所选对象类型有关的数据时，进度栏将立即对该对象类型显示已完成。  
 

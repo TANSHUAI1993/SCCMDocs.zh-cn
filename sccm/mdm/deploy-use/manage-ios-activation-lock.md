@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a695a0b777f4adf3d2fb336df6aced8702e9dab
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 780abd0702e34dff7a8026fb54e29ccea6f67170
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255521"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678757"
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 iOS 激活锁定
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 可以帮助你管理 iOS 激活锁定，这是适用于 iOS 7.1 及更高版本设备的“查找我的 iPhone”应用的功能。 启用激活锁定后，任何人都必须先输入用户的 Apple ID 和密码，然后才能执行以下操作：
@@ -70,7 +70,7 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 使用 Configuration Manager 符合性设置来创建和部署 **iOS 和 Mac OS X** 类型的配置项目以在受到监督的设备上启用激活锁定：
 
 1. 使用[如何为没有使用 System Center Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备创建配置项目](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)主题中的信息来创建 **iOS 和 Mac OS X** 类型的配置项目。
-2. 在创建配置项目向导的“系统安全”页中，将设置“允许激活锁定（仅限受监督模式）”配置为“允许”。
+2. 在创建配置项目向导的“系统安全”  页中，将设置“允许激活锁定（仅限受监督模式）”  配置为“允许”  。
 3. [将配置项目添加到配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
 4. [部署此配置基线](/sccm/compliance/deploy-use/deploy-configuration-baselines)到包含你想要启用激活锁定的 iOS 设备的集合。
 
@@ -83,21 +83,21 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 
 ## <a name="view-the-activation-lock-bypass-code"></a>查看绕过激活锁定代码
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
-2. 在“资产和符合性”  工作区中，单击“设备” 。
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”  。
+2. 在“资产和符合性”  工作区中，单击“设备”  。
 3. 选择在受监督模式下已启用激活锁定的注册设备。
-4. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “查看激活锁定绕过代码”。
-5. “激活锁定绕过代码”对话框中将显示所选设备的绕过代码。
+4. 在“主页”  选项卡上，在“设备”  组中，单击“远程设备操作”   > “查看激活锁定绕过代码”  。
+5. “激活锁定绕过代码”  对话框中将显示所选设备的绕过代码。
 
 ## <a name="bypass-activation-lock"></a>绕过激活锁定
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
-2. 在“资产和符合性”  工作区中，单击“设备” 。
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”  。
+2. 在“资产和符合性”  工作区中，单击“设备”  。
 3. 选择在受监督模式下已启用激活锁定的注册设备。
-3. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “绕过激活锁定”。
-5. 阅读警告对话框中的消息，在准备好继续操作后，单击“是”。
+3. 在“主页”  选项卡上，在“设备”  组中，单击“远程设备操作”   > “绕过激活锁定”  。
+5. 阅读警告对话框中的消息，在准备好继续操作后，单击“是”  。
 6. 你可以从以下位置检查解锁请求的状态：
 
     - 设备属性对话框中设备的发现数据。
-    - “设备”视图中“激活锁定绕过状态”列（默认情况下隐藏此列）。
-    - 细节窗格的“摘要”选项卡中的“远程设备操作信息”部分（当设备处于选中状态）。
+    - “设备”  视图中“激活锁定绕过状态”  列（默认情况下隐藏此列）。
+    - 细节窗格的“摘要”  选项卡中的“远程设备操作信息”  部分（当设备处于选中状态）。

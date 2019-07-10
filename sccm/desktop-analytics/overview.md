@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a298bd0504ea719d6b60d2c86692942d6ba989b8
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 43a5e1a4bf3283c185d612cc31428a23a4e12061
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159034"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678116"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -73,11 +73,11 @@ ms.locfileid: "67159034"
 
     - **工作区所有者**或**参与者**权**设置工作区**，和以下角色：  
 
-       - [**Desktop 分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)角色。
+      - [**Desktop 分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)角色。
 
-       - [**Log Analytics 参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上要使用现有的工作区或现有资源组中创建新的工作区的资源组。
+      - [**Log Analytics 参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上要使用现有的工作区或现有资源组中创建新的工作区的资源组。
 
-        - [**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)，或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上的权限若要创建新的资源组中的工作区的订阅。  
+      - [**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)，或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上的权限若要创建新的资源组中的工作区的订阅。  
 
 - Configuration Manager，版本 1902年更新汇总 (4500571) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 

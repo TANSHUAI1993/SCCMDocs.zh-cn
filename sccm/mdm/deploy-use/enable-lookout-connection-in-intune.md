@@ -10,16 +10,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b36e98edfffcc26b7fb2670cbfdc31c165331f0f
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0be485bd9b77613be9a647106e96c4e41bede064
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226877"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678123"
 ---
 # <a name="enable-lookout-mtd-connection-in-the-intune-admin-console"></a>在 Intune 管理控制台中启用 Lookout MTD 连接
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文演示如何在 Microsoft Intune 中启用 Lookout 移动威胁防御 (MTD) 连接。 用户应在 Lookout 控制台中配置 Intune 连接器，然后才执行此步骤。 如果尚未执行此步骤，请执行[使用 Lookout 移动威胁防御设置订阅](set-up-your-subscription-with-lookout.md)中所述的步骤。
 
@@ -27,17 +27,17 @@ ms.locfileid: "62226877"
 
 ## <a name="enable-the-lookout-mtd-connector"></a>启用 Lookout MTD 连接器
 
-1. 转到 [Azure 门户](https://portal.azure.com)，然后使用 Intune 凭据登录。 成功登录后，会看到“Azure 仪表板”。  
+1. 转到 [Azure 门户](https://portal.azure.com)，然后使用 Intune 凭据登录。 成功登录后，会看到“Azure 仪表板”  。  
 
-2. 在“Azure 仪表板”中，从左侧菜单中选择“所有服务”，然后在文本框筛选器中键入 Intune。  
+2. 在“Azure 仪表板”中，从左侧菜单中选择“所有服务”，然后在文本框筛选器中键入 Intune    。  
 
-3. 选择“Intune”，随即打开“Intune 仪表板”。  
+3. 选择“Intune”，随即打开“Intune 仪表板”   。  
 
-4. 在“Intune 仪表板”中，选择“设备符合性”，然后选择“设置”部分下的“移动威胁防御”。  
+4. 在“Intune 仪表板”中，选择“设备符合性”，然后选择“设置”部分下的“移动威胁防御”     。  
 
-5. 在“移动威胁防御”窗格上选择“添加”。  
+5. 在“移动威胁防御”窗格上选择“添加”   。  
 
-6. 从下拉列表中选择 Lookout 作为“要设置的移动威胁防御连接器”。  
+6. 从下拉列表中选择 Lookout 作为“要设置的移动威胁防御连接器”   。  
 
 7. 根据你组织的要求启用切换选项。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "62226877"
     - **标记为不符合，如果未不收到任何数据**:如果 Intune 未从 Lookout 收到有关此平台上的设备的数据，则将设备视为不符合要求。  
 
 > [!TIP]  
-> 可以从“移动威胁防御”窗格看到 Intune 和 Lookout 之间的“连接状态”和“上次同步”时间。
+> 可以从“移动威胁防御”窗格看到 Intune 和 Lookout 之间的“连接状态”和“上次同步”时间   。
 
 
 

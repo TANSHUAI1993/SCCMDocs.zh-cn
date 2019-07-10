@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e694b81943dda937f1d95765f75f182e072bc7da
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b999dddc048c1afe0dd4212ed9b99ebc9c991ff0
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224731"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678862"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>如何通过导入证书详细信息创建 PFX 证书配置文件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 
 本文介绍如何通过从外部证书导入凭据来创建证书配置文件。  
@@ -45,10 +45,10 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 ### <a name="get-started"></a>入门
 
-1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”。  
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，展开“公司资源访问” ，然后单击“证书配置文件” 。  
+1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”  。  
+2.  在“资产和符合性”  工作区中，展开“符合性设置”  ，展开“公司资源访问”  ，然后单击“证书配置文件”  。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件” 。
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件”  。
 
 4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
 
@@ -69,19 +69,19 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 稍后将导入的证书部署到注册的设备。
 
-1. 在“创建证书配置文件向导”的“PFX 证书”页上，指定设备密钥存储提供程序的位置：
-    -   **如果存在受信任的平台模块 (TPM) 则安装到该处**  
-    -   **安装到受信任的平台模块 (TPM)，否则失败** 
-    -   **安装到 Windows Hello 企业版，否则失败** 
-    -   **安装到软件密钥存储提供程序** 
-2. 单击“下一步” 。 
-3. 在向导的“支持的平台”页上，选择支持的设备平台，然后单击“下一步”。
+1. 在“创建证书配置文件向导”  的“PFX 证书”  页上，指定设备密钥存储提供程序的位置：
+    - **如果存在受信任的平台模块 (TPM) 则安装到该处**  
+    - **安装到受信任的平台模块 (TPM)，否则失败** 
+    - **安装到 Windows Hello 企业版，否则失败** 
+    - **安装到软件密钥存储提供程序** 
+2. 单击“下一步”  。 
+3. 在向导的“支持的平台”  页上，选择支持的设备平台，然后单击“下一步”  。
 
 ### <a name="finish-the-profile"></a>完成配置文件
 
-1.  单击“下一步” ，查看“摘要”  页，然后关闭向导。  
+1.  单击“下一步”  ，查看“摘要”  页，然后关闭向导。  
 2.  “证书配置文件”  工作区现在推出包含 PFX 文件的证书配置文件。 
-3.  要部署配置文件，请在“资产和符合性”工作区中打开“符合性设置”  > “公司资源访问” > “证书配置文件”，右键单击所需的证书，然后单击“部署”。 
+3.  要部署配置文件，请在“资产和符合性”  工作区中打开“符合性设置”   > “公司资源访问”   > “证书配置文件”  ，右键单击所需的证书，然后单击“部署”  。 
 
 ### <a name="deploy-a-create-pfx-script"></a>部署创建 PFX 脚本
 
@@ -89,9 +89,9 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 Configuration Manager 2012 SP2 中添加的创建 PFX 脚本向该 SDK 添加 SMS_ClientPfxCertificate 类。 此类包括以下方法：  
 
-    -   `ImportForUser`  
+-   `ImportForUser`  
 
-    -   `DeleteForUser`  
+-   `DeleteForUser`  
 
 下面的示例将凭据导入 PFX 证书配置文件。
 

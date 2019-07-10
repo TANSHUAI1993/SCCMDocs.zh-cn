@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2b62362bfcc9a76e407e9c0124306f83ac4a782
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e3adbb2f7bd75921f45c9c6d5462bdf04deb8c26
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134463"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678228"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>将混合 MDM 用户及其设备迁移至 Intune 独立版
 
-适用范围：System Center Configuration Manager (Current Branch)    
+适用范围：  System Center Configuration Manager (Current Branch)    
 
 本文将介绍在 Azure 上使用 Intune 从混合 MDM 迁移到云（仅限云）的体验。 
 
@@ -32,7 +32,7 @@ ms.locfileid: "56134463"
 
 有关详细信息，请参阅下列文章：    
   
-1.  [将 Configuration Manager 数据导入 Microsoft Intune](migrate-import-data.md)   
+1. [将 Configuration Manager 数据导入 Microsoft Intune](migrate-import-data.md)   
 
     Intune 数据导入工具：  
 
@@ -46,7 +46,7 @@ ms.locfileid: "56134463"
 
     此步骤是可选的。 它可以自动执行在 Configuration Manager 和 Intune 间重新创建对象的过程，从而节省时间。  
 
-2.  [准备 Intune 以便进行用户迁移](migrate-prepare-intune.md)    
+2. [准备 Intune 以便进行用户迁移](migrate-prepare-intune.md)    
 
     - 从 Configuration Manager 验证导入的对象  
 
@@ -58,22 +58,23 @@ ms.locfileid: "56134463"
 
     当您完成的步骤，并开始将迁移到 Intune 独立版时，为你的用户没有明显影响。   
 
-3.  [更改特定用户的 MDM 机构（混合 MDM 机构）](migrate-mixed-authority.md)    
+3. [更改特定用户的 MDM 机构（混合 MDM 机构）](migrate-mixed-authority.md)    
 
     在同一租户中配置混合 MDM 机构。 选择要在 Intune 中托管的用户，同时继续使用混合 MDM 管理所有其他设备。 开始迁移其他用户之前，先以小部分用户测试 Intune 功能在设备上是否正常运行。   
 
-4.  [将 MDM 机构更改为 Intune 独立版](change-mdm-authority.md)     
+4. [将 MDM 机构更改为 Intune 独立版](change-mdm-authority.md)     
 
     将租户级 MDM 机构从 Configuration Manager 更改为 Intune。 所有剩余用户和设备被迁移至 Intune 独立版。 如果在上述步骤完成了 Intune 功能的全面测试，并且已迁移大部分或全部用户，那么可更改租户级 MDM 机构。
 
 
 
 ## <a name="request-assistance"></a>请求协助
-<!--Intune bug 2339232--> 若要从 Microsoft FastTrack 计划请求协助，首先转到[适用于 Microsoft 365 的 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)。
+<!--Intune bug 2339232-->
+若要从 Microsoft FastTrack 计划请求协助，通过转到开始[适用于 Microsoft 365 的 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)。
 
 1. 单击“登录”，然后输入组织 ID。  
 
-2. 转到仪表板，并按照提示来访问“请求协助”窗体。    
+2. 转到仪表板，并按照提示来访问“请求协助”  窗体。    
 
 3. Microsoft 将审核请求，并将其路由到相应的团队，以满足你的特定需求和资格。  
 

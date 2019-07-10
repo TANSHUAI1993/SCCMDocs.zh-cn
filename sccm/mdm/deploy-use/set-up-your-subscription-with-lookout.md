@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f914cba7eee44f340bf5b696aca1854128aeb8b
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: d0946c455732bc13520d3363187b22b118d6e403
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228071"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678889"
 ---
 # <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>设置 Lookout 移动威胁防护订阅
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Lookout 移动威胁防御订阅的设置步骤如下：
 
@@ -58,11 +58,11 @@ Lookout 移动端点安全租户将与 Azure AD 订阅关联以便让 Lookout �
 
 3. 查找 Azure AD 组 ID。  
      > [!NOTE]   
-     > “组对象 ID”位于 Azure 门户的 Azure AD 边栏选项卡中组的“属性”页。  
+     > “组对象 ID”位于 Azure 门户的 Azure AD 边栏选项卡中组的“属性”页   。  
 
    Lookout 控制台支持两种级别的访问权限：  
 
-   - **完全访问权限：** Azure AD 管理员可以创建具有完全访问权限的用户的组和 （可选） 创建将具有受限访问权限的用户的组。 只有这些组中的用户才能登录到 Lookout 控制台。
+   - **完全访问权限：** Azure AD 管理员可以创建具有完全访问权限的用户的组和 （可选） 创建将具有受限访问权限的用户的组。 只有这些组中的用户才能登录到 Lookout 控制台  。
    - **受限访问权限：** 此组中的用户将没有任何访问某些配置和注册相关模块的 Lookout 控制台中，且有只读访问**安全策略**Lookout 控制台的模块。  
 
      > [!TIP]  
@@ -77,15 +77,15 @@ Lookout 移动端点安全租户将与 Azure AD 订阅关联以便让 Lookout �
 
 1. Lookout 支持人员创建 Lookout 企业帐户后，将向公司的主要联系人发送电子邮件，其中附带[登录 url](https://aad.lookout.com/les?action=consent) 的链接。
 
-2. 首次登录到 Lookout 控制台时必须使用具有 Azure AD 全局管理员角色的用户帐户，以便注册 Azure AD 租户。 后续登录无需此级别的 Azure AD 特权。 此时显示同意页。 选择“接受”完成注册。 接受并同意后，系统将重定向到 Lookout 控制台。
+2. 首次登录到 Lookout 控制台时必须使用具有 Azure AD 全局管理员角色的用户帐户，以便注册 Azure AD 租户。 后续登录无需此级别的 Azure AD 特权。 此时显示同意页。 选择“接受”  完成注册。 接受并同意后，系统将重定向到 Lookout 控制台。
 
    ![第一次登录到 Lookout 控制台时的登录页面屏幕截图](media/lookout-initial-login.png)
 
-3. 在 [Lookout 控制台](https://aad.lookout.com)的“系统”模块中选择“连接器”选项卡，然后选择“Intune”。
+3. 在 [Lookout 控制台](https://aad.lookout.com)的“系统”模块中选择“连接器”选项卡，然后选择“Intune”    。
 
    ![打开了连接器选项卡的 Lookout 控制台屏幕截图，其中突出显示了 Intune 选项](media/lookout-setup-intune-connector.png)
 
-4. 转到“连接器” > “连接设置”，然后指定“检测信号频率”（按分钟计）。
+4. 转到“连接器” > “连接设置”，然后指定“检测信号频率”（按分钟计）    。
 
    ![连接设置选项卡的屏幕截图，其中显示配置了检测信号频率](media/lookout-connection-settings.png)
 
@@ -97,12 +97,12 @@ Lookout 移动端点安全租户将与 Azure AD 订阅关联以便让 Lookout �
     > [!NOTE]  
     > 对于在 Azure AD 注册组中标识和受到支持的用户，其所有支持 Lookout 并已注册 Intune 设备都已在 Lookout MTD 控制台中注册且可在此处激活。
 
-2. 在 [Lookout 控制台](https://aad.lookout.com)的“系统”模块中，选择“连接器”选项卡，然后选择“注册管理”，以定义一组其设备应注册 Lookout 的用户。 添加用于注册的 Azure AD 安全组“显示名称”。
+2. 在 [Lookout 控制台](https://aad.lookout.com)的“系统”模块中，选择“连接器”选项卡，然后选择“注册管理”，以定义一组其设备应注册 Lookout 的用户    。 添加用于注册的 Azure AD 安全组“显示名称”  。
 
     ![Intune 连接器注册页面的屏幕截图](media/lookout-enrollment.png)
 
     >[!IMPORTANT]  
-    > 正如 Azure 门户安全组的“属性”中所示，“显示名称”区分大小写。 如下图所示，安全组的“显示名称”为大小写混用，而标题全为小写。 在 Lookout 控制台中，请匹配安全组的“显示名称”的大小写。
+    > 正如 Azure 门户安全组的“属性”中所示，“显示名称”区分大小写   。 如下图所示，安全组的“显示名称”为大小写混用，而标题全为小写  。 在 Lookout 控制台中，请匹配安全组的“显示名称”的大小写  。
     >![Azure 门户的屏幕截图、Azure Active Directory 服务、属性页](media/aad-group-display-name.png)
 
     >[!NOTE]  
@@ -115,26 +115,26 @@ Lookout 移动端点安全租户将与 Azure AD 订阅关联以便让 Lookout �
 
 
 ## <a name="configure-state-sync"></a>配置状态同步
-在“状态同步”选项中，指定应发送到 Intune 的数据类型。 需同时启用设备状态和威胁状态，Lookout Intune 集成才能正常工作。 这些设置默认启用。
+在“状态同步”  选项中，指定应发送到 Intune 的数据类型。 需同时启用设备状态和威胁状态，Lookout Intune 集成才能正常工作。 这些设置默认启用。
 
 
 
 ## <a name="configure-error-report-email-recipient-information"></a>配置错误报告电子邮件收件人信息
-在“错误管理”选项中输入接收错误报告的电子邮件地址。
+在“错误管理”  选项中输入接收错误报告的电子邮件地址。
 
 ![Intune 连接器错误管理页面的屏幕截图](media/lookout-connector-error-notifications.png)
 
 
 
 ## <a name="configure-enrollment-settings"></a>配置注册设置
-在“系统”模块的“连接器”页上，指定将设备视为已断开连接之前的天数。 将断开连接的设备视为不符合，并根据 SCCM 条件性访问策略阻止其访问公司应用程序。 可以指定介于 1 到 90 天之间的值。
+在“系统”  模块的“连接器”  页上，指定将设备视为已断开连接之前的天数。 将断开连接的设备视为不符合，并根据 SCCM 条件性访问策略阻止其访问公司应用程序。 可以指定介于 1 到 90 天之间的值。
 
 ![Lookout 注册设置](media/lookout-console-enrollment-settings.png)
 
 
 
 ## <a name="configure-email-notifications"></a>配置电子邮件通知
-若要接收与威胁相关的电子邮件警报，请使用应接收该通知的用户帐户登录到 [Lookout 控制台](https://aad.lookout.com)。 在“系统”模块的“首选项”选项卡上，选择应接收通知的威胁级别，然后将其设置为“开”。 保存所做更改。
+若要接收与威胁相关的电子邮件警报，请使用应接收该通知的用户帐户登录到 [Lookout 控制台](https://aad.lookout.com)。 在“系统”模块的“首选项”选项卡上，选择应接收通知的威胁级别，然后将其设置为“开”    。 保存所做更改。
 
 ![显示用户帐户的首选项页面屏幕截图](media/lookout-email-notifications.png) 如果不再需要接收电子邮件通知，可将通知设置为“关”并保存所作更改。
 
@@ -146,7 +146,7 @@ Lookout 移动威胁防御将移动威胁分为多种类型。 [Lookout 威胁�
 ![显示威胁和分类的策略页屏幕截图](media/lookout-threat-classification.png)
 
 >[!IMPORTANT]  
-> 风险级别是移动威胁防御的一个重要方面。 Intune 集成在运行时根据这些风险级别计算设备是否符合要求。 Intune 管理员在策略中设置规则，在设备中存在最低等级为高级、中级或低级的活跃威胁时将设备标识为不符合。 Lookout 移动威胁防御中的威胁分类策略直接引导着 Intune 中的设备符合性计算。
+> 风险级别是移动威胁防御的一个重要方面。 Intune 集成在运行时根据这些风险级别计算设备是否符合要求。 Intune 管理员在策略中设置规则，在设备中存在最低等级为高级、中级或低级的活跃威胁时将设备标识为不符合    。 Lookout 移动威胁防御中的威胁分类策略直接引导着 Intune 中的设备符合性计算。
 
 
 

@@ -11,21 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2dd14e7beaef6fe636ea220de557a866e547a602
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: c2b697520dee854f956554dfcca60519f930f15b
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516228"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678610"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。
-
 > [!Important]  
-> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+> 本文档将不再被更新。 自 2018 年 8 月 14 日，有了混合移动设备管理[弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 应将环境迁移到 Intune 独立版越早越好。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。
+>
+> 重要有关混合移动设备管理 (MDM) 的信息将继续添加到[Office 365 消息中心](https://go.microsoft.com/fwlink/?linkid=2070717)并[Intune 客户的成功博客](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)直到该服务停用2019 年 9 月 1日日。 <!--Intune feature 2683117-->  
+
+本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。 
 
 > [!Note]  
 > Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。

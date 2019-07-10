@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 50d79da3ab4e7ace9a682baaa5cfd8d2bdbdce10
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256380"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678871"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根据设备、网络和应用程序风险管理对公司资源的访问权限
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 根据 Lookout 执行的风险评估，控制从移动设备对公司资源的访问。 Lookout 是与 Microsoft Intune 集成的设备威胁防护解决方案。 该风险基于 Lookout 服务所收集的数据。 它从设备收集有关 OS 漏洞、已安装的恶意软件和恶意网络配置文件的数据。 
 
@@ -118,8 +118,8 @@ Configuration Manager 中的符合性策略现在包含针对 Lookout 移动威�
 
 若要实施此解决方案，请使用以下步骤：  
 
-1.  [使用 Lookout 移动威胁保护设置订阅](set-up-your-subscription-with-lookout.md)
-2.  [在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)
+1. [使用 Lookout 移动威胁保护设置订阅](set-up-your-subscription-with-lookout.md)
+2. [在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)
 3.  [配置和部署 Lookout for Work 应用程序](configure-and-deploy-lookout-for-work-apps.md)
-4.  [配置合规性策略](enable-device-threat-protection-rule-compliance-policy.md)
-5.  [对 Lookout 集成进行故障排除](troubleshoot-lookout-integration.md)
+4. [配置合规性策略](enable-device-threat-protection-rule-compliance-policy.md)
+5. [对 Lookout 集成进行故障排除](troubleshoot-lookout-integration.md)

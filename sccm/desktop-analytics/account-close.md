@@ -2,7 +2,7 @@
 title: 如何关闭你的帐户
 titleSuffix: Configuration Manager
 description: 如何从 Azure 帐户中删除桌面分析
-ms.date: 06/11/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 805cb79a1986457f04b11fa5f99b30ec098be99b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: e2b1c893204366581eacd0f8e953cb2a6fd0d1a4
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159202"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676178"
 ---
 # <a name="how-to-close-your-account"></a>如何关闭你的帐户
 
@@ -31,7 +31,7 @@ ms.locfileid: "67159202"
 
 ## <a name="delete-the-solution"></a>删除解决方案
 
-1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**公司管理员**角色。
+1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**全局管理员**角色。
 
 1. 在中搜索**的所有资源**Desktop 分析工作区的名称。 此名称是注册该服务时创建的内容。
 
@@ -44,7 +44,7 @@ Desktop 分析数据会过期，根据数据保留策略工作区。 您可以�
 
 ## <a name="remove-user-and-app-access"></a>删除用户和应用的访问权限
 
-1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**公司管理员**角色。 转到**Azure Active Directory**。
+1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**全局管理员**角色。 转到**Azure Active Directory**。
 
 1. 在中**角色和管理员**，搜索**Desktop 分析管理员**角色。 删除其成员。
 

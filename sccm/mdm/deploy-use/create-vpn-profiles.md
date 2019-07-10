@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7accfe4c329b61c7791bc4b82028d48fdc81931
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 3b653d8c60299f54a0e54cee0792066ccd8dba65
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256581"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678141"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的移动设备用户。 如果部署这些设置，可以最大限度地减少最终用户在连接公司网络上的资源时需要完成的工作。  
 
@@ -51,10 +51,10 @@ ms.locfileid: "62256581"
  |L2TP|是|否|是|是|是|否|是 (OMA-URI)|  
 
 <sup>1</sup>从版本 1802 开始，使用情况的 Cisco AnyConnect 连接类型而异。<!--1357393-->  
-   - 对于以下版本的 VPN 配置文件，请使用“Cisco 旧式 AnyConnect”选项：
+   - 对于以下版本的 VPN 配置文件，请使用“Cisco 旧式 AnyConnect”选项  ：
        - 带有 Cisco AnyConnect 4.0.5 或更低版本的 iOS
        - 带有 Cisco AnyConnect 任何版本的 macOS
-   - 对于以下版本的 VPN 配置文件，请使用“Cisco AnyConnect”选项：
+   - 对于以下版本的 VPN 配置文件，请使用“Cisco AnyConnect”选项  ：
        - 带有 Cisco AnyConnect 4.0.7 或更高版本的 iOS
 
      > [!Tip]  
@@ -90,20 +90,20 @@ ms.locfileid: "62256581"
 ## <a name="create-vpn-profiles"></a>创建 VPN 配置文件
 
 
-1. 在 Configuration Manager 控制台的“资产和符合性”工作区中，依次展开“符合性设置”和“公司资源访问”，然后选择“VPN 配置文件”。 
+1. 在 Configuration Manager 控制台的“资产和符合性”工作区中，依次展开“符合性设置”和“公司资源访问”，然后选择“VPN 配置文件”     。 
 
-2. 在功能区中单击“创建 VPN 配置文件”。  
+2. 在功能区中单击“创建 VPN 配置文件”  。  
 
-3. 在“常规”页上，指定“名称”，然后选择“VPN 配置文件类型”。   
+3. 在“常规”页上，指定“名称”，然后选择“VPN 配置文件类型”    。   
      > [!NOTE]  
      > 使用 Windows 10 VPN 功能的 VPN 配置文件的名称既不能采用 Unicode 格式，也不能包含特殊字符。
 
 
-4. 如果“支持的平台”页可用，请为先前指定的 VPN 配置文件类型选择操作系统版本。 选择“全选”以在所有可用的操作系统版本上安装 VPN 配置文件。  
+4. 如果“支持的平台”页可用，请为先前指定的 VPN 配置文件类型选择操作系统版本  。 选择“全选”以在所有可用的操作系统版本上安装 VPN 配置文件  。  
 
-5. 在“连接”页上配置 VPN 连接。 有关这些选项的详细信息，请参阅[创建 VPN 配置文件](/sccm/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile)中“连接”页上的步骤。  
+5. 在“连接”页上配置 VPN 连接  。 有关这些选项的详细信息，请参阅[创建 VPN 配置文件](/sccm/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile)中“连接”页上的步骤。  
 
-6. 在“身份验证方法”页上，请指定以下设置：  
+6. 在“身份验证方法”页上，请指定以下设置  ：  
 
    - **身份验证方法**:选择 VPN 连接使用的身份验证方法。 可用的方法视连接类型而定，如此表中所示。  
 
@@ -133,17 +133,17 @@ ms.locfileid: "62256581"
        >  连接类型为“PPTP”时，运行 iOS 的设备对身份验证方法仅支持“RSA SecurID”和“MSCHAP v2”。 若要避免报告错误，请将单独的 PPTP VPN 配置文件部署到运行 iOS 的设备中。   
 
      - **条件性访问**  
-         - 选择“启用此 VPN 连接的条件性访问”可以确保连接到 VPN 的设备在连接前进行了条件性访问合规性测试。 有关详细信息，请参阅[设备符合性策略](/sccm/protect/deploy-use/device-compliance-policies)。  
+       - 选择“启用此 VPN 连接的条件性访问”  可以确保连接到 VPN 的设备在连接前进行了条件性访问合规性测试。 有关详细信息，请参阅[设备符合性策略](/sccm/protect/deploy-use/device-compliance-policies)。  
 
-         - 选中“启用使用替代证书进行单一登录(SSO)”可以选择除 VPN 身份验证证书以外的其他证书来验证设备符合性。 如果选中此选项，请输入 VPN 客户端应查找的正确证书的“EKU”（以逗号分隔的列表）和“颁发者哈希”。  
+       - 选中“启用使用替代证书进行单一登录(SSO)”  可以选择除 VPN 身份验证证书以外的其他证书来验证设备符合性。 如果选中此选项，请输入 VPN 客户端应查找的正确证书的“EKU”  （以逗号分隔的列表）和“颁发者哈希”  。  
 
        - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。 可指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。 有关详细信息，请参阅[通过 Intune 创建和部署 Windows 信息保护应用保护策略](/intune/windows-information-protection-policy-create)。   
 
        ![创建 VPN 配置文件向导，“身份验证方法”页](media/vpn-conditional-access.png)
 
-       当 Windows 客户端版本支持时，“配置”身份验证方法的选项可用。 此选项将打开 Windows 属性对话框以配置身份验证方法。 如果“配置”遭禁用，请使用其他方法来配置身份验证方法属性。  
+       当 Windows 客户端版本支持时，“配置”身份验证方法的选项可用  。 此选项将打开 Windows 属性对话框以配置身份验证方法。 如果“配置”  遭禁用，请使用其他方法来配置身份验证方法属性。  
 
-7. 在“创建 VPN 配置文件向导”的“代理设置”页上，如果 VPN 连接使用的是代理服务器，请选中“配置此 VPN 配置文件的代理设置”框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
+7. 在“创建 VPN 配置文件向导”  的“代理设置”  页上，如果 VPN 连接使用的是代理服务器，请选中“配置此 VPN 配置文件的代理设置”  框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
 
    > [!NOTE]  
    >  在 Windows 8.1 计算机上，只有在使用此计算机连接 VPN 之后，VPN 配置文件才会显示代理信息。  
@@ -151,7 +151,7 @@ ms.locfileid: "62256581"
 
 8. 如有必要，请进一步配置 DNS 设置。  
 
-9. 完成该向导。 此时，“资产和符合性”工作区中的“VPN 配置文件”节点会显示新建的 VPN 配置文件。  
+9. 完成该向导。 此时，“资产和符合性”  工作区中的“VPN 配置文件”  节点会显示新建的 VPN 配置文件。  
 
 
 
