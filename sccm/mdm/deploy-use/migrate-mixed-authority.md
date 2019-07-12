@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccc38188729a05329cc240a9f424ccce9fd433b2
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 9ca39be68074213e4bb0a3f667ae69d5257f7a3c
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974078"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818071"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构）
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 您可以在同一租户中配置混合的 MDM 机构。 管理在 Microsoft Intune 和其他一些用户使用混合 mdm。 此文提供有关如何开始将用户移至 Intune 独立版的信息。 它假定你已完成以下步骤：  
 
@@ -105,7 +105,7 @@ ms.locfileid: "65974078"
 ![排除集合](../media/migrate-excludecollections.png)
 
 > [!Note]  
-> 当你具有**所有用户**为 Intune 订阅选择的集合，不允许你将添加一个规则以排除集合。 创建新的集合基于**所有用户**集合。 验证集合包含预期的用户。 然后编辑 Intune 订阅以使用新的集合。 可以从新集合中排除用户集合以迁移用户。  
+>   当你具有**所有用户**为 Intune 订阅选择的集合，您不能添加规则以排除集合。 相反，创建新的集合基于**所有用户**集合中，验证该集合包含用户期望的，然后编辑 Intune 订阅以使用新的集合。 可以从新集合中排除用户集合以迁移用户。 如果从集合中排除用户，但包括用户的成员的组，用户将不会从集合中排除。
 
 若要将测试用户组迁移到 Intune，创建用户集合，其中包含要迁移的用户。 然后从用于 Intune 订阅集合中排除的用户集合。  
 
@@ -115,7 +115,7 @@ ms.locfileid: "65974078"
 
 1. 验证用户是否具有 Intune/EMS 许可证。  
 
-2. 创建一个要从 Intune 订阅集合中排除的集合。 在此示例中，“所有混合用户”集合中包含一个规则以排除“迁移试点”集合中的用户。 User1 是“迁移试点”集合中的一个成员，将从“所有混合用户”集合中排除。  
+2. 创建一个要从 Intune 订阅集合中排除的集合。 在此示例中，“所有混合用户”集合中包含一个规则以排除“迁移试点”集合中的用户。   User1 是“迁移试点”集合中的一个成员，将从“所有混合用户”集合中排除。     
 
 3. **User1**的设备现在在 Azure 门户中管理从 Intune。  
 
@@ -127,7 +127,7 @@ ms.locfileid: "65974078"
 
 ## <a name="verify-intune-standalone-functionality"></a>验证 Intune 独立版功能
 
-迁移了一小部分用户后，验证用户设备是否在 Intune 中列出。 转到“设备”，并选择“所有设备”。
+迁移了一小部分用户后，验证用户设备是否在 Intune 中列出。 转到“设备”  ，并选择“所有设备”  。
 
 然后验证策略、配置文件和应用是否在用户设备上按预期运行。
 
@@ -143,7 +143,7 @@ ms.locfileid: "65974078"
 
 若要迁移到 Intune 不通过用户关联注册窗体的单独设备配置管理器，使用 Switch-mdmdeviceauthority PowerShell cmdlet。  在迁移中发生的 Azure 中的 Intune 中使用 cmdlet 迁移所选的设备验证后应为所选设备。 然后，当您准备，MDM 机构更改为 Intune 租户以完成具有为其的 MDM 机构的 Configuration Manager 的任何剩余的设备的迁移。
 
-### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet Switch-MdmDeviceAuthority
+### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet Switch-MdmDeviceAuthority 
 
 #### <a name="synopsis"></a>摘要
 
@@ -158,7 +158,7 @@ ms.locfileid: "65974078"
 
 #### `-Credential <PSCredential>`
 
-切换设备管理权限时使用的 Azure AD 用户帐户的 PowerShell 凭据对象。 如果未指定参数，被提示用户提供凭据。 此用户帐户的目录角色应为“全局管理员”或“受限管理员”，管理角色为“Intune 管理员”。
+切换设备管理权限时使用的 Azure AD 用户帐户的 PowerShell 凭据对象。 如果未指定参数，被提示用户提供凭据。 此用户帐户的目录角色应为“全局管理员”或“受限管理员”，管理角色为“Intune 管理员”    。
 
 #### `-DeviceIds <Guid[]>`
 
@@ -181,7 +181,7 @@ ms.locfileid: "65974078"
 - ActivityTracing
 - All
 - 严重
-- 错误
+- Error
 - 信息
 - 关闭
 - 详细
