@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6efa58c2257730de0703d850b814f871684b72c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 20b50fcd54513ccd780a7da173766fb177bf5da7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129028"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676117"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 
-适用范围：System Center Configuration Manager (Long-Term Servicing Branch)
+适用范围：  System Center Configuration Manager (Long-Term Servicing Branch)
 
 请参阅本主题以了解如何将运行 Configuration Manager 的 Long-Term Servicing Branch (LTSB) 的站点和层次结构升级（转换）为 Current Branch。
 
@@ -28,10 +28,10 @@ ms.locfileid: "56129028"
 
 如果拥有多个站点，则只需转换层次结构的顶层站点。 在转换顶层站点后：
 - 子主站点也会自动进行转换。
--   必须从 Configuration Manager 控制台中手动更新辅助站点。
+- 必须从 Configuration Manager 控制台中手动更新辅助站点。
 
 ## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>运行安装程序转换 Long-Term Servicing Branch
-在层次结构的顶层站点上，可以从合格的基线媒体运行 Configuration Manager 安装程序并选择“站点维护”。  然后当授权页出现时，为 Current Branch 选择选项并完成向导。
+在层次结构的顶层站点上，可以从合格的基线媒体运行 Configuration Manager 安装程序并选择“站点维护”  。  然后当授权页出现时，为 Current Branch 选择选项并完成向导。
 
 站点转换为 Current Branch 后，可以使用以前不可用的功能。
 
@@ -45,8 +45,8 @@ ms.locfileid: "56129028"
 ## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>使用 Configuration Manager 控制台转换 Long-Term Servicing Branch
 如果站点运行 LTSB，则可以使用 Configuration Manager 控制台中的以下选项将站点转换为 Current Branch：
 
- 1. 在控制台中，转到“管理” > “站点配置” > “站点”，然后打开“层次结构设置”。  
+ 1. 在控制台中，转到“管理”   > “站点配置”   > “站点”  ，然后打开“层次结构设置”  。  
 
- 2. 在“层次结构设置”中，切换到“许可”标签。选择“转换为 Current Branch”选项，然后选择“应用”。  
+ 2. 在“层次结构设置”中，切换到“许可”标签   。选择“转换为 Current Branch”选项，然后选择“应用”   。  
 
 站点转换为 Current Branch 后，可以使用以前不可用的功能。

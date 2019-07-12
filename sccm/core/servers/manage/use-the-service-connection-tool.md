@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002ed233a679cdee928160490c8e1ee4425c7382
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 83838e2642d09c001b638900b6cc4fa23975745e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496262"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676365"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -31,7 +31,7 @@ ms.locfileid: "65496262"
 
 **先决条件：**
 
--   已安装服务连接点，并将它设置为“脱机，按需连接”。  
+-   已安装服务连接点，并将它设置为“脱机，按需连接”  。  
 
 -   该工具必须从命令提示符中运行。  
 
@@ -101,21 +101,21 @@ ms.locfileid: "65496262"
 
 #### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型
 从版本 1706 开始，工具默认下载行为已更改，工具支持用于控制下载的文件的选项。
--   默认情况下，工具仅下载对站点版本适用的最新可用更新。 不下载修补程序。
+- 默认情况下，工具仅下载对站点版本适用的最新可用更新。 不下载修补程序。
 
 要修改此行为，请使用以下参数之一更改下载哪些文件。 
 
 > [!NOTE]
 > 根据工具运行时上传的 .cab 文件中的数据确定站点版本。
 >
-> 可以通过查找 .cab 文件内的 SiteVersion.txt 文件来验证版本。
+> 可以通过查找 .cab 文件内的 SiteVersion  .txt 文件来验证版本。
 
--   -downloadall  此选项下载所有内容，包括更新和修补程序，而不考虑站点的版本。
--   -downloadhotfix  此选项下载所有修补程序，而不考虑站点的版本。
--   -downloadsiteversion  此选项下载版本高于站点版本的更新和修补程序。
+- -downloadall  此选项下载所有内容，包括更新和修补程序，而不考虑站点的版本  。
+- -downloadhotfix  此选项下载所有修补程序，而不考虑站点的版本  。
+- -downloadsiteversion  此选项下载版本高于站点版本的更新和修补程序  。
 
-使用 -downloadsiteversion 的示例命令行：
-- serviceconnectiontool.exe -connect  -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks
+使用 -downloadsiteversion 的示例命令行  ：
+- serviceconnectiontool.exe -connect  -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks 
 
 
 
@@ -164,19 +164,19 @@ ms.locfileid: "65496262"
 
 8. 导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
 
-9. 打开 Configuration Manager 控制台并导航到“管理” > “更新和服务”。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
+9. 打开 Configuration Manager 控制台并导航到“管理”   > “更新和服务”  。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理”   > “云服务”  下。）
 
    有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
 ## <a name="bkmk_cmd"></a> 日志文件
 
-ServiceConnectionTool.log
+ServiceConnectionTool.log 
 
-每次运行服务连接工具时，都将在与名为 ServiceConnectionTool.log 的工具所在的位置相同的位置生成一个日志文件。  此日志文件将只提供有关工具执行的简单详细信息，具体取决于所使用的命令是什么。  每次运行该工具时，都将替换现有日志文件。
+每次运行服务连接工具时，都将在与名为 ServiceConnectionTool.log  的工具所在的位置相同的位置生成一个日志文件。  此日志文件将只提供有关工具执行的简单详细信息，具体取决于所使用的命令是什么。  每次运行该工具时，都将替换现有日志文件。
 
-ConfigMgrSetup.log
+ConfigMgrSetup.log 
 
-使用工具连接和下载更新时，将在系统驱动器的根目录上生成名为 ConfigMgrSetup.log 的日志文件。  此日志文件将提供更为详细的信息，例如，下载了什么文件、提取了什么文件，以及哈希检查是否成功。
+使用工具连接和下载更新时，将在系统驱动器的根目录上生成名为 ConfigMgrSetup.log  的日志文件。  此日志文件将提供更为详细的信息，例如，下载了什么文件、提取了什么文件，以及哈希检查是否成功。
 
 ## <a name="bkmk_cmd"></a> 命令行选项  
  若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  

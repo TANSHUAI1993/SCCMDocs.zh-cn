@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 649c0a134f7ebc77c214801d30720f75b80d34ee
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 30200c9da2ea37ef0868db680d04fe6aae9fd314
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159462"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678072"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>管理 Updates Publisher 中的适用性规则
 
@@ -31,11 +31,13 @@ ms.locfileid: "67159462"
 
 例如，下面是包含三条规则的规则集。 第一条规则验证 *MyFile* 文件是否存在，第二条和第三条规则验证 Windows 操作系统的语言是英语还是日语。
 
-    And  
-      File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
-      Or  
-        Windows Language is English   
-        Windows Language is Japanese
+```
+And  
+  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  Or  
+    Windows Language is English   
+    Windows Language is Japanese
+```
 
 所有更新都要求至少满足一条适用性规则。 适用性规则应用于已导入的更新。创建你自己的更新时，必须向其添加一条或多条规则。 可以修改和扩展 Updates Publisher 中任意更新的规则。
 

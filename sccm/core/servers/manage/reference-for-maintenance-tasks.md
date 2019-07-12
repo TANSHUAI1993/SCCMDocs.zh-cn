@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cc2e1783843f600f88b78e0db0cc6b8b8db0f55
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 24e76f9281158aa28e153efe9124ba2adf94a14d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500984"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676378"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本主题列出了每个 System Center Configuration Manager 站点维护任务的详细信息，并指定可使用任务的站点类型。 每个条目还指示默认情况下启用还是未启用任务。 有关规划和配置站点来运行维护任务的信息，请参阅 [System Center Configuration Manager 的维护任务](../../../core/servers/manage/maintenance-tasks.md)。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "65500984"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**清除安装标志**：使用此任务删除“客户端重新发现”期间未提交检测信号发现记录的客户端的安装标记。 安装的标记阻止向可能具有活动 Configuration Manager 客户端的计算机进行自动客户端请求安装。  
+**清除安装标志**：使用此任务删除“客户端重新发现”期间未提交检测信号发现记录的客户端的安装标记  。 安装的标记阻止向可能具有活动 Configuration Manager 客户端的计算机进行自动客户端请求安装。  
 
 -   管理中心站点：不可用    
 -   **主站点**：未启用    
@@ -50,7 +50,7 @@ ms.locfileid: "65500984"
 
 **删除过期的客户端下载历史记录**：使用此任务可删除客户端使用的下载源历史数据。 下载源信息用于填充[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。  
 -  管理中心站点 - 不可用
--    **主站点** - 已启用
+-  **主站点** - 已启用
 -  辅助站点 - 不可用
 
 **删除过期的客户端操作**：使用此任务从站点数据库中删除客户端操作的所有过期数据。 例如，其中包括过期或到期的客户端通知数据（例如下载计算机或用户策略的请求）和 Endpoint Protection 数据（例如客户端的管理用户运行扫描或下载更新定义的请求）。
@@ -95,7 +95,7 @@ ms.locfileid: "65500984"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除 Exchange Server 连接器管理的过期设备**：此任务可用于删除使用 Exchange Server 连接器管理的移动设备的过期数据。 将依据在 Exchange Server 连接器属性的“发现”选项卡上为“忽略非活动天数超过以下值的移动设备”选项配置的间隔删除此数据。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+**删除 Exchange Server 连接器管理的过期设备**：此任务可用于删除使用 Exchange Server 连接器管理的移动设备的过期数据。 将依据在 Exchange Server 连接器属性的“发现”  选项卡上为“忽略非活动天数超过以下值的移动设备”  选项配置的间隔删除此数据。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
 -   管理中心站点：不可用   
 -   **主站点**：Enabled    
@@ -209,10 +209,10 @@ ms.locfileid: "65500984"
 
 **删除非活动状态的客户端发现数据**：此任务可用于从数据库中删除不活动客户端的发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，会将客户端标记为不活动。
 
-此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
+此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”  任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
 
 > [!IMPORTANT]  
-> 启用此任务时，请将此任务配置为按大于“检测信号发现”计划的间隔运行。 这允许活动客户端发送“检测信号发现”记录，以将其客户端记录标记为活动状态，从而阻止此任务删除它们。  
+> 启用此任务时，请将此任务配置为按大于“检测信号发现”  计划的间隔运行。 这允许活动客户端发送“检测信号发现”记录，以将其客户端记录标记为活动状态，从而阻止此任务删除它们。  
 
 -   管理中心站点：不可用    
 -   **主站点**：未启用    
@@ -278,7 +278,7 @@ ms.locfileid: "65500984"
 
 **汇总软件计数文件使用数据**：此任务可用于将来自多个记录的软件计数文件使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-可配合使用此任务与“汇总软件计数每月使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的磁盘空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+可配合使用此任务与“汇总软件计数每月使用数据”  任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的磁盘空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    
@@ -286,7 +286,7 @@ ms.locfileid: "65500984"
 
 **汇总软件计数每月使用数据**：此任务可用于将来自多个记录的软件计数每月使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-可配合使用此任务与“汇总软件计数文件使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+可配合使用此任务与“汇总软件计数文件使用数据”  任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：Enabled    

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89ba5d63b1a033db49da73cc0df3fa0a41f2b696
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 31f47fa04275f2be4efa1558e1d816f74b05d369
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285858"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677316"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
@@ -50,14 +50,14 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 ### <a name="improvements-for-in-console-search"></a>控制台中搜索功能的改进
 以下是对在 Configuration Manager 控制台中使用搜索所进行的改进：
- - **对象路径：**  
+- **对象路径：**  
   现在，很多对象都支持名为**对象路径**的列。  当用户搜索并将此列包括在显示结果中时，可以查看每个对象的路径。 例如，如果在应用程序节点搜索应用，并且同时要搜索子节点，结果窗格中的*对象路径*列将向用户显示每个返回对象的路径。   
 
 - **保留搜索文本：**  
   在搜索文本框中输入文本，然后在搜索子节点和搜索当前节点之间切换时，已键入的文本会保留，并且仍然可用于新搜索而无需重新输入。
 
 - **保留搜索子节点的决策：**  
- 现在，更改使用的节点时，会保留对搜索*当前节点*或*所有子节点*所选择的选项。 这一新特点意味着在控制台执行操作时无需不断重置此决策。 默认情况下，打开控制台选项时，将仅搜索当前节点。
+  现在，更改使用的节点时，会保留对搜索*当前节点*或*所有子节点*所选择的选项。 这一新特点意味着在控制台执行操作时无需不断重置此决策。 默认情况下，打开控制台选项时，将仅搜索当前节点。
 
 
 ### <a name="send-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台发送反馈

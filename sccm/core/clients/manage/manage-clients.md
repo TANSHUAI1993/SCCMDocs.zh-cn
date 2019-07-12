@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa92ed294196d44aaafcf4e873c706e135928c90
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 8bfcb73f359bd8d1b4438ac28b2395b01217e35d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176639"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677732"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
@@ -202,8 +202,8 @@ ms.locfileid: "66176639"
  - **Add or remove feature**：此值源于 Windows 基于组件的服务报告由于添加或删除一种 Windows 功能而需要重启 (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
  若要创建要重启设备的客户端通知，请执行以下操作：
-1.  在控制台的“设备集合”  节点找到集合中要重启的设备。
-2.  右键单击设备，选择“客户端通知”  ，然后选择“重新启动”  。 会打开一个有关重启的信息窗口。 单击“确定”  确认重启请求。
+1. 在控制台的“设备集合”  节点找到集合中要重启的设备。
+2. 右键单击设备，选择“客户端通知”  ，然后选择“重新启动”  。 会打开一个有关重启的信息窗口。 单击“确定”  确认重启请求。
 
 当客户端收到通知时，将打开“软件中心”  通知窗口以通知用户重启。 默认情况下，重启会在 90 分钟后发生。 可以通过配置[客户端设置](/sccm/core/clients/deploy/configure-client-settings)来修改重启时间。 重启行为的设置可在默认设置的[“计算机重启”](/sccm/core/clients/deploy/about-client-settings#computer-restart)选项卡上找到。
 

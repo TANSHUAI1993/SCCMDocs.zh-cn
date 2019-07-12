@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2312cb68940f5d0eb3d0dd33d192d07b6801d8e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ea90ff0b9c163dac79a96494b03252fbd1935b43
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501036"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676495"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 中的管理见解功能提供了环境当前状态的相关信息。 该信息基于对站点数据库中数据的分析。 见解有助于更好地了解环境，并根据见解执行操作。 此功能在 Configuration Manager 1802 版中发布。 <!--1353967-->
 
@@ -28,16 +28,16 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 ## <a name="review-management-insights"></a>查看管理见解 
 
-若要查看规则，帐户需要站点对象的读取权限。
+若要查看规则，帐户需要站点对象的读取权限   。
 
 1. 请打开 Configuration Manager 控制台。  
 
-2. 转到“管理”工作区，展开“管理见解”，然后选择“所有见解”。  
+2. 转到“管理”工作区，展开“管理见解”，然后选择“所有见解”    。  
 
     > [!Note]  
-    > 从版本 1810 开始，当选择“管理见解”节点时，它会显示为[管理见解仪表板](#bkmk_insights)。  
+    > 从版本 1810 开始，当选择“管理见解”节点时，它会显示为[管理见解仪表板](#bkmk_insights)  。  
 
-3. 打开要查看的管理见解组名称。 在功能区中选择“显示见解”。  
+3. 打开要查看的管理见解组名称。 在功能区中选择“显示见解”  。  
 
 以下四个选项卡可供查看： 
 
@@ -47,26 +47,26 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **正在进行**：显示已完成部分（但非全部）先决条件的规则。  
 
-- **需要执行操作**：列出需要执行操作的规则。 选择“更多详细信息”，检索需要执行操作的特定项目。  
+- **需要执行操作**：列出需要执行操作的规则。 选择“更多详细信息”，检索需要执行操作的特定项目  。  
 
-“先决条件”窗格列出了运行规则所需的项目。
+“先决条件”窗格列出了运行规则所需的项目  。
 
 #### <a name="all-rules-and-prerequisites-for-the-cloud-services-group"></a>云服务组的所有规则和先决条件
 ![管理见解 - 云服务组的所有规则和先决条件](./media/Management-insights-all-cloud-rules.png)
 
 
-选择规则并选择“更多详细信息”，查看规则详细信息。
+选择规则并选择“更多详细信息”，查看规则详细信息  。
 
 
 
 ## <a name="operations"></a>操作
 
-管理见解规则每周重新评估一次适用性。 若要按需重新评估规则，请右键单击该规则并选择“重新评估”。
+管理见解规则每周重新评估一次适用性。 若要按需重新评估规则，请右键单击该规则并选择“重新评估”  。
 
-管理见解规则的日志文件是站点服务器上的 SMS_DataEngine.log。
+管理见解规则的日志文件是站点服务器上的 SMS_DataEngine.log  。
 
 <!--1357930-->
-自版本 1806 起，一些规则允许你执行操作。 选择规则，选择“更多详细信息”，然后选择“执行操作”（如果可用）。 
+自版本 1806 起，一些规则允许你执行操作。 选择规则，选择“更多详细信息”，然后选择“执行操作”（如果可用）   。 
 
 根据规则，此操作会出现以下某一行为：  
 
@@ -79,7 +79,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 ## <a name="bkmk_insights"></a> 管理见解仪表板
 <!--1357979-->
 
-从版本 1810 开始，“管理见解”节点包括一个图形仪表板。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 
+从版本 1810 开始，“管理见解”节点包括一个图形仪表板  。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 
 
 使用仪表板顶部的以下筛选器可以细化视图：
 - 显示已完成的工作
@@ -95,7 +95,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **管理见解优先级**：按优先级显示规则百分比，支持筛选器。   
 
-- **所有见解**：一个包括优先级和状态的见解表。 使用表顶部的“筛选器”字段匹配任何可用列中的字符串。 仪表板按以下顺序对表进行排序：
+- **所有见解**：一个包括优先级和状态的见解表。 使用表顶部的“筛选器”字段匹配任何可用列中的字符串  。 仪表板按以下顺序对表进行排序：
     - 状态：需要执行操作、已完成、未知  
     - 优先级：重要、建议、可选  
     - 上次更改时间：较早的日期排在前面   
@@ -146,7 +146,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 ### <a name="proactive-maintenance"></a>主动维护
 <!--1352184-->
-自版本 1806 起，此组中的规则突出显示潜在的配置问题，以通过定期维护 Configuration Manager 对象避免这些问题。    
+自版本 1806 起，此组中的规则突出显示潜在的配置问题，以通过定期维护 Configuration Manager 对象避免这些问题。 
 
 - **未分配有站点系统的边界组**：未分配有站点系统的边界组只能用于站点分配。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)。  
 
@@ -160,7 +160,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **未用配置项目**：配置项目不属于配置基线，且已存在超过 30 天。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。  
 
-- **将对等缓存源升级到最新版 Configuration Manager 客户端**：确定用作对等缓存源，但尚未从先前的 1806 客户端版本升级的客户端。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“采取措施”打开显示客户端列表的设备视图。<!--1358008-->  
+- **将对等缓存源升级到最新版 Configuration Manager 客户端**：确定用作对等缓存源，但尚未从先前的 1806 客户端版本升级的客户端。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“采取措施”  打开显示客户端列表的设备视图。<!--1358008-->  
 
 
 ### <a name="security"></a>安全
@@ -182,7 +182,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **将用户定向到软件中心，而不是应用目录**：检查用户是否在过去 14 天内从应用目录安装或请求获取应用。 应用程序目录的主要功能现在包含在软件中心内。 版本 1806 中停止了对应用程序目录网站的支持。 有关详细信息，请参阅[已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features)。  
 
-- **使用新版软件中心**：不再支持以前版本的软件中心。 通过在“计算机代理”组中启用客户端设置“使用新的软件中心”，将客户端设置为使用新的软件中心。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#use-new-software-center)。  
+- **使用新版软件中心**：不再支持以前版本的软件中心。 通过在“计算机代理”组中启用客户端设置“使用新的软件中心”，将客户端设置为使用新的软件中心   。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#use-new-software-center)。  
 
 
 ### <a name="windows-10"></a>Windows 10
@@ -191,7 +191,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **配置 Windows 遥测和商业 ID 键**：若要使用“升级就绪情况”中的数据，请使用商业 ID 键配置设备并启用遥测。 将 Windows 10 设备设置为“增强型(有限)”或更高遥测级别。 有关详细信息，请参阅[将客户端配置为向 Windows Analytics 报告数据](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics)。  
 
-- **将 Configuration Manager 连接到“升级就绪情况”**：在 Windows 7 支持结束前，利用“升级就绪情况”加快 Windows 10 部署。 有关详细信息，请参阅 [集成升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。   
+- **将 Configuration Manager 连接到“升级就绪情况”** ：在 Windows 7 支持结束前，利用“升级就绪情况”加快 Windows 10 部署。 有关详细信息，请参阅 [集成升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。   
 
 #### <a name="windows-10-management-insights-rules"></a>Windows 10 管理见解规则
 ![管理见解 - 适用于 Windows 10 的规则](./media/Windows-10-insights-group.png)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5178a84443779384e3223998ab8336b46c2d4d0
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 41fb296f45b54723c59c7d6fe803916af95752ad
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176910"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675854"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>使用 Configuration Manager 来管理适用于企业的 Microsoft Store 中的应用
 
@@ -164,7 +164,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 部署联机应用后，该应用的任何更新都直接来自 Microsoft Store。 此外，Configuration Manager 不会检查联机应用的版本合规性，只是 Windows 会报告应用为已安装。  
 
-使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)来禁用 Microsoft Store。 
+使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)来禁用 Microsoft Store。 
 
 适用于企业的 Microsoft Store 管理员获取脱机应用后，请勿通过应用商店将应用发布给用户。 此配置可确保用户无法安装或联机更新。 用户仅通过 Configuration Manager 接收脱机应用更新。 
 

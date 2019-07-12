@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e862fe4907d5e480fd8a19c28d890987f73240fa
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: f5434e42bfdcdf9bd423035c1d30a3c68974d9dd
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463792"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726261"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -719,7 +719,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - OS 升级包  
 - 驱动程序包  
 - 包  
-- 启动映像  
+- 启动映像 （在 1810年及更早版本）  
 
 此步骤适用于任务序列，从而在以下方案中升级 OS：  
 
@@ -1623,7 +1623,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 #### <a name="account"></a>帐户
 
 <!-- 3556028 -->
-从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 脚本将使用指定帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
+从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 指定的帐户必须是系统上的本地管理员，并且使用此帐户的权限运行该脚本。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
 
 > [!IMPORTANT]  
 > 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log  文件将记录这一失败。  

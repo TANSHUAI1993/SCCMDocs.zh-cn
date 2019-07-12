@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf07aa7fba1a017821eb63a57f8c721b4a9860b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 313f49804bb526d3a1e8d208b8efdc849d674e2e
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499421"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623368"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager 支持虚拟化环境
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 支持在受支持的操作系统上安装客户端和站点系统角色，这些操作系统在本文的虚拟化环境中作为虚拟机运行。 即使虚拟机主机（虚拟化环境）不被支持作为客户端或站点服务器，这种支持仍存在。  
 
@@ -39,7 +39,7 @@ Configuration Manager 支持在受支持的操作系统上安装客户端和站�
 - Windows Server 2008 R2  
 
 #### <a name="bkmk_note1"></a> 注释 1：嵌套虚拟化
-Configuration Manager 不支持[嵌套虚拟化](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#BKMK_nested)，这是 Windows Server 2016 的新增功能。
+Configuration Manager 不支持[嵌套虚拟化](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)，这是 Windows Server 2016 的新增功能。
 
 
 ### <a name="virtualization-environment-support"></a>虚拟化环境支持

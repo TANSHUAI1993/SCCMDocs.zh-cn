@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: deb27df76bb3ed6fc9c6338f302fcc612443cee9
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 8560c34f1db76afcfe2e65eeaf8311b0a58cc926
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251916"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623448"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -176,7 +176,7 @@ Configuration Manager 能更高效地确定对等缓存源是否已漫游到其�
 
 ### <a name="azure-ad-device-identity"></a>Azure AD 设备标识 
 <!--1358460-->
-如果[已加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)或[混合 Azure AD 设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)没有 Azure AD 用户登录，设备可以与其分配的站点进行安全通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
+如果[已加入 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join)或[混合 Azure AD 设备](/azure/active-directory/devices/concept-azure-ad-join-hybrid)没有 Azure AD 用户登录，设备可以与其分配的站点进行安全通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
 
 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 

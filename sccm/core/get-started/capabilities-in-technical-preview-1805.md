@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da8ff0e4d35284c5b1f2f465da468677cdfbb65
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: ce70f690899e6ad9413c1fcd57e3f1b47a61fd4b
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286068"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623320"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
@@ -285,7 +285,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 #### <a name="bkmk_token1"></a> 方案 1：客户端到管理点
 <!--1356889-->
-[加入 Azure AD 的设备](/azure/active-directory/device-management-introduction#azure-ad-joined-devices)能够通过云管理网关 (CMG) 与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。   
+[加入 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join)能够通过云管理网关 (CMG) 与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。   
 
 > [!Note]  
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个启用了 HTTPS 的管理点。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
@@ -296,7 +296,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 
 #### <a name="bkmk_token3"></a> 方案 3：Azure AD 设备标识 
 <!--1358460-->
-没有 Azure AD 用户登录的加入 Azure AD 的或[混合 Azure AD 设备](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
+没有 Azure AD 用户登录的加入 Azure AD 的或[混合 Azure AD 设备](/azure/active-directory/devices/concept-azure-ad-join-hybrid)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
 
 
 ### <a name="prerequisites"></a>先决条件  

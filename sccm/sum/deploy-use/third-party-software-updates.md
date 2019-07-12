@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3279ba7cd78ca6fc10ddb8662ac816679d01d7cf
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 821f37f7c4b001fdf49d805dcdca2eef40cdce74
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194681"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623415"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -38,7 +38,7 @@ ms.locfileid: "67194681"
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP 远离顶级站点服务器时的其他要求 
 
 1. 当 SUP 为远程时必须在 SUP 上启用 SSL。 这需要从内部证书颁发机构或通过公共提供程序生成的服务器身份验证证书。
-    - [在 WSUS 上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
+    - [在 WSUS 上配置 SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - 在 WSUS 上配置 SSL 时，请注意某些 Web 服务和虚拟目录始终是 HTTP 而不是 HTTPS。 
         - Configuration Manager 通过 HTTP 从 WSUS 内容目录下载软件更新包的第三方内容。   
     - [在 SUP 上配置 SSL](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)

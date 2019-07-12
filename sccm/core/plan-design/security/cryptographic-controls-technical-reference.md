@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 253710602ca4c46e3ed0d929fb62edea6c3efeb3
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: 8caed88289af0947bb9924e50f8369412e3c55f2
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354835"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676676"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -265,11 +265,11 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 ## <a name="about-ssl-vulnerabilities"></a>有关 SSL 漏洞
 若要提高 Configuration Manager 客户端和服务器的安全性，请执行以下操作：
 
--   启用 TLS 1.2
+- 启用 TLS 1.2
 
-    若要启用 TLS 1.2 for Configuration Manager，请参阅：[如何启用 TLS 1.2 for Configuration Manager](enable-tls-1-2.md)。
--   禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
--   重新排序与 TLS 相关的密码套件 
+  若要启用 TLS 1.2 for Configuration Manager，请参阅：[如何启用 TLS 1.2 for Configuration Manager](enable-tls-1-2.md)。
+- 禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
+- 重新排序与 TLS 相关的密码套件 
 
 有关详细信息，请参阅[如何限制使用特定的加密算法和 Schannel.dll 中的协议](https://support.microsoft.com/en-us/kb/245030/)以及 [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)（以优先顺序排列 Schannel 密码套件）。 这些操作不会影响 Configuration Manager 的功能。
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b57720d800e224d68f92f339e0c3b4964010e05
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 424710431f9c17642b3a8c6190f8919665f3ac6c
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285935"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623286"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1806 中的功能
 
@@ -81,7 +81,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
     > [!Tip]  
     > 软件更新点需要 HTTPS，因为它是用于处理签名证书的 WSUS API 的必需。 客户端也无需启用 HTTPS。 有关在 WSUS 上启用 HTTPS 的详细信息，请参阅以下文章获取帮助：  
-    > - [使用安全套接字层协议保护 WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [使用安全套接字层协议保护 WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
     > - [WSUS 支持博客文章](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)（如何更改 WSUS 在本地存储更新的位置）。  

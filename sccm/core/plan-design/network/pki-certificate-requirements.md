@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0982c2096d835bc46d92ef473f5e9878657b22b2
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: cb6b3c800a3083caa3e053e920afc1367a311f67
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176955"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818146"
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 PKI 证书要求
 
@@ -43,12 +43,6 @@ ms.locfileid: "66176955"
 > 在大多数情况下，对 SHA-2 证书的更改不会影响操作。 有关详细信息，请参阅 [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)（Windows 针对 SHA1 证书的强制措施）。
 
  除了 System Center Configuration Manager 在移动设备和 Mac 计算机上注册的客户端证书、Microsoft Intune 为管理移动设备自动创建的证书以及 System Center Configuration Manager 在基于 AMT 的计算机上安装的证书以外，可以使用任何 PKI 来创建、部署和管理以下证书。 但是，当你使用 Active Directory 证书服务和证书模板时，可以使用此 Microsoft PKI 解决方案轻松地管理证书。 使用以下各表中的“要使用的 Microsoft 证书模板”  列来确定最符合证书要求的证书模板。 仅运行于服务器操作系统的企业版或数据中心版（例如 Windows Server 2008 Enterprise 和 Windows Server 2008 Datacenter）上的企业证书颁发机构可以使用基于模板的证书。  
-
-> [!IMPORTANT]
->  当使用企业证书颁发机构和证书模板时，请不要使用版本 3 模板。 这些证书模板会创建与 System Center Configuration Manager 不兼容的证书。 请按照下列说明改为使用版本 2 模板：  
-> 
-> - 对于 Windows Server 2012 上的 CA：在证书模板属性的“兼容性”选项卡上，为“证书颁发机构”选项指定“Windows Server 2003”，并为“证书接收者”选项指定“Windows XP/Server 2003”      。  
->   -   对于 Windows Server 2008 上的 CA：在复制证书模板时，请在“复制模板”对话框提示时保留默认选择的“Windows Server 2003 Enterprise”   。 不要选择“Windows Server 2008，Enterprise Edition”  。  
 
  使用下列部分来查看证书要求。  
 

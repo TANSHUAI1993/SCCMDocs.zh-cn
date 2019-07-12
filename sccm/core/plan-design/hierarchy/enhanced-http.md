@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25824b616bb833a715727033504776767b5aa958
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: 130cc8511b90da3e95c69f9239e57e2c7ac61d8c
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354817"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623348"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -51,7 +51,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 ### <a name="bkmk_scenario1"></a> 方案 1：客户端到管理点
 
 <!--1356889-->
-[已加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)能够与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。
+[已加入 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join)能够与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。
 
 > [!Note]  
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个已启用 HTTPS 的管理点，用于通过云管理网关进行通信的已加入 Azure AD 的客户端。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
@@ -66,7 +66,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 ### <a name="bkmk_scenario3"></a> 方案 3：Azure AD 设备标识
 
 <!--1358460-->
-没有 Azure AD 用户登录的已加入 Azure AD 的设备或[混合 Azure AD 设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可安全地与其分配的站点进行通信。 现在，对于以设备为中心的方案，基于云的设备标识足以通过 CMG 和管理点进行身份验证。 （以用户为中心的方案仍然需要用户令牌。）  
+没有 Azure AD 用户登录的已加入 Azure AD 的设备或[混合 Azure AD 设备](/azure/active-directory/devices/concept-azure-ad-join-hybrid)可安全地与其分配的站点进行通信。 现在，对于以设备为中心的方案，基于云的设备标识足以通过 CMG 和管理点进行身份验证。 （以用户为中心的方案仍然需要用户令牌。）  
 
 
 ## <a name="features"></a>功能

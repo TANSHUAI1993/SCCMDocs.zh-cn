@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4efea7baf7820c4edfb61882b14812336c85518
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 042ef488354ff1b527d41407d3ef590ee9fe0e45
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516169"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676306"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 适用范围：  System Center Configuration Manager (Current Branch)
@@ -36,11 +36,11 @@ ms.locfileid: "67516169"
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>当考虑将 Configuration Manager 基础结构转移到 Azure 时应考虑哪些方面？
 问得好，以下是做决定时应考虑的最重要的方面，本主题分别通过不同的部分对各方面进行了探讨：
-1.  网络
-2.  可用性
-3.  性能
-4.  成本
-5.  用户体验
+1. 网络
+2. 可用性
+3. 性能
+4. 成本
+5. 用户体验
 
 ## <a name="networking"></a>网络
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>有些什么网络要求？应使用 ExpressRoute 还是 Azure VPN 网关？

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec448f0d2752cda2509b6daa0302ff521044bef4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e60ce54c5f792f7ea9c7a6c6d05b32c79c1e9b8d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493766"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678795"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>使用 Updates Publisher 创建软件更新和更新捆绑包
 
@@ -61,7 +61,7 @@ ms.locfileid: "65493766"
 
    - 说明  ：此更新的易懂说明。 可以添加更新安装内容以及应使用此更新的原因和时间。
 
-     分类  ：以下是不同分类的常见描述。
+   分类  ：以下是不同分类的常见描述。
 
    - 更新  ：当前安装的应用程序或文件的更新。
 
@@ -77,30 +77,30 @@ ms.locfileid: "65493766"
 
    - 工具  ：指定有助于完成一项或多项任务的工具或功能。
 
-     -   驱动程序  ：驱动程序软件更新。
+   - 驱动程序  ：驱动程序软件更新。
 
     供应商：指定此更新的供应商。 可以使用下拉列表使用存储库中更新的值。 指定供应商时，向导会在“更新工作区”  中的“所有软件更新”  下创建与相应供应商同名的文件夹（如果文件夹尚不存在的话）。 下面介绍了不能为创建的更新输入的 Windows Server Update Services (WSUS) 保留名称：
-   >*   Microsoft Corporation
-   >*   Microsoft
-   >*   更新
-   >*   软件更新
-   >*   工具
-   >*   工具
-   >*   严重
-   >*   关键更新
-   >*   安全
-   >*   安全更新
-   >*   功能包
-   >*   更新汇总
-   >*   Service Pack
-   >*   驱动程序
-   >*   驱动程序更新
-   >*   捆绑包
-   >*   捆绑更新
+   - Microsoft Corporation
+   - Microsoft
+   - 更新
+   - 软件更新
+   - 工具
+   - 工具
+   - 严重
+   - 关键更新
+   - 安全
+   - 安全更新
+   - 功能包
+   - 更新汇总
+   - Service Pack
+   - 驱动程序
+   - 驱动程序更新
+   - 捆绑包
+   - 捆绑更新
 
-产品  ：指定此更新适用的产品类型。 可以使用下拉列表使用存储库中更新的值。 不能用于“供应商”  的同一 WSUS 保留名称列表也不能用于“产品”  。
+   产品  ：指定此更新适用的产品类型。 可以使用下拉列表使用存储库中更新的值。 不能用于“供应商”  的同一 WSUS 保留名称列表也不能用于“产品”  。
 
- 更多信息 URL  ：指定详细介绍此更新的 URL。 输入此 URL 时，必须使用小写字母的 **https** 或 **http**。
+   更多信息 URL  ：指定详细介绍此更新的 URL。 输入此 URL 时，必须使用小写字母的 **https** 或 **http**。
 
 4. 在“可选信息”  页中，可以配置此更新的其他详细信息。
 

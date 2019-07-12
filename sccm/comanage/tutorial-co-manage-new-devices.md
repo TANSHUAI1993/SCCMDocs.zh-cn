@@ -12,17 +12,17 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 94513445c8d1849f0304b304b7dd8672c1e50978
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 696c952484b53c186b6f1d4f8e5b711262ded5a8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158310"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678011"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>教程：为基于 Internet 的新设备启用共同管理
 通过共同管理，可以保持完善的流程，以便使用 Configuration Manager 管理组织中的电脑。 同时，通过使用 Intune 在云上投入，实现安全性和新式预配。 
 
-在本教程中，你将在使用 Azure Active Directory (AD) 和本地 AD，但不使用[混合 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD) 的环境中设置 Windows 10 设备的共同管理。 Configuration Manager 环境包括一个主站点，其中所有站点系统角色都位于同一服务器（站点服务器）上。 学习本教程的前提是你的 Windows 10 设备已在 Intune 中注册。 
+在本教程中，你将在使用 Azure Active Directory (AD) 和本地 AD，但不使用[混合 Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD) 的环境中设置 Windows 10 设备的共同管理。 Configuration Manager 环境包括一个主站点，其中所有站点系统角色都位于同一服务器（站点服务器）上。 学习本教程的前提是你的 Windows 10 设备已在 Intune 中注册。 
 
 如果具有联接本地 AD 与 Azure AD 的混合 Azure AD，建议学习我们的配套教程：[为 Configuration Manager 客户端启用共同管理](/sccm/comanage/tutorial-co-manage-clients)。 
  
@@ -154,7 +154,7 @@ CMG 服务器身份验证证书用于加密 Configuration Manager 客户端与 C
 
 6. 在“证书存储”页上，选择“根据证书类型自动选择证书存储”，然后选择“下一步”    。  
 
-7.  选择“完成”  。
+7. 选择“完成”  。
 
 ### <a name="export-the-certificate"></a>导出证书
 从服务器导出 CMG 服务器身份验证证书  。 重新导出证书后，证书就可在 Azure 中用于云管理网关了。  
@@ -399,8 +399,10 @@ Azure 配置、站点系统角色和客户端设置配置就绪后，可以配�
    - **命令行参数**： *\<指定 CCMSETUPCMD 命令行  。可以使用从“共同管理配置向导”的“启用”页保存的命令行* *。此命令行包含云服务的名称以及使设备能够安装 Configuration Manager 客户端软件的其他值。>*  
 
      命令行结构应该类似于仅使用 CCMSETUPCMD 和 SMSSiteCode 参数的以下示例：  
- 
-         CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+
+     ```
+     CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+     ```
 
      > [!TIP]  
      > 如果没有可用的命令行，可以在 Configuration Manager 控制台中查看 CoMgmtSettingsProd 的属性以获取命令行的副本  。    

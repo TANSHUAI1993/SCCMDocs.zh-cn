@@ -12,18 +12,18 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8383b654182ba57b52a53755595413b18d1cd4e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 69bec7c52d826d76502e52d0d5ddbc1d0cf9c3ef
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121703"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677196"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1606 的诊断使用情况数据收集的级别
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-System Center Configuration Manager 版本 1606 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
+System Center Configuration Manager 版本 1606 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”    。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
 针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 
@@ -34,7 +34,7 @@ System Center Configuration Manager 版本 1606 收集三个级别的诊断和�
 ##  <a name="bkmk_change"></a> 如何更改级别
  如果管理员具有基于角色的管理作用域，其中包括对**站点**对象类的**修改**权限，则其可以通过 Configuration Manager 控制台中的“诊断和使用数据”设置更改已收集数据的级别。
 
-   要执行此操作，请在控制台中，转到“后台”选项卡（左上角带下拉箭头的选项卡），选择“使用情况数据”，然后选择要使用的数据级别。  
+   要执行此操作，请在控制台中，转到“后台”选项卡（左上角带下拉箭头的选项卡），选择“使用情况数据”  ，然后选择要使用的数据级别。  
 
 ##  <a name="bkmk_level1"></a> 级别 1 - 基本
  基本级别包括层次结构相关数据、帮助改进安装或升级体验所需的数据，以及帮助确定哪些 Configuration Manager 更新适合你的层次结构的数据。
@@ -42,10 +42,10 @@ System Center Configuration Manager 版本 1606 收集三个级别的诊断和�
  从 System Center Configuration Manager 版本 1606 开始，此级别包括以下内容：
 
 
- -   安装程序信息：
+-   安装程序信息：
       - 内部版本、安装类型、语言包、启用的功能  
 
-      -   更新包部署状态和错误、下载进度和先决条件错误  
+      -   更新包部署状态和错误、下载进度和先决条件错误 
 
       -  升级后脚本的版本
 
@@ -86,7 +86,7 @@ System Center Configuration Manager 版本 1606 收集三个级别的诊断和�
 -  网络发现的使用（启用或禁用）
 -  管理控制台：
 
-     -  有关控制台连接的统计信息（操作系统版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包）    
+    -  有关控制台连接的统计信息（操作系统版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包）    
 
 
 - ***[新增]*** SQL 版本、服务包级别、版本、排序规则 ID 和字符集

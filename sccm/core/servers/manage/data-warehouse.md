@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7672af696844cfa8afbbe54b1260d8f4c78437a8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501135"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676506"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 <!--1277922-->
 使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
@@ -57,9 +57,9 @@ ms.locfileid: "65501135"
 
     - 对托管数据仓库数据库的计算机具有**管理员**权限。  
 
-    - 对数据仓库数据库具有 DB_Creator 权限。  
+    - 对数据仓库数据库具有 DB_Creator  权限。  
 
-    - 对顶层站点的数据库具有 DB_owner 或带 execute 的 DB_reader 权限。  
+    - 对顶层站点的数据库具有 DB_owner 或带 execute 的 DB_reader 权限    。  
 
 - 数据仓库数据库需要使用 SQL Server 2012 或更高版本。 版本可以是 Standard、Enterprise 或 Datacenter。 数据仓库的 SQL Server 版本不需要与站点数据库服务器相同。<!--SCCMDocs issue 662-->  
 
@@ -83,7 +83,7 @@ ms.locfileid: "65501135"
 
 在顶层站点的任何站点系统上，每个层次结构都支持此角色的单个实例。 相对于站点系统角色而言，托管仓库数据库的 SQL Server 可以是本地的，也可以是远程的。 数据仓库适用于安装在同一站点的 Reporting Services 点。 不需要在同一台服务器上安装两个站点系统角色。   
 
-若要安装该角色，请使用“添加站点系统角色向导”或“创建站点系统服务器向导”。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 在向导的“系统角色选择”页上，选择“数据仓库服务点”角色。 
+若要安装该角色，请使用“添加站点系统角色向导”  或“创建站点系统服务器向导”  。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 在向导的“系统角色选择”页上，选择“数据仓库服务点”角色   。 
 
 安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称，Configuration Manager 将不会创建新数据库。 而会使用你指定的数据库。 此过程与[将数据仓库数据库移动到新 SQL Server](#move-the-database) 时的过程相同。
 
@@ -94,17 +94,17 @@ ms.locfileid: "65501135"
 
 - **SQL Server 完全限定的域名**：指定托管数据仓库服务点和数据库的服务器的完全限定的域名 (FQDN)。  
 
-- **SQL Server 实例名称(如果适用)**：如果不使用 SQL Server 的默认实例，则指定该命名实例。  
+- **SQL Server 实例名称(如果适用)** ：如果不使用 SQL Server 的默认实例，则指定该命名实例。  
 
 - **数据库名称**：指定数据仓库数据库的名称。 Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。  
 
-- **用于连接的 SQL Server 端口**：指定托管数据仓库数据库的 SQL Server 使用的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。 默认情况下，它使用 SQL Server 端口 1433 进行通信。  
+- **用于连接的 SQL Server 端口**：指定托管数据仓库数据库的 SQL Server 使用的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。 默认情况下，它使用 SQL Server 端口 1433 进行通信  。  
 
-- **数据仓库服务点帐户**：从版本 1802 开始，设置 SQL Server Reporting Services 连接到数据仓库数据库时使用的用户名。  
+- **数据仓库服务点帐户**：从版本 1802 开始，设置 SQL Server Reporting Services 连接到数据仓库数据库时使用的用户名  。  
 
 
 #### <a name="synchronization-schedule-page"></a>同步计划页
-适用于版本 1806 及更早版本
+适用于版本 1806 及更早版本 
 
 - **开始时间**：指定想要数据仓库开始同步的时间。  
 
@@ -116,9 +116,9 @@ ms.locfileid: "65501135"
 
 
 #### <a name="synchronization-settings-page"></a>同步设置页
-适用于 1810 和更高版本
+适用于 1810 和更高版本 
 
-- **数据同步自定义设置**：选择“选择表”选项。 在“数据库表”窗口中，选择要与数据仓库数据库同步的表名。 使用筛选器按名称搜索，或选择下拉列表以选择特定组。 完成后选择“确定”进行保存。  
+- **数据同步自定义设置**：选择“选择表”选项  。 在“数据库表”窗口中，选择要与数据仓库数据库同步的表名。 使用筛选器按名称搜索，或选择下拉列表以选择特定组。 完成后选择“确定”进行保存  。  
 
     > [!Note]  
     > 无法删除该角色默认选择的表。  
@@ -140,9 +140,9 @@ ms.locfileid: "65501135"
 > [!WARNING]  
 > 自版本 1802 起，数据仓库点支持备用凭据。<!--507334--> 如果从先前版本的 Configuration Manager 升级，则需指定 SQL Server Reporting Services 用于连接到数据仓库数据库的凭据。 在添加凭据之前，数据仓库报告不会打开。 
 > 
-> 要指定一个帐户，请在角色属性中为数据仓库服务点帐户设置用户名。 有关详细信息，请参阅[配置属性](#configure-properties)。 
+> 要指定一个帐户，请在角色属性中为数据仓库服务点帐户设置用户名  。 有关详细信息，请参阅[配置属性](#configure-properties)。 
 
-数据仓库站点系统角色包括数据仓库类别下的以下报告：  
+数据仓库站点系统角色包括数据仓库类别下的以下报告：   
 
 - **应用程序部署 -历史记录**：查看有关特定应用程序和计算机的应用程序部署的详细信息。  
 
@@ -154,7 +154,7 @@ ms.locfileid: "65501135"
 
 - **基础结构运行状况概述 - 历史记录**：显示 Configuration Manager 基础结构运行状况概述。  
 
-- **检测到的恶意软件列表 - 历史记录**：  查看组织中检测到的恶意软件。  
+- **检测到的恶意软件列表 - 历史记录**：查看组织中检测到的恶意软件。  
 
 - **软件分发摘要 - 历史记录**：特定播发和计算机的软件分发摘要。  
 
@@ -191,7 +191,7 @@ ms.locfileid: "65501135"
 
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
 
-- DWSSMSI.log 和 DWSSSetup.log：使用这些日志调查安装数据仓库服务点时的错误。  
+- DWSSMSI.log 和 DWSSSetup.log   ：使用这些日志调查安装数据仓库服务点时的错误。  
 
 - **Microsoft.ConfigMgrDataWarehouse.log**：使用此日志调查站点数据库和数据仓库数据库之间的数据同步。  
 
@@ -206,10 +206,10 @@ ms.locfileid: "65501135"
 
 ### <a name="synchronization-failed-to-populate-schema-objects"></a>同步无法填充架构对象 
 
-同步失败，同时 Microsoft.ConfigMgrDataWarehouse.log 中出现以下消息：`failed to populate schema objects`
+同步失败，同时 Microsoft.ConfigMgrDataWarehouse.log 中出现以下消息：`failed to populate schema objects` 
 
 #### <a name="workaround"></a>解决方法 
-请确保站点系统角色的计算机帐户是数据仓库数据库上的 db_owner。
+请确保站点系统角色的计算机帐户是数据仓库数据库上的 db_owner  。
 
 
 ### <a name="reports-fail-to-open"></a>报表打开失败
@@ -235,15 +235,15 @@ A connection was successfully established with the server, but then an error occ
 
 1. 在托管数据仓库数据库的计算机上：  
 
-    1. 打开 IIS，选择“服务器证书”，然后右键单击“创建自签名证书”。 然后将证书名称的“友好名称”指定为数据仓库 SQL Server 标识证书。 将证书存储选为“个人”。  
+    1. 打开 IIS，选择“服务器证书”，然后右键单击“创建自签名证书”   。 然后将证书名称的“友好名称”指定为数据仓库 SQL Server 标识证书  。 将证书存储选为“个人”  。  
 
-    2. 打开“SQL Server 配置管理器” 。 在“SQL Server 网络置配”下，右键单击选择“MSSQLSERVER 协议”下的“属性”。 在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改。  
+    2. 打开“SQL Server 配置管理器”  。 在“SQL Server 网络置配”下，右键单击选择“MSSQLSERVER 协议”下的“属性”    。 在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改   。  
 
-    3. 在“SQL Server 配置管理器”中的“SQL Server 服务”下，重启“SQL Server 服务”。 如果承载数据仓库数据库的服务器上还安装了 SQL Reporting Services，请同样重启“Reporting Services”服务。  
+    3. 在“SQL Server 配置管理器”中的“SQL Server 服务”下，重启“SQL Server 服务”    。 如果承载数据仓库数据库的服务器上还安装了 SQL Reporting Services，请同样重启“Reporting Services”  服务。  
 
-    4. 打开 Microsoft 管理控制台 (MMC)，然后添加“证书”管理单元。 选择本地计算机的“计算机帐户”。 展开“个人”文件夹，然后选择“证书”。 将“数据仓库 SQL Server 标识证书”导出为 DER 编码的二进制 X.509 (.CER) 文件。  
+    4. 打开 Microsoft 管理控制台 (MMC)，然后添加“证书”管理单元  。 选择本地计算机的“计算机帐户”  。 展开“个人”文件夹，然后选择“证书”   。 将“数据仓库 SQL Server 标识证书”导出为 DER 编码的二进制 X.509 (.CER) 文件   。  
 
-2. 在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加证书的管理单元。 选择“计算机帐户”。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。  
+2. 在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加证书的管理单元  。 选择“计算机帐户”  。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。  
 
 
 
@@ -266,4 +266,4 @@ A connection was successfully established with the server, but then an error occ
 |--------|----------|  
 | **A**  | 通过使用内置报表，用户可提出数据请求。 该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
 | **B**  | 大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
-| **C**  | 报表通过使用“类别”为“数据仓库”的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。 |  
+| **C**  | 报表通过使用“类别”为“数据仓库”的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求   。 |  

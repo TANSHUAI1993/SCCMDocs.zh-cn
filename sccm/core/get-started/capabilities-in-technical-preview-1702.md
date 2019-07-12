@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: ee32d282bc04e6c1f97b12dedb8d69ccdcca8915
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551238"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677545"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
@@ -72,10 +72,10 @@ ms.locfileid: "67551238"
 
 ### <a name="set-up-configuration-manager-to-use-azure-ad"></a>设置 Configuration Manager 以便使用 Azure AD
 若要将 Azure AD 与 Configuration Manager 配合使用，将需要以下项：
--   Azure 订阅。
--   包含域服务 (DS) 的 Azure AD。
--   在加入到 Azure AD 的 Azure VM 上运行的 Configuration Manager 站点。
--   在同一 Azure AD 环境中运行的 Configuration Manager 客户端。
+- Azure 订阅。
+- 包含域服务 (DS) 的 Azure AD。
+- 在加入到 Azure AD 的 Azure VM 上运行的 Configuration Manager 站点。
+- 在同一 Azure AD 环境中运行的 Configuration Manager 客户端。
 
 若要配置 Azure AD 域服务，请参阅 [Azure AD 域服务入门](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
 
@@ -212,9 +212,9 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ### <a name="try-it-out"></a>试试看。
 
-1.  在 Configuration Manager 部署类型的属性中，选择“安装行为”  选项卡。
-2.  选择“添加”  可添加要查看的一个或多个可执行文件名称。 还可以添加显示名称，以便用户轻松识别列表中的应用程序。
-3.  如果部署是必需的，在部署软件向导中，可以选择自动关闭在“部署类型属性”对话框的“安装行为”选项卡中指定的任何运行中的可执行文件  。
+1. 在 Configuration Manager 部署类型的属性中，选择“安装行为”  选项卡。
+2. 选择“添加”  可添加要查看的一个或多个可执行文件名称。 还可以添加显示名称，以便用户轻松识别列表中的应用程序。
+3. 如果部署是必需的，在部署软件向导中，可以选择自动关闭在“部署类型属性”对话框的“安装行为”选项卡中指定的任何运行中的可执行文件  。
 
 如果应用程序已部署为“可用”  ，最终用户尝试安装应用程序时，系统会提示其先关闭指定的任何运行中的可执行文件，然后才能继续安装。
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: a88052e0d799b324ddbed6acbdf0b25a97f4d80c
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286166"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677363"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1709 中的功能
 
@@ -63,8 +63,8 @@ ms.locfileid: "67286166"
 
 使用常用流程创建新的 VPN。 请注意，VPN 配置文件向导选项的首页已更改。
 
-1.  请转到“资产和符合性” > “概述” > “符合性设置” > “公司资源访问权限” > “VPN 配置文件”，然后选择“创建 VPN 配置文件”       。
-2.  在“常规”页中输入名称，然后选择“指定要创建的 VPN 配置文件类型”下的以下选项之一   ：
+1. 请转到“资产和符合性” > “概述” > “符合性设置” > “公司资源访问权限” > “VPN 配置文件”，然后选择“创建 VPN 配置文件”       。
+2. 在“常规”页中输入名称，然后选择“指定要创建的 VPN 配置文件类型”下的以下选项之一   ：
 
     - Windows 10  
     - Windows 8.1  
@@ -73,8 +73,8 @@ ms.locfileid: "67286166"
     - Android  
     - Android for Work  
 
-3.  如果选择“Windows 8.1”，则也可选择“创建新的配置文件”或“从文件导入”    。
-4.  完成向导，结束配置文件创建。
+3. 如果选择“Windows 8.1”，则也可选择“创建新的配置文件”或“从文件导入”    。
+4. 完成向导，结束配置文件创建。
 
 请注意，选择不同的平台时，只显示与选定平台相关的设置。
 

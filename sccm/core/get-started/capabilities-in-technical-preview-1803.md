@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad04b54d3284abc210da273458077889f45735f3
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: a8f03013a7f040d9c0dacac3ac8d94bcaa37dd62
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286064"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677274"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1803 中的功能
 

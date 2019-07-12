@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3560284733ccad6a9a3676a46f755106596ad03
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 34fca23c43b34d905e6ecea210c0ba7487feeea2
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551199"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677539"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
@@ -49,11 +49,11 @@ ms.locfileid: "67551199"
 
 | 步骤         | 详细信息  |
 |:------:|-----------|  
-| **1**  |  站点服务器传输和存储站点数据库中的数据。  |  
-| **2** |   根据其计划和配置，数据仓库服务点可从站点数据库获取数据。  |  
-| **3** |  数据仓库服务点可传输和储存数据仓库数据库中的一份已同步数据的副本。 |  
-| **A** |  通过使用内置报表，可提出数据请求，该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
-| **B** |   大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
+| **1** | 站点服务器传输和存储站点数据库中的数据。  |  
+| **2** | 根据其计划和配置，数据仓库服务点可从站点数据库获取数据。  |  
+| **3** | 数据仓库服务点可传输和储存数据仓库数据库中的一份已同步数据的副本。 |  
+| **A** | 通过使用内置报表，可提出数据请求，该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
+| **B** | 大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
 | **C** | 报表通过使用类别  为**数据仓库**的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>数据仓库服务点和数据库的必备组件
@@ -106,7 +106,7 @@ ms.locfileid: "67551199"
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>安装和数据同步故障排除
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
 - **DWSSMSI.log** 和 **DWSSSetup.log** - 使用这些日志调查安装数据仓库服务点时的错误。
--   **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
+- **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 ### <a name="reporting"></a>报表
 安装数据仓库站点系统角色之后，可在 Reporting Services 点上找到以下报告，其类别  为**数据仓库**：
@@ -142,7 +142,7 @@ ms.locfileid: "67551199"
 
 可以查看以下 Configuration Manager 日志，确认是否已成功重新安装站点系统角色：  
 - **DWSSMSI.log** 和 **DWSSSetup.log** - 使用这些日志调查安装数据仓库服务点时的错误。
--   **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
+- **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 
 ## <a name="content-library-cleanup-tool"></a>内容库清理工具
@@ -207,23 +207,23 @@ ms.locfileid: "67551199"
 
 ## <a name="improvements-for-in-console-search"></a>控制台中搜索功能的改进
 根据 User Voice 反馈，我们对控制台中搜索功能作出以下改进：
- - **对象路径：**  
+- **对象路径：**  
   现在，很多对象都支持名为**对象路径**的新列。  当用户搜索并将此列包括在显示结果中时，可以查看每个对象的路径。 例如，如果在应用程序节点搜索应用，并且同时要搜索子节点，结果窗格中的对象路径  列将向用户显示每个返回对象的路径。   
 
 - **保留搜索文本：**  
   在搜索文本框中输入文本，然后在搜索子节点和搜索当前节点之间切换时，已键入的文本会保留，并且仍然可用于新搜索而无需重新键入。
 
 - **保留搜索子节点的决策：**  
- 现在，更改使用的节点时，会保留对搜索当前节点  或所有子节点  所选择的选项。   这一新特点意味着在控制台执行操作时无需不断重置决策。  默认情况下，打开控制台选项时，将仅搜索当前节点。
+  现在，更改使用的节点时，会保留对搜索当前节点  或所有子节点  所选择的选项。   这一新特点意味着在控制台执行操作时无需不断重置决策。  默认情况下，打开控制台选项时，将仅搜索当前节点。
 
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>如果指定的程序正在运行，则阻止安装应用程序。
 现在，用户可在部署类型属性配置一列可执行文件（扩展名为 .exe），如果该文件正在运行，则将阻止安装应用程序。 尝试安装后，用户将看到对话框，要求其关闭阻止安装的进程。
 
 ### <a name="try-it-out"></a>试试看
 配置一列可执行文件
-1.  在任何部署类型的属性页上，选择“安装程序处理”  选项卡。
-2.  单击“添加”  ，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
-3.  单击“确定”  以关闭部署类型属性对话框。
+1. 在任何部署类型的属性页上，选择“安装程序处理”  选项卡。
+2. 单击“添加”  ，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
+3. 单击“确定”  以关闭部署类型属性对话框。
 
 现在，向用户或设备部署此应用程序，但其中一个添加的可执行文件正在运行时，最终用户会看到“软件中心”对话框，告知用户由于某个应用程序正在运行而导致安装失败。
 
@@ -253,16 +253,16 @@ ms.locfileid: "67551199"
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>在服务器上启用 Windows 10 更新的快速安装文件下载
 若要开始同步 Windows 10 快速安装文件的元数据，则必须在软件更新点属性中将其启用。
-1.  在 Configuration Manager 控制台中，导航到“管理”   > “站点配置”   > “站点”  。
-2.  选择管理中心站点或独立主站点。
-3.  在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，再单击“软件更新点”  。 在“更新文件”  选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”  。
+1. 在 Configuration Manager 控制台中，导航到“管理”   > “站点配置”   > “站点”  。
+2. 选择管理中心站点或独立主站点。
+3. 在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，再单击“软件更新点”  。 在“更新文件”  选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”  。
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>启用客户端对下载并安装快速安装文件的支持
 若要在客户端上启用快速安装文件支持，则必须在客户端设置的软件更新分区中启用客户端上的快速安装文件。 这将创建新的 HTTP 侦听器，该侦听器会侦听在指定的端口下载快速安装文件的请求。 在客户端上部署客户端设置启用此功能后，会尝试下载当前月份的 Windows 10 累计更新和上一月份的更新之间的增量文件（客户端必须运行支持快速安装文件的 Windows 10 版本）。
-1.  在“软件更新点组件”属性中启用快速安装文件支持（上一过程）。
-2.  在 Configuration Manager 控制台中，导航到“管理”   > “客户端设置”  。
-3.  选择相应的客户端设置，然后在“主页”  选项卡上，单击“属性”  。
-4.  选择“软件更新”  页，将“在客户端上启用快速更新安装”  设置配置为“是”  ，并将“下载快速更新内容所用端口”  设置配置为客户端上 HTTP 侦听器所使用的端口。
+1. 在“软件更新点组件”属性中启用快速安装文件支持（上一过程）。
+2. 在 Configuration Manager 控制台中，导航到“管理”   > “客户端设置”  。
+3. 选择相应的客户端设置，然后在“主页”  选项卡上，单击“属性”  。
+4. 选择“软件更新”  页，将“在客户端上启用快速更新安装”  设置配置为“是”  ，并将“下载快速更新内容所用端口”  设置配置为客户端上 HTTP 侦听器所使用的端口。
 
 
 ## <a name="odata-endpoint-data-access"></a>OData 终结点数据访问

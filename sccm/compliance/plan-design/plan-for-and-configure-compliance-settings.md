@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49f7d898e5cb744771694ce49adb52457fb25e01
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2d728dae6dc67a4c66403bdb2299e50dcd6e3557
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156417"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677946"
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划和配置符合性设置
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在开始使用 System Center Configuration Manager 符合性设置之前，需要了解几个先决条件，并且需要执行一些配置任务。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "56156417"
 |------------------|----------------------|  
 |必须启用 Windows Configuration Manager 客户端并配置符合性评估。|请参阅下文|  
 |如果你想要运行报表，就必须为站点配置报告。|[System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)|  
-|所需的安全权限。|“符合性设置管理员”安全角色包括管理符合性设置、用户数据和配置文件配置项目和远程连接配置文件必需的权限。<br /><br /> [配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
+|所需的安全权限。|“符合性设置管理员”  安全角色包括管理符合性设置、用户数据和配置文件配置项目和远程连接配置文件必需的权限。<br /><br /> [配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
 
 ##  <a name="enable-and-configure-compliance-settings-for-windows-pcs-only"></a>启用并配置符合性设置（仅适用于 Windows 电脑）  
 
@@ -39,12 +39,12 @@ ms.locfileid: "56156417"
 > [!TIP]  
 >  其他设备类型不需要任何特定的配置以评估符合性设置。  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “客户端设置” > “默认设置”。  
-2.  在“主页”选项卡上的“属性”组中，单击“属性”。  
-3.  在“默认设置”  对话框中，单击“符合性设置” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”   > “客户端设置”   > “默认设置”  。  
+2.  在“主页”  选项卡上的“属性”  组中，单击“属性”  。  
+3.  在“默认设置”  对话框中，单击“符合性设置”  。  
 4.  为符合性设置配置下列客户端设置：
-    - **在客户端上启用符合性评估** - 如果要在客户端设备上评估符合性，则设置为“True”。
-    - **计划符合性评估** - 如果要修改客户端设备上的默认符合性评估计划，请单击“计划”。
+    - **在客户端上启用符合性评估** - 如果要在客户端设备上评估符合性，则设置为“True”  。
+    - **计划符合性评估** - 如果要修改客户端设备上的默认符合性评估计划，请单击“计划”  。
     - **启用用户数据和配置文件** - 如果要向 Windows 计算机创建并部署用户数据和配置文件配置项目，则启用此选项。 有关详细信息，请参阅[创建用户数据和配置文件配置项目](/sccm/compliance/deploy-use/create-remote-connection-profiles)。
 5. 单击“确定”  来关闭“默认设置”  对话框。  
 

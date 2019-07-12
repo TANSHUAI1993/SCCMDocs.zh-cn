@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 050122d6a1b799a30bd2c5a83ab261e92aaafabe
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285779"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677206"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
@@ -59,8 +59,8 @@ Version 1706 drops support for the following products:
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进
 <!-- 1352094 -->
 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。 这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
-  -   Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
-  -   此版本不支持故障转移后使用异步提交副本作为站点数据库。
+  - Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
+  - 此版本不支持故障转移后使用异步提交副本作为站点数据库。
 有关详细信息，请参阅[准备使用 Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 ### <a name="update-reset-tool"></a>更新重置工具
@@ -118,25 +118,25 @@ Version 1706 drops support for the following products:
 在此版本中，我们添加了适用于使用 Intune 注册的或由 Configuration Manager 本地管理的 Windows 10 设备的新配置项目设置。 这些设置包括：
 
 - **密码**
-    - 设备加密
+  - 设备加密
 - **设备**
-    - 区域设置修改（仅限桌面设备）
-    - 电源和睡眠设置修改
-    - 语言设置修改
-    - 系统时间修改
-    - 设备名称修改
+  - 区域设置修改（仅限桌面设备）
+  - 电源和睡眠设置修改
+  - 语言设置修改
+  - 系统时间修改
+  - 设备名称修改
 - **应用商店**
-    - 自动更新来自应用商店的应用
-    - 仅使用专用应用商店
-    - 启动来自应用商店的应用
+  - 自动更新来自应用商店的应用
+  - 仅使用专用应用商店
+  - 启动来自应用商店的应用
 - **Microsoft Edge**
-    - 阻止访问 about:flags
-    - SmartScreen 提示重写
-    - 文件的 SmartScreen 提示重写
-    - WebRTC localhost IP 地址
-    - 默认搜索引擎
-    - OpenSearch XML URL
-    - 主页（仅限桌面设备）
+  - 阻止访问 about:flags
+  - SmartScreen 提示重写
+  - 文件的 SmartScreen 提示重写
+  - WebRTC localhost IP 地址
+  - 默认搜索引擎
+  - OpenSearch XML URL
+  - 主页（仅限桌面设备）
 
 有关所有 Windows 10 设置的详细信息，请参阅[如何为没使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)。
 

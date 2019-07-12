@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: eae027f2f21c8c69e538c5fdfc429f5215bd6436
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193953"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676159"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -89,7 +89,7 @@ LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功
 
 
 ### <a name="features-of-the-ltsb"></a>LTSB 的功能
--   接收提供关键安全修补程序的控制台中更新。
+- 接收提供关键安全修补程序的控制台中更新。
 - SA 协议或 Configuration Manager 的等效权限过期后，提供安装选项。
 - 如果当前具有 SA 协议或 Configuration Manager 等效权限，支持升级（转换）到 Current Branch。
 
@@ -101,14 +101,14 @@ LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
 - 不接收新功能更新
 - 不支持以下功能： 
    - 添加 Microsoft Intune 订阅将阻止使用：
-     -  混合 MDM 配置中的 Intune
+     - 混合 MDM 配置中的 Intune
      - 本地 MDM
-   -    Windows 10 维护服务仪表板、维护服务计划或 Windows 10 半年频道
+   - Windows 10 维护服务仪表板、维护服务计划或 Windows 10 半年频道
    - Windows 10 LTSB 和 Windows Server 的未来版本
-   -    资产智能
-   -    基于云的分发点
-   -    作为 Exchange Connector 的 Exchange Online
-   -    任何预发行功能
+   - 资产智能
+   - 基于云的分发点
+   - 作为 Exchange Connector 的 Exchange Online
+   - 任何预发行功能
 
 
 ### <a name="update-options"></a>更新选项
@@ -119,7 +119,7 @@ LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
   - [System Center Configuration Manager 的许可和分支](learn-more-editions.md)
   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - 无法将 LTSB 转换为 Technical Preview Branch。 Technical Preview Branch 是单独安装，不需要许可证。
--   不可将 Current Branch 的评估版升级到 LTSB 安装。
+- 不可将 Current Branch 的评估版升级到 LTSB 安装。
 
 
 
@@ -150,8 +150,8 @@ Technical Preview Branch 适用于实验室环境。 了解并试用正在为 Co
 
 
 ### <a name="update-options"></a>更新选项
--   对于新的 Technical Preview Branch 版本，可以安装任何控制台中更新。
--   无法将 Technical Preview Branch 转换为 Current Branch 或 LTSB。
+- 对于新的 Technical Preview Branch 版本，可以安装任何控制台中更新。
+- 无法将 Technical Preview Branch 转换为 Current Branch 或 LTSB。
 
 
 

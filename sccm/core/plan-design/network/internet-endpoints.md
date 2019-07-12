@@ -11,12 +11,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ab7816e017d48b937a634b5031ba80e7dbfa093
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: f5ed06951fab313a4a1453864ffefb963cc4d8e9
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286951"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623268"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -120,7 +120,7 @@ ms.locfileid: "67286951"
 
 - 1902 版及更高版本：Microsoft Graph 终结点 `https://graph.microsoft.com/`
 
-云管理点 (CMG) 连接点站点系统支持使用 Web 代理。 有关配置代理的此角色的详细信息，请参阅[代理服务器支持](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server)。 CMG 连接点仅需要连接到 CMG 服务终结点。 它不需要访问其他 Azure 终结点。
+云管理点 (CMG) 连接点站点系统支持使用 Web 代理。 有关配置代理的此角色的详细信息，请参阅[代理服务器支持](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 CMG 连接点仅需要连接到 CMG 服务终结点。 它不需要访问其他 Azure 终结点。
 
 有关 CMG 的详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。
 

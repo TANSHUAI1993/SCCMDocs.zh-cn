@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d7acf1d5c73c59f2ce1e6d2b7f3f7354e21979
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 1e6ef01d38b9359bbb82449ad045312e58646475
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251889"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676702"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -107,11 +107,11 @@ ms.locfileid: "67251889"
 
 ## <a name="start-the-azure-services-wizard"></a>开始使用 Azure 服务向导
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。  
 
-2.  在功能区的“主页”选项卡上的“Azure 服务”组中，选择“配置 Azure 服务”    。  
+2. 在功能区的“主页”选项卡上的“Azure 服务”组中，选择“配置 Azure 服务”    。  
 
-3.  在 Azure 服务向导的“Azure 服务”页上进行以下操作  ：  
+3. 在 Azure 服务向导的“Azure 服务”页上进行以下操作  ：  
 
     1. 指定 Configuration Manager 中的对象名称  。  
 
@@ -180,7 +180,7 @@ ms.locfileid: "67251889"
 
 
 ### <a name="native-client-app"></a>本机客户端应用
-    
+
 此应用为“本机”类型的 Azure AD 应用（在 Configuration Manager 中中也被称为服客户端应用）  。
 
 #### <a name="client-app-dialog"></a>客户端应用对话框
@@ -261,11 +261,11 @@ ms.locfileid: "67251889"
 
 ![Configuration Manager 与 Azure AD 和云管理的数据流关系图](media/aad-auth.png)
 
-1.  Configuration Manager 管理员在 Azure AD 中导入或创建客户端应用和服务器应用。  
+1. Configuration Manager 管理员在 Azure AD 中导入或创建客户端应用和服务器应用。  
 
-2.  Configuration Manager Azure AD 用户发现方法运行。 站点使用 Azure AD 服务器应用令牌以向 Microsoft Graph 查询用户对象。  
+2. Configuration Manager Azure AD 用户发现方法运行。 站点使用 Azure AD 服务器应用令牌以向 Microsoft Graph 查询用户对象。  
 
-3.  站点存储关于用户对象的数据。 有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。  
+3. 站点存储关于用户对象的数据。 有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。  
 
 4.  Configuration Manager 客户端请求 Azure AD 用户令牌。 客户端使用 Azure AD 客户端应用的应用程序 ID 发出声明，且将服务器应用作为受众。 有关详细信息，请参阅 [Azure AD 安全令牌中的声明](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens)。  
 

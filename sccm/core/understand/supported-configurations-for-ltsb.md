@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac26a9b161f869ec3f6410f9f6fb9e5edbc9f8f8
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 5499fae986dcd266e0b2a31d2619aa79146f8981
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194031"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676026"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
@@ -35,7 +35,7 @@ ms.locfileid: "67194031"
 **Windows：**
 - 仅支持用于 Windows 的质量和安全更新。
 - 不为 Windows 10 的 Current Branch (CB)、Current Branches for Business (CBB) 或 LTSB 添加任何支持。
--   不对 Windows Server 新的主版本提供支持。
+- 不对 Windows Server 新的主版本提供支持。
 
 **SQL Server：**
 - SQL Server 仅支持质量和安全更新或次要升级（如服务包）。

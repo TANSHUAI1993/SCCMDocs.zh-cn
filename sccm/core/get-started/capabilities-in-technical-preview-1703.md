@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc5ebcbec87edf52d7ca7d3f9e6f4341ec60c191
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 8f830100bd2d227df0206c40071711d9c7888f88
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67515829"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677475"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
@@ -58,12 +58,12 @@ Softwarecenter:SoftwareId= 应用程序标识符
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>如何获取应用程序的应用程序标识符。
 
-1.  在 Configuration Manager 控制台中，单击“软件库”  。
-2.  在“软件库”工作区中，展开“应用程序管理”  ，然后单击“应用程序”  。
-3.  在“应用程序”  视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”  。 此时列表中将显示每个应用程序的唯一 ID。
-4.  请注意要提供链接的应用程序的“CI 唯一 ID”，例如  ：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
-5.  然后，删除应用程序 GUID 后的所有文本，在本例中为 **/2**。 剩下的即为应用程序标识符。
-6.  最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=** 。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
+1. 在 Configuration Manager 控制台中，单击“软件库”  。
+2. 在“软件库”工作区中，展开“应用程序管理”  ，然后单击“应用程序”  。
+3. 在“应用程序”  视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”  。 此时列表中将显示每个应用程序的唯一 ID。
+4. 请注意要提供链接的应用程序的“CI 唯一 ID”，例如  ：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+5. 然后，删除应用程序 GUID 后的所有文本，在本例中为 **/2**。 剩下的即为应用程序标识符。
+6. 最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=** 。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
 
 通过使用此链接，最终用户可直接在指定的应用程序中打开软件中心。
 
@@ -83,17 +83,17 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 
 在 Technical Preview 1703 中，使用此向导仅可配置适用于企业的 Windows 应用商店 (WSfB)。  通过使用其单独的工作流配置其他云服务。
 
--   使用本预览主题中的信息替换 Current Branch 主题[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的[设置适用于企业的 Windows 应用商店同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)部分中的配置步骤。
+- 使用本预览主题中的信息替换 Current Branch 主题[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的[设置适用于企业的 Windows 应用商店同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)部分中的配置步骤。
 
--   有关 Web 应用的详细信息，请参阅 [Azure 应用服务中的身份验证和授权](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。
+- 有关 Web 应用的详细信息，请参阅 [Azure 应用服务中的身份验证和授权](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。
 
 ### <a name="prerequisites-and-planning"></a>先决条件和规划
 在 Configuration Manager和适用于企业的 Windows 应用商店之间设置连接时，必须提供保存从应用商店同步的应用内容的文件夹。 若要确保此文件夹是安全的且可将其内容部署到设备，请确保以下权限就位：
--   安装服务连接点站点系统角色（层次结构中的顶级站点）的计算机必须具有使用 **Computer$** 帐户时指定的文件夹的读取和写入权限。  
+- 安装服务连接点站点系统角色（层次结构中的顶级站点）的计算机必须具有使用 **Computer$** 帐户时指定的文件夹的读取和写入权限。  
 
--   应用作者必须具有所指定文件夹的读取权限。  
+- 应用作者必须具有所指定文件夹的读取权限。  
 
--   托管 SMS 提供程序实例的每台计算机的 **Computer$** 帐户必须能够使用所指定的文件夹。
+- 托管 SMS 提供程序实例的每台计算机的 **Computer$** 帐户必须能够使用所指定的文件夹。
 
 在 Azure Active Directory 中，将 Configuration Manager 注册为 Web 应用程序或 Web API 管理工具。 这会创建以后将需要的客户端 ID。
 

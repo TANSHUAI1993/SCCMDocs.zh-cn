@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf0b57ad1753d797b163b0016517cdad09459013
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 5e4585d21b06bbfaa659fe09693af8cff109a1b6
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251622"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676816"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -152,13 +152,13 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 当客户端需要内容时，它会向管理点发出内容位置请求。 管理点返回对所请求内容有效的源位置列表。 此列表因具体方案、使用的技术、站点设计、边界组和部署设置而异。 以下列表包含客户端可使用的所有可能的内容源位置，按其优先级排序：  
 
-1.  与客户端位于同一台计算机上的分发点
-2.  同一网络子网中的对等源
-3.  同一网络子网中的分发点
-4.  同一边界组中的对等源
-5.  当前边界组中的分发点
-6.  为回退配置的临近边界组中的分发点
-9.  默认站点边界组中的分发点 
+1. 与客户端位于同一台计算机上的分发点
+2. 同一网络子网中的对等源
+3. 同一网络子网中的分发点
+4. 同一边界组中的对等源
+5. 当前边界组中的分发点
+6. 为回退配置的临近边界组中的分发点
+9. 默认站点边界组中的分发点 
 10. Windows 更新云服务
 11. 面向 Internet 的分发点
 12. Azure 中的云分发点

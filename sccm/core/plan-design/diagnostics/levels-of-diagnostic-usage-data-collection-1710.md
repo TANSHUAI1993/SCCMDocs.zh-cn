@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6526d0cb6b6b84afcaa5faeef93cc230a335196f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 784bc115ef61880e4fd30635c60a9dad8be52a6d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136773"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676958"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的诊断使用情况数据收集的级别
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-System Center Configuration Manager 1710 版收集三个级别的诊断和使用数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
+System Center Configuration Manager 1710 版收集三个级别的诊断和使用数据：“基本”、“增强”和“完全”    。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
 针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 
@@ -35,7 +35,7 @@ System Center Configuration Manager 1710 版收集三个级别的诊断和使用
 ##  <a name="bkmk_change"></a> 如何更改级别
  如果管理员具有基于角色的管理作用域，其中包括对**站点**对象类的**修改**权限，则其可以通过 Configuration Manager 控制台中的“诊断和使用数据”设置更改已收集数据的级别。
 
-可在控制台中导航至“管理” > “概述” > “站点配置” > “站点”，更改数据集合级别。 打开“层次结构设置”，然后选择要使用的数据级别。  
+可在控制台中导航至“管理”   > “概述”   > “站点配置”   > “站点”  ，更改数据集合级别。 打开“层次结构设置”  ，然后选择要使用的数据级别。  
 
 
 
@@ -86,7 +86,7 @@ System Center Configuration Manager 1710 版收集三个级别的诊断和使用
 
      - 软件保障到期日期      
 
-     - 更新包部署状态和错误、下载进度和先决条件错误     
+     - 更新包部署状态和错误、下载进度和先决条件错误 
 
      - 更新快速通道的使用
 

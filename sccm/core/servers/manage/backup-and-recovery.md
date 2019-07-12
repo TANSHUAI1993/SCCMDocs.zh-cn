@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: bf20d24b8a1322f1d74c42c66f49fd8026ac075e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252242"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676611"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -93,7 +93,7 @@ ms.locfileid: "67252242"
     -   **站点服务器和 SQL Server 上的本地驱动器**：指定任务将站点的备份文件存储在站点服务器的本地驱动器上的指定路径中。 该任务将站点数据库的备份文件存储在站点数据库服务器的本地驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”  NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”  NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
     > [!NOTE]  
-    >   只有在指定了备份目标的网络路径时，用于浏览到备份目标的选项才可用。  
+    > 只有在指定了备份目标的网络路径时，用于浏览到备份目标的选项才可用。  
     >  
     > 用于备份目标的文件夹名称或共享名称不支持使用 Unicode 字符。  
 

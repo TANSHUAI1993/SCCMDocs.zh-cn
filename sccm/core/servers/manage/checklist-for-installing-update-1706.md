@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d458209c7e50ada6f308cd1b723cd8e9d630ee4
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: a1be4f6b9009df85fdb0a8286af08d204a696cd0
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252207"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676456"
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1706 的清单
 
@@ -172,6 +172,6 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 ## <a name="known-issues"></a>已知问题 
 更新到版本 1706 后，每次 SMS_Executive 启动时，SMS_CERTIFICATE_MANAGER 都会创建以下警告状态消息：
--    Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls. INSERT fails.
+-  Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls. INSERT fails.
 
 可忽略此消息。  在更新到版本 1706 之前，未配置以使用任何云服务时会发生这种情况。 此问题将在将来的版本中解决。

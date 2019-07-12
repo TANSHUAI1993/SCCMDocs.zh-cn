@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9346e95e3fa66e9f24d1bfc3711917c3d2146e5e
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: dcbe2f7b0e7b1d5905e1160d7302498a72116498
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551356"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678675"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager 中的 Windows Hello 企业版设置
 
@@ -72,7 +72,7 @@ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：
 
 -   在证书配置文件中，选择使用智能卡登录 EKU 的模板。  
 
--   如果想要在 Windows Hello 企业版密钥容器中存储证书配置文件，而证书配置文件使用智能卡登录 EKU，则必须配置以下密钥注册的权限，以确保证书验证正确  。
+- 如果想要在 Windows Hello 企业版密钥容器中存储证书配置文件，而证书配置文件使用智能卡登录 EKU，则必须配置以下密钥注册的权限，以确保证书验证正确  。
 必须首先创建了**密钥管理**组，并将所有 Configuration Manager 管理点计算机添加为此组的成员。
 
 一些配置可能不需要配置权限，或可能需要进一步配置。 请参阅下表，获取更多帮助：
@@ -87,15 +87,15 @@ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：
 
 ## <a name="to-configure-permissions"></a>配置权限的具体步骤
 
-1.  以域管理员身份或使用等效的凭据登录到域控制器或管理工作站。
-2.  打开“Active Directory 用户和计算机”  。
-3.  从导航窗格中，右键单击你的域名，然后单击“属性”  。
-4.  在 \<域名>  “属性”  对话框的“安全”  选项卡上，单击“高级”  。 如果未显示“安全”选项卡，则从“Active Directory 用户和计算机”的“视图”菜单中打开“高级功能”     。
-5.  单击“添加”  。
-6.  在 \<域名>  “权限条目”  对话框中，选择“选择主体”  。
-7.  在“选择用户、计算机、服务帐户或组”  对话框中，在“输入要选择的对象名称”  文本框中键入“密钥管理”  。 单击" **确定**"。
-8.  从“适用于”  列表中，选择“后代用户对象”  。
-9.  滚动到页面底部并单击“全部清除”  。
+1. 以域管理员身份或使用等效的凭据登录到域控制器或管理工作站。
+2. 打开“Active Directory 用户和计算机”  。
+3. 从导航窗格中，右键单击你的域名，然后单击“属性”  。
+4. 在 \<域名>  “属性”  对话框的“安全”  选项卡上，单击“高级”  。 如果未显示“安全”选项卡，则从“Active Directory 用户和计算机”的“视图”菜单中打开“高级功能”     。
+5. 单击“添加”  。
+6. 在 \<域名>  “权限条目”  对话框中，选择“选择主体”  。
+7. 在“选择用户、计算机、服务帐户或组”  对话框中，在“输入要选择的对象名称”  文本框中键入“密钥管理”  。 单击" **确定**"。
+8. 从“适用于”  列表中，选择“后代用户对象”  。
+9. 滚动到页面底部并单击“全部清除”  。
 10. 在“属性”  部分中，选择“读取 msDS-KeyCredentialLink”  。
 11. 单击“确定”  三次以完成任务。
 

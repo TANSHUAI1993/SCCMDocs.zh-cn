@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f6b445bb2e84cb7c3f35d81c66038686f2b9833
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: b7acec3488d016a309fe2f159d81087d28b795f7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715993"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677250"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划迁移作业策略
 
@@ -241,7 +241,7 @@ ms.locfileid: "66715993"
 ### <a name="specify-conflict-resolution-for-migrated-data"></a>为迁移的数据指定冲突解决方案  
  默认情况下，除非你将迁移作业配置为跳过或覆盖之前已迁移到目标数据库的数据，否则迁移作业不会覆盖目标数据库中的数据。  
 
-##  <a name="About_Collection_Migration "></a>规划集合迁移作业  
+##  <a name="About_Collection_Migration"></a>规划集合迁移作业  
  只有在从运行受支持的 Configuration Manager 2007 版本的源层次结构中迁移数据时，集合迁移作业才可用。 按集合迁移数据时，必须指定一个或多个要迁移的集合。 对于你指定的每个集合，迁移作业会自动选择要迁移的所有相关对象。 例如，你选择特定的用户集合，那么，之后会识别集合成员，而且你可以迁移与该集合关联的部署。 可以根据需要选择与这些成员关联的、要迁移的其他部署对象。 所有这些选定的项目都将添加到可以迁移的对象的列表中。  
 
  迁移集合时，System Center Configuration Manager 也会迁移集合设置（包括维护时段和集合变量），但无法迁移有关 AMT 客户端设置的集合设置。  

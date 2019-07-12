@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fba1d6793b2b285cc9874de316bb2c435a526e8
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: f88334a9c330d3af298ec63b3d7baa56c9714647
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252302"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676606"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -100,7 +100,7 @@ Configuration Manager 不会验证异步提交副本的状态来确认它是否�
 
 - “可读次要副本”  设置为“是”   
 
-- 已启用“手动故障转移”      
+- 已启用“手动故障转移”    
 
   > [!TIP]
   >  Configuration Manager 设置为“自动故障转移”  时，支持使用可用性组同步副本。 在以下情况下设置“手动故障转移”  ：
