@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的 Desktop 分析服务概述。
-ms.date: 06/07/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0daf2943b0859227d08069be9c9da69165d5d1a
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 45a8e71a3a8777686547ef4e3e05ef868b459792
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726224"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860877"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -70,6 +70,9 @@ ms.locfileid: "67726224"
 ### <a name="technical"></a>技术
 
 - 有效的 Azure 订阅，使用[全局管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)权限  
+
+    > [!Important]  
+    > 桌面分析当前提供作为 Office 365 服务，需要在 Azure AD 租户中的 Office 365 订阅。 这可能不是在将来的要求。
 
     - **工作区所有者**或**参与者**权**设置工作区**，和以下角色：  
 

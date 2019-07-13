@@ -2,7 +2,7 @@
 title: 桌面分析的疑难解答
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 06/28/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 246ee2c314df3d942d40d16ac9953580fed32803
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 9a1c170394e3db46572c424dcb04715713d4b24f
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551246"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860856"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析的疑难解答
 
@@ -74,7 +74,7 @@ ms.locfileid: "67551246"
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>创建并应用导入 Configuration Manager
 
-完成后[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)上桌面分析门户中，使用以下步骤来手动创建和导入应用程序为 Configuration Manager 如果无法从配置 Azure 服务创建此 Azure AD 应用向导。
+如果无法创建的 Azure AD 应用的配置管理器从配置 Azure 服务向导，或者如果你想要重用现有的应用，则需要手动创建，并将其导入。 完成后[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)上桌面分析门户中，使用以下步骤：
 
 #### <a name="create-app-in-azure-ad"></a>在 Azure AD 中创建应用
 
@@ -181,7 +181,7 @@ ms.locfileid: "67551246"
 
     - **选择**:**MALogAnalyticsReader**  
 
-4. 选择“保存”  。
+4. 选择**保存**。
 
 门户会显示一个通知它添加的角色分配的。
 

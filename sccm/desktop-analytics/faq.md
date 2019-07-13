@@ -2,7 +2,7 @@
 title: 桌面分析的常见问题
 titleSuffix: Configuration Manager
 description: Desktop 分析的常见问题。
-ms.date: 06/10/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9daf94a21b66fa0137e0a6bf041f10c87c64c34e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 663490349bcb61f243980c5e1a3fe1f5651d8573
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159082"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860839"
 ---
 # <a name="desktop-analytics-faq"></a>桌面 Analytics 常见问题解答
 
@@ -45,7 +45,6 @@ ms.locfileid: "67159082"
 
 即使您没有请求按需数据刷新后会自动每天更新的所有数据。 没有方法来触发按需刷新的诊断数据。 有关不同类型的桌面 Analytics 中的数据的详细信息，请参阅[的数据滞后时间](/sccm/desktop-analytics/troubleshooting#data-latency)。
 
-
 ## <a name="privacy"></a>隐私
 
 ### <a name="can-desktop-analytics-be-used-without-a-direct-client-connection-to-the-microsoft-data-management-service"></a>可以在客户端直接连接到 Microsoft 数据管理服务使用 Desktop 分析？
@@ -61,3 +60,9 @@ Microsoft 数据管理服务和分析 Azure 存储：否，这两个服务托管
 ### <a name="where-is-my-organizations-data-stored"></a>我的组织的数据存储在什么位置？
 
 从你的计算机的 Windows 诊断数据是加密、 发送和处理在 Microsoft 管理的安全数据中心位于美国。 我们的桌面分析相关数据的分析然后向你提供通过 Azure 门户中的桌面分析解决方案。 所有 Azure 区域都支持桌面分析。 选择国际化的 Azure 区域不会防止诊断数据发送到并处理在美国的 Microsoft 的安全数据中心。
+
+## <a name="other"></a>其他
+
+### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>可以为我的 Office 365 专业增强版升级使用 Desktop 分析？
+
+否，桌面分析重点放在 Windows。 Microsoft 与众多客户紧密合作开发桌面分析。 通过预览计划，客户反馈是有关桌面分析如何改进其更有信心地管理 Windows 部署能力。 它们还告诉我们，他们想[Office 365 专业增强版的准备情况](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)使用 Configuration Manager 和 Intune 中的 office 管理工具更紧密地集成在一起。 Microsoft 将继续在这些领域中进行的投资，同时将精力集中在 Windows 桌面 Analytics 中的方案。
