@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7404e97cd1ef9c68f80904b5ba26373605c7c751
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 024902baa4c8bb3b893b60feacad7993af8200e5
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285453"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623427"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -151,7 +151,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 活动软件更新点出现问题时，请将 Configuration Manager 客户端切换到新的软件更新点。 仅当客户端从管理点接收多个软件更新点时，才会发生此更改。
 
 > [!IMPORTANT]    
-> 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 在下一步在软件更新扫描周期期间，客户端切换到新的软件更新点。<!-- SCCMDocs#1537 -->
+> 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 客户端在下一个软件更新扫描周期中切换到新的软件更新点。<!-- SCCMDocs#1537 -->
 >
 > 在开始此更改之前，请检查边界组配置，确保软件更新点位于正确的边界组中。 有关详细信息，请参阅[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。  
 >
@@ -299,7 +299,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 在主站点服务器上添加软件更新点角色时，无法使用配置为副本的 WSUS 服务器。 将 WSUS 服务器配置为副本后，Configuration Manager 无法配置 WSUS 服务器，且 WSUS 同步失败。 在主站点中安装的第一个软件更新点为默认的软件更新点。 站点中的其他软件更新点被配置为默认软件更新点的副本。  
 
 ####  <a name="BKMK_WSUSandSSL"></a> 决定是否将 WSUS 配置为使用 SSL  
-使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。 有关详细信息，请参阅在 WSUS 文档中的[在 WSUS 服务器上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 一文。 
+使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。 有关详细信息，请参阅在 WSUS 文档中的[在 WSUS 服务器上配置 SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 一文。 
 
 在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项  。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。  
 
@@ -318,9 +318,9 @@ Configuration Manager 管理中心站点上的软件更新点与软件更新点�
 
 #### <a name="restrict-access-to-specific-domains"></a>限制对特定域的访问  
 
-如果你的组织将网络通信限制与 internet 使用防火墙或代理设备，你需要允许访问 internet 的终结点的活动软件更新点。 然后 WSUS 和自动更新可以与 Microsoft 更新云服务通信。
+如果组织使用防火墙或代理设备限制与 Internet 的网络通信，你必须允许活动软件更新点访问 Internet 终结点。 然后 WSUS 和自动更新可以与 Microsoft 更新云服务通信。
 
-有关详细信息，请参阅[Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum)。
+有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum)。
 
 
 ##  <a name="BKMK_SyncSettings"></a> 规划同步设置  

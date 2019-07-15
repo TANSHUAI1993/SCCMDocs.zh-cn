@@ -2,7 +2,7 @@
 title: OSD 基础结构要求
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 OS 部署的外部依赖关系和产品依赖关系及要求
-ms.date: 10/02/2018
+ms.date: 07/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7a484bc3e3491ac832ca7b3d6ed926627cbfaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 9115fb3e0d36e4664541c70b29929dfe3ef8b6d9
+ms.sourcegitcommit: 5e43c0c6b0b1f449e596f59ceaa92a9b6ca194cc
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133691"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572722"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager 中的 OS 部署的基础结构要求
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 中的 OS 部署包含外部依赖关系和产品内的依赖关系。 使用本文可帮助你为 OS 部署准备基础结构。  
 
@@ -185,7 +185,7 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
 ### <a name="security-permissions-for-os-deployments"></a>OS 部署的安全权限  
 
-“操作系统部署管理员”安全角色是一个无法更改的内置角色。 不过，你可以复制该角色，进行更改，然后将这些更改保存为一个新的自定义安全角色。 下面是一些直接应用于 OS 部署的权限：  
+“操作系统部署管理员”  安全角色是一个无法更改的内置角色。 不过，你可以复制该角色，进行更改，然后将这些更改保存为一个新的自定义安全角色。 下面是一些直接应用于 OS 部署的权限：  
 
 - **启动映像包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
@@ -197,7 +197,7 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
 - **操作系统升级包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
-- **任务序列包**：创建、创建任务序列媒体、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表、设置安全作用域  
+- **任务序列包**：创建、创建任务序列介质、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表、设置安全作用域  
 
 有关详细信息，请参阅[创建自定义安全角色](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)。  
 
@@ -212,7 +212,7 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
 在版本 1802 及更早的版本中，必须在配置为支持 PXE 或多播的分发点所在的服务器上安装 Windows 部署服务 (WDS)。 WDS 包括在服务器 OS 中。 对于 PXE 部署，WDS 是执行 PXE 启动的服务。 如果为 PXE 安装和启用了分发点，则 Configuration Manager 会将一个使用 WDS PXE 启动功能的提供程序安装到 WDS 中。  
 
-从版本 1806 开始，可在没有 WDS 的分发点上启用 PXE。 如需获取更多详细信息，请查看[安装并配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)中的“启用无 Windows 部署服务的 PXE 响应程序”选项。
+从版本 1806 开始，可在没有 WDS 的分发点上启用 PXE。 如需获取更多详细信息，请查看[安装并配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)中的“启用无 Windows 部署服务的 PXE 响应程序”选项  。
 
 
 > [!NOTE]  
@@ -234,7 +234,7 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
 -   必须具有正常运行的 DHCP 服务器和活动作用域。 WDS 使用需要 DHCP 服务器的 PXE。  
 
--   DNS 服务器是运行 WDS 所必需的。  
+-   必须有 DNS 服务器，才能运行 WDS。  
 
 -   必须在 WDS 服务器上打开下列 UDP 端口：  
 
@@ -262,7 +262,9 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
 > [!NOTE]
-> 在使用不含 WDS 的 PXE 响应程序（而不是 WDS）时，不支持同时在同一服务器上运行 DHCP。
+> 在版本 1810 及更低版本中，不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
+>
+> 自版本 1902 起，如果你对分发点启用不含 Windows 部署服务的 PXE 响应程序，它现在与 DHCP 服务位于同一服务器上。 有关详细信息，请参阅[配置至少一个分发点以接受 PXE 请求](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure)。
 
 
 ##  <a name="BKMK_SupportedOS"></a> 支持的操作系统  

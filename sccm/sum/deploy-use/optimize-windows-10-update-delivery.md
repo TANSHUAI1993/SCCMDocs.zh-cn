@@ -2,7 +2,7 @@
 title: 优化 Windows 10 更新传递
 titleSuffix: Configuration Manager
 description: 了解如何使用 Configuration Manager 管理更新内容以及时了解 Windows 10 动态。
-ms.date: 06/15/2018
+ms.date: 07/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d037baba858b3aacc3724e99a66819197b1dd89
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 4f3f5eb1b25021adee5feecd3119776180250496
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194519"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678677"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
@@ -24,7 +24,7 @@ ms.locfileid: "67194519"
 
 对于许多客户而言，使用 Configuration Manager 获取且及时了解 Windows 10 月度更新的成功途径从良好的内容分发策略开始。 月度质量更新的大小可能是大型组织关心的一个原因。 某些技术旨在帮助降低带宽和网络负载以优化更新传递。 本文将介绍这些技术，对它们进行比较，并提供帮助你决定使用哪种技术的建议。  
  
-Windows 10 提供了几种类型的更新。 有关详细信息，请参阅 [Windows Update for Business 中的更新类型](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types)。 本文重点介绍 Windows 10  质量更新和 Configuration Manager。 
+Windows 10 提供了几种类型的更新。 有关详细信息，请参阅 [Windows Update for Business 中的更新类型](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business)。 本文重点介绍 Windows 10  质量更新和 Configuration Manager。 
 
 
 ## <a name="express-update-delivery"></a>快速更新传递
@@ -92,7 +92,7 @@ Configuration Manager 支持许多对等技术，包括：
 | 对等发现 | 通过传递优化云服务（需要 Internet 访问） | 通过管理点（基于客户端边界组） | 多播 |
 | 报表 | 是（使用 Windows Analytics） | ConfigMgr 客户端数据源仪表板 | ConfigMgr 客户端数据源仪表板 |
 | WAN 使用控制 | 是（本机，可通过组策略设置控制） | 边界组 | 仅限子网支持 |
-| 支持的内容类型 | - 快速更新（通过 ConfigMgr）</br> - Windows 和安全更新</br> - 驱动程序</br> - Windows 应用商店应用</br> - 适用于企业的 Windows 应用商店应用 | 所有 ConfigMgr 内容类型，包括在 [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) 中下载的映像 | 所有 ConfigMgr 内容类型，映像除外 |
+| 支持的内容类型 | **通过 ConfigMgr:** </br> 快速更新 </br> </br> **通过 Microsoft 云：**</br> Windows 和安全更新程序</br> 驱动程序</br> Windows 应用商店应用</br> 适用于企业的 Windows 应用商店应用 | 所有 ConfigMgr 内容类型，包括在 [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) 中下载的映像 | 所有 ConfigMgr 内容类型，映像除外 |
 | 通过 ConfigMgr 管理 | 部分（客户端代理设置） | 是（客户端代理设置） | 是（客户端代理设置） |
 
 
