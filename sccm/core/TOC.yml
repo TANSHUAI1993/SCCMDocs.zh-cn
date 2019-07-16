@@ -103,6 +103,8 @@
           href: plan-design/configs/supported-configurations.md
         - name: 大小和扩展数量
           href: plan-design/configs/size-and-scale-numbers.md
+        - name: 站点和站点系统先决条件
+          href: plan-design/configs/site-and-site-system-prerequisites.md
         - name: 网站规模和性能指南
           href: plan-design/configs/site-size-performance-guidelines.md
         - name: 站点系统服务器支持的操作系统
