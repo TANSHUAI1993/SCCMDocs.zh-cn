@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21ed29204a5ed41e54a12a1294bc9582d3e6eaa1
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 91bcdf4e593d2c39fed19f0b01045cab32f921da
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252328"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818168"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -256,6 +256,7 @@ ms.locfileid: "67252328"
 
 - [常规设置](#bkmk_config-general)
 - [驱动器设置](#bkmk_config-drive)
+- [防火墙设置](#bkmk_firewall)
 - [拉取分发点](#bkmk_config-pull)
 - [PXE 设置](#bkmk_config-pxe)
 - [多播](#bkmk_config-multicast)
@@ -351,6 +352,15 @@ ms.locfileid: "67252328"
 > 若要阻止 Configuration Manager 安装在特定驱动器上，请在安装分发点之前创建一个名为 **no_sms_on_drive.sms** 的空文件，并将该文件复制到驱动器的根文件夹。  
 
 有关详细信息，请参阅[内容库](/sccm/core/plan-design/hierarchy/the-content-library)。
+
+### <a name="bkmk_firewall"></a> 防火墙设置
+
+分发点必须在 Windows 防火墙中配置以下入站规则：
+
+- Windows Management Instrumentation (DCOM-In)
+- Windows Management Instrumentation (WMI-In)
+
+若没有这些规则，当客户端尝试下载内容时，将收到 DataTransferService.log 中的错误 0x801901F4。
 
 ### <a name="bkmk_config-pull"></a>拉取分发点  
 

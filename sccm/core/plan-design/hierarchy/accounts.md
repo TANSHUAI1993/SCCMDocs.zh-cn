@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 596c88cd679b2cb37cfcc7a1d8df5f82e3e56702
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 53505aed5fcdcfcaf3603250a40f484cd49c762f
+ms.sourcegitcommit: 5e43c0c6b0b1f449e596f59ceaa92a9b6ca194cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715976"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572760"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
@@ -577,9 +577,9 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 
 ### <a name="task-sequence-run-as-account"></a>任务序列运行方式帐户  
 
- 任务序列引擎使用“任务序列运行方式帐户”来运行具有除本地系统帐户之外的凭据的命令行  。 [运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)任务序列步骤需要此帐户，并选择“将此步骤作为以下帐户运行”  。  
+ 任务序列引擎使用“任务序列运行方式帐户”来运行具有除本地系统帐户之外的凭据的命令行或 PowerShell 脚本  。 [运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)和[运行 PowerShell 脚本](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)任务序列步骤需要此帐户，并选择“将此步骤作为以下帐户运行”  。  
 
- 设置此帐户，使其具有运行在任务序列中指定的命令行所需的最低权限。 此帐户需要交互式登录权限。 它通常需要安装软件和访问网络资源的能力。  
+ 设置此帐户，使其具有运行在任务序列中指定的命令行所需的最低权限。 此帐户需要交互式登录权限。 它通常需要安装软件和访问网络资源的能力。 对于运行 PowerShell 脚本任务，此帐户需要本地管理员权限。 
 
 > [!IMPORTANT]  
 >  请勿将网络访问帐户用于此帐户。  

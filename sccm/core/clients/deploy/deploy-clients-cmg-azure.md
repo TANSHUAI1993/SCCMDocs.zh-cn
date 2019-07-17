@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45c5938e9c1980802055bd73d5fd7e71122fc2a
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 6af2f179a540c4a532173eacf265ec11bf292209
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558110"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677876"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -42,9 +42,9 @@ ms.locfileid: "57558110"
 
     - 已登录用户必须是 Azure AD 标识。   
 
-    - 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)和 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。 有关混合标识的详细信息，请参阅[定义混合标识采用策略](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)<!--497750-->  
+    - 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)和 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。 若要详细了解混合标识，请参阅[定义混合标识采用策略](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->  
 
-- 除了管理点站点系统角色的[现有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
+- 除了管理点站点系统角色的[现有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”  。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
 
 - 确定管理点是否需要 HTTPS。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
 
@@ -53,9 +53,9 @@ ms.locfileid: "57558110"
 
 ## <a name="configure-azure-services-for-cloud-management"></a>配置 Azure 服务以进行云管理
 
-首先，将 Configuration Manager 站点连接到 Azure AD。 有关此流程的详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。 创建到“云管理”服务的连接。
+首先，将 Configuration Manager 站点连接到 Azure AD。 有关此流程的详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。 创建到“云管理”服务的连接  。
 
-在加入“云管理”期间启用 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)。 
+在加入“云管理”期间启用 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  。 
 
 完成以上操作后，Configuration Manager 站点将连接到 Azure AD。 
 
@@ -65,17 +65,17 @@ ms.locfileid: "57558110"
 
 这些客户端设置有助于 Windows 10 加入 Azure AD。 它们还可使基于 Internet 的客户端使用 CMG 和云分发点。
 
-1.  按照[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)中的信息，在“云服务”部分配置以下客户端设置。  
+1. 按照[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)中的信息，在“云服务”部分配置以下客户端设置  。  
 
     - **允许访问云分发点**：启用此设置可帮助基于 Internet 的设备获取安装 Configuration Manager 客户端所需的内容。 如果内容在云分发点上不可用，设备可以从 CMG 检索该内容。 客户端安装启动会在 4 小时内重试云分发点，之后将回退到 CMG。<!--495533-->  
 
-    - **在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备**：设置为“是”或“否”。 默认设置为“是”。 这也是 Windows 10 1709 版中的默认行为。
+    - **在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备**：设置为“是”或“否”   。 默认设置为“是”  。 这也是 Windows 10 1709 版中的默认行为。
 
-    - 允许客户端使用云管理网关 – 设置为“是”（默认值），或“否”。  
+    -  允许客户端使用云管理网关 – 设置为“是”  （默认值），或“否”  。  
 
-2.  将客户端设置部署到所需的设备集合。 不要将这些设置部署到用户集合。
+2. 将客户端设置部署到所需的设备集合。 不要将这些设置部署到用户集合。
 
-要确认设备已加入 Azure AD，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD，结果中的“AzureAdjoined”字段会显示“YES”。
+要确认设备已加入 Azure AD，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD，结果中的“AzureAdjoined”字段会显示“YES”   。
 
 
 
@@ -95,9 +95,9 @@ ms.locfileid: "57558110"
 - 云管理网关
 - 基于 Internet 的管理点 SMSMP 属性指定本地或基于 Internet 的管理点。
 
-本示例使用云管理网关。 它将替代每个属性的示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+本示例使用云管理网关。 它将替代每个属性的示例值：`ccmsetup.exe /mp: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
-从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 此行为进一步简化了在具有多个 Azure AD 租户的环境中安装客户端的过程。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。<!--3607731-->
+从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 此行为进一步简化了在具有多个 Azure AD 租户的环境中安装客户端的过程。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME  和 SMSSiteCode  。<!--3607731-->
 
 若要使用 Azure AD 标识通过 Microsoft Intune 自动执行客户端安装，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)。
 

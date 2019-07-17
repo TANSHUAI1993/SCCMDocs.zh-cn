@@ -11,32 +11,34 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba556ffe98fbcf51dbc20975875ddb0c0b1370bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bc1d82de7863f6aa82e43515c28392865388a79f
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139919"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818191"
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中排除升级 Windows 计算机的客户端
 
-适用范围：*System Center Configuration Manager (Current Branch)*
+适用范围：  System Center Configuration Manager (Current Branch)
 
-从版本 1610 开始，可排除客户端集合，使其不会自动安装更新的客户端版本。 这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 可将其用于在升级客户端时需特别注意的计算机集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
+可排除客户端集合，使其不自动安装更新的客户端版本。 这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 可将其用于在升级客户端时需特别注意的计算机集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
+
+>[!NOTE]
+>已排除的客户端仍会下载和运行 CCMSETUP，但不会升级。
+
 
 ## <a name="configure-exclusion-for-automatic-upgrades"></a>配置自动升级排除
 
-1. 在 Configuration Manager 控制台中，转到“管理” > “站点配置” > “站点”，然后单击“层次结构设置”。
+1. 在 Configuration Manager 控制台中，转到“管理”   > “站点配置”   > “站点”  ，然后单击“层次结构设置”  。
 
-2. 单击“客户端升级”选项卡。
+2. 单击“客户端升级”  选项卡。
 
-3. 单击“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
+3. 单击“从升级中排除指定的客户端”  复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
 
-4.  单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。 有关详细信息，请参阅[如何升级 Windows 计算机的客户端](upgrade-clients-for-windows-computers.md)。
+4.  单击“确定”  以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。 有关详细信息，请参阅[如何升级 Windows 计算机的客户端](upgrade-clients-for-windows-computers.md)。
 
 ![用于自动升级排除的设置](media/automatic_upgrade_exclusion.png)
-
-
 
 >[!NOTE]
 >尽管用户界面声明无法通过任何方法升级客户端，但仍有两种方法可用于替代这些设置。 可使用客户端请求安装和手动客户端安装替代此配置。 有关更多详细信息，请参阅以下部分。

@@ -2,7 +2,7 @@
 title: 1810 的诊断和使用情况数据
 titleSuffix: Configuration Manager
 description: 了解 1810 版中收集的诊断和使用情况数据的级别。
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c13109710fc35dcd2853f76188ac42269a8058
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 704cc50369e1df251b706690465a4135ed5b3cdb
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120055"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676897"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1810"></a>1810 版的诊断使用情况数据收集的级别
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
+Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”    。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
 针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 
@@ -34,7 +34,7 @@ Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数�
 
 ##  <a name="bkmk_change"></a> 如何更改级别
 
-要更改数据收集级别，需要修改站点对象类的权限。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。 在功能区中选择“层次结构设置”，然后在“诊断和使用数据”设置中选择数据级别。  
+要更改数据收集级别，需要修改站点对象类的权限   。 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。 在功能区中选择“层次结构设置”，然后在“诊断和使用数据”设置中选择数据级别  。  
 
 
 
@@ -87,7 +87,7 @@ Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数�
 
     - 软件保障到期日期  
 
-    - 更新包部署状态和错误、下载进度和先决条件错误  
+    - 更新包部署状态和错误、下载进度和先决条件错误 
 
     - 更新快速通道的使用  
 
@@ -259,7 +259,7 @@ Microsoft 建议使用此级别，因为它提供了最少的数据来改进产�
 - 按模型列出的 Microsoft Surface 设备的计数  
 
 
-### <a name="cloud-services"></a>Cloud Services  
+### <a name="cloud-services"></a>云服务  
 
 - Azure Active Directory 发现统计信息  
 
@@ -351,7 +351,7 @@ Microsoft 建议使用此级别，因为它提供了最少的数据来改进产�
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-- Windows Defender 高级威胁防护 (ATP) 策略：策略计数和是否已部署策略  
+- Microsoft Defender 高级威胁防护 (ATP) 策略（之前称为 Windows Defender ATP）：策略计数和是否已部署策略。 
 
 - 为 Endpoint Protection 功能配置的警报数  
 

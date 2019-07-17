@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d096681c044b794b849d05c48fa17171344b8a64
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6b586fb4eded2143e42887236d1c52b0a8bae275
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726246"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 遵循本主题中的指导原则将使你能够设置实验室以使用模拟现实活动评估 Configuration Manager。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "56129861"
 
     -   不限制用于 SQL Server 的**系统可寻址内存**。  
 
-    -   将“SQL Server 服务帐户”配置为使用低权限域用户帐户运行。  
+    -   将“SQL Server 服务帐户”  配置为使用低权限域用户帐户运行。  
 
     -   必须安装 **SQL Server reporting services**。  
 
@@ -99,13 +99,13 @@ ms.locfileid: "56129861"
 
 #### <a name="to-create-the-system-management-container"></a>若要创建系统管理容器：  
 
-1.  运行“ADSI 编辑器” ，并连接到站点服务器所在的域。  
+1.  运行“ADSI 编辑器”  ，并连接到站点服务器所在的域。  
 
-2.  展开“域&lt;计算机完全限定的域名\>”，展开“<可分辨名称\>”，右键单击“CN=System”，再单击“新建”，然后单击“对象”。  
+2.  展开“域&lt;计算机完全限定的域名\>”  ，展开“<可分辨名称\>”  ，右键单击“CN=System”  ，再单击“新建”  ，然后单击“对象”  。  
 
-3.  在  “创建对象”对话框中，选择“容器” ，然后单击“下一步” 。  
+3.  在  “创建对象”对话框中，选择“容器”  ，然后单击“下一步”  。  
 
-4.  在“值”  框中，键入 **System Management**，然后单击“下一步” 。  
+4.  在“值”  框中，键入 **System Management**，然后单击“下一步”  。  
 
 5.  单击“完成”  以完成该过程。  
 
@@ -117,13 +117,13 @@ ms.locfileid: "56129861"
 
 #### <a name="to-set-security-permissions-for-the-system-management-container"></a>若要为系统管理容器设置安全权限：  
 
-1.  在控制台窗格中，依次展开“站点服务器的域”、“DC=&lt;服务器可分辨名称\>”，然后展开“CN=System”。 右键单击“CN=System Management” ，然后单击“属性” 。  
+1.  在控制台窗格中，依次展开“站点服务器的域”  、“DC=&lt;服务器可分辨名称\>”  ，然后展开“CN=System”  。 右键单击“CN=System Management”  ，然后单击“属性”  。  
 
 2.  在“CN=System Management 属性”  对话框中，单击“安全”  选项卡，然后单击“添加”  以添加该站点服务器计算机帐户。 为该帐户授予“完全控制”  权限。  
 
-3.  单击“高级”，选择站点服务器的计算机帐户，然后单击“编辑”。  
+3.  单击“高级”  ，选择站点服务器的计算机帐户，然后单击“编辑”  。  
 
-4.  在“应用到”  列表中，选择“这个对象及全部后代” 。  
+4.  在“应用到”  列表中，选择“这个对象及全部后代”  。  
 
 5.  单击“确定”  关闭“ADSI 编辑器”  控制台并完成该过程。  
 
@@ -160,15 +160,15 @@ ms.locfileid: "56129861"
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>若要安装 .NET 并且激活 Windows Communication Foundation：  
 
-1.  打开 **Server Manager**，然后导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导”  **Wizard.**。  
+1.  打开 **Server Manager**，然后导航到“管理”  。 单击“添加角色和功能”  以打开“添加角色和功能向导”  **Wizard.** 。  
 
-2.  查看“开始前”  面板提供的信息，然后单击“下一步” 。  
+2.  查看“开始前”  面板提供的信息，然后单击“下一步”  。  
 
-3.  选择“基于角色或基于功能的安装” ，然后单击“下一步” 。  
+3.  选择“基于角色或基于功能的安装”  ，然后单击“下一步”  。  
 
-4.  从“服务器池” 选择你的服务器，然后单击“下一步” 。  
+4.  从“服务器池”  选择你的服务器，然后单击“下一步”  。  
 
-5.  查看“服务器角色”  面板，然后单击“下一步” 。  
+5.  查看“服务器角色”  面板，然后单击“下一步”  。  
 
 6.  通过从列表中选择，添加以下“功能”  ：  
 
@@ -188,11 +188,11 @@ ms.locfileid: "56129861"
 
             -   **TCP 端口共享**  
 
-7.  查看“Web 服务器角色 (IIS)”  以及“角色服务”  屏幕，然后单击“下一步” 。  
+7.  查看“Web 服务器角色 (IIS)”  以及“角色服务”  屏幕，然后单击“下一步”  。  
 
-8.  查看“确认”  屏幕，然后单击“下一步” 。  
+8.  查看“确认”  屏幕，然后单击“下一步”  。  
 
-9. 单击“安装”  并在“服务器管理器”  的“通知” 窗格验证安装是否正确完成。  
+9. 单击“安装”  并在“服务器管理器”  的“通知”  窗格验证安装是否正确完成。  
 
 10. .NET 的基本安装完成后，导航到 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 以获取 .NET Framework 4.5.2 的 Web 安装程序。 单击“下载”  按钮，然后单击“运行”以运行  安装程序。 它将自动检测并安装你选择的语言版本的所需组件。  
 
@@ -220,13 +220,13 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>若要启用 BITS、IIS 和 RDC 站点服务器角色：  
 
-1.  在你的站点服务器上，打开 **Server Manager**。 导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导” 。  
+1.  在你的站点服务器上，打开 **Server Manager**。 导航到“管理”  。 单击“添加角色和功能”  以打开“添加角色和功能向导”  。  
 
-2.  查看“开始前”  面板提供的信息，然后单击“下一步” 。  
+2.  查看“开始前”  面板提供的信息，然后单击“下一步”  。  
 
-3.  选择“基于角色或基于功能的安装” ，然后单击“下一步” 。  
+3.  选择“基于角色或基于功能的安装”  ，然后单击“下一步”  。  
 
-4.  从“服务器池” 选择你的服务器，然后单击“下一步” 。  
+4.  从“服务器池”  选择你的服务器，然后单击“下一步”  。  
 
 5.  通过从列表中选择，添加以下“服务器角色”  ：  
 
@@ -272,7 +272,7 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
         -   **URL 授权**  
 
-        -   **Windows 授权**  
+        -   **Windows 身份验证**  
 
     -   **应用程序开发**  
 
@@ -326,7 +326,7 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
           -   **BITS 服务器扩展工具**  
 
-7.  单击“安装”  并在“服务器管理器”  的“通知” 窗格验证安装是否正确完成。  
+7.  单击“安装”  并在“服务器管理器”  的“通知”  窗格验证安装是否正确完成。  
 
 默认情况下，IIS 阻止多种文件拓展名和位置通过 HTTP 或 HTTPS 通信进行访问。 若要使这些文件分发到客户端系统，你需要为分发点上的 IIS 配置请求筛选。 有关详细信息，请参阅[分发点的 IIS 请求筛选](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)。  
 
@@ -334,11 +334,11 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
 1.  打开 **IIS Manager** 并在侧栏中选择你的服务器名。 这将使你转到“主页”  屏幕。  
 
-2.  验证已选择“主页”  屏幕底部的“功能视图”  。 导航到 **IIS** 并打开“请求筛选” 。  
+2.  验证已选择“主页”  屏幕底部的“功能视图”  。 导航到 **IIS** 并打开“请求筛选”  。  
 
 3.  在“操作”  窗格中，单击“允许文件拓展名...”   
 
-4.  键入 **.msi** 到对话框中，然后单击“确定” 。  
+4.  键入 **.msi** 到对话框中，然后单击“确定”  。  
 
 ##  <a name="BKMK_InstallCMLab"></a> 安装配置管理器  
 你将创建[确定何时使用主站点](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)以直接管理客户端。 这将允许你的实验室环境支持可能设备的[站点系统扩展](/sccm/core/plan-design/configs/size-and-scale-numbers)管理。  
@@ -356,41 +356,41 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
     |站点安装过程的步骤|选择|  
     |-----------------------------------------|---------------|  
-    |步骤 4：“产品密钥”  页|选择“评估” 。|  
-    |步骤 7：必需下载的项|选择“下载所需文件”  并指定预定义的位置。|  
-    |步骤 10：站点和安装设置|-   **站点代码：LAB**<br />-   **站点名称：Evaluation**<br />-    指定预定义的位置。|  
-    |步骤 11：主站点的安装|选择“将主站点安装为独立站点” ，然后单击“下一步” 。|  
-    |步骤 12：数据库的安装|-    在此处输入你的 FQDN。<br />-    将其留空，因为你将使用以前安装的 SQL 的默认实例。<br />-    保留为默认端口 4022。|  
-    |步骤 13：数据库的安装|将这些设置保留为默认值。|  
+    |步骤 4：“产品密钥”  页|选择“评估”  。|  
+    |步骤 7：必需下载的项 |选择“下载所需文件”  并指定预定义的位置。|  
+    |步骤 10：站点和安装设置 |-   **站点代码：LAB**<br />-   **站点名称：Evaluation**<br />-     指定预定义的位置。|  
+    |步骤 11：主站点的安装 |选择“将主站点安装为独立站点”  ，然后单击“下一步”  。|  
+    |步骤 12：数据库的安装 |-     在此处输入你的 FQDN。<br />-     将其留空，因为你将使用以前安装的 SQL 的默认实例。<br />-     保留为默认端口 4022。|  
+    |步骤 13：数据库的安装 |将这些设置保留为默认值。|  
     |步骤 14：**SMS 提供程序**|将这些设置保留为默认值。|  
-    |步骤 15：客户端通信设置|确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
-    |步骤 16：站点系统角色|输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
+    |步骤 15：客户端通信设置 |确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
+    |步骤 16：站点系统角色 |输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
 
 ##  <a name="BKMK_EnablePubLab"></a>为 Configuration Manager 站点启用发布  
 每个 Configuration Manager 站点将其自己的特定于站点的信息发布到 Active Directory 架构中其域分区内的系统管理容器中。 必须打开 Active Directory 和 Configuration Manager 之间的双向通道以处理此流量。 此外，还将启用林发现以确定 Active Directory 和网络基础结构的某些组件。  
 
 #### <a name="to-configure-active-directory-forests-for-publishing"></a>针对发布配置 Active Directory 林：  
 
-1.  在 Configuration Manager 控制台的左下角，单击“管理”。  
+1.  在 Configuration Manager 控制台的左下角，单击“管理”  。  
 
-2.  在“管理”  工作区中，展开“层次结构配置” ，然后单击“发现方法” 。  
+2.  在“管理”  工作区中，展开“层次结构配置”  ，然后单击“发现方法”  。  
 
-3.  选择“Active Directory 林发现”  ，然后单击“属性” 。  
+3.  选择“Active Directory 林发现”  ，然后单击“属性”  。  
 
-4.  在“属性”  对话框中，选择“启用 Active Directory 林发现” 。 此功能激活后，选择“当发现 Active Directory 站点边界时自动进行创建” 。 将出现一个对话框，显示“你想尽快运行完整的发现吗？”  单击“是” 。  
+4.  在“属性”  对话框中，选择“启用 Active Directory 林发现”  。 此功能激活后，选择“当发现 Active Directory 站点边界时自动进行创建”  。 将出现一个对话框，显示“你想尽快运行完整的发现吗？”  单击“是”  。  
 
-5.  在屏幕顶部的“发现方法”  组中，单击“立即运行林发现” ，然后导航至侧栏中的“Active Directory 林”  。 Active Directory 林应显示在发现的林列表中。  
+5.  在屏幕顶部的“发现方法”  组中，单击“立即运行林发现”  ，然后导航至侧栏中的“Active Directory 林”  。 Active Directory 林应显示在发现的林列表中。  
 
 6.  导航到该屏幕顶部的“常规”  选项卡。  
 
-7.  在“管理”  工作区中，展开“层次结构配置” ，然后单击“Active Directory 林” 。  
+7.  在“管理”  工作区中，展开“层次结构配置”  ，然后单击“Active Directory 林”  。  
 
 #### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>使 Configuration Manager 站点能够将站点信息发布到 Active Directory 林：  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 控制台中，单击“管理”  。  
 
 2.  你将配置尚未发现的新林。  
 
-3.  在“管理”  工作区中，单击“Active Directory 林” 。  
+3.  在“管理”  工作区中，单击“Active Directory 林”  。  
 
 4.  在该站点属性的“发布”  选项卡上，选择你连接的林，然后单击“确定”  保存配置。

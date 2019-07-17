@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e0ad2568c250cbaab0f52f76b98750153aa0b05
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: ac3967059b7cb8b8e4d4a3d32a9c88bfdfd1567b
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252341"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818092"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -48,10 +48,13 @@ ms.locfileid: "67252341"
    -  将成为可用性组的成员：  
      如果将此服务器用作可用性组的初始主副本成员，则不需要将站点数据库副本还原到这个或组中的另一个服务器。 数据库在主副本上已就位，SQL Server 会在后续步骤中将数据库复制到辅助副本。  
 
-     -      不是可用性组的成员：  
+   -   不是可用性组的成员：  
      将站点数据库的副本还原到将托管组的主要副本的服务器。
 
    有关如何完成此步骤的信息，请参阅 SQL Server 文档中的[创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)和[使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
+
+> [!NOTE]  
+> 如果计划从可用性组移动到现有副本上的独立组，则需要首先从可用性组中删除数据库。
 
 4. 在将托管组的初始主要副本的服务器上，使用 [新建可用性组向导](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) 创建可用性组。 在向导中：
    - 在“选择数据库”  页上，为你的 Configuration Manager 站点选择数据库。  
@@ -85,20 +88,20 @@ ms.locfileid: "67252341"
 > 在混合配置中将 Microsoft Intune 与 Configuration Manager 结合使用时，从可用性组来回移动站点数据库将会触发数据与云重新同步。 无法避免此重新同步。
 
 ### <a name="to-configure-a-site-to-use-the-availability-group"></a>将站点配置为使用可用性组
-1.  从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
+1. 从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
 
-2.  在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后单击“下一步”  。
+2. 在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后单击“下一步”  。
 
-3.  选择“修改 SQL Server 配置”  选项，然后单击“下一步”  。
+3. 选择“修改 SQL Server 配置”  选项，然后单击“下一步”  。
 
-4.  为站点数据库重新配置以下内容：
+4. 为站点数据库重新配置以下内容：
     -   **SQL Server 名称：** 输入你在创建可用性组时配置的可用性组侦听程序的虚拟名称  。 虚拟名称应为完整的 DNS 名称，如 &lt;endpointServer>.fabrikam.com  。  
 
     -   **实例：** 此值必须为空，以便为可用性组的侦听程序指定默认实例  。 如果当前站点数据库在命名实例上运行，则会列出命名实例，并且必须清除这些实例。
 
     -   **数据库：** 保留所显示的名称。 这是当前站点数据库的名称。
 
-5.  为新的数据库位置提供此信息后，使用常规过程和配置完成安装。
+5. 为新的数据库位置提供此信息后，使用常规过程和配置完成安装。
 
 
 
@@ -144,29 +147,29 @@ ms.locfileid: "67252341"
 > 在混合配置中将 Microsoft Intune 与 Configuration Manager 结合使用时，从可用性组来回移动站点数据库将会触发数据与云重新同步。 此问题无法避免。
 
 ### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>将站点数据库从可用性组移回单个实例 SQL Server
-1.  使用以下命令停止 Configuration Manager 站点：**Preinst.exe /stopsite** 有关详细信息，请参阅[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)。
+1. 使用以下命令停止 Configuration Manager 站点：**Preinst.exe /stopsite** 有关详细信息，请参阅[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)。
 
-2.  使用 SQL Server 创建主要副本中站点数据库的完整备份。 有关如何完成此步骤的信息，请参阅 SQL Server 文档中的 [创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) 。
+2. 使用 SQL Server 创建主要副本中站点数据库的完整备份。 有关如何完成此步骤的信息，请参阅 SQL Server 文档中的 [创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) 。
 
-3.  如果可用性组主要副本所在的服务器将托管站点数据库的单个实例，则可跳过此步骤：  
+3. 如果可用性组主要副本所在的服务器将托管站点数据库的单个实例，则可跳过此步骤：  
 
     -   使用 SQL Server 将站点数据库备份还原到将托管站点数据库的服务器。 请参阅 SQL Server 文档中的[使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   <br />  <br />
 
-4.  在将承载站点数据库（主副本或在其中还原站点数据库的服务器）的服务器上，将站点数据库的备份模型从“完整”  更改为  ”简单”。 请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。  
+4. 在将承载站点数据库（主副本或在其中还原站点数据库的服务器）的服务器上，将站点数据库的备份模型从“完整”  更改为  ”简单”。 请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。  
 
-5.  从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
+5. 从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
 
-6.  在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后单击“下一步”  。  
+6. 在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后单击“下一步”  。  
 
-7.  选择“修改 SQL Server 配置”  选项，然后单击“下一步”  。  
+7. 选择“修改 SQL Server 配置”  选项，然后单击“下一步”  。  
 
-8.  为站点数据库重新配置以下内容：
+8. 为站点数据库重新配置以下内容：
     -   **SQL Server 名称：** 输入现在托管站点数据库的服务器的名称。
 
     -   **实例：** 指定托管站点数据库的已命名实例（如果数据库在默认实例上，则将其留空）。
 
     -   **数据库：** 保留所显示的名称。 这是当前站点数据库的名称。    
 
-9.  为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。    
+9. 为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。    
 
 10. 若要清理原为可用性组成员的服务器，请按照 SQL Server 文档中[删除可用性组](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)中的指导进行操作。

@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af894becf4aa74beb250cc4672e6ba2cb0108af
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: e77402bbaf5ce0f0f756418be38b6435d70e9e4d
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726202"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,7 @@ ms.locfileid: "66834797"
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager 文档
 
-上次更新时间：2019/06/10
+上次更新时间：  2019/06/10
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -100,10 +100,16 @@ ms.locfileid: "66834797"
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 
-2019 年 5 月 14 日至 6 月 10 日期间新增或更新的支持文章。
+2019 年 6 月 10 日至 7 月 10 日期间新增或更新的支持文章。
 
-- [KB 4503442：Configuration Manager 客户端尝试与 CMG 通信时，会出现 403 错误](https://support.microsoft.com/help/4503442)
-- [KB 4503578：在 Configuration Manager 中移动 Reporting Services 点或启用 TLS 1.2 后，报告停止工作](https://support.microsoft.com/help/4503578)
-- [KB 4505440：Configuration Manager 中的软件更新管理故障排除](https://support.microsoft.com/help/4505440)
+- [KB 4505439：排查 Configuration Manager 中软件更新同步问题](https://support.microsoft.com/help/4505439)
+- [KB 4508653：由于登录失败，无法将包分发至远程分发点](https://support.microsoft.com/help/4508653)
+- [KB 4508855：不会将应用程序部署到已登录 Configuration Manager 中域控制器的用户](https://support.microsoft.com/help/4508855)
+- [KB 4500571：System Center Configuration Manager Current Branch 1902 版更新汇总](https://support.microsoft.com/help/4500571)
+- [KB 4508760：“函数序列错误”重复记录在 Configuration Manager 1902 版的 Smsdbmon.log 中](https://support.microsoft.com/help/4508760)
+- [KB 4509131：Configuration Manager OSD 任务序列失败，错误代码 80070005](https://support.microsoft.com/help/4509131)
+- [KB 4509132：在 ConfigMgr 中进行内容分发期间出现“IDispatch 错误 #3603”](https://support.microsoft.com/help/4509132)
+- [KB 4509681：Configuration Manager 升级卡在升级 ConfigMgr 数据库](https://support.microsoft.com/help/4509681)
+- [KB 4509484：在 ConfigMgr 中将内容分发至 CMG 或云 DP 期间出现错误 80070070](https://support.microsoft.com/help/4509484)
 
-要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  
+要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager  。  

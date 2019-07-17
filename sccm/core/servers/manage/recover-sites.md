@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8506996f7b769003c937de69a9c7f659341c4294
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 48e0f2c1d04f0592cd794aa4315641fe6f9cd15b
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501016"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818119"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -38,7 +38,7 @@ ms.locfileid: "65501016"
 
 #### <a name="use-the-same-version-and-edition-of-sql-server"></a>使用相同版本的 SQL Server   
 例如，不支持将数据库从 SQL Server 2014 还原到 SQL Server 2016。 同样，不支持将 SQL Server 2016 站点数据库从标准版还原到企业版。
-- 不能将 SQL Server 设置为“单用户模式”。
+- 不能将 SQL Server 设置为“单用户模式”  。
 - 确保 .MDF 和 .LDF 文件有效。 恢复站点时，不会检查文件的状态。  
 
 #### <a name="sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组   
@@ -51,7 +51,7 @@ ms.locfileid: "65501016"
 
 ## <a name="determine-your-recovery-options"></a>确定恢复选项
 
-为 Configuration Manager 主站点服务器和管理中心站点恢复考虑两个主要方面：站点服务器和站点数据库。
+为 Configuration Manager 主站点服务器和管理中心站点恢复考虑两个主要方面：站点服务器  和站点数据库  。
 以下部分可帮助你选择用于恢复方案的最佳选项。
 
 > [!NOTE]   
@@ -60,18 +60,18 @@ ms.locfileid: "65501016"
 
 ### <a name="site-server-recovery-options"></a>站点服务器恢复选项
 
-从 Configuration Manager 安装文件夹之外创建的 CD.Latest 文件夹副本中启动 Configuration Manager 安装程序。  
+从 Configuration Manager 安装文件夹之外创建的 CD.Latest  文件夹副本中启动 Configuration Manager 安装程序。  
 
--   如果从站点服务器上的“开始” 菜单中运行安装程序，则“恢复站点”选项不可用。  
+-   如果从站点服务器上的“开始” 菜单中运行安装程序，则“恢复站点”选项不可用   。  
 
 -   如果在进行备份之前从 Configuration Manager 控制台中安装了任何更新，则无法使用以下位置中的安装程序重新安装站点： 
     - 安装介质
     - Configuration Manager 安装路径 
 
-然后选择“恢复站点”选项。 可以为出现故障的站点服务器使用下列恢复选项：  
+然后选择“恢复站点”  选项。 可以为出现故障的站点服务器使用下列恢复选项：  
 
 #### <a name="recover-the-site-server-using-an-existing-backup"></a>使用现有备份恢复站点服务器
-如果在站点发生故障之前便拥有站点服务器的 Configuration Manager 备份，请使用此选项。 该站点创建此备份作为备份站点服务器维护任务的一部分。 站点会重新安装，并且站点设置会根据备份的站点进行配置。  
+如果在站点发生故障之前便拥有站点服务器的 Configuration Manager 备份，请使用此选项。 该站点创建此备份作为备份站点服务器维护任务的一部分  。 站点会重新安装，并且站点设置会根据备份的站点进行配置。  
 
 #### <a name="reinstall-the-site-server"></a>重新安装站点服务器
 如果没有站点服务器的备份，则使用此选项。 站点服务器会重新安装，并且必须像初始安装期间一样指定站点设置。  
@@ -88,7 +88,7 @@ ms.locfileid: "65501016"
 在运行 Configuration Manager 安装程序时，可以为站点数据库使用下列恢复选项：  
 
 #### <a name="recover-the-site-database-using-a-backup-set"></a>使用备份集恢复站点数据库
-如果在数据库发生故障之前便拥有站点数据库的 Configuration Manager 备份，请使用此选项。 该站点创建此备份作为备份站点服务器维护任务的一部分。 在层次结构中，还原主站点时，恢复过程会从管理中心站点检索上次备份后对站点数据库所做的任何更改。 还原管理中心站点时，恢复过程会从引用主站点检索这些更改。 恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。  
+如果在数据库发生故障之前便拥有站点数据库的 Configuration Manager 备份，请使用此选项。 该站点创建此备份作为备份站点服务器维护任务的一部分  。 在层次结构中，还原主站点时，恢复过程会从管理中心站点检索上次备份后对站点数据库所做的任何更改。 还原管理中心站点时，恢复过程会从引用主站点检索这些更改。 恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。  
 
 在层次结构中恢复站点的站点数据库时，管理中心站点和主站点的恢复行为有所不同。 上次备份在 SQL Server 更改跟踪保持期之内或之外时的行为也会不同。 有关详细信息，请参阅本文中的[站点数据库恢复方案](#site-database-recovery-scenarios)部分。  
 
@@ -177,11 +177,11 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="start-a-site-recovery-in-the-setup-wizard"></a>在安装向导中启动站点恢复
 
-1.  将 [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) 文件夹复制到 Configuration Manager 安装文件夹之外的位置。 从 CD.Latest 文件夹的副本中，运行 Configuration Manager 安装向导。  
+1. 将 [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) 文件夹复制到 Configuration Manager 安装文件夹之外的位置。 从 CD.Latest 文件夹的副本中，运行 Configuration Manager 安装向导。  
 
-2.  在“入门”  页上，选择“恢复站点” ，然后单击“下一步” 。  
+2. 在“入门”  页上，选择“恢复站点”  ，然后单击“下一步”  。  
 
-3.  使用适合你的站点恢复的选项完成向导。  
+3. 使用适合你的站点恢复的选项完成向导。  
 
      - 在恢复过程中，安装程序会标识 SQL Server 所使用的 SQL Server Service Broker (SSB) 端口。 请勿在恢复过程中更改此端口设置，否则在恢复完成之后数据复制将不会正常工作。  
 
@@ -192,7 +192,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 1. 针对站点恢复所需要的选项准备无人参与安装脚本。 有关详细信息，请参阅[无人参与的站点恢复](/sccm/core/servers/manage/unattended-recovery)。  
 
-2. 使用 `/script` 命令行选项运行 Configuration Manager 安装程序。 例如，创建一个安装程序初始化文件 ConfigMgrUnattend.ini。 将其保存在运行安装程序的计算机的 `C:\Temp` 目录中。 使用以下命令：  
+2. 使用 `/script` 命令行选项运行 Configuration Manager 安装程序。 例如，创建一个安装程序初始化文件 ConfigMgrUnattend.ini  。 将其保存在运行安装程序的计算机的 `C:\Temp` 目录中。 使用以下命令：  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -200,7 +200,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 > [!NOTE]   
 >  恢复管理中心站点后，可能无法建立某些来自子站点的站点数据的副本。 此数据可能包括硬件清单、软件清单和状态消息。
 >
->  如果发生此问题，则重新初始化 ConfigMgrDRSSiteQueue 以进行数据库复制。 针对管理中心站点的站点数据库，使用 SQL 服务器管理器运行以下查询：
+>  如果发生此问题，则重新初始化 ConfigMgrDRSSiteQueue 以进行数据库复制  。 针对管理中心站点的站点数据库，使用 SQL 服务器管理器运行以下查询  ：
 >
 > ``` SQL
 > IF EXISTS (SELECT * FROM sys.service_queues WHERE name = 'ConfigMgrDRSSiteQueue' AND is_receive_enabled = 0)  
@@ -217,31 +217,31 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="reenter-user-account-passwords"></a>重新输入用户帐户密码
 
-执行站点服务器恢复后，重新输入站点中任何用户帐户的密码。 这些密码在站点恢复期间重置。 站点恢复完成后，帐户将在安装向导的已“完成”页面上列出。 该列表还会保存到已恢复的站点服务器上的 `C:\ConfigMgrPostRecoveryActions.html` 中。
+执行站点服务器恢复后，重新输入站点中任何用户帐户的密码。 这些密码在站点恢复期间重置。 站点恢复完成后，帐户将在安装向导的已“完成”页面上列出  。 该列表还会保存到已恢复的站点服务器上的 `C:\ConfigMgrPostRecoveryActions.html` 中。
 
 #### <a name="reenter-user-account-passwords-after-site-recovery"></a>在站点恢复后重新输入用户帐户密码
 1. 打开 Configuration Manager 控制台并连接到恢复的站点。  
 
-2. 转到“管理”工作区，展开“安全”，然后单击“帐户”。  
+2. 转到“管理”工作区，展开“安全”，然后单击“帐户”    。  
 
 3. 对于每个帐户，请执行以下步骤以重新输入密码：  
 
      1. 从站点恢复后确定的列表中选择帐户。  
 
-     2. 单击功能区中的“属性”。  
+     2. 单击功能区中的“属性”  。  
 
-     3. 在“常规”选项卡上，单击“设置”，然后重新输入帐户密码。  
+     3. 在“常规”选项卡上，单击“设置”，然后重新输入帐户密码   。  
 
-     4. 单击“验证”，为所选用户帐户选择适当的数据源，然后单击“测试连接”。 此步骤测试用户帐户是否可以连接到数据源，并验证凭据。  
+     4. 单击“验证”，为所选用户帐户选择适当的数据源，然后单击“测试连接”   。 此步骤测试用户帐户是否可以连接到数据源，并验证凭据。  
 
-     5. 单击“确定”保存密码更改，然后单击“确定”关闭帐户属性页面。  
+     5. 单击“确定”保存密码更改，然后单击“确定”关闭帐户属性页面   。  
 
 
 ### <a name="reenter-sideloading-keys"></a>重新输入旁加载密钥
 
-执行站点服务器恢复后，重新输入为站点指定的 Windows 旁加载密钥。 这些密钥会在站点恢复期间重置。 重新输入旁加载密钥后，站点会重置 Windows 旁加载密钥的“已使用激活数”列中的计数。 
+执行站点服务器恢复后，重新输入为站点指定的 Windows 旁加载密钥。 这些密钥会在站点恢复期间重置。 重新输入旁加载密钥后，站点会重置 Windows 旁加载密钥的“已使用激活数”列中的计数  。 
 
-例如，在站点发生故障之前，“激活总数”显示为“100”。 设备已使用的密钥数或“已使用激活数”为“90”。 在站点恢复之后，“激活总数”列仍显示“100”，但“已使用激活数”列错误地显示“0”。 在 10 个新设备使用旁加载密钥之后，不会再有更多的旁加载密钥且第 11 个设备将无法应用旁加载密钥。
+例如，在站点发生故障之前，“激活总数”显示为“100”   。 设备已使用的密钥数或“已使用激活数”为“90”   。 在站点恢复之后，“激活总数”列仍显示“100”，但“已使用激活数”列错误地显示“0”     。 在 10 个新设备使用旁加载密钥之后，不会再有更多的旁加载密钥且第 11 个设备将无法应用旁加载密钥。
 
 
 ### <a name="recreate-the-microsoft-intune-subscription"></a>重新创建 Microsoft Intune 订阅
@@ -256,7 +256,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="reinstall-hotfixes"></a>重新安装修补程序 
 
-站点恢复之后，你必须重新安装之前应用于站点服务器的任何修补程序。 站点恢复后，在安装向导的“已完成”页上查看以前安装的修补程序列表。 该列表还会保存到已恢复的站点服务器上的 `C:\ConfigMgrPostRecoveryActions.html` 中。
+站点恢复之后，必须重新安装之前应用于站点服务器的任何[带外修补程序](/sccm/core/servers/manage/updates#bkmk_outofband)。 站点恢复后，在安装向导的“已完成”  页上查看以前安装的修补程序列表。 该列表还会保存到已恢复的站点服务器上的 `C:\ConfigMgrPostRecoveryActions.html` 中。
 
 
 ### <a name="recover-custom-reports"></a>恢复自定义报表 
@@ -284,7 +284,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 #### <a name="restore-the-updates-publisher-database"></a>还原 Updates Publisher 数据库
 1. 在恢复的计算机上重新安装 Updates Publisher。  
 
-2. 将数据库文件 Scupdb.sdf 从备份目标复制到运行 Updates Publisher 的计算机上的 `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` 中。  
+2. 将数据库文件 Scupdb.sdf 从备份目标复制到运行 Updates Publisher 的计算机上的 `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` 中  。  
 
 3. 如果有多个用户在计算机上运行 Updates Publisher，则将每个数据库文件复制到相应的用户配置文件位置。  
 
@@ -296,7 +296,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>重新生成分发点的证书
 
-还原站点后，distmgr.log 可能会列出一个或多个分发点的以下条目：`Failed to decrypt cert PFX data`。 此条目表示站点无法解密分发点证书数据。 要解决此问题，需重新生成或重新导入受影响分发点的证书。 使用 [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet。
+还原站点后，distmgr.log 可能会列出一个或多个分发点的以下条目：`Failed to decrypt cert PFX data`  。 此条目表示站点无法解密分发点证书数据。 要解决此问题，需重新生成或重新导入受影响分发点的证书。 使用 [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet。
 
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>更新用于基于云的分发点的证书
@@ -327,10 +327,10 @@ Configuration Manager 不支持在辅助站点上进行数据库备份，但支�
 
 ### <a name="procedure"></a>过程
 
-在 Configuration Manager 控制台的“站点”节点中使用“恢复辅助站点”操作。 与其他类型的站点不同，辅助站点的恢复不使用备份文件。 此过程会在故障服务器上重新安装辅助站点文件。 站点重新安装后，辅助站点数据会从父级主站点重新初始化。
+在 Configuration Manager 控制台的“站点”  节点中使用“恢复辅助站点”  操作。 与其他类型的站点不同，辅助站点的恢复不使用备份文件。 此过程会在故障服务器上重新安装辅助站点文件。 站点重新安装后，辅助站点数据会从父级主站点重新初始化。
 
 在恢复过程中，Configuration Manager 会验证辅助站点服务器上是否存在内容库。 它还会检查是否有可用的合适内容。 如果辅助站点包含合适的内容，则它会使用现有的内容库。 否则，要恢复辅助站点的内容库，需要将内容重新分发或预留到服务器。
 
 如果拥有不在辅助站点上的分发点，则无需在恢复辅助站点的过程中重新安装分发点。 在恢复辅助站点之后，站点会自动与分发点同步。
 
-可以在 Configuration Manager 控制台的“站点”节点中使用“显示安装状态”操作来验证辅助站点恢复的状态。
+可以在 Configuration Manager 控制台的“站点”节点中使用“显示安装状态”操作来验证辅助站点恢复的状态   。

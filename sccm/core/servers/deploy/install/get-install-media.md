@@ -11,18 +11,20 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ab522e7618ff2c64e910a9098d7adc36f43512b
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 9e4c37bff6942014761c53a5e2a659b398fbf7d2
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252298"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818159"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>可获取 System Center Configuration Manager 的安装媒体的位置
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
 如果具有 System Center Configuration Manager 批量许可证（带软件保障），或已购买 System Center Configuration Manager 批量许可证的许可证，则可下载基线源媒体，从[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)安装 System Center Configuration Manager。   
+
+如果具有 EMS、Microsoft 365 或云解决方案提供商 (CSP) 的 System Center Configuration Manager 许可证，请参阅[产品和许可常见问题解答](/sccm/core/understand/product-and-licensing-faq#bkmk_csp)。
 
 如果要购买 System Center Configuration Manager 的批量许可证，请联系首选 Microsoft 经销商，或请参阅 [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)（如何通过批量许可购买）。 还可下载媒体，从 [TechNet 评估中心]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)网站安装 System Center Configuration Manager 评估版。
 

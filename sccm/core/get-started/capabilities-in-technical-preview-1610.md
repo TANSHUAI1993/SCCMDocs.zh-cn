@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f497272431d8587010ecd7dc0a8205162d9ae7fd
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: ccd6efc583805022bab908a06d908e010b9ec9d9
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286354"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677564"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
 
@@ -62,10 +62,10 @@ ms.locfileid: "67286354"
 #### <a name="try-it-out"></a>试试看
 拒绝已批准的应用程序请求：
 
-1.  在 Configuration Manager 控制台中，[创建和部署需要批准的应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications)。
-2.  在客户端计算机上，打开“软件中心”并提交应用程序请求。
-3.  在 Configuration Manager 控制台中，批准应用程序请求。
-4.  拒绝已批准应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求     。  在功能区上，单击“拒绝”  。
+1. 在 Configuration Manager 控制台中，[创建和部署需要批准的应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications)。
+2. 在客户端计算机上，打开“软件中心”并提交应用程序请求。
+3. 在 Configuration Manager 控制台中，批准应用程序请求。
+4. 拒绝已批准应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求     。  在功能区上，单击“拒绝”  。
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>从自动升级中排除客户端
 Technical Preview 1610 引入了一种新设置，可用于排除客户端集合，使其不会自动安装更新后的客户端版本。  这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 这可以用于在升级客户端时需格外谨慎的计算机的集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
@@ -127,13 +127,13 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 ### <a name="try-it-out"></a>试试看！
 
-1.  在 Configuration Manager 控制台中，转到“资产和合规性”   > “概述”   > “合规性设置”   > >“配置项”  ，然后创建新的“配置项”  。
-2.  输入名称，然后在**不通过 Configuration Manager 客户端托管的设备的设置**下选择“Windows 8.1 和 Windows 10”  ，然后单击“下一步”  。
-3.  确保在“支持平台”  页面上选中“所有 Windows 10 (64 位)”  和“所有 Windows 10 (32位)”  ，然后单击“下一步”  。
-4.  选择 **Windows Defender** 设置组，然后单击“下一步”  。
-5.  在此页上配置所需设置，然后单击“下一步”  。
-6.  完成向导。
-7.  将此配置项添加到配置基线，并将此基线部署到运行 Windows 10 十一月更新 (1511) 或更高版本的计算机。
+1. 在 Configuration Manager 控制台中，转到“资产和合规性”   > “概述”   > “合规性设置”   > >“配置项”  ，然后创建新的“配置项”  。
+2. 输入名称，然后在**不通过 Configuration Manager 客户端托管的设备的设置**下选择“Windows 8.1 和 Windows 10”  ，然后单击“下一步”  。
+3. 确保在“支持平台”  页面上选中“所有 Windows 10 (64 位)”  和“所有 Windows 10 (32位)”  ，然后单击“下一步”  。
+4. 选择 **Windows Defender** 设置组，然后单击“下一步”  。
+5. 在此页上配置所需设置，然后单击“下一步”  。
+6. 完成向导。
+7. 将此配置项添加到配置基线，并将此基线部署到运行 Windows 10 十一月更新 (1511) 或更高版本的计算机。
 
 > [!NOTE]
 > 请记住，在部署配置基线时选中“修正不符合要求的设置”  复选框。
@@ -144,14 +144,16 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 ### <a name="try-it-out"></a>试试看！
 
-1.  在 Configuration Manager 控制台中，转到“资产和合规性”   > “概览”  >“设备”。
-2.  在“远程设备操作”  菜单中，选择“发送同步请求”  。
+1. 在 Configuration Manager 控制台中，转到“资产和合规性”   > “概览”  >“设备”。
+2. 在“远程设备操作”  菜单中，选择“发送同步请求”  。
 
 同步可能需要 5 到 10 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”  视图的“远程同步状态”  列或设备的“属性”  对话框中跟踪同步请求的状态。
 
 ## <a name="additional-security-role-support"></a>其他安全角色支持
 
-除了完全权限管理员之外，以下内置安全角色现在对“所有企业拥有的设备”  节点中的项具有完全访问权限，包括**预声明设备**、**iOS 注册配置文件**以及 **Windows 注册配置文件**：•   **资产管理员** •   **公司资源资产管理员**
+除了完全权限管理员之外，以下内置安全角色现在对所有企业拥有的设备节点中的项具有完全访问权限，包括预声明设备、iOS 注册配置文件，以及 Windows 注册配置文件     ：
+- **资产管理员**
+- **公司资源访问管理器**
 
 对 Configuration Manager 控制台中这些区域的只读访问权限仍授予给**只读分析员**角色。
 

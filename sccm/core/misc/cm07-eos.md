@@ -2,7 +2,7 @@
 title: 结束支持
 titleSuffix: Configuration Manager 2007
 description: 将于 2019 年 7 月 9 日结束对 System Center Configuration Manager 2007 和 Forefront Endpoint Protection 2010 的支持。
-ms.date: 11/05/2018
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,22 +12,25 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb030e09e9c4b7050f52346e689ccc597e0f8e90
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a26c03d14b13143e7529c0b9124d2b1e6c196b8a
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726175"
 ---
 # <a name="product-end-of-support"></a>产品支持结束
 
-适用范围：*System Center Configuration Manager 2007*
+适用范围：*System Center Configuration Manager 2007、Forefront Endpoint Protection 2010*
 
-将于 2019 年 7 月 9 日结束对 System Center Configuration Manager 2007 和 Forefront Endpoint Protection 2010 的支持。 在此日期之后，Microsoft 将不会为这些产品提供以下服务： 
+## <a name="system-center-configuration-manager-2007-and-forefront-endpoint-protection-2010-are-out-of-support"></a>不支持 System Center Configuration Manager 2007 和 Forefront Endpoint Protection 2010  
+
+2019 年 7 月 9 日已结束对 System Center Configuration Manager 2007 和 Forefront Endpoint Protection 2010 的支持   。 Microsoft 不会再为这些产品提供以下服务：
+
 - 安全更新
 - 非安全性更新
 - 辅助支持选项（免费或付费）
-- 联机技术内容更新 
+- 联机技术内容更新
 
 Microsoft 推荐以下迁移方案：
 
@@ -37,13 +40,12 @@ Microsoft 推荐以下迁移方案：
 
 - 将 Forefront Endpoint Protection 2010 单独迁移到独立的 System Center Endpoint Protection (current branch)。  
 
-
 有关详细信息，请参阅下列文章：
 
 - [Microsoft 支持文章](https://support.microsoft.com/help/4096323)  
 - [Configuration Manager 支持博客文章](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
 - [Configuration Manager Current Branch简介](/sccm/core/understand/introduction)  
 - [有关如何迁移到 Configuration Manager Current Branch 的文档](/sccm/core/migration/migrate-data-between-hierarchies)  
-    - 本文还提供了相关视频，讨论并演示常见迁移方案。
+    本文还提供了相关视频，讨论并演示常见迁移方案。
 
-依然可在 [Microsoft TechNet](https://technet.microsoft.com/library/bb735860.aspx) 上使用 Configuration Manager 2007 文档库。
+依然可使用 [Configuration Manager 2007 文档库](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\))。

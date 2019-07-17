@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4177417941d5af98b4558705cb53681410349a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 65cea36edd50af6beeae20c5ab0eaf1f7b4855fc
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135198"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818106"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 可以使用客户端安装方法或 Configuration Manager 中的自动客户端升级功能升级 Windows 计算机上的客户端。 下面的客户端安装方法是在 Windows 计算机上升级客户端软件的有效方式：  
 
@@ -34,7 +34,7 @@ ms.locfileid: "56135198"
 
   如果对使用客户端安装方法升级客户端感兴趣，请参阅[如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)，了解使用这些方法的详细信息。
 
-  从版本 1610 开始，可通过指定排除组来排除客户端的升级。 有关详细信息，请参阅[如何排除升级 Windows 计算机的客户端](exclude-clients-windows.md)。  
+  可通过指定排除组来排除客户端，使其不升级。 有关详细信息，请参阅[如何排除升级 Windows 计算机的客户端](exclude-clients-windows.md)。 已排除的客户端仍会下载和运行 CCMSETUP，但不会升级。
 
 
 > [!TIP]  
@@ -57,7 +57,7 @@ ms.locfileid: "56135198"
 -   一个或多个客户端安装文件的版本不同。  
 
 > [!NOTE]  
->  可以运行报表文件夹“站点 - 客户端信息”中的“按客户端版本列出的 Configuration Manager 客户端计数”报表，从而确定层次结构中 Configuration Manager 客户端的不同版本。  
+>  可以运行报表文件夹“站点 - 客户端信息”  中的“按客户端版本列出的 Configuration Manager 客户端计数”  报表，从而确定层次结构中 Configuration Manager 客户端的不同版本。  
 
  Configuration Manager 默认情况下会创建一个自动发送到层次结构中的所有分发点的升级包。 如果更改管理中心站点上的客户端包，例如，添加客户端语言包，则 Configuration Manager 会自动升级该包并将其分发给层次结构中的所有分发点。 如果启用了自动客户端升级，则每个客户端都将自动安装新客户端语言包。  
 
@@ -70,17 +70,17 @@ ms.locfileid: "56135198"
 
 ### <a name="to-configure-automatic-client-upgrades"></a>若要配置自动客户端升级  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 控制台中，单击“管理”  。  
 
-2.  在“管理”工作区中，展开“站点配置”，然后单击“站点”。  
+2.  在“管理”  工作区中，展开“站点配置”  ，然后单击“站点”  。  
 
-3.  在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。  
+3.  在“主页”  选项卡上的“站点”  组中，单击“层次结构设置”  。  
 
 4.  在“层次结构设置属性”  对话框的“客户端升级”  选项卡中，查看生产客户端的版本和日期并确保该版本正是你想用于升级 Windows 计算机的版本。  如果该客户端版本不是你想要的，可能需要将预生产客户端提升到生产。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
 
 5.  单击“使用生产客户端升级层次结构中的所有客户端”  ，然后单击确认对话框中的“确定”  。  
 
-6.  如果不希望将客户端升级应用到服务器，则单击“请勿升级客户端” 。  
+6.  如果不希望将客户端升级应用到服务器，则单击“请勿升级客户端”  。  
 
 7.  指定计算机在收到客户端策略后必须在其中升级客户端的天数。 系统将在此天数内按随机间隔升级客户端。 这会防止同时升级大量客户端计算机的情况出现。
 
@@ -89,9 +89,9 @@ ms.locfileid: "56135198"
     >     
     > 由于此行为，如果随机计划的更新时间不在正常的工作时间之内，则工作日结束时例行关闭的计算机可能需要比预期时间更长的时间来进行更新。
 
-7. 从版本 1610 开始，若要排除升级客户端，请单击“从升级中排除指定的客户端”，然后指定要排除的集合。
+7. 从版本 1610 开始，若要排除升级客户端，请单击“从升级中排除指定的客户端”  ，然后指定要排除的集合。
 
-8.  如果想要将客户端安装包复制到针对预留内容启用的分发点，请单击“向针对预留内容启用的分发点自动分发客户端安装包” 。  
+8.  如果想要将客户端安装包复制到针对预留内容启用的分发点，请单击“向针对预留内容启用的分发点自动分发客户端安装包”  。  
 
 9. 单击“确定”  以保存设置并关闭“层次结构设置属性”  对话框。 客户端下次下载策略时将收到这些设置。
 

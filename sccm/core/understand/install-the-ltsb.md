@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e25d164680530b88670b2589d81231f8e649d1d1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f996aa1457fc8b49f914d0f0932836b5fcbd90b9
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122958"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676222"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -28,8 +28,8 @@ ms.locfileid: "56122958"
 
 
 如果使用 1606 版基线介质，安装（或升级到）的站点为：
-- Current Branch 站点，等效于先使用 1511 版基线介质安装，然后再更新为 1606 版和 1606 修补程序汇总 (KB3186654) 的站点。
--   LTSB 站点，等效于运行 1606 版和 1606 修补程序汇总 (KB3186654) 的 Current Branch 站点。 基线介质已包括修补程序汇总。  但是，LTSB 不支持 Current Branch 中可用的所有功能，如 [System Center Configuration Manager 的 Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)中所述。
+- Current Branch 站点  ，等效于先使用 1511 版基线介质安装，然后再更新为 1606 版和 1606 修补程序汇总 (KB3186654) 的站点。
+- LTSB 站点  ，等效于运行 1606 版和 1606 修补程序汇总 (KB3186654) 的 Current Branch 站点。 基线介质已包括修补程序汇总。  但是，LTSB 不支持 Current Branch 中可用的所有功能，如 [System Center Configuration Manager 的 Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)中所述。
 
 如果不熟悉 System Center Configuration Manager 的不同分支，请参阅[应使用 Configuration Manager 的哪一个分支](which-branch-should-i-use.md)。
 
@@ -45,13 +45,13 @@ ms.locfileid: "56122958"
 有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)。
 
 ### <a name="software-assurance-expiration"></a>软件保障到期日期
-安装过程中，可以选择输入“软件保障到期日期”值。 这是一个可选值，可指定用于提醒。
+安装过程中，可以选择输入“软件保障到期日期”  值。 这是一个可选值，可指定用于提醒。
 
 > [!NOTE]
 > Microsoft 不会验证输入的到期日期，且不会将此日期用作许可证验证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，以便有资格使用这些额外的更新。    
 
-- 从 System Center Configuration Manager 1606 版基线介质运行安装程序时，可以在安装向导的“产品密钥”页指定日期值。
-- 还可以通过在 Configuration Manager 控制台中选择“层次结构设置属性” > “许可”来指定此日期。
+- 从 System Center Configuration Manager 1606 版基线介质运行安装程序时，可以在安装向导的“产品密钥”  页指定日期值。
+- 还可以通过在 Configuration Manager 控制台中选择“层次结构设置属性”   > “许可”  来指定此日期。
 
 有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)中的“软件保障协议”。
 
@@ -83,7 +83,7 @@ ms.locfileid: "56122958"
 例如，若要安装许可的 Current Branch.版本，请使用：
 
   **密钥名称：SABranchOptions**
-   -    **SAActive = 1**
+   - **SAActive = 1**
    - **= 1**
 
 
@@ -100,7 +100,7 @@ ms.locfileid: "56122958"
 
 - 在安装期间，必须选择想要安装的 Configuration Manager 分支，这样才能为软件保障协议指定详细信息。
 - 同一层次结构中的所有网站必须运行同一分支。 不支持在不同的站点具有混合使用 LTSB 和 Current Branch 的层次结构。
--   新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
+- 新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>扩展独立主站点
 可以扩展运行 LTSB 的独立主站点。  此过程与安装 Current Branch 站点的过程并无二致，但需注意一点：
@@ -114,7 +114,7 @@ ms.locfileid: "56122958"
 
 **升级到 Current Branch：**
 - 在安装期间，必须选择 Current Branch，这样才能为软件保障协议指定详细信息。
--   新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
+- 新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
 
 **升级到 LTSB：**  
 - 升级前清单中要遵循的附加步骤。
