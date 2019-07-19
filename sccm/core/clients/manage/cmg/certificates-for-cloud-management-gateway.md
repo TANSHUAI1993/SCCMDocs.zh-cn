@@ -1,5 +1,6 @@
 ---
 title: CMG 证书
+titleSuffix: Configuration Manager
 description: 了解用于云管理网关的各种数字证书。
 author: aczechowski
 ms.author: aaroncz
@@ -10,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a64a9ee6808354caaee9eadca0ad18e851a3eb71
-ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
+ms.openlocfilehash: a905420c2c1189552f1bf11b16fb92968f4f590e
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894116"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
