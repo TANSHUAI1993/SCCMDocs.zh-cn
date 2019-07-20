@@ -11,24 +11,24 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bae054d3daa5aea8e343fef05aa4578221f17b6
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: c0d98ec11f7b9003c710b5150732a9137fc1c013
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226821"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68337917"
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>启用合规性策略中的设备威胁防护规则
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 Intune with Lookout 移动威胁防护使用户能够在设备上检测移动威胁并进行风险评估。 可以在 Configuration Manager 中创建合规性策略规则，以包含确定设备是否合规的风险评估。 然后可以使用条件访问策略，根据设备合规性来允许或阻止对 Exchange、SharePoint 和其他服务的访问。
 
 若要使 Lookout 设备威胁检测作用于设备的合规性策略：
 
-* 必须在合规性策略上启用**设备威胁防护**规则。
+* 必须在符合性策略上启用**设备威胁防护**规则。
 
-* “Intune 管理员控制台”中的“Lookout 状态”页必须显示为“活动”。 请参阅[在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)主题，了解有关如何激活 Lookout 集成的详细信息和说明。
+* “Intune 管理员控制台”  中的“Lookout 状态”  页必须显示为“活动”  。 请参阅[在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)主题，了解有关如何激活 Lookout 集成的详细信息和说明。
 
 
 在合规性策略中创建设备威胁防护规则之前，建议[使用 Lookout 设备威胁防护设置订阅](set-up-your-subscription-with-lookout.md)、[在 Intune 中启用 Lookout 连接](enable-lookout-connection-in-intune.md)，以及[配置 Lookout for Work 应用](configure-and-deploy-lookout-for-work-apps.md)。 仅当设置完成后，才会执行合规性规则。
@@ -37,16 +37,16 @@ Intune with Lookout 移动威胁防护使用户能够在设备上检测移动威
 
 作为 Lookout 设备威胁防护设置过程的一部分，你会在 [Lookout 控制台](https://aad.lookout.com)中创建一个策略，该策略将各种威胁分类为高级别、中等级别和低级别。 在 Intune 合规性策略中，将使用威胁级别来设置允许的最大威胁级别。
 
-在合规性策略向导的“规则”页中，使用以下信息定义新规则：
-  * 条件：设备威胁保护最大风险级别。
-  * 值:值可以是以下值之一：
-    * **无 （安全）**:这是最安全的。 这意味着设备不能有任何威胁。 如果发现了任何级别的威胁，设备都将视为不合规。
-    * **低**：如果仅存在低级威胁，则，设备被评估为符合。 高于此级别的威胁均会使设备处于不合规状态。
-    * **中等**:设备被评估为符合的设备上发现的威胁为低级或中级，则。 如果检测到高级别威胁，则设备会被确定为不合规。
-    * **高**:这是最不安全。 实际上，这将允许所有威胁级别，并且可能只有在将此解决方案用于报告用途时才有用。
+在合规性策略向导的“规则”  页中，使用以下信息定义新规则：
+* 状态设备威胁防护最大风险级别。
+* 值：该值可以是下列值之一:
+  * **无 (安全)** :这是最安全的。 这意味着设备不能有任何威胁。 如果发现了任何级别的威胁，设备都将视为不合规。
+  * **低**：如果仅存在低级威胁, 则将设备评估为符合。 高于此级别的威胁均会使设备处于不合规状态。
+  * **中**:如果设备上发现的威胁为低级别或中等级别, 设备将评估为符合。 如果检测到高级别威胁，则设备会被确定为不合规。
+  * **高**:这是最不安全的。 实际上，这将允许所有威胁级别，并且可能只有在将此解决方案用于报告用途时才有用。
 
 如果为 Office 365 和其他服务创建条件访问策略，则应将上述合规性评估纳入考虑范围，并且在威胁解决前阻止非合规性设备访问公司资源。
 
-设备威胁防护状态显示在“监视”工作区中的“安全性”节点上。
+设备威胁防护状态显示在“监视”  工作区中的“安全性”  节点上。
 可视化图表中显示了各种威胁级别的状态摘要。 可以单击图表的各个部分查看详细信息，如按平台报告为不合规的设备数量和报告的任何错误。
-还可以在“资产和符合性”工作区中的“设备”下查看单个设备状态。  可以添加“设备威胁合规性”和“设备威胁级别”列，以查看状态。  默认情况下，这些列不会显示。
+还可以在“资产和符合性”  工作区中的“设备”  下查看单个设备状态。  可以添加“设备威胁合规性”  和“设备威胁级别”  列，以查看状态。  默认情况下，这些列不会显示。

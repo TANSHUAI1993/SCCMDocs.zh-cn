@@ -11,27 +11,27 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b999dddc048c1afe0dd4212ed9b99ebc9c991ff0
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 18879c37bf51adda20dd1cf7bb7a52960312951d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678862"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338031"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>如何通过导入证书详细信息创建 PFX 证书配置文件
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 
 本文介绍如何通过从外部证书导入凭据来创建证书配置文件。  
 
 [证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)提供有关创建和配置证书配置文件的一般信息。 本主题强调了有关与 PFX 证书相关的证书配置文件的一些具体信息。
 
-- Configuration Manager 可管理各种适用于不同设备和操作系统的证书存储。  其中包括:
+- Configuration Manager 可管理各种适用于不同设备和操作系统的证书存储。  这些问题包括：
 
-  -   iOS 和 MacOS/OSX
-  -   Android 和 Android for Work
-  -   Windows 10，包括 Windows 10 移动版。
+  - iOS 和 MacOS/OSX
+  - Android 和 Android for Work
+  - Windows 10，包括 Windows 10 移动版。
 
 若要了解详细信息，请参阅[证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)。
 
@@ -39,7 +39,7 @@ ms.locfileid: "67678862"
 System Center Configuration Manager 允许导入证书凭据，然后将个人信息交换 (.pfx) 文件导入到用户设备。 PFX 文件可以用于生成特定于用户的证书以支持加密数据交换。
 
 > [!TIP]  
->  描述此过程的分步演练会出现在 [如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)。  
+> 描述此过程的分步演练会出现在 [如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)。  
 
 ## <a name="create-import-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>创建、导入和部署个人信息交换 (PFX) 证书配置文件  
 
@@ -52,15 +52,15 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
 
-    -   **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
+    - **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
 
-    -   **描述**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
+    - **描述**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
 
-    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择下列选项之一：  
+    - **指定想要创建的证书配置文件的类型**：对于 PFX 证书, 请选择下列选项之一:  
 
-        -   **个人信息交换- PKCS #12 (PFX) 设置 - 导入**：通过以编程方式导入现有证书的信息创建证书配置文件。  
+      - **个人信息交换- PKCS #12 (PFX) 设置 - 导入**：通过编程方式导入现有证书中的信息来创建证书配置文件。  
 
-        -   **个人信息交换-PKCS #12 (PFX) 设置-创建**:创建 PFX 证书配置文件使用的证书颁发机构提供的凭据。  若要了解详细信息，请参阅[如何使用证书颁发机构创建 PFX 证书配置文件](../../mdm/deploy-use/create-pfx-certificate-profiles.md)。
+      - **个人信息交换-PKCS #12 (PFX) 设置-创建**:使用证书颁发机构提供的凭据创建 PFX 证书配置文件。  若要了解详细信息，请参阅[如何使用证书颁发机构创建 PFX 证书配置文件](../../mdm/deploy-use/create-pfx-certificate-profiles.md)。
 
 
 ### <a name="create-a-pfx-certificate-profile-for-the-imported-credentials"></a>为导入的凭据创建 PFX 证书配置文件
@@ -89,9 +89,9 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 Configuration Manager 2012 SP2 中添加的创建 PFX 脚本向该 SDK 添加 SMS_ClientPfxCertificate 类。 此类包括以下方法：  
 
--   `ImportForUser`  
+- `ImportForUser`  
 
--   `DeleteForUser`  
+- `DeleteForUser`  
 
 下面的示例将凭据导入 PFX 证书配置文件。
 
@@ -113,10 +113,10 @@ Configuration Manager 2012 SP2 中添加的创建 PFX 脚本向该 SDK 添加 SM
 
 若要使用此示例，请更新以下脚本变量：  
 
-   -   **blob**\ - PFX base64 加密的 blob  
-   -   **$Password** - PFX 文件的密码  
-   -   **$ProfileName** - PFX 配置文件的名称  
-   -   **ComputerName** - 主机名   
+- **blob**\ - PFX base64 加密的 blob  
+- **$Password** - PFX 文件的密码  
+- **$ProfileName** - PFX 配置文件的名称  
+- **ComputerName** - 主机名   
 
 ## <a name="see-also"></a>另请参阅
 [创建新的证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)，此文档将引导你完成创建证书配置文件向导。

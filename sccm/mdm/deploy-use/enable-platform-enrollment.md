@@ -11,22 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e9c9cd6f881fd43c6d6824fbca5dc05f00fc5ea
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8633770f0bd6beaec8bddb38688a22fc677bfc51
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136739"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338087"
 ---
 # <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 启用平台注册
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 不同的设备平台需要不同的配置才能启用设备注册。
-  - [iOS 和 Mac 注册设置](enroll-hybrid-ios-mac.md):获取 Apple MDM Push certificate
+- [iOS 和 Mac 注册设置](enroll-hybrid-ios-mac.md):获取 Apple MDM Push certificate
 
-  - [Windows 注册设置](enroll-hybrid-windows.md):配置 DNS 和为 Windows 电脑、 Windows 10 移动版和 Windows Phone 设备启用注册
+- [Windows 注册设置](enroll-hybrid-windows.md):为 Windows 电脑、Windows 10 移动版和 Windows Phone 设备配置 DNS 并启用注册
 
-  - [Android](enroll-hybrid-android.md):Android 设备无需其他步骤即可启用注册
+- [Android](enroll-hybrid-android.md):Android 设备不需要额外的步骤即可启用注册
 
 启用 MDM 管理后，便可以指定每个用户可注册的设备数量，每个用户最多可注册 15 个设备。

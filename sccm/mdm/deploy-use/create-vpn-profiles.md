@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b653d8c60299f54a0e54cee0792066ccd8dba65
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: c7312346550860484dc99097963b5fd07783abbd
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678141"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340316"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的移动设备用户。 如果部署这些设置，可以最大限度地减少最终用户在连接公司网络上的资源时需要完成的工作。  
 
@@ -36,30 +36,30 @@ ms.locfileid: "67678141"
 
 下表展示了每个设备平台支持的连接类型：  
 
- |连接类型|iOS 和 macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 桌面和移动版|  
- |---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
- |Cisco AnyConnect|是<sup>1</sup>|是|否|否|否|否|否|
- |Cisco (IPSec)|仅限 iOS|否|否|否|否|否|否|  
- |脉冲安全|是|是|是|否|是|是|是|  
- |F5 Edge Client|是|是|是|否|是|是|是|  
- |Dell SonicWALL Mobile Connect|是|是|是|否|是|是|是|  
- |Check Point Mobile VPN|是|是|是|否|是|是|是|  
- |Microsoft SSL (SSTP)|否|否|是|是|是|否|否|  
- |Microsoft Automatic|否|否|是|是|是|否|是|  
- |IKEv2|是（自定义策略，iOS 9 及更高版本）|否|是|是|是|是|是|  
- |PPTP|是|否|是|是|是|否|是|  
- |L2TP|是|否|是|是|是|否|是 (OMA-URI)|  
+|连接类型|iOS 和 macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 桌面和移动版|  
+|---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
+|Cisco AnyConnect|是<sup>1</sup>|是|否|否|否|否|否|
+|Cisco (IPSec)|仅限 iOS|否|否|否|否|否|否|  
+|脉冲安全|是|是|是|否|是|是|是|  
+|F5 Edge Client|是|是|是|否|是|是|是|  
+|Dell SonicWALL Mobile Connect|是|是|是|否|是|是|是|  
+|Check Point Mobile VPN|是|是|是|否|是|是|是|  
+|Microsoft SSL (SSTP)|否|否|是|是|是|否|否|  
+|Microsoft Automatic|否|否|是|是|是|否|是|  
+|IKEv2|是（自定义策略，iOS 9 及更高版本）|否|是|是|是|是|是|  
+|PPTP|是|否|是|是|是|否|是|  
+|L2TP|是|否|是|是|是|否|是 (OMA-URI)|  
 
-<sup>1</sup>从版本 1802 开始，使用情况的 Cisco AnyConnect 连接类型而异。<!--1357393-->  
-   - 对于以下版本的 VPN 配置文件，请使用“Cisco 旧式 AnyConnect”选项  ：
-       - 带有 Cisco AnyConnect 4.0.5 或更低版本的 iOS
-       - 带有 Cisco AnyConnect 任何版本的 macOS
-   - 对于以下版本的 VPN 配置文件，请使用“Cisco AnyConnect”选项  ：
-       - 带有 Cisco AnyConnect 4.0.7 或更高版本的 iOS
+<sup>1</sup>从版本1802开始, Cisco AnyConnect 连接类型的使用情况各不相同。<!--1357393-->  
+- 对于以下版本的 VPN 配置文件，请使用“Cisco 旧式 AnyConnect”选项  ：
+  - 带有 Cisco AnyConnect 4.0.5 或更低版本的 iOS
+  - 带有 Cisco AnyConnect 任何版本的 macOS
+- 对于以下版本的 VPN 配置文件，请使用“Cisco AnyConnect”选项  ：
+  - 带有 Cisco AnyConnect 4.0.7 或更高版本的 iOS
 
-     > [!Tip]  
-     > 适用于 iOS 的 Cisco AnyConnect 4.0.07x 和更高版本作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次被引入版本 1802。 从[更新 4163547](https://support.microsoft.com/help/4163547) 开始到版本 1802，此功能不再属于预发行功能。  
-  
+  > [!Tip]  
+  > 适用于 iOS 的 Cisco AnyConnect 4.0.07x 和更高版本作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次被引入版本 1802。 从[更新 4163547](https://support.microsoft.com/help/4163547) 开始到版本 1802，此功能不再属于预发行功能。  
+
   
 > [!Note]  
 > 适用于 iOS 的 F5 Access 版本 3.0 及更高版本不支持混合 MDM 中的 VPN 配置文件。 本产品也称为 F5 Access 2018。 如果需要为此 VPN 客户端创建 VPN 配置文件，请使用 Intune 独立版。 未来版本的 iOS，包括版本 12，将不支持 F5 Access 版本 2.1 或更低版本。 有关详细信息，请参阅 [Microsoft Intune 支持团队博客](https://aka.ms/iOS12_and_VPN)。
@@ -69,21 +69,21 @@ ms.locfileid: "67678141"
 
 以下选项适用于 Windows 10 上的所有连接类型：
 
-- **连接到公司 Wi-fi 网络时绕过 VPN**:在设备连接到公司 Wi-fi 网络时，不使用 VPN 连接。 输入用于确定设备是否已连接公司网络的受信任网络名称。  
+- **连接到公司 wi-fi 网络时绕过 VPN**:当设备连接到公司 Wi-fi 网络时, 将不使用 VPN 连接。 输入用于确定设备是否已连接公司网络的受信任网络名称。  
 
-- **网络通信规则**:设置协议、 本地端口、 远程端口和地址范围，以便为 VPN 连接启用。  
+- **网络流量规则**:设置要为 VPN 连接启用的协议、本地端口、远程端口和地址范围。  
 
-     > [!Note]  
-     > 如果未创建网络流量规则，则会启用所有协议、端口和地址范围。 创建流量规则后，VPN 连接只会使用此规则或其他规则中指定的协议、端口和地址范围。  
-  
+  > [!Note]  
+  > 如果未创建网络流量规则，则会启用所有协议、端口和地址范围。 创建流量规则后，VPN 连接只会使用此规则或其他规则中指定的协议、端口和地址范围。  
+
 - **路由**:使用 VPN 连接的路由。 创建超过 60 个路由可能会导致策略失败。  
 
 - **DNS 服务器**:在建立 VPN 连接后连接所使用的 DNS 服务器。  
 
-- **自动连接到 VPN 的应用**:可以将应用添加或导入的自动使用 VPN 连接的应用列表。 应用的类型决定应用标识符。 对于桌面应用，请提供应用的文件路径。 对于通用的应用，请提供包系列名称 (PFN)。 若要了解如何查找应用的 PFN，请参阅[查找每个应用 VPN 的包系列名称](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md)。  
+- **自动连接到 VPN 的应用**:可以添加应用或导入自动使用 VPN 连接的应用列表。 应用的类型决定应用标识符。 对于桌面应用，请提供应用的文件路径。 对于通用的应用，请提供包系列名称 (PFN)。 若要了解如何查找应用的 PFN，请参阅[查找每个应用 VPN 的包系列名称](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md)。  
 
-     > [!IMPORTANT]  
-     > 保护编译用于每应用 VPN 配置的关联应用的所有列表。 如果未经授权的用户更改你的列表，且你将此表导入每应用 VPN 应用列表中，则可能向不应拥有访问权限的应用授予 VPN 访问权限。 保护应用列表的一种方法是使用访问控制列表 (ACL)。  
+  > [!IMPORTANT]  
+  > 保护编译用于每应用 VPN 配置的关联应用的所有列表。 如果未经授权的用户更改你的列表，且你将此表导入每应用 VPN 应用列表中，则可能向不应拥有访问权限的应用授予 VPN 访问权限。 保护应用列表的一种方法是使用访问控制列表 (ACL)。  
 
 
 
@@ -95,8 +95,8 @@ ms.locfileid: "67678141"
 2. 在功能区中单击“创建 VPN 配置文件”  。  
 
 3. 在“常规”页上，指定“名称”，然后选择“VPN 配置文件类型”    。   
-     > [!NOTE]  
-     > 使用 Windows 10 VPN 功能的 VPN 配置文件的名称既不能采用 Unicode 格式，也不能包含特殊字符。
+    > [!NOTE]  
+    > 使用 Windows 10 VPN 功能的 VPN 配置文件的名称既不能采用 Unicode 格式，也不能包含特殊字符。
 
 
 4. 如果“支持的平台”页可用，请为先前指定的 VPN 配置文件类型选择操作系统版本  。 选择“全选”以在所有可用的操作系统版本上安装 VPN 配置文件  。  
@@ -121,16 +121,16 @@ ms.locfileid: "67678141"
 
       可能需要指定更多信息，具体视选择的选项而定，比如：  
 
-     - **请记住在每次登录的用户凭据**:以便用户无需输入其每次连接的时记住用户凭据。  
+     - **每次登录时记住用户凭据**:将记住用户凭据, 这样用户就不必在每次连接时都输入凭据。  
 
-     - **选择用于客户端身份验证的客户端证书**：选择以前创建的客户端[SCEP 证书](create-pfx-certificate-profiles.md)用于 VPN 连接的身份验证。   
+     - **选择用于客户端身份验证的客户端证书**：选择以前创建的用于对 VPN 连接进行身份验证的客户端[SCEP 证书](create-pfx-certificate-profiles.md)。   
 
        > [!NOTE]  
-       >  对于 iOS 设备，选择的 SCEP 配置文件在 VPN 配置文件中嵌入。 对于其他平台，可添加适用性规则确保仅在该证书存在或符合要求时才安装 VPN 配置文件。  
+       > 对于 iOS 设备，选择的 SCEP 配置文件在 VPN 配置文件中嵌入。 对于其他平台，可添加适用性规则确保仅在该证书存在或符合要求时才安装 VPN 配置文件。  
        >   
-       >  如果指定的 SCEP 证书不符合要求或尚未部署，则不会在设备上安装 VPN 配置文件。
+       > 如果指定的 SCEP 证书不符合要求或尚未部署，则不会在设备上安装 VPN 配置文件。
        >  
-       >  连接类型为“PPTP”时，运行 iOS 的设备对身份验证方法仅支持“RSA SecurID”和“MSCHAP v2”。 若要避免报告错误，请将单独的 PPTP VPN 配置文件部署到运行 iOS 的设备中。   
+       > 连接类型为“PPTP”时，运行 iOS 的设备对身份验证方法仅支持“RSA SecurID”和“MSCHAP v2”。 若要避免报告错误，请将单独的 PPTP VPN 配置文件部署到运行 iOS 的设备中。   
 
      - **条件性访问**  
        - 选择“启用此 VPN 连接的条件性访问”  可以确保连接到 VPN 的设备在连接前进行了条件性访问合规性测试。 有关详细信息，请参阅[设备符合性策略](/sccm/protect/deploy-use/device-compliance-policies)。  
@@ -146,7 +146,7 @@ ms.locfileid: "67678141"
 7. 在“创建 VPN 配置文件向导”  的“代理设置”  页上，如果 VPN 连接使用的是代理服务器，请选中“配置此 VPN 配置文件的代理设置”  框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
 
    > [!NOTE]  
-   >  在 Windows 8.1 计算机上，只有在使用此计算机连接 VPN 之后，VPN 配置文件才会显示代理信息。  
+   > 在 Windows 8.1 计算机上，只有在使用此计算机连接 VPN 之后，VPN 配置文件才会显示代理信息。  
 
 
 8. 如有必要，请进一步配置 DNS 设置。  
@@ -160,6 +160,6 @@ ms.locfileid: "67678141"
 
  使用以下文章来帮助你规划、设置、操作和维护 VPN 配置文件：  
 
--   [VPN 配置文件的先决条件](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
+- [VPN 配置文件的先决条件](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
--   [VPN 配置文件的安全和隐私](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+- [VPN 配置文件的安全和隐私](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)

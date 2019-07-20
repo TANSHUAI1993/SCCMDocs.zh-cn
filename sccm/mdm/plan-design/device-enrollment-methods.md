@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eda9de25d3bdb1a1563d8b74e78ddcad259683f6
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 571334f94d1fcd3f53219b406185af3015356e3a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678715"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338052"
 ---
 # <a name="overview-of-device-enrollment-methods"></a>设备注册方法概述
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用对象：  System Center Configuration Manager (Current Branch)
 
 使用 Intune 扩展 Configuration Manager 后，可注册和管理公司拥有的设备或授予用户注册其个人设备的权限。 还可以使用 Configuration Manager 通过 Intune 管理公司拥有的设备。
 
@@ -60,18 +60,18 @@ ms.locfileid: "67678715"
 
 ### <a name="dep"></a>DEP
 Apple 设备注册计划 (DEP) 管理允许用户创建“无线”策略并将其部署到通过 DEP 购买和管理的 iOS 设备。 设备将在用户第一次打开设备并运行 iOS 设置助理时注册。 此方法支持“iOS 受监督”  模式，该模式反过来可启用：
-  - 锁定的注册
-  - 条件性访问
-  - 破解检测
-  - 移动应用程序管理
+- 锁定的注册
+- 条件性访问
+- 破解检测
+- 移动应用程序管理
 
 详细了解 [DEP](../deploy-use/ios-device-enrollment-program-for-hybrid.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 
 ### <a name="usb-sa"></a>USB-SA
 通过 USB 连接的“设置助理注册”。 管理员创建策略并将其导出到 Apple Configurator。 使用策略准备好通过 USB 连接的公司拥有的设备。 管理员必须手动注册每个设备。 用户收到其设备并运行设置助理，便可注册其设备。 此方法支持“iOS 受监督”  模式，该模式反过来可启用：
-  - 条件性访问
-  - 破解检测
-  - 移动应用程序管理
+- 条件性访问
+- 破解检测
+- 移动应用程序管理
 
 详细了解[使用 Apple Configurator 进行设置助理注册](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 

@@ -1,8 +1,8 @@
 ---
 title: 桌面分析
 titleSuffix: Configuration Manager
-description: 与 Configuration Manager 集成的 Desktop 分析服务概述。
-ms.date: 07/12/2019
+description: 与 Configuration Manager 集成的桌面分析服务的概述。
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,91 +11,94 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45a8e71a3a8777686547ef4e3e05ef868b459792
-ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
+ms.openlocfilehash: 154c142b285c58da714193c964b353dc1e173481
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860877"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339260"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
 > [!Note]  
-> 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
+> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-桌面 Analytics 是一个集成使用 Configuration Manager 的基于云的服务。 该服务提供见解和智能，以便做出更明智的决策的 Windows 客户端的更新准备情况。 它将从你的组织数据与从数百万台设备连接到 Microsoft 云服务聚合的数据相结合。
+桌面分析是一项基于云的服务, 可与 Configuration Manager 集成。 本服务为你提供了见解和情报, 使你可以更明智地决定 Windows 客户端的更新准备情况。 它将组织的数据与与 Microsoft 云服务连接的数百万台设备聚合的数据组合在一起。
 
-使用桌面 Analytics 与 Configuration Manager 到：  
+使用带有 Configuration Manager 的桌面分析:  
 
-- 创建你的组织中运行应用的清单  
+- 创建在你的组织中运行的应用的清单  
 
-- 评估与最新的 Windows 10 功能更新的应用程序兼容性  
+- 评估应用程序兼容性和最新的 Windows 10 功能更新  
 
-- 确定兼容性问题，并接收基于云的数据的见解的缓解建议  
+- 确定兼容性问题, 并根据启用了云的数据见解接收缓解建议  
 
-- 创建表示整个应用程序和驱动程序空间在最小的一组设备的试验组  
+- 在一组最小的设备上创建代表整个应用程序和驱动程序的试点组  
 
-- 将 Windows 10 部署到试验和生产管理设备  
+- 将 Windows 10 部署到试点和生产管理的设备  
 
-![在 Azure 门户中的桌面分析主页的屏幕截图](media/portal-home.png)
+![Azure 门户中的桌面分析主页的屏幕截图](media/portal-home.png)
 
 > [!Note]  
-> 桌面分析是一种 Windows Analytics 的后续任务。 *Windows Analytics*服务包括升级就绪情况、 更新符合性和设备运行状况。
+> 桌面分析是 Windows Analytics 的后续版本。 *Windows Analytics*服务包含升级就绪情况、更新符合性和设备健康状况。
 >
-> 所有这些功能结合*Desktop 分析*服务。 桌面分析也更加紧密的集成使用 Configuration Manager。
+> 所有这些功能都已合并到*桌面分析*服务中。 桌面分析还与 Configuration Manager 紧密集成。
 
 
 
 ## <a name="benefits"></a>优点
 
-许多客户会遇到与获取和了解最新的 Windows 10 的挑战。 主要的挑战测试应用程序。 此过程为通常手动操作。 它是适用于 IT 管理员和应用程序所有者以持续分析现有的应用程序非常耗时。 然后修正出现的任何问题。
+许多客户在使用 Windows 10 时都面临着挑战。 主要的难题是测试应用程序。 此过程通常是手动的。 IT 管理员和应用程序所有者在不断分析现有应用程序时需要花费很长时间。 然后修正出现的任何问题。
 
-桌面分析提供以下优势：
+桌面分析具有以下优势:
 
-- **设备和软件清单**:清单的关键因素，如应用和 Windows 的版本。  
+- **设备和软件清单**:关键因素 (如应用和 Windows 版本) 的清单。  
 
-- **试验标识**:设备，可提供因素范围最广范围的最小集的标识。 它主要关注对试运行 Windows 升级和更新最重要的因素。 确保来说，试点更大的成功，可更快、 更有信心地进入生产环境中广泛部署。  
+- **试点标识**:提供最广泛的各种因素的最小设备集的标识。 它侧重于对 Windows 升级和更新的试验最为重要的因素。 确保试验更成功后, 可以更快、更自信地在生产环境中进行广泛的部署。  
 
-- **查明问题**:使用聚合的市场数据以及你环境中的数据，该服务预测潜在问题并了解最新的 Windows。 这样会建议可能的缓解措施。  
+- **问题标识**:使用聚合的市场数据以及环境中的数据, 服务可预测使用 Windows 获取和保持最新的潜在问题。 然后, 它会建议可能的缓解措施。  
 
-- **Configuration Manager 集成**:服务云启用现有的本地基础结构。 使用此数据和分析来部署和管理 Windows 设备上。  
+- **Configuration Manager 集成**:服务云-启用你的现有本地基础结构。 使用此数据和分析在设备上部署和管理 Windows。  
 
 
 
 ## <a name="prerequisites"></a>先决条件
 
-若要使用 Desktop 分析，请确保你的环境满足以下先决条件。
+若要使用桌面分析, 请确保你的环境满足以下先决条件。
 
 
 ### <a name="technical"></a>技术
 
-- 有效的 Azure 订阅，使用[全局管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)权限  
+- 有效的 Azure 订阅, 具有[全局管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)权限。 不支持[Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
 
     > [!Important]  
-    > 桌面分析当前提供作为 Office 365 服务，需要在 Azure AD 租户中的 Office 365 订阅。 这可能不是在将来的要求。
+    > 桌面分析目前以 Office 365 服务的形式提供, 并且需要 Azure AD 租户中的 Office 365 订阅。 将来可能不需要这样做。
 
-    - **工作区所有者**或**参与者**权**设置工作区**，和以下角色：  
+    - **工作区所有者**或**参与者**权限**设置你的工作区**, 以及以下角色:  
 
-      - [**Desktop 分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)角色。
+      - [**桌面分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)角色。
 
-      - [**Log Analytics 参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上要使用现有的工作区或现有资源组中创建新的工作区的资源组。
+      - [**Log Analytics**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)资源组上的参与者和[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)使用现有的工作区, 或在现有的资源组中创建新的工作区。
 
-      - [**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)，或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上的权限若要创建新的资源组中的工作区的订阅。  
+      - 用于在新资源组中创建工作区的订阅的[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)和[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)权限。  
 
-- Configuration Manager，版本 1902年更新汇总 (4500571) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+- Configuration Manager, 版本1902更新汇总 (4500571) 或更高版本。 有关详细信息, 请参阅[Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 
-    - **完全权限管理员**角色在 Configuration Manager  
-
-- 运行 Windows 7、 Windows 8.1 或 Windows 10 设备  
-
-    - 安装最新的更新。 有关详细信息，请参阅[更新设备](/sccm/desktop-analytics/enroll-devices#update-devices)。  
-
-    - 设备还需要让 Configuration Manager 客户端版本 1902年更新汇总 (4500571) 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+    - Configuration Manager 中的**完全权限管理员**角色  
 
     > [!Note]  
-    > 桌面分析不支持升级到 Windows 10 的长期维护服务频道 (LTSC)。 有关详细信息，请参阅[作为服务概述 Windows](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
+    > 桌面分析支持每个 Azure Active Directory (Azure AD) 租户和 Configuration Manager 层次结构一个商业 ID。 如果你的环境中有多个层次结构, 请使用不同的商业 Id 并 Azure AD 租户。<!-- 4958160 -->
+
+- 运行 Windows 7、Windows 8.1 或 Windows 10 的设备  
+
+    - 安装最新更新。 有关详细信息, 请参阅[更新设备](/sccm/desktop-analytics/enroll-devices#update-devices)。  
+
+    - 设备还需要具有更新汇总 (4500571) 或更高版本的 Configuration Manager 客户端版本1902。 有关详细信息, 请参阅[Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+
+    > [!Note]  
+    > 桌面分析不支持升级到 Windows 10 长期服务通道 (LTSC)。 有关详细信息, 请参阅[Windows 即服务概述](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
     >
-    > 桌面 Analytics 设计为最佳支持就地升级方案。 如果你需要从 32 位到 64 位体系结构，如做出重大更改，使用图像处理方案。 桌面进行分析洞察经典操作系统部署方案中，仍然有价值，但可以忽略就地升级特定指南。 有关详细信息，请参阅[部署企业操作系统使用 Configuration Manager 的方案](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems)。
+    > 桌面分析旨在最大程度地支持就地升级方案。 如果需要进行重大更改 (例如从32位到64位体系结构的更改), 请使用映像方案。 桌面分析见解在这些经典 OS 部署方案中仍有价值, 但你可以忽略就地升级特定的指南。 有关详细信息, 请参阅[部署具有 Configuration Manager 的企业操作系统的方案](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems)。
 
 - Windows 诊断数据。 有关详细信息，请参阅下列文章：  
 
@@ -103,16 +106,16 @@ ms.locfileid: "67860877"
 
     - [桌面分析隐私](/sccm/desktop-analytics/privacy)  
 
-- 从设备到 Microsoft 公有云网络连接。 有关详细信息，请参阅[如何启用数据共享](/sccm/desktop-analytics/enable-data-sharing)  
+- 从设备到 Microsoft 公有云的网络连接。 有关详细信息, 请参阅[如何启用数据共享](/sccm/desktop-analytics/enable-data-sharing)  
 
 
 ### <a name="licensing"></a>许可
 
-桌面分析需要以下许可证订阅之一：
+桌面分析需要以下许可证订阅之一:
 
-- Windows 10 企业版 E3 或 E5;或 Microsoft 365 F1、 E3 或 E5  
+- Windows 10 企业版 E3 或 E5;或 Microsoft 365 F1、E3 或 E5  
 
-- Windows 10 教育版 A3 或 A5;Microsoft 365 A3 或 A5  
+- Windows 10 教育版 A3 或 A5;或 Microsoft 365 A3 或 A5  
 
 - Windows VDA E3 或 E5  
 
@@ -121,6 +124,6 @@ ms.locfileid: "67860877"
 
 ## <a name="next-steps"></a>后续步骤
 
-以下教程提供了开始使用桌面 Analytics 和 Configuration Manager 的分步指南：  
+以下教程提供了有关桌面分析和 Configuration Manager 入门的分步指南:  
 
-- [将 Windows 10 部署到试运行](/sccm/desktop-analytics/tutorial-windows10)  
+- [将 Windows 10 部署到试点](/sccm/desktop-analytics/tutorial-windows10)  
