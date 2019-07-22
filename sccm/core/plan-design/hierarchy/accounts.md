@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53505aed5fcdcfcaf3603250a40f484cd49c762f
-ms.sourcegitcommit: 5e43c0c6b0b1f449e596f59ceaa92a9b6ca194cc
+ms.openlocfilehash: 254639f905ca52f922d84fd19366807c3be2c339
+ms.sourcegitcommit: d74415e49a6db28ee5198440c7f321529a9f7f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572760"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68312485"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
@@ -601,16 +601,16 @@ Configuration Manager 自动在 SQL 中创建和维护以下用户对象。  这
 >  修改或删除这些对象可能会导致 Configuration Manager 环境中出现严重问题。  建议不要对这些对象进行任何更改。
 
 
-### <a name="smsdbuserreadonly"></a>smsdbuser_ReadOnly
+### ### <a name="smsdbuser_readonly"></a>smsdbuser_ReadOnly
 
 此对象用于在只读上下文中运行查询。  此对象与多个存储过程结合使用。
 
 
-### <a name="smsdbuserreadwrite"></a>smsdbuser_ReadWrite
+### <a name="smsdbuser_readwrite"></a>smsdbuser_ReadWrite
 
 此对象用于为动态 SQL 语句提供权限。
 
 
-### <a name="smsdbuserreportschema"></a>smsdbuser_ReportSchema
+### <a name="smsdbuser_reportschema"></a>smsdbuser_ReportSchema
 
 此对象用于运行 SQL 报告执行。  以下存储过程与此函数结合使用：spSRExecQuery。

@@ -1,6 +1,6 @@
 ---
 title: 控制台中文档
-ms.date: 06/10/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77402bbaf5ce0f0f756418be38b6435d70e9e4d
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 4cf8cd6d750549b307530dff17269e32356e7057
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894152"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,7 @@ ms.locfileid: "67726202"
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager 文档
 
-上次更新时间：  2019/06/10
+上次更新时间：  2019 年 6 月 15 日
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -54,20 +54,20 @@ ms.locfileid: "67726202"
 
 ## <a name="trending"></a>趋势
 
-2019 年 5 月 1 日至 5 月 31 日期间最热门的文章。
+2019 年 6 月 1 日至 6 月 30 日期间最热门的文章。
 
 | 页面查看次数 | 标题 |
 |------------|-------|
-| 21370 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17017 | [版本 1902 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 12122 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11906 | [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 11463 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 10421 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9138 | [用于 1902 的清单](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
-| 8944 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 8508 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
-| 8399 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 20786 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17237 | [如何启用 TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 12788 | [版本 1902 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 12418 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11553 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9889 | [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 8781 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8464 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8349 | [任务序列步骤](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
+| 8021 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -75,16 +75,16 @@ ms.locfileid: "67726202"
 
 | 上次审阅时间 | 标题 |
 |---------------|-------|
-| 2019/5/31 | [如何启用 TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 2019/5/29 | [预配模式](https://docs.microsoft.com/sccm/osd/understand/provisioning-mode) |
-| 2019/5/29 | [排除应用部署故障](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-application-deployment) |
-| 2019/5/29 | [审批 - CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest) |
-| 2019/5/29 | [导入和导出应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/import-export-applications) |
-| 2019/5/28 | [版本 1902 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 2019/5/28 | [增强型 HTTP](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http) |
-| 2019/5/24 | [Azure AD 身份验证工作流](https://docs.microsoft.com/sccm/core/clients/manage/azure-ccmsetup) |
-| 2019/5/24 | [SetDPMaintenanceMode 方法](https://docs.microsoft.com/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo) |
-| 2019/5/21 | [已弃用的功能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 2019 年 6 月 28 日 | [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 2019 年 6 月 28 日 | [桌面分析疑难解答](https://docs.microsoft.com/sccm/desktop-analytics/troubleshooting) |
+| 2019 年 6 月 27 日 | [共同管理的途径](https://docs.microsoft.com/sccm/comanage/quickstart-paths) |
+| 2019 年 6 月 20 日 | [版本 1902 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 2019 年 6 月 20 日 | [客户端设置](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
+| 2019 年 6 月 20 日 | [创建和运行脚本](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts) |
+| 2019 年 6 月 20 日 | [Configuration Manager 控制台](https://docs.microsoft.com/sccm/core/servers/manage/admin-console) |
+| 2019 年 6 月 19 日 | [CMG 常见问题解答](https://docs.microsoft.com/sccm/core/clients/manage/cmg/cloud-management-gateway-faq) |
+| 2019 年 6 月 19 日 | [Internet 访问要求](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
+| 2019 年 6 月 17 日 | [发行说明](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
 
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 

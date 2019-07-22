@@ -2,7 +2,7 @@
 title: 监视客户端
 titleSuffix: Configuration Manager
 description: 了解有关如何在 Configuration Manager 中监视客户端的详细指南
-ms.date: 05/31/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55fd698ac5213a3b11b207d0625d953f687e319f
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: 9b3c3f52f15ba4d61a589833e43144ce5ecb6de0
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894224"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>如何在 Configuration Manager 中监视客户端
 
@@ -70,6 +70,96 @@ Configuration Manager 提供以下类型的信息作为客户端状态：
     - **上次脱机时间**：表示状态更改为脱机时的时间  
 
 3. 从列表窗格选择单个客户端，从详细信息窗格查看详细状态。 此信息包括客户端活动和客户端检查状态。  
+
+
+## <a name="bkmk_health"></a>客户端运行状况仪表板
+
+<!--3599209-->
+可部署软件更新和其他应用，以帮助保护环境，但这些部署只能到达正常运行的客户端。 运行不正常的 Configuration Manager 客户端会对总体符合性产生不利影响。 根据分母来确定客户端运行状况可能有难度：在管理范围内总共应该有多少设备？ 例如，如果发现 Active Directory 中的所有系统，即便部分记录用于已停用的计算机，但此过程仍会使分母增大。
+
+从 1902 版开始，可在环境中查看具有 Configuration Manager 客户端运行状况信息的仪表板。 查看客户端运行状况、方案运行状况和常见错误。 按多个属性筛选视图，以查看按 OS 和客户端版本列出的所有潜在问题。
+
+在 Configuration Manager 控制台中，转到“监视”  工作区。 展开“客户端状态”，然后选择“客户端运行状况仪表板”节点   。
+
+![客户端运行状况仪表板屏幕截图](media/3599209-client-health-dashboard.png)
+
+> [!Tip]  
+> 没有对 ccmeval 的更改。  
+
+默认情况下，客户端运行状况仪表板显示在线客户端和在过去三天内处于活动状态的客户端。 因此，你在此仪表板中看到的数字可能与其他客户端运行状况历史源中的数字不同。 例如，“客户端状态”  下的其他节点或客户端状态类别中的报表。
+
+### <a name="filters"></a>筛选器
+
+在仪表板的顶部，有一组筛选器，用于调整仪表板中显示的数据。
+
+- **集合**：默认情况下，仪表板显示“所有系统”  集合中的设备。 从列表中选择设备集合，以将视图限定为特定集合中的设备子集。  
+
+- **联机或脱机**：默认情况下，仪表板仅显示联机客户端。 此状态来自每五分钟更新一次客户端状态的客户端通知通道。 有关详细信息，请参阅[关于客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_about)。  
+
+- **活动 \# 天数**：默认情况下，仪表板显示过去三天处于活动状态的客户端。  
+
+- **仅限故障**：将视图限定为仅报告客户端运行状况为故障的设备。  
+
+    > [!Tip]  
+    > 将此筛选器与客户端版本和 OS 版本磁贴配合使用。 有关详细信息，请参阅[版本磁贴](#version-tiles)。
+
+### <a name="client-health-percentage"></a>客户端运行状况百分比
+
+此磁贴显示层次结构中总体的客户端运行状况。
+
+运行正常的 Configuration Manager 客户端具有以下属性：
+
+- Online  
+- 主动发送数据  
+- 传递所有客户端运行状况评估检查  
+
+有关详细信息，请参阅[关于客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_about)。
+
+运行正常的客户端可成功与站点通信。 它根据客户端设置中定义的计划报告所有数据。
+
+选择此图表的一段，以深入了解设备列表视图。
+
+### <a name="version-tiles"></a>版本磁贴
+
+有两个磁贴按 Configuration Manager 客户端版本和 OS 版本显示客户端运行状况。 更改筛选器时（例如“仅限故障”），这些磁贴非常有用  。 它们可以帮助突出显示特定版本中的问题是否一致。 使用此信息来帮助你做出升级决策。
+
+选择这些图表的一段，以深入了解设备列表视图。
+
+### <a name="scenario-health"></a>方案运行状况
+
+此条形图显示了以下核心方案的总体运行状况：
+
+- 客户端策略
+- 检测信号发现
+- 硬件清单
+- 软件清单
+- 状态消息
+
+使用选择器来调整图表中特定方案的重点。
+
+以下两栏将始终显示：
+
+- **组合(全部)** ：所有方案的组合 (AND)  
+- **组合(任意)** ：至少一个方案 (OR)
+
+> [!Tip]  
+> 方案运行状况不会根据客户端设置的配置进行度量。 这些值可能会根据每个设备策略的结果集的不同而不同。 使用以下步骤调整方案运行状况评估周期：
+>
+> - 在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“客户端状态”节点   。  
+> - 在功能区中，选择“客户端状态设置”  。  
+>
+> 默认情况下，如果客户端在 7 天内未发送特定于方案的数据，则 Configuration Manager 会将此情况视为运行不正常  。
+
+### <a name="top-10-client-health-failures"></a>最常见的 10 个“客户端运行状况”故障
+
+此图表列出了环境中最常见的故障。 这些错误来自 Windows 或 Configuration Manager。
+
+<!-- The following list includes some of the more common failures overall:
+
+#### Failure 1 title
+Failure 1 description
+
+Solution for failure 1 -->
 
 
 ## <a name="bkmk_allStatus"></a> 监视所有客户端的状态
