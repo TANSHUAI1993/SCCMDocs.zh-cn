@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a1760e0039280e686e716d8cf876813083d544c
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 58230d373d7269c95937a108c021e7c73cdbf07a
+ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340180"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374444"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -28,6 +28,18 @@ ms.locfileid: "68340180"
 ### <a name="can-i-use-desktop-analytics-with-intune-managed-devices"></a>能否将桌面分析用于 Intune 托管的设备？ 
 
 大多数可以从桌面分析工作流获益的客户使用 Configuration Manager 来部署 Windows。 我们知道, Intune 客户喜欢分析数据的其他见解, 并且我们正在努力与他们分享见解。
+
+### <a name="its-been-over-72-hours-and-the-portal-is-still-processing-data-what-next"></a>它已超过72小时, 门户仍在处理数据, 接下来要做什么？ 
+
+首次设置桌面分析时, Configuration Manager 和 Desktop Analytics 门户中的报表可能不会立即显示完整的数据。 服务处理数据可能需要2-3 天。 如果已超过72小时, 并且门户仍在处理数据, 请执行以下步骤:
+
+- 若要确认已正确配置活动设备, 请使用 "[连接运行状况" 仪表板](/sccm/desktop-analytics/monitor-connection-health)。 此仪表板不会实时更新。
+- 确保设备将诊断数据发送到桌面分析服务。 有关详细信息, 请参阅[启用数据共享](/sccm/desktop-analytics/enable-data-sharing)。
+- 预配 Azure AD 上的[Azure AD 应用程序](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps)。
+- 在过去7天内检查与组织关联的设备。 在[桌面分析门户](https://aka.ms/desktopanalytics)中, 请参阅 "**连接服务**" 窗格。 选择 "**注册设备**" 并**查看最近的数据**
+
+如果设备配置正确, 并且仍未看到工作区中的数据, 请[联系 Microsoft 支持](https://support.microsoft.com/hub/4343728/support-for-business)部门。
+
 
 ## <a name="windows-upgrade"></a>Windows 升级
 

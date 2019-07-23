@@ -1,7 +1,7 @@
 ---
 title: 设置桌面分析
 titleSuffix: Configuration Manager
-description: 用于设置和载入到桌面 Analytics 的操作方法指南。
+description: 有关设置和载入桌面分析的操作指南。
 ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,83 +11,79 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96cf6f4dcfa878bb1ecafb7187dc6e9b29755509
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: d2a098c560305429e4bba65c95a65f3b0d2e8c45
+ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623385"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374417"
 ---
-# <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
+# <a name="how-to-set-up-desktop-analytics"></a>如何设置桌面分析
 
 > [!Note]  
-> 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
+> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-使用此过程中登录到桌面分析并将其配置你的订阅中。 此过程是一次性的过程来为你的组织设置 Desktop 分析。  
+使用此过程登录到桌面分析并在订阅中对其进行配置。 此过程是为组织设置桌面分析的一次性过程。  
 
 
+> [!Important]  
+> 有关 Configuration Manager 的桌面分析一般先决条件的信息, 请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。  
 
 ## <a name="initial-onboarding"></a>初始载入
 
-1. 打开[Desktop 分析门户](https://aka.ms/desktopanalytics)中的用户的 Microsoft 365 设备管理**全局管理员**角色。 选择**启动**。 如果系统提示您输入邀请代码，使用： `DesktopAnalyticsRocks!`
+1. 以具有**全局管理员**角色的用户身份在 Microsoft 365 设备管理 "中打开[桌面分析门户](https://aka.ms/desktopanalytics)。 选择 "**启动**"。 或者, 在 Configuration Manager 控制台上, 中转到 "**软件库**" 工作区, 选择 "**桌面分析服务**" 节点, 然后选择 "**计划部署**"。
 
-    > [!Tip]  
-    > 若要从 Configuration Manager 控制台中访问桌面分析门户，请转到**软件库**工作区中，选择**Desktop 分析服务**节点，然后选择**计划部署**。
+2. 在 "**接受服务协议**" 页上, 查看服务协议, 然后选择 "**接受**"。  
 
-2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
+3. 在 "**确认你的订阅**" 页面上, 查看所需的合格许可证的列表。 将此设置切换为 **"是**", 然后选择 **"支持" 或更高版本的订阅**, 然后选择 "**下一步**"。  
 
-3. 上**确认你的订阅**页上，查看所需的合格许可证的列表。 将设置切换为**是**旁边**您确实有一个在受支持或更高版本的订阅**，然后选择**下一步**。  
+4. 在 "**授予用户访问权限**" 页上:
 
-4. 上**授予用户访问权限**页：
+    - **允许桌面分析代表您管理目录角色**:桌面分析自动向**工作区所有者**分配**桌面分析管理员**角色。 如果这些组已是**全局管理员**, 则不会发生任何更改。
 
-    - **允许桌面 Analytics，以管理你的名义目录角色**:桌面分析自动分配**工作区所有者** **Desktop 分析管理员**角色。 如果这些组已经**全局管理员**，没有任何更改。
+        如果未选择此选项, 桌面分析仍会将用户添加为安全组的成员。 **全局管理员**需要为用户手动分配**桌面分析管理员**角色。   
 
-        如果不选择此选项，桌面分析仍将用户添加为安全组的成员。 一个**全局管理员**需要手动分配**Desktop 分析管理员**角色的用户。   
+        有关将 Azure Active Directory 中的管理员角色权限和分配给**桌面分析管理员**的权限的详细信息, 请参阅[Azure Active Directory 中的管理员角色权限](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
 
-        有关如何将 Azure Active Directory 中的管理员角色权限和权限分配给分配的详细信息**Desktop 分析管理员**，请参阅[在 Azure 中的管理员角色权限Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
+    - 桌面分析预配置 Azure Active Directory 中的**工作区所有者**安全组, 以创建和管理工作区和部署计划。 
 
-    - 桌面分析会预先配置**工作区所有者**Azure Active Directory 来创建和管理工作区和部署计划中的安全组。 
+        若要将用户添加到组, 请在 "**输入名称或电子邮件地址**" 部分键入其名称或电子邮件地址。 完成后, 选择 "**下一步**"。
 
-        若要将用户添加到组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**部分。 完成后，选择**下一步**。
+5. 在页面上**设置工作区**:  
 
-5. 在到页**设置工作区**:  
-
-    > [!Note]  
-    > 若要完成此步骤中，用户所需**工作区所有者**权限和其他访问权限的 Azure 订阅和资源组。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。  
-
-    - 若要使用 Desktop 分析现有的工作区，选择它，并继续下一步。  
+    - 若要使用现有的桌面分析工作区, 请选择它, 然后继续下一步。  
 
         > [!Note]  
-        > 如果你已经在使用 Windows Analytics，请选择该相同的工作区。 您需要重新注册到桌面 Analytics 以前在 Windows Analytics 中注册的设备。
+        > 如果已在使用 Windows Analytics, 请选择相同的工作区。 需要重新注册以前在 Windows Analytics 中注册的设备到桌面分析。
         >
-        > 只能有一个桌面 Analytics 工作区，每个 Azure AD 租户。 设备只可以将诊断数据发送到一个工作区。  
+        > 每个租户 Azure AD 只能有一个桌面分析工作区。 设备只能将诊断数据发送到一个工作区。  
 
-    - 若要为 Desktop 分析创建一个工作区，选择**添加工作区**。  
+    - 若要创建桌面分析工作区, 请选择 "**添加工作区**"。  
 
         1. 输入**工作区名称**。<!--do we have any guidance for this name?-->  
 
-        2. 选择的下拉列表**选择此工作区的 Azure 订阅名称**，然后选择此工作区的 Azure 订阅。  
+        2. 选择下拉列表,**选择此工作区的 azure 订阅名称**, 然后选择此工作区的 azure 订阅。  
 
-        3. **创建新**资源组或**使用现有**。
+        3. **新建**资源组或**使用现有**资源组。
 
-        4. 选择**地区**从列表中，然后选择**添加**。  
+        4. 从列表中选择**区域**, 然后选择 "**添加**"。  
 
-6. 选择新的或现有工作区中，并选择**设置为桌面 Analytics 工作区**。  然后选择**继续**中**确认和授予访问权限**对话框。  
+6. 选择新的或现有的工作区, 然后选择 "**设置为桌面分析工作区**"。  然后在 "**确认并授予访问权限**" 对话框中选择 "**继续**"。  
 
-7. 在新的浏览器选项卡上，选择要用于登录的帐户。 选择选项**代表你的组织同意**，然后选择**接受**。  
+7. 在 "新建浏览器" 选项卡中, 选择用于登录的帐户。 选择**代表你的组织同意**的选项, 然后选择 "**接受**"。  
 
     > [!Note]  
-    > 此许可是将 MALogAnalyticsReader 应用程序分配工作区的 Log Analytics 读者角色。 此应用程序角色是桌面分析所需。 有关详细信息，请参阅[MALogAnalyticsReader 应用程序角色](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader)。  
+    > 此同意是为 MALogAnalyticsReader 应用程序分配工作区 Log Analytics 读取者角色。 桌面分析需要此应用程序角色。 有关详细信息, 请参阅[MALogAnalyticsReader 应用程序角色](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader)。  
 
-8. 恢复到页面上**设置工作区**，选择**下一步**。  
+8. 返回页面以**设置工作区**, 选择 "**下一步**"。  
 
-9. 上**最后步骤**页上，选择**转到桌面分析**。
+9. 在**最后的步骤**页上, 选择 "**前往桌面分析**"。
 
-Azure 门户显示桌面分析**主页**页。
+Azure 门户显示桌面分析**主页**。
 
 
 ## <a name="next-steps"></a>后续步骤
 
-转到下一步的文章，将 Configuration Manager 和桌面分析。
+转到下一篇文章, 通过桌面分析连接 Configuration Manager。
 > [!div class="nextstepaction"]  
-> [将 Configuration Manager 连接](/sccm/desktop-analytics/connect-configmgr)  
+> [连接 Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  
