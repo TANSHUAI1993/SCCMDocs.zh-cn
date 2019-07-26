@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 401565308ac78e1d6db047eca7cda63715474764
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 64cb1be506f958363b1ebfeef66bff1ad865c113
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158874"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339834"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 
@@ -25,10 +25,10 @@ ms.locfileid: "67158874"
 
 System Center Configuration Manager 的更新 1606 作为控制台内部更新提供，用于以前安装的、运行版本 1511 或 1602 的站点。 版本 1511 是用于安装新 Configuration Manager 站点的初始基准版本。
 > [!TIP]  
->  了解详细信息：  
+> 了解详细信息：  
 >   
->  -   [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
->  -   [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602 或 1606）  
+> - [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
+> - [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602 或 1606）  
 
  以下各节提供有关 Configuration Manager 版本 1606 中引入的更改和新功能的详细信息。  
 

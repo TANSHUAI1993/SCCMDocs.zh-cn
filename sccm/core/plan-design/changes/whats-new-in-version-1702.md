@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31f47fa04275f2be4efa1558e1d816f74b05d369
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 1e41779d7901471e208c26b9050c4db82b678244
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677316"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339823"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
@@ -27,10 +27,11 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
->  了解详细信息：    
->   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> 了解详细信息：    
+> - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1702 中引入的更改和新功能的详细信息。  
 
@@ -62,9 +63,9 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 ### <a name="send-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台发送反馈
 
- 可以使用控制台内反馈选项将反馈直接发送到开发团队。
+可以使用控制台内反馈选项将反馈直接发送到开发团队。
 
- 可在以下位置找到“反馈”  选项：
+可在以下位置找到“反馈”  选项：
 - 在功能区中每个节点的“主页”选项卡的最左侧。  
   ![功能区](./media/feedback-home.png)
 
@@ -96,25 +97,25 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 
 
 ### <a name="data-warehouse-service-point"></a>数据仓库服务点
- 使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
+使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
- 数据仓库最多支持 2 TB 数据，且具有跟踪更改的时间戳。 通过从 Configuration Manager 站点数据库自动同步到数据仓库数据库可实现数据存储。 然后，可从 Reporting Services 点访问此信息。
+数据仓库最多支持 2 TB 数据，且具有跟踪更改的时间戳。 通过从 Configuration Manager 站点数据库自动同步到数据仓库数据库可实现数据存储。 然后，可从 Reporting Services 点访问此信息。
 
- 有关详细信息，请参阅[数据仓库服务点](/sccm/core/servers/manage/data-warehouse)。
+有关详细信息，请参阅[数据仓库服务点](/sccm/core/servers/manage/data-warehouse)。
 
 
 ### <a name="peer-cache-improvements"></a>对等缓存功能改进
- 从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，将会拒绝对内容的请求：  
-  -  处于低电量模式。
-  -  请求内容时 CPU 负载超过 80%。
-  -  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
-  -  该计算机没有其他可用连接。   
+从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，将会拒绝对内容的请求：  
+-  处于低电量模式。
+-  请求内容时 CPU 负载超过 80%。
+-  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
+-  该计算机没有其他可用连接。   
 有关详细信息，请参阅 [Configuration Manager 客户端的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)中的**对等缓存源的有限访问**。   
 
 此外，向你的报表点添加了三个新的报表。 可以使用这些报表了解有关被拒绝的内容请求的详细信息，其中包括边界组、计算机和所涉及的内容。 请参阅对等缓存主题中的[监视](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring)。
 
 ### <a name="content-library-cleanup-tool"></a>内容库清理工具
- 使用[内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)从分发点删除与应用程序不再关联的内容。
+使用[内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)从分发点删除与应用程序不再关联的内容。
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>将 OMS 连接器与 Azure Government 云结合使用
@@ -201,14 +202,14 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>对“自动应用驱动程序”任务序列所做的改进
 在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
-   - SMSTSDriverRequestResolveTimeOut  
-     默认：60
-   - SMSTSDriverRequestConnectTimeOut  
-     默认：60
-   - SMSTSDriverRequestSendTimeOut  
-     默认：60
-   - SMSTSDriverRequestReceiveTimeOut  
-     默认：480
+- SMSTSDriverRequestResolveTimeOut  
+  默认：60
+- SMSTSDriverRequestConnectTimeOut  
+  默认：60
+- SMSTSDriverRequestSendTimeOut  
+  默认：60
+- SMSTSDriverRequestReceiveTimeOut  
+  默认：480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>内部版本所跟踪的 Windows 10 ADK
 现在可通过内部版本号跟踪 Windows 10 ADK，确保自定义 Windows 10 启动映像时有更多受支持的体验。 例如，如果站点使用适用于 Windows 10 的 Windows ADK（版本 1607），那么控制台中仅可自定义版本号为 10.0.14393 的启动映像。 若要深入了解如何自定义 WinPE 版本，请参阅[自定义启动映像](/sccm/osd/get-started/customize-boot-images)。

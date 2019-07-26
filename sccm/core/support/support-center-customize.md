@@ -11,24 +11,24 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8ae8d006555a79be1a27b327a3de78c75743bad
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ac2290c630393a047c5bdd8677562df6e0f0410d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500748"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340248"
 ---
 # <a name="customize-support-center"></a>自定义支持中心
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 [支持中心](/sccm/core/support/support-center)工具包括可自定义的配置文件。 默认情况下，安装支持中心时，此文件位于以下路径：`C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`。 配置文件会更改程序的行为：
 
-  - [自定义数据收集](#bkmk_datacoll)：编辑数据收集期间包含的注册表项和 WMI 命名空间集  
+- [自定义数据收集](#bkmk_datacoll)：编辑数据收集期间包含的注册表项和 WMI 命名空间集  
 
-  - [自定义日志组](#bkmk_loggroups)：使用正则表达式定义新的日志文件组。 也向日志组添加其他日志文件。  
+- [自定义日志组](#bkmk_loggroups)：使用正则表达式定义新的日志文件组。 也向日志组添加其他日志文件。  
 
-  - [使用通配符收集额外的日志文件](#bkmk_wildcards)：使用通配符搜索收集额外的日志文件  
+- [使用通配符收集额外的日志文件](#bkmk_wildcards)：使用通配符搜索收集额外的日志文件  
 
 要进行这些更改，你需要在安装支持中心的客户端上具有本地管理权限。 使用文本编辑器或 XML 编辑器（如 Notepad 或 Visual Studio）进行这些自定义设置。
 
@@ -95,11 +95,11 @@ ms.locfileid: "65500748"
 
 ## <a name="bkmk_loggroups"></a> 自定义日志文件组
 
-要自定义支持中心收集的日志文件及其在“日志组”列表中的显示方式，请使用 `<logGroups>` 元素中的元素。 启动支持中心时，它会扫描配置文件的此部分。 然后，它会在日志组列表中为 `<logGroups>` 元素中包含的 `<add/>` 元素中找到的每个唯一键属性值创建组。
+要自定义支持中心收集的日志文件及其在“日志组”列表中的显示方式，请使用 `<logGroups>` 元素中的元素  。 启动支持中心时，它会扫描配置文件的此部分。 然后，它会在日志组列表中为 `<logGroups>` 元素中包含的 `<add/>` 元素中找到的每个唯一键属性值创建组  。
 
-  - **组件日志组**：`<componentLogGroup>` 元素使用键属性定义显示在列表中的日志组的名称。 它还使用包含正则表达式 (regex) 的值属性。 它使用此正则表达式来收集一组相关的日志文件。  
+- **组件日志组**：`<componentLogGroup>` 元素使用键属性定义显示在列表中的日志组的名称。 它还使用包含正则表达式 (regex) 的值属性。 它使用此正则表达式来收集一组相关的日志文件。  
 
-  - **静态日志组**：`<staticLogGroup>` 元素使用键属性定义显示在列表中的日志组的名称。 它还使用定义日志文件名的值属性。  
+- **静态日志组**：`<staticLogGroup>` 元素使用键属性定义显示在列表中的日志组的名称。 它还使用定义日志文件名的值属性。  
 
 如果 `<componentLogGroup>` 元素和 `<staticLogGroup>` 元素内的 `<add/>` 元素中使用了相同的键属性值，则支持中心会创建一个组。 该组包括由使用相同键的两个元素定义的日志文件。
 

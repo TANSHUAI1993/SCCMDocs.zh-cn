@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01fa13c907b451a3539ca8169c3a04ebbaa1b92c
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 7c0975c2b8dcf945464273930073ebf370bd4c32
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145773"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340161"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -44,13 +44,13 @@ LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件
 
 - **软件保障 (SA)** ：客户必须在 Configuration Manager 许可证上具有可用 SA 或具有等效的订阅权限，才可安装和使用 Configuration Manager 的 Current Branch。    
 
-    - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限  。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
+  - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限  。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
 
 - **Microsoft 许可证和软件保障 (L&SA)** ：购买新的 Configuration Manager 许可证的客户必须获取 L&SA（许可证和 SA 范围）。   
 
-    - SA 授予使用 Current Branch 的权限。
+  - SA 授予使用 Current Branch 的权限。
 
-    - 如果 SA 过期，你仍拥有 Configuration Manager 的许可证，但无法再使用 Current Branch。 有关详细信息，请参阅[如果 SA 过期且拥有 L&SA，我可使用的功能是什么？](#bkmk_sa-expires)
+  - 如果 SA 过期，你仍拥有 Configuration Manager 的许可证，但无法再使用 Current Branch。 有关详细信息，请参阅[如果 SA 过期且拥有 L&SA，我可使用的功能是什么？](#bkmk_sa-expires)
 
 有关许可证产品/服务的详细信息，请参阅[购买方式](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> 和[许可产品条款](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64)。  
 
@@ -104,12 +104,12 @@ EMS 授予使用 Configuration Manager Current Branch 和 Long-Term Service Bran
 所有 System Center 产品都包括 SQL Server 技术。 针对这些产品的 Microsoft 许可条款允许客户仅使用 SQL Server 技术来支持 System Center 组件。 不需要使用 SQL Server 客户端访问许可证。 
  
 Configuration Manager 附带的 SQL 功能的批准使用权限包括：
- - 站点数据库角色
- - 软件更新点的 Windows Server Update Services (WSUS) 角色
- - 报表点的 SQL Server Reporting Services (SSRS) 角色
- - 数据仓库服务点角色
- - 管理点的数据库副本角色
- - SQL Server AlwaysOn 
+- 站点数据库角色
+- 软件更新点的 Windows Server Update Services (WSUS) 角色
+- 报表点的 SQL Server Reporting Services (SSRS) 角色
+- 数据仓库服务点角色
+- 管理点的数据库副本角色
+- SQL Server AlwaysOn 
 
 Configuration Manager 附带的 SQL Server 许可证支持你安装的每个 SQL Server 实例以托管 Configuration Manager 的数据库。 但是，在使用此许可证时，只有上述列表中的 Configuration Manager 的数据库可以在该 SQL Server 上运行。 如果任何其他 Microsoft 或第三方产品的数据库共享 SQL Server，则必须拥有该 SQL Server 实例的单独许可证。 
  <!-- sms500967 -->

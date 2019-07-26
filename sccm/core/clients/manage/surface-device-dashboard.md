@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ab388784e5fba380eab36db5e6a023199d41e0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e131f8c76b03c36557f3f1161729d523e4e7f946
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136994"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339853"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Surface 设备仪表板
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 从 1802 版开始，可通过 Surface 设备仪表板快速了解在环境中找到的 Surface 设备的相关信息。 <!--1355788-->
 
@@ -29,8 +29,8 @@ ms.locfileid: "56136994"
 若要打开 Surface 设备仪表板，请使用以下步骤： 
 
 1. 打开 Configuration Manager 控制台。 
-2. 单击“监视”节点。 
-3. 若要加载仪表板，请单击“Surface 设备”。
+2. 单击“监视”  节点。 
+3. 若要加载仪表板，请单击“Surface 设备”  。
 
 **Surface 设备仪表板**
 ![Surface 设备仪表板](media/Surface-device-dashboard.PNG)
@@ -52,16 +52,17 @@ Surface 设备仪表板针对你的环境显示三个图表。
       ![Surface 型号设备列表](media/Surface-Model-Device-List.PNG)
 
 - **前五个固件版本**：显示包含环境中前五个固件型号的图表。 
-  - 将鼠标悬停在某个图表部分上方将显示所选固件版本的 Surface 设备的数量。 自 Configuration Manager 版本 1806 起，单击某个图表部分即可显示相关设备的列表。 <!--1358654--> ![Surface 型号设备列表](media/Surface-Firmware-Hover.PNG)
+  - 将鼠标悬停在某个图表部分上方将显示所选固件版本的 Surface 设备的数量。 自 Configuration Manager 版本 1806 起，单击某个图表部分即可显示相关设备的列表。 <!--1358654-->
+     ![Surface 型号设备列表](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>更多信息
 
 有关 Surface 设备的详细信息，请参阅：
- - [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) 网站。
-    
+- [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) 网站。
+
 有关在 Configuration Manager 中部署 Surface 固件更新的详细信息，请参阅：
- - [如何在 Configuration Manager 中管理 Surface 驱动程序更新]( https://support.microsoft.com/help/4098906)。
+- [如何在 Configuration Manager 中管理 Surface 驱动程序更新]( https://support.microsoft.com/help/4098906)。
 
 
 

@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bf7fd4902f5aa30347d2ccc2410227078035872
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 300d3763ba877bcd05817e40f4a8a86a1e899ce5
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496245"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339707"
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager"></a>System Center Configuration Manager 中已删除和已弃用的项
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文介绍如何使用有关 System Center Configuration Manager 不再支持或将在未来更新中删除（弃用）的功能、产品和操作系统的信息。 本文预告了可能会影响 Configuration Manager 的使用的未来变更。  
 
@@ -47,6 +47,6 @@ ms.locfileid: "65496245"
 ## <a name="more-information"></a>更多信息
 
 有关详情，请参阅：
- - [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)网站。
- - [对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。
+- [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)网站。
+- [对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。
 

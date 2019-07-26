@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424710431f9c17642b3a8c6190f8919665f3ac6c
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 7d27baa691c3adca6dd859b79fc92bdd4fe539ab
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623286"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339906"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1806 中的功能
 
@@ -258,15 +258,15 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 当通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，现在需要的命令行属性更少。 有关此方案示例的详细信息，请在准备共同管理时参阅[安装 Configuration Manager 客户端的命令行](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client)。 
 
 在所有方案中都需要以下命令行属性：
-  - CCMHOSTNAME  
-  - SMSSITECODE  
+- CCMHOSTNAME  
+- SMSSITECODE  
 
 在使用 Azure AD 进行客户端身份验证而不是使用基于 PKI 的客户端身份验证证书时，需要以下属性：
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
+- AADCLIENTAPPID  
+- AADRESOURCEURI  
 
 如果客户端将漫游回 Intranet，则需要以下属性：
-  - SMSMP  
+- SMSMP  
 
 下面的示例包含上述所有属性：   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8a9ff65ad90928f4f5679940891ff34b571616
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 2f3100e9580566b072bed6c8813018876f720eb3
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894182"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338802"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -510,8 +510,7 @@ The following additional hotfixes are available to address specific issues:
 > [!TIP]  
 > 若要安装新站点，请使用 Configuration Manager 的基准版本。  
 >
-> 了解详细信息：
->
+> 了解详细信息：    
 > - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
 > - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 

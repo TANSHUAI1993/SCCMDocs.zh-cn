@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f996aa1457fc8b49f914d0f0932836b5fcbd90b9
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: f0c3c77175f739ff45364c3c014fee6f11fd662c
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676222"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340133"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -82,9 +82,9 @@ ms.locfileid: "67676222"
 
 例如，若要安装许可的 Current Branch.版本，请使用：
 
-  **密钥名称：SABranchOptions**
-   - **SAActive = 1**
-   - **= 1**
+**密钥名称：SABranchOptions**
+- **SAActive = 1**
+- **= 1**
 
 
 > [!IMPORTANT]  

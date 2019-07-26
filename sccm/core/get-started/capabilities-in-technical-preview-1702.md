@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee32d282bc04e6c1f97b12dedb8d69ccdcca8915
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 0ed8434086a7f1515cc538c3b265cb4e8f54780e
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677545"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340091"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
@@ -54,10 +54,10 @@ ms.locfileid: "67677545"
 
 ## <a name="peer-cache-improvements"></a>对等缓存功能改进
 从此版本开始，当对等缓存源计算机满足以下任一条件时，对等缓存源计算机将拒绝对内容的请求：  
- -  处于低电量模式。
- -  请求内容时 CPU 负载超过 80%。
- -  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
- -  该计算机没有其他可用连接。   
+-  处于低电量模式。
+-  请求内容时 CPU 负载超过 80%。
+-  磁盘 I/O 的 AvgDiskQueueLength  超过 10。
+-  该计算机没有其他可用连接。   
 
 使用 System Center Configuration Manager SDK 时，可以使用对等源功能的客户端代理配置类 (*SMS_WinPEPeerCacheConfig*) 配置这些设置。
 
@@ -101,8 +101,8 @@ ms.locfileid: "67677545"
 Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查询并配置 LDAP 查询，以指向包含想要发现的组的 OU。
 
 有关 Azure AD 的详细信息，请参阅以下内容：  
- - azure.microsoft.com 上的 [Azure Active Directory 域服务](https://azure.microsoft.com/services/active-directory-ds)。
- - docs.microsoft.com 上的 [Active Directory 域服务文档](https://docs.microsoft.com/azure/active-directory-domain-services)。
+- azure.microsoft.com 上的 [Azure Active Directory 域服务](https://azure.microsoft.com/services/active-directory-ds)。
+- docs.microsoft.com 上的 [Active Directory 域服务文档](https://docs.microsoft.com/azure/active-directory-domain-services)。
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件性访问设备符合性策略改进
 

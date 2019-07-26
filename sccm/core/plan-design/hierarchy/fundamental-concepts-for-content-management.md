@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e4585d21b06bbfaa659fe09693af8cff109a1b6
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4aeaea590823cecfe3bec867bb53777e2770cb92
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676816"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338650"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -51,22 +51,22 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 
 ## <a name="bandwidth-throttling-and-scheduling"></a>带宽限制和计划  
- 限制和计划选项均可帮助你控制将内容从站点服务器分发到分发点的时间。 这些功能类似于站点到站点基于文件的复制的带宽控制，但二者又没有直接关系。  
+限制和计划选项均可帮助你控制将内容从站点服务器分发到分发点的时间。 这些功能类似于站点到站点基于文件的复制的带宽控制，但二者又没有直接关系。  
 
- 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
+有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
 
 
 
 ## <a name="binary-differential-replication"></a>二进制差异复制  
- 二进制差异复制 (BDR) 有时称为增量复制。 它用于将更新分发给先前部署到其他站点或远程分发点的内容。 要支持 BDR 减少对带宽的使用，请在分发点上安装“远程差分压缩”功能  。 有关详细信息，请参阅[分发点先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)。
+二进制差异复制 (BDR) 有时称为增量复制。 它用于将更新分发给先前部署到其他站点或远程分发点的内容。 要支持 BDR 减少对带宽的使用，请在分发点上安装“远程差分压缩”功能  。 有关详细信息，请参阅[分发点先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)。
 
- BDR 将用于发送已分发内容更新的网络带宽降至最低。 每次更改文件时，它仅重新发送新的或更改的内容，而不是发送整个内容源文件集。  
+BDR 将用于发送已分发内容更新的网络带宽降至最低。 每次更改文件时，它仅重新发送新的或更改的内容，而不是发送整个内容源文件集。  
 
- 如果使用 BDR，Configuration Manager 将标识对以前已分发的每个内容集的源文件所做的更改。  
+如果使用 BDR，Configuration Manager 将标识对以前已分发的每个内容集的源文件所做的更改。  
 
--   当源内容中的文件发生更改时，站点会创建内容的新增量版本。 然后，它仅将更改的文件复制到目标站点和分发点。 如果重命名、移动了该文件，或更改了其内容，则将该文件视为已更改。 例如，替换了以前分发到若干站点的驱动程序包的一个驱动程序文件，则只会复制更改的驱动程序文件。  
+- 当源内容中的文件发生更改时，站点会创建内容的新增量版本。 然后，它仅将更改的文件复制到目标站点和分发点。 如果重命名、移动了该文件，或更改了其内容，则将该文件视为已更改。 例如，替换了以前分发到若干站点的驱动程序包的一个驱动程序文件，则只会复制更改的驱动程序文件。  
 
--   在重新发送整个内容集之前，Configuration Manager 最多支持五个内容集增量版本。 第五次更新后，对内容集的下一次更改会使该站点创建新版本的内容集。 Configuration Manager 分发新版本的内容集以替换上一个内容集和其任何增量版本。 分发新的内容集后，对源文件进行的后续增量更改会再次通过 BDR 进行复制。  
+- 在重新发送整个内容集之前，Configuration Manager 最多支持五个内容集增量版本。 第五次更新后，对内容集的下一次更改会使该站点创建新版本的内容集。 Configuration Manager 分发新版本的内容集以替换上一个内容集和其任何增量版本。 分发新的内容集后，对源文件进行的后续增量更改会再次通过 BDR 进行复制。  
 
 支持在层次结构中的每个父站点和子站点之间进行 BDR。 在站点内，支持在站点服务器及其常规分发点之间进行 BDR。 但是，拉取分发点和云分发点不支持通过 BDR 来传输内容。 拉取分发点支持文件级增量，传输新的文件，但不是文件内的块。
 
@@ -75,9 +75,9 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 
 ## <a name="branchcache"></a>BranchCache  
- [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) 是一项 Windows 技术。 支持 BranchCache 且下载了为 BranchCache 配置的部署的客户端随后可充当其他启用了 BranchCache 的客户端的内容源。  
+[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) 是一项 Windows 技术。 支持 BranchCache 且下载了为 BranchCache 配置的部署的客户端随后可充当其他启用了 BranchCache 的客户端的内容源。  
 
- 例如，有运行 Windows Server 2012 或更高版本的分发点，并将其配置为 BranchCache 服务器。 当第一个启用 BranchCache 的客户端向此服务器请求内容时，客户端将下载并缓存该内容。  
+例如，有运行 Windows Server 2012 或更高版本的分发点，并将其配置为 BranchCache 服务器。 当第一个启用 BranchCache 的客户端向此服务器请求内容时，客户端将下载并缓存该内容。  
 
 - 然后，该客户端可以使内容可用于同一子网上的其他启用 BranchCache 的客户端，这些客户端也会缓存该内容。  
 - 同一子网上的其他客户端无需从分发点下载内容。  
@@ -126,25 +126,25 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 ## <a name="client-locations"></a>客户端位置  
  客户端将访问以下位置中的内容：  
 
--   **Intranet** （本地）：  
+- **Intranet** （本地）：  
 
-    -   分发点可使用 HTTP 或 HTTPS。  
+  - 分发点可使用 HTTP 或 HTTPS。  
 
-    -   仅当本地分发点不可用时，才使用云分发点进行回退。  
+  - 仅当本地分发点不可用时，才使用云分发点进行回退。  
 
--   **Internet**：  
+- **Internet**：  
 
-    -   要求面向 Internet 的分发点接受 HTTPS。  
+  - 要求面向 Internet 的分发点接受 HTTPS。  
 
-    -   可使用云分发点或云管理网关 (CMG)。  
-    
-        *   从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)。
+  - 可使用云分发点或云管理网关 (CMG)。  
+  
+    * 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)。
 
--   **工作组**：  
+- **工作组**：  
 
-    -   要求分发点接受 HTTPS。  
+  - 要求分发点接受 HTTPS。  
 
-    -   可使用云分发点或 CMG。  
+  - 可使用云分发点或 CMG。  
 
 
 
@@ -166,7 +166,7 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 
 ## <a name="content-library"></a>内容库  
- 内容库是 Configuration Manager 中内容的单实例存储。 此库可减少分发内容的总体大小。  
+内容库是 Configuration Manager 中内容的单实例存储。 此库可减少分发内容的总体大小。  
 
 - 深入了解[内容库](/sccm/core/plan-design/hierarchy/the-content-library)。
 - 使用[内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)删除不再与应用程序关联的内容。  
@@ -174,13 +174,13 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 
 ## <a name="distribution-points"></a>分发点  
- Configuration Manager 使用分发点存储在客户端计算机上运行软件所需的文件。 客户端必须至少可访问一个能用于下载所部属内容的文件的分发点。  
+Configuration Manager 使用分发点存储在客户端计算机上运行软件所需的文件。 客户端必须至少可访问一个能用于下载所部属内容的文件的分发点。  
 
- 基本（非专用）分发点通常称为标准分发点。 标准分发点有两种变体需要特别注意：  
+基本（非专用）分发点通常称为标准分发点。 标准分发点有两种变体需要特别注意：  
 
--   **拉取分发点**：分发点的一种变体，该分发点获取其他分发点（源分发点）中的内容。 此过程与客户端从分发点下载内容的方式类似。 在站点服务器必须将内容直接分发给每个分发点时，拉取分发点有助于避免可能出现的网络带宽瓶颈。 [使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
+- **拉取分发点**：分发点的一种变体，该分发点获取其他分发点（源分发点）中的内容。 此过程与客户端从分发点下载内容的方式类似。 在站点服务器必须将内容直接分发给每个分发点时，拉取分发点有助于避免可能出现的网络带宽瓶颈。 [使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **云分发点**：在 Microsoft Azure 中安装的分发点的变体。 [了解如何使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。  
+- **云分发点**：在 Microsoft Azure 中安装的分发点的变体。 [了解如何使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。  
 
 
 标准分发点支持一系列配置和功能：  
@@ -200,35 +200,35 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 
 ## <a name="distribution-point-groups"></a>分发点组  
- 分发点组是指可简化内容分发的分发点的逻辑分组。  
+分发点组是指可简化内容分发的分发点的逻辑分组。  
 
- 有关详细信息，请参阅[管理分发点组](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage)。
+有关详细信息，请参阅[管理分发点组](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage)。
 
 
 
 ## <a name="distribution-point-priority"></a>分发点优先级  
- 分发点优先级值取决于它将以前的部署传输到该分发点所花费的时间。  
+分发点优先级值取决于它将以前的部署传输到该分发点所花费的时间。  
 
--   此值可自调整。 它设置在每个分发点上，以帮助 Configuration Manager 更快地将内容传输到更多分发点。  
+- 此值可自调整。 它设置在每个分发点上，以帮助 Configuration Manager 更快地将内容传输到更多分发点。  
 
--   同时向多个分发点或分发点组分发内容时，站点会首先将内容发送到优先级最高的服务器。 然后它将相同内容发送到优先级较低的分发点。  
+- 同时向多个分发点或分发点组分发内容时，站点会首先将内容发送到优先级最高的服务器。 然后它将相同内容发送到优先级较低的分发点。  
 
--   分发点优先级不会替代包的分发优先级。 包优先级仍然是站点发送不同内容的决定因素。  
+- 分发点优先级不会替代包的分发优先级。 包优先级仍然是站点发送不同内容的决定因素。  
 
 例如，有一个优先级较高的包。 将其分发到分发点优先级较低的服务器。 此优先级较高的包始终在优先级较低的包之前传输。 即使站点将优先级较低的包分发到分发点优先级较高的服务器，包优先级也适用。
 
 包的高优先级确保 Configuration Manager 在发送任何优先级较低的包之前，将该内容分发到分发点。  
 
 > [!NOTE]  
->  请求分发点也使用优先级的概念来对其源分发点的序列进行排序。  
+> 请求分发点也使用优先级的概念来对其源分发点的序列进行排序。  
 >   
->  -   传输到服务器的内容的分发点优先级不同于拉取分发点使用的优先级。 拉取分发点从源分发点搜索内容时使用其优先级。  
->  -   有关详细信息，请参阅[使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。  
+> - 传输到服务器的内容的分发点优先级不同于拉取分发点使用的优先级。 拉取分发点从源分发点搜索内容时使用其优先级。  
+> - 有关详细信息，请参阅[使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。  
 
 
 
 ## <a name="fallback"></a>回退  
- 在 Configuration Manager Current Branch 中，客户端找到包含内容的分发点的方式发生了诸多变化，其中包括回退。 
+在 Configuration Manager Current Branch 中，客户端找到包含内容的分发点的方式发生了诸多变化，其中包括回退。 
 
 对于无法从与其当前边界组关联的分发点找到内容的客户端，可进行回退，使用与临近边界组关联的内容源位置。 若要实现回退，临近边界组与客户端的当前边界组必须存在定义的关系。 此关系包含配置的时间，此时间后，无法在本地找到内容的客户端才可在搜索中包含来自临近边界组的内容源。
 
@@ -239,18 +239,18 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 
 ## <a name="network-bandwidth"></a>网络带宽  
- 可使用以下选项，帮助管理分发内容时所用的网络带宽量：  
+可使用以下选项，帮助管理分发内容时所用的网络带宽量：  
 
--   **预留内容**：将内容传输到分发点，而不通过网络分发内容。  
+- **预留内容**：将内容传输到分发点，而不通过网络分发内容。  
 
--   **计划和限制**：此配置有助于控制将内容分发到分发点的时间和方式。  
+- **计划和限制**：此配置有助于控制将内容分发到分发点的时间和方式。  
 
 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
 
 
 
 ## <a name="network-connection-speed-to-content-source"></a>到内容源的网络连接速度  
- 在 Configuration Manager Current Branch 中，客户端查找带内容的分发点的方式已发生诸多变化。 这些更改包括到内容源的网络速度。 
+在 Configuration Manager Current Branch 中，客户端查找带内容的分发点的方式已发生诸多变化。 这些更改包括到内容源的网络速度。 
 
 不再使用将分发点定义为“快”  或“慢”  的网络连接速度。 相反，与边界组关联的各站点系统都被视为相同的系统。
 
@@ -259,26 +259,26 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 
 ## <a name="on-demand-content-distribution"></a>按需内容分发  
- 按需内容分发是个别应用程序和包部署的选项。 此选项可将内容按需分发到首选服务器。  
+按需内容分发是个别应用程序和包部署的选项。 此选项可将内容按需分发到首选服务器。  
 
--   要为部署启用此设置，请启用以下选项：将此包的内容分发到首选分发点  。  
+- 要为部署启用此设置，请启用以下选项：将此包的内容分发到首选分发点  。  
 
--   为部署启用此选项后，如果客户端请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
+- 为部署启用此选项后，如果客户端请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
 
--   尽管这会触发 Configuration Manager 将内容自动分发到客户端首选分发点，但客户端仍可在首选分发点接收到部署之前从其他分发点获取该内容。 若出现该行为，该内容将在该分发点上显示，供搜寻该部署的下一个客户端使用。  
+- 尽管这会触发 Configuration Manager 将内容自动分发到客户端首选分发点，但客户端仍可在首选分发点接收到部署之前从其他分发点获取该内容。 若出现该行为，该内容将在该分发点上显示，供搜寻该部署的下一个客户端使用。  
 
 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
 
 
 ## <a name="package-transfer-manager"></a>包传输管理器  
- 包传输管理器是一个站点服务器组件，该组件可将内容传输到其他计算机上的分发点。  
+包传输管理器是一个站点服务器组件，该组件可将内容传输到其他计算机上的分发点。  
 
- 有关详细信息，请参阅[包传输管理器](/sccm/core/plan-design/hierarchy/package-transfer-manager)。  
+有关详细信息，请参阅[包传输管理器](/sccm/core/plan-design/hierarchy/package-transfer-manager)。  
 
 
 
 ## <a name="prestage-content"></a>预留内容  
- 预留内容是将内容传输到分发点，而不通过网络分发内容的过程。  
+预留内容是将内容传输到分发点，而不通过网络分发内容的过程。  
 
- 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
+有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。

@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 042ef488354ff1b527d41407d3ef590ee9fe0e45
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: d8c713dd1de90eaf8705859f5a814e38da9435e6
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676306"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340218"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 适用范围：  System Center Configuration Manager (Current Branch)
@@ -129,7 +129,7 @@ ms.locfileid: "67676306"
 ### <a name="what-about-content-distribution-and-content-management-should-standard-distribution-points-be-in-azure-or-on-premises-and-should-i-use-branchcache-or-pull-distribution-points-on-premises-or-should-i-make-exclusive-use-of-cloud-distribution-points"></a>内容分发和内容管理呢？ 标准分发点应位于 Azure 中还是位于本地？应在本地使用 BranchCache 还是拉取分发点？ 或者，是否应以独占方式使用云分发点？
 内容管理的方法与站点服务器和站点系统管理非常相似。
 - 如果通过不限流量计划使用快速稳定的网络连接 Azure 和 Intranet，则可以选择在 Azure 中托管所有标准分发点。
--  如果使用按流量计费的数据计划且需考虑带宽成本，或者 Azure 与 Intranet 之间的网络连接不快或不稳定，则可以考虑其他方案。 这些方案包括在本地放置标准或拉取分发点以及使用 BranchCache。 也可以选择使用基于云的分发点，但在支持的内容类型上存在一些限制（例如，不支持软件更新包）。
+- 如果使用按流量计费的数据计划且需考虑带宽成本，或者 Azure 与 Intranet 之间的网络连接不快或不稳定，则可以考虑其他方案。 这些方案包括在本地放置标准或拉取分发点以及使用 BranchCache。 也可以选择使用基于云的分发点，但在支持的内容类型上存在一些限制（例如，不支持软件更新包）。
 
 > [!NOTE]
 >  如果需要 PXE 支持，则必须使用本地分发点（标准或拉取）来响应启动请求。 [目前不支持在 Azure VM 上运行 WDS](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx)。
@@ -156,23 +156,21 @@ ms.locfileid: "67676306"
 基础知识： https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/ 
 
 **Azure VM 计算机类型：**
- - Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM 定价： https://azure.microsoft.com/pricing/details/virtual-machines/  
- - 存储定价： https://azure.microsoft.com/pricing/details/storage/
+- Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- VM 定价： https://azure.microsoft.com/pricing/details/virtual-machines/  
+- 存储定价： https://azure.microsoft.com/pricing/details/storage/
 
 **磁盘性能注意事项：**    
- - 高级磁盘简介： https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - 高级磁盘深层信息： https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - 有关图表的最大大小和存储性能目标的综合信息： https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据： https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+- 高级磁盘简介： https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+- 高级磁盘深层信息： https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+- 有关图表的最大大小和存储性能目标的综合信息： https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+- 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据： https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性：**
- - Azure IaaS 运行时间 SLA： https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - 可用性集说明： https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Azure IaaS 运行时间 SLA： https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+- 可用性集说明： https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **连接性：**
- - Express Route 与Azure VPN： https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route 定价： https://azure.microsoft.com/pricing/details/expressroute/
- - Express Route 详情： https://azure.microsoft.com/documentation/articles/expressroute-introduction/
-
- 
+- Express Route 与Azure VPN： https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+- Express Route 定价： https://azure.microsoft.com/pricing/details/expressroute/
+- Express Route 详情： https://azure.microsoft.com/documentation/articles/expressroute-introduction/

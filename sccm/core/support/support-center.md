@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9246ea46787b1db466b8aca5d8a602617c80e26a
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 192206c7ffcb2d958935cbe66f79400ee422a774
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612525"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339496"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager 的支持中心
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 <!--1357489-->
 自版本 1810 起，支持中心可用于排除客户端故障、查看实时日志，或捕获 Configuration Manager 客户端计算机状态以供日后分析。 支持中心是用于整合多个管理员故障排除工具的单一工具。 
@@ -33,11 +33,11 @@ ms.locfileid: "65612525"
 
 使用支持中心可简化支持体验。 使用支持中心可以：
 
- - 创建包含 Configuration Manager 客户端日志文件的故障排除捆绑包（.zip 文件）。 然后，可以将单个文件发送给支持人员。  
+- 创建包含 Configuration Manager 客户端日志文件的故障排除捆绑包（.zip 文件）。 然后，可以将单个文件发送给支持人员。  
 
- - 查看 Configuration Manager 客户端日志文件、证书、注册表设置、调试转储、客户端策略。  
+- 查看 Configuration Manager 客户端日志文件、证书、注册表设置、调试转储、客户端策略。  
 
- - 清单（替换 ContentSpy）、策略（替换 PolicySpy）和客户端缓存的实时诊断。  
+- 清单（替换 ContentSpy）、策略（替换 PolicySpy）和客户端缓存的实时诊断。  
 
 
 ### <a name="support-center-viewer"></a>支持中心查看器
@@ -70,7 +70,7 @@ ms.locfileid: "65612525"
 
 通过以下路径在站点服务器上找到支持中心安装程序：`cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`。
 
-安装后，在 Microsoft System Center 组的“开始”菜单上找到以下项目：  
+安装后，在 Microsoft System Center 组的“开始”菜单上找到以下项目：   
 - 支持中心 (ConfigMgrSupportCenter.exe)  
 - 支持中心日志文件查看器 (CMLogViewer.exe)  
 - 支持中心查看器 (ConfigMgrSupportCenterViewer.exe)  
@@ -96,7 +96,7 @@ ms.locfileid: "65612525"
 
 #### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>向远程计算机发送的应用程序部署评估周期请求不正确
 <!--2849356-->
-在支持中心内，如果你在“内容”选项卡上的“调用触发器”操作中选择“应用程序部署评估”，此操作会启动任务来评估已部署的应用程序。 如果你已连接到本地客户端，则它会评估计算机和用户应用程序部署。 但是，如果你已连接到远程客户端，它将仅评估计算机应用程序部署。
+在支持中心内，如果你在“内容”  选项卡上的“调用触发器”  操作中选择“应用程序部署评估”  ，此操作会启动任务来评估已部署的应用程序。 如果你已连接到本地客户端，则它会评估计算机和用户应用程序部署。 但是，如果你已连接到远程客户端，它将仅评估计算机应用程序部署。
 
 
 ## <a name="next-steps"></a>后续步骤

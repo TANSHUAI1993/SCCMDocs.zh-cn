@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34fca23c43b34d905e6ecea210c0ba7487feeea2
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 5b425103d4d7455a6453f6415f911e01defdc0d6
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677539"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340115"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
@@ -155,8 +155,8 @@ ms.locfileid: "67677539"
 随附此 Technical Preview 发布的工具旨在替换随附以往 Configuration Manager 产品发布的旧版类似工具。 尽管此工具版本将在 2017 年 3 月 1 日后停用，但新的版本将随附以后的 Technical Preview 发布，直到此工具作为 Current Branch 的一部分或生产就绪型带外版本进行发布。
 
 ### <a name="requirements"></a>要求  
- - 此工具可在承载分发点的计算机上直接运行，或者从其他服务器远程运行。 该工具一次只能对一个分发点运行。
- - 运行该工具的用户帐户必须具有基于角色的直接管理权限，该权限相当于 Configuration Manager 层次结构中的完全权限管理员。  当向用户帐户授予具有完全权限管理员权限的 Windows 安全组成员权限时，该工具不能运行。
+- 此工具可在承载分发点的计算机上直接运行，或者从其他服务器远程运行。 该工具一次只能对一个分发点运行。
+- 运行该工具的用户帐户必须具有基于角色的直接管理权限，该权限相当于 Configuration Manager 层次结构中的完全权限管理员。  当向用户帐户授予具有完全权限管理员权限的 Windows 安全组成员权限时，该工具不能运行。
 
 ### <a name="modes-of-operation"></a>操作模式
 该工具可按以下两种模式运行：

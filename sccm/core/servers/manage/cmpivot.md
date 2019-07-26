@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3626514d4cd7f2d26e3c198931eb6fad49123dd2
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 704e9ea1c8ddaf8cfebf1377381f6f345a9f7ea1
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551296"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339714"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -468,9 +468,9 @@ CMPivot 使用 Configuration Manager“快速通道”向客户端发送查询�
 - StateSys.log
 
  客户端：
- - CCMNotificationAgent.log
- - Scripts.log
- - StateMessage.log
+- CCMNotificationAgent.log
+- Scripts.log
+- StateMessage.log
 
 有关详细信息，请参阅[日志文件](/sccm/core/plan-design/hierarchy/log-files)和[CMPivot 疑难解答](/sccm/core/servers/manage/cmpivot-tsg)。
 

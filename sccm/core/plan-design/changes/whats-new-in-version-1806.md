@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8560c34f1db76afcfe2e65eeaf8311b0a58cc926
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 4e260f26295a27c91a69cad563eaec2395b00a5c
+ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623448"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491677"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -328,7 +328,8 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 此版本包括对分阶段部署的以下改进：  
 
 #### <a name="create-a-phased-deployment-with-manually-configured-phases"></a>使用手动配置的阶段创建分阶段部署
-<!--1358148--> 对于任务序列，现可在创建分阶段部署时手动配置阶段。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段  。 你仍然可以自动创建默认的两阶段部署。 
+<!--1358148-->
+对于任务序列，现可在创建分阶段部署时手动配置阶段。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段  。 你仍然可以自动创建默认的两阶段部署。 
 
 有段详细信息，请参阅[使用手动配置的阶段创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual)。
 
@@ -404,11 +405,11 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
  有关详细信息，请参阅[升级操作系统](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)
 
 #### <a name="revised-documentation-for-task-sequence-variables"></a>任务序列变量的修订文档
- 现在，提供了两篇新文章用于了解任务序列变量：  
+现在，提供了两篇新文章用于了解任务序列变量：  
 
- - [如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables)是一篇新文章，介绍不同类型的变量、设置变量的方法，以及如何访问变量。  
+- [如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables)是一篇新文章，介绍不同类型的变量、设置变量的方法，以及如何访问变量。  
 
- - [任务序列变量](/sccm/osd/understand/task-sequence-variables)是对所有可用任务序列变量的引用。 本文将结合之前的文章，以将内置变量与操作变量相分离。 
+- [任务序列变量](/sccm/osd/understand/task-sequence-variables)是对所有可用任务序列变量的引用。 本文将结合之前的文章，以将内置变量与操作变量相分离。 
 
 
 
@@ -607,9 +608,9 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 > [!TIP]  
 > 若要安装新站点，请使用 Configuration Manager 的基准版本。  
 >
->  了解详细信息：    
->   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> 了解详细信息：    
+> - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
 

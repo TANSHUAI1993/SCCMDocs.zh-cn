@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83838e2642d09c001b638900b6cc4fa23975745e
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 6a7206c6eeab7b737ea4f0130cdf736a52635fce
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676365"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68337863"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -31,25 +31,25 @@ ms.locfileid: "67676365"
 
 **先决条件：**
 
--   已安装服务连接点，并将它设置为“脱机，按需连接”  。  
+- 已安装服务连接点，并将它设置为“脱机，按需连接”  。  
 
--   该工具必须从命令提示符中运行。  
+- 该工具必须从命令提示符中运行。  
 
--   运行该工具的每个计算机（服务连接点计算机以及连接到 Internet 的计算机）必须是 x64 位系统并且必需安装以下软件：  
+- 运行该工具的每个计算机（服务连接点计算机以及连接到 Internet 的计算机）必须是 x64 位系统并且必需安装以下软件：  
 
-    -   **Visual C++ Redistributable** x86 和 x64 文件。   默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。  
+  - **Visual C++ Redistributable** x86 和 x64 文件。   默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。  
 
-         若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) 。  
+    若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) 。  
 
-    -   .NET Framework 4.5.2 或更高版本。  
+  - .NET Framework 4.5.2 或更高版本。  
 
--   用于运行工具的帐户必须：
-    -   在承载服务连接点的计算机上（工具在此计算机上运行）具有**本地管理员** 权限。
-    -   具有对站点数据库的**读取** 权限。  
+- 用于运行工具的帐户必须：
+  - 在承载服务连接点的计算机上（工具在此计算机上运行）具有**本地管理员** 权限。
+  - 具有对站点数据库的**读取** 权限。  
 
 
 
--   你将需要具有可存储文件和更新的足够可用空间的 U 盘，或需要另一种方法以在服务连接点计算机与有权访问 Internet 的计算机之间传输文件。 （此方案假设你的站点和托管计算机未直接连接到 Internet。）  
+- 你将需要具有可存储文件和更新的足够可用空间的 U 盘，或需要另一种方法以在服务连接点计算机与有权访问 Internet 的计算机之间传输文件。 （此方案假设你的站点和托管计算机未直接连接到 Internet。）  
 
 
 
@@ -60,21 +60,21 @@ ms.locfileid: "67676365"
 
  在此过程中，命令行示例使用了以下文件名和文件夹位置（你不需要使用这些路径和文件名，可以改为使用与你的环境和首选项匹配的其他选择）：  
 
--   用于存储数据以在服务器之间进行传输的 USB 记忆棒的路径：**D:\USB\\**  
+- 用于存储数据以在服务器之间进行传输的 USB 记忆棒的路径：**D:\USB\\**  
 
--   包含从你的站点导出的数据的 .cab 文件的名称：**UsageData.cab**  
+- 包含从你的站点导出的数据的 .cab 文件的名称：**UsageData.cab**  
 
--   用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称：**UpdatePacks**  
+- 用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称：**UpdatePacks**  
 
 在承载服务连接点的计算机上：  
 
--   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。  
+- 使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。  
 
-     默认情况下，你可以在 **%path%\smssetup\tools\ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到此工具。 此文件夹中的所有文件必须位于同一个文件夹中，这样服务连接工具才能工作。  
+  默认情况下，你可以在 **%path%\smssetup\tools\ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到此工具。 此文件夹中的所有文件必须位于同一个文件夹中，这样服务连接工具才能工作。  
 
 运行以下命令时，该工具会准备包含使用情况信息的 .cab 文件并将它复制到你指定的位置。 .cab 文件中的数据基于站点配置为收集的诊断使用情况数据的级别。 （请参阅 [System Center Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)）。  运行以下命令以创建 .cab 文件：  
 
--   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
 你还需要将 ServiceConnectionTool 文件夹及其所有内容复制到 U 盘中，或者采用其他方法使它在步骤 3 和 4 即将使用的计算机上可用。  
 
@@ -90,14 +90,14 @@ ms.locfileid: "67676365"
 从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
 
 #### <a name="to-upload-multiple-cab-files"></a>上传多个 .cab 文件
- -  将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
- -  然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
- -  然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
+- 将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
+- 然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
+- 然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
 
 #### <a name="to-specify-a-proxy-server"></a>指定代理服务器
 可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
-  - **-proxyserveruri [FQDN_of_proxy_server]** 使用此参数指定要用于此连接的代理服务器。
-  -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
+- **-proxyserveruri [FQDN_of_proxy_server]** 使用此参数指定要用于此连接的代理服务器。
+- **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
 
 #### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型
 从版本 1706 开始，工具默认下载行为已更改，工具支持用于控制下载的文件的选项。
@@ -124,17 +124,17 @@ ms.locfileid: "67676365"
 
 1. 在承载服务连接点的计算机上：  
 
-   -   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
+   - 使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
 
 2. 运行以下命令以使工具准备包含使用情况信息的 .cab 文件并将其复制到指定的位置：  
 
-   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
    如果同时上传多个层次结构中的 .cab 文件，则文件夹中的每个 .cab 文件的必须具有一个唯一的名称。 你可以手动重命名添加到该文件夹的文件。
 
    如果你想要查看收集并上传到 Configuration Manager 云服务的使用情况信息，请运行以下命令将相同的数据以 .csv 文件导出，然后可以使用像 Excel 之类的应用程序查看该文件：  
 
-   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
 3. 完成准备步骤后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）有权访问 Internet 的计算机。  
 
@@ -142,14 +142,14 @@ ms.locfileid: "67676365"
 
 5. 运行以下命令以开始上载使用情况信息和下载 Configuration Manager 更新：  
 
-   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   - **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
    有关此命令行的更多示例，请参阅本主题后的[命令行选项](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)部分。
 
    > [!NOTE]  
    >  运行该命令行以连接到 Configuration Manager 云服务时，可能会发生如下错误：  
    >   
-   >  -   未处理的异常：System.UnauthorizedAccessException：  
+   > - 未处理的异常：System.UnauthorizedAccessException：  
    >   
    >      对路径“C:\  
    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql”的访问被拒绝。  
@@ -160,7 +160,7 @@ ms.locfileid: "67676365"
 
 7. 在承载服务连接点的计算机上，使用管理特权打开命令提示符，将目录更改为包含 **serviceconnectiontool.exe**的位置，然后运行以下命令：  
 
-   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
 8. 导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
 
@@ -179,7 +179,7 @@ ConfigMgrSetup.log
 使用工具连接和下载更新时，将在系统驱动器的根目录上生成名为 ConfigMgrSetup.log  的日志文件。  此日志文件将提供更为详细的信息，例如，下载了什么文件、提取了什么文件，以及哈希检查是否成功。
 
 ## <a name="bkmk_cmd"></a> 命令行选项  
- 若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
+若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
 
 
 |命令行选项|详细信息|  

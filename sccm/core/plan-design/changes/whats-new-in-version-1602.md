@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43a976e04358a176852d72301335b14cf484ed3c
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: b0f44dc0886b763e9b4d6fe1f689e241d102f54c
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158806"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338984"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 
@@ -28,10 +28,10 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
 
 > [!TIP]  
->  了解详细信息：  
+> 了解详细信息：  
 >   
->   -   [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
->   -   [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602）  
+> - [安装新站点](/sccm/core/servers/deploy/install/prepare-to-install-sites)（使用基准版本，如 1511）  
+> - [在站点上安装更新](/sccm/core/servers/manage/updates)（如更新 1602）  
 
  以下各节提供有关 Configuration Manager 版本 1602 中引入的更改和新功能的详细信息。  
 

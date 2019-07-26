@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 050122d6a1b799a30bd2c5a83ab261e92aaafabe
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: f4c0bc6710f6978eb4ed95b11de6be6845d72e8e
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677206"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338786"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
@@ -27,10 +27,11 @@ System Center Configuration Manager Current Branch 的更新 1706 作为控制�
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
->  了解详细信息：    
->   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+>
+> 了解详细信息：    
+> - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 以下各节提供有关 Configuration Manager 版本 1706 中引入的更改和新功能的详细信息。  
 
@@ -59,8 +60,8 @@ Version 1706 drops support for the following products:
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进
 <!-- 1352094 -->
 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。 这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
-  - Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
-  - 此版本不支持故障转移后使用异步提交副本作为站点数据库。
+- Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/core/servers/manage/recover-sites#site-database-recovery-options)，了解有关如何实现此操作的信息。
+- 此版本不支持故障转移后使用异步提交副本作为站点数据库。
 有关详细信息，请参阅[准备使用 Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 ### <a name="update-reset-tool"></a>更新重置工具
@@ -74,9 +75,9 @@ Version 1706 drops support for the following products:
 ### <a name="improved-boundary-groups-for-software-update-points"></a>改进了软件更新点的边界组
 <!-- 1324591 -->
 此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
--   现在，软件更新点的回退使用一个可配置的时间来回退到相邻边界组。
--   独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
--   如果在两个小时内无法连接到其原始服务器，则客户端会切换到一个短循环，以联系新的软件更新点。 这意味着，如果客户端无法连接到新的服务器，它就会从自己的可用服务器池中快速选择下一个服务器，并尝试进行连接。
+- 现在，软件更新点的回退使用一个可配置的时间来回退到相邻边界组。
+- 独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
+- 如果在两个小时内无法连接到其原始服务器，则客户端会切换到一个短循环，以联系新的软件更新点。 这意味着，如果客户端无法连接到新的服务器，它就会从自己的可用服务器池中快速选择下一个服务器，并尝试进行连接。
 
 有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
 
@@ -85,20 +86,20 @@ Version 1706 drops support for the following products:
 在此版本中，我们改进了 Configuration Manager 与 Azure Active Directory (Azure AD) 的集成。  这些改进可简化配置用于 Configuration Manager 的 Azure 服务的方式，并可帮助管理通过 Azure AD 进行身份验证的客户端和用户。
 
 通过改进集成实现了以下功能：  
-  -   Azure 服务向导 – 此向导提供了一种可替换单个工作流的常见配置体验，可供设置用于 Configuration Manager 的下列 Azure 服务。
-      - 云管理  ：使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证。 还可以配置 Azure AD 用户发现。
-      - Log Analytics 连接器  连接到 Azure Log Analytics 并同步集合数据。
-      - 升级就绪情况  ：连接到升级就绪情况并查看客户端升级兼容性数据。
-      - 适用于企业的 Windows 应用商店  ：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
+- Azure 服务向导 – 此向导提供了一种可替换单个工作流的常见配置体验，可供设置用于 Configuration Manager 的下列 Azure 服务。
+  - 云管理  ：使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证。 还可以配置 Azure AD 用户发现。
+  - Log Analytics 连接器  连接到 Azure Log Analytics 并同步集合数据。
+  - 升级就绪情况  ：连接到升级就绪情况并查看客户端升级兼容性数据。
+  - 适用于企业的 Windows 应用商店  ：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
 
 
   可通过使用 [Azure 服务器 Web 应用](/azure/app-service/app-service-authentication-overview)提供订阅和配置详情来完成此操作，否则需要在每次使用 Azure 设置新 Configuration Manager 组件或服务时输入这些详细信息。 有关详细信息，请参阅 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)。
 
--   在 Internet 上使用 Azure AD 对客户端进行身份验证以访问 Configuration Manager 站点。 Azure AD 使你不再需要配置和使用客户端身份验证证书。 它需要云管理网关站点系统角色。 有关详细信息，请参阅[使用 Azure AD 从 Internet 安装并分配 Configuration Manager 客户端以进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。
+- 在 Internet 上使用 Azure AD 对客户端进行身份验证以访问 Configuration Manager 站点。 Azure AD 使你不再需要配置和使用客户端身份验证证书。 它需要云管理网关站点系统角色。 有关详细信息，请参阅[使用 Azure AD 从 Internet 安装并分配 Configuration Manager 客户端以进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。
 
--   在位于 Internet 上的计算机上安装和管理 Configuration Manager 客户端。 它需要使用云管理网关站点系统角色。 有关详细信息，请参阅[使用 Azure AD 从 Internet 安装并分配 Configuration Manager 客户端以进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。
+- 在位于 Internet 上的计算机上安装和管理 Configuration Manager 客户端。 它需要使用云管理网关站点系统角色。 有关详细信息，请参阅[使用 Azure AD 从 Internet 安装并分配 Configuration Manager 客户端以进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。
 
--   配置 Azure AD 用户发现。  使用 Azure 服务向导配置此新发现方法。 此新方法查询 Azure AD 以获取用户数据，然后可以将该数据与传统的发现数据一起使用。  支持完全同步和增量同步。  有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
+- 配置 Azure AD 用户发现。  使用 Azure 服务向导配置此新发现方法。 此新方法查询 Azure AD 以获取用户数据，然后可以将该数据与传统的发现数据一起使用。  支持完全同步和增量同步。  有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
 
 ### <a name="peer-cache-improvements"></a>对等缓存功能改进
 <!-- 1252345 -->

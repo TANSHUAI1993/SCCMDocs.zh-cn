@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d697427fe9cfa774cc7baca6563d6c1cc285c8b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: b8818f858900db76192df1503d9043e6435a4999
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159384"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338701"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -25,31 +25,31 @@ ms.locfileid: "67159384"
 本文列出了 Configuration Manager 使用的网络端口。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用任何端口筛选技术，请验证所需端口是否可用。 这些端口筛选技术包括防火墙、路由器、代理服务器或 IPsec。   
 
 > [!NOTE]  
->  如果通过 SSL 桥接支持基于 Internet 的客户端，则除了满足端口要求，可能还必须允许某些 HTTP 谓词和标头遍历防火墙。   
+> 如果通过 SSL 桥接支持基于 Internet 的客户端，则除了满足端口要求，可能还必须允许某些 HTTP 谓词和标头遍历防火墙。   
 
 
 
 ##  <a name="BKMK_ConfigurablePorts"></a> 你可以配置的端口：  
- Configuration Manager 可用于为以下通信类型配置端口：  
+Configuration Manager 可用于为以下通信类型配置端口：  
 
--   应用程序目录网站点到应用程序目录 Web 服务点  
+- 应用程序目录网站点到应用程序目录 Web 服务点  
 
--   注册代理点到注册点  
+- 注册代理点到注册点  
 
--   运行 IIS 的客户端到站点系统  
+- 运行 IIS 的客户端到站点系统  
 
--   客户端到 Internet（作为代理服务器设置）  
+- 客户端到 Internet（作为代理服务器设置）  
 
--   软件更新点到 Internet（作为代理服务器设置）  
+- 软件更新点到 Internet（作为代理服务器设置）  
 
--   软件更新点到 WSUS 服务器  
+- 软件更新点到 WSUS 服务器  
 
--   站点服务器到站点数据库服务器  
+- 站点服务器到站点数据库服务器  
 
--   Reporting Services 点  
+- Reporting Services 点  
 
-    > [!NOTE]  
-    >  在 SQL Server Reporting Services 中，配置用于 Reporting Services 点站点系统角色的端口。 之后，Configuration Manager 会在与 Reporting Services 点通信时使用这些端口。 请务必查看为 IPsec 策略或为配置防火墙定义 IP 筛选器信息的端口。  
+  > [!NOTE]  
+  > 在 SQL Server Reporting Services 中，配置用于 Reporting Services 点站点系统角色的端口。 之后，Configuration Manager 会在与 Reporting Services 点通信时使用这些端口。 请务必查看为 IPsec 策略或为配置防火墙定义 IP 筛选器信息的端口。  
 
 默认情况下，客户端到站点系统通信所用的 HTTP 端口是端口 80，默认的 HTTPS 端口是 443。 在安装期间或在 Configuration Manager 站点的“站点属性”中，可更改通过 HTTP 或 HTTPS 进行客户端到站点系统通信的端口。  
 
@@ -61,15 +61,15 @@ ms.locfileid: "67159384"
 
 Configuration Manager 不允许为以下通信类型配置端口：  
 
--   站点到站点  
+- 站点到站点  
 
--   站点服务器到站点系统  
+- 站点服务器到站点系统  
 
--   Configuration Manager 控制台到 SMS 提供程序  
+- Configuration Manager 控制台到 SMS 提供程序  
 
--   Configuration Manager 控制台到 Internet  
+- Configuration Manager 控制台到 Internet  
 
--   与云服务的连接，例如 Microsoft Intune 和云分发点  
+- 与云服务的连接，例如 Microsoft Intune 和云分发点  
 
 
 
@@ -77,9 +77,9 @@ Configuration Manager 不允许为以下通信类型配置端口：
 
 下列章节详述了 Configuration Manager 中用于通信的端口。 章节标题中的箭头显示通信的方向：  
 
--   -- > 表明一台计算机发起通信，另一台计算机始终响应  
+- -- > 表明一台计算机发起通信，另一台计算机始终响应  
 
--   &lt; -- > 表明任一计算机均可发起通信  
+- &lt; -- > 表明任一计算机均可发起通信  
 
 
 ###  <a name="BKMK_PortsAI"></a>资产智能同步点 -- > Microsoft  
@@ -194,7 +194,7 @@ Configuration Manager 不允许为以下通信类型配置端口：
 
 
 ###  <a name="BKMK_PortsClient-GCDC"></a> 客户端 -- > 全局编录域控制器  
- 如果 Configuration Manager 客户端是工作组计算机或者配置为仅限 Internet 通信，则该客户端不会联系全局目录服务器。  
+如果 Configuration Manager 客户端是工作组计算机或者配置为仅限 Internet 通信，则该客户端不会联系全局目录服务器。  
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -330,15 +330,15 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 
 ###  <a name="BKMK_PortsDist_MP"></a> 分发点 -- > 管理点  
- 在以下情况中，分发点向管理点通信：  
+在以下情况中，分发点向管理点通信：  
 
--   报告预留内容的状态  
+- 报告预留内容的状态  
 
--   报告使用情况摘要数据  
+- 报告使用情况摘要数据  
 
--   报告内容验证  
+- 报告内容验证  
 
--   报告包下载的状态（拉取分发点）
+- 报告包下载的状态（拉取分发点）
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -406,7 +406,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 
 ###  <a name="BKMK_PortsMP-Site"></a> 管理点 &lt; -- > 站点服务器  
- <sup>[备注 5](#bkmk_note5)</sup>   
+<sup>[备注 5](#bkmk_note5)</sup>   
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -587,7 +587,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 
 ###  <a name="BKMK_PortsSite-RCL"></a> 站点服务器 -- > 托管远程内容库共享的服务器  
- 从版本 1806 开始，可以将内容库重定位到另一个存储位置来释放管理中心站点或主站点服务器上的硬盘空间。 有关详细信息，请参阅[配置用于站点服务器的远程内容库](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)。  
+从版本 1806 开始，可以将内容库重定位到另一个存储位置来释放管理中心站点或主站点服务器上的硬盘空间。 有关详细信息，请参阅[配置用于站点服务器的远程内容库](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)。  
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -749,9 +749,9 @@ Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端�
 
  客户端在连接到 UNC 共享时使用服务器消息块 (SMB)。 例如：  
 
--   指定了 CCMSetup.exe **/source:** 命令行属性的手动客户端安装  
+- 指定了 CCMSetup.exe **/source:** 命令行属性的手动客户端安装  
 
--   从 UNC 路径下载定义文件的 Endpoint Protection 客户端
+- 从 UNC 路径下载定义文件的 Endpoint Protection 客户端
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -762,13 +762,13 @@ Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端�
 
  对于与 SQL Server 数据库引擎的通信和站点间复制，可以使用默认的 SQL Server 端口，也可以指定自定义端口：  
 
--   站点间通信使用：  
+- 站点间通信使用：  
 
-    -   SQL Server Service Broker，默认为端口 TCP 4022。  
+  - SQL Server Service Broker，默认为端口 TCP 4022。  
 
-    -   SQL Server 服务，默认为端口 TCP 1433。  
+  - SQL Server 服务，默认为端口 TCP 1433。  
 
--   SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的“站点内通信”默认使用端口 TCP 1433。  
+- SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的“站点内通信”默认使用端口 TCP 1433。  
 
 - Configuration Manager 使用相同的端口和协议与承载站点数据库的每个 SQL 可用性组副本进行通信，就像该副本是独立的 SQL Server 实例。
 
@@ -777,31 +777,31 @@ Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端�
 - 负载均衡规则 
 
 配置下列端口：
- - SQL over TCP：TCP 1433
- - SQL Server Service Broker：TCP 4022
- - 服务器消息块 (SMB)：TCP 445
- - RPC 端点映射程序：TCP 135
+- SQL over TCP：TCP 1433
+- SQL Server Service Broker：TCP 4022
+- 服务器消息块 (SMB)：TCP 445
+- RPC 端点映射程序：TCP 135
 
 > [!WARNING]  
->  Configuration Manager 不支持动态端口。 默认情况下，SQL Server 命名实例使用动态端口连接到数据库引擎。 使用命名实例时，请手动配置静态端口以进行站点内通信。  
+> Configuration Manager 不支持动态端口。 默认情况下，SQL Server 命名实例使用动态端口连接到数据库引擎。 使用命名实例时，请手动配置静态端口以进行站点内通信。  
 
- 下列站点系统角色直接与 SQL Server 数据库进行通信：  
+下列站点系统角色直接与 SQL Server 数据库进行通信：  
 
--   应用程序目录 Web 服务点  
+- 应用程序目录 Web 服务点  
 
--   证书注册点角色  
+- 证书注册点角色  
 
--   注册点角色  
+- 注册点角色  
 
--   管理点  
+- 管理点  
 
--   站点服务器  
+- 站点服务器  
 
--   Reporting Services 点  
+- Reporting Services 点  
 
--   SMS 提供程序  
+- SMS 提供程序  
 
--   SQL Server --> SQL Server  
+- SQL Server --> SQL Server  
 
 SQL Server 托管多个站点中的数据库时，每个数据库必须使用独立的 SQL Server 实例。 使用一组唯一的端口配置每个实例。  
 
@@ -813,37 +813,37 @@ SQL Server 托管多个站点中的数据库时，每个数据库必须使用独
 ### <a name="bkmk_discovery"></a>发现和发布
 
 Configuration Manager 使用下列端口发现和发布站点信息：
- - 轻型目录访问协议 (LDAP)：389
- - 全局编录 LDAP：3268
- - RPC 端点映射程序：135
- - RPC：动态分配的高 TCP 端口
- - TCP：1024：5000
- - TCP：49152：65535
+- 轻型目录访问协议 (LDAP)：389
+- 全局编录 LDAP：3268
+- RPC 端点映射程序：135
+- RPC：动态分配的高 TCP 端口
+- TCP：1024：5000
+- TCP：49152：65535
 
 
 ###  <a name="BKMK_External"></a> Configuration Manager 建立的外部连接  
 
 本地 Configuration Manager 客户端或站点系统可以建立下列外部连接：  
 
--   [资产智能同步点 -- &gt; Microsoft](#BKMK_PortsAI)  
+- [资产智能同步点 -- &gt; Microsoft](#BKMK_PortsAI)  
 
--   [Endpoint Protection 点 -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
+- [Endpoint Protection 点 -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
 
--   [客户端 -- &gt; 全局编录域控制器](#BKMK_PortsClient-GCDC)  
+- [客户端 -- &gt; 全局编录域控制器](#BKMK_PortsClient-GCDC)  
 
--   [Configuration Manager 控制台 -- &gt; Internet](#BKMK_PortsConsole-Internet)  
+- [Configuration Manager 控制台 -- &gt; Internet](#BKMK_PortsConsole-Internet)  
 
--   [管理点 -- &gt; 域控制器](#BKMK_PortsMP-DC)  
+- [管理点 -- &gt; 域控制器](#BKMK_PortsMP-DC)  
 
--   [站点服务器 -- &gt; 域控制器](#BKMK_PortsSite-DC)  
+- [站点服务器 -- &gt; 域控制器](#BKMK_PortsSite-DC)  
 
--   [站点服务器 &lt; -- &gt; 证书颁发机构 (CA)](#BKMK_PortsIssuingCA_SiteServer)  
+- [站点服务器 &lt; -- &gt; 证书颁发机构 (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
--   [软件更新点 -- &gt; Internet](#BKMK_PortsSUP-Internet)  
+- [软件更新点 -- &gt; Internet](#BKMK_PortsSUP-Internet)  
 
--   [软件更新点 -- &gt; 上游 WSUS 服务器](#BKMK_PortsSUP-WSUS)  
+- [软件更新点 -- &gt; 上游 WSUS 服务器](#BKMK_PortsSUP-WSUS)  
 
--   [服务连接点 -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
+- [服务连接点 -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
 - [服务连接点 -- > Azure](#bkmk_scp-cmg)  
 
@@ -852,22 +852,22 @@ Configuration Manager 使用下列端口发现和发布站点信息：
 
 ###  <a name="BKMK_IBCMports"></a> 支持基于 Internet 的客户端的站点系统的安装要求  
 
- > [!Note]  
- > 本节仅适用于基于 Internet 的客户端管理 (IBCM)。 本节不适用于云管理网关。 有关详细信息，请参阅[在 Internet 上管理客户端](/sccm/core/clients/manage/manage-clients-internet)。  
+> [!Note]  
+> 本节仅适用于基于 Internet 的客户端管理 (IBCM)。 本节不适用于云管理网关。 有关详细信息，请参阅[在 Internet 上管理客户端](/sccm/core/clients/manage/manage-clients-internet)。  
 
- 支持基于 Internet 的客户端的基于 Internet 管理点和分发点、软件更新点以及回退状态点均使用下列端口进行安装和修复：  
+支持基于 Internet 的客户端的基于 Internet 管理点和分发点、软件更新点以及回退状态点均使用下列端口进行安装和修复：  
 
--   站点服务器 --> 站点系统：RPC 终结点映射程序使用 UDP 和 TCP 端口 135。  
+- 站点服务器 --> 站点系统：RPC 终结点映射程序使用 UDP 和 TCP 端口 135。  
 
--   站点服务器 --> 站点系统：RPC 动态 TCP 端口  
+- 站点服务器 --> 站点系统：RPC 动态 TCP 端口  
 
--   站点服务器 &lt; --> 站点系统：服务器消息块 (SMB) 使用 TCP 端口 445
+- 站点服务器 &lt; --> 站点系统：服务器消息块 (SMB) 使用 TCP 端口 445
 
 分发点上的应用程序和包安装需要下列 RPC 端口：  
 
--   站点服务器 --> 分发点：RPC 端点映射程序使用 UDP 和 TCP 端口 135
+- 站点服务器 --> 分发点：RPC 端点映射程序使用 UDP 和 TCP 端口 135
 
--   站点服务器 --> 分发点：RPC 动态 TCP 端口  
+- 站点服务器 --> 分发点：RPC 动态 TCP 端口  
 
 使用 IPsec 帮助确保站点服务器和站点系统之间的通信安全。 如果必须限制针对 RPC 使用的动态端口，则可以使用 Microsoft RPC 配置工具 (rpccfg.exe) 为这些 RPC 数据包配置有限的端口范围。 有关 RPC 配置工具的详细信息，请参阅 [如何配置 RPC 以使用特定端口以及如何使用 IPsec 来帮助保护这些端口](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those)。  
 
@@ -891,7 +891,7 @@ Configuration Manager 在客户端安装期间使用的端口取决于部署方�
 
 ###  <a name="BKMK_ServerPorts"></a> Windows Server 使用的端口  
 
- 下表列出了 Windows Server 使用的一些关键端口。 
+下表列出了 Windows Server 使用的一些关键端口。 
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  

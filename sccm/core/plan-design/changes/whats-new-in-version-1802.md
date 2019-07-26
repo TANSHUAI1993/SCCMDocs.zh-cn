@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d35558da6b25bba16b84c931b0254436ac3dd1e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 9fdf140b998b4d6d64ade232503b64b14a11416f
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285535"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338669"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -32,10 +32,10 @@ Configuration Manager Current Branch 的 1802 更新作为控制台中更新提�
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
 >
->  了解详细信息：    
->   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
->   - [在站点上安装更新](/sccm/core/servers/manage/updates)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> 了解详细信息：    
+> - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
+> - [在站点上安装更新](/sccm/core/servers/manage/updates)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 1802 版中的更改和新功能的详细信息。  
 
@@ -208,15 +208,15 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 
 ### <a name="improvements-to-operating-system-deployment"></a>对操作系统部署的改进
 此版本包括对操作系统部署的以下改进：
- - 在 Windows PE 中，启动 cmtrace.exe 时不再提示选择是否将此程序设置为日志文件的默认查看器。 <!-- SMS 500897 -->
- - 将启动映像添加到[下载包内容](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)任务序列步骤。
- - 对[运行任务序列](/sccm/osd/understand/task-sequence-steps#child-task-sequence)步骤的改进： <!-- 1261338 -->   
-     - 支持所有来自软件中心、PXE和媒体的操作系统部署方案。
-     - 在对象删除期间改进控制台操作，例如复制、导入、导出和警告。
-     - 支持[创建预留内容文件](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)向导。
-     - 与部署验证集成。 有关详细信息，请参阅[高风险任务序列部署](/sccm/osd/deploy-use/deploy-a-task-sequence)。 
-     - 运行任务序列步骤现在可以在多级别任务序列中使用，而不仅仅适用于单个父子关系。 多级别关系会增加复杂性，请谨慎使用。 仍会检查这些关系的循环引用。
-    
+- 在 Windows PE 中，启动 cmtrace.exe 时不再提示选择是否将此程序设置为日志文件的默认查看器。 <!-- SMS 500897 -->
+- 将启动映像添加到[下载包内容](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)任务序列步骤。
+- 对[运行任务序列](/sccm/osd/understand/task-sequence-steps#child-task-sequence)步骤的改进： <!-- 1261338 -->   
+  - 支持所有来自软件中心、PXE和媒体的操作系统部署方案。
+  - 在对象删除期间改进控制台操作，例如复制、导入、导出和警告。
+  - 支持[创建预留内容文件](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)向导。
+  - 与部署验证集成。 有关详细信息，请参阅[高风险任务序列部署](/sccm/osd/deploy-use/deploy-a-task-sequence)。 
+  - 运行任务序列步骤现在可以在多级别任务序列中使用，而不仅仅适用于单个父子关系。 多级别关系会增加复杂性，请谨慎使用。 仍会检查这些关系的循环引用。
+
 ### <a name="deployment-templates-for-task-sequences"></a>任务序列的部署模板
 <!-- 1357391 -->
 [任务序列的部署向导](/sccm/osd/deploy-use/deploy-a-task-sequence)现在可以创建部署模板。 部署模板可以保存并应用到现有或新任务序列以创建部署。 

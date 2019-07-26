@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bfcb73f359bd8d1b4438ac28b2395b01217e35d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 0ae4074897359dcebb9b91392bd36893d0276012
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677732"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339009"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
@@ -152,12 +152,12 @@ ms.locfileid: "67677732"
       有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
-  许多在“设备”  节点中的设备上可用的任务在集合上也可用。 控制台会将操作自动应用于集合中的所有合格设备。 此操作对整个集合生成附加的网络数据包，并提高站点服务器上的 CPU 使用率。  
+许多在“设备”  节点中的设备上可用的任务在集合上也可用。 控制台会将操作自动应用于集合中的所有合格设备。 此操作对整个集合生成附加的网络数据包，并提高站点服务器上的 CPU 使用率。  
 
-  在执行集合级别任务之前，请考虑以下内容。 开始后，无法从控制台中停止任务。 
- - 集合中有多少设备？
- - 是否通过低带宽网络连接进行设备连接？
- - 在所有设备上完成此任务需要多少时间？
+在执行集合级别任务之前，请考虑以下内容。 开始后，无法从控制台中停止任务。 
+- 集合中有多少设备？
+- 是否通过低带宽网络连接进行设备连接？
+- 在所有设备上完成此任务需要多少时间？
 
 #### <a name="to-manage-clients-from-the-device-collections-node"></a>通过“设备集合”节点管理客户端  
 
@@ -195,11 +195,11 @@ ms.locfileid: "67677732"
 > 此外，必须将客户端升级到 1710 版才能运行此功能。 建议启用客户端自动升级以将客户端保持为管理开销最低的新版本。 有关详细信息，请参阅[使用自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)。
 
 若要标识正在等待重启的设备，请转到 Configuration Manager 控制台中的“资产和符合性”  工作区，并选择“设备”  节点。 然后可以在名为“等待重启”  的新列的详细信息窗格中查看每个设备的状态。 每个设备都具有以下一个或多个值： 
- - **No**：没有正在等待的重启
- - **Configuration Manager**：此值源于客户端重新启动处理协调器组件 (RebootCoordinator.log)
- - **File rename**：此值源于 Windows 报告挂起的文件重命名操作 (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
- - **Windows Update**：此值源于 Windows 更新代理报告由于一个或多个更新而需要挂起的重启 (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
- - **Add or remove feature**：此值源于 Windows 基于组件的服务报告由于添加或删除一种 Windows 功能而需要重启 (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
+- **No**：没有正在等待的重启
+- **Configuration Manager**：此值源于客户端重新启动处理协调器组件 (RebootCoordinator.log)
+- **File rename**：此值源于 Windows 报告挂起的文件重命名操作 (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
+- **Windows Update**：此值源于 Windows 更新代理报告由于一个或多个更新而需要挂起的重启 (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
+- **Add or remove feature**：此值源于 Windows 基于组件的服务报告由于添加或删除一种 Windows 功能而需要重启 (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
  若要创建要重启设备的客户端通知，请执行以下操作：
 1. 在控制台的“设备集合”  节点找到集合中要重启的设备。

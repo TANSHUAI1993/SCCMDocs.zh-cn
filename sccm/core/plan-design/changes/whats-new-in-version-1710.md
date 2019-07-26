@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43fdf80a9876c6cfe4b07b3e3df2756fdf64f8d9
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 89c977f0970a46c5f4b52628b35b2d565b15189b
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285791"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339802"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -32,10 +32,11 @@ System Center Configuration Manager Current Branch 的更新 1710 作为控制�
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
->  了解详细信息：    
->   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
->   - [在站点上安装更新](/sccm/core/servers/manage/updates)  
->   - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> 了解详细信息：    
+> - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
+> - [在站点上安装更新](/sccm/core/servers/manage/updates)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1710 中引入的更改和新功能的详细信息。  
 

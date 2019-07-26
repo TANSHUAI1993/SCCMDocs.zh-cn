@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aadb544180d7662f1b60c73db6a35b64f8b7efe7
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4754077f1a91cd11ce16e17dd3d2ea2f1704ee08
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676831"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338891"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -46,8 +46,8 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 对等缓存不会取代 Windows BranchCache 或交付优化等其他解决方案的使用。 对等缓存可与其他解决方案结合使用。 这些技术为扩展传统内容部署解决方案提供了更多选项，例如分发点。 对等缓存属于自定义解决方案，独立于 BranchCache。 即使未启用或使用 BranchCache，对等缓存仍能正常运行。  
 
-  > [!Note]  
-  > 自版本 1802 起，Windows BranchCache 始终在部署上启用。 “允许客户端与同一子网上的其他客户端共享内容”设置已删除  。<!--SCCMDocs issue 539--> 如果分发点支持此功能，并在客户端设置中启用，客户端就会使用 BranchCache。 有关详细信息，请参阅[配置 BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache)。<!--SCCMDocs issue 735-->   
+> [!Note]  
+> 自版本 1802 起，Windows BranchCache 始终在部署上启用。 “允许客户端与同一子网上的其他客户端共享内容”设置已删除  。<!--SCCMDocs issue 539--> 如果分发点支持此功能，并在客户端设置中启用，客户端就会使用 BranchCache。 有关详细信息，请参阅[配置 BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache)。<!--SCCMDocs issue 735-->   
 
 
 
@@ -55,11 +55,11 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 要启用对等缓存，请将[客户端设置](#bkmk_settings)部署到集合。 然后，该集合的成员充当同一边界组中其他客户端的对等缓存源。  
 
- - 充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。  
+- 充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。  
 
- - 同一边界组中的另一客户端会向管理点发出内容位置请求。 服务器返回潜在内容源的列表。 此列表包含带有内容且在线的所有对等缓存源。 它还包括分发点及该边界组中的其他内容源位置。 有关详细信息，请参阅[内容源优先级](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority)。  
+- 同一边界组中的另一客户端会向管理点发出内容位置请求。 服务器返回潜在内容源的列表。 此列表包含带有内容且在线的所有对等缓存源。 它还包括分发点及该边界组中的其他内容源位置。 有关详细信息，请参阅[内容源优先级](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority)。  
 
- - 通常，查找内容的客户端会从所提供的列表中选择一个源。 然后，客户端尝试获取该内容。  
+- 通常，查找内容的客户端会从所提供的列表中选择一个源。 然后，客户端尝试获取该内容。  
 
 从版本 1806 开始，边界组包含其他设置，可以更好地控制环境中的内容分发。 有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。<!--1356193-->
 
@@ -73,13 +73,13 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 在对等项请求内容时，如果存在下列情况，则对等缓存源会拒绝其对内容的请求：  
 
-  -  低电量模式  
+- 低电量模式  
 
-  -  处理器负载超过 80%  
+- 处理器负载超过 80%  
 
-  -  磁盘 I/O 的 AvgDiskQueueLength 超过 10   
+- 磁盘 I/O 的 AvgDiskQueueLength 超过 10   
 
-  -  没有其他到该计算机的可用连接  
+- 没有其他到该计算机的可用连接  
 
 > [!Tip]  
 > 在 Configuration Manager SDK 中，使用对等源功能的客户端配置服务器 WMI 类 (SMS_WinPEPeerCacheConfig) 配置这些设置  。  
@@ -98,14 +98,14 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 - 下述列外情况不需要[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)：  
 
-    - 当启用对等缓存的客户端从软件中心运行任务序列且重启到启动映像时，在站点中配置网络访问帐户。 当设备位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。  
+  - 当启用对等缓存的客户端从软件中心运行任务序列且重启到启动映像时，在站点中配置网络访问帐户。 当设备位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。  
 
-    - 必要时，对等缓存源会使用网络访问帐户对来自对等项的下载请求进行身份验证。 为此，此帐户只需域用户权限。  
+  - 必要时，对等缓存源会使用网络访问帐户对来自对等项的下载请求进行身份验证。 为此，此帐户只需域用户权限。  
 
 - 使用 1802 及更早版本，对等缓存源的当前边界由客户端的上一次检测信号发现提交内容决定。 出于对等缓存的目的，漫游到其他边界组的客户端可能仍是其以前边界组的成员。 此行为会导致提供给客户端的对等缓存源不在其直接网络位置中。 请不要将漫游客户端启用为对等缓存源。<!--SCCMDocs issue 641-->  
 
-    > [!Important]  
-    > 从版本 1806 开始，Configuration Manager 可以更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。<!--SCCMDocs issue 850-->  
+  > [!Important]  
+  > 从版本 1806 开始，Configuration Manager 可以更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。<!--SCCMDocs issue 850-->  
 
 - 在尝试下载内容之前，管理点先验证对等缓存源是否处于联机状态。<!--sms.498675--> 此验证通过客户端通知的“快速通道”进行，采用 TCP 端口 10123。<!--511673-->  
 
@@ -187,11 +187,11 @@ Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (H
 - 必要时，请在 OS 部署任务序列期间使用 SMSTSPreserveContent 变量，从而保留客户端缓存中的内容  。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent)。  
 
 - 必要时，请在创建以下软件时使用“保留客户端缓存中的内容”选项  ：  
-    - 应用程序
-    - 包
-    - OS 映像
-    - OS 升级包
-    - 启动映像
+  - 应用程序
+  - 包
+  - OS 映像
+  - OS 升级包
+  - 启动映像
 
 
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f560c5bf4ca9a3b58652bc3c53b83d8cf0479cf
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: b468162ce19718b6c0f6f31b961cf61378834597
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551045"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339767"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
@@ -482,13 +482,13 @@ Configuration Manager 支持为工作组中的计算机安装客户端。 使用
 `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
 此示例使用以下行为安装客户端：
-  - 使用驱动器 D 上文件夹中的源文件。
-  - 使用客户端 PKI 证书。
-  - 选择有效期最长的证书。
-  - 仅限 Internet 的客户端管理。
-  - 分配客户端以使用基于 Internet 的管理点 SERVER1。
-  - 分配 contoso.com 域中基于 Internet 的回退状态点。
-  - 将客户端分配到 ABC 站点。  
+- 使用驱动器 D 上文件夹中的源文件。
+- 使用客户端 PKI 证书。
+- 选择有效期最长的证书。
+- 仅限 Internet 的客户端管理。
+- 分配客户端以使用基于 Internet 的管理点 SERVER1。
+- 分配 contoso.com 域中基于 Internet 的回退状态点。
+- 将客户端分配到 ABC 站点。  
 
 
 ###  <a name="BKMK_ConfigureIBCM_MP"></a> 在客户端安装后针对基于 Internet 的客户端管理配置客户端  

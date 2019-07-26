@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac3967059b7cb8b8e4d4a3d32a9c88bfdfd1567b
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 84d2c8581eb7ce93ef946a61b8b435815e802b04
+ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818092"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491668"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -157,7 +157,7 @@ ms.locfileid: "67818092"
 
 4. 在将承载站点数据库（主副本或在其中还原站点数据库的服务器）的服务器上，将站点数据库的备份模型从“完整”  更改为  ”简单”。 请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。  
 
-5. 从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
+5. 从 \<Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序    。
 
 6. 在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后单击“下一步”  。  
 

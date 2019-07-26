@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c584169d56c11be29cd536bf408f20ee59dbf3c
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 10c47a9f0da6c61ded9b3ef7de5dc854ce931c37
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894165"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339157"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>云管理网关的安全和隐私
 
@@ -43,8 +43,8 @@ ms.locfileid: "67894165"
 
 ### <a name="configuration-manager-client-facing-roles"></a>面向 Configuration Manager 客户端的角色
 管理点和软件更新点承载 IIS 中的终结点，用于处理客户端请求。 CMG 不公开所有内部终结点。 发布到 CMG 的每个终结点都有对应的 URL 映射。
-  - 外部 URL 是客户端在与 CMG 进行通信时使用的 URL。
-  - 内部 URL 是用于将请求转发给内部服务器的 CMG 连接点。
+- 外部 URL 是客户端在与 CMG 进行通信时使用的 URL。
+- 内部 URL 是用于将请求转发给内部服务器的 CMG 连接点。
 
 #### <a name="url-mapping-example"></a>URL 映射示例
 在管理点上启用 CMG 通信时，Configuration Manager 会为每个管理点服务器创建一组内部 URL 映射。 例如：ccm_system、ccm_incoming 和 sms_mp。 管理点 ccm_system 终结点的外部 URL 可能如下所示：  

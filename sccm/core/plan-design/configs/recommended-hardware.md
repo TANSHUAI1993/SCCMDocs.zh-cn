@@ -11,25 +11,25 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ed8d93f65526c8bfa9cf4acabf0db09056563e7
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: cbad2440f9309e712fb00da2739ed5302866ff63
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499512"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339462"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>用于 System Center Configuration Manager 的推荐硬件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 以下建议是一些指南，可以帮助扩展 System Center Configuration Manager 环境，支持比非常基本的站点、站点系统和客户端部署更高级的部署。 这些指南并未打算将所有可能的站点和层次结构配置都包括在内。  
 
- 请使用以下各部分中的这些信息作为指南来帮助你做好硬件规划，使默认的硬件配置能满足使用 Configuration Manager 可用功能的客户端和站点在处理负载方面的要求。  
+请使用以下各部分中的这些信息作为指南来帮助你做好硬件规划，使默认的硬件配置能满足使用 Configuration Manager 可用功能的客户端和站点在处理负载方面的要求。  
 
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a>站点系统  
- 本部分提供用于 Configuration Manager 站点系统的推荐硬件配置，以实现具有以下效果的部署：支持最大数目的客户端，以及使用大部分或全部 Configuration Manager 功能。 支持小于最大数量的客户端且不使用所有可用功能的部署可能需要更少的计算机资源。 通常，限制整个系统的性能的关键因素包括下列因素（按顺序列出）：  
+本部分提供用于 Configuration Manager 站点系统的推荐硬件配置，以实现具有以下效果的部署：支持最大数目的客户端，以及使用大部分或全部 Configuration Manager 功能。 支持小于最大数量的客户端且不使用所有可用功能的部署可能需要更少的计算机资源。 通常，限制整个系统的性能的关键因素包括下列因素（按顺序列出）：  
 
 1.  磁盘 I/O 性能  
 
@@ -54,10 +54,10 @@ ms.locfileid: "65499512"
 |子主站点的远程数据库服务器|16|72|90|  
 |辅助站点服务器|8|16|-|  
 
- <sup>1</sup>在同一台计算机上安装站点服务器和 SQL Server 时，部署对站点和客户端支持[调整大小和缩放数量](/sccm/core/plan-design/configs/size-and-scale-numbers)的最大值。 但是，此配置可以限制 [System Center Configuration Manager 的高可用性选项](/sccm/protect/understand/high-availability-options)，像使用 SQL Server 群集那样。 此外，由于支持 SQL Server 和 Configuration Manager 站点服务器所需的 I/O 要求较高，因此在同一台计算机上运行二者时，如果部署较大，最好考虑将配置用于远程 SQL Server 计算机。  
+<sup>1</sup>在同一台计算机上安装站点服务器和 SQL Server 时，部署对站点和客户端支持[调整大小和缩放数量](/sccm/core/plan-design/configs/size-and-scale-numbers)的最大值。 但是，此配置可以限制 [System Center Configuration Manager 的高可用性选项](/sccm/protect/understand/high-availability-options)，像使用 SQL Server 群集那样。 此外，由于支持 SQL Server 和 Configuration Manager 站点服务器所需的 I/O 要求较高，因此在同一台计算机上运行二者时，如果部署较大，最好考虑将配置用于远程 SQL Server 计算机。  
 
 ###  <a name="bkmk_RemoteSiteSystem"></a>远程站点系统服务器  
- 以下指南适用于具有单一站点系统角色的计算机。 当在同一台计算机上安装多个站点系统角色时，请计划实施调整。  
+以下指南适用于具有单一站点系统角色的计算机。 当在同一台计算机上安装多个站点系统角色时，请计划实施调整。  
 
 |站点系统角色|CPU（核心数）|内存(GB)|硬盘空间 (GB)|  
 |----------------------|---------------|---------------|--------------------|  
@@ -67,16 +67,16 @@ ms.locfileid: "65499512"
 |软件更新点<sup>1</sup>|8|16|根据操作系统需要，存储所部署的更新|  
 |所有其他站点系统角色|4|8|50|  
 
- <sup>1</sup>托管软件更新点的计算机对 IIS 应用程序池需要使用以下配置：  
+<sup>1</sup>托管软件更新点的计算机对 IIS 应用程序池需要使用以下配置：  
 
--   将 **WsusPool 队列长度** 增加到 **2000**。  
+- 将 **WsusPool 队列长度** 增加到 **2000**。  
 
--   将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）。  
+- 将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）   。  
 
 ###  <a name="bkmk_DiskSpace"></a>站点系统的磁盘空间  
- 磁盘分配和配置会影响 Configuration Manager 的性能。 由于每个 Configuration Manager 环境都不同，因此，所实现的值可能会不同于下列指南的值。  
+磁盘分配和配置会影响 Configuration Manager 的性能。 由于每个 Configuration Manager 环境都不同，因此，所实现的值可能会不同于下列指南的值。  
 
- 为了获得最佳性能，请将每个对象都放在单独、专用的 RAID 卷上。 对于所有数据卷（Configuration Manager 及其数据库文件），请使用 RAID 10 以获得最佳性能。  
+为了获得最佳性能，请将每个对象都放在单独、专用的 RAID 卷上。 对于所有数据卷（Configuration Manager 及其数据库文件），请使用 RAID 10 以获得最佳性能。  
 
 |数据用途|最小磁盘空间|25,000 个客户端|50,000 个客户端|100,000 个客户端|150,000 个客户端|700,000 个客户端（管理中心站点）|  
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
@@ -87,56 +87,56 @@ ms.locfileid: "65499512"
 |临时数据库文件（.mdf 和 .ldf）|按需而定|按需而定|按需而定|按需而定|按需而定|按需而定|  
 |内容（分发点共享）|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|  
 
- <sup>1</sup>磁盘空间指导未包括位于站点服务器或分发点上内容库中的内容所需的空间。 有关规划内容库的信息，请参阅[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。  
+<sup>1</sup>磁盘空间指导未包括位于站点服务器或分发点上内容库中的内容所需的空间。 有关规划内容库的信息，请参阅[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。  
 
- 在规划磁盘空间要求时，除了考虑上述指南之外，另请考虑下列指南：  
+在规划磁盘空间要求时，除了考虑上述指南之外，另请考虑下列指南：  
 
--   每个客户端都需要大约 5 MB 的空间。  
+- 每个客户端都需要大约 5 MB 的空间。  
 
--   规划主站点的临时数据库大小时，其组合大小应为站点数据库 .mdf 文件大小的 25% 到 30%。 实际大小可能会小得多或大得多，具体取决于站点服务器的性能，以及短期和长期的传入数据量。  
+- 规划主站点的临时数据库大小时，其组合大小应为站点数据库 .mdf 文件大小的 25% 到 30%。 实际大小可能会小得多或大得多，具体取决于站点服务器的性能，以及短期和长期的传入数据量。  
 
-    > [!NOTE]  
-    >  站点有 50,000 个或更多客户端时，请计划使用 4 个或更多临时数据库 .mdf 文件。  
+  > [!NOTE]  
+  >  站点有 50,000 个或更多客户端时，请计划使用 4 个或更多临时数据库 .mdf 文件。  
 
--   管理中心站点的临时数据库大小通常比主站点的临时数据库大小要小得多。  
+- 管理中心站点的临时数据库大小通常比主站点的临时数据库大小要小得多。  
 
--   辅助站点数据库有下列大小限制：  
+- 辅助站点数据库有下列大小限制：  
 
-    -   SQL Server 2012 Express：10 GB  
+  - SQL Server 2012 Express：10 GB  
 
-    -   SQL Server 2014 Express：10 GB  
+  - SQL Server 2014 Express：10 GB  
 
 ##  <a name="bkmk_ScaleClient"></a>客户端  
- 本部分提供使用 Configuration Manager 客户端软件管理计算机的推荐硬件配置。  
+本部分提供使用 Configuration Manager 客户端软件管理计算机的推荐硬件配置。  
 
 ### <a name="client-for-windows-computers"></a>Windows 计算机的客户端  
- 以下是使用 Configuration Manager 管理基于 Windows 的计算机的最低要求，包括嵌入的操作系统：  
+以下是使用 Configuration Manager 管理基于 Windows 的计算机的最低要求，包括嵌入的操作系统：  
 
--   **处理器和内存：** 请参阅计算机操作系统的处理器和 RAM 要求。  
+- **处理器和内存：** 请参阅计算机操作系统的处理器和 RAM 要求。  
 
--   **磁盘空间：** 500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
+- **磁盘空间：** 500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
 
-    -   使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用“应用程序目录”，则运行 `CCMSetup.exe /skipprereq:silverlight.exe`。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
+  - 使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用“应用程序目录”，则运行 `CCMSetup.exe /skipprereq:silverlight.exe`。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
 
-    -   使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如，`CCMSetup.exe SMSCachesize=2` 创建大小为 2 MB 的缓存。  
+  - 使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如，`CCMSetup.exe SMSCachesize=2` 创建大小为 2 MB 的缓存。  
 
-    有关这些客户端安装设置的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+  有关这些客户端安装设置的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
-    > [!TIP]  
-    >  使用最小磁盘空间安装客户端适用于 Windows Embedded 设备，此设备的磁盘大小通常比标准 Windows 计算机的磁盘大小要小。  
+  > [!TIP]  
+  >  使用最小磁盘空间安装客户端适用于 Windows Embedded 设备，此设备的磁盘大小通常比标准 Windows 计算机的磁盘大小要小。  
 
 
 
  以下是 Configuration Manager 中可选功能的其他最低硬件要求。  
 
--   **操作系统部署：** 384 MB RAM  
+- **操作系统部署：** 384 MB RAM  
 
--   **软件中心：** 500 MHz 处理器  
+- **软件中心：** 500 MHz 处理器  
 
--   **远程控制：** Pentium 4 Hyper-Threaded 3 GHz（单核）或类似的 CPU，包含至少 1 GB RAM 以获得最佳体验  
+- **远程控制：** Pentium 4 Hyper-Threaded 3 GHz（单核）或类似的 CPU，包含至少 1 GB RAM 以获得最佳体验  
 
 ### <a name="client-for-linux-and-unix"></a>适用于 Linux 和 UNIX 的客户端  
- 以下是对使用 Configuration Manager 管理的 Linux 和 UNIX 服务器的最低要求。  
+以下是对使用 Configuration Manager 管理的 Linux 和 UNIX 服务器的最低要求。  
 
 |要求|详细信息|  
 |-----------------|-------------|  
@@ -145,15 +145,15 @@ ms.locfileid: "65499512"
 |网络连接|Configuration Manager 客户端计算机必须具有到 Configuration Manager 站点系统的网络连接才能启用管理。|  
 
 ##  <a name="bkmk_ScaleConsole"></a> Configuration Manager 控制台  
- 下表中的要求适用于运行 Configuration Manager 控制台的每台计算机。  
+下表中的要求适用于运行 Configuration Manager 控制台的每台计算机。  
 
- **最低硬件配置：**  
+**最低硬件配置：**  
 
--   Intel i3 或相当的 CPU  
+- Intel i3 或相当的 CPU  
 
--   2 GB RAM  
+- 2 GB RAM  
 
--   2 GB 磁盘空间  
+- 2 GB 磁盘空间  
 
 |DPI 设置|最小分辨率|  
 |-----------------|------------------------|  
@@ -162,17 +162,17 @@ ms.locfileid: "65499512"
 |144/150%|1600 x 1200|  
 |196/200%|2500 x 1600|  
 
- **支持 PowerShell：**  
+**支持 PowerShell：**  
 
- 在运行 Configuration Manager 控制台的计算机上安装针对 PowerShell 的支持时，可以在该计算机上运行 PowerShell cmdlet 以管理 Configuration Manager。
+在运行 Configuration Manager 控制台的计算机上安装针对 PowerShell 的支持时，可以在该计算机上运行 PowerShell cmdlet 以管理 Configuration Manager。
 
- - 支持 PowerShell 3.0 或更高版本
+- 支持 PowerShell 3.0 或更高版本
 
 除 PowerShell 以外，还支持 Management Framework (WMF) 版本 3.0 或更高版本。   
 
 
 ##  <a name="bkmk_ScaleLab"></a>实验室部署  
- 对 Configuration Manager 的实验室和测试部署使用下列建议的最低硬件配置。 这些建议适用于所有站点类型，并可用于最多 100 个客户端：  
+对 Configuration Manager 的实验室和测试部署使用下列建议的最低硬件配置。 这些建议适用于所有站点类型，并可用于最多 100 个客户端：  
 
 |角色|CPU（核心数）|内存(GB)|硬盘空间 (GB)|  
 |----------|---------------|-------------------|-----------------------|  
