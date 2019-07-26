@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 726df4e6ddbfc34194fd25951d6dbafd1e9008ad
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 375628c7d392a14c22a29cf75e081f6f86783889
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159544"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340447"
 ---
 # <a name="create-certificate-profiles"></a>创建证书配置文件
 
@@ -68,17 +68,17 @@ ms.locfileid: "67159544"
 > [!IMPORTANT]  
 >  你至少必须配置一个受信任的 CA 证书配置文件，然后才能创建 SCEP 证书配置文件。    
 >  
->  如果在部署证书后更改这些值中的任何一个值，则需要请求新的证书：
->  -  密钥存储提供
->  -  证书模板名称
->  -  证书类型
->  -  使用者名称格式
->  -  使用者可选名称
->  -  证书有效期
->  -  密钥用法
->  -  密钥大小
->  -  扩展密钥用法
->  -  根 CA 证书
+> 如果在部署证书后更改这些值中的任何一个值，则需要请求新的证书：
+> - 密钥存储提供
+> - 证书模板名称
+> - 证书类型
+> - 使用者名称格式
+> - 使用者可选名称
+> - 证书有效期
+> - 密钥用法
+> - 密钥大小
+> - 扩展密钥用法
+> - 根 CA 证书
 
 1. 在“创建证书配置文件向导”的“受信任的 CA 证书”  页上，指定下列信息：  
 

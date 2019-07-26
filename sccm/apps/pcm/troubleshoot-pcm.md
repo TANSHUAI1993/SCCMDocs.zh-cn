@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e253d731c5c5cefa6bc13b04f40ab18855af4b8
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 475f80dc4d5841eb014b8f1ecb4d23ffdb699944
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176883"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339197"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>包转换管理器故障排除
 
@@ -40,16 +40,16 @@ ms.locfileid: "66176883"
 
 在将包转换为应用程序之前，使用包转换管理器“分析”  功能对包进行分析。 完成分析后，在 Configuration Manager 控制台的“包”  节点中添加“准备情况”  列。 包列表显示已分析包的以下就绪状态之一：
 
- -  自动：可以使用“转换”  功能直接转换包。      
+-  自动：可以使用“转换”  功能直接转换包。      
 
-    > [!NOTE]  
-    > 自动转换不会将 WQL 查询转换为应用程序要求。 使用“修复和转换”  过程来转换这些查询。  
+  > [!NOTE]  
+  > 自动转换不会将 WQL 查询转换为应用程序要求。 使用“修复和转换”  过程来转换这些查询。  
 
- -  手动：包需要一些添加或修改才能使用“修复和转换”  功能进行转换。  
+-  手动：包需要一些添加或修改才能使用“修复和转换”  功能进行转换。  
 
- -  不适用：包不适合进行转换。 请更正包存在的任何问题，或继续将其部署为一个包。  
+-  不适用：包不适合进行转换。 请更正包存在的任何问题，或继续将其部署为一个包。  
 
- -  错误：包中包含错误。 手动更正这些错误后，才能进行分析和转换。  
+-  错误：包中包含错误。 手动更正这些错误后，才能进行分析和转换。  
 
 Configuration Manager 控制台中“包”  节点的细节窗格显示任何准备情况问题。 选择一个包，然后在细节窗格中选择“摘要”  选项卡。
 

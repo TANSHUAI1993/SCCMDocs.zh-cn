@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f5518346f0085293a2a9b5422c7aef375076d0c
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 3a4ea6d12a41de37325cb64e0a702d6842f9508a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516155"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340488"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视证书配置文件
 
@@ -63,16 +63,16 @@ ms.locfileid: "67516155"
 
 ##  <a name="view-compliance-results-by-using-reports"></a>使用报表来查看符合性结果
 
- System Center Configuration Manager 中的符合性设置包括内置报表，你可以使用这些报表监视有关证书配置文件的信息。 这些报表的报表类别为“符合性和设置管理”  。  
+System Center Configuration Manager 中的符合性设置包括内置报表，你可以使用这些报表监视有关证书配置文件的信息。 这些报表的报表类别为“符合性和设置管理”  。  
 
 > [!IMPORTANT]  
 >  在符合性设置报表中使用参数“设备筛选器”  和“用户筛选器”  时，你必须使用通配符 (%) 字符。  
 
 要监视 SCEP 证书符合性，使用位于报表节点“公司资源访问”  下的这些证书报表：  
 
- -   证书颁发历史记录  
- -   证书即将到期的资产列表  
- -   按证书颁发状态列出的资产的列表  
+-   证书颁发历史记录  
+-   证书即将到期的资产列表  
+-   按证书颁发状态列出的资产的列表  
 
 
 

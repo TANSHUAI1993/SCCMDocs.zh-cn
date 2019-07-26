@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2abfa18bdf454850510c18551f2f64813a7891ea
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: a90dff8b187c28d925daeb9dae02849dd5027bab
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523922"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339241"
 ---
 # <a name="package-conversion-manager"></a>包转换管理器
 
@@ -42,8 +42,8 @@ ms.locfileid: "58523922"
 此集成版本的包转换管理器适用于 Configuration Manager 当前分支站点中的包。 它不是一个独立的工具。 如果有较旧版本的 Configuration Manager 包和程序，请首先将包迁移到当前分支站点。 有关详细信息，请参阅[在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)。
 
 <!-- SCCMDocs-pr issue #3357 -->
-配置管理器版本 1902年包括以下改进：
-- 默认情况下安排的程序包分析运行每 7 天
+Configuration Manager 1902 版包含以下改进:
+- 默认情况下，计划的包分析每 7 天运行一次
 - 用于分析和转换包的 PowerShell cmdlet
 - 一般性的 bug 修复与改进
 
@@ -131,22 +131,22 @@ ms.locfileid: "58523922"
 
 最适合转换为应用程序的包类型是包含面向用户的软件的包，例如：  
 
- - Windows Installer 文件（.msi 和 .msu）  
+- Windows Installer 文件（.msi 和 .msu）  
 
- - Microsoft Application Virtualization (App-V) 程序  
+- Microsoft Application Virtualization (App-V) 程序  
 
- - Windows 可执行文件 (.exe)  
+- Windows 可执行文件 (.exe)  
 
 最好保存为包（而不转换为应用程序的包）的类型包括：
 
- - 系统维护工具。 例如脚本或备份实用程序。  
+- 系统维护工具。 例如脚本或备份实用程序。  
 
- - 不支持的软件包。
+- 不支持的软件包。
 
 > [!Tip]  
 > 在标识不适合转换为应用程序的包之后，将它们移入 Configuration Manager 控制台的单独文件夹中。 在 Configuration Manager 控制台中创建包文件夹：  
-> - 右键单击“包”节点。  
-> - 选择“文件夹”，然后选择“创建文件夹”。  
+> - 右键单击“包”  节点。  
+> - 选择“文件夹”  ，然后选择“创建文件夹”  。  
 > - 输入文件夹的名称，例如 `Not Converted`。  
 > - 单击" **确定**"。  
 
@@ -154,26 +154,26 @@ ms.locfileid: "58523922"
 
 对于你想转换的每个包，请确保它们符合以下条件：  
 
- - 源文件的位置是完整的 UNC 路径，例如 `\\Server\Share\File`。  
+- 源文件的位置是完整的 UNC 路径，例如 `\\Server\Share\File`。  
 
- - Windows Installer 文件仅使用一个唯一的产品代码。  
+- Windows Installer 文件仅使用一个唯一的产品代码。  
 
 
 ### <a name="bkmk_test"></a> 选择测试包
 
 测试包组应尽量包括满足以下条件的包：  
 
- - 至少一个测试包的就绪状态为“自动” 。  
+- 至少一个测试包的就绪状态为“自动”  。  
 
- - 至少一个测试包的就绪状态为“手动” 。  
+- 至少一个测试包的就绪状态为“手动”  。  
 
 理想情况下，测试包应为核心包，例如：  
 
- - 你熟悉的包。  
+- 你熟悉的包。  
 
- - 对你的组织最重要的包。  
+- 对你的组织最重要的包。  
 
- - 可以最轻松地对其进行测试的包。  
+- 可以最轻松地对其进行测试的包。  
 
 标识适用于测试的包。 然后将其移至 Configuration Manager 控制台中单独的文件夹。
 
@@ -185,25 +185,25 @@ ms.locfileid: "58523922"
 若要分析单个包或一个小组，使用在 Configuration Manager 控制台中集成的包转换管理器。 有关详细信息，请参阅[如何分析和转换包](/sccm/apps/pcm/how-to-analyze-and-convert)。  
 
 > [!NOTE]  
-> 查看“监视”工作区中的“包转换状态”节点。 它显示有关分析和转换进程的摘要信息。  
+> 查看“监视”  工作区中的“包转换状态”节点  。 它显示有关分析和转换进程的摘要信息。  
 
 #### <a name="investigate-analysis-results"></a>调查分析结果
 
-分析测试包后，调查就绪状态为“手动”  或“错误” 的包。 确定其具有该状态的原因。 “手动”  或“错误”  就绪状态的一些常见原因包括：
+分析测试包后，调查就绪状态为“手动”  或“错误”  的包。 确定其具有该状态的原因。 “手动”  或“错误”  就绪状态的一些常见原因包括：
 
- - 包中没有在应用程序部署类型中创建检测方法时所需的信息。  
+- 包中没有在应用程序部署类型中创建检测方法时所需的信息。  
 
- - 包中没有将集合转换为全局条件和要求时所需的信息。  
+- 包中没有将集合转换为全局条件和要求时所需的信息。  
 
- - 包中具有多个程序。  
+- 包中具有多个程序。  
 
- - 此包依赖于尚未转换为应用程序的另一个包。  
+- 此包依赖于尚未转换为应用程序的另一个包。  
 
 有关详细信息，请使用以下资源：  
 
 - 有关错误消息和修复方法，请参阅[包转换管理器错误消息的技术参考](/sccm/apps/pcm/error-messages)  
 
-- 查看日志文件 PCMTrace.log  
+- 查看日志文件 PCMTrace.log   
 
 - [包转换管理器故障排除](/sccm/apps/pcm/troubleshoot-pcm)  
 
@@ -212,7 +212,7 @@ ms.locfileid: "58523922"
 有关如何转换包的详细信息，请参阅[如何分析和转换包](/sccm/apps/pcm/how-to-analyze-and-convert)。
 
 > [!NOTE]  
-> 查看“监视”工作区中的“包转换状态”节点。 它显示有关分析和转换进程的摘要信息。  
+> 查看“监视”  工作区中的“包转换状态”节点  。 它显示有关分析和转换进程的摘要信息。  
 
 
 ### <a name="bkmk_deploy"></a> 测试和部署应用程序
@@ -223,7 +223,7 @@ ms.locfileid: "58523922"
 
 ## <a name="recommendations"></a>建议
 
-- 使用“监视”工作区中的“包转换状态”节点。 它显示有关分析和转换进程的摘要信息。  
+- 使用“监视”  工作区中的“包转换状态”节点  。 它显示有关分析和转换进程的摘要信息。  
 
 - 调查包中称为“包装器”的程序。 使用包转换管理器插件将其功能转换成等效的 Configuration Manager 功能。  
 

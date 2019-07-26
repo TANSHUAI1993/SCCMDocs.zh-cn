@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36304b836dbedcb411310d5f0dd8d0f0a8fd91f1
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 2a0ef3dc874e1a90042859fce745f44e8a1e0472
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194468"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340348"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 升级到最新版本
 
@@ -24,16 +24,16 @@ ms.locfileid: "67194468"
 
 本文介绍在 Configuration Manager 中升级计算机操作系统的步骤。 你可以在不同的部署方法（如独立媒体或软件中心）中进行选择。 “就地升级”方案具有以下特点：  
 
--   升级当前运行以下系统版本的计算机的操作系统：
-    - Windows 7、Windows 8 或 Windows 8.1。 你还可以执行 Windows 10 内部版本的升级。 例如可以将 Windows 10 版本 1607 升级到版本为 1709 的 Windows 10。  
-    
-    - Windows Server 2012。 还可以执行 Windows Server 2016 内部版本的升级。 有关支持的升级路径的详细信息，请参阅[支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)。    
+- 升级当前运行以下系统版本的计算机的操作系统：
+  - Windows 7、Windows 8 或 Windows 8.1。 你还可以执行 Windows 10 内部版本的升级。 例如可以将 Windows 10 版本 1607 升级到版本为 1709 的 Windows 10。  
+  
+  - Windows Server 2012。 还可以执行 Windows Server 2016 内部版本的升级。 有关支持的升级路径的详细信息，请参阅[支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)。    
 
--   保留计算机上的应用程序、设置和用户数据。  
+- 保留计算机上的应用程序、设置和用户数据。  
 
--   没有 Windows ADK 等外部依赖关系。  
+- 没有 Windows ADK 等外部依赖关系。  
 
--   比传统操作系统部署更快、更具弹性。  
+- 比传统操作系统部署更快、更具弹性。  
 
 
 > [!Note]  
@@ -89,12 +89,12 @@ ms.locfileid: "67194468"
 
 使用下列部署方法之一部署操作系统：  
 
-  -   [使用软件中心通过网络部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
+- [使用软件中心通过网络部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
 
-  -   [使用独立媒体部署 Windows，而不使用网络](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+- [使用独立媒体部署 Windows，而不使用网络](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-      > [!IMPORTANT]  
-      > 使用独立媒体时，必须在任务序列中包括启动映像，以供“任务序列媒体向导”使用。
+  > [!IMPORTANT]  
+  > 使用独立媒体时，必须在任务序列中包括启动映像，以供“任务序列媒体向导”使用。
 
 
 

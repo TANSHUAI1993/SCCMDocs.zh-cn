@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75737d3f640a9ba0a27277f36791227fbdd08a5a
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 45406eca95511d2380430e4cf4702fb4eca96d5d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285832"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338969"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
 
@@ -28,10 +28,11 @@ System Center Configuration Manager Current Branch 的更新 1610 作为控制�
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
->  了解详细信息：    
->  -   [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
->  -   [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> 了解详细信息：    
+> - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1610 中引入的更改和新功能的详细信息。  
 

@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92e1d0e672d4fc5e6e98f87ba92cec2602f7d240
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: dcbbd799a87992fb34234f89a8660ed85c05dc3a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496210"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340485"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 
@@ -40,10 +40,11 @@ ms.locfileid: "65496210"
 >[!NOTE]
 >-   从版本 1702 开始，软件更新点角色不支持 Windows Server 2008 R2。 有关详细信息，请参阅[站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1)。  
 
-如果在一个站点上有多个软件更新点，请确保它们全都运行相同版本的 WSUS。  
+> [!WARNING]  
+> 如果在一个站点上有多个软件更新点，请确保它们全都运行相同版本的 WSUS。  
 
 > [!WARNING]  
->  仅从 WSUS 4.0 开始支持“升级”软件更新分类。 在同步此新分类，并且能够对 Windows 10 维护服务计划中的 Windows 10 计算机进行评估之前，在软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) 很重要。 此修补程序使基于 Windows Server 2012 的服务器或基于 Windows Server 2012 R2 的服务器上的 WSUS 能够同步和分发 Windows 10 的功能升级。 有关详细信息，请参阅[管理 Windows 即服务](../../osd/deploy-use/manage-windows-as-a-service.md)。  
+>  仅从 WSUS 4.0 开始支持“升级”软件更新分类  。 在同步此新分类，并且能够对 Windows 10 维护服务计划中的 Windows 10 计算机进行评估之前，在软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) 很重要。 此修补程序使基于 Windows Server 2012 的服务器或基于 Windows Server 2012 R2 的服务器上的 WSUS 能够同步和分发 Windows 10 的功能升级。 有关详细信息，请参阅[管理 Windows 即服务](../../osd/deploy-use/manage-windows-as-a-service.md)。  
 >   
 >  如果在安装[修补程序 3095113](https://support.microsoft.com/kb/3095113)之前同步具有**升级**分类的软件更新，请参阅[在安装 KB 3095113 之前从同步升级分类中恢复](#BKMK_RecoverUpgrades)。  
 
@@ -87,13 +88,13 @@ ms.locfileid: "65496210"
  Reporting Services 点站点系统角色可以显示软件更新的报表。 此角色是可选的，但建议使用它。 有关 Reporting Services 点创建方法的详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> 在安装 KB 3095113 之前从同步升级分类中恢复  
- 必须在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) ，然后再同步 **升级** 分类。 如果在启用“升级”分类后未安装修补程序，即使 WSUS 无法正确下载并部署 Windows 10 内部版本 1511 功能升级包，也能看见此功能升级选项。 
+ 必须在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) ，然后再同步 **升级** 分类。 如果在启用“升级”  分类后未安装修补程序，即使 WSUS 无法正确下载并部署 Windows 10 内部版本 1511 功能升级包，也能看见此功能升级选项。 
  
  如果未先安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113)就同步任何升级，则会使用不可用数据填充 WSUS 数据库 (SUSDB)。 必须先清除该数据，才能正确部署升级。 使用以下步骤从该问题中恢复。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>在安装 KB 3095113 之前从同步升级分类中恢复  
 
-1.  使用“升级”分类删除软件更新。 可使用类似于下面的示例脚本的 PowerShell 脚本：  
+1.  使用“升级”分类删除软件更新  。 可使用类似于下面的示例脚本的 PowerShell 脚本：  
 
     ```  
     $Server = Get-WSUSServer  
@@ -106,13 +107,13 @@ ms.locfileid: "65496210"
     > [!IMPORTANT]  
     >  在执行下一步之前，必须在 Configuration Manager 层次结构中的所有软件更新点上运行此脚本。  
 
-     要使用“升级”分类批量删除软件更新，可以修改 PowerShell 脚本，从一个 txt 文件读取多个 GUID。  
+     要使用“升级”分类批量删除软件更新，可以修改 PowerShell 脚本，从一个 txt 文件读取多个 GUID  。  
 
-2.  在软件更新点组件属性中取消选中“升级”分类。 （有关详细信息，请参阅[配置分类和产品](../get-started/configure-classifications-and-products.md)。）然后启动软件更新同步。 （有关详细信息，请参阅[同步软件更新](../get-started/synchronize-software-updates.md)。）  
+2.  在软件更新点组件属性中取消选中“升级”分类  。 （有关详细信息，请参阅[配置分类和产品](../get-started/configure-classifications-and-products.md)。）然后启动软件更新同步。 （有关详细信息，请参阅[同步软件更新](../get-started/synchronize-software-updates.md)。）  
 
 3.  在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) 很重要。  
 
-4.  在软件更新点组件属性中选择“升级”分类。 （有关详细信息，请参阅[配置分类和产品](../get-started/configure-classifications-and-products.md)。）然后启动软件更新同步。 （有关详细信息，请参阅[同步软件更新](../get-started/synchronize-software-updates.md)。）  
+4.  在软件更新点组件属性中选择“升级”分类  。 （有关详细信息，请参阅[配置分类和产品](../get-started/configure-classifications-and-products.md)。）然后启动软件更新同步。 （有关详细信息，请参阅[同步软件更新](../get-started/synchronize-software-updates.md)。）  
 
 ## <a name="next-steps"></a>后续步骤
 [准备软件更新管理](../get-started/prepare-for-software-updates-management.md)
