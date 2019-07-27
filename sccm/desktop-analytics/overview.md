@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的桌面分析服务的概述。
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 154c142b285c58da714193c964b353dc1e173481
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 07d2a1b38f77a3b45c3327c054a9f1f36793e504
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339260"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535906"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -84,7 +84,7 @@ ms.locfileid: "68339260"
 
 - Configuration Manager, 版本1902更新汇总 (4500571) 或更高版本。 有关详细信息, 请参阅[Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 
-    - Configuration Manager 中的**完全权限管理员**角色  
+    - Configuration Manager 中的[**完全权限管理员**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles)角色  
 
     > [!Note]  
     > 桌面分析支持每个 Azure Active Directory (Azure AD) 租户和 Configuration Manager 层次结构一个商业 ID。 如果你的环境中有多个层次结构, 请使用不同的商业 Id 并 Azure AD 租户。<!-- 4958160 -->
