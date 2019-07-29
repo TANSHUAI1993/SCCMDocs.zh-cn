@@ -11,20 +11,20 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fdbc2097c0607be42c712e3e3aba309829da4e
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 9cfb8209343581f8d6b9dc7949032d6399669f95
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726138"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339140"
 ---
-# <a name="create-configuration-items-for-windows-10-devices"></a>创建适用于 Windows 10 设备的配置项目
+# <a name="create-configuration-items-for-windows-10-devices"></a>为 Windows 10 设备创建配置项目
 使用 System Center Configuration Manager Windows 10  配置项目，管理由 Configuration Manager 客户端托管的 Windows 10 计算机的设置。  
   
 > [!IMPORTANT]  
->  在此版本中，如果您创建**密码**设置的配置项目类型的一部分**Windows 10** （对于使用 Configuration Manager 客户端管理的设备） 请注意以下问题。 如果该设置尚不存在，或是未在 Windows 10 设备上配置，则会错误地评估为符合。  
+>  在此版本中, 如果你创建了一个**密码**设置作为 " **Windows 10** " 类型的配置项目的一部分 (对于使用 Configuration Manager 客户端管理的设备), 请注意以下问题。 如果该设置尚不存在, 或者未在 Windows 10 设备上配置, 则不会错误地评估为符合。  
 >   
->  作为解决方法，在为这些设备创建设置时，请确保在创建配置项目向导的设置页上选择“修正非符合性设置”  。 此外，如果部署的配置基线中的 Windows 10 配置项目包含密码设置，还请选择“在支持时修正不相容规则”  。 在部署配置基线对话框中进行选择。 使用此解决方法，可以监视设置，并在发现它不相容时修正设置。 修正后，设置会正确报告为“相容”  （除非遇到问题，在这种情况下，它会报告“错误”  ）。  
+>  作为解决方法，在为这些设备创建设置时，请确保在创建配置项目向导的设置页上选择“修正非符合性设置”  。 此外，如果部署的配置基线中的 Windows 10 配置项目包含密码设置，还请选择“在支持时修正不相容规则”  。 在 "部署配置基线" 对话框中进行此选择。 使用此解决方法，可以监视设置，并在发现它不相容时修正设置。 修正后，设置会正确报告为“相容”  （除非遇到问题，在这种情况下，它会报告“错误”  ）。  
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>创建 Windows 10 配置项目  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67726138"
   
 7. 在向导的“支持的平台”  页上，选择将评估配置项目的特定 Windows 10 平台。  
   
-8. 在向导的“设备设置”  页面上，选择要配置的设置组。 (有关详细信息，请参阅[Windows 10 配置项目设置参考](#BKMK_Ref)这篇文章中。)然后选择“下一步”  。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 (有关详细信息, 请参阅本文中的[Windows 10 配置项目设置参考](#BKMK_Ref)。)然后选择“下一步”  。  
   
    > [!TIP]  
    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置”  复选框。  
@@ -123,23 +123,23 @@ ms.locfileid: "67726138"
   
 ### <a name="windows-information-protection"></a>Windows 信息保护
 
-随着企业中员工拥有的设备数增加，通过应用和服务（如电子邮件、社交媒体和公有云）意外泄露数据的风险也在不断增加。 这些不受组织的控制。 示例包括当员工时：
+随着企业中员工拥有的设备数增加，通过应用和服务（如电子邮件、社交媒体和公有云）意外泄露数据的风险也在不断增加。 它们不在组织的控制范围之内。 以下示例包括员工:
 
 - 从其个人电子邮件帐户发送最新的工程图片。
-- 复制并粘贴到推文的产品信息。
-- 将正在销售报表保存到其公有云存储。
+- 将产品信息复制并粘贴到推文中。
+- 将正在进行的销售报表保存到其公有云存储中。
 
-Windows 信息保护（WIP，旧称为“企业数据保护”）有助于防止这种潜在的数据泄露，而不会干扰员工的体验。 WIP 还有助于防范企业应用和数据免受意外数据泄漏的企业拥有的设备和员工带去工作的个人设备上。 WIP 不需更改你的环境或其他应用。
+Windows 信息保护（WIP，旧称为“企业数据保护”）有助于防止这种潜在的数据泄露，而不会干扰员工的体验。 WIP 还有助于保护企业应用和数据, 防止企业拥有的设备和员工携带的个人设备上出现意外的数据泄漏。 WIP 不需要对环境或其他应用进行更改。
 
- Configuration Manager Windows 信息保护配置项目管理下列各项：
- 
- - 受 WIP 的应用的列表
- - 企业网络位置
- - 保护级别
- - 加密设置
+Configuration Manager Windows 信息保护配置项目管理以下各项:
+
+- 由 WIP 保护的应用列表
+- 企业网络位置
+- 保护级别
+- 加密设置
   
 
 若要了解如何使用 Configuration Manager 配置 WIP，请参阅[使用 Windows 信息保护 (WIP) 保护企业数据](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)。
   
 ## <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/create-configuration-items.md)
+[使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/create-configuration-items.md)

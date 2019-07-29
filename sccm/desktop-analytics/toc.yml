@@ -40,6 +40,8 @@
           href: privacy.md
         - name: 故障排除
           href: troubleshooting.md
+        - name: 日志收集器
+          href: log-collector.md
         - name: 监视器连接运行状况
           href: monitor-connection-health.md
         - name: 常见问题解答

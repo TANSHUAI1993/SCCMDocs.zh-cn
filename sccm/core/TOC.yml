@@ -77,6 +77,8 @@
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: 增量版本中的新增功能
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: 1906 版中的新增功能
+          href: plan-design/changes/whats-new-in-version-1906.md
         - name: 1902 版中的新增功能
           href: plan-design/changes/whats-new-in-version-1902.md
         - name: 1810 版中的新增功能
@@ -85,8 +87,6 @@
           href: plan-design/changes/whats-new-in-version-1806.md
         - name: 1802 版中的新增功能
           href: plan-design/changes/whats-new-in-version-1802.md
-        - name: 1710 版中的新增功能
-          href: plan-design/changes/whats-new-in-version-1710.md
         - name: 已删除和已弃用的项
           items:
             - name: 已删除和已弃用的项概述
@@ -151,6 +151,8 @@
               href: plan-design/hierarchy/manage-content-library-flowchart.md
             - name: 内容库清理工具
               href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: 传递优化网络内缓存
+              href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
             - name: 用于 Configuration Manager 客户端的对等缓存
               href: plan-design/hierarchy/client-peer-cache.md
             - name: 包传输管理器
@@ -193,6 +195,8 @@
           href: plan-design/diagnostics/diagnostics-and-usage-data.md
         - name: 如何使用诊断和使用情况数据
           href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: 1906 的诊断数据
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
         - name: 1902 的诊断数据
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
         - name: 1810 的诊断数据
@@ -201,8 +205,6 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
         - name: 1802 的诊断数据
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
-        - name: 1710 的诊断数据
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
         - name: 如何收集诊断和使用情况数据
           href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
         - name: 如何查看诊断和使用情况数据
@@ -421,7 +423,9 @@
           href: plan-design/hierarchy/interoperability-between-different-versions.md
         - name: 语言包
           href: servers/deploy/install/language-packs.md
-        - name: 日志文件
+        - name: 关于日志文件
+          href: plan-design/hierarchy/about-log-files.md
+        - name: 日志文件引用
           href: plan-design/hierarchy/log-files.md
         - name: 发行说明
           href: servers/deploy/install/release-notes.md
@@ -479,6 +483,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: 使用修补程序安装程序
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: 用于安装更新 1906 的清单
+          href: servers/manage/checklist-for-installing-update-1906.md
         - name: 用于安装更新 1902 的清单
           href: servers/manage/checklist-for-installing-update-1902.md
         - name: 用于安装更新 1810 的清单
@@ -487,8 +493,6 @@
           href: servers/manage/checklist-for-installing-update-1806.md
         - name: 用于安装更新 1802 的清单
           href: servers/manage/checklist-for-installing-update-1802.md
-        - name: 用于安装更新 1710 的清单
-          href: servers/manage/checklist-for-installing-update-1710.md
         - name: 当前分支版本支持
           href: servers/manage/current-branch-versions-supported.md
     - name: 备份和恢复
@@ -560,6 +564,8 @@
           href: support/support-center-ui-reference.md
         - name: 自定义
           href: support/support-center-customize.md
+        - name: 支持中心 OneTrace（预览）
+          href: support/support-center-onetrace.md
     - name: Configuration Manager 工具
       items:
         - name: 工具概述
@@ -638,6 +644,8 @@
               href: clients/deploy/configure-client-settings.md
             - name: 关于客户端设置
               href: clients/deploy/about-client-settings.md
+        - name: 设备重新启动通知
+          href: clients/deploy/device-restart-notifications.md
         - name: 如何配置 LAN 唤醒
           href: clients/deploy/configure-wake-on-lan.md
         - name: 将客户端部署到 Windows 计算机

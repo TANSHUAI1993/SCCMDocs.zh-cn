@@ -148,7 +148,7 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 若要从控制台运行先决条件检查，请转到“管理”>“概述”>“云服务”>“更新和维护服务”。  然后，右键单击“Configuration Manager 1706 更新包”  ，然后选择“运行先决条件检查”  。
 
-有关启动并监视先决条件检查的详细信息，请参阅 **** [安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)主题中的步骤 3：安装更新之前运行先决条件检查程序 。
+有关启动并监视先决条件检查的详细信息，请参阅 **[安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)** 主题中的步骤 3：安装更新之前运行先决条件检查程序 。
 
 > [!IMPORTANT]  
 > 必备组件检查程序作为更新安装的一部分运行或独立运行时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。
