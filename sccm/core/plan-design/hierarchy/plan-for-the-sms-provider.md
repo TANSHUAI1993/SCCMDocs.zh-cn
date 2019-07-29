@@ -2,7 +2,7 @@
 title: 规划 SMS 提供程序
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 SMS 提供程序站点系统角色。
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30ac544aca07ef9d08753b2a93c361194894c91a
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 392789eef28dd959af7ffc65af50cb720b7f617b
+ms.sourcegitcommit: cdad3ca82018f1755e5186f8949a898cd201b565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516126"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411474"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
@@ -287,6 +287,8 @@ SMS 提供程序  显示为角色，其中包含允许通过云管理网关 (CMG
 
 #### <a name="prerequisites"></a>先决条件
 - 托管 SMS 提供程序的服务器需要 .NET 4.5.2 或更高版本。  
+
+    - 自 1902 版本起，必须具有版本 .NET 4.5 或更高版本。  
 
 - 启用 SMS 提供程序以使用证书。 使用以下选项之一：  
 

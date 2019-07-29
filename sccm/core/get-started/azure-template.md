@@ -1,8 +1,8 @@
 ---
 title: 在 Azure 中创建实验室
 titleSuffix: Configuration Manager
-description: 使用 Azure 模板自动创建 Configuration Manager 技术预览实验室
-ms.date: 03/18/2019
+description: 使用 Azure 模板自动创建 Configuration Manager 技术预览版实验室或当前分支评估实验室
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,22 +11,25 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeef8e447d646df183f7f2075954e381b08d8c93
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 0c4c565d3c1754ce60ec8f9b7d5dcd2d487f8db1
+ms.sourcegitcommit: cdad3ca82018f1755e5186f8949a898cd201b565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499722"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411498"
 ---
-# <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
+# <a name="create-a-configuration-manager-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 实验室
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 <!--3556017-->
 
-本指南介绍如何在 Microsoft Azure 中构建 Configuration Manager 实验室环境。 它使用 Azure 资源通过 Azure 模板来简化和自动化实验室的创建。 此过程可安装 Configuration Manager 技术预览分支的最新版本。 
+本指南介绍如何在 Microsoft Azure 中构建 Configuration Manager 实验室环境。 它使用 Azure 资源通过 Azure 模板来简化和自动化实验室的创建。 提供有两个 Azure 模板： 
 
-有关 Configuration Manager 当前分支的详细信息，请参阅 [Azure 上的 Configuration Manager](/sccm/core/understand/configuration-manager-on-azure)。
+- Configuration Manager 技术预览版：Azure 模板安装 Configuration Manager 技术预览版分支的最新版本。
+- Configuration Manager 当前分支：Azure 模板安装 Configuration Manager 当前分支的最新版本的评估。 
+
+有关详细信息，请参阅 [Azure 上的 Configuration Manager](/sccm/core/understand/configuration-manager-on-azure)。
 
 
 
@@ -44,9 +47,9 @@ ms.locfileid: "65499722"
 
 ## <a name="process"></a>过程
 
-1. 转到 [Configuration Manager 模板](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/)。  
+1. 请转到 [Configuration Manager 技术预览版模板](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/)或 [Configuration Manager 当前分支模板](https://azure.microsoft.com/resources/templates/sccm-currentbranch/)。  
 
-2. 选择“部署到 Azure”，随即打开 Azure 门户。  
+2. 选择“部署到 Azure”，随即打开 Azure 门户  。  
 
 3. 完成包含以下信息的 Azure 快速入门模板：
 
@@ -75,7 +78,7 @@ ms.locfileid: "65499722"
     > 
     > - **位置**：所有资源的位置
 
-4. 阅读条款和条件。 如果同意，请选择“我同意上述条款和条件”。 然后选择“购买”以继续。 
+4. 阅读条款和条件。 如果同意，请选择“我同意上述条款和条件”  。 然后选择“购买”以继续  。 
 
 Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状态。 该过程可能需要 2-4 小时。 即使 Azure 门户显示成功部署，配置脚本仍会继续运行。 在此过程中，请勿重启 VM。
 
@@ -88,17 +91,17 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 ## <a name="azure-vm-info"></a>Azure VM 信息
 
 所有三台虚拟机均具有以下规格：
-- 具有两个 CPU 核心和 8 GB 内存的 Standard_D2s_v3  
-- Windows Server 2016 Datacenter Edition
 - 150 GB 磁盘空间
 - 公共和专用 IP 地址。 公共 IP 位于网络安全组中，该网络安全组仅允许通过 TCP 端口 3389 进行远程桌面连接。 
 
 部署模板中指定的前缀即为 VM 名称前缀。 例如，如果将“contoso”设置为前缀，则域控制器计算机名称为 `contosoDC`。
 
 
-### `<prefix>DC`
+### `<prefix>DC01`
 
-Active Directory 域控制器
+- Active Directory 域控制器
+- Standard_B2s，它有两个 CPU 和 4 GB 的内存
+- Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Windows 功能和角色
 - Active Directory 域服务 (ADDS)
@@ -106,8 +109,10 @@ Active Directory 域控制器
 - 远程差分压缩 (RDC)
 
 
-### `<prefix>PS1`
+### `<prefix>PS01`
 
+- Standard_B2ms，它有两个 CPU 和 8 GB 的内存
+- Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows PE 中的 Windows 10 ADK 
 - Configuration Manager 主站点
@@ -118,8 +123,10 @@ Active Directory 域控制器
 - Internet Information Service (IIS)
 
 
-### `<prefix>DPMP`
+### `<prefix>DPMP01`
 
+- Standard_B2s，它有两个 CPU 和 4 GB 的内存
+- Windows Server 2019 Datacenter Edition
 - 分发点
 - 管理点
 
@@ -129,3 +136,8 @@ Active Directory 域控制器
 - Internet Information Service (IIS)
 - 后台智能传输服务 (BITS)
 
+### `<prefix>CL01`
+
+- 仅适用于 Configuration Manager 当前分评估模板
+- Windows 10
+- Configuration Manager 客户端

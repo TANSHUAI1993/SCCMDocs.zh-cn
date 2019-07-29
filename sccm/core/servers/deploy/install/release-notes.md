@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 06/17/2019
+ms.date: 07/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e84180aca830be6a4b8b5c7110679d857e95be
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 49600557e304edb86ec9a87bb02ef0ddb82ea037
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159341"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339433"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -159,6 +159,14 @@ OS Deployment Manager  内置安全角色具有[分阶段部署](/sccm/osd/deplo
 
 删除集合时，选择  “确定”可关闭“属性”窗口。 然后再次打开“属性”窗口，在  “桌面分析连接”选项卡中添加新集合。
 
+### <a name="pilot-status-tile-shows-some-devices-as-undefined"></a>试点状态图块显示某些设备为“未定义”
+
+<!-- 4547783 -->
+适用范围：*包含更新汇总的 Configuration Manager 版本 1902*
+
+使用 Configuration Manager 控制台来监视试点部署状态时，在该部署计划的 Windows 目标版本上处于最新状态的试点设备在试点状态图块中显示为“未定义”  。  
+
+对此部署计划而言，这些未定义的设备具有 OS 目标版本，处于最新状态   。 无需进一步操作。
 
 
 ## <a name="mobile-device-management"></a>移动设备管理  

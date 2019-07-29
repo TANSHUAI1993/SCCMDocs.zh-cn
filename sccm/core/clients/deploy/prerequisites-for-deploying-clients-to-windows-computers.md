@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6d93fcc35a6d038b03a0829c6fe66ecc50a5446
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d350c99c1f09f79850f1bc532a5a75c2db454d3d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140273"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339083"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 在环境中部署 Configuration Manager 客户端有下列外部依赖关系和产品内部依赖关系。 此外，每个客户端部署方法有其自己的先决条件，要成功安装客户端，必须满足其自己的先决条件。  
 
@@ -69,7 +69,7 @@ Configuration Manager 客户端具备外部依赖项。 这些依赖项取决于
 > [!NOTE]  
 >  不再支持 .NET 4.0、4.5 和 4.5.1。 有关详细信息，请参阅 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)。  
 
-Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 用户将在系统托盘中看到“需要重启”通知。 下面是需要客户端计算机重启的常见情况：  
+Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 用户将在系统托盘中看到“需要重启”  通知。 下面是需要客户端计算机重启的常见情况：  
 
 -   计算机上正在运行.NET 应用程序或服务。  
 
@@ -99,38 +99,38 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 #### <a name="client-push-installation"></a>客户端请求安装  
 
-   -   站点通过客户端请求安装帐户连接到计算机来安装客户端。 在客户端请求安装属性的“帐户”选项卡上指定这些帐户。 该帐户必须是目标计算机上本地管理员组的成员。  
+-   站点通过客户端请求安装帐户连接到计算机来安装客户端。 在客户端请求安装属性的“帐户”选项卡上指定这些帐户  。 该帐户必须是目标计算机上本地管理员组的成员。  
 
-         如果未指定客户端请求安装帐户，站点服务器则使用其自己的计算机帐户。  
+      如果未指定客户端请求安装帐户，站点服务器则使用其自己的计算机帐户。  
 
-   -   站点需要发现要在其上安装客户端的计算机。 至少需要一个 Configuration Manager 发现方法。  
+-   站点需要发现要在其上安装客户端的计算机。 至少需要一个 Configuration Manager 发现方法。  
 
-   -   计算机具有 ADMIN$ 共享。  
+-   计算机具有 ADMIN$ 共享。  
 
-   -   要对所发现的资源自动推送 Configuration Manager 客户端，请在客户端请求安装属性中选择“对已分配资源启用客户端请求安装”。  
+-   要对所发现的资源自动推送 Configuration Manager 客户端，请在客户端请求安装属性中选择“对已分配资源启用客户端请求安装”  。  
 
-   -   客户端计算机需要与分发点或管理点进行通信，以便下载源文件。  
+-   客户端计算机需要与分发点或管理点进行通信，以便下载源文件。  
 
-   -   自版本 1806 起，如果需要 Kerberos 相互身份验证，客户端必须位于受信任的 Active Directory 林中。 Windows 中的 Kerberos 依赖 Active Directory 进行相互身份验证。<!--1358204-->  
+-   自版本 1806 起，如果需要 Kerberos 相互身份验证，客户端必须位于受信任的 Active Directory 林中。 Windows 中的 Kerberos 依赖 Active Directory 进行相互身份验证。<!--1358204-->  
 
 
 要使用客户端请求，需要具备以下安全权限：  
 
-   -   配置客户端请求安装帐户：“站点”对象的“修改”和“读取”权限。  
+-   配置客户端请求安装帐户：“站点”对象的“修改”和“读取”权限    。  
 
-   -   使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的“修改资源”和“读取”权限。  
+-   使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的“修改资源”和“读取”权限    。  
 
 
-“基础结构管理员”默认安全角色包括管理客户端请求安装所需的权限。  
+“基础结构管理员”默认安全角色包括管理客户端请求安装所需的权限  。  
 
 
 #### <a name="software-update-point-based-installation"></a>基于软件更新点的安装  
 
-   -   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
+-   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
 
-   -   将 Configuration Manager 客户端发布到软件更新点。  
+-   将 Configuration Manager 客户端发布到软件更新点。  
 
-   -   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
+-   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
 
 
 有关管理 Configuration Manager 软件更新所需的安全权限，请参阅[软件更新的先决条件](/sccm/sum/plan-design/prerequisites-for-software-updates)。  
@@ -138,9 +138,9 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 #### <a name="group-policy-based-installation"></a>基于组策略的安装  
 
-   -   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
+-   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
 
-   -   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
+-   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
 
 
 #### <a name="logon-script-based-installation"></a>基于登录脚本的安装  
@@ -155,15 +155,15 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 #### <a name="microsoft-intune-mdm-installation"></a>Microsoft Intune MDM 安装
 
- - 需要 Microsoft Intune 订阅和相应的许可证。  
+- 需要 Microsoft Intune 订阅和相应的许可证。  
 
- - 要求设备能访问 Internet，即使它不基于 Internet。  
+- 要求设备能访问 Internet，即使它不基于 Internet。  
 
- - 根据用例，可能还需要以下一种或两种技术：  
+- 根据用例，可能还需要以下一种或两种技术：  
 
-     - Azure Active Directory  
+    - Azure Active Directory  
 
-     - 云管理网关  
+    - 云管理网关  
 
 
 #### <a name="workgroup-computer-installation"></a>工作组计算机安装  
@@ -175,9 +175,9 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 #### <a name="software-distribution-based-installation-for-upgrades-only"></a>基于软件分发的安装（仅针对升级）  
 
-   -   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。   
+-   如果尚未扩展 Active Directory 架构，或者要从另一个林安装客户端，请使用组策略预配 CCMSetup.exe 的安装参数。 有关详细信息，请参阅[如何预配客户端安装属性](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。   
 
-   -   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
+-   要下载源文件，客户端计算机需要与分发点或管理点进行通信。  
 
 
 有关使用应用程序管理升级 Configuration Manager 客户端所需的安全权限，请参阅[应用程序管理的安全和隐私](/sccm/apps/plan-design/security-and-privacy-for-application-management)。  
@@ -210,7 +210,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
      此安全组用于配置在移动设备注册过程中使用的证书模板。  
 
--   可选但建议使用：名为 ConfigMgrEnroll（CNAME 记录）的 DNS 别名。 为注册代理点的服务器名称配置此别名。  
+-   可选但建议使用：名为 ConfigMgrEnroll（CNAME 记录）的 DNS 别名  。 为注册代理点的服务器名称配置此别名。  
 
      需要此 DNS 别名以支持注册服务的自动发现。 如果未配置此 DNS 记录，则用户必须在注册过程中手动指定注册代理点的名称。  
 
@@ -243,23 +243,23 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 - 要针对移动设备配置注册，你必须具有下列安全权限：  
 
-  - 添加、修改和删除注册站点系统角色：“站点”对象的“修改”权限。  
+  - 添加、修改和删除注册站点系统角色：“站点”对象的“修改”权限   。  
 
-  - 配置注册的客户端设置：默认客户端设置需要“站点”对象的“修改”权限，自定义客户端设置需要“客户端代理”权限。  
+  - 配置注册的客户端设置：默认客户端设置需要“站点”对象的“修改”权限，自定义客户端设置需要“客户端代理”权限    。  
 
-    “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限。  
+    “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限  。  
 
     要管理注册的移动设备，你必须具有下列安全权限：  
 
-  - 擦除或停用移动设备：“集合”对象的“删除资源”权限。  
+  - 擦除或停用移动设备：“集合”对象的“删除资源”权限   。  
 
-  - 取消擦除或停用命令：“集合”对象的“删除资源”权限。  
+  - 取消擦除或停用命令：“集合”对象的“删除资源”权限   。  
 
-  - 允许和阻止移动设备：“集合”对象的“修改资源”权限。  
+  - 允许和阻止移动设备：“集合”对象的“修改资源”权限   。  
 
-  - 远程锁定或重置移动设备上的密码：“集合”对象的“修改资源”权限。  
+  - 远程锁定或重置移动设备上的密码：“集合”对象的“修改资源”权限   。  
 
-    “操作管理员”默认安全角色包括管理移动设备所需的权限。  
+    “操作管理员”默认安全角色包括管理移动设备所需的权限  。  
 
     有关如何配置安全权限的详细信息，请参阅[基于角色的管理的基础](/sccm/core/understand/fundamentals-of-role-based-administration)和[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
 
@@ -268,9 +268,9 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 诸如路由器和防火墙以及 Windows 防火墙（如果适用）等干预网络设备必须允许与移动设备注册相关联的通讯：  
 
--   移动设备和注册代理点之间：HTTPS（默认情况下为 TCP 443）  
+-   移动设备和注册代理点之间：HTTPS（默认为 TCP 443）  
 
--   注册代理点和注册点之间：HTTPS（默认情况下为 TCP 443）  
+-   注册代理点和注册点之间：HTTPS（默认为 TCP 443）  
 
 
 如果使用的是代理 Web 服务器，则必须针对 SSL 隧道对其进行配置。 移动设备不支持 SSL 桥接。  
