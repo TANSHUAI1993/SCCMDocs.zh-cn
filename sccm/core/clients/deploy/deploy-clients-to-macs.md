@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/09/2019
 ms.locfileid: "67677817"
 ---
-# <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
+# <a name="how-to-deploy-clients-to-macs"></a>如何将客户端部署到 Mac
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
