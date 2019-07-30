@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的桌面分析服务的概述。
-ms.date: 07/26/2019
+ms.date: 07/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07d2a1b38f77a3b45c3327c054a9f1f36793e504
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: fd86e5bd939ecd356a6cf290958a766266248645
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535906"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604489"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -109,7 +109,7 @@ ms.locfileid: "68535906"
 - 从设备到 Microsoft 公有云的网络连接。 有关详细信息, 请参阅[如何启用数据共享](/sccm/desktop-analytics/enable-data-sharing)  
 
 
-### <a name="licensing"></a>许可
+### <a name="licensing-and-costs"></a>许可和成本
 
 桌面分析需要以下许可证订阅之一:
 
@@ -119,7 +119,14 @@ ms.locfileid: "68535906"
 
 - Windows VDA E3 或 E5  
 
+除了许可证订阅的成本之外, 使用桌面分析无需额外付费。 在 Azure Log Analytics 中, 桌面分析为 "零分级"。 这一评级意味着, 无论选择哪种 Azure Log Analytics 定价层, 都不会从数据限制和成本中排除。 有关 Azure Log Analytics 定价层的详细信息, 请参阅[定价-Log Analytics](https://azure.microsoft.com/pricing/details/monitor/)。
 
+- 如果使用免费层, 而该免费层的数据量为每天收集的数据量, 则桌面分析数据不会计入此上限。 您可以从您的设备收集所有桌面分析数据, 并且仍有可用于从其他源收集其他数据的完全上限。
+
+- 如果你使用付费层, 按收集的数据量收费, 则不会对桌面分析数据收费。 可以从设备收集所有桌面分析数据, 不会产生任何费用。
+
+> [!Note]  
+> 不同的 Azure Log Analytics 计划具有不同的数据保持期。 桌面分析继承工作区的数据保留策略。 如果工作区位于免费计划中, 则桌面分析将保留在工作区中收集的过去30天的 "每日快照数"。
 
 
 ## <a name="next-steps"></a>后续步骤
