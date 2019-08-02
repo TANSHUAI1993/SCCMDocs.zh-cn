@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afcc3c2d70e1f6d94e7239a0be78c00294108c76
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: a4ecf757a35556d4b810df47ca50a6c7bac59467
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176700"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535635"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中基于 Internet 的客户端管理计划
 
@@ -56,6 +56,9 @@ ms.locfileid: "66176700"
  下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  
 
 - 应用程序目录网站点  
+
+    > [!Important]  
+    > 应用程序目录已遭弃用。 有关详细信息，请参阅[删除应用程序目录](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat)。  
 
 - Configuration Manager 策略模块  
 
