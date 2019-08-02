@@ -10,13 +10,14 @@ ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5e133c0cf10877217048a1abfe85045b8cbf939
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: ffde6e197e33f8f9f64a5e4cf3da0be47120abee
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252188"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536275"
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1710 的清单
 
@@ -148,7 +149,7 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 若要从控制台运行先决条件检查，请转到“管理”>“概述”>“云服务”>“更新和维护服务”。  然后，右键单击“Configuration Manager 1710 更新包”  ，然后选择“运行先决条件检查”  。
 
-有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：** [安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)主题中的步骤 3：安装更新之前运行先决条件检查程序 。
+有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：[安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)** 主题中的步骤 3：安装更新之前运行先决条件检查程序 。
 
 > [!IMPORTANT]  
 > 必备组件检查程序作为更新安装的一部分运行或独立运行时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。

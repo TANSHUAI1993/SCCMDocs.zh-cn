@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbc042975840e5b4e840928f01257785f4859dd4
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: fe3f5e35fcec9bfc9bf0746ecfd118e10487f78c
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176828"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533847"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>升级 Windows 10 以进行共同管理
 
@@ -41,7 +41,7 @@ ms.locfileid: "66176828"
 
 - 使用分阶段部署，在正确的时间向正确的用户推出此升级。 有关详细信息，请参阅[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。  
 
-- 使用预缓可以减少用户等待时间。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。  
+- 使用预缓可以减少用户等待时间。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/configure-precache-content)。  
 
 - 使用默认就地升级任务序列模板。 然后配置针对升级前、升级后和任何失败操作的步骤。 有关详细信息，请参阅[针对处理后的建议的任务序列步骤](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing)。  
 

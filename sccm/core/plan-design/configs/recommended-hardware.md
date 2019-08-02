@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbad2440f9309e712fb00da2739ed5302866ff63
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: af69076b4a1f1e8d18cced225ff2373d8172051d
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339462"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536862"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>用于 System Center Configuration Manager 的推荐硬件
 
@@ -63,7 +63,6 @@ ms.locfileid: "68339462"
 |----------------------|---------------|---------------|--------------------|  
 |管理点|4|8|50|  
 |分发点|2|8|根据操作系统需要，存储所部署的内容|  
-|应用程序目录（Web 服务和网站在站点系统计算机上）|4|16|50|  
 |软件更新点<sup>1</sup>|8|16|根据操作系统需要，存储所部署的更新|  
 |所有其他站点系统角色|4|8|50|  
 
@@ -116,18 +115,14 @@ ms.locfileid: "68339462"
 
 - **磁盘空间：** 500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
 
-  - 使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用“应用程序目录”，则运行 `CCMSetup.exe /skipprereq:silverlight.exe`。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
+    - 使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如，`CCMSetup.exe SMSCachesize=2` 创建大小为 2 MB 的缓存。  
 
-  - 使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如，`CCMSetup.exe SMSCachesize=2` 创建大小为 2 MB 的缓存。  
+    有关这些客户端安装设置的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
-  有关这些客户端安装设置的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+    > [!TIP]  
+    > 使用最小磁盘空间安装客户端适用于 Windows Embedded 设备，此设备的磁盘大小通常比标准 Windows 计算机的磁盘大小要小。  
 
-  > [!TIP]  
-  >  使用最小磁盘空间安装客户端适用于 Windows Embedded 设备，此设备的磁盘大小通常比标准 Windows 计算机的磁盘大小要小。  
-
-
-
- 以下是 Configuration Manager 中可选功能的其他最低硬件要求。  
+以下是 Configuration Manager 中可选功能的其他最低硬件要求。  
 
 - **操作系统部署：** 384 MB RAM  
 

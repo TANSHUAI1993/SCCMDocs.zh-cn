@@ -10,13 +10,14 @@ ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 784bc115ef61880e4fd30635c60a9dad8be52a6d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 28bd29867b56e9c4a0e0f335634cc17f5a5084f6
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676958"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536754"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的诊断使用情况数据收集的级别
 

@@ -10,13 +10,14 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89c977f0970a46c5f4b52628b35b2d565b15189b
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 3bc3123be01ff769e43738ced91d42c5562210c9
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339802"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536901"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 

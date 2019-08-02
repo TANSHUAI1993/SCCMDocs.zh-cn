@@ -11,32 +11,32 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a296c20d75603c432282ea84e2b453702f5e86
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 796412b0b2f147c73a13b2f0a363a53177e8c9bc
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133014"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537028"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 升级包
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 中的 OS 升级包包含用于在计算机上升级现有 OS 的 Windows 安装程序源文件。 本文介绍如何添加、分发和维护 OS 升级包。
 
 >[!NOTE]
->OS 升级包还可用于 Windows 的新安装。 但是，它依赖于与此方法兼容的驱动程序。 从 OS 升级包执行 Windows 的新安装时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。 在 Windows PE 中安装时，如果驱动程序与之不兼容，则改为使用 [OS 映像](/sccm/osd/get-started/manage-operating-system-images)，如 install.wim。
+>OS 升级包还可用于 Windows 的新安装。 但是，它依赖于与此方法兼容的驱动程序。 从 OS 升级包执行 Windows 的新安装时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。 在 Windows PE 中安装时，如果驱动程序与之不兼容，则改为使用 [OS 映像](/sccm/osd/get-started/manage-operating-system-images)，如 install.wim  。
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> 添加 OS 升级包  
 
 在使用 OS 升级包之前，请先将其添加到 Configuration Manager 站点。 
 
-1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统升级包”节点。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统升级包”节点    。  
 
-2.  在功能区的“主页”选项卡上的“创建”组中，选择“添加操作系统升级包”。 此操作将启动“添加操作系统升级向导”。  
+2.  在功能区的“主页”选项卡上的“创建”组中，选择“添加操作系统升级包”    。 此操作将启动“添加操作系统升级向导”。  
 
-3.  在“数据源”页面上，指定以下设置： 
+3.  在“数据源”页面上，指定以下设置  ： 
 
     - OS 升级包的安装源文件的网络**路径**。 例如，`\\server\share\path`。  
 
@@ -46,9 +46,9 @@ Configuration Manager 中的 OS 升级包包含用于在计算机上升级现有
         > [!IMPORTANT]  
         >  限制对这些安装源文件的访问，以防受到恶意篡改。  
 
-    - 如果要在客户端上预缓存内容，请指定映像的**体系结构**和**语言**。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。  
+    - 如果要在客户端上预缓存内容，请指定映像的**体系结构**和**语言**。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/configure-precache-content)。  
 
-4.  在“常规”页面上，指定以下信息。 当你有多个 OS 升级包时，可利用这些信息对其进行识别。  
+4.  在“常规”页面上，指定以下信息  。 当你有多个 OS 升级包时，可利用这些信息对其进行识别。  
 
     -   **名称**：OS 升级包的唯一名称。  
 

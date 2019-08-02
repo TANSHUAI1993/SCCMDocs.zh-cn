@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e13911ef7337ca4f1f9fb2291aa026c90cfee8
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 1ecb1657903fd3d1dfe43f2ad46258b4643c2f55
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536022"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712609"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>疑难解答桌面分析
 
@@ -80,7 +80,7 @@ ms.locfileid: "68536022"
 
 #### <a name="create-app-in-azure-ad"></a>在 Azure AD 中创建应用
 
-1. 以具有*全局管理员*权限的用户身份打开[Azure 门户](http://portal.azure.com) **Azure Active Directory**, 并选择 "**应用注册**"。 然后选择 "**新建注册**"。  
+1. 以具有*全局管理员*权限的用户身份打开[Azure 门户](https://portal.azure.com) **Azure Active Directory**, 并选择 "**应用注册**"。 然后选择 "**新建注册**"。  
 
 2. 在 "**创建**" 面板中, 配置以下设置:  
 
@@ -140,7 +140,7 @@ ms.locfileid: "68536022"
 
     - **客户端 ID**：从 Azure AD 应用复制的**应用程序 ID**  
 
-    - 密钥:从 Azure AD 应用复制**的键值**  
+    - 密钥:从 Azure AD应用复制的键值  
 
     - **密钥到期日期**：密钥的到期日期  
 
@@ -171,7 +171,7 @@ ms.locfileid: "68536022"
 
 如果在安装过程中此过程出现问题, 请使用以下过程手动添加此权限:
 
-1. 中转到[Azure 门户](http://portal.azure.com), 并选择 "**所有资源**"。 选择 " **Log Analytics**" 类型的工作区。  
+1. 中转到[Azure 门户](https://portal.azure.com), 并选择 "**所有资源**"。 选择 " **Log Analytics**" 类型的工作区。  
 
 2. 在工作区菜单中, 选择 "**访问控制 (IAM)** ", 然后选择 "**添加**"。  
 
@@ -191,13 +191,16 @@ ms.locfileid: "68536022"
 ## <a name="data-latency"></a>数据延迟
 
 <!-- 3846531 -->
-首次设置桌面分析时, Configuration Manager 和 Desktop Analytics 门户中的报表可能不会立即显示完整的数据。 可能需要2-3 天才能执行以下步骤:
+首次设置桌面分析、注册新的客户端或配置新的部署计划时, Configuration Manager 和桌面分析门户中的报表可能不会立即显示完整的数据。 可能需要2-3 天才能执行以下步骤:
 
 - 活动设备将诊断数据发送到桌面分析服务
 - 该服务处理数据
 - 服务与 Configuration Manager 站点同步
 
-将 Configuration Manager 层次结构中的设备集合同步到桌面分析时, 这些集合可能需要10分钟才能出现在桌面分析门户中。 同样, 在桌面分析中创建部署计划时, 可能需要长达10分钟的时间, 与部署计划关联的新集合才能出现在 Configuration Manager 层次结构中。 主站点创建集合, 管理中心站点与桌面分析同步。
+将 Configuration Manager 层次结构中的设备集合同步到桌面分析时, 这些集合可能需要一小时才能出现在桌面分析门户中。 同样, 在桌面分析中创建部署计划时, 与部署计划关联的新集合可能需要一小时才能出现在 Configuration Manager 层次结构中。 主站点创建集合, 管理中心站点与桌面分析同步。 评估和更新集合成员身份 Configuration Manager 可能需要长达24小时。 若要加快此过程, 请手动更新集合成员身份。<!-- 4984639 -->
+
+> [!Note]
+> 若要手动收集更新以反映所做的更改, SMS_SERVICE_CONNECTOR_M365ADeploymentPlanWorker 组件首先需要同步。 运行此进程最多可能需要一小时。 有关详细信息, 请参阅**M365ADeploymentPlanWorker**。
 
 在桌面分析门户中, 有两种类型的数据:**管理员数据**和**诊断数据**:
 

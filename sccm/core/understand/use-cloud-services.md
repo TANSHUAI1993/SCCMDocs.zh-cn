@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe4e1c83f4079e0df959563ac8209a98983b8d90
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e58f5cffa201224516e03dd6a1e919f352c297d0
+ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132449"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68662633"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 支持多个基于云的选项。 这些选项能补充本地基础结构，还有助于解决以下业务问题，如：  
 
@@ -66,17 +66,6 @@ Azure 虚拟机的使用需要一个 Azure 订阅。 根据所使用虚拟机的
 -   支持 Internet 和 intranet 上的客户端。  
 
 将 Azure 用于承载分发点，需要一个 Azure 订阅。 根据传入该服务和从该服务传出的数据量计费。  
-
-### <a name="microsoft-intune-for-mobile-device-management"></a>Microsoft Intune（用于移动设备管理）  
- 可以将 Microsoft Intune 订阅与 Configuration Manager 集成，实现通过 Intune 服务对设备进行管理。 此集成：  
-
--   称为混合配置，并扩展 Configuration Manager（或 Intune，具体取决于你的观点），以支持多种设备。  
-
--   要求 Microsoft Intune 连接器站点系统角色。  
-
--   要求有一个单独的 Intune 订阅，并且对于将使用 Intune 管理的设备具有足够的许可证。  
-
-尽管 Intune 使用 Azure，但它不要求单独配置 Azure，也不会产生 Intune 订阅成本以外的其他成本。  
 
 ### <a name="additional-configuration-manager-capabilities"></a>附加 Configuration Manager 管理功能  
  某些 Configuration Manager 功能可以连接到基于云的服务，如：  
