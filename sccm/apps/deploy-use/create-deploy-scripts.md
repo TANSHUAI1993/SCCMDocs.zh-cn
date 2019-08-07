@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28d1f01cbdd6238754cafc36be8d30499b041597
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: d4d4775819efbbb33bdd46e80e857a7d1b2d47ab
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676204"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712491"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -76,7 +76,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 ### <a name="scripts-roles-control"></a>脚本角色控制
 
-默认情况下，用户不能批准他们创建了一个脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以禁用辅助审批，以方便进行测试。
+默认情况下, 用户无法批准他们编写的脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以禁用辅助审批，以方便进行测试。
 
 ### <a name="approve-or-deny-a-script"></a>“批准”或“拒绝”脚本
 
@@ -251,17 +251,17 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ### <a name="edit-a-script"></a>编辑脚本
 
-1. 转到**脚本**节点下的**软件库**工作区。
-1. 选择要编辑，然后单击的脚本**编辑**功能区中。 
-1. 更改或重新导入你的脚本**脚本的详细信息**页。
-1. 单击**下一步**若要查看**摘要**然后**关闭**完成后编辑。
+1. 中转到 "**软件库**" 工作区下的 "**脚本**" 节点。
+1. 选择要编辑的脚本, 然后在功能区中单击 "**编辑**"。 
+1. 在**脚本详细信息**页中更改或重新导入脚本。
+1. 单击 "**下一步**" 查看**摘要**, 然后在编辑完成后**关闭**。
 
 ### <a name="copy-a-script"></a>复制脚本
 
-1. 转到**脚本**节点下的**软件库**工作区。
-1. 选择的脚本进行复制，然后单击**复制**功能区中。
-1. 重命名中的脚本**脚本名称**字段并使你可能需要的任何其他编辑。
-1. 单击**下一步**若要查看**摘要**然后**关闭**完成后编辑。
+1. 中转到 "**软件库**" 工作区下的 "**脚本**" 节点。
+1. 选择要复制的脚本, 然后单击功能区中的 "**复制**"。
+1. 重命名**脚本名称**字段中的脚本, 并进行任何其他可能需要的编辑。
+1. 单击 "**下一步**" 查看**摘要**, 然后在编辑完成后**关闭**。
 
 
 ## <a name="run-a-script"></a>运行脚本

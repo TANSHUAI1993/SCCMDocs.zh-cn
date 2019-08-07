@@ -1,5 +1,7 @@
-- name: 操作系统部署
+- name: OS 部署
+  href: understand/introduction-to-operating-system-deployment.md
 - name: 了解和探索
+  expanded: true
   items:
     - name: OS 部署简介
       href: understand/introduction-to-operating-system-deployment.md

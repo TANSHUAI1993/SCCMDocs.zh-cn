@@ -1,6 +1,6 @@
 - name: 桌面分析
   items:
-    - name: 概述
+    - name: 什么是桌面分析？
       href: overview.md
     - name: 教程
       items:

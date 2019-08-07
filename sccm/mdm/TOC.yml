@@ -1,5 +1,7 @@
 - name: 移动设备管理
+  href: understand/hybrid-mobile-device-management.md
 - name: 概述
+  expanded: true
   items:
     - name: 什么是混合 MDM
       href: understand/hybrid-mobile-device-management.md

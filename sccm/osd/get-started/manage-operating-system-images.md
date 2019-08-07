@@ -2,7 +2,7 @@
 title: 管理 OS 映像
 titleSuffix: Configuration Manager
 description: 了解用于管理存储在 Windows 映像 (WIM) 文件中的 OS 映像的方法。
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35670ea78c2883d232040da30898f753c88e39b1
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: ecee342fb65cde6a210a4f2d13d4d75a5f30f19a
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355100"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536998"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 映像
 
@@ -77,6 +77,8 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
         > Configuration Manager 不会修改源映像文件。 它将在同一源目录中创建新映像文件。
         >
         > 对于超大映像文件（例如超过 60 GB），此提取过程可能会失败。 DISM 错误为 `Not enough storage is available to process this command.`，Configuration Manager 使用的命令行位于 smsprov.log 和 dism.log 中。 手动运行同一命令，然后导入映像。<!-- SCCMDocs-pr issue 3502 -->  
+
+    - 从版本 1906 开始，如果要在客户端上预缓存内容，请指定映像的“体系结构”  和“语言”  。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/configure-precache-content)。<!--4224642-->  
 
 4. 在“常规”页面上，指定以下信息  。 当你有多个 OS 映像时，可利用这些信息对其进行识别。  
 

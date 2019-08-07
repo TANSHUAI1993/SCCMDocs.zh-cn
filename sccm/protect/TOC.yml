@@ -1,5 +1,7 @@
 - name: 保护数据和基础结构
+  href: understand\protect-data-and-site-infrastructure.md
 - name: 了解和探索
+  expanded: true
   items:
     - name: 概述
       href: understand\protect-data-and-site-infrastructure.md
@@ -83,7 +85,7 @@
               href: deploy-use/endpoint-protection-configure-client.md
         - name: Windows 防火墙策略
           href: deploy-use/create-windows-firewall-policies.md
-        - name: Windows Defender 高级威胁防护
+        - name: Microsoft Defender 高级威胁防护
           href: deploy-use/windows-defender-advanced-threat-protection.md
         - name: 创建和部署攻击防护策略
           href: deploy-use/create-deploy-exploit-guard-policy.md

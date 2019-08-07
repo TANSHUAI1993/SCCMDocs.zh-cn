@@ -5,18 +5,18 @@ description: 使用自动部署规则 (ADR) 自动部署软件更新。
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/02/2018
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a7cd2e499ac55f9a1210d4f3309b6e0b6cefe16
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 6a45b1d1853ef4b0faa6205919b8b06d58a81b12
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678198"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537154"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -88,6 +88,13 @@ ms.locfileid: "67678198"
 
      - 自 1806 版本起，可使用“体系结构”属性筛选器  。 此筛选器可用于排除不太常见的 Itanium 和 ARM64 等架构。 请记住，有 32 位 (x86) 应用程序和组件在 64 位 (x64) 系统上运行。 除非确定不需要 x86，否则在选择 x64 时也请启用它。<!--1322266-->  
 
+    > [!NOTE]  
+    > Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Microsoft 更新中，而不像早期版本那样作为 Windows 10 产品的一部分进行添加   。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已帮助减少 Configuration Manager 版本1906中的新产品需要执行的手动步骤数。 <!--4682946-->
+    >
+    > 更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作  ：
+    > - 包含 Windows 10 产品的自动部署规则将更新为包含 Windows 10 1903 版和更高版本   。
+    > - 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作  。 有关详细信息，请参阅[配置分类和产品](/sccm/sum/get-started/configure-classifications-and-products)。
+    > - [维护服务计划](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow)将更新为包含 Windows 10 1903 版和更高版本产品  。
 
 6.  在“评估计划”页面上，指定是否要让 ADR 按计划运行  。 启用后，请单击“自定义”  以设置定期计划。  
 

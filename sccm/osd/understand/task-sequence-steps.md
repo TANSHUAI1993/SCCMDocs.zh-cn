@@ -2,7 +2,7 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 06/12/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5434e42bfdcdf9bd423035c1d30a3c68974d9dd
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 6f5760e26b7a52f31aea0a272c0e76a2eee547bd
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726261"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537142"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -695,6 +695,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
+从1906版开始, 在此步骤中使用以下任务序列变量:  
+
+- [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
+- [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
+
 选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“禁用 BitLocker”  以添加此步骤。
 
 ### <a name="properties"></a>属性  
@@ -709,6 +714,12 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 在特定驱动器上禁用 BitLocker。 使用下拉列表指定禁用 BitLocker 的驱动器。  
 
+#### <a name="resume-protection-after-windows-has-been-restarted-the-specified-number-of-times"></a>在 Windows 重新启动后恢复保护指定的次数
+
+<!-- 4512937 -->
+从版本 1906 开始，使用此选项可指定禁用 BitLocker 的重启次数。 将值设置为 1（默认值）和 15 之间，而不是添加此步骤的多个实例。
+
+可以通过任务序列变量[OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)和[OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)来设置和修改此行为。
 
 
 ## <a name="BKMK_DownloadPackageContent"></a>下载包内容  
@@ -719,7 +730,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - OS 升级包  
 - 驱动程序包  
 - 包  
-- 启动映像 （在 1810年及更早版本）  
+- 启动映像 (版本1810及更早版本)  
 
 此步骤适用于任务序列，从而在以下方案中升级 OS：  
 
@@ -733,7 +744,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 此步骤在完整 OS 或 Windows PE 中运行。 Windows PE 中不提供将包保存在 Configuration Manager 客户端缓存中的选项。
 
 > [!NOTE]  
-> **下载包内容**任务不支持与独立媒体配合使用。 有关详细信息，请参阅[不受支持的独立媒体的操作](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media)。  
+> 不支持将 "**下载包内容**" 任务用于独立媒体。 有关详细信息, 请参阅[独立媒体不支持的操作](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media)。  
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“下载包内容”  以添加此步骤。
 
@@ -909,9 +920,9 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 > [!NOTE]  
 > 要安装取代另一应用程序的应用程序，被取代的应用程序的内容文件必须可用。 否则任务序列步骤将失败。 例如，在客户端或捕获的映像中安装 Microsoft Visio 2010。 当运行“安装应用程序”步骤安装 Microsoft Visio 2013 时，Microsoft Visio 2010（被取代的应用程序）的内容文件必须在分发点上可用  。 如果某个客户端或捕获映像未安装 Microsoft Visio，任务序列会安装 Microsoft Visio 2013，而不会检查 Microsoft Visio 2010 内容文件。  
-
-> [!NOTE]  
-> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled  和 SMSTSMPListRequestTimeout  任务序列变量。 这些变量指定任务序列重试安装应用程序之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。
+>
+> 如果停用了某个被取代的应用, 并且在任务序列中引用了该新应用, 则任务序列将无法启动。
+此行为是设计的: 任务序列需要所有应用引用。<!-- SCCMDocs 1711 -->  
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
@@ -922,7 +933,17 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
+> [!NOTE]  
+> 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled  和 SMSTSMPListRequestTimeout  任务序列变量。 这些变量指定任务序列重试安装应用程序之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。
+
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装应用程序”  以添加此步骤。
+
+通过以下 PowerShell cmdlet 管理此步骤:<!-- SCCMDocs #1118 -->
+
+- [CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [新-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties"></a>属性  
 
@@ -973,6 +994,12 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 #### <a name="if-an-application-fails-continue-installing-other-applications-in-the-list"></a>如果应用程序失败，继续安装列表中的其他应用程序
 
 此设置指定在单个应用程序安装失败时该步骤继续。 如果指定此设置，则任务序列将继续，不考虑任何安装错误。 如果未指定此设置且安装失败，步骤将立即结束。  
+
+#### <a name="clear-application-content-from-cache-after-installing"></a>安装后从缓存中清除应用程序内容
+
+<!--4485675-->
+从1906版开始, 在步骤运行后, 从客户端缓存中删除应用内容。 对于具有小型硬盘的设备，或在连续安装大量大型应用时，这一行为是有帮助的。
+
 
 ### <a name="options"></a>选项
 
@@ -1623,7 +1650,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 #### <a name="account"></a>帐户
 
 <!-- 3556028 -->
-从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 指定的帐户必须是系统上的本地管理员，并且使用此帐户的权限运行该脚本。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
+从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 指定的帐户必须是系统上的本地管理员, 并且该脚本将使用此帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
 
 > [!IMPORTANT]  
 > 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log  文件将记录这一失败。  
@@ -1647,6 +1674,11 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 此步骤运行另一个任务序列。 这将创建任务序列之间的父子关系。 使用子任务序列，可以创建更模块化、可重复使用的任务序列。
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行任务序列”  以添加此步骤。
+
+从版本1906开始, 通过以下 PowerShell cmdlet 管理此步骤:<!-- 2839943, SCCMDocs #1118 -->
+
+- **New-CMTSStepRunTaskSequence**
+- **Set-CMTSStepRunTaskSequence**
 
 ### <a name="specifications-and-limitations"></a>规范和限制
 
@@ -1774,7 +1806,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 使用此步骤执行从 Windows PE 到新 OS 的转换。 此任务序列步骤是在部署任何 OS 时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新 OS 中，并为任务序列在新 OS 中继续执行做好准备。  
 
-此步骤是负责过渡到完整的操作系统从 Windows PE 任务序列。 运行该步骤在 Windows PE 和完整的 OS 中由于此转换。 但是，由于在 Windows PE 中启动转换，它可以仅添加 Windows PE 部分的任务序列期间。  
+此步骤负责将任务序列从 Windows PE 转换为完整操作系统。 此步骤将在 Windows PE 中运行, 并且在此转换的整个操作系统中运行。 但是, 由于转换在 Windows PE 中开始, 因此只能在任务序列的 Windows PE 部分中添加。  
 
 在此步骤中使用以下任务序列变量：  
 

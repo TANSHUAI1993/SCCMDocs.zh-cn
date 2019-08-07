@@ -2,7 +2,7 @@
 title: 任务序列变量引用
 titleSuffix: Configuration Manager
 description: 了解用于控制和自定义 Configuration Manager 任务序列的变量。
-ms.date: 05/06/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e1ad62c8b8b0f780670e7baf7ebf11de7f6b483
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: b92fad9054c50ea58caeb11e209cd04b6951493f
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194585"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537116"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -140,6 +140,11 @@ ms.locfileid: "67194585"
 - 如果最后一个步骤失败，此变量为 `false`。  
 
 - 如果由于该步骤被禁用或相关的条件被评估为 false  而导致任务序列跳过最后一个操作，则不会重置此变量。 它仍保留之前操作的值。  
+
+### <a name="SMSTSLastContentDownloadLocation"></a>_SMSTSLastContentDownloadLocation
+
+<!-- 2840337 -->
+从版本 1906 开始，此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量, 而不是分析此内容位置的客户端日志。
 
 ### <a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
@@ -480,6 +485,28 @@ MAC 地址，用于匹配物理网络适配器的设置。
 (input)
 
 驱动程序目录类别唯一 ID 的以逗号分隔的列表。 “自动应用驱动程序”  步骤只考虑至少一个指定类别中的驱动程序。 此值是可选的，默认情况下不设置。 可以通过枚举站点上的 SMS_CategoryInstance  对象列表来获取可用的类别 ID。
+
+### <a name="OSDBitLockerRebootCount"></a>OSDBitLockerRebootCount
+
+适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
+
+<!-- 4512937 -->
+从版本1906开始, 使用此变量设置恢复保护的重启次数。
+
+#### <a name="valid-values"></a>有效值
+
+`1` 与`15`之间的一个整数。
+
+### <a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
+
+适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
+
+<!-- 4512937 -->
+从版本1906开始, 将此值设置为替代步骤或[OSDBitLockerRebootCount](#OSDBitLockerRebootCount)变量设置的计数。 虽然其他方法只接受值 1 到 15，但如果将此变量设置为 0，则 BitLocker 会永远保持禁用状态。 虽然在任务序列设置一个值的情况下，此变量很有用，但建议在每个设备或每个集合上设置一个单独的值。
+
+#### <a name="valid-values"></a>有效值
+
+`0` 与`15`之间的一个整数。
 
 ### <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
@@ -1477,6 +1504,16 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 - `60`：显示通知消息 1 分钟  
 
+### <a name="SMSTSRebootDelayNext"></a>SMSTSRebootDelayNext
+
+<!--4447680-->
+从1906版开始, 将此变量与现有的[SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay)变量一起使用。 若要稍后执行超时值不同于第一个的任何重启，请将 SMSTSRebootDelayNext 设置为其他值（以秒为单位）。
+
+#### <a name="example"></a>示例
+
+要在启动 Windows 10 就地升级任务序列时，向用户提供 60 分钟重启通知。 经过第一次长时间的超时，你希望附加的超时仅为 60 秒。 将 SMSTSRebootDelay 设置为 `3600`，并将 SMSTSRebootDelayNext 设置为 `60`。  
+
+
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
 
 指定要在重启通知对话框中显示的消息。 如果未设置此变量，则显示默认消息。
@@ -1541,6 +1578,13 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 设置 SMSTSWaitForSecondReboot 值（以秒为单位），指定在此步骤中，任务序列在计算机重启时的暂停的秒数。 预留充足的时间，以防还有第二次重启。
 
 例如，如果将 SMSTSWaitForSecondReboot 设置为 `600`，重启后任务序列将暂停 10 分钟，然后再运行其他步骤。 当单个安装软件更新任务序列步骤中需安装数百个软件更新时，这一变量十分有用。
+
+### <a name="TSDebugMode"></a>TSDebugMode
+
+<!--3612274-->
+从1906版开始, 将此变量设置`TRUE`为要将任务序列部署到的集合。 此变量在该集合中的任何设备上更改任何任务序列的行为, 以使用任务序列调试器。
+
+有关详细信息，请参阅[调试任务序列](/sccm/osd/deploy-use/debug-task-sequence)。
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 

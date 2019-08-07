@@ -2,7 +2,7 @@
 title: 应用程序管理规划
 titleSuffix: Configuration Manager
 description: 实现和配置用于在 Configuration Manager 中部署应用程序的所需依赖关系。
-ms.date: 05/21/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ec099d9ffbb5ffaee1c962faf8443a900c1b324
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: aed5c94057dbc564c5275660c488ac82339927f6
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176872"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535278"
 ---
 # <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>在 Configuration Manager 中规划和配置应用程序管理
 
@@ -33,12 +33,18 @@ ms.locfileid: "66176872"
 
 在运行以下站点系统角色的服务器上，需要安装 IIS：
 
-- 应用程序目录网站点  
-- 应用程序目录 Web 服务点  
 - 管理点  
 - 分发点  
 
 有关详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
+
+> [!Note]  
+> 应用程序目录还需要 IIS。 但是，从当前分支版本 1806 开始，不支持 Silverlight 用户体验。 从1906版开始, 更新后的客户端自动将管理点用于用户可用的应用程序部署。 还不能安装新的应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
+>
+> 有关详细信息，请参阅下列文章：
+>
+> - [配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 
 ### <a name="certificates-on-code-signed-applications-for-mobile-devices"></a>移动设备的代码签名应用程序证书
@@ -68,10 +74,16 @@ Configuration Manager 客户端从 Windows 的安全事件日志中读取类型�
 
 ### <a name="management-point"></a>管理点
 
-客户端与管理点联系，以下载客户端策略、查找内容和连接到应用程序目录。 如果客户端无法访问管理点，便无法使用应用程序目录。
+客户端联系管理点以下载客户端策略, 以查找内容。
+
+从1906版开始, 更新后的客户端自动将管理点用于用户可用的应用程序部署。
+
+在版本1902及更早版本中, 客户端使用管理点连接到应用程序目录。 如果客户端无法访问管理点，便无法使用应用程序目录。
 
 > [!Note]  
 > 从版本 1806 开始，不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。<!--1358309-->  
+>
+> 从1906版开始, 无法安装新的应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
   
 
 ### <a name="distribution-point"></a>分发点
@@ -158,23 +170,23 @@ Configuration Manager 必须先发现用户帐户，然后用户才能查看和�
 
 - 从版本 1806 开始，应用程序目录网站点的 Silverlight 用户体验  不再受支持。<!--1358309--> 应用程序目录 Web 服务点角色不再必需  ，但仍受支持  。
 
-- 在 2019 年 6 月 30 日之后的第一个当前分支版本中，更新后的客户端自动使用管理点进行用户可用应用程序部署。 此外，还无法安装新的应用程序目录角色。
+- 从1906版开始, 更新后的客户端自动将管理点用于用户可用的应用程序部署。 还不能安装新的应用程序目录角色。
 
 - 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 
-对软件中心和管理点的迭代改进是为了简化基础结构，并消除使用应用程序目录进行用户可用部署的需求。 软件中心可以提供所有应用部署，而无需使用应用程序目录。 此外，如果你启用 TLS 1.2，并对应用程序目录使用 HTTP，那么用户便看不到面向用户的可用部署。
+对软件中心和管理点的迭代改进是为了简化基础结构，并消除使用应用程序目录进行用户可用部署的需求。 软件中心可以提供所有应用部署，而无需使用应用程序目录。 此外，如果你启用 TLS 1.2，并对应用程序目录使用 HTTP，那么用户便看不到面向用户的可用部署。 将 Configuration Manager 更新到版本1906或更高版本, 以便从这些改进中受益。
 
-1. 将所有客户端更新为版本 1806 或更高版本。  
+1. 将所有客户端更新为版本 1806 或更高版本。 建议使用版本1906。  
 
 1. 设置软件中心的品牌，而不是在应用程序目录网站角色的属性中。 有关详细信息，请参阅[软件中心客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)。  
 
 1. 查看默认和任何自定义的客户端设置。 在“计算机代理”  组中，确保“默认应用程序目录网站点”  是“`(none)`”。  
 
-    仅在层次结构中没有应用程序目录角色时，客户端才切换为使用管理点。 否则，客户端继续使用层次结构中的应用程序目录实例之一。 此行为应用于各个主站点。  
+    在版本 1902 及更早版本中，仅在层次结构中没有应用程序目录角色时，客户端才切换为使用管理点。 否则，客户端继续使用层次结构中的应用程序目录实例之一。 此行为应用于各个主站点。  
 
 1. 从所有主站点中删除“应用程序目录网站”  和“应用程序目录 Web 服务”  站点系统角色。
 
-在你删除应用程序目录角色后，软件中心开始使用管理点进行面向用户的可用部署。 最多可能需要 65 分钟才会发生此更改。 若要在特定客户端上验证此行为，请查看 `SCClient_<username>.log`，并查找如下所示的条目：
+在你删除应用程序目录角色后，软件中心开始使用管理点进行面向用户的可用部署。 在版本1902及更早版本中, 此更改可能需要长达65分钟的时间。 若要在特定客户端上验证此行为，请查看 `SCClient_<username>.log`，并查找如下所示的条目：
 
 `Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
 

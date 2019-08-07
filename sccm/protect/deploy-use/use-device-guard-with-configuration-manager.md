@@ -1,8 +1,8 @@
 ---
 title: 如何管理 Windows Device Guard
 titleSuffix: Configuration Manager
-description: 了解如何使用 System Center Configuration Manager 管理 Windows Device Guard。
-ms.date: 12/19/2017
+description: 了解如何使用 Configuration Manager 管理 Windows Device Guard。
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -11,14 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7c6fcdf0113dd9fa83d2d303661ad5690362715
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 82f262b01129452da7c34ffb6f1a1bb2f15be8a8
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678733"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533814"
 ---
-# <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行的 Device Guard 管理
+# <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行 Device Guard 管理
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -41,8 +41,8 @@ Device Guard 同时包含基于软件和基于硬件的安全功能。 Windows D
 1. **已启用强制** – 仅允许受信任的可执行文件运行。
 2. **仅审核** - 允许所有可执行文件运行，但是在本地客户端事件日志中记录运行的不受信任的可执行文件。
 
->[!TIP]
->在该 Configuration Manager 版本中，Device Guard 是预发行功能。 要启用该功能，请参阅 [System Center Configuration Manager 中的预发布功能](/sccm/core/servers/manage/pre-release-features)。
+> [!Tip]  
+> 此功能在 1702 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1906 开始，此功能不再属于预发行功能。  
 
 ## <a name="what-can-run-when-you-deploy-a-windows-defender-application-control-policy"></a>部署 Windows Defender 应用程序控制策略时，可以运行哪些内容？
 

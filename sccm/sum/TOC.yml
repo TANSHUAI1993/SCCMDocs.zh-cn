@@ -1,4 +1,7 @@
+- name: 软件更新管理
+  href: understand/software-updates-introduction.md
 - name: 了解和探索
+  expanded: true
   items:
     - name: 软件更新简介
       href: understand/software-updates-introduction.md

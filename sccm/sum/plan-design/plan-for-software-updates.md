@@ -5,18 +5,18 @@ description: 在 Configuration Manager 生产环境中使用软件更新之前�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce5a80b99149d31282036b33b97b57294ab38663
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: fc5c4fd7627aaa95f53a8a67ef983fda862a2526
+ms.sourcegitcommit: 8c296886e79e20b971842458f6e88761e5df30be
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340472"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684682"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -64,6 +64,9 @@ ms.locfileid: "68340472"
 
 配置基线中的软件更新数量也限制为 1000。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
 
+#### <a name="limit-of-580-security-scopes-for-automatic-deployment-rules"></a>自动部署规则的580安全作用域的限制
+<!--ado 4962928-->
+将自动部署规则 (Adr) 上的安全作用域数量限制为小于580。 当你创建 ADR 时, 将自动添加有权访问它的安全作用域。 如果设置的安全作用域超过 580, ADR 将无法运行, 并且在 ruleengine 中记录错误。
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> 确定软件更新点基础结构  
@@ -332,6 +335,7 @@ Configuration Manager 管理中心站点上的软件更新点与软件更新点�
 - [产品](#BKMK_UpdateProducts)
 - [取代规则](#BKMK_SupersedenceRules)
 - [语言](#BKMK_UpdateLanguages)  
+- [最长运行时间](#bkmk_maxruntime)
 
 
 Configuration Manager 中的软件更新同步会根据所配置的条件下载软件更新元数据。 层次结构中的顶级站点会同步 Microsoft 更新中的软件更新。 你可以选择将顶层站点上的软件更新点配置为与不在 Configuration Manager 层次结构中的现有 WSUS 服务器同步。 子主站点从管理中心站点上的软件更新点同步软件更新元数据。 安装和配置软件更新点之前，请使用本部分规划同步设置。  
@@ -437,6 +441,8 @@ Configuration Manager 支持同步以下更新类别：
 
 使用环境中最常用的语言配置软件更新文件语言设置。 例如，你站点中的客户端主要对 Windows 或应用程序使用英语或日语。 该站点几乎不使用其他语言。 下载或部署软件更新时，请仅在“软件更新文件”列中选择英语和日语  。 通过此操作，你可使用部署和下载向导的“语言选择”页面上的默认设置  。 此操作还可防止下载不需要的更新文件。 请在 Configuration Manager 层次结构中的每个软件更新点上配置此设置。  
 
+
+
 #### <a name="summary-details"></a>摘要详细信息  
 在同步过程中，将采用你指定的语言为软件更新更新摘要详细信息（软件更新元数据）。 元数据提供软件更新相关信息，例如：
 - 名称
@@ -450,9 +456,35 @@ Configuration Manager 支持同步以下更新类别：
 仅在顶级站点上配置摘要详细信息设置。 子站点的软件更新点上不配置摘要详细信息，理由是软件更新元数据通过使用基于文件的复制从中央管理站点复制。 在选择摘要详细信息语言时，请仅选择环境中需要的语言。 选择的语言越多，同步软件更新元数据所花的时间就越长。 Configuration Manager 在运行 Configuration Manager 控制台的操作系统区域设置中显示软件更新元数据。 如果软件更新的本地化属性在此操作系统的区域设置中不可用，则软件更新信息以英语显示。  
 
 > [!IMPORTANT]  
->  请选择所有必需的摘要详细信息语言。 当顶级站点的软件更新点与同步源进行同步时，所选摘要详细信息语言将确定其检索的软件更新元数据。 如果在同步运行（至少运行一次）后修改摘要详细信息语言，则只针对新的或更新的软件更新检索修改后的摘要详细信息语言的软件更新元数据。 除非对同步源上的软件更新进行了更改，否则已同步的软件更新不会使用已修改语言的新元数据进行更新。  
+>  请选择所有必需的摘要详细信息语言。 当顶级站点的软件更新点与同步源进行同步时，所选摘要详细信息语言将确定其检索的软件更新元数据。 如果在同步运行（至少运行一次）后修改摘要详细信息语言，则只针对新的或更新的软件更新检索修改后的摘要详细信息语言的软件更新元数据。 除非对同步源上的软件更新进行了更改，否则已同步的软件更新不会使用已修改语言的新元数据进行更新。
 
 
+###  <a name="bkmk_maxruntime"></a> 最长运行时间
+<!--3734426-->
+（从版本 1906 中引入） 
+
+从版本 1906 开始，可以指定完成软件更新安装所需的最长时间。 可以指定以下项的最长运行时间：
+
+- **Windows 功能更新的最长运行时间(分钟)**
+  - **功能更新** - 属于以下三种分类之一的更新：
+    - 升级
+    - 更新汇总
+    - Service Pack
+
+- **适用于 Windows 的 Office 365 更新和非功能更新的最大运行时间 (分钟)**
+  - **非功能更新** - 非功能升级的更新，其产品属于以下列出的某项：
+    - Windows 10（所有版本）
+    - Windows Server 2012
+    - Windows Server 2012 R2
+    - Windows Server 2016
+    - Windows Server 2019
+    - Office 365
+
+- 这些设置仅更改从 Microsoft 更新同步的新更新的最长运行时。 它不会更改现有功能或非功能更新的运行时间。
+- 使用此设置，无法配置所有其他产品和分类。 如果需要更改其中某个更新的最长运行时间，请[配置软件更新设置](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
+
+> [!NOTE]
+> 在版本1906中, 当你安装顶层软件更新点时, 最大运行时不可用。 安装完成后, 编辑顶层软件更新点上的最大运行时间。
 
 ##  <a name="BKMK_MaintenanceWindow"></a>规划软件更新维护时段  
 

@@ -5,18 +5,18 @@ description: Configuration Manager 将 Office 365 客户端更新从 WSUS 目录
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/11/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbaf7322b0103b9958b4d7b2c66c018d12d20a4
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 276c5dd71b62a29a3f68b1eed2cdc814cfd1c804
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194622"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537176"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -58,7 +58,7 @@ ms.locfileid: "67194622"
 3. 在“应用程序设置”  页上，提供应用的名称和说明，输入文件的下载位置，然后单击“下一步”  。 必须将位置指定为 &#92;&#92;server  &#92;share  。
 4. 在“Office 设置”页上，单击“转到 Office 自定义工具”   。 这将打开[即点即用 Office 自定义工具](https://config.office.com)。
 5. 为 Office 365 安装配置所需的设置。 完成配置时，单击页面右上角的“提交”  。 
-6. 在“部署”页上，确定是希望立即部署还是稍后部署  。 如果选择稍后部署，可以在“软件库” < “应用程序管理” < “应用程序”    中找到应用程序。  
+6. 在“部署”页上，确定是希望立即部署还是稍后部署  。 如果选择稍后部署，可以在“软件库” > “应用程序管理” > “应用程序”    中找到应用程序。  
 7. 在“摘要”页上，确认设置  。 
 8. 完成 Office 365 客户端安装向导后，单击“下一步”，然后单击“关闭”   。 
 
@@ -76,13 +76,26 @@ ms.locfileid: "67194622"
 5. 在“客户端产品”页上，请选择使用的 Office 365 套件  。 选择想要包括的应用程序。 选择应包括的任何其他 Office 产品，然后单击“下一步”  。
 6. 在“客户端设置”  页上，选择要包括的设置，然后单击“下一步”  。
 7. 在“部署”  页上，选择是否部署该应用程序，然后单击“下一步”  。 <br/>如果选择不部署向导中的包，请跳到步骤 9。
-8. 像配置典型应用程序那样，配置该向导页的其余部分。 有关详细信息，请参阅[创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。
+8. 像配置典型应用程序部署那样，配置该向导页的其余部分。 有关详细信息，请参阅[创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。
 9. 完成向导。
 10. 可以依次转到“软件库”   > “概述”   > “应用管理”   > “应用”  ，部署或编辑应用。    
 
 使用 Office 365 安装程序创建并部署 Office 365 应用程序后，默认情况下，Configuration Manager 不会管理 Office 更新。 若要允许 Office 365 客户端从 Configuration Manager 接收更新，请参阅[使用 Configuration Manager 部署 Office 365 更新](#deploy-office-365-updates)。
 
 部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建 Office 365 应用的自动部署规则，请单击 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard)中的“创建 ADR”  。 选择产品时，请选择“Office 365 客户端”  。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+
+
+## <a name="drill-through-required-office-365-updates"></a>钻取所需的 Office 365 更新
+<!--4224414-->
+（从版本 1906 中引入） 
+
+您可以钻取符合性统计信息, 查看哪些设备需要特定的 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取到设备列表:
+
+1. 转到“软件库” > “Office 365 客户端管理” > “Office 365 更新”   
+1. 选择至少一台设备所需的任何更新。
+1. 查看“摘要”选项卡，找到“统计信息”下的饼图   。
+1. 选择饼图旁的“查看所需更新”超链接以深入查看设备列表  。
+1. 此操作将转到“设备”下的临时节点，可以在其中查看需要更新的设备  。 还可对节点执行操作，例如从列表创建新集合。
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新

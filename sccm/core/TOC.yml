@@ -1,5 +1,7 @@
 - name: 核心基础结构
+  href: understand/introduction.md
 - name: 了解和探索
+  expanded: true
   items:
     - name: Configuration Manager 简介
       items:
@@ -243,16 +245,14 @@
       items:
         - name: Technical Preview 概述
           href: get-started/technical-preview.md
+        - name: 1908 中的功能
+          href: get-started/2019/technical-preview-1908.md
         - name: 1907 中的功能
           href: get-started/2019/technical-preview-1907.md
         - name: 1906 中的功能
           href: get-started/2019/technical-preview-1906.md
         - name: 1905 中的功能
           href: get-started/2019/technical-preview-1905.md
-        - name: 1904 中的功能
-          href: get-started/2019/technical-preview-1904.md
-        - name: 1903 中的功能
-          href: get-started/2019/technical-preview-1903.md
     - name: 在层次结构之间迁移数据
       items:
         - name: 迁移概述
@@ -666,7 +666,7 @@
               href: clients/deploy/linux-and-unix-clients-technical-reference.md
         - name: 将客户端部署到 Mac 的准备工作
           href: clients/deploy/prepare-to-deploy-mac-clients.md
-        - name: How to deploy clients to Macs
+        - name: 如何将客户端部署到 Mac
           href: clients/deploy/deploy-clients-to-macs.md
         - name: 如何向站点分配客户端
           href: clients/deploy/assign-clients-to-a-site.md

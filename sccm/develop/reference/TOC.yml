@@ -1,21 +1,20 @@
-- name: 简介
+- name: Configuration Manager API 参考
   href: configuration-manager-reference.md
 - name: 类和属性限定符
   href: misc/class-and-property-qualifiers.md
 - name: SMS_WhatsNewFeature 服务器 WMI 类
   href: misc/sms_whatsnewfeature-server-wmi-class.md
   items:
-    - name: 类 SMS_WhatsNewFeature 中的 GetFeatures 方法
+    - name: GetFeatures 方法
       href: misc/getfeatures-method-in-class-sms_whatsnewfeature.md
 - name: SMS_WhatsNewScenario 服务器 WMI 类
   href: misc/sms_whatsnewscenario-server-wmi-class.md
 - name: 警报系统服务器 WMI 类
-  href: core/servers/manage/alert-system-server-wmi-classes.md
   items:
-    - name: SMS_服务器 WMI 类
+    - name: SMS_Alert 服务器 WMI 类
       href: core/servers/manage/sms_alert-server-wmi-class.md
       items:
-        - name: 类 SMS_Alert 中的 Close 方法
+        - name: Close 方法
           href: core/servers/manage/close-method-in-class-sms_alert.md
     - name: SMS_AlertBase 服务器 WMI 类
       href: core/servers/manage/sms_alertbase-server-wmi-class.md
@@ -26,24 +25,23 @@
     - name: SMS_CHAlert 服务器 WMI 类
       href: core/servers/manage/sms_chalert-server-wmi-class.md
       items:
-        - name: 类 SMS_CHAlert 中的 Close 方法
+        - name: Close 方法
           href: core/servers/manage/close-method-in-class-sms_chalert.md
     - name: SMS_EPAlert 服务器 WMI 类
       href: core/servers/manage/sms_epalert-server-wmi-class.md
       items:
-        - name: 类 SMS_EPAlert 中的 Close 方法
+        - name: Close 方法
           href: core/servers/manage/close-method-in-class-sms_epalert.md
     - name: SMS_Subscription 服务器 WMI 类
       href: core/servers/manage/sms_subscription-server-wmi-class.md
       items:
-        - name: 类 SMS_Subscription 中的 GetAvailableLanguages 方法
+        - name: GetAvailableLanguages 方法
           href: core/servers/manage/getavailablelanguages-method-in-class-sms_subscription.md
-        - name: 类 SMS_Subscription 中的 GetTestSmtpConnectionResult 方法
+        - name: GetTestSmtpConnectionResult 方法
           href: core/servers/manage/gettestsmtpconnectionresult-method-in-class-sms_subscription.md
-        - name: 类 SMS_Subscription 中的 TestSmtpConnection 方法
+        - name: TestSmtpConnection 方法
           href: core/servers/manage/testsmtpconnection-method-in-class-sms_subscription.md
-- name: 替换内容提供程序类
-  href: core/servers/configure/alternate-content-provider-classes.md
+- name: 替换内容提供程序 (ACP) 类
   items:
     - name: CCM_CONTENTFLAG 枚举
       href: core/servers/configure/ccm_contentflag-enumeration.md
@@ -66,24 +64,23 @@
     - name: ICcmAlternateDowloadProvider 接口
       href: core/servers/configure/iccmalternatedowloadprovider-interface.md
       items:
-        - name: ICcmAlternatedownloadProvider CancelJob 方法
+        - name: CancelJob 方法
           href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
-        - name: ICcmAlternatedownloadProvider DownloadContent 方法
+        - name: DownloadContent 方法
           href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
-        - name: ICcmAlternatedownloadProvider ModifyJobPriority 方法
+        - name: ModifyJobPriority 方法
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
-        - name: ICcmAlternatedownloadProvider ModifyJobSource 方法
+        - name: ModifyJobSource 方法
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
-        - name: ICcmAlternatedownloadProvider ModifyJobTimeout 方法
+        - name: ModifyJobTimeout 方法
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
-        - name: ICcmAlternatedownloadProvider Resume 方法
+        - name: Resume 方法
           href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
-        - name: ICcmAlternatedownloadProvider Suspend 方法
+        - name: Suspend 方法
           href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
-    - name: ICcmContentTransferManager4 Interface
+    - name: ICcmContentTransferManager4 接口
       href: core/servers/configure/iccmcontenttransfermanager4-interface.md
 - name: 应用程序管理服务器 WMI 类
-  href: apps/application-management-server-wmi-classes.md
   items:
     - name: SMS_AppConflictsData 服务器 WMI 类
       href: apps/sms_appconflictsdata-server-wmi-class.md
@@ -108,19 +105,19 @@
     - name: SMS_Application 服务器 WMI 类
       href: apps/sms_application-server-wmi-class.md
       items:
-        - name: 类 SMS_Application 中的 GetCIDocumentBody 方法
+        - name: GetCIDocumentBody 方法
           href: apps/getcidocumentbody-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 GetCIDocuments 方法
+        - name: GetCIDocuments 方法
           href: apps/getcidocuments-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 InitiateUserInstall 方法
+        - name: InitiateUserInstall 方法
           href: apps/initiateuserinstall-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 ManageDeploymentForDevice 方法
+        - name: ManageDeploymentForDevice 方法
           href: apps/managedeploymentfordevice-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 Restore 方法
+        - name: Restore 方法
           href: apps/restore-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 SetIsExpired 方法
+        - name: SetIsExpired 方法
           href: apps/setisexpired-method-in-class-sms_application.md
-        - name: 类 SMS_Application 中的 UpdateStats 方法
+        - name: UpdateStats 方法
           href: apps/updatestats-method-in-class-sms_application.md
     - name: SMS_ApplicationAssignment 服务器 WMI 类
       href: apps/sms_applicationassignment-server-wmi-class.md
@@ -129,9 +126,9 @@
     - name: SMS_ApplicationLatest 服务器 WMI 类
       href: apps/sms_applicationlatest-server-wmi-class.md
       items:
-        - name: 类 SMS_ApplicationLatest 中的 SetIsExpired 方法
+        - name: SetIsExpired methodLatest
           href: apps/setisexpired-method-in-class-sms_applicationlatest.md
-        - name: 类 SMS_ApplicationLatest 中的 UpdateStats 方法
+        - name: UpdateStats methodLatest
           href: apps/updatestats-method-in-class-sms_applicationlatest.md
     - name: SMS_ApplicationPublishingItem 服务器 WMI 类
       href: apps/sms_applicationpublishingitem-server-wmi-class.md
@@ -148,26 +145,26 @@
     - name: SMS_DeploymentInfo 服务器 WMI 类
       href: apps/sms_deploymentinfo-server-wmi-class.md
       items:
-        - name: 类 SMS_DeploymentInfo 中的 GetDeployments 方法
+        - name: GetDeployments 方法
           href: apps/getdeployments-method-in-class-sms_deployment_info.md
     - name: SMS_DeploymentInfoFlat 服务器 WMI 类
       href: apps/sms_deploymentinfoflat-server-wmi-class.md
     - name: SMS_DeploymentSummary 服务器 WMI 类
       href: apps/sms_deploymentsummary-server-wmi-class.md
       items:
-        - name: 类 SMS_DeploymentSummary 中的 UpdateClassicDeployment 方法
+        - name: UpdateClassicDeployment 方法
           href: apps/updateclassicdeployment-method-in-class-sms_deploymentsummary.md
-        - name: 类 SMS_DeploymentSummary 中的 UpdateDeployment 方法
+        - name: UpdateDeployment 方法
           href: apps/updatedeployment-method-in-class-sms_deploymentsummary.md
     - name: SMS_DeploymentType 服务器 WMI 类
       href: apps/sms_deploymenttype-server-wmi-class.md
       items:
-        - name: 类 SMS_DeploymentType 中的 DistributeDeploymentTypeExtension 方法
+        - name: DistributeDeploymentTypeExtension 方法
           href: apps/distributedeploymenttypeextension-method-in-class-sms_deploymenttype.md
     - name: SMS_DeploymentTypeLicenseAssociation 服务器 WMI 类
       href: apps/sms_deploymenttypelicenseassociation-server-wmi-class.md
       items:
-        - name: 类 SMS_DeploymentTypeLicenseAssociation 中的 AddLicense 方法
+        - name: AddLicense 方法
           href: apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md
     - name: SMS_G_System_AppClientState 服务器 WMI 类
       href: apps/sms_g_system_appclientstate-server-wmi-class.md
@@ -194,56 +191,54 @@
     - name: SMS_UserApplicationRequest 服务器 WMI 类
       href: apps/sms_userapplicationrequest-server-wmi-class.md
       items:
-        - name: 类 SMS_UserApplicationRequest 中的 Approve 方法
+        - name: Approve 方法
           href: apps/approve-method-in-class-sms_userapplicationrequest.md
-        - name: 类 SMS_UserApplicationRequest 中的 Deny 方法
+        - name: Deny 方法
           href: apps/deny-method-in-class-sms_userapplicationrequest.md
     - name: SMS_UserApplicationRequestHistoryItem 服务器 WMI 类
       href: apps/sms_userapplicationrequesthistoryitem-server-wmi-class.md
     - name: SMS_VirtualEnvironment 服务器 WMI 类
       href: apps/sms_virtualenvironment-server-wmi-classes.md
 - name: 资产智能服务器 WMI 类
-  href: core/clients/asset-intelligence/asset-intelligence-server-wmi-classes.md
   items:
     - name: SMS_AICategory 服务器 WMI 类
       href: core/clients/asset-intelligence/sms_aicategory-server-wmi-class.md
       items:
-        - name: 类 SMS_AICategory 中的 GetSummary 方法
+        - name: GetSummary 方法
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aicategory.md
     - name: SMS_AIHardwareRequirements 服务器 WMI 类
       href: core/clients/asset-intelligence/sms_aihardwarerequirements-server-wmi-class.md
       items:
-        - name: 类 SMS_AIHardwareRequirements 中的 GetSummary 方法
+        - name: GetSummary 方法
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aihardwarerequirements.md
     - name: SMS_AIMLSParser 服务器 WMI 类
       href: core/clients/asset-intelligence/sms_aimlsparser-server-wmi-class.md
       items:
-        - name: 类 SMS_AIMLSParser 中的 GetStatus 方法
+        - name: GetStatus 方法
           href: core/clients/asset-intelligence/getstatus-method-in-class-sms_aimlsparser.md
-        - name: 类 SMS_AIMLSParser 中的 GetSummary 方法
+        - name: GetSummary 方法
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aimlsparser.md
-        - name: 类 SMS_AIMLSParser 中的 Import 方法
+        - name: Import 方法
           href: core/clients/asset-intelligence/import-method-in-class-sms_aimlsparser.md
     - name: SMS_AIProxy 服务器 WMI 类
       href: core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md
       items:
-        - name: 类 SMS_AIProxy 中的 RequestCatalogUpdate 方法
+        - name: RequestCatalogUpdate 方法
           href: core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md
     - name: SMS_AISoftwareList 服务器 WMI 类
       href: core/clients/asset-intelligence/sms_aisoftwarelist-server-wmi-class.md
       items:
-        - name: 类 SMS_AISoftwareList 中的 AddSoftwareHashData 方法
+        - name: AddSoftwareHashData 方法
           href: core/clients/asset-intelligence/addsoftwarehashdata-method-in-class-sms_aisoftwarelist.md
-        - name: 类 SMS_AISoftwareList 中的 GetCategorizationRequestText 方法
+        - name: GetCategorizationRequestText 方法
           href: core/clients/asset-intelligence/getcategorizationrequesttext-method-in-class-sms_aisoftwarelist.md
-        - name: 类 SMS_AISoftwareList 中的 GetSummary 方法
+        - name: GetSummary 方法
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aisoftwarelist.md
-        - name: 类 SMS_AISoftwareList 中的 ResolveConflict 方法
+        - name: ResolveConflict 方法
           href: core/clients/asset-intelligence/resolveconflict-method-in-class-sms_aisoftwarelist.md
-        - name: 类 SMS_AISoftwareList 中的 SetCategorizationRequest 方法
+        - name: SetCategorizationRequest 方法
           href: core/clients/asset-intelligence/setcategorizationrequest-method-in-class-sms_aisoftwarelist.md
 - name: 客户端类
-  href: core/clients/client-classes/client-classes.md
   items:
     - name: 应用程序管理客户端接口
       href: core/clients/client-classes/application-management-client-interfaces.md
@@ -326,19 +321,19 @@
         - name: SMS_Client 客户端 WMI 类
           href: core/clients/client-classes/sms_client-client-wmi-class.md
           items:
-            - name: 类 SMS_Client 中的 EvaluateMachinePolicy 方法
+            - name: EvaluateMachinePolicy 方法
               href: core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 GetAssignedSite 方法
+            - name: GetAssignedSite 方法
               href: core/clients/client-classes/getassignedsite-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 RequestMachinePolicy 方法
+            - name: RequestMachinePolicy 方法
               href: core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 ResetPolicy 方法
+            - name: ResetPolicy 方法
               href: core/clients/client-classes/resetpolicy-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 SetAssignedSite 方法
+            - name: SetAssignedSite 方法
               href: core/clients/client-classes/setassignedsite-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 SetGlobalLoggingConfiguration 方法
+            - name: SetGlobalLoggingConfiguration 方法
               href: core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md
-            - name: 类 SMS_Client 中的 TriggerSchedule 方法
+            - name: TriggerSchedule 方法
               href: core/clients/client-classes/triggerschedule-method-in-class-sms_client.md
         - name: SMS_LocalMP 客户端 WMI 类
           href: core/clients/client-classes/sms_localmp-client-wmi-class.md
@@ -376,7 +371,7 @@
           href: core/clients/client-classes/ccm_policy_rule-client-wmi-class.md
         - name: CCM_PolicyAgent_Configuration 客户端 WMI 类
           href: core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md
-    - name: 符合性设置 (DCM) 客户端接口
+    - name: 符合性设置客户端接口
       href: core/clients/client-classes/compliance-settings--dcm--client-interfaces.md
       items:
         - name: ICIINFO 接口
@@ -472,7 +467,7 @@
           href: core/clients/client-classes/sms_windows8application-client-wmi-class.md
         - name: SMS_Windows8ApplicationUserInfo 客户端 WMI 类
           href: core/clients/client-classes/sms_windows8applicationuserinfo-client-wmi-class.md
-    - name: 操作系统部署客户端 COM 自动化类
+    - name: OS 部署客户端 COM 自动化类
       href: core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md
       items:
         - name: ProgressUI 客户端 COM 自动化类
@@ -516,11 +511,6 @@
               href: core/clients/client-classes/itsenvclass--getvariables-method.md
             - name: ITSEnvClass Value 属性
               href: core/clients/client-classes/itsenvclass--value-property.md
-    - name: 带外管理客户端 WMI 类
-      href: core/clients/client-classes/out-of-band-management-client-wmi-classes.md
-      items:
-        - name: SMS_AMTObject 客户端 WMI 类
-          href: core/clients/client-classes/sms_amtobject-client-wmi-class.md
     - name: 计划客户端 WMI 类
       href: core/clients/client-classes/scheduling-client-wmi-classes.md
       items:
@@ -529,13 +519,12 @@
         - name: CCM_Scheduler_ScheduledMessage 客户端 WMI 类
           href: core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md
 - name: 客户端配置服务器 WMI 类
-  href: core/clients/config/client-configuration-server-wmi-classes.md
   items:
     - name: SMS_AdvancedAntimalwareSettings 服务器 WMI 类
       href: core/clients/config/sms_advancedantimalwaresettings-server-wmi-class.md
     - name: SMS_AntimalwareAdvancedSettingsConfig 服务器 WMI 类
       href: core/clients/config/sms_antimalwareadvancedsettingsconfig-server-wmi-class.md
-    - name: SMS_AntimalwareConfig Server WMI 类
+    - name: SMS_AntimalwareConfig 服务器 WMI 类
       href: core/clients/config/sms_antimalwareconfig-server-wmi-class.md
     - name: SMS_AntimalwareExcludedSettingsConfig 服务器 WMI 类
       href: core/clients/config/sms_antimalwareexcludedsettingsconfig-server-wmi-class.md
@@ -572,7 +561,7 @@
     - name: SMS_ClientSettings 服务器 WMI 类
       href: core/clients/config/sms_clientsettings-server-wmi-class.md
       items:
-        - name: 类 SMS_ClientSettings 的 CheckPortalUrl 方法
+        - name: CheckPortalUrl 方法
           href: core/clients/config/checkportalurl-method-for-class-sms_clientsettings.md
     - name: SMS_ClientSettingsAssignment 服务器 WMI 类
       href: core/clients/config/sms_clientsettingsassignment-server-wmi-class.md
@@ -612,8 +601,7 @@
       href: core/clients/config/sms_statesystemconfig-server-wmi-class.md
     - name: SMS_TargetingAgentConfig 服务器 WMI 类
       href: core/clients/config/sms_targetingagentconfig-server-wmi-class.md
-- name: Client Deployment 服务器 WMI 类
-  href: core/clients/deploy/client-deployment-server-wmi-classes.md
+- name: 客户端部署服务器 WMI 类
   items:
     - name: SMS_ClientBaseline 服务器 WMI 类
       href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
@@ -622,7 +610,7 @@
     - name: SMS_ClientBaselineStatus 服务器 WMI 类
       href: core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md
       items:
-        - name: 类 SMS_ClientBaselineStatus 中的 GetClientBaselineStatusSummary 方法
+        - name: GetClientBaselineStatusSummary 方法
           href: core/clients/deploy/getclientbaselinestatussummary-method-in-class-sms_clientbaselinestatus.md
     - name: SMS_ClientDataSourcesContent 服务器 WMI 类
       href: core/clients/deploy/sms_clientdatasourcescontent-server-wmi-class.md
@@ -641,47 +629,46 @@
     - name: SMS_ClientPfxCertificate 服务器 WMI 类
       href: core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md
       items:
-        - name: 类 SMS_ClientPfxCertificate 中的 ImportForUser 方法
+        - name: ImportForUser 方法
           href: core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md
-        - name: 类 SMS_ClientPfxCertificate 中的 DeleteForUser 方法
+        - name: DeleteForUser 方法
           href: core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md
 - name: 客户端 SDK WMI 类
-  href: core/clients/sdk/client-sdk-wmi-classes.md
   items:
     - name: CCM_AppDeploymentType 客户端 WMI 类
       href: core/clients/sdk/ccm_appdeploymenttype-client-wmi-class.md
       items:
-        - name: 类 CCM_AppDeploymentType 中的 GetDeploymentTypeForUser 方法
+        - name: GetDeploymentTypeForUser 方法
           href: core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md
-        - name: 类 CCM_AppDeploymentType 中的 GetProperty 方法
+        - name: GetProperty 方法
           href: core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md
-        - name: 类 CCM_AppDeploymentType 中的 GetTargetedUsers 方法
+        - name: GetTargetedUsers 方法
           href: core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md
     - name: CCM_Application 客户端 WMI 类
       href: core/clients/sdk/ccm_application-client-wmi-class.md
       items:
-        - name: 类 CCM_Application 中的 Cancel 方法
+        - name: Cancel 方法
           href: core/clients/sdk/cancel-method-in-class-ccm_application.md
-        - name: 类 CCM_Application 中的 DownloadContents 方法
+        - name: DownloadContents 方法
           href: core/clients/sdk/downloadcontents-method-in-class-ccm_application.md
-        - name: 类 CCM_Application 中的 GetPendingComponentList 方法
+        - name: GetPendingComponentList 方法
           href: core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md
-        - name: 类 CCM_Application 中的 GetProperty 方法
+        - name: GetProperty 方法
           href: core/clients/sdk/getproperty-method-in-class-ccm_application.md
-        - name: 类 CCM_Application 中的 Install 方法
+        - name: Install 方法
           href: core/clients/sdk/install-method-in-class-ccm_application.md
-        - name: 类 CCM_Application 中的 Uninstall 方法
+        - name: Uninstall 方法
           href: core/clients/sdk/uninstall-method-in-class-ccm_application.md
     - name: CCM_ApplicationActions 客户端 WMI 类
       href: core/clients/sdk/ccm_applicationactions-client-wmi-class.md
     - name: CCM_ApplicationPolicy 客户端 WMI 类
       href: core/clients/sdk/ccm_applicationpolicy-client-wmi-class.md
       items:
-        - name: 类 CCM_ApplicationPolicy 中的 EvaluateAllPolicies 方法
+        - name: EvaluateAllPolicies 方法
           href: core/clients/sdk/evaluateallpolicies-method-in-class-ccm_applicationpolicy.md
-        - name: 类 CCM_ApplicationPolicy 中的 EvaluateAppPolicy 方法
+        - name: EvaluateAppPolicy 方法
           href: core/clients/sdk/evaluateapppolicy-method-in-class-ccm_applicationpolicy.md
-        - name: 类 CCM_ApplicationPolicy 中的 GetEvaluationState 方法
+        - name: GetEvaluationState 方法
           href: core/clients/sdk/getevaluationstate-method-in-class-ccm_applicationpolicy.md
     - name: CCM_CIEvaluationJob 客户端 WMI 类
       href: core/clients/sdk/ccm_cievaluationjob-client-wmi-class.md
@@ -690,37 +677,37 @@
     - name: CCM_ClientEvents 客户端 WMI 类
       href: core/clients/sdk/ccm_clientevents-client-wmi-class.md
       items:
-        - name: 类 CCM_ClientEvents 中的 StoreEvent 方法
+        - name: StoreEvent 方法
           href: core/clients/sdk/storeevent-method-in-class-ccm_clientevents.md
     - name: CCM_ClientUtilities 客户端 WMI 类
       href: core/clients/sdk/ccm_clientutilities-client-wmi-class.md
       items:
-        - name: 类 CCM_ClientUtilities 中的 DetermineIfRebootPending 方法
+        - name: DetermineIfRebootPending 方法
           href: core/clients/sdk/determineifrebootpending-method-in-class-ccm_clientutilities.md
-        - name: 类 CCM_ClientUtilities 中的 GetMachinePolicy 方法
+        - name: GetMachinePolicy 方法
           href: core/clients/sdk/getmachinepolicy-method-in-class-ccm_clientutilities.md
-        - name: 类 CCM_ClientUtilities 中的 GetNetworkCost 方法
+        - name: GetNetworkCost 方法
           href: core/clients/sdk/getnetworkcost-method-in-class-ccm_clientutilities.md
-        - name: 类 CCM_ClientUtilities 中的 GetUserCapability 方法
+        - name: GetUserCapability 方法
           href: core/clients/sdk/getusercapability-method-in-class-ccm_clientutilities.md
-        - name: 类 CCM_ClientUtilities 中的 GetUserPolicy 方法
+        - name: GetUserPolicy 方法
           href: core/clients/sdk/getuserpolicy-method-in-class-ccm_clientutilities.md
-        - name: 类 CCM_ClientUtilities 中的 RestartComputer 方法
+        - name: RestartComputer 方法
           href: core/clients/sdk/restartcomputer-method-in-class-ccm_clientutilities.md
     - name: CCM_ClientUXSettings 客户端 WMI 类
       href: core/clients/sdk/ccm_clientuxsettings-client-wmi-class.md
       items:
-        - name: 类 CCM_ClientUXSettings 中的 GetAutoInstallRequiredSoftwaretoNonBusinessHours 方法
+        - name: GetAutoInstallRequiredSoftwaretoNonBusinessHours 方法
           href: core/clients/sdk/getautoinstallrequiredsoftwaretononbusinesshours-method.md
-        - name: 类 CCM_ClientUXSettings 中的 GetBusinessHours 方法
+        - name: GetBusinessHours 方法
           href: core/clients/sdk/getbusinesshours-method-in-class-ccm_clientuxsettings.md
-        - name: 类 CCM_ClientUXSettings 中的 GetSuppressComputerActivityInPresentationMode 方法
+        - name: GetSuppressComputerActivityInPresentationMode 方法
           href: core/clients/sdk/getsuppresscomputeractivityinpresentationmode-method.md
-        - name: 类 CCM_ClientUXSettings 中的 SetAutoInstallRequiredSoftwaretoNonBusinessHours 方法
+        - name: SetAutoInstallRequiredSoftwaretoNonBusinessHours 方法
           href: core/clients/sdk/setautoinstallrequiredsoftwaretononbusinesshours-method.md
-        - name: 类 CCM_ClientUXSettings 中的 SetBusinessHours 方法
+        - name: SetBusinessHours 方法
           href: core/clients/sdk/setbusinesshours-method-in-class-ccm_clientuxsettings.md
-        - name: 类 CCM_ClientUXSettings 中的 SetSuppressComputerActivityInPresentationMode 方法
+        - name: SetSuppressComputerActivityInPresentationMode 方法
           href: core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md
     - name: CCM_EvaluationState 客户端 WMI 类
       href: core/clients/sdk/ccm_evaluationstate-client-wmi-class.md
@@ -735,87 +722,86 @@
     - name: CCM_PowerManagementSettings 客户端 WMI 类
       href: core/clients/sdk/ccm_powermanagementsettings-client-wmi-class.md
       items:
-        - name: 类 CCM_PowerManagementSettings 中的 SetPowerManagementSettings 方法
+        - name: SetPowerManagementSettings 方法
           href: core/clients/sdk/setpowermanagementsettings-method-in-class-ccm_powermanagementsettings.md
     - name: CCM_Program 客户端 WMI 类
       href: core/clients/sdk/ccm_program-client-wmi-class.md
     - name: CCM_ProgramsManager 客户端 WMI 类
       href: core/clients/sdk/ccm_programsmanager-client-wmi-class.md
       items:
-        - name: 类 CCM_ProgramsManager 中的 CancelDownload 方法
+        - name: CancelDownload 方法
           href: core/clients/sdk/canceldownload-method-in-class-ccm_programsmanager.md
-        - name: 类 CCM_ProgramsManager 中的 ExecuteProgram 方法
+        - name: ExecuteProgram 方法
           href: core/clients/sdk/executeprogram-method-in-class-ccm_programsmanager.md
-        - name: 类 CCM_ProgramsManager 中的 ExecutePrograms 方法
+        - name: ExecutePrograms 方法
           href: core/clients/sdk/executeprograms-method-in-class-ccm_programsmanager.md
-        - name: 类 CCM_ProgramsManager 中的 PostponeProgramsToNonBusinessHours 方法
+        - name: PostponeProgramsToNonBusinessHours 方法
           href: core/clients/sdk/postponeprogramstononbusinesshours-method-in-class-ccm_programsmanager.md
     - name: CCM_RemoteControlManager 客户端 WMI 类
       href: core/clients/sdk/ccm_remotecontrolmanager-client-wmi-class.md
       items:
-        - name: 类 CCM_RemoteControlManager 中的 GetRemCtrlSettings 方法
+        - name: GetRemCtrlSettings 方法
           href: core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
-        - name: 类 CCM_RemoteControlManager 中的 SetRemCtrlSettings 方法
+        - name: SetRemCtrlSettings 方法
           href: core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
     - name: CCM_RequestedAppPolicy 客户端 WMI 类
       href: core/clients/sdk/ccm_requested-apppolicy-client-wmi-class.md
       items:
-        - name: 类 CCM_RequestedAppPolicy 中的 QueueRequestedAppPolicy 方法
+        - name: QueueRequestedAppPolicy 方法
           href: core/clients/sdk/queuerequestedapppolicy-method-in-class-ccm_requestedapppolicy.md
     - name: CCM_RequestedAppPolicyActivation 客户端 WMI 类
       href: core/clients/sdk/ccm_requestedapppolicyactivation-client-wmi-class.md
       items:
-        - name: 类 CCM_RequestedAppPolicyActivation 中的 QueueAppPolicyActivationAction 方法
+        - name: QueueAppPolicyActivationAction 方法
           href: core/clients/sdk/queueapppolicyactivationaction-method-in-class-ccm_requestedapppolicyactivation.md
     - name: CCM_ServiceWindow 客户端 WMI 类
       href: core/clients/sdk/ccm_servicewindow-client-wmi-class.md
     - name: CCM_ServiceWindowManager 客户端 WMI 类
       href: core/clients/sdk/ccm_servicewindowmanager-client-wmi-class.md
       items:
-        - name: 类 CCM_ServiceWindowManager 中的 GetCurrentWindowAvailableTime 方法
+        - name: GetCurrentWindowAvailableTime 方法
           href: core/clients/sdk/getcurrentwindowavailabletime-method-in-class-ccm_servicewindowmanager.md
-        - name: 类 CCM_ServiceWindowManager 中的 GetNextServiceWindowID 方法
+        - name: GetNextServiceWindowID 方法
           href: core/clients/sdk/getnextservicewindowid-method-in-class-ccm_servicewindowmanager.md
-        - name: 类 CCM_ServiceWindowManager 中的 IsFutureWindowAvailable 方法
+        - name: IsFutureWindowAvailable 方法
           href: core/clients/sdk/isfuturewindowavailable-method-in-class-ccm_servicewindowmanager.md
-        - name: 类 CCM_ServiceWindowManager 中的 IsWindowAvailableNow 方法
+        - name: IsWindowAvailableNow 方法
           href: core/clients/sdk/iswindowavailablenow-method-in-class-ccm_servicewindowmanager.md
     - name: CCM_SoftwareBase 客户端 WMI 类
       href: core/clients/sdk/ccm_softwarebase-client-wmi-class.md
     - name: CCM_SoftwareCatalogUtilities 客户端 WMI 类
       href: core/clients/sdk/ccm_softwarecatalogutilities-client-wmi-class.md
       items:
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 ApplyPolicyEx 方法
+        - name: ApplyPolicyEx 方法
           href: core/clients/sdk/applypolicyex-method-in-class-ccm_softwarecatalogutilities.md
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 GetClientVersion 方法
+        - name: GetClientVersion 方法
           href: core/clients/sdk/getclientversion-method-in-class-ccm_softwarecatalogutilities.md
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 GetDeviceId 方法
+        - name: GetDeviceId 方法
           href: core/clients/sdk/getdeviceid-method-in-class-ccm_softwarecatalogutilities.md
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 GetPolicyState 方法
+        - name: GetPolicyState 方法
           href: core/clients/sdk/getpolicystate-method-in-class-ccm_softwarecatalogutilities.md
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 GetPortalUrlValue 方法
+        - name: GetPortalUrlValue 方法
           href: core/clients/sdk/getportalurlvalue-method-in-class-ccm_softwarecatalogutilities.md
-        - name: 类 CCM_SoftwareCatalogUtilities 中的 VerifySignature 方法
+        - name: VerifySignature 方法
           href: core/clients/sdk/verifysignature-method-in-class-ccm_softwarecatalogutilities.md
     - name: CCM_SoftwareUpdate 客户端 WMI 类
       href: core/clients/sdk/ccm_softwareupdate-client-wmi-class.md
     - name: CCM_SoftwareUpdatesManager 客户端 WMI 类
       href: core/clients/sdk/ccm_softwareupdatesmanager-client-wmi-class.md
       items:
-        - name: 类 CCM_SoftwareUpdatesManager 中的 CancelDownload 方法
+        - name: CancelDownload 方法
           href: core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md
-        - name: 类 CCM_SoftwareUpdatesManager 中的 GetAllUpdatesUserExperience 方法
+        - name: GetAllUpdatesUserExperience 方法
           href: core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
-        - name: 类 CCM_SoftwareUpdatesManager 中的 InstallUpdates 方法
+        - name: InstallUpdates 方法
           href: core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md
-        - name: 类 CCM_SoftwareUpdatesManager 中的 PostponeUpdatesToNonBusinessHours 方法
+        - name: PostponeUpdatesToNonBusinessHours 方法
           href: core/clients/sdk/postponeupdatestononbusinesshours-method-in-class-ccm_softwareupdatesmanager.md
-        - name: 类 CCM_SoftwareUpdatesManager 中的 SetAllUpdatesUserExperience 方法
+        - name: SetAllUpdatesUserExperience 方法
           href: core/clients/sdk/setallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
     - name: CCM_UserLogonEvents 客户端 WMI 类
       href: core/clients/sdk/ccm_userlogonevents-client-wmi-class.md
 - name: 客户端状态服务器 WMI 类
-  href: core/clients/status/client-status-server-wmi-classes.md
   items:
     - name: SMS_CH_CheckSummary 服务器 WMI 类
       href: core/clients/status/sms_ch_checksummary-server-wmi-class.md
@@ -830,71 +816,66 @@
     - name: SMS_CN_ClientStatus 服务器 WMI 类
       href: core/clients/status/sms_cn_clientstatus-server-wmi-class.md
       items:
-        - name: 类 SMS_CN_ClientStatus 中的 GetOnlineCount 方法
+        - name: GetOnlineCount 方法
           href: core/clients/status/getonlinecount-method-in-class-sms_cn_clientstatus.md
 - name: 集合服务器 WMI 类
-  href: core/clients/collections/collections-server-wmi-classes.md
   items:
     - name: SMS_CM_RES_COLL_CollectionID 服务器 WMI 类
       href: core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md
     - name: SMS_Collection 服务器 WMI 类
       href: core/clients/collections/sms_collection-server-wmi-class.md
       items:
-        - name: 类 SMS_Collection 中的 AddMembershipRule 方法
+        - name: AddMembershipRule 方法
           href: core/clients/collections/addmembershiprule-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 AddMembershipRules 方法
+        - name: AddMembershipRules 方法
           href: core/clients/collections/addmembershiprules-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 AMTOperateForCollection 方法
-          href: core/clients/collections/amtoperateforcollection-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 AMTOperateForMachines 方法
-          href: core/clients/collections/amtoperateformachines-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ApproveClients 方法
+        - name: ApproveClients 方法
           href: core/clients/collections/approveclients-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 BlockClients 方法
+        - name: BlockClients 方法
           href: core/clients/collections/blockclients-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ChangeOwnership 方法
+        - name: ChangeOwnership 方法
           href: core/clients/collections/changeownership-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ClearDeploymentLocksForCollection 方法
+        - name: ClearDeploymentLocksForCollection 方法
           href: core/clients/collections/cleardeploymentlocksforcollection-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ClearDeviceCategory 方法
+        - name: ClearDeviceCategory 方法
           href: core/clients/collections/cleardevicecategory-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ClearLastNBSAdvForCollection 方法
+        - name: ClearLastNBSAdvForCollection 方法
           href: core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ClearLastNBSAdvForMachines 方法
+        - name: ClearLastNBSAdvForMachines 方法
           href: core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ClientEditions 方法
+        - name: ClientEditions 方法
           href: core/clients/collections/clienteditions-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 CreateCCR 方法
+        - name: CreateCCR 方法
           href: core/clients/collections/createccr-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 CreateCCRs 方法
+        - name: CreateCCRs 方法
           href: core/clients/collections/createccrs-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 DeleteAllMembers 方法
+        - name: DeleteAllMembers 方法
           href: core/clients/collections/deleteallmembers-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 DeleteMembershipRule 方法
+        - name: DeleteMembershipRule 方法
           href: core/clients/collections/deletemembershiprule-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 DeleteMembershipRules 方法
+        - name: DeleteMembershipRules 方法
           href: core/clients/collections/deletemembershiprules-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 FindResourceSite 方法
+        - name: FindResourceSite 方法
           href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 FindMachineSite 方法
+        - name: FindMachineSite 方法
           href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 GetNumResults 方法
+        - name: GetNumResults 方法
           href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
-        - name: 类 SMS_Collecton 中的 GenerateCCRByName 方法
+        - name: GenerateCCRByName 方法
           href: core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md
-        - name: 类 SMS_Collection 中的 GetTotalNumResults 方法
+        - name: GetTotalNumResults 方法
           href: core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 ReassignClientsToSite 方法
+        - name: ReassignClientsToSite 方法
           href: core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 RequestRefresh 方法
+        - name: RequestRefresh 方法
           href: core/clients/collections/requestrefresh-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 SetDeviceCategory 方法
+        - name: SetDeviceCategory 方法
           href: core/clients/collections/setdevicecategory-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 SetMemberOrder 方法
+        - name: SetMemberOrder 方法
           href: core/clients/collections/setmemberorder-method-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 UpdateVisibilityInEPDashBoard
+        - name: UpdateVisibilityInEPDashBoard
           href: core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md
-        - name: 类 SMS_Collection 中的 VerifyNoCircularDependencies 方法
+        - name: VerifyNoCircularDependencies 方法
           href: core/clients/collections/verifynocirculardependencies-method-in-class-sms_collection.md
     - name: SMS_CollectionBucket 服务器 WMI 类
       href: core/clients/collections/sms_collectionbucket-server-wmi-class.md
@@ -917,7 +898,7 @@
     - name: SMS_CollectionRuleQuery 服务器 WMI 类
       href: core/clients/collections/sms_collectionrulequery-server-wmi-class.md
       items:
-        - name: 类 SMS_CollectionRuleQuery 中的 ValidateQuery 方法
+        - name: ValidateQuery 方法
           href: core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md
     - name: SMS_CollectionSettings 服务器 WMI 类
       href: core/clients/collections/sms_collectionsettings-server-wmi-class.md
@@ -933,9 +914,10 @@
       href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
     - name: SMS_FullCollectionMembership 服务器 WMI 类
       href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
-- name: 符合性设置 (DCM) 服务器 WMI 类
-  href: compliance/compliance-settings-dcm-server-wmi-classes.md
+- name: 符合性设置服务器 WMI 类
   items:
+    - name: 关于符合性设置服务器 WMI 类
+      href: compliance/compliance-settings-dcm-server-wmi-classes.md
     - name: SMS_AdvancedThreatProtectionSettings 服务器 WMI 类
       href: compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md
     - name: SMS_BaselineAssignment 服务器 WMI 类
@@ -973,13 +955,13 @@
     - name: SMS_ConfigurationItem 服务器 WMI 类
       href: compliance/sms_configurationitem-server-wmi-class.md
       items:
-        - name: 类 SMS_ConfigurationItem 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: compliance/accepteula-method-in-class-sms_configurationitem.md
-        - name: 类 SMS_ConfigurationItem 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: compliance/geteula-method-in-class-sms_configurationitem.md
-        - name: 类 SMS_ConfigurationItem 中的 GetSDMDefinition 方法
+        - name: GetSDMDefinition 方法
           href: compliance/getsdmdefinition-method-in-class-sms_configurationitem.md
-        - name: 类 SMS_ConfigurationItem 中的 SetEnforcement 方法
+        - name: SetEnforcement 方法
           href: compliance/setenforcement-method-in-class-sms_configurationitem.md
     - name: SMS_ConfigurationItemBaseClass 服务器 WMI 类
       href: compliance/sms_configurationitembaseclass-server-wmi-class.md
@@ -996,18 +978,18 @@
     - name: SMS_ConfigurationPolicy 服务器 WMI 类
       href: compliance/sms_configurationpolicy-server-wmi-class.md
       items:
-        - name: 类 SMS_ConfigurationPolicy 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: compliance/accepteula-method-in-class-sms_configurationpolicy.md
-        - name: 类 SMS_ConfigurationPolicy 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: compliance/geteula-method-in-class-sms_configurationpolicy.md
     - name: SMS_ConfigurationPolicyAssignment 服务器 WMI 类
       href: compliance/sms_configurationpolicyassignment-server-wmi-class.md
     - name: SMS_ConfigurationPolicyBase 服务器 WMI 类
       href: compliance/sms_configurationpolicybase-server-wmi-class.md
       items:
-        - name: 类 SMS_ConfigurationPolicyBase 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: compliance/accepteula-method-in-class-sms_configurationpolicybase.md
-        - name: 类 SMS_ConfigurationPolicyBase 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: compliance/geteula-method-in-class-sms_configurationpolicybase.md
     - name: SMS_DCMDeploymentCompliantAssetDetails 服务器 WMI 类
       href: compliance/sms_dcmdeploymentcompliantassetdetails-server-wmi-class.md
@@ -1040,42 +1022,38 @@
     - name: SMS_SettingsDefinitionBase 服务器 WMI 类
       href: compliance/sms_settingsdefinitionbase-server-wmi-class.md
       items:
-        - name: 类 SMS_SettingsDefinitionBase 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: compliance/accepteula-method-in-class-sms_settingsdefinitionbase.md
-        - name: 类 SMS_SettingsDefinitionBase 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: compliance/geteula-method-in-class-sms_settingsdefinitionbase.md
     - name: SMS_TermsAndConditionsSettings 服务器 WMI 类
       href: compliance/sms_termsandconditionssettings-server-wmi-class.md
     - name: SMS_UserStateManagementSettings 服务器 WMI 类
       href: compliance/sms_userstatemanagementsettings-server-wmi-class.md
       items:
-        - name: 类 SMS_UserStateManagementSettings 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: compliance/accepteula-method-in-class-sms_userstatemanagementsettings.md
-        - name: 类 SMS_UserStateManagementSettings 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: compliance/geteula-method-in-class-sms_userstatemanagementsettings.md
     - name: SMS_WSfBConfigurationData 服务器 WMI 类
       href: compliance/sms_wsfbconfigurationdata-server-wmi-class.md
 - name: 控制台扩展服务器 WMI 类
-  href: core/servers/console/console-extension-server-wmi-classes.md
   items:
-    - name: Configuration Manager 控制台命令行选项
-      href: core/servers/console/console-command-line-options.md
     - name: Configuration Manager 控制台文件夹服务器 WMI 类
-      href: core/servers/console/console-folder-server-wmi-classes.md
       items:
-        - name: SMS_InstanceChangeNotification Server WMI 类
+        - name: SMS_InstanceChangeNotification 服务器 WMI 类
           href: core/servers/console/sms_instancechangenotification-server-wmi-class.md
         - name: SMS_ObjectContainerItem 服务器 WMI 类
           href: core/servers/console/sms_objectcontaineritem-server-wmi-class.md
           items:
-            - name: 类 SMS_ObjectContainerItem 中的 MoveMembers 方法
+            - name: MoveMembers 方法
               href: core/servers/console/movemembers-method-in-class-sms_objectcontaineritem.md
-            - name: 类 SMS_ObjectContainerItem 中的 MoveMembersEx 方法
+            - name: MoveMembersEx 方法
               href: core/servers/console/movemembersex-method-in-class-sms_objectcontaineritem.md
         - name: SMS_ObjectContainerNode 服务器 WMI 类
           href: core/servers/console/sms_objectcontainernode-server-wmi-class.md
           items:
-            - name: 类 SMS_ObjectContainerNode 中的 MoveFolders 方法
+            - name: MoveFolders 方法
               href: core/servers/console/movefolders-method-in-class-sms_objectcontainernode.md
         - name: SMS_ObjectContentExtraInfo 服务器 WMI 类
           href: core/servers/console/sms_objectcontentextrainfo-server-wmi-class.md
@@ -1086,33 +1064,32 @@
         - name: SMS_SearchFolder 服务器 WMI 类
           href: core/servers/console/sms_searchfolder-server-wmi-class.md
 - name: 内容服务器 WMI 类
-  href: core/servers/configure/content-server-wmi-classes.md
   items:
     - name: SMS_Content 服务器 WMI 类
       href: core/servers/configure/sms_content-server-wmi-class.md
       items:
-        - name: 类 SMS_Content 中的 IsOfficeContent 方法
+        - name: IsOfficeContent 方法
           href: core/servers/configure/isofficecontent-method-in-class-sms_content.md
     - name: SMS_ContentPackage 服务器 WMI 类
       href: core/servers/configure/sms_contentpackage-server-wmi-class.md
       items:
-        - name: 类 SMS_ContentPackage 中的 AddChangeNotification 方法
+        - name: AddChangeNotification 方法
           href: core/servers/configure/addchangenotification-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 AddContent 方法
+        - name: AddContent 方法
           href: core/servers/configure/addcontent-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 AddDistributionPointGroup 方法
+        - name: AddDistributionPointGroup 方法
           href: core/servers/configure/adddistributionpointgroup-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 AddDistributionPoints 方法
+        - name: AddDistributionPoints 方法
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 Commit 方法
+        - name: Commit 方法
           href: core/servers/configure/commit-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 RefreshPkgSource 方法
+        - name: RefreshPkgSource 方法
           href: core/servers/configure/refreshpkgsource-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 RemoveContent 方法
+        - name: RemoveContent 方法
           href: core/servers/configure/removecontent-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 SetSourceSite 方法
+        - name: SetSourceSite 方法
           href: core/servers/configure/setsourcesite-method-in-class-sms_contentpackage.md
-        - name: 类 SMS_ContentPackage 中的 Unlock 方法
+        - name: Unlock 方法
           href: core/servers/configure/unlock-method-in-class-sms_contentpackage.md
     - name: SMS_DPContentInfo 服务器 WMI 类
       href: core/servers/configure/sms_dpcontentinfo-server-wmi-class.md
@@ -1138,21 +1115,6 @@
       href: core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md
 - name: 弃用的函数
   href: misc/deprecated-functions.md
-  items:
-    - name: SmsCreateAccount
-      href: misc/smscreateaccount.md
-    - name: SmsGrantActAsOSRight
-      href: misc/smsgrantactasosright.md
-    - name: SmsGrantAdminRight
-      href: misc/smsgrantadminright.md
-    - name: SmsGrantDomainAdminRight
-      href: misc/smsgrantdomainadminright.md
-    - name: SmsGrantServiceLogonRight
-      href: misc/smsgrantservicelogonright.md
-    - name: SmsLsaAccount
-      href: misc/smslsaaccount.md
-    - name: SmsLsaGetTrustedDomains
-      href: misc/smslsagettrusteddomains.md
 - name: 设备管理服务器 WMI 类
   href: mdm/device-management-server-wmi-classes.md
   items:
@@ -1161,47 +1123,45 @@
     - name: SMS_DeviceMethods 服务器 WMI 类
       href: mdm/sms_devicemethods-server-wmi-class.md
       items:
-        - name: 类 SMS_DeviceMethods 中的 AllowAccess 方法
+        - name: AllowAccess 方法
           href: mdm/allowaccess-method-in-class-sms_devicemethods.md
-        - name: 类 SMS_DeviceMethods 中的 BlockAccess 方法
+        - name: BlockAccess 方法
           href: mdm/blockaccess-method-in-class-sms_devicemethods.md
-        - name: 类 SMS_DeviceMethods 中的 CancelRetire 方法
+        - name: CancelRetire 方法
           href: mdm/cancelretire-method-in-class-sms_devicemethods.md
-        - name: 类 SMS_DeviceMethods 中的 CancelWipe 方法
+        - name: CancelWipe 方法
           href: mdm/cancelwipe-method-in-class-sms_devicemethods.md
-        - name: 类 SMS_DeviceMethods 中的 RequestRetire 方法
+        - name: RequestRetire 方法
           href: mdm/requestretire-method-in-class-sms_devicemethods.md
-        - name: 类 SMS_DeviceMethods 中的 RequestWipe 方法
+        - name: RequestWipe 方法
           href: mdm/requestwipe-method-in-class-sms_devicemethods.md
     - name: SMS_DeviceSettingItem 服务器 WMI 类
       href: mdm/sms_devicesettingitem-server-wmi-class.md
     - name: SMS_DeviceSettingPackage 服务器 WMI 类
       href: mdm/sms_devicesettingpackage-server-wmi-class.md
       items:
-        - name: 类 SMS_DeviceSettingPackage 中的 AddChangeNotification 方法
+        - name: AddChangeNotification 方法
           href: mdm/addchangenotification-method-in-class-sms_devicesettingpackage.md
-        - name: 类 SMS_DeviceSettingPackage 中的 AddDistributionPoints 方法
+        - name: AddDistributionPoints 方法
           href: mdm/adddistributionpoints-method-in-class-sms_devicesettingpackage.md
-        - name: 类 SMS_DeviceSettingPackage 中的 RefreshPkgSource 方法
+        - name: RefreshPkgSource 方法
           href: mdm/refreshpkgsource-method-in-class-sms_devicesettingpackage.md
-        - name: 类 SMS_DeviceSettingPackage 中的 SetSourceSite 方法
+        - name: SetSourceSite 方法
           href: mdm/setsourcesite-method-in-class-sms_devicesettingpackage.md
-        - name: 类 SMS_DeviceSettingPackage 中的 Unlock 方法
+        - name: Unlock 方法
           href: mdm/unlock-method-in-class-sms_devicesettingpackage.md
     - name: SMS_DeviceSettingPackageItem 服务器 WMI 类
       href: mdm/sms_devicesettingpackageitem-server-wmi-class.md
 - name: 发现类
-  href: core/servers/configure/discovery-classes.md
   items:
     - name: 发现服务器 WMI 类
-      href: core/servers/configure/discovery-server-wmi-classes.md
       items:
         - name: SMS_ADDomain 服务器 WMI 类
           href: core/servers/configure/sms_addomain-server-wmi-class.md
         - name: SMS_ADForest 服务器 WMI 类
           href: core/servers/configure/sms_adforest-server-wmi-class.md
           items:
-            - name: 类 SMS_ADForest 中的 DeleteDiscoveryData 方法
+            - name: DeleteDiscoveryData 方法
               href: core/servers/configure/deletediscoverydata-method-in-class-sms_adforest.md
         - name: SMS_ADForestDiscoveryStatus 服务器 WMI 类
           href: core/servers/configure/sms_adforestdiscoverystatus-server-wmi-class.md
@@ -1230,7 +1190,6 @@
             - name: DDRPropertyFlagsEnum 枚举
               href: core/servers/configure/ddrpropertyflagsenum-enumeration.md
 - name: Endpoint Protection 服务器 WMI 类
-  href: protect/endpoint-protection-server-wmi-classes.md
   items:
     - name: SMS_AmPolicySummary 服务器 WMI 类
       href: protect/sms_ampolicysummary-server-wmi-class.md
@@ -1241,21 +1200,21 @@
     - name: SMS_ClientOperation 服务器 WMI 类
       href: protect/sms_clientoperation-server-wmi-class.md
       items:
-        - name: 类 SMS_ClientOperation 中的 AllowThreat 方法
+        - name: AllowThreat 方法
           href: protect/allowthreat-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 CancelClientOperation 方法
+        - name: CancelClientOperation 方法
           href: protect/cancelclientoperation-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 DeleteClientOperation 方法
+        - name: DeleteClientOperation 方法
           href: protect/deleteclientoperation-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 ExcludeScanPaths 方法
+        - name: ExcludeScanPaths 方法
           href: protect/excludescanpaths-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 IsClientOperationAllowed 方法
+        - name: IsClientOperationAllowed 方法
           href: protect/isclientoperationallowed-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 IsClientOperationUpdateAllowed 方法
+        - name: IsClientOperationUpdateAllowed 方法
           href: protect/isclientoperationupdateallowed-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 InitiateClientOperation 方法
+        - name: InitiateClientOperation 方法
           href: protect/initiateclientoperation-method-in-class-sms_clientoperation.md
-        - name: 类 SMS_ClientOperation 中的 RestoreQuarantinedItem 方法
+        - name: RestoreQuarantinedItem 方法
           href: protect/restorequarantineditem-method-in-class-sms_clientoperation.md
     - name: SMS_ClientOperationStatus 服务器 WMI 类
       href: protect/sms_clientoperationstatus-server-wmi-class.md
@@ -1280,17 +1239,15 @@
     - name: SMS_TopThreatSummary 服务器 WMI 类
       href: protect/sms_topthreatsummary-server-wmi-class.md
 - name: 混合服务器 WMI 类
-  href: mdm/hybrid-server-wmi-classes.md
   items:
     - name: 移动设备管理服务器 WMI 类
-      href: mdm/mobile-device-management-server-wmi-classes.md
       items:
         - name: MDM_GenericAppConfiguration 服务器 WMI 类
           href: mdm/mdm_genericappconfiguration-server-wmi-class.md
         - name: SMS_BulkEnrollmentProfiles 服务器 WMI 类
           href: mdm/sms_bulkenrollmentprofiles-server-wmi-class.md
           items:
-            - name: 类 SMS_BulkEnrollmentProfiles 中的 GenerateProvisioningXML 方法
+            - name: GenerateProvisioningXML 方法
               href: mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md
         - name: SMS_IntuneAccountInfo 服务器 WMI 类
           href: mdm/sms_intuneaccountinfo-server-wmi-class.md
@@ -1299,14 +1256,14 @@
         - name: SMS_MDMAppleVppToken 服务器 WMI 类
           href: mdm/sms_mdmapplevpptoken-server-wmi-class.md
           items:
-            - name: 类 SMS_MDMAppleVppToken 中的 SyncToken 方法
+            - name: SyncToken 方法
               href: mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md
-            - name: 类 SMS_MDMAppleVppToken 中的 UploadToken 方法
+            - name: UploadToken 方法
               href: mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md
         - name: SMS_MDMBulkEnrollmentPackages 服务器 WMI 类
           href: mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md
           items:
-            - name: 类 SMS_MDMBulkEnrollmentPackages 中的 ImportForProfile 方法
+            - name: ImportForProfile 方法
               href: mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md
         - name: SMS_MDMBulkEnrollmentProfiles 服务器 WMI 类
           href: mdm/sms_mdmbulkenrollmentprofiles-server-wmi-class.md
@@ -1315,26 +1272,25 @@
         - name: SMS_MDMCorpOwnedDevices 服务器 WMI 类
           href: mdm/sms_mdmcorpowneddevices-server-wmi-class.md
           items:
-            - name: 类 SMS_MDMCorpOwnedDevices 中的 UpdateProfileIDForDevices 方法
+            - name: UpdateProfileIDForDevices 方法
               href: mdm/updateprofileidfordevices-method-in-class-sms_mdmcorpowneddevices.md
         - name: SMS_MDMDeviceCategory 服务器 WMI 类
           href: mdm/sms_mdmdevicecategory-server-wmi-class.md
         - name: SMS_MDMDeviceEnrollmentManagers 服务器 WMI 类
           href: mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md
           items:
-            - name: 类 SMS_MDMDeviceEnrollmentManagers 中的 InsertMultipleResourceIds 方法
+            - name: InsertMultipleResourceIds 方法
               href: mdm/insertmultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
-            - name: 类 SMS_MDMDeviceEnrollmentManagers 中的 RemoveMultipleResourceIds 方法
+            - name: RemoveMultipleResourceIds 方法
               href: mdm/removemultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
     - name: SMS_WinRTSideLoadingKey 服务器 WMI 类
       href: mdm/sms_winrtsideloadingkey-server-wmi-class.md
 - name: 迁移服务器 WMI 类
-  href: core/migration/migration-server-wmi-classes.md
   items:
     - name: SMS_MigrationCollectionInfo 服务器 WMI 类
       href: core/migration/sms_migrationcollectioninfo-server-wmi-class.md
       items:
-        - name: 类 SMS_MigrationCollectionInfo 中的 GetClientsCountByCollections 方法
+        - name: GetClientsCountByCollections 方法
           href: core/migration/getclientscountbycollections-method-in-class-sms_migrationcollectioninfo.md
     - name: SMS_MigrationDashboard 服务器 WMI 类
       href: core/migration/sms_migrationdashboard-server-wmi-class.md
@@ -1343,9 +1299,9 @@
     - name: SMS_MigrationEntity 服务器 WMI 类
       href: core/migration/sms_migrationentity-server-wmi-class.md
       items:
-        - name: 类 SMS_MigrationEntity 中的 ExcludeAndInclude 方法
+        - name: ExcludeAndInclude 方法
           href: core/migration/excludeandinclude-method-in-class-sms_migrationentity.md
-        - name: 类 SMS_MigrationEntity 中的 GetEntityReferences 方法
+        - name: GetEntityReferences 方法
           href: core/migration/getentityreferences-method-in-class-sms_migrationentity.md
     - name: SMS_MigrationEntityDependency 服务器 WMI 类
       href: core/migration/sms_migrationentitydependency-server-wmi-class.md
@@ -1354,175 +1310,34 @@
     - name: SMS_MigrationJob 服务器 WMI 类
       href: core/migration/sms_migrationjob-server-wmi-class.md
       items:
-        - name: 类 SMS_MigrationJob 中的 Start 方法
+        - name: Start 方法
           href: core/migration/start-method-in-class-sms_migrationjob.md
-        - name: 类 SMS_MigrationJob 中的 Stop 方法
+        - name: Stop 方法
           href: core/migration/stop-method-in-class-sms_migrationjob.md
     - name: SMS_MigrationJobEntityRelation 服务器 WMI 类
       href: core/migration/sms_migrationjobentityrelation-server-wmi-class.md
     - name: SMS_MigrationSiteMapping 服务器 WMI 类
       href: core/migration/sms_migrationsitemapping-server-wmi-class.md
       items:
-        - name: 类 SMS_MigrationSiteMapping 中的 ActivateHierarchy 方法
+        - name: ActivateHierarchy 方法
           href: core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md
-        - name: 类 SMS_MigrationSiteMapping 中的 CheckDecommissionState 方法
+        - name: CheckDecommissionState 方法
           href: core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md
-        - name: 类 SMS_MigrationSiteMapping 中的 CleanupHierarchyData 方法
+        - name: CleanupHierarchyData 方法
           href: core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md
-        - name: 类 SMS_MigrationSiteMapping 中的 Decommission 方法
+        - name: Decommission 方法
           href: core/migration/decommission-method-in-class-sms_migrationsitemapping.md
-        - name: 类 SMS_MigrationSiteMapping 中的 Resuscitate 方法
+        - name: Resuscitate 方法
           href: core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md
-        - name: 类 SMS_MigrationSiteMapping 中的 Sync 方法
+        - name: Sync 方法
           href: core/migration/sync-method-in-class-sms_migrationsitemapping.md
     - name: SMS_MigrationSourceSite 服务器 WMI 类
       href: core/migration/sms_migrationsourcesite-server-wmi-class.md
-- name: NAP 服务器 WMI 类
-  href: misc/nap-server-wmi-classes.md
-  items:
-    - name: SMS_NAPRestrictionErrorSummary 服务器 WMI 类
-      href: misc/sms_naprestrictionerrorsummary-server-wmi-class.md
-    - name: SMS_NAPRestrictionSummary 服务器 WMI 类
-      href: misc/sms_naprestrictionsummary-server-wmi-class.md
-    - name: SMS_NAPSystemInfo 服务器 WMI 类
-      href: misc/sms_napsysteminfo-server-wmi-class.md
 - name: 过时类
   href: misc/obsolete-classes.md
+- name: OS 部署类
   items:
-    - name: SMS_AdvertisementStatusRootSummarizer 服务器 WMI 类
-      href: misc/sms_advertisementstatusrootsummarizer-server-wmi-class.md
-    - name: SMS_AdvertisementStatusSummarizer 服务器 WMI 类
-      href: misc/sms_advertisementstatussummarizer-server-wmi-class.md
-    - name: SMS_AppStatePerClientDT 服务器 WMI 类
-      href: misc/sms_appstateperclientdt-server-wmi-class.md
-    - name: SMS_AppStatePerCollectionDT 服务器 WMI 类
-      href: misc/sms_appstatepercollectiondt-server-wmi-class.md
-    - name: SMS_AppUnknownStatePerClient 服务器 WMI 类
-      href: misc/sms_appunknownstateperclient-server-wmi-class.md
-    - name: SMS_AppUnknownStatePerCollection 服务器 WMI 类
-      href: misc/sms_appunknownstatepercollection-server-wmi-class.md
-    - name: SMS_DeviceHinvTranslation 服务器 WMI 类
-      href: misc/sms_devicehinvtranslation-server-wmi-class.md
-    - name: SMS_DPStatus 服务器 WMI 类
-      href: misc/sms_dpstatus-server-wmi-class.md
-    - name: SMS_DPStatusPerDP 服务器 WMI 类
-      href: misc/sms_dpstatusperdp-server-wmi-class.md
-    - name: SMS_DPStatusSummary 服务器 WMI 类
-      href: misc/sms_dpstatussummary-server-wmi-class.md
-      items:
-        - name: 类 SMS_DPStatusSummary 中的 UpdateSummaryData 方法
-          href: misc/updatesummarydata-method-in-class-sms_dpstatussummary.md
-    - name: SMS_LocalizedNameLookup 服务器 WMI 类
-      href: misc/sms_localizednamelookup-server-wmi-class.md
-    - name: SMS_ObjectToClassPermissions_a 服务器 WMI 类
-      href: misc/sms_objecttoclasspermissions_a-server-wmi-class.md
-    - name: SMS_ObjectToInstancePermissions_a 服务器 WMI 类
-      href: misc/sms_objecttoinstancepermissions_a-server-wmi-class.md
-    - name: SMS_PropertyDisplayNode 服务器 WMI 类
-      href: misc/sms_propertydisplaynode-server-wmi-class.md
-    - name: SMS_Report 服务器 WMI 类
-      href: misc/sms_report-server-wmi-class.md
-      items:
-        - name: 类 SMS_Report 中的 GetReportPointInfo 方法
-          href: misc/getreportpointinfo-method-in-class-sms_report.md
-        - name: 类 SMS_Report 中的 ValidateQuery 方法
-          href: misc/validatequery-method-in-class-sms_report.md
-    - name: SMS_ReportDashboard 服务器 WMI 类
-      href: misc/sms_reportdashboard-server-wmi-class.md
-    - name: SMS_ReportParameter 服务器 WMI 类
-      href: misc/sms_reportparameter-server-wmi-class.md
-    - name: SMS_SCI_SQLCmd 服务器 WMI 类
-      href: misc/sms_sci_sqlcmd-server-wmi-class.md
-    - name: SMS_SCI_RoamingBoundary 服务器 WMI 类
-      href: misc/sms_sci_roamingboundary-server-wmi-class.md
-    - name: SMS_SecuredObject 服务器 WMI 类
-      href: misc/sms_securedobject-server-wmi-class.md
-      items:
-        - name: 类 SMS_SecuredObject 中的 GetCollectionsWithResourcePermissions 方法
-          href: misc/getcollectionswithresourcepermissions-method-in-class-sms_securedobject.md
-        - name: 类 SMS_SecuredObject 中的 RefreshNTGroupMembership 方法
-          href: misc/refreshntgroupmembership-method-in-class-sms_securedobject.md
-        - name: 类 SMS_SecuredObject 中的 UserHasPermissions 方法
-          href: misc/userhaspermissions-method-in-class-sms_securedobject.md
-    - name: SMS_SIIB_NALProvider 服务器 WMI 类
-      href: misc/sms_siib_nalprovider-server-wmi-class.md
-    - name: SMS_SIIB_UINALProvider 服务器 WMI 类
-      href: misc/sms_siib_uinalprovider-server-wmi-class.md
-    - name: SMS_SiteToROOTColl_a 服务器 WMI 类
-      href: misc/sms_sitetorootcoll_a-server-wmi-class.md
-    - name: SMS_SoftwareProductCompliance 服务器 WMI 类
-      href: misc/sms_softwareproductcompliance-server-wmi-class.md
-      items:
-        - name: 类 SMS_SoftwareProductCompliance 中的 DeleteByQuery 方法
-          href: misc/deletebyquery-method-in-class-sms_softwareproductcompliance.md
-        - name: 类 SMS_SoftwareProductCompliance 中的 Export 方法
-          href: misc/export-method-in-class-sms_softwareproductcompliance.md
-        - name: 类 SMS_SoftwareProductCompliance 中的 Import 方法
-          href: misc/import-method-in-class-sms_softwareproductcompliance.md
-        - name: 类 SMS_SoftwareProductCompliance 中的 ProcessInBox 方法
-          href: misc/processinbox-method-in-class-sms_softwareproductcompliance.md
-    - name: SMS_UINAL_ResourceInfo 服务器 WMI 类
-      href: misc/sms_uinal_resourceinfo-server-wmi-class.md
-    - name: SMS_UpdatePrograms 服务器 WMI 类
-      href: misc/sms_updateprograms-server-wmi-class.md
-    - name: SMS_UpdateRelations 服务器 WMI 类
-      href: misc/sms_updaterelations-server-wmi-class.md
-    - name: SMS_UserClassPermissionNames 服务器 WMI 类
-      href: misc/sms_userclasspermissionnames-server-wmi-class.md
-    - name: SMS_UserClassPermissions 服务器 WMI 类
-      href: misc/sms_userclasspermissions-server-wmi-class.md
-    - name: SMS_UserInstancePermissionInfo 服务器 WMI 类
-      href: misc/sms_userinstancepermissioninfo-server-wmi-class.md
-    - name: SMS_UserInstancePermissionNames 服务器 WMI 类
-      href: misc/sms_userinstancepermissionnames-server-wmi-class.md
-    - name: SMS_UserInstancePermissions 服务器 WMI 类
-      href: misc/sms_userinstancepermissions-server-wmi-class.md
-    - name: SoftDistDownloadCompletedEvent
-      href: misc/softdistdownloadcompletedevent.md
-    - name: SoftDistDownloadStartedEvent
-      href: misc/softdistdownloadstartedevent.md
-    - name: TsMediaClass 客户端 COM 自动化类
-      href: misc/tsmediaclass-client-com-automation-class.md
-      items:
-        - name: ITsMediaClass 接口
-          href: misc/itsmediaclass-interface.md
-          items:
-            - name: ITsMediaClass Cancel 方法
-              href: misc/itsmediaclass--cancel-method.md
-            - name: ITsMediaClass ConnectionOptions 属性
-              href: misc/itsmediaclass--connectionoptions-property.md
-            - name: ITsMediaClass CreateBootMedia 方法
-              href: misc/itsmediaclass--createbootmedia-method.md
-            - name: ITsMediaClass CreateCaptureMedia 方法
-              href: misc/itsmediaclass--createcapturemedia-method.md
-            - name: ITsMediaClass CreateStandaloneMedia 方法
-              href: misc/itsmediaclass--createstandalonemedia-method.md
-            - name: ITsMediaClass CurrentStep 属性
-              href: misc/itsmediaclass--currentstep-property.md
-            - name: ITsMediaClass DistributionPoints 属性
-              href: misc/itsmediaclass--distributionpoints-property.md
-            - name: ITsMediaClass ErrorDetail 属性
-              href: misc/itsmediaclass--errordetail-property.md
-            - name: ITsMediaClass ExitCode 属性
-              href: misc/itsmediaclass--exitcode-property.md
-            - name: ITsMediaClass MediaLabel 属性
-              href: misc/itsmediaclass--medialabel-property.md
-            - name: ITsMediaClass NumSteps 属性
-              href: misc/itsmediaclass--numsteps-property.md
-            - name: ITsMediaClass ProviderName 属性
-              href: misc/itsmediaclass--providername-property.md
-            - name: ITsMediaClass SiteCode 属性
-              href: misc/itsmediaclass--sitecode-property.md
-            - name: ITsMediaClass Status 属性
-              href: misc/itsmediaclass--status-property.md
-            - name: ITsMediaClass StepInfo 属性
-              href: misc/itsmediaclass--stepinfo-property.md
-            - name: ITsMediaClass StepProgress 属性
-              href: misc/itsmediaclass--stepprogress-property.md
-- name: 操作系统部署类
-  href: osd/operating-system-deployment-classes.md
-  items:
-    - name: 操作系统部署驱动程序支持的平台架构
+    - name: OS 部署驱动程序支持的平台架构
       href: osd/operating-system-deployment-driver-supported-platforms-schema.md
       items:
         - name: PlatformApplicabilityCondition
@@ -1533,37 +1348,36 @@
           href: osd/query1.md
         - name: Query2
           href: osd/query2.md
-    - name: 操作系统部署服务器 WMI 类
-      href: osd/operating-system-deployment-server-wmi-classes.md
+    - name: OS 部署服务器 WMI 类
       items:
         - name: SMS_BootImagePackage 服务器 WMI 类
           href: osd/sms_bootimagepackage-server-wmi-class.md
           items:
-            - name: 类 SMS_BootImagePackage 中的 AddChangeNotification 方法
+            - name: AddChangeNotification 方法
               href: osd/addchangenotification-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 AddDistributionPoints 方法
+            - name: AddDistributionPoints 方法
               href: osd/adddistributionpoints-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 DeleteContextID 方法
+            - name: DeleteContextID 方法
               href: osd/deletecontextid-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 ExportDefaultBootImage 方法
+            - name: ExportDefaultBootImage 方法
               href: osd/exportdefaultbootimage-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 GetImageProperties 方法
+            - name: GetImageProperties 方法
               href: osd/getimageproperties-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 QueryOSDBinaryInjectionStatus 方法
+            - name: QueryOSDBinaryInjectionStatus 方法
               href: osd/queryosdbinaryinjectionstatus-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 RefreshPkgSource 方法
+            - name: RefreshPkgSource 方法
               href: osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 ReloadImageProperties 方法
+            - name: ReloadImageProperties 方法
               href: osd/reloadimageproperties-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 SetSourceSite 方法
+            - name: SetSourceSite 方法
               href: osd/setsourcesite-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 Unlock 方法
+            - name: Unlock 方法
               href: osd/unlock-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 UpdateDefaultImage 方法
+            - name: UpdateDefaultImage 方法
               href: osd/updatedefaultimage-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 UpdateImage 方法
+            - name: UpdateImage 方法
               href: osd/updateimage-method-in-class-sms_bootimagepackage.md
-            - name: 类 SMS_BootImagePackage 中的 UpdateOptionalComponents 方法
+            - name: UpdateOptionalComponents 方法
               href: osd/updateoptionalcomponents-method-in-class-sms_bootimagepackage.md
         - name: SMS_BootImagePackage_DriverRef 服务器 WMI 类
           href: osd/sms_bootimagepackage_driverref-server-wmi-class.md
@@ -1572,25 +1386,25 @@
         - name: SMS_CertificateData 服务器 WMI 类
           href: osd/sms_certificatedata-server-wmi-class.md
           items:
-            - name: 类 SMS_CertificateData 中的 SubmitCertificate 方法
+            - name: SubmitCertificate 方法
               href: osd/submitcertificate-method-in-class-sms_certificatedata.md
-            - name: 类 SMS_CertificateData 中的 DeleteCertificate 方法
+            - name: DeleteCertificate 方法
               href: osd/deletecertificate-method-in-class-sms_certificatedata.md
         - name: SMS_CertificateInfo 服务器 WMI 类
           href: osd/sms_certificateinfo-server-wmi-class.md
           items:
-            - name: 类 SMS_CertificateInfo 中的 BlockCertificate 方法
+            - name: BlockCertificate 方法
               href: osd/blockcertificate-method-in-class-sms_certificateinfo.md
         - name: SMS_CollectionVariable 服务器 WMI 类
           href: osd/sms_collectionvariable-server-wmi-class.md
         - name: SMS_Driver 服务器 WMI 类
           href: osd/sms_driver-server-wmi-class.md
           items:
-            - name: 类 SMS_Driver 中的 CreateFromINF 方法
+            - name: CreateFromINF 方法
               href: osd/createfrominf-method-in-class-sms_driver.md
-            - name: 类 SMS_Driver 中的 CreateFromINFs 方法
+            - name: CreateFromINFs 方法
               href: osd/createfrominfs-method-in-class-sms_driver.md
-            - name: 类 SMS_Driver 中的 CreateFromOEM 方法
+            - name: CreateFromOEM 方法
               href: osd/createfromoem-method-in-class-sms_driver.md
         - name: SMS_DriverContainer 服务器 WMI 类
           href: osd/sms_drivercontainer-server-wmi-class.md
@@ -1599,25 +1413,25 @@
         - name: SMS_DriverPackage 服务器 WMI 类
           href: osd/sms_driverpackage-server-wmi-class.md
           items:
-            - name: 类 SMS_DriverPackage 中的 AddChangeNotification 方法
+            - name: AddChangeNotification 方法
               href: osd/addchangenotification-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 AddDistributionPoints 方法
+            - name: AddDistributionPoints 方法
               href: osd/adddistributionpoints-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 AddDriverContent 方法
+            - name: AddDriverContent 方法
               href: osd/adddrivercontent-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 CheckSourceFolder 方法
+            - name: CheckSourceFolder 方法
               href: osd/checksourcefolder-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 RebuildPackage 方法
+            - name: RebuildPackage 方法
               href: osd/rebuildpackage-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 RefreshPkgSource 方法
+            - name: RefreshPkgSource 方法
               href: osd/refreshpkgsource-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 RemoveDriverContent 方法
+            - name: RemoveDriverContent 方法
               href: osd/removedrivercontent-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 SetSourceSite 方法
+            - name: SetSourceSite 方法
               href: osd/setsourcesite-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 Unlock 方法
+            - name: Unlock 方法
               href: osd/unlock-method-in-class-sms_driverpackage.md
-            - name: 类 SMS_DriverPackage 中的 ValidateNewPackageSource 方法
+            - name: ValidateNewPackageSource 方法
               href: osd/validatenewpackagesource-method-in-class-sms_driverpackage.md
         - name: SMS_DriverModel 服务器 WMI 类
           href: osd/sms_drivermodel-server-wmi-class.md
@@ -1630,21 +1444,21 @@
         - name: SMS_ImagePackage 服务器 WMI 类
           href: osd/sms_imagepackage-server-wmi-class.md
           items:
-            - name: 类 SMS_ImagePackage 中的 AddChangeNotification 方法
+            - name: AddChangeNotification 方法
               href: osd/addchangenotification-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 AddDistributionPoints 方法
+            - name: AddDistributionPoints 方法
               href: osd/adddistributionpoints-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 GetImageProperties 方法
+            - name: GetImageProperties 方法
               href: osd/getimageproperties-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 RefreshPkgSource 方法
+            - name: RefreshPkgSource 方法
               href: osd/refreshpkgsource-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 ReloadImageProperties 方法
+            - name: ReloadImageProperties 方法
               href: osd/reloadimageproperties-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 RunOfflineServicingManager 方法
+            - name: RunOfflineServicingManager 方法
               href: osd/runofflineservicingmanager-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 SetSourceSite 方法
+            - name: SetSourceSite 方法
               href: osd/setsourcesite-method-in-class-sms_imagepackage.md
-            - name: 类 SMS_ImagePackage 中的 Unlock 方法
+            - name: Unlock 方法
               href: osd/unlock-method-in-class-sms_imagepackage.md
         - name: SMS_ImageServicingProgress 服务器 WMI 类
           href: osd/sms_imageservicingprogress-server-wmi-class.md
@@ -1669,19 +1483,19 @@
         - name: SMS_OperatingSystemInstallPackage 服务器 WMI 类
           href: osd/sms_operatingsysteminstallpackage-server-wmi-class.md
           items:
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 AddChangeNotification 方法
+            - name: AddChangeNotification 方法
               href: osd/addchangenotification-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 AddDistributionPoints 方法
+            - name: AddDistributionPoints 方法
               href: osd/adddistributionpoints-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 GetImageProperties 方法
+            - name: GetImageProperties 方法
               href: osd/getimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 RefreshPkgSource 方法
+            - name: RefreshPkgSource 方法
               href: osd/refreshpkgsource-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 ReloadImageProperties 方法
+            - name: ReloadImageProperties 方法
               href: osd/reloadimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 SetSourceSite 方法
+            - name: SetSourceSite 方法
               href: osd/setsourcesite-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: 类 SMS_OperatingSystemInstallPackage 中的 Unlock 方法
+            - name: Unlock 方法
               href: osd/unlock-method-in-class-sms_operatingsysteminstallpackage.md
         - name: SMS_OSDeploymentConfig 服务器 WMI 类
           href: osd/sms_osdeploymentconfig-server-wmi-class.md
@@ -1698,24 +1512,24 @@
         - name: SMS_StateMigration 服务器 WMI 类
           href: osd/sms_statemigration-server-wmi-class.md
           items:
-            - name: 类 SMS_StateMigration 中的 AddAssociation 方法
+            - name: AddAssociation 方法
               href: osd/addassociation-method-in-class-sms_statemigration.md
-            - name: 类 SMS_StateMigration 中的 AddAssociationEx 方法
+            - name: AddAssociationEx 方法
               href: osd/addassociationex-method-in-class-sms_statemigration.md
-            - name: 类 SMS_StateMigration 中的 DeleteAssociation 方法
+            - name: DeleteAssociation 方法
               href: osd/deleteassociation-method-in-class-sms_statemigration.md
-            - name: 类 SMS_StateMigration 中的 GetEncryptDecryptKey 方法
+            - name: GetEncryptDecryptKey 方法
               href: osd/getencryptdecryptkey-method-in-class-sms_statemigration.md
         - name: SMS_StateMigrationUserNames 服务器 WMI 类
           href: osd/sms_statemigrationusernames-server-wmi-class.md
         - name: SMS_TaskSequence 服务器 WMI 类
           href: osd/sms_tasksequence-server-wmi-class.md
           items:
-            - name: 类 SMS_TaskSequence 中的 ExportXml 方法
+            - name: ExportXml 方法
               href: osd/exportxml-method-in-class-sms_tasksequence.md
-            - name: 类 SMS_TaskSequence 中的 LoadFromXml 方法
+            - name: LoadFromXml 方法
               href: osd/loadfromxml-method-in-class-sms_tasksequence.md
-            - name: 类 SMS_TaskSequence 中的 SaveToXml 方法
+            - name: SaveToXml 方法
               href: osd/savetoxml-method-in-class-sms_tasksequence.md
         - name: SMS_TaskSequence_Action 服务器 WMI 类
           href: osd/sms_tasksequence_action-server-wmi-class.md
@@ -1817,7 +1631,7 @@
           href: osd/sms_tasksequence_softwareconditionexpression-server-wmi-class.md
         - name: SMS_TaskSequence_Step 服务器 WMI 类
           href: osd/sms_tasksequence_step-server-wmi-class.md
-        - name: SMS_TaskSequence_UpgradeOperatingSystemAction Server WMI 类
+        - name: SMS_TaskSequence_UpgradeOperatingSystemAction 服务器 WMI 类
           href: osd/sms_tasksequence_upgradeoperatingsystemaction-server-wmi-class.md
         - name: SMS_TaskSequence_VariableConditionExpression 服务器 WMI 类
           href: osd/sms_tasksequence_variableconditionexpression-server-wmi-class.md
@@ -1830,37 +1644,37 @@
         - name: SMS_TaskSequencePackage 服务器 WMI 类
           href: osd/sms_tasksequencepackage-server-wmi-class.md
           items:
-            - name: 类 SMS_TaskSequencePackage 中的 AddChangeNotification 方法
+            - name: AddChangeNotification 方法
               href: osd/addchangenotification-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 AddDistributionPoints 方法
+            - name: AddDistributionPoints 方法
               href: osd/adddistributionpoints-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 CheckReferencesShareType 方法
+            - name: CheckReferencesShareType 方法
               href: osd/checkreferencessharetype-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetClientConfigPolicies 方法
+            - name: GetClientConfigPolicies 方法
               href: osd/getclientconfigpolicies-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetContentHash 方法
+            - name: GetContentHash 方法
               href: osd/getcontenthash-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetPackageDefaultHash 方法
+            - name: GetPackageDefaultHash 方法
               href: osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetPackageHash 方法
+            - name: GetPackageHash 方法
               href: osd/getpackagehash-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetSequence 方法
+            - name: GetSequence 方法
               href: osd/getsequence-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetTsPolicies 方法
+            - name: GetTsPolicies 方法
               href: osd/gettspolicies-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetTsPoliciesSaMedia 方法
+            - name: GetTsPoliciesSaMedia 方法
               href: osd/gettspoliciessamedia-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 GetTSRelatedToDriverCategory 方法
+            - name: GetTSRelatedToDriverCategory 方法
               href: osd/gettsrelatedtodrivercategory-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 ImportSequence 方法
+            - name: ImportSequence 方法
               href: osd/importsequence-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 RefreshPkgSource 方法
+            - name: RefreshPkgSource 方法
               href: osd/refreshpkgsource-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 SetSequence 方法
+            - name: SetSequence 方法
               href: osd/setsequence-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 SetSourceSite 方法
+            - name: SetSourceSite 方法
               href: osd/setsourcesite-method-in-class-sms_tasksequencepackage.md
-            - name: 类 SMS_TaskSequencePackage 中的 Unlock 方法
+            - name: Unlock 方法
               href: osd/unlock-method-in-class-sms_tasksequencepackage.md
         - name: SMS_TaskSequencePackageReference 服务器 WMI 类
           href: osd/sms_tasksequencepackagereference-server-wmi-class.md
@@ -1878,48 +1692,20 @@
           href: osd/sms_usersettings-server-wmi-class.md
         - name: SMS_UserVariable 服务器 WMI 类
           href: osd/sms_uservariable-server-wmi-class.md
-        - name: SMS_VhdPackage 服务器 WMI 类
-          href: osd/sms_vhdpackage-server-wmi-class.md
-          items:
-            - name: 类 SMS_VhdPackage 中的 AddChangeNotification 方法
-              href: osd/addchangenotification-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 AddDistributionPoints 方法
-              href: osd/adddistributionpoints-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 GetImageProperties 方法
-              href: osd/getimageproperties-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 RefreshPkgSource 方法
-              href: osd/refreshpkgsource-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 ReloadImageProperties 方法
-              href: osd/reloadimageproperties-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 RunOfflineServicingManager 方法
-              href: osd/runofflineservicingmanager-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 SetSourceSite 方法
-              href: osd/setsourcesite-method-in-class-sms_vhdpackage.md
-            - name: 类 SMS_VhdPackage 中的 Unlock 方法
-              href: osd/unlock-method-in-class-sms_vhdpackage.md
         - name: SMS_WinPEOptionalComponentInBootImage 服务器 WMI 类
           href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
         - name: SMS_WinPEOptionalComponentInfo 服务器 WMI 类
           href: osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md
-        - name: Operating System Deployment CreateMedia.exe
+        - name: OS 部署 CreateMedia.exe
           href: osd/operating-system-deployment-createmedia.exe.md
-- name: 带外管理服务器 WMI 类
-  href: misc/out-of-band-management-server-wmi-classes.md
-  items:
-    - name: SMS_AMTCertificate 服务器 WMI 类
-      href: misc/sms_amtcertificate-server-wmi-class.md
-    - name: SMS_AMTMachineInfo 服务器 WMI 类
-      href: misc/sms_amtmachineinfo-server-wmi-class.md
 - name: 报表服务器 WMI 类
-  href: core/servers/reporting/configuration-manager-reporting-server-wmi-classes.md
   items:
     - name: SMS_ReportViewSchema 服务器 WMI 类
       href: core/servers/reporting/sms_reportviewschema-server-wmi-class.md
       items:
-        - name: 类 SMS_ReportViewSchema 中的 GetSampleValues 方法
+        - name: GetSampleValues 方法
           href: core/servers/reporting/getsamplevalues-method-in-class-sms_reportviewschema.md
 - name: 资源管理服务器 WMI 类
-  href: core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md
   items:
     - name: 硬件清单服务器 WMI 类
       href: core/clients/manage/hardware-inventory-server-wmi-classes.md
@@ -1935,7 +1721,7 @@
         - name: SMS_InventoryReport 服务器 WMI 类
           href: core/clients/manage/sms_inventoryreport-server-wmi-class.md
           items:
-            - name: 类 SMS_InventoryReport 中的 ImportInventoryReport 方法
+            - name: ImportInventoryReport 方法
               href: core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md
         - name: SMSInventoryReportClass 服务器 WMI 类
           href: core/clients/manage/sms_inventoryreportclass-server-wmi-class.md
@@ -1966,14 +1752,14 @@
     - name: SMS_PendingRegistrationRecord 服务器 WMI 类
       href: core/clients/manage/sms_pendingregistrationrecord-server-wmi-class.md
       items:
-        - name: 类 SMS_PendingRegistrationRecord 中的 ResolvePendingRegistrationRecord 方法
+        - name: ResolvePendingRegistrationRecord 方法
           href: core/clients/manage/resolvependingregistrationrecord-method-in-class-sms_pendingregistrationrecord.md
     - name: SMS_Query 服务器 WMI 类
       href: core/clients/manage/sms_query-server-wmi-class.md
       items:
-        - name: 类 SMS_Query 中的 CreateCCRs 方法
+        - name: CreateCCRs 方法
           href: core/clients/manage/createccrs-method-in-class-sms_query.md
-        - name: 类 SMS_Query 中的 FindResourceSite 方法
+        - name: FindResourceSite 方法
           href: core/clients/manage/findresourcesite-method-in-class-sms_query.md
     - name: SMS_R_IPNetwork 服务器 WMI 类
       href: core/clients/manage/sms_r_ipnetwork-server-wmi-class.md
@@ -1990,32 +1776,31 @@
     - name: SMS_ResourceMap 服务器 WMI 类
       href: core/clients/manage/sms_resourcemap-server-wmi-class.md
       items:
-        - name: 类 SMS_ResourceMap 中的 GetClassesWithData 方法
+        - name: GetClassesWithData 方法
           href: core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md
-        - name: 类 SMS_ResourceMap 中的 Refresh 方法
+        - name: Refresh 方法
           href: core/clients/manage/refresh-method-in-class-sms_resourcemap.md
     - name: SMS_SoftwareConversionRules 服务器 WMI 类
       href: core/clients/manage/sms_softwareconversionrules-server-wmi-class.md
     - name: SMS_UserMachineRelationship 服务器 WMI 类
       href: core/clients/manage/sms_usermachinerelationship-server-wmi-class.md
       items:
-        - name: 类 SMS_UserMachineRelationship 中的 AddSource 方法
+        - name: AddSource 方法
           href: core/clients/manage/addsource-method-in-class-sms_usermachinerelationship.md
-        - name: 类 SMS_UserMachineRelationship 中的 AddType 方法
+        - name: AddType 方法
           href: core/clients/manage/addtype-method-in-class-sms_usermachinerelationship.md
-        - name: 类 SMS_UserMachineRelationship 中的 CreateRelationship 方法
+        - name: CreateRelationship 方法
           href: core/clients/manage/createrelationship-method-in-class-sms_usermachinerelationship.md
-        - name: 类 SMS_UserMachineRelationship 中的 RemoveSource 方法
+        - name: RemoveSource 方法
           href: core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md
-        - name: 类 SMS_UserMachineRelationship 中的 RemoveType 方法
+        - name: RemoveType 方法
           href: core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md
 - name: 基于角色的管理服务器 WMI 类
-  href: core/servers/configure/role-based-administration-server-wmi-classes.md
   items:
     - name: SMS_Admin 服务器 WMI 类
       href: core/servers/configure/sms_admin-server-wmi-class.md
       items:
-        - name: 类 SMS_Admin 中的 GetAdminExtendedData 方法
+        - name: GetAdminExtendedData 方法
           href: core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md
     - name: SMS_AdminCategory 服务器 WMI 类
       href: core/servers/configure/sms_admincategory-server-wmi-class.md
@@ -2038,41 +1823,40 @@
     - name: SMS_RbacSecuredObject 服务器 WMI 类
       href: core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md
       items:
-        - name: 类 SMS_RbacSecuredObject 中的 GetAvailableScopes 方法
+        - name: GetAvailableScopes 方法
           href: core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md
-        - name: 类 SMS_RbacSecuredObject 中的 GetCollectionsWithResourcePermissions 方法
+        - name: GetCollectionsWithResourcePermissions 方法
           href: core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md
-        - name: 类 SMS_RbacSecuredObject 中的 GetUserList 方法
+        - name: GetUserList 方法
           href: core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md
-        - name: 类 SMS_RbacSecuredObject 中的 UserHasPermissions 方法
+        - name: UserHasPermissions 方法
           href: core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md
     - name: SMS_Role 服务器 WMI 类
       href: core/servers/configure/sms_role-server-wmi-class.md
       items:
-        - name: 类 SMS_Role 中的 ExportRole 方法
+        - name: ExportRole 方法
           href: core/servers/configure/exportrole-method-in-class-sms_role.md
-        - name: 类 SMS_Role 中的 ImportRole 方法
+        - name: ImportRole 方法
           href: core/servers/configure/importrole-method-in-class-sms_role.md
     - name: SMS_SecuredCategory 服务器 WMI 类
       href: core/servers/configure/sms_securedcategory-server-wmi-class.md
     - name: SMS_SecuredCategoryMembership 服务器 WMI 类
       href: core/servers/configure/sms_securedcategorymembership-server-wmi-class.md
       items:
-        - name: 类 SMS_SecuredCategoryMembership 中的 AddMemberships 方法
+        - name: AddMemberships 方法
           href: core/servers/configure/addmemberships-method-in-class-sms_securedcategorymembership.md
-        - name: 类 SMS_SecuredCategoryMembership 中的 RemoveMemberships 方法
+        - name: RemoveMemberships 方法
           href: core/servers/configure/removememberships-method-in-class-sms_securedcategorymembership.md
     - name: SMS_SettableSecuredCategory 服务器 WMI 类
       href: core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md
 - name: 计划服务器 WMI 类
-  href: core/servers/configure/scheduling-server-wmi-classes.md
   items:
     - name: SMS_ScheduleMethods 服务器 WMI 类
       href: core/servers/configure/sms_schedulemethods-server-wmi-class.md
       items:
-        - name: 类 SMS_ScheduleMethods 中的 ReadFromString 方法
+        - name: ReadFromString 方法
           href: core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md
-        - name: 类 SMS_ScheduleMethods 中的 WriteToString 方法
+        - name: WriteToString 方法
           href: core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md
     - name: SMS_ScheduleToken 服务器 WMI 类
       href: core/servers/configure/sms_scheduletoken-server-wmi-class.md
@@ -2087,34 +1871,33 @@
     - name: SMS_ST_RecurWeekly 服务器 WMI 类
       href: core/servers/configure/sms_st_recurweekly-server-wmi-class.md
 - name: SEDO 服务器 WMI 类
-  href: misc/sedo-server-wmi-classes.md
   items:
     - name: SMS_ObjectLock 服务器 WMI 类
       href: misc/sms_objectlock-server-wmi-class.md
       items:
-        - name: 类 SMS_ObjectLock 中的 CancelLockRequest 方法
+        - name: CancelLockRequest 方法
           href: misc/cancellockrequest-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 CancelLockRequests 方法
+        - name: CancelLockRequests 方法
           href: misc/cancellockrequests-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 CheckLockRequest 方法
+        - name: CheckLockRequest 方法
           href: misc/checklockrequest-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 CheckLockRequests 方法
+        - name: CheckLockRequests 方法
           href: misc/checklockrequests-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 GetLockInformation 方法
+        - name: GetLockInformation 方法
           href: misc/getlockinformation-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 ReleaseAllLocks 方法
+        - name: ReleaseAllLocks 方法
           href: misc/releasealllocks-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 ReleaseLock 方法
+        - name: ReleaseLock 方法
           href: misc/releaselock-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 ReleaseLocks 方法
+        - name: ReleaseLocks 方法
           href: misc/releaselocks-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 RequestLock 方法
+        - name: RequestLock 方法
           href: misc/requestlock-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 RequestLockAsync 方法
+        - name: RequestLockAsync 方法
           href: misc/requestlockasync-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 RequestLocks 方法
+        - name: RequestLocks 方法
           href: misc/requestlocks-method-in-class-sms_objectlock.md
-        - name: 类 SMS_ObjectLock 中的 RequestLocksAsync 方法
+        - name: RequestLocksAsync 方法
           href: misc/requestlocksasync-method-in-class-sms_objectlock.md
     - name: SMS_ObjectLockRequest 服务器 WMI 类
       href: misc/sms_objectlockrequest-server-wmi-class.md
@@ -2126,26 +1909,26 @@
     - name: SMS_BoundaryGroup 服务器 WMI 类
       href: core/servers/configure/sms_boundarygroup-server-wmi-class.md
       items:
-        - name: 类 SMS_BoundaryGroup 中的 AddBoundary 方法
+        - name: AddBoundary 方法
           href: core/servers/configure/addboundary-method-in-class-sms_boundarygroup.md
-        - name: 类 SMS_BoundaryGroup 中的 AddSiteSystem 方法
+        - name: AddSiteSystem 方法
           href: core/servers/configure/addsitesystem-method-in-class-sms_boundarygroup.md
-        - name: 类 SMS_BoundaryGroup 中的 RemoveBoundary 方法
+        - name: RemoveBoundary 方法
           href: core/servers/configure/removeboundary-method-in-class-sms_boundarygroup.md
-        - name: 类 SMS_BoundaryGroup 中的 RemoveSiteSystem 方法
+        - name: RemoveSiteSystem 方法
           href: core/servers/configure/removesitesystem-method-in-class-sms_boundarygroup.md
     - name: SMS_BoundaryGroupMembers 服务器 WMI 类
       href: core/servers/configure/sms_boundarygroupmembers-server-wmi-class.md
     - name: SMS_BoundaryGroupRelationships 服务器 WMI 类
       href: core/servers/configure/sms-boundarygrouprelationships-server-wmi-class.md
       items:
-        - name: 类 SMS_BoundaryGroupRelationships 中的 FallbackDP 方法
+        - name: FallbackDP 方法
           href: core/servers/configure/fallbackdp-method-in-class-sms-boundarygrouprelationships.md
-        - name: 类 SMS_BoundaryGroupRelationships 中的 FallbackMP 方法
+        - name: FallbackMP 方法
           href: core/servers/configure/fallbackmp-method-in-class-sms-boundarygrouprelationships.md
-        - name: 类 SMS_BoundaryGroupRelationships 中的 FallbackSMP 方法
+        - name: FallbackSMP 方法
           href: core/servers/configure/fallbacksmp-method-in-class-sms-boundarygrouprelationships.md
-        - name: 类 SMS_BoundaryGroupRelationships 中的 FallbackSUP 方法
+        - name: FallbackSUP 方法
           href: core/servers/configure/fallbacksup-method-in-class-sms-boundarygrouprelationships.md
     - name: SMS_BoundaryGroupSiteSystems 服务器 WMI 类
       href: core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class.md
@@ -2156,13 +1939,13 @@
     - name: SMS_DefaultBoundaryGroup 服务器 WMI 类
       href: core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md
       items:
-        - name: 类 SMS_DefaultBoundaryGroup 中的 AddBoundary 方法
+        - name: AddBoundary 方法
           href: core/servers/configure/addboundary-method-in-class-sms-defaultboundarygroup.md
-        - name: 类 SMS_DefaultBoundaryGroup 中的 AddSiteSystem 方法
+        - name: AddSiteSystem 方法
           href: core/servers/configure/addsitesystem-method-in-class-sms-defaultboundarygroup.md
-        - name: 类 SMS_DefaultBoundaryGroup 中的 RemoveBoundary 方法
+        - name: RemoveBoundary 方法
           href: core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md
-        - name: 类 SMS_DefaultBoundaryGroup 中的 RemoveSiteSystem 方法
+        - name: RemoveSiteSystem 方法
           href: core/servers/configure/removesitesystem-method-in-class-sms-defaultboundarygroup.md
     - name: SMS_EmbeddedProperty 服务器 WMI 类
       href: core/servers/configure/sms_embeddedproperty-server-wmi-class.md
@@ -2171,13 +1954,13 @@
     - name: SMS_Identification 服务器 WMI 类
       href: core/servers/configure/sms_identification-server-wmi-class.md
       items:
-        - name: 类 SMS_Identification 中的 GetCurrentUser 方法
+        - name: GetCurrentUser 方法
           href: core/servers/configure/getcurrentuser-method-in-class-sms_identification.md
-        - name: 类 SMS_Identification 中的 GetFileBinary 方法
+        - name: GetFileBinary 方法
           href: core/servers/configure/getfilebinary-method-in-class-sms_identification.md
-        - name: 类 SMS_Identification 中的 GetProviderVersion 方法
+        - name: GetProviderVersion 方法
           href: core/servers/configure/getproviderversion-method-in-class-sms_identification.md
-        - name: 类 SMS_Identification 中的 GetSiteID 方法
+        - name: GetSiteID 方法
           href: core/servers/configure/getsiteid-method-in-class-sms_identification.md
     - name: SMS_RcmSqlControl 服务器 WMI 类
       href: core/servers/configure/sms_rcmsqlcontrol-server-wmi-class.md
@@ -2186,7 +1969,7 @@
     - name: SMS_ReplicationGroup 服务器 WMI 类
       href: core/servers/configure/sms_replicationgroup-server-wmi-class.md
       items:
-        - name: 类 SMS_ReplicationGroup 中的 InitializeData 方法
+        - name: InitializeData 方法
           href: core/servers/configure/initializedata-method-in-class-sms_replicationgroup.md
     - name: SMS_ReplicationLinkStatus 服务器 WMI 类
       href: core/servers/configure/sms_replicationlinkstatus-server-wmi-class.md
@@ -2231,45 +2014,43 @@
     - name: SMS_Site 服务器 WMI 类
       href: core/servers/configure/sms_site-server-wmi-class.md
       items:
-        - name: 类 SMS_Site 中的 EncryptDataEx 方法
+        - name: EncryptDataEx 方法
           href: core/servers/configure/encryptdataex-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 GetAutoUpgradeConfigs 方法
+        - name: GetAutoUpgradeConfigs 方法
           href: core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 GetClientInfo 方法
+        - name: GetClientInfo 方法
           href: core/servers/configure/getclientinfo-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 GetClientPilotingConfigs 方法
+        - name: GetClientPilotingConfigs 方法
           href: core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 GetFeatureState 方法
+        - name: GetFeatureState 方法
           href: core/servers/configure/getfeaturestate-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 GetSiteADInfo 方法
+        - name: GetSiteADInfo 方法
           href: core/servers/configure/getsiteadinfo-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 ImportGlobalUserAccount 方法
+        - name: ImportGlobalUserAccount 方法
           href: core/servers/configure/importglobaluseraccount-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 ImportGlobalUserAccountEx 方法
+        - name: ImportGlobalUserAccountEx 方法
           href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 ImportMachineEntry 方法
+        - name: ImportMachineEntry 方法
           href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 ImportMachineEntryToMultipleCollections 方法
+        - name: ImportMachineEntryToMultipleCollections 方法
           href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 IsUsedCert 方法
+        - name: IsUsedCert 方法
           href: core/servers/configure/isusedcert-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 RedistributeAutoUpgradeClientContent 方法
+        - name: RedistributeAutoUpgradeClientContent 方法
           href: core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 SubmitAMTCert 方法
-          href: core/servers/configure/submitamtcert-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 SubmitRegistrationRecord 方法
+        - name: SubmitRegistrationRecord 方法
           href: core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 UpdateAutoUpgradeClientContent 方法
+        - name: UpdateAutoUpgradeClientContent 方法
           href: core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 UpdateAutoUpgradeConfigs 方法
+        - name: UpdateAutoUpgradeConfigs 方法
           href: core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 UpdateClientPilotingConfigs 方法
+        - name: UpdateClientPilotingConfigs 方法
           href: core/servers/configure/updateclientpilotingconfigs-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 UpdateConsoleUsageData 方法
+        - name: UpdateConsoleUsageData 方法
           href: core/servers/configure/updateconsoleusagedata-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 UpdateFeatureState 方法
+        - name: UpdateFeatureState 方法
           href: core/servers/configure/updatefeaturestate-method-in-class-sms_site.md
-        - name: 类 SMS_Site 中的 VerifyNoLoops 方法
+        - name: VerifyNoLoops 方法
           href: core/servers/configure/verifynoloops-method-in-class-sms_site.md
     - name: SMS_SiteAndSubsites 服务器 WMI 类
       href: core/servers/configure/sms_siteandsubsites-server-wmi-class.md
@@ -2286,7 +2067,7 @@
     - name: SMS_SiteInstallMap 服务器 WMI 类
       href: core/servers/configure/sms_siteinstallmap-server-wmi-class.md
       items:
-        - name: 类 SMS_SiteInstallMap 中的 Refresh 方法
+        - name: Refresh 方法
           href: core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md
     - name: SMS_SystemResourceList 服务器 WMI 类
       href: core/servers/configure/sms_systemresourcelist-server-wmi-class.md
@@ -2299,22 +2080,21 @@
     - name: SMS_SiteToSiteID_a 服务器 WMI 类
       href: core/servers/configure/sms_sitetositeid_a-server-wmi-class.md
 - name: 软件分发服务器 WMI 类
-  href: core/servers/configure/software-distribution-server-wmi-classes.md
   items:
     - name: SMS_Advertisement 服务器 WMI 类
       href: core/servers/configure/sms_advertisement-server-wmi-class.md
       items:
-        - name: 类 SMS_Advertisement 中的 GetAdvertisements 方法
+        - name: GetAdvertisements 方法
           href: core/servers/configure/getadvertisements-method-in-class-sms_advertisement.md
-        - name: 类 SMS_Advertisement 中的 GetNextID 方法
+        - name: GetNextID 方法
           href: core/servers/configure/getnextid-method-in-class-sms_advertisement.md
-        - name: 类 SMS_Advertisement 中的 RiskyDeploymentStatusMessage 方法
+        - name: RiskyDeploymentStatusMessage 方法
           href: core/servers/configure/riskydeploymentstatusmessage-method-in-class-sms_advertisement.md
-        - name: 类 SMS_Advertisement 中的 SetNextID 方法
+        - name: SetNextID 方法
           href: core/servers/configure/setnextid-method-in-class-sms_advertisement.md
-        - name: 类 SMS_Advertisement 中的 SetSourceSite 方法
+        - name: SetSourceSite 方法
           href: core/servers/configure/setsourcesite-method-in-class-sms_advertisement.md
-        - name: 类 SMS_Advertisement 中的 Unlock 方法
+        - name: Unlock 方法
           href: core/servers/configure/unlock-method-in-class-sms_advertisement.md
     - name: SMS_AdvertisementInfo 服务器 WMI 类
       href: core/servers/configure/sms_advertisementinfo-server-wmi-class.md
@@ -2337,30 +2117,30 @@
     - name: SMS_DistributionPoint 服务器 WMI 类
       href: core/servers/configure/sms_distributionpoint-server-wmi-class.md
       items:
-        - name: 类 SMS_DistributionPoint 中的 VerifyPackage 方法
+        - name: VerifyPackage 方法
           href: core/servers/configure/verifypackage-method-in-class-sms_distributionpoint.md
-        - name: 类 SMS_DistributionPoint 中的 CancelDistribution 方法
+        - name: CancelDistribution 方法
           href: core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint.md
     - name: SMS_DistributionPointDriveInfo 服务器 WMI 类
       href: core/servers/configure/sms_distributionpointdriveinfo-server-wmi-class.md
     - name: SMS_DistributionPointGroup 服务器 WMI 类
       href: core/servers/configure/sms_distributionpointgroup-server-wmi-class.md
       items:
-        - name: 类 SMS_DistributionPointGroup 中的 AddDistributionPoints 方法
+        - name: AddDistributionPoints 方法
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 AddPackages 方法
+        - name: AddPackages 方法
           href: core/servers/configure/addpackages-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 AssociateCollections 方法
+        - name: AssociateCollections 方法
           href: core/servers/configure/associatecollections-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 DisassociateCollections 方法
+        - name: DisassociateCollections 方法
           href: core/servers/configure/disassociatecollections-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 ReDistributePackage 方法
+        - name: ReDistributePackage 方法
           href: core/servers/configure/redistributepackage-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 RefreshDPGroup 方法
+        - name: RefreshDPGroup 方法
           href: core/servers/configure/refreshdpgroup-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 RemoveDistributionPoints 方法
+        - name: RemoveDistributionPoints 方法
           href: core/servers/configure/removedistributionpoints-method-in-class-sms_distributionpointgroup.md
-        - name: 类 SMS_DistributionPointGroup 中的 RemovePackages 方法
+        - name: RemovePackages 方法
           href: core/servers/configure/removepackages-method-in-class-sms_distributionpointgroup.md
     - name: SMS_DistributionPointInfo 服务器 WMI 类
       href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
@@ -2378,21 +2158,21 @@
     - name: SMS_Package 服务器 WMI 类
       href: core/servers/configure/sms_package-server-wmi-class.md
       items:
-        - name: 类 SMS_Package 中的 AddChangeNotification 方法
+        - name: AddChangeNotification 方法
           href: core/servers/configure/addchangenotification-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 AddDistributionPoints 方法
+        - name: AddDistributionPoints 方法
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 CheckDuplicateShareName 方法
+        - name: CheckDuplicateShareName 方法
           href: core/servers/configure/checkduplicatesharename-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 CheckDuplicateSourceName 方法
+        - name: CheckDuplicateSourceName 方法
           href: core/servers/configure/checkduplicatesourcename-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 CheckPackageShareForTaskSequenceDeployment 方法
+        - name: CheckPackageShareForTaskSequenceDeployment 方法
           href: core/servers/configure/checkpackagesharefortasksequencedeployment-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 RefreshPkgSource 方法
+        - name: RefreshPkgSource 方法
           href: core/servers/configure/refreshpkgsource-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 SetSourceSite 方法
+        - name: SetSourceSite 方法
           href: core/servers/configure/setsourcesite-method-in-class-sms_package.md
-        - name: 类 SMS_Package 中的 Unlock 方法
+        - name: Unlock 方法
           href: core/servers/configure/unlock-method-in-class-sms_package.md
     - name: SMS_PackageAccessByUsers 服务器 WMI 类
       href: core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md
@@ -2411,20 +2191,20 @@
     - name: SMS_PackageToContent 服务器 WMI 类
       href: core/servers/configure/sms_packagetocontent-server-wmi-class.md
       items:
-        - name: 类 SMS_PackageToContent 中的 IsContentValid 方法
+        - name: IsContentValid 方法
           href: core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md
     - name: SMS_PackageToSourceSite_a 服务器 WMI 类
       href: core/servers/configure/sms_packagetosourcesite_a-server-wmi-class.md
     - name: SMS_PDF_Package 服务器 WMI 类
       href: core/servers/configure/sms_pdf_package-server-wmi-class.md
       items:
-        - name: 类 SMS_PDF_Package 中的 GetPDFData 方法
+        - name: GetPDFData 方法
           href: core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md
-        - name: 类 SMS_PDF_Package 中的 LoadIconForPDF 方法
+        - name: LoadIconForPDF 方法
           href: core/servers/configure/loadiconforpdf-method-in-class-sms_pdf_package.md
-        - name: 类 SMS_PDF_Package 中的 LoadPDF 方法
+        - name: LoadPDF 方法
           href: core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md
-        - name: 类 SMS_PDF_Package 中的 ProcessInBox 方法
+        - name: ProcessInBox 方法
           href: core/servers/configure/processinbox-method-in-class-sms_pdf_package.md
     - name: SMS_PDF_Program 服务器 WMI 类
       href: core/servers/configure/sms_pdf_program-server-wmi-class.md
@@ -2443,12 +2223,11 @@
     - name: SMS_SupportedPlatforms 服务器 WMI 类
       href: core/servers/configure/sms_supportedplatforms-server-wmi-class.md
       items:
-        - name: 类 SMS_SupportedPlatforms 中的 Enable 方法
+        - name: Enable 方法
           href: core/servers/configure/enable-method-in-class-sms_supportedplatforms.md
     - name: SMS_SupportedPlatformsOfflineServicing 服务器 WMI 类
       href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
 - name: 软件计数服务器 WMI 类
-  href: apps/software-metering-server-wmi-classes.md
   items:
     - name: SMS_FileUsageSummary 服务器 WMI 类
       href: apps/sms_fileusagesummary-server-wmi-class.md
@@ -2469,21 +2248,20 @@
     - name: SMS_SummarizationInterval 服务器 WMI 类
       href: apps/sms_summarizationinterval-server-wmi-class.md
 - name: 软件更新服务器 WMI 类
-  href: sum/software-updates-server-wmi-classes.md
   items:
     - name: SMS_ADRDeploymentSettings 服务器 WMI 类
       href: sum/sms_adrdeploymentsettings-server-wmi-class.md
     - name: SMS_AutoDeployment 服务器 WMI 类
       href: sum/sms_autodeployment-server-wmi-class.md
       items:
-        - name: 类 SMS_AutoDeployment 中的 EvaluateAllAutoDeployment 方法
+        - name: EvaluateAllAutoDeployment 方法
           href: sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md
-        - name: 类 SMS_AutoDeployment 中的 EvaluateAutoDeployment 方法
+        - name: EvaluateAutoDeployment 方法
           href: sum/evaluateautodeployment-method-in-class-sms_autodeployment.md
     - name: SMS_AuthorizationList 服务器 WMI 类
       href: sum/sms_authorizationlist-server-wmi-class.md
       items:
-        - name: 类 SMS_AuthorizationList 中的 RunAuthListStatusSummarization 方法
+        - name: RunAuthListStatusSummarization 方法
           href: sum/runauthliststatussummarization-method-in-class-sms_authorizationlist.md
     - name: SMS_CIAllCategories 服务器 WMI 类
       href: sum/sms_ciallcategories-server-wmi-class.md
@@ -2498,30 +2276,30 @@
     - name: SMS_CM_UpdateFeatures 服务器 WMI 类
       href: sum/sms_cm_updatefeatures-server-wmi-class.md
       items:
-        - name: 类 SMS_CM_UpdateFeatures 中的 UpdateFeatureExposureStatus 方法
+        - name: UpdateFeatureExposureStatus 方法
           href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatefeatures.md
     - name: SMS_CM_UpdatePackageFeatures 服务器 WMI 类
       href: sum/sms_cm_updatepackagefeatures-server-wmi-class.md
       items:
-        - name: 类 SMS_CM_UpdatePackageFeatures 中的 UpdateFeatureExposureStatus 方法
+        - name: UpdateFeatureExposureStatus 方法
           href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatepackagefeatures.md
     - name: SMS_CM_UpdatePackages 服务器 WMI 类
       href: sum/sms_cm_updatepackages-server-wmi-class.md
       items:
-        - name: 类 SMS_CM_UpdatePackages 中的 IsCurrentWorkingUpdatePackage 方法
+        - name: IsCurrentWorkingUpdatePackage 方法
           href: sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md
-        - name: 类 SMS_CM_UpdatePackages 中的 RetryContentReplication 方法
+        - name: RetryContentReplication 方法
           href: sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md
-        - name: 类 SMS_CM_UpdatePackages 中的 SetIgnorePrereqWarning 方法
+        - name: SetIgnorePrereqWarning 方法
           href: sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md
-        - name: 类 SMS_CM_UpdatePackages 中的 UpdatePrereqAndStateFlags 方法
+        - name: UpdatePrereqAndStateFlags 方法
           href: sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md
     - name: SMS_CM_UpdatePackagesHistory 服务器 WMI 类
       href: sum/sms_cm_updatepackageshistory-server-wmi-class.md
     - name: SMS_CM_UpdatePackageSiteStatus 服务器 WMI 类
       href: sum/sms_cm_updatepackagesitestatus-server-wmi-class.md
       items:
-        - name: 类 SMS_CM_UpdatePackageSiteStatus 中的 UpdatePackageSiteState 方法
+        - name: UpdatePackageSiteState 方法
           href: sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md
     - name: SMS_CM_UpdatePackDetailedMonitoring 服务器 WMI 类
       href: sum/sms_cm_updatepackdetailedmonitoring-server-wmi-class.md
@@ -2542,13 +2320,13 @@
     - name: SMS_SoftwareUpdate 服务器 WMI 类
       href: sum/sms_softwareupdate-server-wmi-class.md
       items:
-        - name: 类 SMS_SoftwareUpdate 中的 AcceptEULA 方法
+        - name: AcceptEULA 方法
           href: sum/accepteula-method-in-class-sms_softwareupdate.md
-        - name: 类 SMS_SoftwareUpdate 中的 GetEULA 方法
+        - name: GetEULA 方法
           href: sum/geteula-method-in-class-sms_softwareupdate.md
-        - name: 类 SMS_SoftwareUpdate 中的 SetEnforcement 方法
+        - name: SetEnforcement 方法
           href: sum/setenforcement-method-in-class-sms_softwareupdate.md
-        - name: 类 SMS_SoftwareUpdate 中的 SyncNow 方法
+        - name: SyncNow 方法
           href: sum/syncnow-method-in-class-sms_softwareupdate.md
     - name: SMS_SoftwareUpdateBase 服务器 WMI 类
       href: sum/sms_softwareupdatebase-server-wmi-class.md
@@ -2557,23 +2335,23 @@
     - name: SMS_SoftwareUpdatesPackage 服务器 WMI 类
       href: sum/sms_softwareupdatespackage-server-wmi-class.md
       items:
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 AddChangeNotification 方法
+        - name: AddChangeNotification 方法
           href: sum/addchangenotification-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 AddDistributionPoints 方法
+        - name: AddDistributionPoints 方法
           href: sum/adddistributionpoints-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 AddUpdateContent 方法
+        - name: AddUpdateContent 方法
           href: sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 RebuildPackage 方法
+        - name: RebuildPackage 方法
           href: sum/rebuildpackage-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 RefreshPkgSource 方法
+        - name: RefreshPkgSource 方法
           href: sum/refreshpkgsource-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 RemoveContent 方法
+        - name: RemoveContent 方法
           href: sum/removecontent-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 SetSourceSite 方法
+        - name: SetSourceSite 方法
           href: sum/setsourcesite-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 Unlock 方法
+        - name: Unlock 方法
           href: sum/unlock-method-in-class-sms_softwareupdatespackage.md
-        - name: 类 SMS_SoftwareUpdatesPackage 中的 ValidateNewPackageSource 方法
+        - name: ValidateNewPackageSource 方法
           href: sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md
     - name: SMS_SUMDeploymentAssetDetails 服务器 WMI 类
       href: sum/sms_sumdeploymentassetdetails-server-wmi-class.md
@@ -2596,31 +2374,28 @@
     - name: SMS_UpdatesAssignment 服务器 WMI 类
       href: sum/sms_updatesassignment-server-wmi-class.md
 - name: 支持服务器 WMI 类
-  href: misc/supporting-server-wmi-classes.md
   items:
     - name: SMS_ContextMethods 服务器 WMI 类
       href: misc/sms_contextmethods-server-wmi-class.md
       items:
-        - name: 类 SMS_ContextMethods 中的 ClearContextHandle 方法
+        - name: ClearContextHandle 方法
           href: misc/clearcontexthandle-method-in-class-sms_contextmethods.md
-        - name: 类 SMS_ContextMethods 中的 GetContextHandle 方法
+        - name: GetContextHandle 方法
           href: misc/getcontexthandle-method-in-class-sms_contextmethods.md
     - name: SMS_ExtendedStatus 服务器 WMI 类
       href: misc/sms_extendedstatus-server-wmi-class.md
     - name: SMS_NAL_Methods 服务器 WMI 类
       href: misc/sms_nal_methods-server-wmi-class.md
       items:
-        - name: 类 SMS_NAL_Methods 中的 PackNALPath 方法
+        - name: PackNALPath 方法
           href: misc/packnalpath-method-in-class-sms_nal_methods.md
-        - name: 类 SMS_NAL_Methods 中的 UnPackNALPath 方法
+        - name: UnPackNALPath 方法
           href: misc/unpacknalpath-method-in-class-sms_nal_methods.md
     - name: SMS_ProviderLocation 服务器 WMI 类
       href: misc/sms_providerlocation-server-wmi-class.md
 - name: 状态类
-  href: core/servers/manage/status-classes.md
   items:
     - name: 状态客户端 API
-      href: core/servers/manage/status-client-apis.md
       items:
         - name: Smscstat.dll 状态消息函数
           href: core/servers/manage/smscstat.dll-status-message-functions.md
@@ -2645,7 +2420,6 @@
             - name: ICCMEvent SubmitPending 方法
               href: core/servers/manage/iccmevent--submitpending-method.md
     - name: 状态消息类型
-      href: core/servers/manage/status-message-types.md
       items:
         - name: SMS_SofwareDistribution_Event
           href: core/servers/manage/sms_sofwaredistribution_event.md
@@ -2665,7 +2439,6 @@
         - name: InstallStatusMIFEx 函数
           href: core/servers/manage/installstatusmifex-function.md
     - name: 状态服务器 API
-      href: core/servers/manage/status-server-api.md
       items:
         - name: SMSFormatMessageCtl 类
           href: core/servers/manage/smsformatmessagectl-class.md
@@ -2677,12 +2450,11 @@
             - name: FormatSystemMessage 方法
               href: core/servers/manage/formatsystemmessage-method.md
     - name: 状态服务器 WMI 类
-      href: core/servers/manage/status-server-wmi-classes.md
       items:
         - name: SMS_ComponentSummarizer 服务器 WMI 类
           href: core/servers/manage/sms_componentsummarizer-server-wmi-class.md
           items:
-            - name: 类 SMS_ComponentSummarizer 中的 DeleteStatistics 方法
+            - name: DeleteStatistics 方法
               href: core/servers/manage/deletestatistics-method-in-class-sms_componentsummarizer.md
         - name: SMS_SecondarySiteStatus 服务器 WMI 类
           href: core/servers/manage/sms_secondarysitestatus-server-wmi-class.md
@@ -2707,48 +2479,46 @@
         - name: SMS_StatusMessage 服务器 WMI 类
           href: core/servers/manage/sms_statusmessage-server-wmi-class.md
           items:
-            - name: 类 SMS_StatusMessage 中的 DeleteByID 方法
+            - name: DeleteByID 方法
               href: core/servers/manage/deletebyid-method-in-class-sms_statusmessage.md
-            - name: 类 SMS_StatusMessage 中的 DeleteByQuery 方法
+            - name: DeleteByQuery 方法
               href: core/servers/manage/deletebyquery-method-in-class-sms_statusmessage.md
-            - name: 类 SMS_StatusMessage 中的 RaiseErrorStatusMsg 方法
+            - name: RaiseErrorStatusMsg 方法
               href: core/servers/manage/raiseerrorstatusmsg-method-in-class-sms_statusmessage.md
-            - name: 类 SMS_StatusMessage 中的 RaiseInformationalStatusMsg 方法
+            - name: RaiseInformationalStatusMsg 方法
               href: core/servers/manage/raiseinformationalstatusmsg-method-in-class-sms_statusmessage.md
-            - name: 类 SMS_StatusMessage 中的 RaiseRawStatusMsg 方法
+            - name: RaiseRawStatusMsg 方法
               href: core/servers/manage/raiserawstatusmsg-method-in-class-sms_statusmessage.md
-            - name: 类 SMS_StatusMessage 中的 RaiseWarningStatusMsg 方法
+            - name: RaiseWarningStatusMsg 方法
               href: core/servers/manage/raisewarningstatusmsg-method-in-class-sms_statusmessage.md
         - name: SMS_SummarizerRootStatus 服务器 WMI 类
           href: core/servers/manage/sms_summarizerrootstatus-server-wmi-class.md
           items:
-            - name: 类 SMS_SummarizerRootStatus 中的 GetTallyIntervals 方法
+            - name: GetTallyIntervals 方法
               href: core/servers/manage/gettallyintervals-method-in-class-sms_summarizerrootstatus.md
         - name: SMS_SummarizationSettings 服务器 WMI 类
           href: core/servers/manage/sms_summarizationsettings-server-wmi-class.md
           items:
-            - name: 类 SMS_SummarizationSettings 中的 GetSummarizationSettings 方法
+            - name: GetSummarizationSettings 方法
               href: core/servers/manage/getsummarizationsettings-method-in-class-sms_summarizationsettings.md
-            - name: 类 SMS_SummarizationSettings 中的 SetSummarizationSettings 方法
+            - name: SetSummarizationSettings 方法
               href: core/servers/manage/setsummarizationsettings-method-in-class-sms_summarizationsettings.md
         - name: SMS_SummarizerSiteStatus 服务器 WMI 类
           href: core/servers/manage/sms_summarizersitestatus-server-wmi-class.md
         - name: SMS_SummarizerStatus 服务器 WMI 类
           href: core/servers/manage/sms_summarizerstatus-server-wmi-class.md
-- name: Windows Azure 服务器 WMI 类
-  href: core/servers/configure/windows-azure-server-wmi-classes.md
+- name: Microsoft Azure 服务器 WMI 类
   items:
     - name: SMS_AzureService 服务器 WMI 类
       href: core/servers/configure/sms_azureservice-server-wmi-class.md
       items:
-        - name: 类 SMS_AzureService 中的 Start 方法
+        - name: Start 方法
           href: core/servers/configure/start-method-in-class-sms_azureservice.md
-        - name: 类 SMS_AzureService 中的 Stop 方法
+        - name: Stop 方法
           href: core/servers/configure/stop-method-in-class-sms_azureservice.md
     - name: SMS_AzureServicesTask 服务器 WMI 类
       href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
 - name: Windows 10 维护服务服务器 WMI 类
-  href: misc/windows-10-servicing-server-wmi-classes.md
   items:
     - name: SMS_AdminUIContent 服务器 WMI 类
       href: misc/sms-adminuicontent-server-wmi-class.md
