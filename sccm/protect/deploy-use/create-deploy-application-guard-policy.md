@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3859b56b71b7818baaf6f63e068c0dec80bba44
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
-ms.translationtype: HT
+ms.openlocfilehash: a21ef053cbd5f0a57d7688d69f29bc6f8871484a
+ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533611"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794734"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略
 
@@ -81,7 +81,7 @@ ms.locfileid: "68533611"
 <!--3555858-->
 从 Configuration Manager 版本1906开始, 有一个允许用户信任通常在应用程序防护中打开的文件的策略设置。 成功完成后，文件将在主机设备上打开，而不是在应用程序防护中打开。 有关应用程序防护策略的详细信息，请参阅[配置 Windows Defender 应用程序防护策略设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)。
 
-- **允许用户信任在 Windows Defender 应用程序防护中打开的文件**-使用户能够将文件标记为受信任。 当文件受信任时, 它会在主机而不是应用程序防护中打开。 适用于 Windows 10 版本1810或更高版本的客户端。
+- **允许用户信任在 Windows Defender 应用程序防护中打开的文件**-使用户能够将文件标记为受信任。 当文件受信任时, 它会在主机而不是应用程序防护中打开。 适用于 Windows 10 版本1809或更高版本的客户端。
   - **禁止：** 不允许用户将文件标记为可信（默认）。
   - **文件由防病毒软件检查:** 允许用户在防病毒检查后将文件标记为受信任。
   - **所有文件：** 允许用户将任何文件标记为可信。

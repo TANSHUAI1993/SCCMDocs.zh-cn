@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b92fad9054c50ea58caeb11e209cd04b6951493f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b78d8b6cd60f14843855d00ea44632b6feda3d90
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537116"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859823"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -1378,7 +1378,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 重启任务序列时，此变量的值仍然存在。 但任务序列会尝试发送初始状态消息。 该第一次尝试包含多次重试。 如果成功，任务序列会继续发送状态，不会考虑此变量的值。 如果状态发送失败，任务序列将使用此变量的值。
 
 > [!NOTE]  
-> [任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。
+> [任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。 如果状态消息无法发送, 则它们不会排队。 将连接还原到管理点时, 不会在以后发送连接。 此行为会导致任务序列状态报告为 "未完成" 和 "缺失项目"。
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
