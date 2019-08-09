@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a875c5deb30a94d91f7307f1044fc0eeea1f944a
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
-ms.translationtype: HT
+ms.openlocfilehash: 0a650fd5517fb86108d230cc997c8586520826e7
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712380"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743576"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>在 Configuration Manager 中批准应用程序
 
@@ -62,7 +62,7 @@ ms.locfileid: "68712380"
 <!--4336307-->
 从版本 1906 开始，可以重试安装之前为用户或设备批准的应用。 批准选项仅适用于可用部署。 如果用户卸载应用，或者初始安装过程失败，Configuration Manager 将不会重新评估其状态并重新安装。 此功能允许技术支持人员为需要帮助的用户快速重试应用安装。
 
-1. 打开 Configuration Manager console 用户具有应用程序对象的 "**批准**" 权限的用户。 例如，“应用程序管理员”或“应用程序作者”内置角色具有此权限   。
+1. 以具有应用程序对象的 "**批准**" 权限的用户身份打开 Configuration Manager 控制台。 例如，“应用程序管理员”或“应用程序作者”内置角色具有此权限   。
 
 1. 部署需要批准的应用并批准该应用。
 
@@ -140,7 +140,7 @@ ms.locfileid: "68712380"
 
     - 在 Azure AD 中手动配置设置：  
 
-        1. 以具有*全局管理员*权限的用户身份访问[Azure 门户](https://portal.azure.com)。 中转到**Azure Active Directory**, 然后选择 "**应用注册**"。  
+        1. 以拥有全局管理员  权限的用户身份转到 [Azure 门户](https://portal.azure.com)。 转到“Azure Active Directory”  并选择“应用注册”  。  
 
         2. 选择为 Configuration Manager“云管理”集成创建的应用程序  。  
 

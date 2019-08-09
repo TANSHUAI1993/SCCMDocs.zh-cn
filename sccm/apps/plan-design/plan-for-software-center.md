@@ -2,7 +2,7 @@
 title: 规划软件中心
 titleSuffix: Configuration Manager
 description: 确定你希望为用户配置软件中心和打造软件中心品牌并实现与 Configuration Manager 交互的方式。
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2384fb0584fde331cf8667822c81de51eb60cbf0
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 7fbd8f570fe0e6fad18b964220d5cb723e5fecad
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68534963"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859849"
 ---
 # <a name="plan-for-software-center"></a>规划软件中心
 
@@ -36,7 +36,7 @@ ms.locfileid: "68534963"
 > 对软件中心和管理点的这些迭代改进将停用应用程序目录角色。
 >
 > - 从当前分支版本 1806 开始，不支持 Silverlight 用户体验。
-> - 从1906版开始, 更新后的客户端自动将管理点用于用户可用的应用程序部署。 还不能安装新的应用程序目录角色。
+> - 自版本 1906 起，更新后的客户端自动使用管理点进行用户可用的应用程序部署。 你还无法安装新应用程序目录角色。
 > - 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 
 ### <a name="starting-in-version-1802"></a>自版本 1802 开始
@@ -130,6 +130,8 @@ ms.locfileid: "68534963"
 
 ![重启计算机的对话框窗口](media/3555947-restart-dialog.png)
 
+> [!IMPORTANT]
+> 在 Configuration Manager 1902 中, 在某些情况下, 对话框不会替换 toast 通知。 若要解决此问题, 请安装[Configuration Manager 版本1902的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
 
 ## <a name="branding-software-center"></a>打造软件中心品牌
 
@@ -156,7 +158,7 @@ Configuration Manager 根据以下属性应用自定义软件中心品牌：
 #### <a name="application-catalog-branding-priorities"></a>应用程序目录品牌优先级
 
 > [!Important]
-> 当前分支版本1806不支持应用程序目录的 Silverlight 用户体验。 从1906版开始, 更新后的客户端自动将管理点用于用户可用的应用程序部署。 还不能安装新的应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
+> 自 Current Branch 版本 1806 起，应用程序目录的 Silverlight 用户体验不受支持。 自版本 1906 起，更新后的客户端自动使用管理点进行用户可用的应用程序部署。 你还无法安装新应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 
 如果你使用的是应用程序目录, 则商标遵循以下优先级:  
 
