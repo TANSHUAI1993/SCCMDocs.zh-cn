@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ca011fda7227092f44961e5636ecf86b683129b
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b93e636ea690fa99fd2a0dfc63bd12932d2f7a5e
+ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536377"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794665"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -337,13 +337,6 @@ Configuration Manager 控制台提供下列命令行选项：
 （从版本 1906 中引入） 
 
 在“软件库”工作区中，展开“操作系统”，选择“任务序列”节点    。 编辑任务序列，然后选择或添加[安装包](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage)步骤。 如果包包含多个程序，则下拉列表现在按字母顺序对程序进行排序。
-
-#### <a name="multiselect-and-delete-packages"></a>多选和删除包
-<!--4616810-->
-（从版本 1906 中引入） 
-
-在“软件库”工作区，展开“应用程序管理”，然后选择“包”节点    。 选择多个包。 在功能区的包组中，现在可以一次删除多个包。
-
 
 #### <a name="task-sequences-tab-in-applications-node"></a>应用程序节点中的“任务序列”选项卡
 <!--4616810-->
