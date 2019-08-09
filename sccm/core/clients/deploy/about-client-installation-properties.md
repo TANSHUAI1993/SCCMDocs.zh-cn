@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feef839af1f51c4cbb291f4ed5bc6336da6409b3
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: e5526afcf826c29ff5cf5d55f730092ce3031a0b
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286865"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859801"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
@@ -488,7 +488,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 指定接收和处理 Configuration Manager 客户端计算机发送的状况消息的回退状态点。  
 
-有关回退状态点的详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)。  
+有关回退状态点的详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point)。  
 
 示例：`CCMSetup.exe FSP=SMSFP01`  
 

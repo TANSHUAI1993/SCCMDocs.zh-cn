@@ -5,18 +5,18 @@ description: 了解如何使用 Configuration Manager 和 Microsoft Intune 同�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/26/2019
+ms.date: 08/01/2019
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e0ae5c392acd03509f70c19f551731065bc4be2
-ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
+ms.openlocfilehash: 3710cc7178020af1d03bfd02953e2a2f3ed64f26
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873286"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743597"
 ---
 # <a name="what-is-co-management"></a>什么是共同管理？
 
@@ -29,10 +29,12 @@ ms.locfileid: "64873286"
 
 用户还可以使用单独的设备集合来试验工作负载。 借助试验功能，可以在切换大型组之前使用设备子集测试 Intune 功能。
 
-![共同管理的概述图](media/co-management-overview.png)
+![共同管理的概述图](media/co-management-overview.svg)
+
+[以完整尺寸查看关系图](media/co-management-overview.svg)
 
 > [!Note]  
-> 同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种配置称为“共同管理”。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种配置称为“共存”。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](#workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。 有关详细信息，请参阅[第三方 MDM 与 Configuration Manager 共存](/sccm/comanage/coexistence)。
+> 同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种配置称为“共同管理”  。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种配置称为“共存”  。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](#workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。 有关详细信息，请参阅[第三方 MDM 与 Configuration Manager 共存](/sccm/comanage/coexistence)。
 
 
 ## <a name="paths-to-co-management"></a>共同管理的路径
@@ -135,10 +137,10 @@ ms.locfileid: "64873286"
 <!--SCCMDocs issue #667-->
 | 操作 | 所需角色 |
 |----|----|
-| 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员 |
-| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员 |
-| 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员<br>无需任何其他的 Azure 角色 |
-| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员。<!--SCCMDoc issue 626--> |
+| 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员  |
+| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员  |
+| 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员 <br>无需任何其他的 Azure 角色 |
+| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员   。<!--SCCMDoc issue 626--> |
 
 要详细了解 Azure 角色，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
 

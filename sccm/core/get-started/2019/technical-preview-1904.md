@@ -10,17 +10,18 @@ ms.assetid: 34d0f753-7338-48d5-88a7-dba3f0441479
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d30a772965bfff8acc42bdbf6f1726e8b4c94cd0
-ms.sourcegitcommit: 8eccf5429aabcef17d5762e4b03912ccad1215e2
+ms.openlocfilehash: 5f47317a69b394afdc3e4f2a58c539b9496a6ff3
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64929009"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833136"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1904"></a>Configuration Manager Tech Preview 版本 1904 中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍了 Configuration Manager Tech Preview 版本 1904 中的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。
 
