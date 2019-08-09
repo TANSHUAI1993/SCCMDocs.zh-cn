@@ -2,7 +2,7 @@
 title: 预发行功能
 titleSuffix: Configuration Manager
 description: 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。
-ms.date: 11/27/2018
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab1c8e462e22206177e4907df3c5549ec9ba1692
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: bfcaa12634b313cc1d0071d76e704ed07fc06608
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194218"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536153"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -60,7 +60,7 @@ ms.locfileid: "67194218"
 
 
 
-## <a name="pre-release-features"></a>预发行功能
+## <a name="bkmk_table"></a>预发行功能
 
 <!--Note/tip for target article
 
@@ -69,16 +69,21 @@ ms.locfileid: "67194218"
 
 
 > [!Tip]  
-> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.  
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
 -->
 
-
+<!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | 功能          | 添加为预发行功能 | 添加为完整版功能 |  
 |------------------|----------------------|-------------------------|
-| SMS 提供程序 API <!--1359052--> | 版本 1810 | ![尚未发行](media/red_x.png) |
+| [任务序列调试器](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | 版本 1906 | ![尚未发行](media/red_x.png) |
+| [应用程序组](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | 版本 1906 | ![尚未发行](media/red_x.png) |
+| [Azure Active Directory 用户组发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| 版本 1906 | ![尚未发行](media/red_x.png) |
+| [将集合成员身份结果同步到 Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| 版本 1906| ![尚未发行](media/red_x.png)|
+| [CMPivot 独立应用](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890/4692885,no GUID--> | 版本 1906 | ![尚未发行](media/red_x.png) |
+| [SMS 提供程序管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) <!--1359052--> | 版本 1810 | 版本 1906 |
 | [增强型 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
-| [适用于共同管理设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
+| [适用于共同管理设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [SCAP 扩展](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
 | [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
@@ -87,16 +92,10 @@ ms.locfileid: "67194218"
 | [Windows Defender 攻击防护](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | 版本 1710 | 版本 1802 |
 | [用于条件访问符合性策略的设备运行状况证明评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | 版本 1710 | 版本 1802 |
 | [创建并运行 Windows PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | 版本 1706 | 版本 1802 |
-| [管理 Microsoft Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | 版本 1706 | 版本 1710 |
-| [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | 版本 1702 | ![尚未发行](media/red_x.png) |
-| [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | 版本 1702 | 版本 1710 |
-| [在安装应用程序前检查是否有正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check) <!--1284624--> | 版本 1702 | 版本 1706 |
-| [数据仓库服务点](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | 版本 1702 | 版本 1706 |
-| [用于向客户端进行内容分发的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | 版本 1610 | 版本 1710 |
+| [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | 版本 1702 | 版本 1906 |
 | [云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | 版本 1610 | 版本 1802 |
 | [Azure Log Analytics 连接器](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | 版本 1606 | 版本 1802 |
-| [维护群集感知集合（维护服务器组）](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | 版本 1602 | ![尚未发行](media/red_x.png) |
-| [用于 Configuration Manager 管理的电脑的条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | 版本 1602 | 版本 1702 |
+| [维护群集感知集合（服务器组）](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | 版本 1602 | ![尚未发行](media/red_x.png) |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 

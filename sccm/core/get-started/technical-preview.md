@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 07/11/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cb49531bd6d10106b17cca65218d7158c24dc3e
-ms.sourcegitcommit: 5a36200c738f20a78299a30723c8e613af71efce
+ms.openlocfilehash: 977f5cc2d9719a333aa4f063a6e4f9c505e82d3b
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843851"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535886"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -132,86 +132,18 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 > [!Note]  
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。  
 
+<!-- comment out until 1908.1 TP
+## Features in recent technical previews
 
-## <a name="features-in-recent-technical-previews"></a>最新的技术预览版中的功能
-
-以下是自最近一次分支发布以来的旧版 Configuration Manager 技术预览分支发布的功能：
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
 
 > [!Tip]  
-> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能  。 有关详细信息，请参阅[增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions)。
+> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions).
 
-<!-- This is the full list of new features in the past TP releases since the last CB release. 
-Each month, add features from the list above to a new H3 section at the top of this section. 
+<!-- This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
-
-### <a name="technical-preview-version-1906"></a>技术预览版 1906
-
-- [对维护任务的改进](/sccm/core/get-started/2019/technical-preview-1906#improvements-to-maintenance-tasks) <!--3555894-->
-- [Configuration Manager 更新数据库升级监视](/sccm/core/get-started/2019/technical-preview-1906#configuration-manager-update-database-upgrade-monitoring) <!--4200581-->
-- [用于共同管理工作负载的多个试点组](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt_pilot) <!--3555750-->
-- [重新为最新可用的软件设计了通知逻辑](/sccm/core/get-started/2019/technical-preview-1906#redesigned-notification-logic-for-newly-available-software) <!--3555904-->
-- [对文件夹的 RBAC](/sccm/core/get-started/2019/technical-preview-1906#rbac-on-folders) <!--3600867-->
-- [Azure Active Directory 用户组发现](/sccm/core/get-started/2019/technical-preview-1906#bkmk_aad-disco) <!--3611956-->
-- [使用云管理网关随时随地进行远程控制](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) <!--4575930-->
-- [对社区中心的改进](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) <!--3555935-->
-- [在 CMPivot 中添加联接、其他运算符和聚合器](/sccm/core/get-started/2019/technical-preview-1906#bkmk_cmpivot) <!--4054074-->
-- [对 CMPivot 的改进](/sccm/core/get-started/2019/technical-preview-1906#improvements-to-cmpivot) <!--4619340,4683130-->
-- [对 Configuration Manager 控制台的改进](/sccm/core/get-started/2019/technical-preview-1906#bkmk_console) <!--4223683-->
-- [对 Windows 虚拟桌面的支持](/sccm/core/get-started/2019/technical-preview-1906#bkmk_winsku) <!--3556025-->
-- [更频繁的重启倒计时通知](/sccm/core/get-started/2019/technical-preview-1906#more-frequent-countdown-notifications-for-restarts) <!--3976435-->
-- [使用设备令牌共同管理自动注册](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt) <!--4454491-->
-- [针对第三方更新目录的其他选项](/sccm/core/get-started/2019/technical-preview-1906#additional-options-for-third-party-update-catalogs) <!--4469002-->
-- [在任务序列期间清除客户端缓存中的应用内容](/sccm/core/get-started/2019/technical-preview-1906#bkmk_tscache) <!--4485675-->
-- [新的 Windows 10 1903 版以及更高版本产品类别](/sccm/core/get-started/2019/technical-preview-1906#new-windows-10-version-1903-and-later-product-category) <!--4682946-->
-- [NTLM 回退的管理见解规则](/sccm/core/get-started/2019/technical-preview-1906#bkmk_ntlm) <!--4572953-->
-- [筛选部署到设备的应用程序](/sccm/core/get-started/2019/technical-preview-1906#bkmk_appcategory) <!--4451056-->
-- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1906#bkmk_osd) <!--4668846, 2840337, 4512937-->
-- [直接指向软件中心自定义选项卡的链接](/sccm/core/get-started/2019/technical-preview-1906#bkmk_swctr) <!--4655176-->
-
-### <a name="technical-preview-version-1905"></a>技术预览版 1905
-
-- [改进了对 WSUS 维护的控制](/sccm/core/get-started/2019/technical-preview-1905#improved-control-over-wsus-maintenance) <!--4110109-->
-- [对 Configuration Manager 控制台的改进](/sccm/core/get-started/2019/technical-preview-1905#bkmk_console) <!--4616810-->
-- [配置软件更新的默认最长运行时间](/sccm/core/get-started/2019/technical-preview-1905#bkmk_timeout) <!--3734426-->
-- [Windows Defender 应用程序防护文件信任标准](/sccm/core/get-started/2019/technical-preview-1905#bkmk_wdag) <!--3555858-->
-- [应用程序组](/sccm/core/get-started/2019/technical-preview-1905#bkmk_app-group) <!--3555907-->
-- [作为应用模型部署类型的任务序列](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdt) <!--3555953-->
-- [BitLocker 管理](/sccm/core/get-started/2019/technical-preview-1905#bkmk_bitlocker) <!--3601034-->
-- [任务序列调试器](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdebug) <!--3612274-->
-- [客户端数据源仪表板中的传递优化](/sccm/core/get-started/2019/technical-preview-1905#bkmk_do) <!--3555759-->
-- [对社区中心的改进](/sccm/core/get-started/2019/technical-preview-1905#bkmk_hub) <!--4224401-->
-- [在设备列表中查看 SMBIOS GUID](/sccm/core/get-started/2019/technical-preview-1905#bkmk_smbios) <!--4526580-->
-- [OneTrace 日志查看器](/sccm/core/get-started/2019/technical-preview-1905#bkmk_onetrace) <!--3555962-->
-- [软件中心基础结构改进](/sccm/core/get-started/2019/technical-preview-1905#bkmk_swctr) <!--3555950-->
-- [对软件中心选项卡自定义项的改进](/sccm/core/get-started/2019/technical-preview-1905#improvements-to-software-center-tab-customizations) <!--4063773-->
-- [对应用审批的改进](/sccm/core/get-started/2019/technical-preview-1905#bkmk_approve) <!--4224910-->
-- [重试安装预先批准的应用程序](/sccm/core/get-started/2019/technical-preview-1905#bkmk_retry) <!--4336307-->
-- [为设备安装应用程序](/sccm/core/get-started/2019/technical-preview-1905#bkmk_device-app) <!--4402180-->
-- [更频繁的重启倒计时通知](/sccm/core/get-started/2019/technical-preview-1905#bkmk_restart) <!--3976435-->
-- [将集合成员身份结果同步到 Azure Active Directory 组](/sccm/core/get-started/2019/technical-preview-1905#bkmk_aadcollsync) <!--3607475-->
-- [配置客户端缓存最短保持期](/sccm/core/get-started/2019/technical-preview-1905#bkmk_cache) <!--4485509-->
-- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1905#bkmk_osd) <!--4512937,4224642-->
-- [添加 SQL AlwaysOn 节点](/sccm/core/get-started/2019/technical-preview-1905#bkmk_sqlao) <!--3127336-->
-
-### <a name="technical-preview-version-1904"></a>Tech Preview 版本 1904
-
-- [Office 365 专业增强版升级就绪情况仪表板](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) <!--4021125-->  
-- [配置功能更新的动态更新](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) <!--4062619-->  
-- [社区中心和 GitHub](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) <!--3555935,3555936-->  
-- [CMPivot 独立应用](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) <!--3555890-->  
-- [软件中心基础结构改进](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) <!--3555950-->  
-- [改进了对 WSUS 维护的控制](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) <!--4110109-->  
-- [预缓存驱动程序包和 OS 映像](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) <!--4224642-->  
-- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) <!--2839943,4447680-->  
-
-### <a name="technical-preview-version-1903"></a>技术预览版 1903
-
-- [云服务成本估算器](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) <!--3555774-->  
-- [将分发点用作传递优化的本地缓存服务器](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) <!--3555764-->  
-- [回收锁定以编辑任务序列](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) <!--3699337-->  
-- [深入查看所需更新](/sccm/core/get-started/2019/technical-preview-1903#bkmk_req-updates) <!--4224414-->  
-- [对任务序列媒体创建的改进](/sccm/core/get-started/2019/technical-preview-1903#bkmk_tsmedia) <!--4090666-->  
 
 
 ## <a name="features-in-previous-technical-previews"></a>旧版技术预览版中的功能
@@ -226,13 +158,20 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |  
 |----------------|---------------------------|
-| 从社区中心下载报表<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
+| 使用云管理网关随时随地进行远程控制 <!--4575930--> | [技术预览版 1906](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) |
+| 对社区中心的改进 <!--3555935--> | [技术预览版 1906](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) |
+| 针对第三方更新目录的其他选项 <!--4469002--> | [技术预览版 1906](/sccm/core/get-started/2019/technical-preview-1906#additional-options-for-third-party-update-catalogs) |
+| 作为应用模型部署类型的任务序列 <!--3555953--> | [技术预览版 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdt) |
+| BitLocker 管理 <!--3601034--> | [技术预览版 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_bitlocker) |
+| 对社区中心的改进 <!--4224401--> | [技术预览版 1905](/sccm/core/get-started/2019/technical-preview-1905#bkmk_hub) |
+| 社区中心和 GitHub <!--3555935--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) |
+| 云服务成本估算器 <!--3555774--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) |
+| 从社区中心下载报表 <!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
 | 社区中心 <!--3556020, fka 1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | 基于客户端的 PXE 响应者服务 <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE 网络启动对 IPv6 的支持 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | 使用 Azure Active Directory <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
 | 对资产智能的改进 <!--3601024, fka 1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
-| 最终用户可从公司门户安装应用 <!--3601249, fka 1037233--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
 
 
 ## <a name="see-also"></a>另请参阅  

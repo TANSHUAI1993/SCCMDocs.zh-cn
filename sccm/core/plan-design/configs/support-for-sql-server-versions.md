@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 710f9939b157c27d9eff6007d7f91cdef15889fe
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: b88ca3361390f8577dc44f2a3fd9640d5a49ad7d
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339400"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536815"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -182,53 +182,68 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 - 辅助站点  
 
 
+## <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置
 
-##  <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置  
-用于站点数据库（包括 SQL Server Express）的 SQL Server 的所有安装都需要以下内容。 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分进行安装时，将为你自动创建这些配置。  
+用于站点数据库（包括 SQL Server Express）的 SQL Server 的所有安装都需要以下配置。 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分进行安装时，将自动创建这些配置。  
 
-### <a name="sql-server-architecture-version"></a>SQL Server 体系结构版本  
+### <a name="sql-server-architecture-version"></a>SQL Server 体系结构版本
+
 Configuration Manager 需要 64 位版本的 SQL Server 以托管站点数据库。  
 
-### <a name="database-collation"></a>数据库排序规则  
+### <a name="database-collation"></a>数据库排序规则
+
 在每个站点上，用于站点和站点数据库的 SQL Server 实例必须使用以下排序规则：**SQL_Latin1_General_CP1_CI_AS**。  
 
-Configuration Manager 支持对此排序规则的两种例外情况，以满足在 GB18030 中定义的标准，以便在中国使用。 有关详细信息，请参阅[国际支持](/sccm/core/plan-design/hierarchy/international-support)。  
+对于中国 GB18030 标准，Configuration Manager 支持此排序规则的两个例外情况。 有关详细信息，请参阅[国际支持](/sccm/core/plan-design/hierarchy/international-support)。  
 
-### <a name="database-compatibility-level"></a>数据库兼容性级别   
-Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266--> 
+### <a name="database-compatibility-level"></a>数据库兼容性级别
 
-### <a name="sql-server-features"></a>SQL Server 功能  
+Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266-->
+
+### <a name="sql-server-features"></a>SQL Server 功能
+
 仅“数据库引擎服务”  功能是每个站点服务器所必需的。  
 
 Configuration Manager 数据库复制不需要“SQL Server 复制”  功能。 但是，当你使用[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)时，则需进行此 SQL Server 配置。  
 
-### <a name="windows-authentication"></a>Windows 身份验证  
+### <a name="windows-authentication"></a>Windows 身份验证
+
 Configuration Manager 需要“Windows 身份验证”  来验证与数据库的连接。  
 
-### <a name="sql-server-instance"></a>SQL Server 实例  
+### <a name="sql-server-instance"></a>SQL Server 实例
+
 为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例  或默认实例  。  
 
-### <a name="sql-server-memory"></a>SQL Server 内存  
-通过使用 SQL Server Management Studio 和设置“服务器内存选项”  下的“最小服务器内存”  设置来保留 SQL Server 的内存。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
+### <a name="sql-server-memory"></a>SQL Server 内存
+
+使用 SQL Server Management Studio 保留用于 SQL Server 的内存。 在“服务器内存选项”下设置“最小服务器内存”   。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
 - **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 50% 到 80%。  
 
-- **专用的数据库服务器（远离站点服务器）** ：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 80% 到 90%。  
+- **对于专用的数据库服务器（远离站点服务器）** ：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 80% 到 90%。  
 
 - 对于使用中的每个 SQL Server 实例的缓冲池内存预留  ：  
 
-  - 对于中央管理站点：设置至少 8 千兆字节 (GB)。  
-  - 对于主站点：设置至少 8 千兆字节 (GB)。  
-  - 对于辅助站点：设置至少 4 千兆字节 (GB)。  
+  - 对于中央管理站点：至少设置 8 GB。  
+  - 对于主站点：至少设置 8 GB。  
+  - 对于辅助站点：至少设置 4 GB。  
 
-### <a name="sql-nested-triggers"></a>SQL 嵌套触发器  
-必须启用 SQL 嵌套触发器。 有关详细信息，请参阅[配置嵌套触发器服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) 
+### <a name="sql-nested-triggers"></a>SQL 嵌套触发器
 
-### <a name="sql-server-clr-integration"></a>SQL Server CLR 集成  
+必须启用 SQL 嵌套触发器。 有关详细信息，请参阅[配置嵌套触发器服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+
+### <a name="sql-server-clr-integration"></a>SQL Server CLR 集成
+
 站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 此选项在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
-站点间复制和单个主站点都需要 SQL Server Service Broker。 
+
+站点间复制和单个主站点都需要 SQL Server Service Broker。
+
+### <a name="trustworthy-setting"></a>可信设置
+
+Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。 Configuration Manager 要求此属性为“打开”  。
+
 
 ##  <a name="bkmk_optional"></a> SQL Server 可选配置  
 以下配置对使用完整 SQL Server 安装的每个数据库是可选的。  

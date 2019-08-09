@@ -2,7 +2,7 @@
 title: 管理分发点
 titleSuffix: Configuration Manager
 description: 使用分发点托管部署到设备和用户的内容。
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bcdf4e593d2c39fed19f0b01045cab32f921da
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 49be9ccc0f44656752de18f4814b91c0c0d25f66
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818168"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536484"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -72,6 +72,7 @@ ms.locfileid: "67818168"
 从[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)的常规过程开始。 在“创建站点系统服务器”向导的“系统角色选择”页上选择“分发点”角色   。 此操作将以下页面添加到向导：  
 
 - [分发点](#bkmk_config-general)
+- [通信](#bkmk_config-comm)
 - [驱动器设置](#bkmk_config-drive)
 - [拉取分发点](#bkmk_config-pull)
 - [PXE 设置](#bkmk_config-pxe)
@@ -167,7 +168,7 @@ ms.locfileid: "67818168"
 
 许多客户都有大型的 Configuration Manager 基础结构，并且正在减少主站点或辅助站点来简化其环境。 他们仍需要在分支机构位置保留分发点，以向托管客户提供内容。 这些分发点通常包含多个 TB 或更多的内容。 将此内容分发到这些远程服务器所需的时间和网络带宽成本高昂。
 
-从 1802 版开始，此功能允许向其他主站点重新分配分发点，而无需重新分发内容。 此操作可更新站点系统分配，同时在服务器上保留所有内容。 如果需要重新分配多个分发点，请首先对一个分发点执行此操作。 然后继续对其他服务器执行操作（一次一个）。
+此功能允许向其他主站点重新分配分发点，而无需重新分发内容。 此操作可更新站点系统分配，同时在服务器上保留所有内容。 如果需要重新分配多个分发点，请首先对一个分发点执行此操作。 然后继续对其他服务器执行操作（一次一个）。
 
 > [!IMPORTANT]  
 > 目标服务器只能托管分发点角色。 如果站点系统服务器承载其他 Configuration Manager 服务器角色，例如状态迁移点，则无法重新分配分发点。 无法重新分配云分发点。
@@ -255,6 +256,7 @@ ms.locfileid: "67818168"
 当[安装新分发点](#bkmk_install-procedure)或[编辑现有分发点](#bkmk_change-procedure)时，以下各节介绍了分发点配置：  
 
 - [常规设置](#bkmk_config-general)
+- [通信](#bkmk_config-comm)
 - [驱动器设置](#bkmk_config-drive)
 - [防火墙设置](#bkmk_firewall)
 - [拉取分发点](#bkmk_config-pull)
@@ -275,7 +277,12 @@ ms.locfileid: "67818168"
 
 ### <a name="bkmk_config-general"></a>常规  
 
+> [!Note]  
+> 在版本 1902 及更早版本中，此页包含 HTTP/HTTPS 和证书的更多设置。 从版本 1906 开始，这些设置现在位于[通信](#bkmk_config-comm)页上。
+
 以下设置位于“创建站点系统服务器”向导的“分发点”页和分发点属性窗口的“常规”选项卡上   ：  
+
+- **描述**：此分发点角色的可选描述。  
 
 - **在 Configuration Manager 要求的情况下安装和配置 IIS**：如果服务器上尚未安装 IIS，Configuration Manager 将安装并配置它。 Configuration Manager 在所有分发点上都需要 IIS。 如果未选择此设置，并且服务器上未安装 IIS，需要先安装 IIS，Configuration Manager 才能成功安装分发点。  
 
@@ -301,7 +308,17 @@ ms.locfileid: "67818168"
         - 包含更新 KB4132216 和 KB4284833 的 Windows Server 2016
         - Windows Server 2019  
 
-- **描述**：此分发点角色的可选描述。  
+- **为预留内容启用此分发点**：使用此设置可在分发软件之前向服务器添加内容。 由于内容文件已在内容库中，因此，当分发软件时，不会通过网络传输内容文件。 有关详细信息，请参阅[预留内容](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)。  
+
+- **使此分发点能够用作传递优化网络内缓存服务器**：从版本 1906 开始，可以在分发点上安装传递优化网络内缓存 (DOINC) 服务器。 通过将此内容缓存在本地，你的客户端可以从传递优化功能中受益，但你可帮助保护 WAN 链接。 有关详细信息（包括其他设置的说明），请参阅 [Configuration Manager 中的传递优化网络内缓存](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache)。
+
+
+### <a name="bkmk_config-comm"></a>通信
+
+> [!Note]  
+> 从版本 1906 开始，以下设置位于“通信”  选项卡上。在版本 1902 及更早版本中，这些设置位于[常规](#bkmk_config-general)选项卡上。
+
+以下设置位于“创建站点系统服务器”向导和分发点属性窗口的“通信”页上  ：  
 
 - **配置客户端设备与分发点通信的方式**：使用 HTTP 或 HTTPS 有一些优点和缺点   。 有关详细信息，请参阅[内容管理的最佳安全做法](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement)。  
 
@@ -334,8 +351,6 @@ ms.locfileid: "67818168"
     有关证书要求的详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
 
     有关此证书的部署示例，请参阅[为分发点部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)。  
-
-- **为预留内容启用此分发点**：使用此设置可在分发软件之前向服务器添加内容。 由于内容文件已在内容库中，因此，当分发软件时，不会通过网络传输内容文件。 有关详细信息，请参阅[预留内容](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)。  
 
 ### <a name="bkmk_config-drive"></a>驱动器设置  
 

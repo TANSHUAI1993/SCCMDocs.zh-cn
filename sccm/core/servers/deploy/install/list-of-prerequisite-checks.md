@@ -2,7 +2,7 @@
 title: 先决条件检查
 titleSuffix: Configuration Manager
 description: Configuration Manager 更新特定先决条件检查的参考。
-ms.date: 04/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79730167346490350a7536c6badb5f0bc0fa85f4
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 85d868793f876d2b749eb5cfc1376278699e2a7d
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252279"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536433"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -374,6 +374,20 @@ Configuration Manager 不支持网络 (NLB) 上的软件更新点或硬件负载
 适用范围：  站点数据库服务器
 
 使用 SQL Server Always On 时，可用性组副本位于默认实例。
+
+### <a name="sql-availability-group-replicas-must-all-have-the-same-seeding-mode"></a>SQL 可用性组副本必须都具有相同的种子设定模式
+
+<!-- SCCMDocs-pr#3899 -->
+适用范围：  站点数据库服务器
+
+从版本 1906 开始，使用 SQL Server Always On 时，需要使用相同的[种子设定模式](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)配置可用性组副本。
+
+### <a name="sql-availability-group-replicas-must-be-healthy"></a>SQL 可用性组副本必须正常运行
+
+<!-- SCCMDocs-pr#3899 -->
+适用范围：  站点数据库服务器
+
+从版本 1906 开始，使用 SQL Server Always On 时，可用性组副本处于正常运行状态。
 
 ### <a name="sql-server-configuration-for-site-upgrade"></a>用于站点升级的 SQL Server 配置
 

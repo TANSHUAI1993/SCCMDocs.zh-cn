@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 05/24/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 704e9ea1c8ddaf8cfebf1377381f6f345a9f7ea1
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 19275385c75477c1c0da24109d6a9c601c5aa8d0
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339714"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604550"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -368,7 +368,7 @@ CMPivot 包括以下标量运算符：
 
 ### <a name="cmpivot-audit-status-messages"></a>CMPivot 审核状态消息
 
-从版本 1810 开始，运行 CMPivot 时，MessageID 40805 会创建审核状态消息  。 可通过转到“监视” < “系统状态” < “状态消息查询”    查看状态消息。 可为指定用户运行所有审核状态消息，为指定站点运行所有审核状态消息，或创建自己的状态消息查询   。
+从版本 1810 开始，运行 CMPivot 时，MessageID 40805 会创建审核状态消息  。 可通过转到“监视” > “系统状态” > “状态消息查询”    查看状态消息。 可为指定用户运行所有审核状态消息，为指定站点运行所有审核状态消息，或创建自己的状态消息查询   。
 
 消息使用以下格式：
 
@@ -445,6 +445,111 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 1. 重启主 SQL Server。
 1. 重启 CAS 站点服务器和 CAS SQL Server。
 
+## <a name="bkmk_cmpivot1906"></a> 从版本 1906 开始的 CMPivot
+
+从版本 1906 开始，已向 CMPivot 添加以下项：
+
+- [联接、其他运算符和聚合器](#bkmk_cmpivot_joins)
+- [已向安全管理员角色添加 CMPivot 权限](#bkmk_cmpivot_secadmin1906)
+- [CMPivot 独立应用](#bkmk_standalone)已添加为预发行功能 
+
+### <a name="bkmk_cmpivot_joins"></a> 在 CMPivot 中添加联接、其他运算符和聚合器
+<!--4054074-->
+你现在有更多的算术运算符和聚合器，还可以添加查询联接（例如可以同时使用注册表和文件）。 已添加以下项：
+
+#### <a name="table-operators"></a>表运算符
+
+|表运算符| 说明|
+|-----|-----|
+| [联接](https://docs.microsoft.com/azure/kusto/query/joinoperator)| 通过匹配同一设备的行来合并两个表的行，以便形成新的表|
+|呈现|将结果呈现为图形输出|
+
+CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句的支持  。 有关详细信息，请参阅[示例](#bkmk_cmpivot_examples1906)部分和 Kusto 的[联接运算符](https://docs.microsoft.com/azure/kusto/query/joinoperator)一文。
+
+#### <a name="limitations-for-joins"></a>联接的限制
+
+1. 联接列始终在“Device”字段上隐式完成  。
+1. 每个查询最多可使用 5 个联接。
+1. 最多可使用 64 个合并列。
+
+#### <a name="scalar-operators"></a>标量运算符
+
+|运算符| 说明|示例|
+|-----|-----|-----|
+| + | 添加| `2 + 1, now() + 1d`|
+| - |  减| `2 - 1, now() - 1d`|
+| * | 乘| `2 * 2`|
+| / | 除 | `2 / 1`|
+| % | 取模 | `2 % 1`
+
+#### <a name="aggregation-functions"></a>聚合函数
+
+|函数| 说明|
+|-----|-----|
+| percentile()| 针对由 Expr 定义的填充，返回其中指定的最接近排名百分位数的估计值|
+| sumif() | 返回谓词计算结果为 True 的 Expr 总和|
+
+#### <a name="scalar-functions"></a>标量函数
+
+|函数| 说明|
+|-----|-----|
+| case()| 计算谓词的列表，并返回满足其谓词的第一个结果表达式 |
+| iff() | 计算第一个参数，并根据谓词计算结果为 True（第二个）还是 False（第三个），返回第二个或第三个参数的值|
+ | indexof() | 该函数报告输入字符串中指定字符串第一次出现时从零开始的索引|
+| strcat() | 连接 1 个到 64 个自变量 |
+| strlen()| 返回输入字符串的长度（以字符为单位）|
+| substring() | 从源字符串中提取从某个索引开始到字符串结尾的 substring |
+| tostring() | 将输入转换为字符串操作 |
+
+#### <a name="bkmk_cmpivot_examples1906"></a> 示例
+
+- 显示设备、制造商、模型和 OSVersion：
+
+   ```Kusto
+   ComputerSystem
+   | project Device, Manufacturer, Model
+   | join (OperatingSystem | project Device, OSVersion=Caption)
+   ```
+
+- 显示设备的启动时间图：
+
+   ```Kusto
+   SystemBootData
+   | where Device == 'MyDevice'
+   | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
+   | order by SystemStartTime desc
+   | render barchart with (kind=stacked, title='Boot times for MyDevice', ytitle='Time (ms)')
+   ```
+
+   ![以毫秒为单位显示设备启动时间的堆积条形图](./media/4054074-render-using-with-statement.png)
+
+### <a name="bkmk_cmpivot_secadmin1906"></a> 已向安全管理员角色添加 CMPivot 权限
+<!--4683130-->
+
+从版本 1906 开始，已向 Configuration Manager 的内置安全管理员角色添加以下权限  ：
+ - 读取 SMS 脚本
+ - 在集合上运行 CMPivot
+ - 读取清单报表
+
+### <a name="bkmk_standalone"></a> CMPivot 独立应用
+<!--3555890, 4619340, 4683130 -->
+
+从版本 1906 开始，可以将 CMPivot 用作独立应用。 CMPivot 独立应用是[预发行功能](/sccm/core/servers/manage/pre-release-features#bkmk_table)，只提供英语版本。 在 Configuration Manager 控制台外部运行 CMPivot，可以查看环境中设备的实时状态。 借助此变化，无需先安装控制台，即可在设备上使用 CMPivot。
+
+可以与其他尚未在计算机上安装控制台的角色（如支持人员或安全管理员）共享功能强大的 CMPivot。 这些其他角色可以将 CMPivot 与他们传统上使用的其他工具并行使用，以查询 Configuration Manager。 通过共享此类丰富的管理数据，你们可以一起工作，共同主动解决跨角色的业务问题。
+
+#### <a name="install-cmpivot-standalone"></a>安装 CMPivot 独立应用
+
+1. 设置运行 CMPivot 所需的权限。 有关详细信息，请参阅[先决条件](#prerequisites)。 如果这些权限适用于用户，则还可以使用[安全管理员角色](#bkmk_cmpivot_secadmin1906)。
+2. 在下面的路径找到 CMPivot 应用安装程序：`<site install path>\tools\CMPivot\CMPivot.msi`。 可以从此路径运行它，也可以将其复制到其他位置。
+3. 运行 CMPivot 独立应用时，系统将要求你连接到站点。 指定管理中心或主站点服务器的完全限定的域名或计算机名。
+   - 每次打开 CMPivot 时，系统将提示你连接到站点服务器。
+4. 浏览到要在其上运行 CMPivot 的集合，然后运行查询。
+
+   ![浏览到要对其运行查询的集合](./media/3555890-cmpivot-standalone-browse-collection.png)
+
+> [!NOTE]
+> 右键单击操作（例如，“运行脚本”  和“资源浏览器”  ）在 CMPivot 独立应用中不可用。
 
 ## <a name="inside-cmpivot"></a>深入了解 CMPivot
 

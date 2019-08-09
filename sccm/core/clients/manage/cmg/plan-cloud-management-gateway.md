@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 06/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,19 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dadd289c0a275964273d27c5b9685c1fa7f08e6
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 43145e7f94fb381d1051ddb7de09367f4f69d556
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286782"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535608"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
 <!--1101764-->
-云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。
+云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他本地基础结构。 也不需要将本地基础结构向 Internet 公开。
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
@@ -47,7 +47,7 @@ ms.locfileid: "67286782"
     - 清单和客户端状态
     - 符合性设置
     - 到设备的软件分发
-    - Windows 10 就地升级任务序列（自版本 1802 起）
+    - Windows 10 就地升级任务序列
 
 - 使用现代身份管理传统 Windows 10 客户端，可以是加入云域的混合 Azure Active Directory (Azure AD) 或纯 Azure Active Directory (Azure AD)。 客户端使用 Azure AD 进行身份验证而不是使用 PKI 证书。 Azure AD 的设置、配置和维护比复杂的 PKI 系统更简单。 管理活动与第一种方案相同，加上：  
     - 到用户的软件分发  
@@ -171,14 +171,12 @@ CMG 部署和操作包括以下组件：
 
 - 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型  。 有关详细信息，请参阅 [CMG 证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
-    - 在 1802 版中，必须将所有启用了 CMG 的[管理点配置为使用 HTTPS  ](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
-
-    - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
+    从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
 - 在 Configuration Manager 版本 1810 或更早版本中，如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt)。   
 
     > [!TIP]  
-    > 从 Configuration Manager 版本 1802 开始，使用 Azure 资源管理器部署模型  。 它不需要此管理证书。
+    > 使用“Azure 资源管理器”部署模型  。 它不需要此管理证书。
     >
     > 从版本 1810 开始弃用经典部署方法。  
 
@@ -195,7 +193,7 @@ CMG 部署和操作包括以下组件：
 
 - 使用网络负载均衡器的软件更新点不适用于 CMG。 <!--505311-->  
 
-- 从版本 1802 起，使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- 使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager 功能支持
 
@@ -212,14 +210,13 @@ CMG 部署和操作包括以下组件：
 | 客户端安装<br>（带 Azure AD 集成）     | ![支持](media/green_check.png) |
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |
 | 软件分发（以用户为目标，必需）<br>（带 Azure AD 集成）     | ![支持](media/green_check.png) |
-| 软件分发（以用户为目标，可用）<br>（[所有要求](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png)  (1802) |
-| Windows 10 就地升级任务序列      | ![支持](media/green_check.png)  (1802) |
-| 不使用启动映像并使用选项部署的任务序列：**启动任务序列之前在本地下载所有内容**      | ![支持](media/green_check.png)  (1802) |
+| 软件分发（以用户为目标，可用）<br>（[所有要求](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png) |
+| Windows 10 就地升级任务序列      | ![支持](media/green_check.png) |
+| 不使用启动映像并使用选项部署的任务序列：**启动任务序列之前在本地下载所有内容**      | ![支持](media/green_check.png) |
 | CMPivot     | ![支持](media/green_check.png)  (1806) |
 | 任何其他任务序列方案     | ![不支持](media/Red_X.png) |
 | 客户端推送     | ![不支持](media/Red_X.png) |
 | 自动站点分配     | ![不支持](media/Red_X.png) |
-| 应用程序目录     | ![不支持](media/Red_X.png) |
 | 软件批准请求     | ![不支持](media/Red_X.png) |
 | Configuration Manager 控制台     | ![不支持](media/Red_X.png) |
 | 远程工具     | ![不支持](media/Red_X.png) |
@@ -272,6 +269,8 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
     > [!NOTE]  
     > 执行其他操作（例如，部署软件更新或应用程序）时，从 Azure 传输的出站数据量会增加。
+
+-  如果用于验证客户端证书吊销的 CMG 选项配置错误，可能会导致从客户端到 CMG 的额外流量。 这种额外的流量可能会增加 Azure 流出量数据，从而增加 Azure 成本。<!-- SCCMDocs#1434 --> 有关详细信息，请参阅[发布证书吊销列表](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl)。  
 
 ### <a name="content-storage"></a>内容存储
 

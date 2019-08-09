@@ -1,7 +1,7 @@
 ---
 title: 安装向导
 titleSuffix: Configuration Manager
-ms.date: 05/23/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e69dbd246e9989494db95cfe5996862c7772822b
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: e424254af1068bdb6f637f38622dc737528702b4
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198483"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536259"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>使用安装向导安装 Configuration Manager 站点
 
@@ -25,13 +25,29 @@ ms.locfileid: "66198483"
 
 在 Configuration Manager 控制台中安装辅助站点。 辅助站点不支持脚本化的命令行安装。
 
+> [!Note]  
+> 从版本 1906 开始，  splash.hta 文件不再存在于安装介质的根目录中。 它提供以下信息的链接：<!--SCCMDocs-pr#3545-->
+>
+> - **安装站点**：`smssetup\bin\x64\setup.exe` 有关详细信息，请参阅[安装管理中心站点或主站点](#bkmk_primary)。
+> - **开始之前**：[设计站点层次结构](/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
+> - **评估服务器准备情况**：[先决条件检查程序](/sccm/core/servers/deploy/install/prerequisite-checker) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
+> - **下载所需的先决条件文件**：`smssetup\bin\x64\setupdl.exe`。 有关详细信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。
+> - **安装 Configuration Manager 控制台**：`smssetup\bin\i386\consolesetup.exe`。 有关详细信息，请参阅[安装控制台](/sccm/core/servers/deploy/install/install-consoles)。
+> - [**下载 System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
+> - [**下载其他操作系统的客户端**](https://www.microsoft.com/download/details.aspx?id=47719) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+> - [**发行说明**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**阅读文档**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - **获取安装帮助**：[TechNet 论坛：Configuration Manager (Current Branch) – 站点和客户端部署](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
+> - **Configuration Manager 社区**：[System Center 社区：如何参与](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
+> - [**Configuration Manager 主页**](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
 
 ## <a name="bkmk_primary"></a> 安装管理中心站点或主站点
 
-使用下面的过程安装管理中心站点或主站点。 还可以使用它将评估站点升级到获得完整许可的 Configuration Manager 站点。   
+使用下面的过程安装管理中心站点或主站点。 还可以使用它将评估站点升级到获得完整许可的 Configuration Manager 站点。
 
 开始安装站点前，请先熟悉以下文章中的详细信息：
+
 - [安装站点的准备工作](/sccm/core/servers/deploy/install/prepare-to-install-sites)
 - [安装站点的先决条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites)
 
@@ -60,7 +76,7 @@ ms.locfileid: "66198483"
 
         > [!TIP]  
         > 通常，当想要在测试环境中安装独立主站点时，你只需选择“为独立主站点使用典型安装选项”  选项即可。 当选择此选项时，安装程序将执行以下操作：  
-        > 
+        >
         > - 将站点自动配置为独立主站点。  
         > - 使用默认安装路径。  
         > - 对站点数据库使用 SQL Server 默认实例的本地安装。  
@@ -77,8 +93,8 @@ ms.locfileid: "66198483"
 
     - 此外可以指定许可协议的软件保障到期日期  。 它可以方便地就该日期进行提醒。 如果在设置期间未输入此日期，则稍后可在 Configuration Manager 控制台中指定。  
 
-        > [!NOTE]   
-        > Microsoft 不会验证所输入的到期日期，且不会使用此日期验证许可证。 可以使用该日期作为到期日期提醒。 此日期很有用，因为 Configuration Manager 定期检查在线提供的新软件更新。 软件保障许可证状态应该处于最新状态，以便有资格使用这些额外的更新。    
+        > [!NOTE]  
+        > Microsoft 不会验证所输入的到期日期，且不会使用此日期验证许可证。 可以使用该日期作为到期日期提醒。 此日期很有用，因为 Configuration Manager 定期检查在线提供的新软件更新。 软件保障许可证状态应该处于最新状态，以便有资格使用这些额外的更新。  
 
     有关详细信息，请参阅[许可和分支](/sccm/core/understand/learn-more-editions)。  
 
@@ -104,11 +120,11 @@ ms.locfileid: "66198483"
 
 10. 在“站点和安装设置”  页上，为要安装的新站点指定以下设置：  
 
-    - **站点代码**：[层次结构中的每个站点代码都必须是唯一的](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes)。 使用三个字母数字：A 到 Z 和 0 到 9。 由于文件夹名称中使用了站点代码，因此请勿使用 Windows 保留的名称，包括：    
+    - **站点代码**：[层次结构中的每个站点代码都必须是唯一的](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes)。 使用三个字母数字：A 到 Z 和 0 到 9。 由于文件夹名称中使用了站点代码，因此请勿使用 Windows 保留的名称，包括：  
         - AUX  
-        - CON    
-        - NUL    
-        - PRN    
+        - CON  
+        - NUL  
+        - PRN  
         - SMS  
 
         > [!NOTE]  
@@ -211,7 +227,7 @@ ms.locfileid: "66198483"
 
     - 如果必备组件检查程序发现问题，请选择列表中的项目，详细了解如何解决该问题。  
 
-    - 在继续安装站点之前，请解决“失败”  项。 还应解决状态为“警告”  的项目，但它们不会阻止站点安装。  
+    - 在继续安装站点之前，请解决“失败”  项。 还应尝试解决状态为“警告”  的项目，但它们不会阻止站点安装。  
 
     - 解决问题后，选择“运行检查”  以重新运行必备组件检查程序。  
 
@@ -227,10 +243,9 @@ ms.locfileid: "66198483"
     - 安装完成后，可以连接可编辑对象和设置的控制台。  
 
 
-
 ## <a name="bkmk_expand"></a>扩展独立主站点
 
-安装好独立主站点作为第一个站点后，稍后可通过安装管理中心站点将该站点扩展到更大的层次结构中。   
+安装好独立主站点作为第一个站点后，稍后可通过安装管理中心站点将该站点扩展到更大的层次结构中。
 
 扩展独立主站点时，将会安装新的管理中心站点，此站点使用现有独立主站点的数据库作为引用。 安装新管理中心站点后，独立主站点将充当子级主站点。
 
@@ -242,7 +257,6 @@ ms.locfileid: "66198483"
 
 - 若要从具有管理中心站点的层次结构中删除主站点，请先卸载此主站点。  
 
-
 若要扩展该站点，请使用“Configuration Manager 安装向导”以安装新的管理中心站点，但必须注意以下几点：  
 
 - 使用相同版本的 Configuration Manager 将管理中心站点安装为独立主站点。  
@@ -253,10 +267,7 @@ ms.locfileid: "66198483"
 
 - 在“站点安装”  页上，选择扩展独立主站点的选项。  
 
-
 若要扩展独立主站点，首先查看[扩展站点的先决条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)。 然后使用本文前面部分介绍的[安装主站点或管理中心站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_installpri)过程。
-
-
 
 
 ## <a name="bkmk_secondary"></a>安装辅助站点
@@ -268,7 +279,6 @@ ms.locfileid: "66198483"
 - 在启动站点安装之前，请确保用户帐户具有必备权限。 此外确保托管新辅助站点的服务器满足用作辅助站点服务器的所有先决条件。  
 
 - 安装辅助站点时，Configuration Manager 将配置新站点以使用父级主站点上配置的客户端通信端口。  
-
 
 ### <a name="bkmk_installsecondary"></a> 安装辅助站点的过程  
 
@@ -282,9 +292,9 @@ ms.locfileid: "66198483"
 
     - **站点代码**：层次结构中的每个站点代码都必须是唯一的。 使用三个字母数字：A 到 Z 和 0 到 9。 由于文件夹名称中使用了站点代码，因此请勿使用 Windows 保留的名称，包括：  
 
-        - AUX    
-        - CON    
-        - NUL    
+        - AUX  
+        - CON  
+        - NUL  
         - PRN  
         - SMS  
 
@@ -312,13 +322,13 @@ ms.locfileid: "66198483"
         - CD.Latest 源文件位置包括一个名为“Redist”  的文件夹。 将此“Redist”  文件夹作为子文件夹移动到“SMSSETUP”  文件夹下。  
 
             > [!Note]  
-            > 如果在安装过程中出现哈希不匹配错误，请更新“Redist”  文件夹。 使用[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)获取最新文件。 此外，对于任何导致哈希不匹配错误的文件，请将它们从更新的“Redist”  文件夹复制到“SMSSETUP\BIN\X64”  文件夹。 
+            > 如果在安装过程中出现哈希不匹配错误，请更新“Redist”  文件夹。 使用[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)获取最新文件。 此外，对于任何导致哈希不匹配错误的文件，请将它们从更新的“Redist”  文件夹复制到“SMSSETUP\BIN\X64”  文件夹。
 
     - **1806 版及更高版本**<!-- SCCMDocs-pr issue 3164 -->
 
         - CD.Latest 源文件位置包括一个名为“Redist”  的文件夹。 将此“Redist”  文件夹作为子文件夹移动到“SMSSETUP”  文件夹下。  
 
-        - 将以下文件从“Redist”  文件夹复制到“SMSSETUP\BIN\X64”  文件夹：   
+        - 将以下文件从“Redist”  文件夹复制到“SMSSETUP\BIN\X64”  文件夹：  
             - SharedManagementObjects.msi
             - SQLSysClrTypes.msi
             - sqlncli.msi
@@ -400,7 +410,6 @@ ms.locfileid: "66198483"
 
 11. 在“摘要”  页上，验证设置，然后选择“下一步”  以安装辅助站点。 当向导显示“完成”  页面时，可以关闭向导。 辅助站点安装将在后台继续进行。  
 
-
 ### <a name="bkmk_verify"></a> 如何验证辅助站点安装状态  
 
 1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。  
@@ -409,4 +418,3 @@ ms.locfileid: "66198483"
 
     > [!TIP]  
     > 同时安装多个辅助站点时，必备组件检查程序一次针对一个站点运行。 必须在完成一个站点检查后才可开始检查下一站点。  
-

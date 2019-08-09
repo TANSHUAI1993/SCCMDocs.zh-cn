@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 130cc8511b90da3e95c69f9239e57e2c7ac61d8c
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 583db1b3ac5682ef6eb65338a3e35d280f46fe38
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623348"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536732"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -101,7 +101,12 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 
 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点    。 选择一个站点，然后选择功能区中的“属性”  。  
 
-2. 切换到“客户端计算机通信”  选项卡。选择选项“HTTPS 或 HTTP”，然后启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”   。  
+2. 切换到“客户端计算机通信”  选项卡。
+
+    > [!Note]
+    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
+
+    选择“HTTPS 或 HTTP”  的选项。 然后启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项  。
 
 > [!Tip]
 > 请等待 30 分钟以便管理点从站点接收并配置新证书。

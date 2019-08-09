@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c713dd1de90eaf8705859f5a814e38da9435e6
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: cb185a009740b73a7836b94aca18f9748aa76fb5
+ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340218"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68662620"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 适用范围：  System Center Configuration Manager (Current Branch)
@@ -132,7 +132,7 @@ ms.locfileid: "68340218"
 - 如果使用按流量计费的数据计划且需考虑带宽成本，或者 Azure 与 Intranet 之间的网络连接不快或不稳定，则可以考虑其他方案。 这些方案包括在本地放置标准或拉取分发点以及使用 BranchCache。 也可以选择使用基于云的分发点，但在支持的内容类型上存在一些限制（例如，不支持软件更新包）。
 
 > [!NOTE]
->  如果需要 PXE 支持，则必须使用本地分发点（标准或拉取）来响应启动请求。 [目前不支持在 Azure VM 上运行 WDS](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx)。
+>  如果需要 PXE 或多播支持，则必须使用本地分发点（标准或拉取）来响应启动请求。
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>我了解并能接受基于云的分发点的限制，但不想将管理点置于 DMZ 内，即使这是支持基于 Internet 的客户端所需的。 是否有其他选择？

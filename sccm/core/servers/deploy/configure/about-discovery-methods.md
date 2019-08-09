@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 679f62bb38bab06c074c97e92ff7d3adcae80f1b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 21183b620b8161056377bb7fc6e86bde79f31767
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501447"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860082"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 发现方法可用于在网络上查找不同设备，从 Active Directory 查找设备和用户，或从 Azure Active Directory (Azure AD) 查找用户。 若要有效地使用发现方法，应了解及其可用配置和限制。  
 
@@ -39,7 +39,7 @@ Configuration Manager 发现方法可用于在网络上查找不同设备，从 
 
 与其他 Active Directory 发现方法不同，Active Directory 林发现不会发现可管理的资源。 相反，此方法可发现在 Active Directory 中配置的网络位置。 它可将这些位置转换为边界，以便在整个层次结构中使用。  
 
-此方法运行时，它会搜索本地 Active Directory 林、每个受信任的林以及在 Configuration Manager 控制台的“Active Directory 林”节点中配置的所有其他林。  
+此方法运行时，它会搜索本地 Active Directory 林、每个受信任的林以及在 Configuration Manager 控制台的“Active Directory 林”  节点中配置的所有其他林。  
 
 借助 Active Directory 林发现，可：  
 
@@ -49,13 +49,13 @@ Configuration Manager 发现方法可用于在网络上查找不同设备，从 
 
 -   在启用了对某个林的发布后，在该林中发布到 Active Directory 域服务 (AD DS)。 指定的 Active Directory 林帐户必须具有对该林的权限。  
 
-可以在 Configuration Manager 控制台中管理 Active Directory 林发现。 转到“管理”工作区，展开“层次结构配置”。   
+可以在 Configuration Manager 控制台中管理 Active Directory 林发现。 转到“管理”  工作区，展开“层次结构配置”  。   
 
 -   **发现方法**：启用 Active Directory 林发现方法，在层次结构的顶层站点上运行。 还可以指定一个简单计划来运行发现。 将其配置为依据所发现的 IP 子网和 Active Directory 站点自动创建边界。 Active Directory 林发现无法在子主站点或辅助站点上运行。  
 
 -   **Active Directory 林**：配置其他林用于发现和指定每个 Active Directory 林帐户，并配置对每个林的发布。 监视发现过程。 添加 IP 子网和 Active Directory 站点作为 Configuration Manager 边界和边界组的成员。  
 
-要为层次结构中的每个站点配置 Active Directory 林发布，请将 Configuration Manager 控制台连接到层次结构的顶层站点。 Active Directory 站点的“属性”对话框中的“发布”选项卡只能显示当前站点及其子站点。 如果针对某个林启用了发布，并且为 Configuration Manager 扩展了该林的架构，则会为已启用以发布到该 Active Directory 林的每个站点发布下列信息：  
+要为层次结构中的每个站点配置 Active Directory 林发布，请将 Configuration Manager 控制台连接到层次结构的顶层站点。 Active Directory 站点的“属性”  对话框中的“发布”  选项卡只能显示当前站点及其子站点。 如果针对某个林启用了发布，并且为 Configuration Manager 扩展了该林的架构，则会为已启用以发布到该 Active Directory 林的每个站点发布下列信息：  
 
 -    **SMS-Site-&lt;site code>**
 
@@ -103,7 +103,7 @@ Active Directory 林发现操作记录在下列日志中：
 
 -   有关组的成员计算机和用户的有限信息（即使这些计算机和用户以前未被另一种发现方法发现过）。  
 
-此发现方法用于确定组和组成员的组关系。 默认情况下，只会发现安全组。 如果还想要找到分发组的成员身份，则必须在“Active Directory 组发现属性”对话框中的“选项”选项卡上，选中“发现分发组的成员身份”选项的复选框。  
+此发现方法用于确定组和组成员的组关系。 默认情况下，只会发现安全组。 如果还想要找到分发组的成员身份，则必须在“Active Directory 组发现属性”  对话框中的“选项”  选项卡上，选中“发现分发组的成员身份”  选项的复选框。  
 
 Active Directory 组发现不支持可通过使用 Active Directory 系统发现或 Active Directory 用户发现确定的扩展 Active Directory 属性。 由于此发现方法未经过优化，无法发现计算机和用户资源，因此请考虑在运行 Active Directory 系统发现和 Active Directory 用户发现之后运行此发现方法。 此建议是因为该方法会为组创建完整的发现数据记录 (DDR)，但只会为作为组成员的计算机和用户创建有限的 DDR。  
 
@@ -111,7 +111,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 -   **位置**：若要搜索一个或多个 Active Directory 容器，请使用位置。 此作用域选项支持对指定的 Active Directory 容器的递归搜索。 此过程搜索指定容器下的每个子容器。 此过程将继续，直至找不到其他子容器为止。  
 
--   **组**：若要搜索一个或多个特定 Active Directory 组，请使用组。 可以配置“Active Directory 域”以使用默认域和林，或将搜索范围限制为单独的域控制器。 此外，你可以指定要搜索的一个或多个组。 如果未指定至少一个组，则会搜索在指定“Active Directory 域”  位置中找到的所有组。  
+-   **组**：若要搜索一个或多个特定 Active Directory 组，请使用组。 可以配置“Active Directory 域”  以使用默认域和林，或将搜索范围限制为单独的域控制器。 此外，你可以指定要搜索的一个或多个组。 如果未指定至少一个组，则会搜索在指定“Active Directory 域”  位置中找到的所有组。  
 
 > [!CAUTION]  
 >  在配置发现作用域时，请仅选择必须发现的组。 提供此建议是因为 Active Directory 组发现会尝试发现发现作用域中每个组的每个成员。 大组的发现可能需要使用大量的带宽和 Active Directory 资源。  
@@ -157,7 +157,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 若要成功创建计算机的 DDR，Active Directory 系统发现则必须能够识别计算机帐户，然后成功地将计算机名称解析为 IP 地址。  
 
-在“Active Directory 系统发现属性”对话框中的“Active Directory 属性”选项卡上，可查看其发现的默认对象属性的完整列表。 还可配置方法来发现其他（扩展）属性。  
+在“Active Directory 系统发现属性”  对话框中的“Active Directory 属性”  选项卡上，可查看其发现的默认对象属性的完整列表。 还可配置方法来发现其他（扩展）属性。  
 
 站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adsysdis.log** 文件中记录了 Active Directory 系统发现操作。  
 
@@ -189,7 +189,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 -   Active Directory 容器名称  
 
-在“Active Directory 用户发现属性”对话框中的“Active Directory 属性”选项卡上，可查看其发现的对象属性的完整默认列表。 还可配置方法来发现其他（扩展）属性。
+在“Active Directory 用户发现属性”  对话框中的“Active Directory 属性”  选项卡上，可查看其发现的对象属性的完整默认列表。 还可配置方法来发现其他（扩展）属性。
 
 站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adusrdis.log** 文件中记录了 Active Directory 用户发现操作。  
 
@@ -198,22 +198,39 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 
 ## <a name="azureaddisc"></a>Azure Active Directory 用户发现
-使用 Azure Active Directory (Azure AD) 用户发现搜索具有现代云标识的用户的 Azure AD 订阅。 Azure AD 用户发现可找到以下属性：  
--   objectId
--   displayName
--   mail
--   mailNickname
--   onPremisesSecurityIdentifier
--   userPrincipalName
--   AAD tenantID
+
+使用 Azure Active Directory (Azure AD) 用户发现搜索具有现代云标识的用户的 Azure AD 订阅。 Azure AD 用户发现可找到以下属性：
+
+- objectId
+- displayName
+- mail
+- mailNickname
+- onPremisesSecurityIdentifier
+- userPrincipalName
+- AAD tenantID
+- onPremisesDomainName
+- onPremisesSamAccountName
+- onPremisesDistinguishedName
 
 此方法支持 Azure AD 中用户属性的完全同步和增量同步。 然后可以将此信息与从其他发现方法收集的发现数据一起使用。
 
-Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 文件中。
+Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 文件中  。
 
 若要配置 Azure AD 用户发现，请参阅用于云管理的 [Azure 服务配置](/sccm/core/servers/deploy/configure/Azure-services-wizard)。 有关如何配置此发现方法的详细信息，请参阅[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)。
 
+## <a name="bkmk_azuregroupdisco"></a> Azure Active Directory 用户组发现
+<!--3611956-->
+（在版本 1906 中，作为[预发行功能](/sccm/core/servers/manage/pre-release-features)引入） 
 
+可以从 Azure Active directory (Azure AD) 中发现用户组和这些组的成员。 Azure AD 用户组发现可找到以下属性：
+
+- objectId
+- displayName
+- mailNickname
+- onPremisesSecurityIdentifier
+- AAD tenantID
+
+Azure AD 用户组发现的操作记录在层次结构顶层站点服务器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 文件中  。 有关如何配置此发现方法的详细信息，请参阅[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco)。
 
 ##  <a name="bkmk_aboutHeartbeat"></a>检测信号发现  
 **可配置：** 是  
@@ -226,9 +243,9 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 检测信号发现不同于其他 Configuration Manager 发现方法。 它默认为启用状态，并且在每个计算机客户端（而非站点服务器）上运行以创建 DDR。 对于移动设备客户端，移动设备客户端正在使用的管理点会创建此 DDR。 若要帮助维护 Configuration Manager 客户端的数据库记录，请不要禁用检测信号发现。 除了维护数据库记录，此方法还可强制将计算机发现为新的资源记录。 它还可重新填充从数据库中删除的计算机数据库记录。  
 
-检测信号发现按照层次结构中为所有客户端配置的计划运行。 检测信号发现的默认计划设置为每七天进行一次。 如果更改检测信号发现间隔，请确保它比站点维护任务“删除过期的发现数据”运行得更加频繁。 此任务从站点数据库中删除不活动的客户端记录。 你可以仅为主站点配置“删除过期的发现数据”  任务。 
+检测信号发现按照层次结构中为所有客户端配置的计划运行。 检测信号发现的默认计划设置为每七天进行一次。 如果更改检测信号发现间隔，请确保它比站点维护任务“删除过期的发现数据”  运行得更加频繁。 此任务从站点数据库中删除不活动的客户端记录。 你可以仅为主站点配置“删除过期的发现数据”  任务。 
 
-还可以在特定客户端上手动调用检测信号发现。 运行客户端 Configuration Manager 控制面板的“操作”选项卡上的“发现数据收集周期”。  
+还可以在特定客户端上手动调用检测信号发现。 运行客户端 Configuration Manager 控制面板的“操作”选项卡上的“发现数据收集周期”   。  
 
 运行检测信号发现时，它会创建具有客户端当前信息的 DDR。 然后，客户端将此大小约 1 KB 的小文件复制到管理点，使主站点可对其进行处理。 该文件包含以下信息：  
 
@@ -240,16 +257,16 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 -   操作状态详细信息  
 
-检测信号发现是唯一提供有关客户端安装状态的详细信息的发现方法。 它通过更新系统资源客户端属性，以将某个值设置为“是”来实现此操作。  
+检测信号发现是唯一提供有关客户端安装状态的详细信息的发现方法。 它通过更新系统资源客户端属性，以将某个值设置为“是”  来实现此操作。  
 
 > [!NOTE]  
->  即使禁用检测信号发现，也仍然会针对活动的移动设备客户端来创建和提交 DDR。 此行为可以确保“删除过期的发现数据”任务不影响活动的移动设备。 当“删除过期的发现数据”任务删除移动设备的数据库记录时，它还会吊销设备证书。 此操作会阻止移动设备连接到管理点。  
+>  即使禁用检测信号发现，也仍然会针对活动的移动设备客户端来创建和提交 DDR。 此行为可以确保“删除过期的发现数据”  任务不影响活动的移动设备。 当“删除过期的发现数据”  任务删除移动设备的数据库记录时，它还会吊销设备证书。 此操作会阻止移动设备连接到管理点。  
 
 检测信号发现操作记录在以下位置：  
 
--   对于计算机客户端，检测信号发现操作记录在 %Windir%\CCM\Logs 文件夹内 **InventoryAgent.log** 文件中的客户端上。  
+-   对于计算机客户端，检测信号发现操作记录在 %Windir%\CCM\Logs 文件夹内 **InventoryAgent.log** 文件中的客户端上。   
 
--   对于移动设备客户端，检测信号发现操作记录在移动设备客户端使用的管理点的 %Program Files%\CCM\Logs 文件夹内的 **DMPRP.log** 文件中。  
+-   对于移动设备客户端，检测信号发现操作记录在移动设备客户端使用的管理点的 %Program Files%\CCM\Logs 文件夹内的 **DMPRP.log** 文件中。   
 
 有关如何配置此发现方法的详细信息，请参阅[配置发现方法](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigHBDisc)。  
 
@@ -296,7 +313,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 -   MAC 地址  
 
-网络发现活动记录在运行发现的站点服务器上的 &lt;InstallationPath\>\Logs 内的 **Netdisc.log** 文件中。  
+网络发现活动记录在运行发现的站点服务器上的 &lt;InstallationPath\>\Logs 内的 **Netdisc.log** 文件中。   
 
  有关如何配置此发现方法的详细信息，请参阅[配置发现方法](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigNetworkDisc)。  
 
@@ -372,7 +389,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 配置网络发现在使用 SNMP 和 DHCP 选项时查询的子网。 这两个选项仅搜索启用的子网。  
 
-例如，DHCP 请求可以从整个网络内的位置中返回设备。 如果只想发现特定子网上的设备，请在“网络发现属性”对话框中的“子网”选项卡上指定和启用该特定子网。 指定和启用子网时，将未来的 DHCP 和 SNMP 发现任务限制为仅针对那些子网。  
+例如，DHCP 请求可以从整个网络内的位置中返回设备。 如果只想发现特定子网上的设备，请在“网络发现属性”  对话框中的“子网”  选项卡上指定和启用该特定子网。 指定和启用子网时，将未来的 DHCP 和 SNMP 发现任务限制为仅针对那些子网。  
 
 > [!NOTE]  
 >  子网配置不限制**域**发现选项发现的对象。  
@@ -387,7 +404,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 你配置的跃点数可以限制网络发现可以查询的其他设备和网络段的数目。  
 
-例如，路由器跃点数为“0” （零）的仅拓扑的发现会发现发起服务器所在的子网。 它包含该子网上的任何路由器。  
+例如，路由器跃点数为“0”  （零）的仅拓扑的发现会发现发起服务器所在的子网。 它包含该子网上的任何路由器。  
 
 下图显示了在路由器跃点数指定为 0 的服务器 1 上运行仅拓扑的网络发现查询时，该网络发现查询所找到的内容：子网 D 和路由器 1。  
 
@@ -441,7 +458,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 对于指定的每个位置，可以配置单个搜索选项，如启用位置的 Active Directory 子容器的递归搜索。 也可以将唯一帐户配置为在搜索该位置时使用。 使用此帐户，可灵活在一个站点配置发现方法，跨多个林搜索多个 Active Directory 位置。 无需单独配置一个对所有位置均拥有权限的帐户。  
 
-在特定站点运行这三种发现方法中的每种发现方法时，该站点中的 Configuration Manager 站点服务器会与指定 Active Directory 林中最近的域控制器联系，以查找 Active Directory 资源。 域和林可以处于任何支持的 Active Directory 模式下。 分配给每个位置实例的帐户必须对指定的 Active Directory 位置具有“读取”访问权限。
+在特定站点运行这三种发现方法中的每种发现方法时，该站点中的 Configuration Manager 站点服务器会与指定 Active Directory 林中最近的域控制器联系，以查找 Active Directory 资源。 域和林可以处于任何支持的 Active Directory 模式下。 分配给每个位置实例的帐户必须对指定的 Active Directory 位置具有“读取”  访问权限。
 
 发现会在指定位置中搜索对象，然后尝试收集有关那些对象的信息。 如果能够确定足够的资源相关信息，则将创建 DDR。 所需信息因使用的发现方法而异。  
 
@@ -509,10 +526,10 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 在配置上一次登录后的时间（想要用于此设置）时，请考虑域控制器之间的复制间隔。  
 
-可在“Active Directory 系统发现属性”和“Active Directory 组发现属性”对话框中的“选项”选项卡上配置筛选。 选择“仅发现在给定时间段内登录到某个域的计算机”。  
+可在“Active Directory 系统发现属性”  和“Active Directory 组发现属性”  对话框中的“选项”  选项卡上配置筛选。 选择“仅发现在给定时间段内登录到某个域的计算机”  。  
 
 > [!WARNING]  
->  如果配置此筛选，并且按计算机密码筛选过期记录，则会从发现中排除满足任一筛选器条件的计算机。  
+>  如果配置此筛选，并且按计算机密码筛选过期记录  ，则会从发现中排除满足任一筛选器条件的计算机。  
 
 
 ###  <a name="bkmk_stalepassword"></a>按计算机密码筛选过期记录  
@@ -530,10 +547,10 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 配置此选项时，请考虑此属性的更新间隔。 还需考虑域控制器之间的复制间隔。  
 
-可在“Active Directory 系统发现属性”和“Active Directory 组发现属性”对话框中的“选项”选项卡上配置筛选。 选择“仅发现在给定时段内更新了计算机帐户密码的计算机”。  
+可在“Active Directory 系统发现属性”  和“Active Directory 组发现属性”  对话框中的“选项”  选项卡上配置筛选。 选择“仅发现在给定时段内更新了计算机帐户密码的计算机”  。  
 
 > [!WARNING]  
->  如果配置此筛选，并且按域登录名筛选过期记录，则会从发现中排除满足任一筛选器条件的计算机。  
+>  如果配置此筛选，并且按域登录名筛选过期记录  ，则会从发现中排除满足任一筛选器条件的计算机。  
 
 
 ###  <a name="bkmk_customAD"></a>搜索自定义的 Active Directory 属性  
@@ -545,4 +562,4 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 每种发现方法都支持可发现的 Active Directory 属性的唯一列表。  
 
-可在“Active Directory 系统发现属性”和“Active Directory 用户发现属性”对话框中的“Active Directory 属性”选项卡上，查看和配置自定义属性列表。  
+可在“Active Directory 系统发现属性”  和“Active Directory 用户发现属性”  对话框中的“Active Directory 属性”  选项卡上，查看和配置自定义属性列表。  

@@ -2,7 +2,7 @@
 title: 支持 Windows 10
 titleSuffix: Configuration Manager
 description: 了解支持作为客户端或 OSD 对 System Center Configuration Manager 使用的 Windows 10 版本
-ms.date: 05/21/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67c7c84850d22d7f73a745c61b0c1cb577088f83
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: e95cc6be22c05afcf489fa7e9db8456cb0da0f79
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251683"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536797"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -31,7 +31,6 @@ ms.locfileid: "67251683"
 > 如同支持 Windows 10 版本一样支持作为客户端的 Windows Server 内部版本。 例如，Windows Server 2016 是与 Windows 10 LTSB 2016 相同的内部版本，Windows Server 版本 1803 是与 Windows 10 版本 1803 相同的内部版本。
 >
 > 有关作为站点系统的 Windows Server 的详细信息，请参阅 [Configuration Manager 站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_core)。
-
 
 
 ## <a name="windows-10-as-a-client"></a>作为客户端的 Windows 10
@@ -52,16 +51,16 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 <br/>
 下表列出了 Windows 10 的版本，这些版本可用作具有不同 Configuration Manager 版本的客户端。
 
-| Windows 10 版本 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 |
+| Windows 10 版本 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 | Configuration Manager 1906 |
 |---------------------|-----|-----|-----|-----|-----|
 | 企业版 2015 长期服务 <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | 企业版 2016 长期服务 <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| Enterprise LTSC 2019 <!--01/09/2029-->   | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Enterprise LTSC 2019 <!--01/09/2029-->   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | 1703   <!--10/08/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | 1709   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1803   <!--11/10/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1809   <!--05/11/2021-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1903   <!--TBD-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
+| 1803   <!--11/10/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1809   <!--05/11/2021-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1903   <!--TBD-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -74,10 +73,9 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 | ![不支持](media/Red_X.png) = **不支持** |
 
 > [!NOTE]  
-> 从版本 1802 开始，Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 现有客户端管理功能应适用于这些新设备。 例如，硬件和软件清单、软件更新和应用程序管理。 当前不支持 OS 部署。 <!-- 1353704 -->
+> Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 现有客户端管理功能应适用于这些新设备。 例如，硬件和软件清单、软件更新和应用程序管理。 当前不支持 OS 部署。 <!-- 1353704 -->
 
 有关 Windows 生命周期的详细信息，请参阅 [Windows 生命周期简报](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)
-
 
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
@@ -90,13 +88,13 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 <br/>
 下表列出了可用于不同版本 Configuration Manager 的 Windows 10 ADK 的版本。
 
-| Windows 10 ADK 版本  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 |
+| Windows 10 ADK 版本  | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 | Configuration Manager 1906 |
 |--------------------|-----|-----|-----|-----|-----|
-| **1703**<br>(10.1.15063) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
-| **1709**<br>(10.1.16299) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) |
-| **1809**<br>(10.1.17763) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| **1903**<br>(10.1.18362) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
+| **1703**<br>(10.1.15063) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
+| **1709**<br>(10.1.16299) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) |
+| **1809**<br>(10.1.17763) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) |
+| **1903**<br>(10.1.18362) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 |项|
 |--|

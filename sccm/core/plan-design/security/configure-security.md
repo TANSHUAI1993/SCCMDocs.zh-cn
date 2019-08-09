@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c623799f4a7dd34a0556069d168f0bb3abfd5ff1
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 08027a99f37b31ca0100dd9737819bb2eac1b94c
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159402"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536624"
 ---
 # <a name="configure-security-in-configuration-manager"></a>配置 Configuration Manager 中的安全性
 
@@ -42,7 +42,8 @@ ms.locfileid: "67159402"
 
 2.  在功能区中，选择“属性”  。 然后，切换到“客户端计算机通信”选项卡  。  
 
-    此选项卡仅在主站点上可用。 如果看不到“客户端计算机通信”选项卡，请确保你未连接到管理中心站点或辅助站点  。  
+    > [!Note]
+    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
 
 3.  选择使用 IIS 的站点系统的设置。  
 

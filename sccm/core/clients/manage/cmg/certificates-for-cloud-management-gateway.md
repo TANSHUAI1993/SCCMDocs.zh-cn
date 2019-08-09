@@ -5,18 +5,18 @@ description: 了解用于云管理网关的各种数字证书。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a905420c2c1189552f1bf11b16fb92968f4f590e
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 05031bbec72f5540e7f44d7f232b9527dce7789a
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894116"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535600"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -47,9 +47,9 @@ ms.locfileid: "67894116"
 
 - 证书私钥的密钥存储提供程序。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。  
 
-- 从版本 1802 开始，在使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
+- 在使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
 
-- 从 1802 版开始，支持 TLS 1.2  。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
+- TLS 1.2  。 有关详细信息，请参阅[如何启用 TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2)。  
 
 
 ## <a name="bkmk_serverauth"></a>CMG 服务器身份验证证书
@@ -61,7 +61,7 @@ ms.locfileid: "67894116"
 CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务器需要使用服务器身份验证证书构建安全频道。 请从公共提供程序获取此用途的证书，或通过公钥基础结构 (PKI) 颁发此证书。 有关详细信息，请参阅[针对客户端的 CMG 受信任的根证书](#bkmk_cmgroot)。
 
 > [!NOTE]
-> 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，`*.contoso.com`。 某些组织使用通配符证书简化其 PKI 并降低维护成本。<!--491233-->  
+> CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，`*.contoso.com`。 某些组织使用通配符证书简化其 PKI 并降低维护成本。<!--491233-->  
 >
 > 有关如何将 CMG 与通配符证书配合使用的详细信息，请参阅[设置 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg)。<!--SCCMDocs issue #565-->  
 
@@ -80,6 +80,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 - 搜索“存储帐户” 
 - 在“存储帐户名称”字段中测试你的名称 
 
+DNS 名称前缀（例如 GraniteFalls  ）的长度应为 3 到 24 个字符，并且只能使用字母数字字符。 不要使用特殊字符，如短划线 (`-`)。<!-- SCCMDocs#1080 -->
 
 ### <a name="bkmk_cmgroot"></a>针对客户端的 CMG 受信任的根证书
 
@@ -136,7 +137,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 请在 Configuration Manager 的上下文外预配此证书。 例如，使用 Active Directory 证书服务和组策略颁发客户端身份验证证书。 有关详细信息，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。
 
-CMG 连接点要求此证书将客户端请求安全地转发到 HTTPS 管理点。 如果使用 Azure AD 或增强型 HTTP，则不需要此证书。 有关详细信息，请参阅[为管理点启用 HTTPS](#bkmk_mphttps)。
+若要安全地转发客户端请求，CMG 连接点需要与 HTTPS 管理点上的服务器身份验证证书相对应的客户端身份验证证书。 如果客户端使用 Azure AD 身份验证，或配置增强型 HTTP 的管理点，则不需要此证书。 有关详细信息，请参阅[为管理点启用 HTTPS](#bkmk_mphttps)。
 
 ### <a name="bkmk_clientroot"></a>针对 CMG 的客户端受信任的根证书
 
@@ -144,10 +145,12 @@ CMG 连接点要求此证书将客户端请求安全地转发到 HTTPS 管理点
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
-CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受信任的根证书链。 可指定两个受信任的根 CA 和四个中间（从属）CA。 请务必添加信任链中的所有证书。 例如，若客户端身份验证证书由中间 CA 颁发，请同时添加中间和根 CA 证书。
+CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受信任的根证书链。 请务必添加信任链中的所有证书。 例如，若客户端身份验证证书由中间 CA 颁发，请同时添加中间和根 CA 证书。
 
 > [!Note]  
 > 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+>
+> 在版本 1902 和更早版本中，只能添加两个受信任的根 CA 和四个中间（从属）CA。
 
 #### <a name="export-the-client-certificates-trusted-root"></a>导出客户端证书的受信任根
 
@@ -186,11 +189,12 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 请在 Configuration Manager 的上下文外预配此证书。 例如，使用 Active Directory 证书服务和组策略颁发 Web 服务器证书。 有关详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)和[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。
 
-- 在 1710 版中，使用客户端身份验证证书管理具有本地标识的传统客户端时，建议但不强制使用此证书。 管理加入 Azure AD 的 Windows 10 客户端时，管理点需要此证书。
-
 - 在 1802 版中，所有方案都需要使用此证书。 只有针对 CMG 启用的管理点才需使用 HTTPS。 此行为更改为基于 Azure AD 令牌的身份验证提供了更好的支持。  
 
 - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
+
+> [!Tip]  
+> 如果未使用增强型 HTTP，并且你的环境具有多个管理点，则无需使用 HTTPS 针对 CMG 启用所有管理点。 将启用 CMG 的管理点配置为  “仅 Internet”。 你的本地客户端就不会尝试使用它们。<!-- SCCMDocs#1676 -->
 
 ### <a name="management-point-client-connection-mode-summary"></a>管理点客户端连接模式摘要
 
@@ -200,12 +204,12 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 配置本地管理点以允许来自 CMG 的连接具有以下客户端连接模式：
 
-| 客户端的类型   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| 工作组        | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
-| AD 域加入 | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
-| Azure AD 加入  | HTTPS       | HTTPS       | E-HTTP、HTTPS | E-HTTP、HTTPS |
-| 混合加入    | HTTP、HTTPS | HTTPS       | E-HTTP、HTTPS | E-HTTP、HTTPS |
+| 客户端的类型   | 1802  | 1806        | 1810        |
+|------------------|-------|-------------|-------------|
+| 工作组        | HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
+| AD 域加入 | HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
+| Azure AD 加入  | HTTPS | E-HTTP、HTTPS | E-HTTP、HTTPS |
+| 混合加入    | HTTPS | E-HTTP、HTTPS | E-HTTP、HTTPS |
 
 <a name="bkmk_note1"></a>
 
@@ -216,12 +220,12 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 使用以下客户端连接模式配置本地管理点：
 
-| 客户端的类型   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| 工作组        | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
-| AD 域加入 | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
-| Azure AD 加入  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
-| 混合加入    | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+| 客户端的类型   | 1802        | 1806        | 1810        |
+|------------------|-------------|-------------|-------------|
+| 工作组        | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+| AD 域加入 | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+| Azure AD 加入  | HTTPS       | HTTPS       | HTTPS       |
+| 混合加入    | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
 
 > [!Note]  
 > 在 1806 版中，AD 域加入客户端支持与 HTTP 或 HTTPS 管理点通信的以设备和用户为中心的方案。  
@@ -236,7 +240,9 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 - *混合加入*：将设备加入 Active Directory 域和 Azure AD 租户  
 - *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”   
 - *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”   
-- *E-HTTP*：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设置为“HTTPS 或 HTTP”  ，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。  
+- *E-HTTP*：在站点属性的“客户端计算机通信”  选项卡上，将站点系统设置设为“HTTPS 或 HTTP”  ，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。  
+    > [!Note]
+    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
 
 
 ## <a name="bkmk_azuremgmt"></a>Azure 管理证书

@@ -2,7 +2,7 @@
 title: 创建集合
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中创建集合以更轻松地管理用户和设备的分组。
-ms.date: 03/05/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed08a9abb746681eb8e89d471e19990ced313788
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: b8ff3dac5c5ff4d04be6f30c02dba8523ce1b80b
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67550911"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535489"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -217,6 +217,61 @@ ms.locfileid: "67550911"
 
 5. 完成向导以导入集合。 新集合会显示在“资产和符合性”  工作区的“用户集合”  或“设备集合”  节点中。 刷新或重新加载 Configuration Manager 控制台才能查看新导入的集合的集合成员。  
 
+## <a name="bkmk_aadcollsync"></a> 将集合成员资格结果同步到 Azure Active Directory 组
+*（从版本 1906 开始，作为预发行功能引入）*
+<!--3607475-->
+> [!NOTE]
+> 将集合成员身份同步到 Azure Active Directory (Azure AD) 组是首次在版本 1906 中引入的预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)一文。
+
+可以将集合成员身份同步到 Azure Active Directory (Azure AD) 组。 借助此同步，可以通过基于集合成员身份结果创建 Azure AD 组成员身份来使用云中的现有本地分组规则。 可以同步设备集合。 只有具有 Azure Active Directory 记录的设备才会反映在 Azure AD 组中。 同时支持已联接混合 Azure AD 的设备和已联接 Azure Active Directory 的设备。
+
+Azure AD 同步每五分钟执行一次。 这是一个单向过程，从 Configuration Manager 同步到 Azure AD。 Azure AD 中所做的更改不会反映在 Configuration Manager 集合中，但 Configuration Manager 不会将其覆盖。 例如，如果 Configuration Manager 集合有两台设备，并且 Azure AD 组有三台不同的设备，则在同步后，Azure AD 组有五个设备。
+
+
+### <a name="prerequisites"></a>先决条件
+
+- [云管理](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- [Azure Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+
+### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>在 Azure AD 中创建组和设置所有者
+
+1. 转到 [https://portal.azure.com](https://portal.azure.com)。
+1. 导航到“Azure Active Directory”   > “组”   > “所有组”  。
+1. 单击“新建组”，然后键入“组名称”和“组说明”    。
+1. 选择“所有者”，然后添加将在 Configuration Manager 中创建同步关系的标识  。
+1. 单击“创建”  以完成创建 Azure AD 组。
+
+### <a name="enable-collection-synchronization-for-the-azure-service"></a>为 Azure 服务启用集合同步
+
+1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “Azure 服务”     。
+1. 右键单击在其中创建了组的 Azure AD 租户，然后选择“属性”  。
+1. 在“集合同步”  选项卡中，选中“启用 Azure 目录组同步”  对应的框。
+1. 单击“确定”  以保存设置。
+
+### <a name="enable-the-collection-to-synchronize"></a>启用集合以进行同步
+
+1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “概览” > “设备集合”    。
+1. 右键单击要同步的集合，然后单击“属性”  。 
+1. 在“AAD 组同步”  选项卡中，单击“添加”  。
+1. 从下拉菜单中，选择在其中创建了 Azure AD 组的“租户”  。
+1. 在“名称开头为”字段中键入搜索条件  ，然后单击“搜索”  。
+  - 如果系统提示你登录，请使用指定为 Azure AD 组的所有者的标识。
+1. 选择目标组，然后单击“确定”以添加该组并再次单击“确定”以退出集合的属性   。
+1. 你将需要等待大约 5 到 7 分钟，然后才能验证 Azure 门户中的组成员身份。
+   - 若要启动完全同步，请右键单击该集合，然后选择“同步成员身份”  。
+
+
+### <a name="verify-the-azure-ad-group-membership"></a>验证 Azure AD 组成员身份
+
+1. 转到 [https://portal.azure.com](https://portal.azure.com)。
+1. 导航到“Azure Active Directory”   > “组”   > “所有组”  。
+1. 查找你创建的组，然后选择“成员”  。 
+1. 确认成员反映在 Configuration Manager 集合中。
+   - 只有具有 Azure AD 标识的设备才会显示在该组中。
+
+
+![将集合同步到 Azure AD](media/3607475-sync-collection-to-azuread.png)
+
 ## <a name="bkmk_powershell"></a> 使用 PowerShell
 
 可以使用 PowerShell 来创建和导入集合。 有关详情，请参阅：
@@ -224,3 +279,7 @@ ms.locfileid: "67550911"
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
 * [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+
+## <a name="next-steps"></a>后续步骤
+
+[管理集合](/sccm/core/clients/manage/collections/manage-collections)

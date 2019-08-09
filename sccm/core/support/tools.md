@@ -2,7 +2,7 @@
 title: Configuration Manager 工具
 titleSuffix: Configuration Manager
 description: 了解可帮助管理 Configuration Manager 基础结构并对其进行故障排除的工具。
-ms.date: 04/17/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3324189cdf482684cc0738c51fbf336a65ee221
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 0db0d38a1ed6929659c8c82b5b43f76535b025f9
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500690"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536091"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager 工具
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助管理 Configuration Manager 基础结构并对其进行故障排除。
 
@@ -76,18 +76,19 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 > 好几个服务器工具都需要这些库。 不能直接使用它们。  
 
 
-
 ## <a name="other-tools-and-toolkits"></a>其他工具和工具包
 
-- [内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)：使用 `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` 中的 ContentLibraryCleanup.exe 来从分发点删除孤立的内容。  
-
-- [层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)：使用站点服务器上 `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共享文件夹中的 Preinst.exe 将命令传送到层次结构管理器组件。  
-
-- [更新重置工具](/sccm/core/servers/manage/update-reset-tool)：在控制台中更新出现下载或复制问题时，可使用 `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` 中的 CMUpdateReset.exe 修复这些问题。  
-
-- [服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)：服务连接点处于脱机状态时，可使用 `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` 中的 ServiceConnectionTool.exe 使站点保持最新状态。  
-
 - [支持中心](/sccm/core/support/support-center)：进行故障排除时，请从客户端收集信息以便于分析。
+
+    从版本 1906 开始，OneTrace  是一个带有支持中心的新日志查看器。 它的工作方式与 CMTrace 类似，同时进行了一些改进。 有关详细信息，请参阅[支持中心 OneTrace](/sccm/core/support/support-center-onetrace)。
+
+- [内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)：使用 `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` 中的 ContentLibraryCleanup.exe 来从分发点删除孤立的内容  。  
+
+- [层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)：使用站点服务器上 `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共享文件夹中的 Preinst.exe 将命令传送到层次结构管理器组件  。  
+
+- [更新重置工具](/sccm/core/servers/manage/update-reset-tool)：在控制台中更新出现下载或复制问题时，可使用 `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` 中的 CMUpdateReset.exe 修复这些问题  。  
+
+- [服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)：服务连接点处于脱机状态时，可使用 `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` 中的 ServiceConnectionTool.exe 使站点保持最新状态  。  
 
 - [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/)：一系列工具、流程和指南，用于自动执行桌面和服务器 OS 部署。
 

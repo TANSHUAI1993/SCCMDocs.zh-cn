@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 06/20/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d329f2d0125a168d776b2855b6fd35e7a223111
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: a7d43a2eea28073ef0193c454c4e1a10bc5f3763
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677910"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535181"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -75,7 +75,10 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 - **最大缓存大小 (MB)**
 - **最大缓存大小(占磁盘的百分比)** ：客户端缓存大小可扩展到最大大小（按 MB 或磁盘百分比指定），以较小者为准。
 
-### <a name="enable-configuration-manager-client-in-full-os-to-share-content"></a>在完整的 OS 中启用 Configuration Manager 客户端以共享内容
+### <a name="enable-as-peer-cache-source"></a>启用为对等缓存源
+
+> [!Note]  
+> 在版本 1902 及更早版本中，此设置称为“在完整的 OS 中启用 Configuration Manager 客户端以共享内容”  。 此设置的行为不会发生变化。
 
 启用用于 Configuration Manager 客户端的[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)。 选择“是”  ，然后指定客户端通过其与对等计算机通信的端口。
 
@@ -84,6 +87,16 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 - **用于从对等机下载内容的端口**（默认 TCP 8003）：Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量。 如果使用其他防火墙，则必须手动配置规则以允许此流量。  
 
     有关详细信息，请参阅[用于连接的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp)。  
+
+### <a name="minimum-duration-before-cached-content-can-be-removed-minutes"></a>可以删除缓存内容前的最短持续时间（以分钟为单位）
+
+<!--4485509-->
+从版本 1906 开始，可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置控制客户端在删除内容之前将其存储在缓存中的时间。
+
+默认情况下，此值为 1,440 分钟（24 小时）。
+
+使用此设置，可以更好地控制不同类型设备上的客户端缓存。 可以减小具有小型硬盘驱动器的客户端的值，并且在另一个部署运行之前不需要保留现有内容。
+
 
 ## <a name="client-policy"></a>客户端策略  
 
@@ -102,11 +115,15 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 如果此选项设置为“是”  并且使用[用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)，客户端会接收面向登录用户的应用程序和程序。  
 
-应用程序目录从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序  。 如果此设置为“否”  ，则用户无法安装他们在应用程序目录中看到的应用程序。  
-
-此外，如果此设置为“否”，则用户不会收到你为用户部署的所需应用程序  。 用户也不会收到用户策略中的任何其他管理任务。  
+如果此设置为“否”，则用户不会收到你为用户部署的所需应用程序  。 用户也不会收到用户策略中的任何其他管理任务。  
 
 当用户的计算机位于 Intranet 或 Internet 时，此设置会应用到用户。 如果还想在 Internet 上启用用户策略，则此设置必须为“是”  。  
+
+> [!Note]  
+> 从版本 1906 开始，更新后的客户端自动使用管理点进行用户可用应用程序部署。 无法安装新的应用程序目录角色。
+>
+> 如果仍使用应用程序目录，它会从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序  。 如果此设置为“否”  ，则用户无法安装他们在应用程序目录中看到的应用程序。  
+
 
 ### <a name="enable-user-policy-requests-from-internet-clients"></a>启用来自 Internet 客户端的用户策略请求
 
@@ -118,7 +135,7 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 - 基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan)。  
 
-- 从 1710 版开始，云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
+- 云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
 
 如果将此选项设置为“否”，或不满足之前的任何一个条件，则 Internet 上的计算机将仅收到计算机策略  。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“否”，但“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户不会收到用户策略    。  
 
@@ -171,19 +188,25 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 ### <a name="default-application-catalog-website-point"></a>默认应用程序目录网站点
 
-> [!Note]  
-> 从版本 1806 开始，不再需要  应用程序目录网站点，但仍受支持  。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。
+> [!Important]  
+> 从 Current Branch 版本 1806 开始，不支持应用程序目录的 Silverlight 用户体验。 从版本 1906 开始，更新后的客户端自动使用管理点进行用户可用应用程序部署。 仍然无法安装新的应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 >
-> 应用程序目录网站点的 Silverlight 用户体验不再受支持  。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+> 有关详细信息，请参阅下列文章：
+>
+> - [配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 Configuration Manager 使用此设置将用户连接到软件中心中的应用程序目录。 选择“设置网站”  ，指定托管应用程序目录网站点的服务器。 输入其 NetBIOS 名称或 FQDN，指定自动检测，或指定自定义部署的 URL。 在大多数情况下，自动检测是最佳选择。
 
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>向 Internet Explorer 受信任的站点区域添加默认应用程序目录网站
 
-> [!Note]  
-> 从版本 1806 开始，不再需要  应用程序目录网站点，但仍受支持  。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。
+> [!Important]  
+> 从 Current Branch 版本 1806 开始，不支持应用程序目录的 Silverlight 用户体验。 从版本 1906 开始，更新后的客户端自动使用管理点进行用户可用应用程序部署。 仍然无法安装新的应用程序目录角色。 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 >
-> 应用程序目录网站点的 Silverlight 用户体验不再受支持  。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+> 有关详细信息，请参阅下列文章：
+>
+> - [配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 如果此选项为“是”  ，则客户端会将当前默认的应用程序目录网站 URL 自动添加到 Internet Explorer 受信任的站点区域。  
 
@@ -194,7 +217,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 ### <a name="allow-silverlight-applications-to-run-in-elevated-trust-mode"></a>允许 Silverlight 应用程序在提升的信任模式下运行
 
 > [!Important]  
-> 自 Configuration Manager 版本 1802 起，客户端不再自动安装 Silverlight。
+> 客户端不自动安装 Silverlight。
 >
 > 从版本 1806 开始，应用程序目录网站点的 Silverlight 用户体验  不再受支持。 用户应使用新的软件中心。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。  
 
@@ -210,14 +233,9 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="use-new-software-center"></a>使用新的软件中心
 
-从 Configuration Manager 1802 起，默认设置为“是”  。
+默认设置为“是”  。
 
-如果将此选项设置为“是”，则所有客户端计算机均使用软件中心  。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。
-
-从版本 1806 开始，不再需要  应用程序目录站点和 Web 服务点角色，但依然受支持  。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。
-
-> [!Note]  
-> 应用程序目录网站点的 Silverlight 用户体验不再受支持  。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+如果将此选项设置为“是”，则所有客户端计算机均使用软件中心  。 软件中心显示你部署到用户或设备的软件、软件更新和任务序列。
 
 ### <a name="enable-communication-with-health-attestation-service"></a>启用与运行状况证明服务的通信
 
@@ -229,10 +247,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="install-permissions"></a>安装权限
 
-> [!IMPORTANT]  
-> 此设置适用于应用程序目录和软件中心。 当用户使用公司门户时，此设置不起作用。  
-
-配置用户启动软件、软件更新和任务序列安装的方式：  
+配置用户安装软件、软件更新和任务序列的方式：  
 
 - **所有用户**：除“来宾”之外的拥有任何权限的用户。  
 
@@ -240,7 +255,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 - **仅限管理员和主要用户**：用户必须是本地管理员组的成员或计算机的主要用户。  
 
-- **无用户**：登录到客户端计算机的用户无法启动软件、软件更新和任务序列的安装。 计算机的必需部署始终在截止日期安装。 用户无法从应用程序目录或软件中心启动软件的安装。  
+- **无用户**：登录到客户端计算机的用户无法安装软件、软件更新和任务序列。 计算机的必需部署始终在截止日期安装。 用户无法通过软件中心安装软件。  
 
 ### <a name="suspend-bitlocker-pin-entry-on-restart"></a>重新启动时挂起 Bitlocker PIN 项
 
@@ -259,7 +274,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 - 使用 Configuration Manager 软件开发工具包 (SDK)，管理客户端代理通知以及应用程序和软件更新的安装。  
 
 > [!WARNING]  
-> 如果在任一条件都不适用时选择此选项，则客户端不会安装软件更新和所需的应用程序。 此设置不会阻止用户安装应用程序目录中的应用程序，或安装包、程序以及任务序列。  
+> 如果在任一条件都不适用时选择此选项，则客户端不会安装软件更新和所需的应用程序。 此设置不会阻止用户从软件中心安装可用软件（包括应用程序、包和任务序列）。  
 
 ### <a name="powershell-execution-policy"></a>PowerShell 执行策略
 
@@ -306,7 +321,13 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 - **向用户显示一条临时通知，指示注销用户或重新启动计算机之前的间隔(分钟)**
 - **显示用户无法关闭的对话框，该对话框显示注销用户或重新启动计算机之前的倒计时间隔(分钟)**
 
+
 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
+
+- **指定计算机重新启动倒计时通知的推迟持续时间（以小时为单位）** （从版本 1906 开始）<!--3976435-->
+  - 默认值为 4 小时。
+  - 暂停持续时间值应小于临时通知值减去用户无法关闭的通知值之后的值。
+  - 有关详细信息，请参阅[设备重新启动通知](/sccm/core/clients/deploy/device-restart-notifications)。
 
 **当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知**<!--3555947-->：自版本 1902 起，将此设置配置为“是”  会增加用户体验的侵入性。 此设置适用于应用程序、任务序列和软件更新的所有部署。 有关详细信息，请参阅[为软件中心制定计划](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)。
 
@@ -315,7 +336,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 ## <a name="delivery-optimization"></a>传递优化
 
 <!-- 1324696 -->
-使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 配置传递优化以在对等方之间共享内容时使用边界组。
 
 > [!Note]
 > 传递优化仅可用于 Windows 10 客户端
@@ -324,6 +345,10 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 选择“是”将边界组标识符用作客户端上的传递优化组标识符  。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。
 
+### <a name="enable-devices-managed-by-configuration-manager-to-use-delivery-optimization-in-network-cache-servers-beta-for-content-download"></a>使 Configuration Manager 托管的设备可使用传递优化网络内缓存服务器（Beta 版本）来下载内容
+
+<!--3555764-->
+选择“是”  以允许客户端从你启用为传递优化网络内缓存 (DOINC) 服务器的本地分发点下载内容。 有关详细信息，请参阅 [Configuration Manager 中的传递优化网络内缓存](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache)。
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -335,11 +360,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 若要在层次结构中的计算机上管理现有的 Endpoint Protection 和 Windows Defender 客户端，请选择“是”  。  
 
-如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。 从 Configuration Manager 1802 开始，Windows 10 设备不需要安装 Endpoint Protection 代理。 但是，这些设备仍需启用“管理客户端计算机上的 Endpoint Protection 客户端”  。 <!--503654-->
+如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。 Windows 10 设备不需要安装 Endpoint Protection 代理。 但是，这些设备仍需启用“管理客户端计算机上的 Endpoint Protection 客户端”  。 <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>在客户端计算机上安装 Endpoint Protection 客户端
 
-选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端  。 从 Configuration Manager 1802 开始，Windows 10 客户端不需要安装 Endpoint Protection 代理。  
+选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端  。 Windows 10 客户端不需要安装 Endpoint Protection 代理。  
 
 > [!NOTE]  
 > 如果已安装 Endpoint Protection 客户端，选择“否”不会卸载 Endpoint Protection 客户端  。 要卸载 Endpoint Protection 客户端，请将“在客户端计算机上管理 Endpoint Protection 客户端”  客户端设置设为“否”  。 然后，部署包和程序以卸载 Endpoint Protection 客户端。  
@@ -457,12 +482,12 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
     - 将发送到站点的客户端状态消息  
 
-    - 通过使用应用程序目录提出的软件安装请求  
+    - 软件中心的软件安装请求  
 
     - 所需部署（达到安装截止时间后）  
 
     > [!IMPORTANT]  
-    > 客户端始终允许从软件中心或应用程序目录中安装软件，与按流量计费的 Internet 连接设置无关。  
+    > 客户端始终允许从软件中心安装软件，与按流量计费的 Internet 连接设置无关。  
 
     如果客户端达到按流量计费的 Internet 连接的数据传输限制，则客户端不再尝试与 Configuration Manager 站点通信。  
 
@@ -620,11 +645,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="bkmk_HideUnapproved"></a>在软件中心隐藏未批准的应用程序
 
-从 Configuration Manager 版本 1802 开始，如果启用此选项，软件中心会隐藏需批准的用户可用的应用程序。<!--1355146-->
+启用此选项后，软件中心会隐藏需要审批的用户可用的应用程序。<!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a>在软件中心隐藏安装的应用程序
 
-从 Configuration Manager 版本 1802 开始，如果启用此选项，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可以在安装状态选项卡下查看已安装的应用程序。 <!--1357592-->
+启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可以在安装状态选项卡下查看已安装的应用程序。 <!--1357592-->
 
 ### <a name="bkmk_HideAppCat"></a>隐藏软件中心中的应用程序目录链接
 
@@ -632,6 +657,28 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 
 ### <a name="software-center-tab-visibility"></a>软件中心选项卡的可见性
+
+#### <a name="starting-in-version-1906"></a>从版本 1906 开始
+<!--4063773-->
+
+选择应在软件中心中显示的选项卡。 使用“添加”按钮可将选项卡移动到“可见”选项卡   。 使用“删除”按钮可将选项卡移动到“隐藏”选项卡列表   。 使用“上移”或“下移”按钮可对选项卡进行排序   。 
+
+可用选项卡：
+- **应用程序**
+- **更新**
+- **操作系统**
+- **安装状态**
+- **设备符合性**
+- **选项**
+- 通过单击“添加”选项卡按钮，最多可添加 5 个自定义选项卡  。
+  - 指定自定义选项卡的“选项卡名称”和“内容 URL”  。
+  - 单击“删除选项卡”删除自定义选项卡  。  
+
+  >[!Important]  
+  > - 若要将一些网站功能用作软件中心内的自定义选项卡，它们可能无法正常运行。 将结果部署到客户端之前，请确保测试结果。 <!--519659-->
+  > - 添加自定义选项卡时，仅指定受信任的地址或 Intranet 网站地址。<!--SCCMDocs issue 1575-->
+
+#### <a name="version-1902-and-earlier"></a>版本1902 及更早版本
 
 将此组中的其他设置配置为“是”  ，以在软件中心显示以下选项卡：
 
@@ -849,7 +896,19 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="enable-third-party-software-updates"></a>启用第三方软件更新
 
-如果你将此选项设置为“是”  ，它会设置“允许 Intranet Microsoft 更新服务位置的签名更新”  策略，并将签名证书安装到客户端上受信任的发布者库。 此客户端设置已添加到 Configuration Manager 1802 版中。
+如果你将此选项设置为“是”  ，它会设置“允许 Intranet Microsoft 更新服务位置的签名更新”  策略，并将签名证书安装到客户端上受信任的发布者库。
+
+### <a name="bkmk_du"></a>启用功能更新的动态更新
+<!--4062619-->
+从 Configuration Manager 版本 1906 开始，可以配置 [Windows 10 动态更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)。 动态更新通过指示客户端从 Internet 下载这些更新，在 Windows 安装过程中安装语言包、按需功能、驱动程序和累积更新。 如果将此设置设置为“是”或“否”，Configuration Manager 将修改功能更新安装期间使用的 [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) 文件   。
+
+- **未配置** - 默认值。 未更改 setupconfig 文件。
+  - 默认情况下，在所有受支持的 Windows 10 版本上启用动态更新。
+    - 对于 Windows 10 版本 1803 及更早版本，动态更新会检查设备的 WSUS 服务器是否有批准的动态更新。 在 Configuration Manager 环境中，绝不会在 WSUS 服务器中直接批准动态更新，因此这些设备不会安装这些更新。
+    - 从 Windows 10 版本 1809 开始，动态更新使用设备的 Internet 连接从 Microsoft 更新获取动态更新。 不会发布这些动态更新以供 WSUS 使用。
+- **是** - 启用动态更新。
+- **否** - 禁用动态更新。
+
 
 ## <a name="state-messaging"></a>状态消息
 

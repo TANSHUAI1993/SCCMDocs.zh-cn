@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 07/03/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60b00c5621f829cd77193758ec415e5173c9da5a
-ms.sourcegitcommit: d74415e49a6db28ee5198440c7f321529a9f7f33
+ms.openlocfilehash: b6cd440043c61431b648411eb4eea1bda0635d34
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68312493"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536931"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -36,7 +36,7 @@ ms.locfileid: "68312493"
 | Configuration Manager 公司门户应用 | 2019 年 5 月 21 日 | 2019 年 11 月 1 日后发布的首版|
 | 应用程序目录包括两个站点系统角色：应用程序目录网站点和 Web 服务点。 有关详细信息，请参阅[删除应用程序目录](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat)。 | 2019 年 5 月 21 日 | 2019 年 11 月 1 日后发布的首版|
 |共享 Azure 内容的实现已更改。 使用启用了内容的云管理网关。 将来无法创建传统的云分发点。|2019 年 2 月|2019 年 11 月 1 日后发布的首版|
-|适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。|2018 年 11 月|在 2019 年 7 月 1 日之后发布的第一个版本|
+|适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。|2018 年 11 月|版本 1906|
 |适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
 |本地条件访问<br>有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。|2019 年 1 月 30 日|2019 年 9 月 1 日|
 |混合移动设备管理 (MDM)<br>有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<br><br>自 1902 Intune 服务版本起，预计在 2019 年 2 月底，新客户便无法新建混合连接。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|

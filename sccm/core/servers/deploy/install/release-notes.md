@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 07/18/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49600557e304edb86ec9a87bb02ef0ddb82ea037
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 858ba3b39ea2290e1d5ca39d9d804e3f46be3002
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339433"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712714"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -26,14 +26,14 @@ ms.locfileid: "68339433"
 
 特定于功能的文档包含有关影响核心方案的已知问题的信息。  
 
-本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
+本文包含 Configuration Manager Current Branch 的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
 
+- [版本 1906 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [版本 1902 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
-- [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 
 > [!Tip]  
 > 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -41,21 +41,38 @@ ms.locfileid: "68339433"
 
 ## <a name="set-up-and-upgrade"></a>设置和升级  
 
-### <a name="when-using-redistributable-files-from-the-cdlatest-folder-setup-fails-with-a-manifest-verification-error"></a>在使用 CD.Latest 文件夹中的可再发行文件时安装失败，并出现清单验证错误
+### <a name="setup-prerequisite-warning-on-domain-functional-level-on-server-2019"></a>服务器 2019 上有关域功能级别的安装程序先决条件警告
 
-<!-- 510080, 490569  -->
+<!-- 4904376 -->
 
-从为版本 1606 创建的 CD.Latest 文件夹运行安装程序并使用该 CD.Latest 文件夹中包含的可再发行文件时，将导致安装失败，Configuration Manager 安装日志中显示以下错误：
+*适用于版本 1906*
 
-`ERROR: File hash check failed for defaultcategories.dll`  
-`ERROR: Manifest verification failed. Wrong version of manifest?`
+在具有运行 Windows Server 2019 的域控制器的环境中安装版本 1906 的更新时，域功能级别的先决条件检查将返回以下警告：
+
+`[Completed with warning]:Verify that the Active Directory domain functional level is Windows Server 2003 or later`
 
 #### <a name="workaround"></a>解决方法
 
-使用以下选项之一：
+忽略此警告。
 
-- 在安装过程中，选择从 Microsoft 下载最新可再发行文件。 使用最新可再发行文件而不是 CD.Latest 文件夹中包含的文件。
-- 手动删除 *cd.latest\redist\languagepack\zhh* 文件夹，然后再次运行安装程序。
+### <a name="azure-ad-user-discovery-and-collection-group-sync-dont-work-after-site-expansion"></a>站点扩展后，Azure AD 用户发现和集合组同步不起作用
+
+<!-- 4797313 -->
+*适用于版本 1906*
+
+配置以下任一功能后：
+
+- Azure Active Directory 用户组发现
+- 将集合成员身份结果同步到 Azure Active Directory 组
+
+如果随后将独立主站点扩展为具有管理中心站点的层次结构，则会在 SMS_AZUREAD_DISCOVERY_AGENT.log 中显示以下错误：
+
+`Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
+
+#### <a name="workaround"></a>解决方法
+
+续订与 Azure AD 中的应用注册相关联的密钥。 有关详细信息，请参阅[续订密钥](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew)。
+
 
 ### <a name="setup-command-line-option-joinceip-must-be-specified"></a>必须指定安装程序命令行选项 JoinCEIP
 
@@ -148,6 +165,20 @@ OS Deployment Manager  内置安全角色具有[分阶段部署](/sccm/osd/deplo
 
 ## <a name="desktop-analytics"></a>桌面分析
 
+### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>如果将硬件清单用于分布式视图，则无法载入桌面分析
+
+<!-- 4950335 -->
+适用范围：*包含更新汇总的 Configuration Manager 版本 1902 和版本 1906*
+
+如果你具有层次结构，并且在任何站点复制链接上启用[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews)的硬件清单  站点数据，则在 Configuration Manager 中配置桌面分析连接后，将在 M365UploadWorker.log 中显示以下错误：
+
+`Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
+
+#### <a name="workaround"></a>解决方法
+
+在每个站点复制链接上禁用分布式视图的硬件清单站点数据  。
+
+
 ### <a name="console-unexpectedly-closes-when-removing-collections"></a>删除集合时控制台意外关闭
 
 <!-- 4749443 -->
@@ -189,29 +220,10 @@ OS Deployment Manager  内置安全角色具有[分阶段部署](/sccm/osd/deplo
 
 使用此操作可以完成向导。 该应用仍然成功部署到 iOS 设备。 添加到 URL 的字符串在向导的“常规信息”选项卡上显示为“名称”   。 它也是公司门户中应用的标签。
 
-### <a name="you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10"></a>无法再将 Windows Phone 8.1 VPN 配置文件部署到 Windows 10
-
-<!-- 503274  -->
-适用范围：  Configuration Manager 版本 1710
-
-无法使用 Windows Phone 8.1 工作流创建 VPN 配置文件，Windows 10 设备同样如此。 对于这些配置文件，创建向导不再显示“支持的平台”页。 后端上自动选择 Windows Phone 8.1。 可从配置文件属性中获取“支持的平台”页，但它不会显示 Windows 10 选项。
-
-#### <a name="workaround"></a>解决方法
-
-对 Windows 10 设备使用 Windows 10 VPN 配置文件工作流。 如果此选项不适用于你的环境，请联系支持部门。 支持部门可帮助添加 Windows 10 目标。
 
 
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
 
-## <a name="endpoint-protection"></a>Endpoint Protection
-
-### <a name="you-cannot-deploy-windows-defenderscep-policies-to-client-devices-without-domain-connectivity"></a>没有域连接，则无法将 Windows Defender/SCEP 策略部署到客户端设备
-<!-- 4350561 -->
-适用范围：*Configuration Manager 版本 1902 及更早版本*
-
-当 Configuration Manager 客户端应用 Windows Defender/SCEP 策略时，需要进行组策略更新，域不可访问时则无法更新。 此问题会影响 CMG 通过 Internet 管理的设备。
-
-#### <a name="workaround"></a>解决方法
-无
+<!-- ## Endpoint Protection -->

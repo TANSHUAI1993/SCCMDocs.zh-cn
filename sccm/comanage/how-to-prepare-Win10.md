@@ -2,40 +2,37 @@
 title: 共同管理基于 Internet 的设备
 titleSuffix: Configuration Manager
 description: 了解如何准备 Windows 10 基于 Internet 的设备进行共同管理。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 03/05/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4dd872e803e1d2925f011a60be5d1ee924ca555
-ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
+ms.openlocfilehash: 263901c8fa022fcaa8bfa37c579fcdb174712597
+ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398852"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68662574"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
 本文重点介绍了对基于 Internet 的新设备进行共同管理的第二种方式。 具体场景：具备联接 Azure AD 并自动注册到 Intune 的新 Windows 10 设备。 安装 Configuration Manager 客户端以实现共同管理。  
 
-
-
 ## <a name="windows-autopilot"></a>Windows Autopilot
 
 对于新的 Windows 10 设备，可以使用 Autopilot 服务来配置全新体验 (OOBE)。 此过程包括将设备联接 Azure AD 并在 Intune 中注册设备。  
 
-有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)。    
+有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)。
 
 若要将设备配置为在其联接 Azure AD 时自动注册到 Intune，请参阅 [将 Windows 设备注册到 Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll)。  
 
-
 ### <a name="gather-information-from-configuration-manager"></a>收集来自 Configuration Manager 的信息
 
-从 1802 版开始，使用 Configuration Manager 可收集和报告 Microsoft Store 商业版和教育版所需的设备信息。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 它用于在 Microsoft Store 中注册设备以支持 Windows Autopilot。 
+从版本 1802 开始，使用 Configuration Manager 可收集和报告 Intune 所需的设备信息。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 它用于在 Intune 中注册设备以支持 Windows Autopilot。
 
 1. 在 Configuration Manager 控制台中，转到“监视”  工作区，展开“报告”  节点，展开“报表”  ，然后选择“硬件 - 常规”  节点。  
 
@@ -43,23 +40,20 @@ ms.locfileid: "67398852"
 
 3. 在报表查看器中，选择“导出”图标，并选择“CSV (逗号分隔)”选项   。  
 
-4. 在保存该文件后，将数据上传到 Microsoft Store 商业版和教育版。  
+4. 保存该文件后，将数据上传到 Intune。  
 
-有关详细信息，请参阅[在适用于企业的 Microsoft Store 和适用于教育的 Microsoft Store 中添加设备](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile)。
-
+有关详细信息，请参阅[在 Intune 中添加设备](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices)。
 
 ### <a name="autopilot-for-existing-devices"></a>面向现有设备的 Autopilot
 <!--1358333-->
 
-Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。 
+Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。
 
 有关详细信息，请参阅[面向现有设备任务序列的 Windows Autopilot](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices)。
 
-
-
 ## <a name="install-the-configuration-manager-client"></a>安装 Configuration Manager 客户端
 
-对于第二种方式中基于 Internet 的设备，需要在 Intune 中创建一个应用。 将此应用部署到尚不是 Configuration Manager 客户端的 Windows 10 设备。 
+对于第二种方式中基于 Internet 的设备，需要在 Intune 中创建一个应用。 将此应用部署到尚不是 Configuration Manager 客户端的 Windows 10 设备。
 
 > [!Note]  
 > 在将此应用部署到设备之前，必须确保设备信任 CMG 服务器身份验证证书。 有关详细信息，请参阅[针对客户端的 CMG 受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot)。 如果设备不信任 CMG 服务器身份验证证书，你将在客户端的 ccmsetup.log 中看到 WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA 错误。
@@ -78,19 +72,19 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 从 1806 版开始，现在需要的命令行属性有所减少。  
 
 - 在所有方案中都需要以下命令行属性：  
-    - CCMHOSTNAME  
-    - SMSSITECODE  
+  - CCMHOSTNAME  
+  - SMSSITECODE  
 
 - 在使用 Azure AD 进行客户端身份验证而不是使用基于 PKI 的客户端身份验证证书时，需要以下属性：  
-    - AADCLIENTAPPID  
-    - AADRESOURCEURI  
+  - AADCLIENTAPPID  
+  - AADRESOURCEURI  
 
 - 如果客户端漫游回 Intranet，则需要以下属性：  
-    - SMSMP  
+  - SMSMP  
 
 - 如果使用自己的 PKI SSL 证书且 CRL 未发布到 Internet，则需要以下参数：  
-    - /noCRLCheck  
-    
+  - /noCRLCheck  
+
      有关详细信息，请参阅[规划 CRL](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)  
 
 从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME  和 SMSSiteCode  。<!--3607731-->
@@ -98,11 +92,11 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 > [!Note]
 > 如果已从 Intune 部署 Configuration Manager 客户端，请使用新命令行和新 MSI 更新 Intune 应用。 <!-- SCCMDocs-pr issue 3084 -->
 
-下面的示例包含所有这些属性：   
+下面的示例包含所有这些属性：
+
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
 有关详细信息，请参阅[客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。
-
 
 ### <a name="create-the-app-in-intune"></a>在 Intune 中创建应用
 
@@ -119,7 +113,5 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 5. 更新应用后，使用从 Configuration Manager 复制的命令行配置应用信息。  
 
-> [!IMPORTANT]    
+> [!IMPORTANT]
 > 如果自定义此命令行，请确保其长度不超过 1024 个字符。 如果命令行字符长度大于 1024，客户端安装会失败。
-
-

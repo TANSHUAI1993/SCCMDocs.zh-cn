@@ -2,7 +2,7 @@
 title: 管理集合
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中执行常见集合管理任务。
-ms.date: 04/23/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3099e61b28687ac2705d3da140af272d9de9fe2
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 02161f79270176f2904ae58af5d0dbec9a204ab6
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339040"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535426"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>如何管理 Configuration Manager 中的集合
 
@@ -180,6 +180,9 @@ ms.locfileid: "68339040"
 
 #### <a name="distribution-point-groups"></a>分发点组
 将关联到所选集合的成员的一个或多个分发点组。 有关详细信息，请参阅[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)。
+
+#### <a name="aad-group-sync"></a>AAD 组同步
+将集合成员身份结果同步到 Azure Active Directory 组。 从版本 1906 开始，此同步是一项[预发行功能](/sccm/core/servers/manage/pre-release-features)。 有关详细信息，请参阅[创建集合](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync)。
 
 #### <a name="security"></a>安全
 显示可通过关联角色和安全作用域访问所选集合的管理用户。 有关详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。  

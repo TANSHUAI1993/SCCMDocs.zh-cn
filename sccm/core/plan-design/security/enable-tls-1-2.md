@@ -2,7 +2,7 @@
 title: 如何启用 TLS 1.2
 titleSuffix: Configuration Manager
 description: 有关如何为 Configuration Manager 启用 TLS 1.2 的信息。
-ms.date: 06/05/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3d97ee2e68f9f4606ad46c8566467fad459ffa9
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: b58f6d1441d338c121b67754989128944adcc923
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822072"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536569"
 ---
 # <a name="how-to-enable-tls-12"></a>如何启用 TLS 1.2
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文介绍如何为 Configuration Manager 启用 TLS 1.2，包括各个组件。 本文还描述了常用功能的更新要求，以及一些常见问题的故障排除。
 
@@ -51,10 +51,11 @@ Configuration Manager 依赖于许多不同的组件来实现安全通信。 用
 |站点系统角色| - [更新 .NET Framework](#update-net-framework-to-support-tls-12)，并验证强加密设置 <br/> - 在需要 SQL Server 的角色上[更新 SQL Server 及其客户端组件](#update-sql-server-and-client-components)包括 [SQL Server Native Client](#sql-server-native-client)|
 |Reporting Services 点|- 在站点服务器、SQL Reporting Services 服务器及使用此控制台的任意计算机上[更新 .NET Framework](#update-net-framework-to-support-tls-12)<br/> - 根据需要重新启动 SMS_Executive 服务|
 |软件更新点|[更新 WSUS](#update-windows-server-update-services-wsus)|
+|云管理网关|[强制执行 TLS 1.2](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_tls)|
 |Configuration Manager 控制台| - [更新 .NET Framework](#update-net-framework-to-support-tls-12)<br/> - 验证强加密设置|
 |Configuration Manager 客户端与 HTTPS 站点系统角色|[更新 Windows 以支持通过使用 WinHTTP 进行客户端服务器通信的 TLS 1.2](#update-windows-and-winhttp)|
 |软件中心| - [更新 .NET Framework](#update-net-framework-to-support-tls-12)<br/> - 验证强加密设置|
-|Windows 7 客户端| 在任何服务器组件上启用 TLS 1.2 前，请先[更新 Windows 以支持通过使用 WinHTTP 进行客户端服务器通信的 TLS 1.2](#update-windows-and-winhttp)。 若先在服务器组件上启用了 TLS 1.2，可能会孤立客户端的早期版本。|
+|Windows 7 客户端| 在任何服务器组件上启用 TLS 1.2 前，请先[更新 Windows 以支持通过使用 WinHTTP 进行客户端服务器通信的 TLS 1.2](#update-windows-and-winhttp)。  若先在服务器组件上启用了 TLS 1.2，可能会孤立客户端的早期版本。|
 
 
 ## <a name="enable-tls-12-protocol-as-a-security-provider"></a>启用 TLS 1.2 协议作为安全提供程序
@@ -153,7 +154,7 @@ Windows 8.1、Windows Server 2012 R2、Windows 10、Windows Server 2016 及 Wind
 Windows 早期版本（如 Windows 7 或 Windows Server 2012）默认情况下不启用通过 HTTPS 进行客户端服务器通信的 TLS 1.1 或 1.2。 对于这些较早版本的 Windows，请安装 [Update 3140245](https://support.microsoft.com/help/3140245)，以便为 Windows 的 WinHTTP 启用 TLS 1.1 和 TLS 1.2 作为默认安全协议。 然后设置以下注册表值：
 
 > [!IMPORTANT]
-> 先在所有客户端上启用这些设置，然后再在 Configuration Manager 服务器上启用 TLS 1.2。 否则，可能会在无意中孤立它们。
+> 先在所有客户端上启用这些设置，然后再在 Configuration Manager 服务器上启用 TLS 1.2。  否则，可能会在无意中孤立它们。
 
 验证 `DefaultSecureProtocols` 注册表设置的值，例如：
 
@@ -205,7 +206,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 ### <a name="sql-server-communication-failure"></a>SQL Server 通信失败
 
-如果 SQL Server 通信失败并返回 SslSecurityError 错误，请确认以下设置：
+如果 SQL Server 通信失败并返回 SslSecurityError  错误，请确认以下设置：
 
 - [更新 .NET Framework](#update-net-framework-to-support-tls-12)，并在各个计算机上启用强加密
 - 在主机服务器上[更新 SQL Server](#update-sql-server-and-client-components)
@@ -217,7 +218,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 ### <a name="reporting-services-point-fails-and-returns-an-expected-error"></a>Reporting Services 点失败并返回预期错误
 
-如果 Reporting Services 点没有配置报表，请检查 SRSRP.log 是否存在以下错误条目：
+如果 Reporting Services 点没有配置报表，请检查 SRSRP.log  是否存在以下错误条目：
 
 `The underlying connection was closed:`
 `An expected error occurred on a receive.`
@@ -233,7 +234,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 > [!Important]  
 > 应用程序目录已遭弃用。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。
 
-如果应用程序目录未初始化，请检查 ServicePortalWebSite.svclog 文件是否存在以下错误条目：
+如果应用程序目录未初始化，请检查 ServicePortalWebSite.svclog  文件是否存在以下错误条目：
 
 `SOAP security negotiation failed. The client and server can't communicate because they don't share a common algorithm.`
 
@@ -241,7 +242,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 1. [更新 .NET Framework](#update-net-framework-to-support-tls-12)，并在所有相关计算机上启用强加密。
 
-1. 在应用程序目录服务器的 `%WinDir%\System32\InetSrv` 文件夹中，使用以下内容创建 W2SP.exe.config 文件：
+1. 在应用程序目录服务器的 `%WinDir%\System32\InetSrv` 文件夹中，使用以下内容创建 W2SP.exe.config  文件：
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -287,13 +288,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 ### <a name="configuration-manager-console-displays-failure-to-sign-in-to-azure"></a>Configuration Manager 控制台显示登录到 Azure 失败
 
-尝试在 Azure Active Directory (Azure AD) 中创建应用程序时，如果在选择“登录”后 Azure Services 载入对话框立即失败，请[更新 .NET Framework](#update-net-framework-to-support-tls-12)，并启用强加密。 更改完成后，请务必重新启动计算机。
+尝试在 Azure Active Directory (Azure AD) 中创建应用程序时，如果在选择“登录”  后 Azure Services 载入对话框立即失败，请[更新 .NET Framework](#update-net-framework-to-support-tls-12)，并启用强加密。 更改完成后，请务必重新启动计算机。
 
 ### <a name="configuration-manager-cloud-services-and-tls-12"></a>Configuration Manager 云服务和 TLS 1.2
 
 自版本 1802 起，云管理网关和云分发点使用的 Azure 虚拟机支持 TLS 1.2。 版本 1802 或更高版本支持的客户端自动使用 TLS 1.2。
 
-SMSAdminui.log 可能包含如下所示的错误：
+SMSAdminui.log  可能包含如下所示的错误：
 
 ```
 Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationException

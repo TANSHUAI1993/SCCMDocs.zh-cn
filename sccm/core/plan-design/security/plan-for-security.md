@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff14fe508efb5de410f905b8e64d30b55287cacc
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: e96c47c23bd17d7b1059bbcab62b3d1568cd92cd
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338178"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536596"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -231,6 +231,9 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 1. 安装 Configuration Manager 站点并对其进行配置，使站点系统接受 HTTPS 和 HTTP 客户端连接。  
 
 2. 配置站点属性中的“客户端计算机通信”  选项卡，从而“站点系统设置”  为“HTTP 或 HTTPS”  ，然后选择“在可用时使用 PKI 客户端证书(客户端身份验证功能)”  。  有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
+
+    > [!Note]
+    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
 
 3. 试运行客户端证书的 PKI 推出。 有关部署示例，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
 
