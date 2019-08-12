@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 06/19/2019
+ms.date: 08/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5ed06951fab313a4a1453864ffefb963cc4d8e9
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: fa7ab85d86a544b3ea0ad22325ddd63e2034982e
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623268"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860044"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -35,9 +35,12 @@ ms.locfileid: "67623268"
 > [!TIP]  
 > 服务连接点在连接到 `go.microsoft.com` 或 `manage.microsoft.com` 时使用 Microsoft Intune 服务。 存在以下已知问题：如果未在服务连接点上安装 Baltimore CyberTrust 根证书、该证书已过期或损坏，则 Intune 连接器会遇到连接问题。 有关详细信息，请参阅 [KB 3187516：服务连接点不下载更新](https://support.microsoft.com/help/3187516)。  
 
-### <a name="updates-and-servicing"></a>更新和服务
+### <a name="a-namebkmk_scp-updates-updates-and-servicing"></a><a name="bkmk_scp-updates"/> 更新和维护服务
 
 有关该功能的详细信息，请参阅 [Configuration Manager 的更新和服务](/sccm/core/servers/manage/updates)。
+
+> [!Tip]  
+> 为[管理见解](/sccm/core/servers/manage/management-insights)规则（即，将站点连接到 Microsoft 云来实现 Configuration Manager 更新）启用这些终结点  。
 
 - `*.akamaiedge.net`  
 

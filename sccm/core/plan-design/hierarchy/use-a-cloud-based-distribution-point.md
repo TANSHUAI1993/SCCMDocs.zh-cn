@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe6544e020f819f1ed18592ce811f2992a5603eb
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 72b374b738a7938126d0e03a9b8b8fdb8dab220a
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251486"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833014"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>在 Configuration Manager 中使用云分发点
 
@@ -100,7 +100,7 @@ ms.locfileid: "67251486"
 在 Configuration Manager 版本 1810 及更早版本中，云分发点向导仍提供使用 Azure 管理证书的“经典服务部署”  选项。 若要简化资源的部署和管理，为所有新的云分发点使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有云分发点。
 
 > [!Important]  
-> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在 2019 年 7 月 1 日之后发布的第一个 Configuration Manager 版本中删除。 在此之前，请将 CMG 和云分发点移至 Azure 资源管理器部署。 <!--SCCMDocs-pr issue #2993-->  
+> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在未来的 Configuration Manager 版本中删除。<!--SCCMDocs-pr issue #2993-->  
 
 Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管理器部署模型。 使用 Azure 资源管理器部署创建新的云分发点，然后删除经典云分发点。
 

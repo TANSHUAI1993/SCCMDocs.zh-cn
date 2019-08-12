@@ -5,18 +5,18 @@ description: 了解可以从 Configuration Manager 切换到 Microsoft Intune �
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fb11ac9ffbacfc37b69cb91d34a6885f44abe08
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: ef39c354e384f130b5c585e8aeb099d083fe0418
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286648"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743649"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -120,12 +120,17 @@ ms.locfileid: "67286648"
 
 从 Configuration Manager 1806 版开始，使用 Intune 在共同管理的 Windows 10 设备上管理客户端应用和 PowerShell 脚本。 转移此工作负荷之后，任何从 Intune 部署的可用应用在公司门户中也变得可用。 从 Configuration Manager 部署的应用在软件中心可用。
 
-
 有关 Intune 功能的详细信息，请参阅[什么是 Microsoft Intune 应用管理？](https://docs.microsoft.com/intune/app-management)。
-
 
 > [!Note]  
 > 客户端应用工作负载是预发行版功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
+
+
+## <a name="diagram-for-app-workloads"></a>应用工作负载的关系图
+
+![共同管理应用工作负载的关系图](media/co-management-apps.svg)
+
+[以完整尺寸查看关系图](media/co-management-apps.svg)
 
 
 ## <a name="next-steps"></a>后续步骤

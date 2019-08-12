@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 855869db6d127999218964d06e50179c70efed0a
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: a634d252a4e5a6637b4dae18dcb57efe929fcf88
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524092"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859700"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 UNIX 和 Linux 服务器
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 > [!Important]  
 > 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
@@ -44,7 +44,7 @@ ms.locfileid: "58524092"
  有关适用于 Linux 和 UNIX 的每个版本的 Configuration Manager 客户端支持的操作系统、平台和客户端安装包的详细信息，请参阅 [Linux 和 UNIX 服务器](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers)。  
 
 ##  <a name="BKMK_InstallLnUClient"></a>在 Linux 和 UNIX 服务器上安装客户端  
- 若要安装适用于 Linux 和 UNIX 的客户端，请在每个 Linux 或 UNIX 的计算机上运行脚本。 该脚本名为 install，它支持修改安装行为和引用客户端安装包的命令行属性。 安装脚本和客户端安装包必须位于客户端上。 客户端安装程序包中包含针对特定 Linux 或 UNIX 的操作系统和平台的 Configuration Manager 客户端文件。
+ 若要安装适用于 Linux 和 UNIX 的客户端，请在每个 Linux 或 UNIX 的计算机上运行脚本。 该脚本名为 install  ，它支持修改安装行为和引用客户端安装包的命令行属性。 安装脚本和客户端安装包必须位于客户端上。 客户端安装程序包中包含针对特定 Linux 或 UNIX 的操作系统和平台的 Configuration Manager 客户端文件。
 每个客户端安装包都包含完成客户端安装必需的所有文件，且与 Windows 计算机不同的是，不会从管理点或其他源位置下载其他文件。  
 
  安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端后，不需要重新启动计算机。 一旦软件安装完成后，客户端所操作。 如果重新启动计算机，Configuration Manager 客户端将自动重新启动。  
@@ -85,7 +85,7 @@ ms.locfileid: "58524092"
 
      当进入此命令时，使用您所需要的其他命令行属性。 有关命令行属性的列表，请参阅[在 Linux 和 UNIX 服务器上安装客户端的命令行属性](#BKMK_CmdLineInstallLnUClient)  
 
-6.  脚本运行后，通过查看“/var/opt/microsoft/scxcm.log”  文件验证安装 。 此外，可以通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
+6.  脚本运行后，通过查看“/var/opt/microsoft/scxcm.log”  文件验证安装 。 此外，可以通过在 Configuration Manager 控制台中“资产和符合性”  工作区的“设备”  节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
 
 ###  <a name="BKMK_CmdLineInstallLnUClient"></a>在 Linux 和 UNIX 服务器上安装客户端的命令行属性  
  以下属性可用于修改安装脚本的行为：  
@@ -109,7 +109,7 @@ ms.locfileid: "58524092"
 
 -   `-fsp <server_FQDN>`  
 
-     可选。 指定通过 FQDN，客户端用于提交状态消息的回退状态点服务器。 有关详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)。  
+     可选。 指定通过 FQDN，客户端用于提交状态消息的回退状态点服务器。 有关详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point)。  
 
 -   `-dir <directory>`  
 
@@ -139,7 +139,7 @@ ms.locfileid: "58524092"
 
      如果未使用此属性指定 PKI 证书，客户端将使用自签名证书，并且与站点系统的所有通信均通过 HTTP 进行。  
 
-     如果您在上指定了无效的证书客户端安装命令行，会返回任何错误。 客户端安装完成后会进行证书验证。 客户端启动时，将使用管理点对证书进行验证。 如果证书未通过验证，scxcm.log 中将显示以下消息：“管理点证书未通过验证”。 默认的日志文件位置是：  **/var/opt/microsoft/scxcm.log**。  
+     如果您在上指定了无效的证书客户端安装命令行，会返回任何错误。 客户端安装完成后会进行证书验证。 客户端启动时，将使用管理点对证书进行验证。 如果证书未通过验证，scxcm.log  中将显示以下消息：“管理点证书未通过验证”  。 默认的日志文件位置是：  **/var/opt/microsoft/scxcm.log**。  
 
      > [!NOTE]  
      > 安装客户端时，必须指定此属性并使用 `-mp` 属性指定配置为仅接受 HTTPS 客户端连接的管理点。  
@@ -190,7 +190,7 @@ ms.locfileid: "58524092"
 
      这些证书用于验证从管理点下载的客户端策略发送从预期的站点。 如果在安装过程中未指定证书，或者你需要更改证书，请使用 **certutil** 实用工具。 有关详细信息，请参阅[如何管理适用于 Linux 和 UNIX 的客户端上的证书](/sccm/core/clients/manage/manage-clients-for-linux-and-unix-servers#BKMK_ManageLinuxCerts)。  
 
-     此证书可通过 **SMS** 证书存储检索，并且具有“站点服务器”  使用者名称以及“站点服务器签名证书” 友好名称。  
+     此证书可通过 **SMS** 证书存储检索，并且具有“站点服务器”  使用者名称以及“站点服务器签名证书”  友好名称。  
 
      如果安装期间未指定此选项，Linux 和 UNIX 客户端将信任与之通信的第一个管理点。 它们会自动从该管理点检索签名证书。  
 
@@ -218,7 +218,7 @@ ms.locfileid: "58524092"
 
  当你安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，你可以通过指定 **-httpport** 和 **-httpsport** 安装属性更改客户端默认请求端口 。 如果未指定安装属性和自定义值，客户端将使用默认值。 默认值为 **80** 对于 HTTP 流量和 **443** HTTPS 通信。  
 
- 安装客户端后，不能更改其请求端口配置。 相反，若要更改端口配置必须重新安装客户端并指定新的端口配置。 当你重新安装客户端以更改请求端口号时，运行类似于新客户端安装的 install命令，但使用额外命令行属性 -keepdb。 此开关将指示安装保留客户端数据库和文件，包括客户端 GUID 和证书存储。  
+ 安装客户端后，不能更改其请求端口配置。 相反，若要更改端口配置必须重新安装客户端并指定新的端口配置。 当你重新安装客户端以更改请求端口号时，运行类似于新客户端安装的 install  命令，但使用额外命令行属性 -keepdb  。 此开关将指示安装保留客户端数据库和文件，包括客户端 GUID 和证书存储。  
 
  有关客户端通信端口号的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md)。  
 
