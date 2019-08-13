@@ -2,7 +2,7 @@
 title: 设备重新启动通知
 titleSuffix: Configuration Manager
 description: 重新启动 Configuration Manager 中各种客户端设置的通知行为。
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 948c92fc718446bba92bb92e88223fc93213c798
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 9e057a7391bbdbe697b7f53c13a90a74efe22635
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537863"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859651"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager 中的设备重新启动通知
 
@@ -97,6 +97,9 @@ ms.locfileid: "68537863"
 
 - **向用户显示一条临时通知，指示注销用户或重新启动计算机之前的间隔(分钟)**
 - **显示用户无法关闭的对话框，该对话框显示注销用户或重新启动计算机之前的倒计时间隔(分钟)**
+
+> [!IMPORTANT]
+> 在某些情况下，Configuration Manager 1902 中的该对话框将不会替换 Toast 通知。 要解决此问题，请安装 [Configuration Manager 版本1902 的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
 
 ## <a name="device-restart-notifications-starting-in-version-1906"></a>从版本 1906 开始的设备重新启动通知
 <!--3976435-->

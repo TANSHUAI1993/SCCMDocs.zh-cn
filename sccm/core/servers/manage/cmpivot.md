@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19275385c75477c1c0da24109d6a9c601c5aa8d0
-ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
+ms.openlocfilehash: 339c9df44f2647b12936ce8a1077fd0ee0f7ee37
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604550"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743727"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -38,12 +38,6 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
 - 将目标设备升级到 Configuration Manager 客户端的最新版本。  
 
-- CMPivot 的权限：
-  - “SMS 脚本”对象上的“读取权限”  
-  - “集合”上的“运行脚本”权限  
-  - “清单报表”上的“读取”权限  
-  - 默认范围。 
-
 - 目标客户端至少需要 PowerShell 版本 4。
 
 - 若要收集有关以下实体的数据，目标客户端需要 PowerShell 5.0 版：  
@@ -52,6 +46,16 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
   - IPConfig
   - SMBConfig
 
+
+- CMPivot 的权限：
+  - “SMS 脚本”对象上的“读取权限”  
+  - “集合”上的“运行脚本”权限  
+    - 或者，从版本 1906 开始，可以在“集合”  上使用“运行 CMPivot”  。
+  - “清单报表”上的“读取”权限  
+  - 默认范围。
+
+>[!NOTE]
+> “运行脚本”  是“运行 CMPivot”  权限的超集。
  
 ## <a name="limitations"></a>限制
 
@@ -527,9 +531,14 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 <!--4683130-->
 
 从版本 1906 开始，已向 Configuration Manager 的内置安全管理员角色添加以下权限  ：
- - 读取 SMS 脚本
- - 在集合上运行 CMPivot
- - 读取清单报表
+
+ - 读取  SMS 脚本
+ - 在集合上运行 CMPivot 
+ - 读取清单报表 
+
+>[!NOTE]
+> “运行脚本”  是“运行 CMPivot”  权限的超集。
+ 
 
 ### <a name="bkmk_standalone"></a> CMPivot 独立应用
 <!--3555890, 4619340, 4683130 -->

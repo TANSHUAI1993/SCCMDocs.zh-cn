@@ -2,7 +2,7 @@
 title: 管理见解
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 控制台中提供的管理见解功能。
-ms.date: 07/26/2019
+ms.date: 08/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23b0839366502e44e37689c4b732c74ed2fe8458
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: ea543edbbb3831e1f1119118a9c9b4730ff5b527
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536210"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860033"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
@@ -130,6 +130,8 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **配置 Azure 服务以用于 Configuration Manager**：此规则有助于将 Configuration Manager 载入 Azure AD，以便客户端能够使用 Azure AD 向站点进行身份验证。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
 
+- **将站点连接到用于 Configuration Manager 更新的 Microsoft 云**：此规则可确保 Configuration Manager 服务连接点在过去七天内已连接到 Microsoft 云。 此连接用于下载定期更新内容。 查看 DMPDownloader.log 和 hman.log。 有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp-updates)。
+
 - **将设备启用为加入混合 Azure Active Directory**：使用加入 Azure AD 的设备，用户可使用自己的域凭据登录，同时确保设备符合组织的安全性和符合性标准。 有关详细信息，请参阅 [Azure AD 混合标识设计注意事项](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview)。  
 
 - **将客户端升级到最新版 Windows 10**：Windows 10 版本 1709 或更高版本改进和新式化用户计算体验。 有关详细信息，请参阅[有关采用服务型 Windows 的关键文章](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service)。  
@@ -200,6 +202,12 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 - **将用户定向到软件中心，而不是应用目录**：检查用户是否在过去 14 天内从应用目录安装或请求获取应用。 应用程序目录的主要功能现在包含在软件中心内。 应用程序目录已遭弃用。 有关详细信息，请参阅[已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features)。  
 
 - **使用新版软件中心**：不再支持以前版本的软件中心。 通过在“计算机代理”组中启用客户端设置“使用新的软件中心”，将客户端设置为使用新的软件中心   。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#use-new-software-center)。  
+
+### <a name="software-updates"></a>软件更新
+
+- **客户端设置未配置为允许客户端下载增量内容**：在环境中同步的某些软件更新包括增量内容。 启用客户端设置“在有可用内容时，允许客户端下载增量内容”  。 如果不启用此设置，则在部署这些更新，客户端将不必要地下载超出要求的内容。 有关详细信息，请参阅[客户端设置 - 软件更新](/sccm/core/clients/deploy/about-client-settings#software-updates)。
+
+- **启用“Windows 10 版本 1903 及更高版本”的软件更新产品类别**：Windows 10 版本 1903 及更高版本有一个新的软件更新产品类别。 如果同步 Windows 10 更新且装有 Windows 10 版本 1903 或更高版本的客户端，请在软件更新点组件属性中选择“Windows 10 版本 1903 及更高版本”  产品类别。 有关详细信息，请参阅[配置要同步的分类和产品](/sccm/sum/get-started/configure-classifications-and-products)。
 
 ### <a name="windows-10"></a>Windows 10
 

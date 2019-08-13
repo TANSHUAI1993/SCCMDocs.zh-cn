@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43145e7f94fb381d1051ddb7de09367f4f69d556
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: dff4d0ff8fe2bcb7fbbcd8b0b1c5c701f02d20fb
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535608"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833170"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -54,7 +54,7 @@ ms.locfileid: "68535608"
 
 - 通过 Internet 在 Windows 10 设备上安装 Configuration Manager 客户端。 使用 Azure AD 允许设备对 CMG 进行身份验证，以注册和分配客户端。 可手动安装客户端，也可使用其他软件分发方法（如 Microsoft Intune）。  
 
-- 通过共同管理预配新设备。 CMG 不是共同管理所必需的。 但它有助于完成新设备的端到端方案，其中涉及 Windows AutoPilot、Azure AD、Microsoft Intune 和 Configuration Manager。  
+- 通过共同管理预配新设备。 自动注册现有客户端时，不需要使用 CMG 来实现共同管理。 但新设备需要使用 CMG，其中涉及 Windows AutoPilot、Azure AD、Microsoft Intune 和 Configuration Manager。 有关详细信息，请参阅[共同管理的路径](https://docs.microsoft.com/sccm/comanage/quickstart-paths)。
 
 ### <a name="specific-use-cases"></a>特定用例
 
@@ -109,7 +109,7 @@ CMG 部署和操作包括以下组件：
 在 Configuration Manager 版本 1810 及更早版本中，CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”  选项。 要简化资源的部署和管理，建议为所有新的 CMG 实例使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有 CMG 实例。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。
 
 > [!Important]  
-> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在 2019 年 7 月 1 日之后发布的第一个 Configuration Manager 版本中删除。 在此之前，请将 CMG 和云分发点移至 Azure 资源管理器部署。 <!--SCCMDocs-pr issue #2993-->  
+> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在未来的 Configuration Manager 版本中删除。<!--SCCMDocs-pr issue #2993-->  
 
 ### <a name="hierarchy-design"></a>层次结构设计
 

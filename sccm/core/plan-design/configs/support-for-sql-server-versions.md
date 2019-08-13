@@ -2,7 +2,7 @@
 title: 支持的 SQL Server 版本
 titleSuffix: Configuration Manager
 description: 获取托管 Configuration Manager 站点数据库的 SQL Server 版本和配置要求。
-ms.date: 08/14/2018
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b88ca3361390f8577dc44f2a3fd9640d5a49ad7d
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: e9c84044705c014c547291ea70203e16f3eab004
+ms.sourcegitcommit: ebce34771d39292737a60ba9f051ab4d3636903a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536815"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822477"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -24,11 +24,10 @@ ms.locfileid: "68536815"
 
 每个 System Center Configuration Manager 站点都需要受支持的 SQL Server 版本和配置来托管站点数据库。  
 
-
-
 ##  <a name="bkmk_Instances"></a> SQL Server 实例和位置  
  
-### <a name="central-administration-site-and-primary-sites"></a>管理中心站点和主站点  
+### <a name="central-administration-site-and-primary-sites"></a>管理中心站点和主站点
+ 
 站点数据库必须使用 SQL Server 的完整安装。  
 
 SQL Server 可位于以下位置：  
@@ -49,138 +48,89 @@ SQL Server 可位于以下位置：
 
 SQL Server 必须位于站点服务器计算机上。  
 
+### <a name="limitations-to-support"></a>支持限制
 
-### <a name="limitations-to-support"></a>支持限制   
 不支持下列配置：
+
 - 网络负载均衡 (NLB) 群集配置中的 SQL Server 群集
 - 群集共享卷 (CSV) 上的 SQL Server 群集
 - SQL Server 数据库镜像技术和对等复制
 
 SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)的管理点。  
 
+##  <a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本
 
-
-##  <a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
 在含有多个网站的层次结构中，各个网站可以使用不同版本的 SQL Server 托管网站数据库。 只要满足以下各项：
+
 - Configuration Manager 支持你使用的 SQL Server 版本。
 - Microsoft 仍支持你使用的 SQL Server 版本。
-- SQL Server 支持在两个 SQL Server 版本之间进行复制。 例如，SQL Server 不支持在 SQL Server 2008 R2 和 SQL Server 2016 之间进行复制。 有关详细信息，请参阅 [SQL Server 复制中的弃用功能](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
+- SQL Server 支持在两个 SQL Server 版本之间进行复制。 有关详细信息，请参阅 [SQL Server 复制向后兼容性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)。
+
+对于 SQL Server 2016 和更早版本，对每个 SQL 版本和 Service Pack 的支持均遵循 [Microsoft 生命周期策略](https://aka.ms/sqllifecycle)。 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 从 SQL Server 2017 开始，将不会发布 Service Pack，因为它遵循[新式服务模型](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)。 SQL Server 团队建议在累积更新发布时进行持续的[主动安装](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)。
 
 
-
-除非另行指定，否则 Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果支持新的 SQL Server 版本或添加 Service Pack，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。   
-
-对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 如果没有另行说明 Service Pack 版本，则支持是针对不带 Service Pack 的 SQL Server 版本。 将来如果针对某个 SQL Server 版本发布 Service Pack，单独的支持声明将在支持该新的 Service Pack 版本前宣布。
-
+除非另行指定，否则 Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果添加了对新 SQL Server 版本的支持，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。
 
 > [!IMPORTANT]  
 > 为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅 [调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)。
 
-### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：Standard、Enterprise  
-自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用： 
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：Standard、Enterprise
+
+只要 SQL 生命周期支持累积更新版本，就可以将此版本与[累积更新版本 2](https://support.microsoft.com/help/4052574) 或更高版本一起使用。 此版本的 SQL 可用于以下站点：
 
 - 管理中心站点  
 - 主站点  
 - 辅助站点  
   <!--SMS.498506-->
 
-### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2：Standard、Enterprise  
-<!--514985-->
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
-- 管理中心站点  
-- 主站点  
-- 辅助站点  
-
-### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1：Standard、Enterprise  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
-- 管理中心站点  
-- 主站点  
-- 辅助站点  
-
 ### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016：Standard、Enterprise  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+<!--514985-->
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
 
 - 管理中心站点  
 - 主站点  
 - 辅助站点  
 
-### <a name="sql-server-2014-sp3-standard-enterprise"></a>SQL Server 2014 SP3：Standard、Enterprise  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+### <a name="sql-server-2014-standard-enterprise"></a>SQL Server 2014：Standard、Enterprise
+
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
 
 - 管理中心站点  
 - 主站点  
 - 辅助站点
 
-### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2：Standard、Enterprise  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+### <a name="sql-server-2012-standard-enterprise"></a>SQL Server 2012：Standard、Enterprise
 
-- 管理中心站点  
-- 主站点  
-- 辅助站点
-
-### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1：Standard、Enterprise  
- 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
-- 管理中心站点  
-- 主站点  
-- 辅助站点
-
-### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4：Standard、Enterprise  
- 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
 
 - 管理中心站点  
 - 主站点  
 - 辅助站点  
 
-### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3：Standard、Enterprise  
- 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+### <a name="sql-server-2017-express"></a>SQL Server 2017 Express
 
-- 管理中心站点  
-- 主站点  
-- 辅助站点  
+只要 SQL 生命周期支持累积更新版本，就可以将此版本与[累积更新版本 2](https://support.microsoft.com/help/4052574) 或更高版本一起使用。 此版本的 SQL 可用于以下站点：
 
-### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：Standard、Enterprise、Datacenter     
-不支持此版本的 SQL Server。 有关详细信息，请参阅 [SQL Server 版本作为站点数据库的已弃用支持](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server)。  
-
-### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
-自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用：
 - 辅助站点
 <!--SMS.498506-->
 
-### <a name="sql-server-2016-express-sp2"></a>SQL Server 2016 Express SP2  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
-- 辅助站点
-
-### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
-- 辅助站点
-
 ### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
+
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
+
 - 辅助站点
 
-### <a name="sql-server-2014-express-sp3"></a>SQL Server 2014 Express SP3   
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+### <a name="sql-server-2014-express"></a>SQL Server 2014 Express
+
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
 
 - 辅助站点  
 
-### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+### <a name="sql-server-2012-express"></a>SQL Server 2012 Express
+
+可以将此版本与 SQL 生命周期支持的最小 Service Pack 和累积更新一起使用。 此版本的 SQL 可用于以下站点：
 
 - 辅助站点  
-
-### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
- 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
-- 辅助站点  
-
-### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
-- 辅助站点  
-
 
 ## <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置
 
@@ -295,7 +245,6 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
 
 
-
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server 的升级选项
 
 如果需要升级 SQL Server 版本，请使用以下方法（难度从简单到复杂）：  
@@ -304,4 +253,4 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 
 - 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig)将站点服务器指向新的 SQL Server  
 
-- 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。 支持在 SQL 升级方案中使用备份和恢复。 在查看[恢复站点前的注意事项](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site)时，可以忽略 SQL 版本控制要求。 
+- 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。 支持在 SQL 升级方案中使用备份和恢复。 在查看[恢复站点前的注意事项](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site)时，可以忽略 SQL 版本控制要求。

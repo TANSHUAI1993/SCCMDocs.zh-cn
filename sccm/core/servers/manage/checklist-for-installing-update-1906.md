@@ -2,7 +2,7 @@
 title: 用于 1906 的清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1906 之前需要执行的操作。
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65e68662217275832d7e36e331c5094f45d0b33e
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: ba3195db4445b4a96e04e9805cf92e6e21c9b2be
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68538003"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860013"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1906 的清单
 
@@ -34,7 +34,7 @@ ms.locfileid: "68538003"
 
     - 当代理服务器设置阻止从 `silverlight.dlservice.microsoft.com`、`download.microsoft.com` 和 `go.microsoft.com` 下载时，会出现另一个常见下载问题。
 
-有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)。
+有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#bkmk_inconsole)。
 
 有关 Current Branch 版本的详细信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
 
@@ -77,7 +77,7 @@ ms.locfileid: "68538003"
 Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可执行文件内。
 
 > [!Note]  
-> 版本 1906 更新仅适用于运行版本 1806 或更高版本的站点。
+> 版本 1906 更新仅适用于运行版本 1802 或更高版本的站点。
 
 若要选择加入早期更新圈，请执行以下操作：
 
@@ -100,7 +100,7 @@ Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可�
 
 ### <a name="all-sites-run-a-supported-version-of-configuration-manager"></a>所有站点都运行 Configuration Manager 的支持版本
 
-层次结构中的每个站点服务器都必须运行相同的 Configuration Manager 版本，然后才能开始安装更新 1906。 若要更新到 1906，必须使用版本 1806、1810 或 1902。
+层次结构中的每个站点服务器都必须运行相同的 Configuration Manager 版本，然后才能开始安装更新 1906。 若要更新到 1906，必须使用版本 1802 或更高版本。
 
 ### <a name="review-the-status-of-your-product-licensing"></a>查看产品许可的状态
 
@@ -131,7 +131,7 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 
 ### <a name="review-sql-server-native-client-version"></a>查看 SQL Server Native Client 版本
 
-安装 SQL Server 2012 Native Client 的最低版本，其中包括对 TLS 1.2 的支持。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。
+安装 SQL Server 2012 Native Client 的最低版本，其中包括对 TLS 1.2 的支持。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client)。
 
 ### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>查看站点和层次结构状态以寻找未解决的问题
 
@@ -213,7 +213,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 ### <a name="update-sites"></a>更新站点
 
-现已准备好为层次结构开始更新安装。 有关安装更新的详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)。
+现已准备好为层次结构开始更新安装。 有关安装更新的详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)。
 
 你有可能计划在常规工作时间外安装更新。 确定过程将对业务操作造成最小影响的时间。 安装更新及其操作会重新安装站点组件和站点系统角色。
 

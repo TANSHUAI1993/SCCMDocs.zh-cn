@@ -2,7 +2,7 @@
 title: 日志文件引用
 titleSuffix: Configuration Manager
 description: Configuration Manager 客户端、服务器和依赖组件的所有日志文件的引用。
-ms.date: 07/26/2019
+ms.date: 08/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c88035f7aff8b6021639b3c26387567e722cfc63
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 44ed3f61914cf62a9eceb189be933330cf04124e
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536703"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860061"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -144,6 +144,7 @@ ms.locfileid: "68536703"
 |CoManagementHandler.log|用于对客户端的共同管理进行故障排除。|
 |ContentTransferManager.log|计划后台智能传输服务 (BITS) 或服务器消息块 (SMB) 以下载或访问包。|  
 |DataTransferService.log|记录策略或包访问的所有 BITS 通信|  
+|DeltaDownload.log|记录有关使用传递优化下载的快速更新和更新的相关下载信息。|  
 |EndpointProtectionAgent|记录有关 System Center Endpoint Protection 客户端的安装以及将反恶意软件策略应用于该客户端的信息。|  
 |execmgr.log|记录有关客户端上运行的包和任务序列的详细信息。|  
 |ExpressionSolver.log|记录打开详细或调试日志记录时使用的增强检测方法的详细信息。|  
@@ -833,7 +834,8 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |AlternateHandler.log|在客户端调用 Office 即点即用 COM 接口以下载和安装 Office 365 客户端更新时记录详细信息。 它类似于在调用 Windows 更新代理 API 以下载和安装 Windows 更新时使用 WuaHandler。<!-- SCCMDocs#888 -->|客户端|
-|Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|  
+|Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|
+|DeltaDownload.log|记录有关使用传递优化下载的快速更新和更新的相关下载信息。|客户端|  
 |PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|手动下载更新时，此日志文件将位于运行控制台的计算机上运行控制台的用户的 %temp% 目录中。 对于自动部署规则，如果在站点服务器上安装了 ConfigMgr 客户端，则此日志文件将位于 %windir%\CCM\Logs 中的站点服务器上。|  
 |PolicyEvaluator.log|记录有关客户端计算机上的策略评估的详细信息，其中包括来自软件更新的策略。|客户端|  
 |RebootCoordinator.log|记录有关安装软件更新后在客户端计算机上协调系统重新启动的过程的详细信息。|客户端|  

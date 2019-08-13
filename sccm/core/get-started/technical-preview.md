@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 07/26/2019
+ms.date: 08/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 977f5cc2d9719a333aa4f063a6e4f9c505e82d3b
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 3f208a8bf66748601985434366a30297396254e4
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535886"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833076"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -26,7 +26,7 @@ ms.locfileid: "68535886"
 
 由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
-此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1901 为 2019 年 (19) 的 1 月 (01)  。 单独的文章专用于详细介绍每个预览版的单独功能。  
+此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1908  为 2019 年 (19) 的 8 月 (08)。 单独的文章专用于详细介绍每个预览版的单独功能。  
 
 有关 Configuration Manager 的当前版本  中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
 
@@ -122,23 +122,35 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1907"></a>技术预览版 1907
+### <a name="technical-preview-version-1908"></a>技术预览版 1908
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [搜索任务序列编辑器](/sccm/core/get-started/2019/technical-preview-1907#bkmk_tsedit) <!--4621085-->
-- [对 Office 365 专业增强版升级就绪情况仪表板的改进](/sccm/core/get-started/2019/technical-preview-1907#improvements-to-office-365-proplus-upgrade-readiness-dashboard) <!--4021125-->
+- [电源计划的任务序列性能改进](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tsperf) <!--3555926-->
+- [使用 CMPivot 独立应用的本地设备查询评估](/sccm/core/get-started/2019/technical-preview-1908#local-device-query-evaluation-using-cmpivot-standalone) <!--3197353-->
+- [ADR 的附加软件更新筛选器](/sccm/core/get-started/2019/technical-preview-1908#additional-software-update-filter-for-adrs) <!--4852033-->
+- [对所有 Windows 更新使用传递优化](/sccm/core/get-started/2019/technical-preview-1908#use-delivery-optimization-for-all-windows-updates) <!--4699118 (4685210)-->
+- [分阶段部署模板](/sccm/core/get-started/2019/technical-preview-1908#phased-deployment-templates) <!--4961086-->
+- [控制台连接节点的改进](/sccm/core/get-started/2019/technical-preview-1908#improvements-to-console-connections-node) <!--4923997 (4951240)-->
+- [复制和粘贴任务序列条件](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tscondition) <!--4621098-->
+- [任务序列搜索的改进](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tssearch) <!--4621085-->
+- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1908#bkmk_osd) <!--4910348, 4931110, 4977616-->
 
 > [!Note]  
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。  
 
-<!-- comment out until 1908.1 TP
-## Features in recent technical previews
+## <a name="features-in-recent-technical-previews"></a>最新的技术预览版中的功能
 
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+以下是自 Current Branch 版本 1906 发布以来的旧版 Configuration Manager 技术预览分支发布的功能：
+
+### <a name="technical-preview-version-1907"></a>技术预览版 1907
+
+- [搜索任务序列编辑器](/sccm/core/get-started/2019/technical-preview-1907#bkmk_tsedit) <!--4621085-->
+- [对 Office 365 专业增强版升级就绪情况仪表板的改进](/sccm/core/get-started/2019/technical-preview-1907#improvements-to-office-365-proplus-upgrade-readiness-dashboard) <!--4021125-->
+
 
 > [!Tip]  
-> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions).
+> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能  。 有关详细信息，请参阅[增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions#supported-versions)。
 
 <!-- This is the full list of new features in the past TP releases since the last CB release.
 Each month, add features from the list above to a new H3 section at the top of this section.

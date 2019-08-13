@@ -2,7 +2,7 @@
 title: 1906 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1906 中引入的更改和新增功能的详细信息。
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dd0b7bd83f33645028755242a48d0581de43460
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 79901ed2922348de06467efbae8d720f9f2d75b5
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68538103"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860103"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-Configuration Manager Current Branch 的更新 1906 作为控制台中更新提供。 将此更新应用于运行版本 1806、1810 或 1902 的站点。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文汇总了 Configuration Manager 版本 1906 中的更改和新增功能。  
+Configuration Manager Current Branch 的更新 1906 作为控制台中更新提供。 将此更新应用于运行版本 1802 或更高版本的站点。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文汇总了 Configuration Manager 版本 1906 中的更改和新增功能。  
 
 始终查看安装此更新的最新清单。 有关详细信息，请参阅[用于安装更新 1906 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1906)。 更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)。
 
@@ -395,7 +395,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 > 对软件中心和管理点的这些迭代改进将停用应用程序目录角色。
 >
 > - 从当前分支版本 1806 开始，不支持 Silverlight 用户体验。
-> - 从版本 1906 开始，更新后的客户端自动使用管理点进行用户可用应用程序部署。 仍然无法安装新的应用程序目录角色。
+> - 自版本 1906 起，更新后的客户端自动使用管理点进行用户可用的应用程序部署。 仍然无法安装新的应用程序目录角色。
 > - 在 2019 年 10 月 31 日之后的第一个当前分支版本中，应用程序目录角色不再受支持。  
 
 有关详细信息，请参阅[删除应用程序目录](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat)和[为软件中心制定计划](/sccm/apps/plan-design/plan-for-software-center)。
@@ -581,11 +581,6 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
   - 在此列表中选择设备时，现在可以从功能区的“设备”组中启动“CMPivot”和“运行脚本”   。  
 
-### <a name="multiselect-and-delete-packages"></a>多选和删除包
-
-<!--4616810-->
-在“软件库”工作区，展开“应用程序管理”，然后选择“包”节点    。 选择多个包。 在功能区的包组中，现在可以一次删除多个包。
-
 ### <a name="order-by-program-name-in-task-sequence"></a>按任务序列中的程序名称进行排序
 
 <!--4616810-->
@@ -602,8 +597,6 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
 
 版本 1906 删除了对以下功能的支持：  
-
-- 适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。
 
 - 无法安装新的应用程序目录角色。 更新后的客户端自动使用管理点进行用户可用应用程序部署。 有关详细信息，请参阅[为软件中心制定计划](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。
 
@@ -654,7 +647,7 @@ The following additional hotfixes are available to address specific issues:
 > 了解详细信息：
 >
 > - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
-> - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+> - [基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
 

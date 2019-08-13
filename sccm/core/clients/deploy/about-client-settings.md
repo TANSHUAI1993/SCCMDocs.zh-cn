@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7d43a2eea28073ef0193c454c4e1a10bc5f3763
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: aeba2818b44e69066c02b25429ffd03cec00909e
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535181"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859784"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -331,6 +331,8 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 **当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知**<!--3555947-->：自版本 1902 起，将此设置配置为“是”  会增加用户体验的侵入性。 此设置适用于应用程序、任务序列和软件更新的所有部署。 有关详细信息，请参阅[为软件中心制定计划](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)。
 
+> [!IMPORTANT]
+> 在某些情况下，Configuration Manager 1902 中的该对话框将不会替换 Toast 通知。 要解决此问题，请安装 [Configuration Manager 版本1902 的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
 
 
 ## <a name="delivery-optimization"></a>传递优化
