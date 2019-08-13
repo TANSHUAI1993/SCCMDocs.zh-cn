@@ -2,7 +2,7 @@
 title: 桌面分析中的资产
 titleSuffix: Configuration Manager
 description: 了解桌面分析中的设备、驱动程序和应用。
-ms.date: 06/13/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63800bf6c8fa1d35eac44f64f2f03bde4f1d5022
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 96e76eb9a1874daa9af844d598808e30bb1a45d2
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535952"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956244"
 ---
 # <a name="assets-in-desktop-analytics"></a>桌面分析中的资产
 
@@ -52,6 +52,10 @@ ms.locfileid: "68535952"
 - 重要提示
 - 忽略
 - 未查看
+- 不重要<!-- 3587232 -->
+
+    > [!Tip]
+    > 有关 "不重要" 类别的详细信息, 请参阅[系统和应用商店应用的自动升级决策](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp)。
 
 从列表中选择应用, 然后选择 "**编辑**"。 此操作显示应用的详细信息。 选择 "**重要性**" 下拉菜单并设置一个值。 你还可以分配一个**所有者**。 如果进行了任何更改, 请选择 "**保存**"。
 
