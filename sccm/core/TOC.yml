@@ -163,6 +163,14 @@
               href: plan-design/hierarchy/manage-network-bandwidth.md
             - name: 内容管理的安全和隐私
               href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: 站点间数据传输
+          items:
+            - name: 数据传输类型
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: 基于文件的复制
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: 数据库复制
+              href: plan-design/hierarchy/database-replication.md
         - name: 客户端如何查找资源和设备
           href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
         - name: 站点管理的安全和隐私
@@ -507,16 +515,34 @@
       href: servers/manage/site-failure-impacts.md
     - name: 监视基础结构
       items:
+        - name: 监视层次结构
+          href: servers/manage/monitor-hierarchy.md
         - name: 使用警报和状态系统
           href: servers/manage/use-alerts-and-the-status-system.md
         - name: 运行状况证明
           href: servers/manage/health-attestation.md
-        - name: 监视层次结构和复制基础结构
+        - name: 复制基础结构
           items:
-            - name: 监视层次结构和复制基础结构
-              href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
-            - name: 站点间数据传输
-              href: servers/manage/data-transfers-between-sites.md
+            - name: 监视复制
+              href: servers/manage/monitor-replication.md
+            - name: SQL 复制故障排除
+              items:
+                - name: SQL 复制故障排除
+                  href: servers/manage/replication/overview.md
+                - name: SQL 复制
+                  href: servers/manage/replication/sql-replication.md
+                - name: SQL 配置
+                  href: servers/manage/replication/sql-configuration.md
+                - name: SQL 性能
+                  href: servers/manage/replication/sql-performance.md
+                - name: SQL 复制重新初始化
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: 全局数据重新初始化
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: 站点数据重新初始化
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: 重新初始化丢失的消息
+                  href: servers/manage/replication/reinit-missing-message.md
         - name: 查询
           items:
             - name: 查询简介
