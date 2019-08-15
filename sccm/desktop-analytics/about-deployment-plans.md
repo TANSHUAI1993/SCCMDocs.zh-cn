@@ -2,7 +2,7 @@
 title: 桌面分析中的部署计划
 titleSuffix: Configuration Manager
 description: 了解桌面分析中的部署计划。
-ms.date: 08/09/2019
+ms.date: 08/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a1acd99ca1a4676c4397eee427cdcb8b795cf00
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 65dff1dbf8e8154bc2d481e274dd47d352aa9d6e
+ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956399"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995398"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>关于桌面分析中的部署计划
 
@@ -95,24 +95,8 @@ ms.locfileid: "68956399"
 
 桌面分析显示为 "*值得注意*" 的应用基于部署计划的准备情况规则的低安装计数阈值。 有关详细信息, 请参阅[准备情况规则](/sccm/desktop-analytics/create-deployment-plans#readiness-rules)。
 
-#### <a name="a-namebkmk_plan-autoapp--automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />系统和应用商店应用的自动升级决策
-
-<!-- 3587232 -->
-确定**重要性**和**升级决策**对于桌面分析工作流中的所有值得注意的应用而言至关重要。 为了帮助减少对这些应用进行注释的工作量, 某些类型的应用会自动标记为*不重要*。 这些应用的部署计划升级决策也标记为 "*就绪*"。 以下应用是兼容的, 并且应在升级 Windows 后继续工作:
-
-- Microsoft 发布的系统应用和组件
-
-- 从 Microsoft Store 管理和更新的应用
-
-> [!Tip]
-> 管理全局级别或按部署计划的任何应用的输入。
->
-> 1. 在桌面分析门户的 "**管理**" 菜单中, 选择 "**资产**"。 然后选择 "**应用**"。
->
-> 2. 使用 "**类型**" 和 "**类别**" 列可以管理这些应用类别:
->
->    - 适用于应用商店应用, 筛选器**类型**为**新式**
->    - 对于系统应用, 筛选**类别**为**后台进程**或**Windows 组件**
+   > [!Tip]
+   > 有关 "不重要" 应用类别的详细信息, 请参阅[系统和应用商店应用的自动升级决策](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp)。 <!-- 3587232 -->
 
 
 ### <a name="drivers"></a>驱动程序

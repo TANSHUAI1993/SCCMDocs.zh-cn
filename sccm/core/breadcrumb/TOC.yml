@@ -1,0 +1,15 @@
+- name: Docs
+  tochref: /
+  topichref: /
+  items:
+    - name: 企业移动性 + 安全性
+      tocref: /azure/
+      topichref: /enterprise-mobility-security/
+      items:
+        - name: 配置管理器
+          tocHref: /azure/azure-monitor/
+          topicHref: /sccm/index
+          items:
+            - name: 核心基础结构
+              tocHref: /azure/azure-monitor/platform/
+              topicHref: /sccm/core/understand/introduction

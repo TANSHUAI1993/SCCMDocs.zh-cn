@@ -2,7 +2,7 @@
 title: 桌面分析中的资产
 titleSuffix: Configuration Manager
 description: 了解桌面分析中的设备、驱动程序和应用。
-ms.date: 08/09/2019
+ms.date: 08/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96e76eb9a1874daa9af844d598808e30bb1a45d2
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 225cc93d38607c90332c1bc56ea12b2c344ab4ea
+ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956244"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995371"
 ---
 # <a name="assets-in-desktop-analytics"></a>桌面分析中的资产
 
@@ -50,16 +50,37 @@ ms.locfileid: "68956244"
 
 - 严重
 - 重要提示
-- 忽略
+- 忽略 
 - 未查看
 - 不重要<!-- 3587232 -->
 
-    > [!Tip]
-    > 有关 "不重要" 类别的详细信息, 请参阅[系统和应用商店应用的自动升级决策](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp)。
 
 从列表中选择应用, 然后选择 "**编辑**"。 此操作显示应用的详细信息。 选择 "**重要性**" 下拉菜单并设置一个值。 你还可以分配一个**所有者**。 如果进行了任何更改, 请选择 "**保存**"。
 
+### <a name="a-namebkmk_plan-autoapp--automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />系统和应用商店应用的自动升级决策
+
+<!-- 3587232 -->
+确定**重要性**和**升级决策**对于桌面分析工作流中的所有值得注意的应用而言至关重要。 为了帮助减少对这些应用进行注释的工作量, 某些类型的应用会自动标记为*不重要*。 这些应用的部署计划升级决策也标记为 "*就绪*"。 以下应用是兼容的, 并且应在升级 Windows 后继续工作:
+
+- Microsoft 发布的系统应用和组件
+
+- 从 Microsoft Store 管理和更新的应用
+
+> [!Tip]
+> 管理全局级别或按部署计划的任何应用的输入。 
+>
+> 1. 在桌面分析门户的 "**管理**" 菜单中, 选择 "**资产**"。 然后选择 "**应用**"。
+>
+> 2. 使用 "**类型**" 和 "**类别**" 列可以管理这些应用类别:
+>
+>    - 适用于应用商店应用, 筛选器**类型**为**新式**
+>    - 对于系统应用, 筛选**类别**为**后台进程**或**Windows 组件**
+
+
+
 在部署计划中, 还可以设置**升级决策**。 有关详细信息, 请参阅[计划资产](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
+
+
 
 
 ## <a name="next-steps"></a>后续步骤
