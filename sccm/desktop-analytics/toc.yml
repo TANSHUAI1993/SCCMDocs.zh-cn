@@ -1,50 +1,56 @@
 - name: 桌面分析
+  href: overview.md
+- name: 概述
   items:
     - name: 什么是桌面分析？
       href: overview.md
-    - name: 教程
-      items:
-        - name: Windows 10 试点
-          href: tutorial-windows10.md
-    - name: 概念
-      items:
-        - name: 部署计划
-          href: about-deployment-plans.md
-        - name: 资产
-          href: about-assets.md
-        - name: 质量和功能更新
-          href: about-updates.md
-        - name: 兼容性评估
-          href: compat-assessment.md
-        - name: 运行状况监视
-          href: health-status-monitoring.md
-    - name: 操作指南
-      items:
-        - name: 设置桌面分析
-          href: set-up.md
-        - name: 连接 Configuration Manager
-          href: connect-configmgr.md
-        - name: 注册设备
-          href: enroll-devices.md
-        - name: 创建部署计划
-          href: create-deployment-plans.md
-        - name: 部署到试点
-          href: deploy-pilot.md
-        - name: 部署到生产
-          href: deploy-prod.md
-    - name: 参考
-      items:
-        - name: 启用数据共享
-          href: enable-data-sharing.md
-        - name: 隐私
-          href: privacy.md
-        - name: 故障排除
-          href: troubleshooting.md
-        - name: 日志收集器
-          href: log-collector.md
-        - name: 监视器连接运行状况
-          href: monitor-connection-health.md
-        - name: 常见问题解答
-          href: faq.md
-        - name: 帐户关闭
-          href: account-close.md
+    - name: 新增功能
+      href: whats-new.md
+- name: 教程
+  items:
+    - name: Windows 10 试点
+      href: tutorial-windows10.md
+- name: 概念
+  items:
+    - name: 部署计划
+      href: about-deployment-plans.md
+    - name: 资产
+      href: about-assets.md
+    - name: 质量和功能更新
+      href: about-updates.md
+    - name: 兼容性评估
+      href: compat-assessment.md
+    - name: 运行状况监视
+      href: health-status-monitoring.md
+- name: 操作指南
+  items:
+    - name: 设置桌面分析
+      href: set-up.md
+    - name: 连接 Configuration Manager
+      href: connect-configmgr.md
+    - name: 注册设备
+      href: enroll-devices.md
+    - name: 创建部署计划
+      href: create-deployment-plans.md
+    - name: 部署到试点
+      href: deploy-pilot.md
+    - name: 部署到生产
+      href: deploy-prod.md
+    - name: 重置你的帐户
+      href: account-reset.md
+    - name: 关闭你的帐户
+      href: account-close.md
+- name: 参考
+  items:
+    - name: 启用数据共享
+      href: enable-data-sharing.md
+    - name: 隐私
+      href: privacy.md
+    - name: 故障排除
+      href: troubleshooting.md
+    - name: 日志收集器
+      href: log-collector.md
+    - name: 监视器连接运行状况
+      href: monitor-connection-health.md
+    - name: 常见问题解答
+      href: faq.md
