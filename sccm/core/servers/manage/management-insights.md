@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea543edbbb3831e1f1119118a9c9b4730ff5b527
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: ed1c182aabcfbd9ec974a380c379304d7eef63e9
+ms.sourcegitcommit: 9c29ee22d3af5ab2bf8d51262c11d5a756dc55c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860033"
+ms.locfileid: "68913758"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
@@ -130,8 +130,6 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **配置 Azure 服务以用于 Configuration Manager**：此规则有助于将 Configuration Manager 载入 Azure AD，以便客户端能够使用 Azure AD 向站点进行身份验证。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
 
-- **将站点连接到用于 Configuration Manager 更新的 Microsoft 云**：此规则可确保 Configuration Manager 服务连接点在过去七天内已连接到 Microsoft 云。 此连接用于下载定期更新内容。 查看 DMPDownloader.log 和 hman.log。 有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp-updates)。
-
 - **将设备启用为加入混合 Azure Active Directory**：使用加入 Azure AD 的设备，用户可使用自己的域凭据登录，同时确保设备符合组织的安全性和符合性标准。 有关详细信息，请参阅 [Azure AD 混合标识设计注意事项](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview)。  
 
 - **将客户端升级到最新版 Windows 10**：Windows 10 版本 1709 或更高版本改进和新式化用户计算体验。 有关详细信息，请参阅[有关采用服务型 Windows 的关键文章](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service)。  
@@ -189,6 +187,8 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 ### <a name="simplified-management"></a>简化管理
 
 有助于简化对环境的日常管理的见解。
+
+- **将站点连接到用于 Configuration Manager 更新的 Microsoft 云**：此规则可确保 Configuration Manager 服务连接点在过去七天内已连接到 Microsoft 云。 此连接用于下载定期更新内容。 查看 DMPDownloader.log 和 hman.log。 有关详细信息，请参阅 [Internet 访问要求](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp-updates)。
 
 - **非 CB 客户端版本**：列出版本不是 Current Branch (CB) 内部版本的所有客户端。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients)。  
 

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f7568a2bdd5b7a814d430a9e38378f7fb8d2149
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: b5275d24cecebbcda06b75de3d27dae1fe7c1e6c
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339379"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956360"
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
 
@@ -71,7 +71,8 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 **查看站点之间的文件和数据复制**：确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。    
 
-对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。 有关详细信息，请参阅 [System Center Configuration Manager 中的监视层次结构和复制基础结构](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)主题中的[关于复制链接分析器](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)。  
+对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。 有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)。  
+
 
 **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统，安装所有合适的关键更新：** 为 Configuration Manager 安装更新之前，为每个适用的站点系统安装任何关键的更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。  
 

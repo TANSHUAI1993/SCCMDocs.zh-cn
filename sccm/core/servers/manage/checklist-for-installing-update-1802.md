@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9db81a81ba816aa94325ac2b57f84ab339295dd
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 0b698298838c1fa9d6f050c39e1d6ab5d1df21a9
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252133"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956480"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1802 的清单
 
@@ -95,7 +95,7 @@ ms.locfileid: "67252133"
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。
 对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。
 
-有关详细信息，请参阅  [System Center Configuration Manager 中的监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) 主题中的[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA) 。
+有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)。
 
 **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统，安装所有合适的关键更新：**  为 Configuration Manager 安装更新之前，为每个适用的站点系统安装任何关键的更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。
 
@@ -152,7 +152,7 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务”   。 选择 Configuration Manager 1802 更新包，然后在功能区单击“运行先决条件检查”   。
 
-有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：** [安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)主题中的步骤 3：安装更新之前运行先决条件检查程序 。
+有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：[安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)** 主题中的步骤 3：安装更新之前运行先决条件检查程序 。
 
 > [!IMPORTANT]  
 > 必备组件检查程序作为更新安装的一部分运行或独立运行时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。

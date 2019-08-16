@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c66a87636850a33f77fccc1c978242cf0323d413
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 975a92d2ef9e93bc5c1c5fc96cd91775a2627530
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65498930"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956378"
 ---
 # <a name="configure-sites-and-hierarchies-for-configuration-manager"></a>配置 Configuration Manager 的站点和层次结构
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 在安装首个 Configuration Manager 站点或将附加站点添加到层次结构后，请使用此清单确保已考虑会同时影响站点和层次结构的最常见配置。  
 
@@ -41,11 +41,11 @@ ms.locfileid: "65498930"
 | 配置站点边界和边界组 | 指定定义 Intranet 上网络位置的边界，其中包含要管理的设备。 然后配置边界组，使处于这些网络位置的客户端可以查找 Configuration Manager 资源。 有关详细信息，请参阅[定义站点边界和边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)。 |  
 | 配置分发点组 | 配置分发点的逻辑组可简化部署的管理。 有关详细信息，请参阅[管理分发点组](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage)。 |  
 | 运行发现 | 运行发现可查看网络中的资源，包括网络基础结构、设备和用户。<br /><br /> 有关详细信息，请参阅[运行发现](/sccm/core/servers/deploy/configure/run-discovery)。 |  
-| 为管理员添加冗余和容量 | 可以通过安装附加 SMS 提供程序和 Configuration Manager 控制台来扩展容量，以便管理员管理基础结构：<br /><br /> 安装其他 SMS 提供程序，以便为站点的控制台和 API 连接提供冗余。 有关详细信息，请参阅[管理 SMS 提供程序](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider)。<br /><br /> **安装附加 Configuration Manager 控制台**以提供访问其他管理用户的权限。 有关详细信息，请参阅[安装 Configuration Manager 控制台](/sccm/core/servers/deploy/install/install-consoles)。 |  
+| 为管理员添加冗余和容量 | 可以通过安装附加 SMS 提供程序和 Configuration Manager 控制台来扩展容量，以便管理员管理基础结构：<br /><br /> 安装其他 SMS 提供程序，以便为站点的控制台和 API 连接提供冗余  。 有关详细信息，请参阅[管理 SMS 提供程序](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider)。<br /><br /> **安装附加 Configuration Manager 控制台**以提供访问其他管理用户的权限。 有关详细信息，请参阅[安装 Configuration Manager 控制台](/sccm/core/servers/deploy/install/install-consoles)。 |  
 | 配置站点组件 | 配置每个站点中的站点组件，修改站点系统角色和站点状态报告的行为。 有关详细信息，请参阅[站点组件](/sccm/core/servers/deploy/configure/site-components)。 |  
 | 创建自定义集合 | 使用站点发现的关于设备和用户的信息，创建对象的自定义集合以简化未来的管理任务。 有关详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。 |  
 | 配置设置以管理高风险部署 | 在站点上配置设置，以便在管理员创建高风险部署时向其发出警告。 有关详细信息，请参阅[用于管理高风险部署的设置](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments)。 |  
 | 配置管理点的数据库副本 | 配置数据库副本，以减少管理点在处理来自客户端的请求时放在站点数据库服务器上的处理器负载。 有关详细信息，请参阅[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)。 |  
 | 配置 SQL Server Always On 可用性组 | 将可用性组配置为高可用性和灾难恢复解决方案，以承载主站点和管理中心站点上的站点数据库。 有关详细信息，请参阅[高可用性站点数据库的 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。 |  
-| 修改站点之间的复制 | 请参阅[站点间数据传输](/sccm/core/servers/manage/data-transfers-between-sites)以了解以下主题：<br /><br /> 在辅助站点之间配置[基于文件的复制](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_fileroute)<br /><br /> 配置[数据库复制链接](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_Dblinks)<br /><br /> 配置[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) |  
+| 修改站点之间的复制 | 请参阅[站点间数据传输](/sccm/core/plan-design/hierarchy/data-transfers-between-sites)以了解以下主题：<br /><br /> 在辅助站点之间配置[基于文件的复制](/sccm/core/plan-design/hierarchy/file-based-replication)<br /><br /> 配置[数据库复制链接](/sccm/core/plan-design/hierarchy/database-replication)<br /><br /> 配置[分布式视图](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews) |  
 | 在被动模式下配置站点服务器 | 从版本 1806 开始，为每个主站点和管理中心站点配置处于被动模式的站点服务器。 此功能提供高度可用的站点服务器。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。 |  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7672af696844cfa8afbbe54b1260d8f4c78437a8
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 95641ed36bb3847a3f7d39c4ad8d7296ecd11e77
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676506"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956289"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
@@ -71,7 +71,7 @@ ms.locfileid: "67676506"
 
     - SQL Server 故障转移群集  
 
-- 如果使用[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews)，则必须在托管管理中心站点的数据库的同一服务器上安装数据仓库服务点。  
+- 如果使用[分布式视图](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews)，则必须在托管管理中心站点的数据库的同一服务器上安装数据仓库服务点。  
 
 有关 SQL Server 许可的详细信息，请参阅[产品和许可常见问题解答](/sccm/core/understand/product-and-licensing-faq)。 <!-- sms500967 -->
 
