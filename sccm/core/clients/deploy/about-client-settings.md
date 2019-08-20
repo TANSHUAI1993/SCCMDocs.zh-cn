@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeba2818b44e69066c02b25429ffd03cec00909e
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 0074e81aade8ee5e26a4bb0024b91244a3ce4111
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859784"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956233"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -861,14 +861,25 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 使用此设置可指定前一个设置的时间段。 可以输入介于 1 到 23 个小时和介于 1 到 365 天的值。 默认情况下，此设置配置为七天。  
 
-### <a name="enable-installation-of-express-installation-files-on-clients"></a>在客户端上启用快速安装文件的安装
+### <a name="allow-clients-to-download-delta-content-when-available"></a>在有可用内容时，允许客户端下载增量内容
 
-通过将此选项设置为“是”，客户端可以使用快速安装文件  。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。
+（从版本 1902 中引入） 
+
+通过将此选项设置为“是”，允许客户端使用增量内容文件  。 此设置允许设备上的 Windows 更新代理确定所需内容并有选择地下载内容。
+
+> [!NOTE]
+> 此客户端设置会替换“在客户端上启用快速安装文件的安装”  。 通过将此选项设置为“是”，客户端可以使用快速安装文件  。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。
 
 
-### <a name="port-used-to-download-content-for-express-installation-files"></a>用于为快速安装文件下载内容的端口
+### <a name="port-that-clients-use-to-receive-requests-for-delta-content"></a>客户端用于接收增量内容请求的端口
 
-此设置为 HTTP 侦听器配置本地端口，以下载快速内容。 它默认设置为 8005。 无需在客户端防火墙中打开此端口。
+（从版本 1902 中引入） 
+
+此设置为 HTTP 侦听器配置本地端口，以下载增量内容。 它默认设置为 8005。 无需在客户端防火墙中打开此端口。 
+
+> [!NOTE]
+>此客户端设置会替换“用于为快速安装文件下载内容的端口”  。
+
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>启用 Office 365 客户端代理的管理
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24e76f9281158aa28e153efe9124ba2adf94a14d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4bbde522e5c856bbc700fcd6ceb22d4637513d18
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676378"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956435"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
@@ -148,7 +148,7 @@ ms.locfileid: "67676378"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的复制摘要数据**：当过期的复制摘要数据在一段指定时间内未更新时，使用此任务从站点数据库中将其删除。 有关详细信息，请参阅 [如何监视数据库复制链接和复制状态](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主题中的 [System Center Configuration Manager 中的监视层次结构和复制基础结构](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 部分。  
+**删除过期的复制摘要数据**：当过期的复制摘要数据在一段指定时间内未更新时，使用此任务从站点数据库中将其删除。 有关详细信息，请参阅[监视数据库复制](/sccm/core/servers/manage/monitor-replication)。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    
@@ -160,7 +160,7 @@ ms.locfileid: "67676378"
 -   **主站点**：Enabled    
 -   辅助站点：不可用  
 
-**删除过期的复制跟踪数据**：使用此任务从数据库中删除关于 Configuration Manager 站点之间的数据库复制的过期数据。 在更改此维护任务的配置时，配置将应用到层次结构中的每个合适的站点。 有关详细信息，请参阅 [如何监视数据库复制链接和复制状态](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主题中的 [System Center Configuration Manager 中的监视层次结构和复制基础结构](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 部分。  
+**删除过期的复制跟踪数据**：使用此任务从数据库中删除关于 Configuration Manager 站点之间的数据库复制的过期数据。 在更改此维护任务的配置时，配置将应用到层次结构中的每个合适的站点。 有关详细信息，请参阅[监视数据库复制](/sccm/core/servers/manage/monitor-replication)。  
 
 -   **管理中心站点**：Enabled    
 -   **主站点**：Enabled    

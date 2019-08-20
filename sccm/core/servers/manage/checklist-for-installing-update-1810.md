@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59cb31a0d57af21331f48c6a6ba415439fa97239
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: ad724a1af65fcd7dcd533d30c0871c67795106d3
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252169"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956483"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>用于为 Configuration Manager 安装 1810 更新的清单
 
@@ -105,7 +105,7 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 #### <a name="review-file-and-data-replication-between-sites"></a>查看站点之间的文件和数据复制   
 确保站点之间的文件和数据库复制正常运行并处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。 对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。
 
-有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)。
+有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)。
 
 #### <a name="install-all-applicable-critical-windows-updates"></a>安装所有适用的关键 Windows 更新
 为 Configuration Manager 安装更新之前，为每个适用的站点系统安装任何关键的 OS 更新。 这些服务器包括站点服务器、站点数据库服务器和远程站点系统角色。 如果安装的更新需要重启，请在开始升级之前重启相应的服务器。
@@ -187,8 +187,10 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 -   “监视”工作区、“数据库复制”节点    
 
 有关详细信息，请参阅下列文章：  
-- [监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+- [监视层次结构](/sccm/core/servers/manage/monitor-hierarchy)
+- [监视复制](/sccm/core/servers/manage/monitor-replication)
+- [关于复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 
 #### <a name="update-configuration-manager-consoles"></a>更新 Configuration Manager 控制台

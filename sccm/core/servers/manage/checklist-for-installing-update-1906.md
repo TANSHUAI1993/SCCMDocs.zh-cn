@@ -2,7 +2,7 @@
 title: 用于 1906 的清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1906 之前需要执行的操作。
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba3195db4445b4a96e04e9805cf92e6e21c9b2be
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: a64fc82121535272c0417d1c2dbc6bed65745ce8
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860013"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956446"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1906 的清单
 
@@ -145,9 +145,26 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 
 ### <a name="review-file-and-data-replication-between-sites"></a>查看站点之间的文件和数据复制
 
-确保站点之间的文件和数据库复制正常运行并处于最新状态。 延迟或积压工作可能会阻止成功更新。 对于数据库复制，在开始更新之前，使用复制链接分析器来帮助解决问题。
+确保站点之间的文件和数据库复制正常运行并处于最新状态。 延迟或积压工作可能会阻止成功更新。
 
-有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)。
+#### <a name="database-replication"></a>数据库复制
+
+对于[数据库复制](/sccm/core/plan-design/hierarchy/database-replication)，在开始更新之前，使用复制链接分析器  (RLA) 来帮助解决问题。 有关详细信息，请参阅[监视数据库复制](/sccm/core/servers/manage/monitor-replication)。
+
+使用 RLA 回答下列问题：
+
+- 每个组的复制是否处于良好状态？
+- 是否有任何链接降级？
+- 是否有任何错误？
+
+如果存在积压工作 (backlog)，请稍候，直到清除这些积压工作。如果积压工作 (backlog) 非常多，如数百万条记录，则该链接处于错误状态。 在更新站点前，请解决复制问题。 如果需要进一步的帮助，请联系 Microsoft 支持部门。<!-- 2838129 -->
+
+#### <a name="file-based-replication"></a>基于文件的复制
+
+对于[基于文件的复制](/sccm/core/plan-design/hierarchy/file-based-replication)，检查所有收件箱在发送站点和接收站点上是否存在积压工作 (backlog)。 如果存在大量停滞或挂起的复制作业，请等待直到清除这些作业。<!-- SCCMDocs#1792 -->
+
+- 在发送站点上，查看 sender.log  。
+- 在接收站点上，查看 despooler log  。
 
 ### <a name="install-all-applicable-critical-windows-updates"></a>安装所有适用的关键 Windows 更新
 
@@ -241,7 +258,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 有关详细信息，请参阅下列文章：  
 
 - [监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+- [关于复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 ### <a name="update-configuration-manager-consoles"></a>更新 Configuration Manager 控制台
 

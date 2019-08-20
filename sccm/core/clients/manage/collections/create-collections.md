@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ff3dac5c5ff4d04be6f30c02dba8523ce1b80b
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 0bec2d55cdf7ff5d405ee689c821735413e8a9ff
+ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535489"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490093"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -237,7 +237,8 @@ Azure AD 同步每五分钟执行一次。 这是一个单向过程，从 Config
 
 1. 转到 [https://portal.azure.com](https://portal.azure.com)。
 1. 导航到“Azure Active Directory”   > “组”   > “所有组”  。
-1. 单击“新建组”，然后键入“组名称”和“组说明”    。
+1. 单击“新建组”，然后键入“组名称”，并可以选择填写“组说明”    。
+1. 确保已分配“成员身份类型”   。
 1. 选择“所有者”，然后添加将在 Configuration Manager 中创建同步关系的标识  。
 1. 单击“创建”  以完成创建 Azure AD 组。
 

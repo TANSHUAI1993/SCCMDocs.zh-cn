@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b93e636ea690fa99fd2a0dfc63bd12932d2f7a5e
-ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
+ms.openlocfilehash: e99d82a39e1b3c1ef9e52072fc01ab722f3e3e61
+ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794665"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490109"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -200,6 +200,9 @@ Configuration Manager 控制台中有四个工作区  ：
 
 -  疑难解答文章：用来帮助排查 Configuration Manager 组件和功能问题的演练指南。
 -  新的和更新的支持文章：过去两个月新的或更新的支持文章。
+
+### <a name="troubleshooting-connection-errors"></a>排查连接错误
+Documentation  节点没有显式代理配置。 它使用“Internet 选项”  控制面板小程序中的任意操作系统定义的代理。 若要在连接错误后重试，请刷新 Documentation  节点。
 
 
 ## <a name="command-line-options"></a>命令行选项

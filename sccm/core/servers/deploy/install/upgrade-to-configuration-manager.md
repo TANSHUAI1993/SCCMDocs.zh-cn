@@ -1,7 +1,7 @@
 ---
 title: 升级到 Configuration Manager
 description: 了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。
-ms.date: 03/27/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86e41e932995abc47b6229ce3405f810d75b992b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: fb0d120fd9d9b301cf02af9c6126a0991524e9c6
+ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159294"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490047"
 ---
 # <a name="upgrade-to-configuration-manager"></a>升级到 Configuration Manager
 
@@ -35,7 +35,7 @@ ms.locfileid: "67159294"
 
 ### <a name="upgrade-to-version-1902"></a>升级到版本 1902
 
-如果具有 1902 版基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1902 的完整许可版本：   
+可以将以下内容升级到 System Center Configuration Manager 版本 1902 的完全许可版本：   
 - System Center Configuration Manager 版本 1902 的评估版安装
 - System Center 2012 Configuration Manager Service Pack 1
 - System Center 2012 Configuration Manager Service Pack 2
@@ -43,28 +43,14 @@ ms.locfileid: "67159294"
 - System Center 2012 R2 Configuration Manager Service Pack 1
 
 ### <a name="upgrade-to-version-1802"></a>升级到版本 1802
-如果具有版本 1802 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1802 的完整许可版本：   
+可以将以下内容升级到 System Center Configuration Manager 版本 1802 的完全许可版本：   
 - System Center Configuration Manager 版本 1802 的评估版安装
 - System Center 2012 Configuration Manager Service Pack 1
 - System Center 2012 Configuration Manager Service Pack 2
 - System Center 2012 R2 Configuration Manager
 - System Center 2012 R2 Configuration Manager Service Pack 1
 
-### <a name="upgrade-to-version-1606"></a>升级到版本 1606
-2016 年 12 月 15 日，为添加对其他升级方案的支持，发布了 1606 版基线介质。 此版本支持从以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
-- System Center Configuration Manager 版本 1606 的评估版安装
-- System Center Configuration Manager 的候选发布版安装  
-- System Center 2012 Configuration Manager Service Pack 1  
-- System Center 2012 Configuration Manager Service Pack 2  
-- System Center 2012 R2 Configuration Manager 不带 Service Pack
-- System Center 2012 R2 Configuration Manager Service Pack 1  
-
-如果使用 2016 年 12 月 15 日之前下载的 1606 版基线介质，可以仅将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：
-- System Center Configuration Manager 版本 1606 的评估版安装
-- System Center 2012 Configuration Manager Service Pack 2
-- System Center 2012 R2 Configuration Manager Service Pack 1
-
-有关使用版本 1606 的详细信息，请参阅 [Configuration Manager 分支和许可的常见问题解答](/sccm/core/understand/product-and-licensing-faq)。
+有关详细信息，请参阅 [Configuration Manager 分支和许可的常见问题解答](/sccm/core/understand/product-and-licensing-faq)。
 
 > [!TIP]  
 >  从 System Center 2012 Configuration Manager 版本升级到 Current Branch 时，或许能够简化升级过程。 有关详细信息，请参阅以下内容：  
