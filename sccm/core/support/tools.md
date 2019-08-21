@@ -22,7 +22,7 @@ ms.locfileid: "68536091"
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助管理 Configuration Manager 基础结构并对其进行故障排除。
+Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助支持 Configuration Manager 基础结构并对其进行故障排除。
 
 从 Configuration Manager 版本 1806 开始，这些工具包含在站点服务器上的 `CD.Latest\SMSSETUP\Tools` 文件夹中。 无需进行其他安装。<!--1357145--> 将这些版本的工具与 Configuration Manager 版本 1806 及更高版本一起使用。
 
