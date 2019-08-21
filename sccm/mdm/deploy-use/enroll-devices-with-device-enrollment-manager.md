@@ -11,21 +11,24 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d93e7fd61b2cff49e7729a9037e56d69c6e4c5ac
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: 00d6ccd54e7be4021c6dc31d30aedac50b41e3dd
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933512"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632473"
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>使用 Configuration Manager 向设备注册管理器注册设备
 
 适用范围：System Center Configuration Manager (Current Branch)
 
+> [!Important]  
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+
 组织可以使用 Intune 来管理大量带有单一用户帐户的移动设备。 设备注册管理器 (DEM) 帐户是用于注册设备的特殊用户帐户。 将现有用户添加到要为其提供专用 DEM 功能的 DEM 帐户。 每个已注册的设备使用单个许可证。 我们建议你将通过此帐户注册的设备作为没有用户关联性的共享设备使用，而不是个人专用设备。  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>使用设备注册管理器注册企业自有设备  
- 您可以分配存储管理员或主管，例如，设备注册管理员用户帐户，以允许此用户来执行以下操作：  
+ 可以分配存储管理员或主管, 例如, 使用设备注册管理器用户帐户来允许此用户执行以下操作:  
 
 -   最多可注册 1000 个设备以进行管理  
 -   使用公司门户应用安装公司应用  
@@ -40,8 +43,8 @@ ms.locfileid: "65933512"
 - 设备注册管器帐户不能使用公司门户网站。 打开公司门户应用。
 - 如果使用 DEM 来注册 iOS 设备，则无法使用 Apple Configurator 或 Apple 设备注册计划 (DEP) 来注册设备。 （仅限 iOS） 
 
-  **设备注册管理器的示例方案：**   
-  一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者，管理员也可以将设备注册管理器凭据到餐厅经理，允许他们可以注册和管理的设备。  
+  **设备注册管理器的示例方案：**    
+  一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者, 管理员可以将设备注册管理员凭据交给餐馆经理, 使他们能够注册和管理设备。  
 
   管理员或经理可以将特定于角色的应用部署到餐厅设备。 管理员还可以在控制台中选择一台设备，并从移动设备管理中将其停用。  
 
@@ -49,7 +52,7 @@ ms.locfileid: "65933512"
 
 1.  在 Configuration Manager 控制台中，单击“管理”。  
 
-2.  在“管理”  工作区中，展开“云服务” ，并单击“Microsoft Intune 订阅” 。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
+2.  在“管理” 工作区中，展开“云服务”，并单击“Microsoft Intune 订阅”。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
 
 3.  在“Microsoft Intune 订阅属性”对话框中，单击“设备注册管理器”选项卡。  
 
@@ -70,6 +73,6 @@ ms.locfileid: "65933512"
 - 已删除的设备注册管理员帐户与注册的设备的关系仍存在，但不可以注册任何其他设备
 
 1.  在 Configuration Manager 控制台中，单击“管理”。  
-2.  在“管理”  工作区中，展开“云服务” ，并单击“Microsoft Intune 订阅” 。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
+2.  在“管理” 工作区中，展开“云服务”，并单击“Microsoft Intune 订阅”。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
 3.  在“Microsoft Intune 订阅属性”对话框中，单击“设备注册管理器”选项卡。  
 4.  “搜索”想要删除的设备注册管理器，单击“删除”，然后单击“确定”。  
