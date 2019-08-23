@@ -11,12 +11,12 @@ ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 970b1fea320d8fe039062cf81789d14398930be5
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.openlocfilehash: f0e5a313bb5afd0501f0d6027d42b5a51a7e8946
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403438"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631955"
 ---
 # <a name="provisioning-mode"></a>预配模式
 
@@ -45,6 +45,13 @@ Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioni
 
 48 小时是预配模式的默认超时值。 可通过设置以下注册表项中的 ProvisioningMaxMinutes 值在设备上调整此计时器：`HKLM\Software\Microsoft\CCM\CcmExec`  。 如果此值不存在或为 `0`，客户端将使用默认的 48 小时。
 
+时间戳**ProvisioningEnabledTime**位于以下注册表项中: `HKLM\Software\Microsoft\CCM\CcmExec`。 时间戳的值为计算机上次进入预配模式时的值。 格式为 epoch (Unix 时间戳), 采用 UTC 格式。
+
+当你使用以下命令将计算机手动置于预配模式时, 此时间戳还会重置为当前时间:
+
+```powershell
+Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioningMode -ArgumentList $true
+```
 
 ## <a name="process-flow-diagrams"></a>过程流程图
 

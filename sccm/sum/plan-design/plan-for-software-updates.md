@@ -5,68 +5,24 @@ description: 在 Configuration Manager 生产环境中使用软件更新之前�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/31/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc5c4fd7627aaa95f53a8a67ef983fda862a2526
-ms.sourcegitcommit: 8c296886e79e20b971842458f6e88761e5df30be
+ms.openlocfilehash: 03aa63ccf8fac5c84a1a32e420434b8cefbb6dd6
+ms.sourcegitcommit: 18e88352860dcaf938dbbe1e8694b658e1bfd8ac
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684682"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584659"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在 Configuration Manager 生产环境中使用软件更新之前，请务必完成规划过程。 很好地规划软件更新点基础结构对于成功的软件更新实现十分关键。
-
-
-
-## <a name="capacity-planning-recommendations-for-software-updates"></a>软件更新的容量规划建议  
-
-本部分包含以下细分主题：  
-- [软件更新点的容量规划](#BKMK_SUMCapacity)
-- [软件更新对象的容量规划](#bkmk_sum-capacity-obj)  
-
-
-使用以下建议作为基线。 此基线可帮助你确定适合于你的组织的软件更新容量计划相关信息。 实际容量要求可能与本文中所列的建议有所不同，具体取决于以下条件： 
-- 特定的网络环境
-- 用于托管软件更新点站点系统的硬件
-- 受管客户端的数量
-- 服务器上安装的其他站点系统角色  
-
-
-###  <a name="BKMK_SUMCapacity"></a> 软件更新点的容量规划  
-
-支持的客户端数量取决于在软件更新点上运行的 Windows Server Update Services (WSUS) 的版本。 还取决于软件更新点站点系统角色是否与另一站点系统角色共存：  
-
--   当 WSUS 在软件更新点服务器上运行，并且软件更新点与另一站点系统角色共存时，软件更新点可支持多达 25,000 个客户端。  
-
--   当远程服务器满足 WSUS 要求、WSUS 与 Configuration Manager 配合使用，并且你配置了下述设置时，软件更新点可支持多达 150,000 个客户端：
-
-    IIS 应用程序池：
-    - 将 WsusPool 队列长度增加到 2000
-    - 将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）。 例如，如果默认限制是 1,843,200 KB，则将其增加到 7,372,800。 有关详细信息，请参阅 [Configuration Manager 支持团队博客文章](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/)。  
-
-    要详细了解软件更新点的硬件要求，请参阅[推荐的站点系统硬件](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems)。  
-
-
-### <a name="bkmk_sum-capacity-obj"></a>软件更新对象的容量规划  
-
-使用下列容量信息来规划软件更新对象：  
-
-#### <a name="limit-of-1000-software-updates-in-a-deployment"></a>部署中 1000 个软件更新的限制  
-将每个软件更新部署的软件更新数量限制为 1000 个。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态  。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
-
-配置基线中的软件更新数量也限制为 1000。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
-
-#### <a name="limit-of-580-security-scopes-for-automatic-deployment-rules"></a>自动部署规则的580安全作用域的限制
-<!--ado 4962928-->
-将自动部署规则 (Adr) 上的安全作用域数量限制为小于580。 当你创建 ADR 时, 将自动添加有权访问它的安全作用域。 如果设置的安全作用域超过 580, ADR 将无法运行, 并且在 ruleengine 中记录错误。
+在 Configuration Manager 生产环境中使用软件更新之前，请务必完成规划过程。 很好地规划软件更新点基础结构对于成功的软件更新实现十分关键。 有关软件更新的容量规划的信息, 请参阅[大小和规模](/sccm/core/plan-design/configs/size-and-scale-numbers#software-update-point)。
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> 确定软件更新点基础结构  
@@ -471,7 +427,7 @@ Configuration Manager 支持同步以下更新类别：
     - 更新汇总
     - Service Pack
 
-- **适用于 Windows 的 Office 365 更新和非功能更新的最大运行时间 (分钟)**
+- **Office 365 更新和 Windows 非功能更新的最长运行时间(分钟)**
   - **非功能更新** - 非功能升级的更新，其产品属于以下列出的某项：
     - Windows 10（所有版本）
     - Windows Server 2012

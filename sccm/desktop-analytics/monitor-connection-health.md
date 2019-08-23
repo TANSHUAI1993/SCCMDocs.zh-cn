@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3406c0fff57a1ecef24a045e3061417fc5fac46c
-ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
+ms.openlocfilehash: 17a58992c01f59080edd74051329b82a0f760938
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974796"
 ---
 # <a name="monitor-connection-health"></a>监视器连接运行状况
 
@@ -63,7 +63,7 @@ ms.locfileid: "68491645"
 - **下一个服务同步**:当你预计桌面分析中的下一个每日快照。
 
 > [!Note]  
-> 请求按需快照时, 不会自动更新这些值。 有关详细信息, 请参阅[数据延迟](/sccm/desktop-analytics/troubleshooting#data-latency)。
+> 第一次将设备注册到桌面分析时, 可能需要几天时间才能上传和处理数据。 在此期间, "**最后一个同步详细信息**" 磁贴可能会显示为空白。 此外, 当你请求按需快照时, 此磁贴中的任何值都不会自动更新。 有关详细信息, 请参阅[数据延迟](/sccm/desktop-analytics/troubleshooting#data-latency)。
 
 如果认为某些设备不显示在桌面分析中, 请确保设备受桌面分析支持。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。
 

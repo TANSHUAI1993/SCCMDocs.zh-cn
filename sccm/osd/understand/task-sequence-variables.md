@@ -2,7 +2,7 @@
 title: 任务序列变量引用
 titleSuffix: Configuration Manager
 description: 了解用于控制和自定义 Configuration Manager 任务序列的变量。
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b78d8b6cd60f14843855d00ea44632b6feda3d90
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 2283b87f305471f2831042f4b6b66d1c8a735b24
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859823"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549549"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -1582,7 +1582,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 ### <a name="TSDebugMode"></a>TSDebugMode
 
 <!--3612274-->
-从1906版开始, 将此变量设置`TRUE`为要将任务序列部署到的集合。 此变量在该集合中的任何设备上更改任何任务序列的行为, 以使用任务序列调试器。
+从1906版开始, 将此变量设置`TRUE`为要将任务序列部署到的集合或计算机对象。 具有此变量集的任何设备会将部署的任何任务序列置于调试模式。
 
 有关详细信息，请参阅[调试任务序列](/sccm/osd/deploy-use/debug-task-sequence)。
 
