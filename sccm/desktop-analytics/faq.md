@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 07/22/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58230d373d7269c95937a108c021e7c73cdbf07a
-ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
+ms.openlocfilehash: 84cbcd11790ebf83b508a3db167efc7c02152652
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374444"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999389"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -84,3 +84,10 @@ ms.locfileid: "68374444"
 ### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>我能否将桌面分析用于我的 Office 365 ProPlus 升级？
 
 不能, 桌面分析侧重于 Windows。 Microsoft 开发了与众多客户紧密协作的桌面分析。 通过预览计划, 客户的反馈涉及到桌面分析如何提高其自信地管理 Windows 部署的能力。 他们还告诉我们, 他们希望[office 365 ProPlus 的准备工作](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)与 Configuration Manager 和 Intune 中的 office 管理工具更紧密地集成。 Microsoft 将继续在这些领域进行投资, 同时重点介绍桌面分析中的 Windows 方案。
+
+### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>如何提供有关桌面分析的反馈？
+
+若要共享有关桌面分析的反馈, 请选择门户顶部的 "**发送笑脸**" 图标。 在提交时包含屏幕截图, 帮助 Microsoft 更好地了解你的反馈。 你还可以提交产品建议并在[UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805)上投票赞成其他观点。
+
+> [!Note]
+> 永远不要通过发送笑脸或 UserVoice 来共享隐私信息。 此类私人信息包括你的租户 Id 或商业 Id。Microsoft 不通过 "发送笑脸" 或 "UserVoice" 通道提供支持。 若要获取桌面分析工作区帮助, 请在导航菜单中选择 "**帮助和支持**" 链接以打开支持票证。
