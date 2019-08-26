@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 08/05/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e99d82a39e1b3c1ef9e52072fc01ab722f3e3e61
-ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
+ms.openlocfilehash: 593a479c713df76d63090749ee45cb89aeb413e4
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490109"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549512"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -290,7 +290,8 @@ Configuration Manager 控制台提供下列命令行选项：
 在“资产和符合性”工作区中，转到“设备”节点，然后选择设备   。 在详细信息窗格中，切换到新的“集合”选项卡  。此选项卡列出包含此设备的集合。 
 
 > [!Note]  
-> 此选项卡当前在“设备集合”节点下的设备子节点中不可用  。 例如，在集合上选择“显示成员”选项时，此选项卡不可用  。
+> - 此选项卡当前在“设备集合”节点下的设备子节点中不可用  。 例如，在集合上选择“显示成员”选项时，此选项卡不可用  。
+> - 对于某些用户而言，此选项卡可能无法按预期方式填充。 若要查看设备所属的完整集合列表，你必须具有“完全权限管理员”安全角色  。 这是一个已知问题。 <!--5107309--> <!--5107309-->
 
 
 #### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>将 SMBIOS GUID 列添加到设备和设备集合节点

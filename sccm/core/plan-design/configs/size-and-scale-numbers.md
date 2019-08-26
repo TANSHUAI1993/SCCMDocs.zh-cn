@@ -2,7 +2,7 @@
 title: 大小和扩展
 titleSuffix: Configuration Manager
 description: 确定需要用来支持环境中设备的站点系统角色和站点的数量。
-ms.date: 07/26/2019
+ms.date: 08/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41614e7f0b63888a8bcee50b4ac4ef2b293d8849
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 17809842c780577db6088bb57de2330e4af09612
+ms.sourcegitcommit: 18e88352860dcaf938dbbe1e8694b658e1bfd8ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536839"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584686"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>用于 Configuration Manager 的大小和扩展数量
 
@@ -138,10 +138,37 @@ ms.locfileid: "68536839"
 
 ### <a name="software-update-point"></a>软件更新点  
 
-- 安装在站点服务器上的软件更新点最多可支持 25,000 个客户端。
+使用以下建议作为基线。 此基线可帮助你确定适合于你的组织的软件更新容量计划相关信息。 实际容量要求可能与本文中所列的建议有所不同，具体取决于以下条件： 
+- 特定的网络环境
+- 用于托管软件更新点站点系统的硬件
+- 受管客户端的数量
+- 服务器上安装的其他站点系统角色  
 
-- 当远程计算机满足 Windows Server Update Services (WSUS) 支持此数量客户端的要求时，远离站点服务器的软件更新点最多可支持 150,000 个客户端。  
+#### <a name="BKMK_SUMCapacity"></a> 软件更新点的容量规划  
 
+支持的客户端数量取决于在软件更新点上运行的 Windows Server Update Services (WSUS) 的版本。 还取决于软件更新点站点系统角色是否与另一站点系统角色共存：  
+
+- 当 WSUS 在软件更新点服务器上运行，并且软件更新点与另一站点系统角色共存时，软件更新点可支持多达 25,000 个客户端。  
+
+- 当远程服务器满足 WSUS 要求、WSUS 与 Configuration Manager 配合使用，并且你配置了下述设置时，软件更新点可支持多达 150,000 个客户端：
+
+    IIS 应用程序池：
+    - 将 WsusPool 队列长度增加到 2000
+    - 将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）。 例如，如果默认限制是 1,843,200 KB，则将其增加到 7,372,800。 有关详细信息，请参阅 [Configuration Manager 支持团队博客文章](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/)。  
+
+    要详细了解软件更新点的硬件要求，请参阅[推荐的站点系统硬件](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems)。  
+
+
+#### <a name="bkmk_sum-capacity-obj"></a>软件更新对象的容量规划  
+
+使用下列容量信息来规划软件更新对象：  
+
+- **将部署中的软件更新数量限制为 1000** - 为每个软件更新部署将软件更新数限制为 1000。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态  。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
+
+  配置基线中的软件更新数量也限制为 1000。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
+
+- **将自动部署规则的安全作用域数量限制为 580** -<!--ado 4962928-->
+将自动部署规则 (ADR) 的安全作用域数量限制为小于 580。 创建 ADR 时，会自动添加有权访问该 ADR 的安全作用域。 如果设置的安全作用域超过 580，ADR 将无法运行，并会在 ruleengine.log 中记录一条错误。
 
 ## <a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量
 

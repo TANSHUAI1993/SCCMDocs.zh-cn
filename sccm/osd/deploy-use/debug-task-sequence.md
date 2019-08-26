@@ -2,7 +2,7 @@
 title: 调试任务序列
 titleSuffix: Configuration Manager
 description: 使用任务序列调试工具对任务序列进行故障排除。
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fadcd362f44e5261ae5226ed22b7cff4c4eb261f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 00c05b7023f90783fbdd741a354cfd6382f632ad
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537735"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549561"
 ---
 # <a name="debug-a-task-sequence"></a>调试任务序列
 
@@ -44,7 +44,7 @@ ms.locfileid: "68537735"
 1. 选择任务序列。 在功能区的部署组中，选择“调试”  。
 
     > [!Tip]  
-    > 或者，在部署任务序列的集合上将变量“TSDebugMode”设置为 `TRUE`  。 此变量更改该集合中任何设备上任何任务序列的行为。  
+    > 或者，在部署任务序列的集合或计算机对象上将变量“TSDebugMode”设置为 `TRUE`  。 具有此变量集的任何设备会将部署的任何任务序列置于调试模式。
 
 1. 创建调试部署。 部署设置与常规任务序列部署相同。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence#process)。
 

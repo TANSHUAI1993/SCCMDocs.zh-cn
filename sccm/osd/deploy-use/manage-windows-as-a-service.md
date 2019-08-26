@@ -2,7 +2,7 @@
 title: 将 Windows 作为一项服务来管理
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 查看 Windows 即服务 (WaaS) 的状态，创建维护服务计划以形成部署环，以及在 Windows 10 客户端即将结束支持时查看警报。
-ms.date: 07/26/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cf8e70146fa369e11cd26bdd5f982380678655a
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 165574cb85a41cb8acba9efba653ebc7fc4a6fe1
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974703"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 
@@ -36,9 +36,11 @@ ms.locfileid: "68537046"
 
 -   Windows 10 计算机必须搭配使用 Configuration Manager 软件更新和 Windows Server Update Services (WSUS) 以进行软件更新管理。 当计算机使用适用于企业的 Windows 更新（或 Windows 预览体验）进行软件更新管理时，不会在 Windows 10 维护服务计划中评估该计算机。 有关详细信息，请参阅 [在 Windows 10 中与 Windows Update for Business 集成](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
 
--   必须在软件更新点和站点服务器上安装具有 [修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0。 此修补程序会添加“升级”  软件更新分类。 有关详细信息，请参阅[软件更新的先决条件](../../sum/plan-design/prerequisites-for-software-updates.md)。  
-
--   必须在软件更新点和站点服务器上安装带有[修补程序 3159706](https://support.microsoft.com/kb/3159706) 的 WSUS 4.0，才能将计算机升级到 Windows 10 周年更新以及后续版本。 支持文章中描述有手动操作步骤，必须按照这些步骤安装此修补程序。 有关详细信息，请参阅 [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/)（企业移动性和安全性博客）。
+- 使用受支持的 WSUS 版本: 
+  - WSUS 10.0.14393（Windows Server 2016 中的角色）
+  - WSUS 10.0.17763（Windows Server 2019 中的角色）（需要使用 Configuration Manager 1810 或更高版本）
+  - WSUS 6.2 和 6.3（Windows Server 2012 和 Windows Server 2012 R2 中的角色）
+    - 必须在 WSUS 6.2 和6.3 上[安装 kb 3095113 和 kb 3159706 (或等效更新)](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) 。
 
 -   启用检测信号发现。 可使用发现找到 Windows 10 维护仪表板中显示的数据。 有关详细信息，请参阅 [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc)。  
 
@@ -84,7 +86,7 @@ ms.locfileid: "68537046"
 <!--4224414-->
 （从版本 1906 中引入） 
 
-您可以钻取符合性统计信息, 查看哪些设备需要特定的 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取到设备列表:
+可深入查看符合性统计信息，了解哪些设备需要特定 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取到设备列表:
 
 1. 转到“软件库” > “Windows 10 维护服务” > “所有 Windows 10 更新”    。
 1. 选择至少一台设备所需的任何更新。

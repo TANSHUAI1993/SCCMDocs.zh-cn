@@ -2,7 +2,7 @@
 title: 1906 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1906 中引入的更改和新增功能的详细信息。
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79901ed2922348de06467efbae8d720f9f2d75b5
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 5ced44684415c60bede26e86a02a47ed555b2b9e
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860103"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632008"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -556,7 +556,8 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 在“资产和符合性”工作区中，转到“设备”节点，然后选择设备   。 在详细信息窗格中，切换到新的“集合”选项卡  。此选项卡列出包含此设备的集合。
 
 > [!Note]  
-> 此选项卡当前在“设备集合”节点下的设备子节点中不可用  。 例如，在集合上选择“显示成员”选项时，此选项卡不可用  。
+> - 此选项卡当前在“设备集合”节点下的设备子节点中不可用  。 例如，在集合上选择“显示成员”选项时，此选项卡不可用  。
+> - 对于某些用户而言，此选项卡可能无法按预期方式填充。 若要查看设备所属的完整集合列表，你必须具有“完全权限管理员”安全角色  。 这是一个已知问题。 <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>应用程序节点中的“任务序列”选项卡
 
@@ -614,7 +615,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 - [SMS 提供程序管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910). -->
+ 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1906）的更改摘要](https://support.microsoft.com/help/4514258)。
 
 有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)。<!-- link is not live yet; will be published before this release branch -->
 
@@ -636,8 +637,8 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>后续步骤
 
-此时，会向早期更新圈发布版本 1906。 若要安装此更新，则必须选择启用。 有关详细信息，请参阅[早期更新圈](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring)。
-<!-- As of <Date>, version 1906 is globally available for all customers to install. -->
+<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring). -->
+自 2019 年 8 月 16 日起，版本 1906 公开发布，可供所有用户安装。
 
 准备好安装此版本时，请参阅[安装 Configuration Manager 的更新](/sccm/core/servers/manage/updates)和[用于安装更新 1906 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1906)。
 

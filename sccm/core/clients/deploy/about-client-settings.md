@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0074e81aade8ee5e26a4bb0024b91244a3ce4111
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: d48b2f7a842da0a567c4ed1a51e85e0d283603cf
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956233"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632021"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -94,6 +94,7 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 从版本 1906 开始，可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置控制客户端在删除内容之前将其存储在缓存中的时间。
 
 默认情况下，此值为 1,440 分钟（24 小时）。
+此设置的最大值为 10,080 分钟（1 周）。
 
 使用此设置，可以更好地控制不同类型设备上的客户端缓存。 可以减小具有小型硬盘驱动器的客户端的值，并且在另一个部署运行之前不需要保留现有内容。
 

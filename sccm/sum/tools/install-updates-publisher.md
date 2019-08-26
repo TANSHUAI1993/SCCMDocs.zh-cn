@@ -2,7 +2,7 @@
 title: 安装 Updates Publisher
 titleSuffix: Configuration Manager
 description: 在环境中安装 System Center Updates Publisher
-ms.date: 02/19/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb07b154c1da9c7b93f2d8e0f06b825eb52fd561
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 7194d77d7d1fd2c4f9cd143bcf3b69446f394c08
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443197"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974690"
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
 
@@ -41,7 +41,7 @@ System Center Updates Publisher 只能与 System Center Configuration Manager �
 运行 Updates Publisher 的计算机必须满足以下要求：
 
 -   **64 位操作系统**：安装 Updates Publisher 的计算机必须运行 64 位操作系统。
--   **WSUS 4.0 或更高版本**：
+-   **WSUS 6.2 或更高版本**：
     -   为了满足此要求，在 Windows Server 上，安装默认的管理控制台。
     -   对于 Windows 10 和 Windows 8.1，安装[适用于 Windows 操作系统的远程服务器管理工具 (RSAT)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems)。 这会安装使用 Updates Publisher 所必需的支持（*API 和 PowerShell cmdlet* 以及*用户界面管理控制台*）。
 -   **权限**：
@@ -110,7 +110,7 @@ System Center Updates Publisher 只能与 System Center Configuration Manager �
 
 因为此文件夹包含使用 Updates Publisher 所必需的全部文件，所以可以将此文件夹及其内容复制到新的位置或计算机中，然后从相应位置使用 Updates Publisher。 不过，新的位置或计算机必须满足运行 Updates Publisher 的先决条件。
 
-安装完成后，运行“UpdatesPublisher”文件夹中的 **UpdatesPublisher.exe**，启动 Updates Publisher。
+安装完成后，运行“UpdatesPublisher”  文件夹中的 **UpdatesPublisher.exe**，启动 Updates Publisher。
 
 ## <a name="next-steps"></a>后续步骤
  安装 Updates Publisher 后，我们建议为 Updates Publisher [配置选项](updates-publisher-options.md)。 必须先配置一些选项，然后才能使用 Updates Publisher 的一些功能。

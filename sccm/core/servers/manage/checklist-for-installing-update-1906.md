@@ -2,7 +2,7 @@
 title: 用于 1906 的清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1906 之前需要执行的操作。
-ms.date: 08/09/2019
+ms.date: 08/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a64fc82121535272c0417d1c2dbc6bed65745ce8
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 37a995305ebfcf5f411c92af5092f9816e89e118
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956446"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549518"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1906 的清单
 
@@ -68,32 +68,32 @@ ms.locfileid: "68956446"
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of <Date>, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+自 2019 年 8 月 16 日起，版本 1906 公开发布，可供所有用户安装。 如果以前选择了早期更新通道，请注意此 Current Branch 版本的更新。
 
-此时，会向早期更新圈发布版本 1906。 若要安装此更新，则必须选择加入。 以下 PowerShell 脚本将层次结构或独立主站点添加到版本 1906 的早期更新圈：
+<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906: 
 
-[版本 1906 选择加入脚本](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 1906 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可执行文件内。
+<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> 版本 1906 更新仅适用于运行版本 1802 或更高版本的站点。
+> The version 1906 update is only applicable to sites running version 1802 or later.
 
-若要选择加入早期更新圈，请执行以下操作：
+To opt-in to the early update ring:
 
-1. 打开 Windows PowerShell 并以管理员身份运行 
-1. 使用以下语法运行 EnableEarlyUpdateRing1906.ps1  脚本：
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing1906.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing1906.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    其中 `SiteServer` 表示管理中心站点或独立主站点。 例如 `EnableEarlyUpdateRing1906.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing1906.ps1 cmprimary01`
 
-1. 检查更新。 有关详细信息，请参阅[获取可用更新](/sccm/core/servers/manage/install-in-console-updates#get-available-updates)。
+1. Check for updates. For more information, see [Get available updates](/sccm/core/servers/manage/install-in-console-updates#get-available-updates).
 
-版本 1906 更新现在应该可以在控制台中使用。
+The version 1906 update should now be available in the console.
 
 > [!Important]  
-> 此脚本仅将你的站点添加到版本 1906 的早期更新圈。 这并不是永久更改。
+> This script only adds your site to the early update ring for version 1906. It's not a permanent change. -->
 
 
 ## <a name="checklist"></a>清单

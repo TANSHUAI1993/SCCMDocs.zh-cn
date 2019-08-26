@@ -5,18 +5,18 @@ description: 按照以下步骤在 Configuration Manager 控制台中配置要�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f6f74b76ca046ec877a22fac6f2fbea29d66b53
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: c0aba3ab65ffe35c4d303f5f957507c43a4523b9
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974729"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -47,9 +47,9 @@ ms.locfileid: "68537228"
      - **工具**：指定可帮助完成一项或多项任务的实用程序或功能。  
      - **更新汇总**：指定为便于部署而一起打包的修补程序、安全更新、关键更新和其他更新的经过测试的累积集合。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
      - **更新**：指定广泛发布的针对特定问题的修补程序。 更新解决了非关键且与安全无关的 bug。  
-     - **升级**：为 Windows 10 特性和功能指定升级。 软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0 来获取“升级”  分类。
+     - **升级**：为 Windows 10 特性和功能指定升级。 软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 6.2 来获取“升级”  分类。 有关安装此更新和其他**升级**更新的详细信息, 请参阅[软件更新的先决条件](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012)。
 
-    > [!NOTE]
+    > [!NOTE] 
     > 
     > 从 Configuration Manager 版本 1706 开始，可以选中“包括 Microsoft Surface 驱动程序和固件更新”  复选框来同步 Microsoft Surface 驱动程序。<!--1098490--> 所有软件更新点都必须运行 Windows Server 2016 才能成功同步 Surface 驱动程序。 如果启用 Surface 驱动程序后，在运行 Windows Server 2012 的计算机上启用软件更新点，则驱动程序更新的扫描结果不准确。 这会导致在 Configuration Manager 控制台和 Configuration Manager 报表中显示不正确的符合性数据。  
     >  
