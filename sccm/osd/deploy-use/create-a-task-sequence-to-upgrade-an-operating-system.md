@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18c66a959e45a465b2e059dfa191708e885ff0c3
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 6054ce9c276c18e578315b92fbe3d100061795fa
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536979"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999418"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
@@ -177,7 +177,7 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
     `dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`  
 1. 将 XML 文件添加到包。
 1. 在此组中添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 指定包含 XML 文件的包，然后指定以下命令行：  
-    `dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`  
+    `dism /online /Import-DefaultAppAssociations:DefaultAppAssociations.xml`  
 
 有关详细信息，请参阅[导出或导入默认的应用关联](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。
 

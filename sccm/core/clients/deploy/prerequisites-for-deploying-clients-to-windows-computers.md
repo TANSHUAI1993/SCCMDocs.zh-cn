@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f9881a8b2cc945b49d79d40777409379aef3fd
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 586083f0de3241adb20bacbf432563681b0370f0
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535624"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110077"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
@@ -59,7 +59,7 @@ ms.locfileid: "68535624"
 如果需要在未更新的 Windows 版本或早于上面列出的版本的 Windows 版本上管理客户端，请使用 Configuration Manager 扩展互操作性客户端 (EIC) 版本 1902。 有关详细信息，请参阅[扩展互操作性客户端](/sccm/core/understand/interoperability-client)。
 
 > [!Tip]  
-> 如果未使用[自动客户端更新](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)，并且未使用其他机制更新客户端，请确保更新 ccmsetup 的版本。 更早版本的 ccmsetup 可能无法正确验证版本 1906 客户端二进制文件中的新 SHA-2 代码签名证书。 例如，如果将 ccmsetup.exe 复制到文件共享，或者将 ccmsetup.msi 与组策略结合使用。<!-- 4963362 -->
+> 如果未使用[自动客户端更新](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate)，并且未使用其他机制更新客户端，请确保更新 ccmsetup 的版本。 更早版本的 ccmsetup 可能无法正确验证版本 1906 客户端二进制文件中的新 SHA-2 代码签名证书。 例如，如果将 ccmsetup.exe 复制到文件共享，或者将 ccmsetup.msi 与组策略结合使用。<!-- 4963362 -->
 >
 > 不应影响以下客户端更新机制：
 >

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e260f26295a27c91a69cad563eaec2395b00a5c
-ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
+ms.openlocfilehash: ad5034ca7475009f2dcd4b50df96d22b2f9428fa
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491677"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110118"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -167,7 +167,7 @@ Configuration Manager 能更高效地确定对等缓存源是否已漫游到其�
 
 ### <a name="bkmk_ehttp"></a> 增强的 HTTP 站点系统
 <!--1356889,1358228-->
-建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
+建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。
 
 此版本包括对客户端与站点系统之间的通信方式的改进。 在站点属性上，选择“客户端计算机通信”选项卡中的“HTTPS 或 HTTP”选项，然后启用新选项以“将 Configuration Manager 生成的证书用于 HTTP 站点系统”    。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
 

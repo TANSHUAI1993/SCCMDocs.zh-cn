@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa56c5ec5b6ad3f24255d6b8e37e56c46c94d17f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 7871e092369a096d8c776d4733e70095ef629a14
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68534909"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110183"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署应用程序
 
@@ -26,7 +26,7 @@ ms.locfileid: "68534909"
 
 至少必须为应用程序创建一种部署类型，然后才能部署该应用程序。 有关详细信息，请参阅[创建应用程序](/sccm/apps/deploy-use/create-applications)。
 
-从版本 1906 开始，可以创建一组可以作为单个部署发送到用户或设备集合的应用程序。 有关详细信息, 请参阅[创建应用程序组](/sccm/apps/deploy-use/create-app-groups)。
+从版本 1906 开始，可以创建一组可以作为单个部署发送到用户或设备集合的应用程序。 有关详细信息，请参阅[创建应用程序组](/sccm/apps/deploy-use/create-app-groups)。
 
 还可以模拟应用程序部署。 该模拟测试部署的适用性，无需安装或卸载应用程序。 模拟部署将评估部署类型的检测方法、要求和依赖关系，然后在“监视”  工作区的“部署”  节点中报告结果。 有关详细信息，请参阅[模拟应用程序部署](/sccm/apps/deploy-use/simulate-application-deployments)。
 
@@ -260,6 +260,8 @@ ms.locfileid: "68534909"
 
 5. 部署应用程序时，选择“自动关闭在‘部署类型属性’对话框的‘安装行为’选项卡中指定的任何运行中的可执行文件”选项  。 此选项位于部署属性的“部署设置”选项卡上  。  
 
+> [!Note]
+> 如果将应用程序配置为检查正在运行的可执行文件, 并将其包含在 "[安装应用程序](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication)" 任务序列步骤中, 则任务序列将无法安装它。 如果未将此任务序列步骤配置为 "出错时继续", 则整个任务序列将失败。
 
 ### <a name="client-behaviors-and-user-notifications"></a>客户端行为和用户通知
 

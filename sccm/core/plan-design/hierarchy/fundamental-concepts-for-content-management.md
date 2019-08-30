@@ -2,7 +2,7 @@
 title: 内容管理基础
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中使用工具和选项管理部署内容。
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d9cad46b4ca89ce890c0e9f9b4638107ba5c1ae
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: e53e5fc081be04209312cd3144c38d0ecd944fc1
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536720"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021953"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -187,7 +187,7 @@ Configuration Manager 支持用于管理同一网络上的对等设备之间的�
 <!--1358112-->
 Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络拥塞控制功能，可帮助管理后台网络传输。 对于在受支持版本的 Windows Server 上运行的分发点，请启用一个选项以帮助调整网络流量。 然后，客户端仅在允许的情况下使用网络带宽。
 
-有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)博客文章。
+有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://techcommunity.microsoft.com/t5/Networking-Blog/Announcing-Transport-Features-and-Performance-Advancements-in/ba-p/339726)博客文章。
 
 有关如何将 Windows LEDBAT 与 Configuration Manager 分发点一起使用的详细信息，在[配置分发点的常规设置时](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)，请参阅设置“调整下载速度以使用未使用的网络带宽 (Windows LEDBAT)”  。
 

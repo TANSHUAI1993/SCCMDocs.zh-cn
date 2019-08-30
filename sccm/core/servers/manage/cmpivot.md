@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 07/30/2019
+ms.date: 08/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 339c9df44f2647b12936ce8a1077fd0ee0f7ee37
-ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.openlocfilehash: 4c4b0ed9150988deee3f8484e5c7b10eb919c086
+ms.sourcegitcommit: 9aa852d54670b5bc568a1ca6e57cd9c1349e5724
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743727"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70053756"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -509,7 +509,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 
 - 显示设备、制造商、模型和 OSVersion：
 
-   ```Kusto
+   ```
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -517,7 +517,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 
 - 显示设备的启动时间图：
 
-   ```Kusto
+   ```
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
