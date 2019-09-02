@@ -195,10 +195,12 @@
           href: plan-design/network/prepare-windows-servers.md
         - name: 站点系统服务器网站。
           href: plan-design/network/websites-for-site-system-servers.md
-        - name: PKI 证书要求
-          href: plan-design/network/pki-certificate-requirements.md
         - name: CNG 证书概述
           href: plan-design/network/cng-certificates-overview.md
+        - name: PKI 证书要求
+          href: plan-design/network/pki-certificate-requirements.md
+        - name: PKI 证书部署示例
+          href: plan-design/network/example-deployment-of-pki-certificates.md
     - name: 诊断和使用情况数据
       items:
         - name: 诊断和使用情况数据概述
@@ -253,6 +255,8 @@
       items:
         - name: Technical Preview 概述
           href: get-started/technical-preview.md
+        - name: 1908.2 中的功能
+          href: get-started/2019/technical-preview-1908-2.md
         - name: 1908 中的功能
           href: get-started/2019/technical-preview-1908.md
         - name: 1907 中的功能
