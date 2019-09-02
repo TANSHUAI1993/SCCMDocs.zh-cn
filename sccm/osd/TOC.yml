@@ -107,8 +107,6 @@
           href: deploy-use/debug-task-sequence.md
         - name: 配置预先缓存内容
           href: deploy-use/configure-precache-content.md
-        - name: 使用任务序列来管理虚拟硬盘
-          href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
     - name: 自定义任务序列应用方案
       items:
         - name: 创建自定义任务序列
