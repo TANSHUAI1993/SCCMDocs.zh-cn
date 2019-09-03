@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 583db1b3ac5682ef6eb65338a3e35d280f46fe38
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b5634fb611d305fff196b7d6eb0b4ed97ff13d3e
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536732"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110066"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -27,7 +27,7 @@ ms.locfileid: "68536732"
 > [!Tip]  
 > 此功能在版本 1806 中作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次引入。 从版本 1810 开始，此功能不再属于预发行功能。  
 
-Microsoft 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。
+Microsoft 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。
 
 Configuration Manager 版本 1806 包括对客户端与站点系统之间的通信方式的改进。 这些改进有两个主要目标：  
 
@@ -51,7 +51,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 ### <a name="bkmk_scenario1"></a> 方案 1：客户端到管理点
 
 <!--1356889-->
-[已加入 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join)能够与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。
+[已加入 Azure Active Directory (Azure AD) 的设备](/azure/active-directory/devices/concept-azure-ad-join)能够与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。
 
 > [!Note]  
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个已启用 HTTPS 的管理点，用于通过云管理网关进行通信的已加入 Azure AD 的客户端。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  

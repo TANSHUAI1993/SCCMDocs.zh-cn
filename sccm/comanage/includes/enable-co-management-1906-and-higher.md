@@ -3,14 +3,14 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/26/2019
+ms.date: 08/23/2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5654ffc17264a1a318d0d070eba3b44f273c1790
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 4960c0b9a6c383a73766083a9e385bcd60d799d3
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533931"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70036660"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“云服务”  ，然后选择“共同管理”  节点。 单击功能区中的“配置共同管理”以打开“共同管理配置向导”   。
@@ -23,7 +23,7 @@ ms.locfileid: "68533931"
 
 3. 在“启用”  页上，选择以下设置：
 
-   - **在 Intune 中自动注册** - 可在 Intune 中为现有的 Configuration Manager 客户端自动注册客户端。 此选项允许对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。
+   - **在 Intune 中自动注册** - 可在 Intune 中为现有的 Configuration Manager 客户端自动注册客户端。 此选项允许对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 如果用户取消注册某个设备，则它将在下次评估策略时重新注册。 <!--3330596-->
 
       - **试点** - 仅属于“Intune 自动注册”集合成员的 Configuration Manager 客户端才会自动注册到 Intune  。
       - **全部** - 为所有 Windows 10 1709 版或更高版本的客户端启用自动注册。

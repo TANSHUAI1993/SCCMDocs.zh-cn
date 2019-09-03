@@ -2,7 +2,7 @@
 title: 设备重新启动通知
 titleSuffix: Configuration Manager
 description: 重新启动 Configuration Manager 中各种客户端设置的通知行为。
-ms.date: 08/07/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e057a7391bbdbe697b7f53c13a90a74efe22635
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: b73d3072883405d1ac2b455f12e1c252244884d1
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859651"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999445"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager 中的设备重新启动通知
 
@@ -105,7 +105,7 @@ ms.locfileid: "68859651"
 <!--3976435-->
 某些管理员倾向于经常发送重新启动通知并将重新启动推迟较短的时间。 而其他管理员允许用户将重新启动推迟更长一段时间，并希望用户不经常收到等待重新启动的通知。 Configuration Manager 版本 1906 使管理员可以更好地控制重新启动通知的时间和频率。 在 1906 中引入了以下各项以使管理员拥有更大的控制权限：
 
-- “指定计算机重新启动倒计时通知的暂停持续时间(小时)”已添加到[计算机重新启动客户端设置](/sccm/core/clients/deploy/about-client-settings#computer-restart)  。
+- “指定计算机重启倒计时通知的暂停持续时间(分钟)”  已添加到[“计算机重启客户端设置”](/sccm/core/clients/deploy/about-client-settings#computer-restart)。
 - 向用户显示一条临时通知，指示注销用户或重启计算机之前的时间间隔（以分钟为单位），这一时间间隔的最大值从 1440 分钟（24小时）增加到了 20160 分钟（两周）  。
 - 在挂起重启时间小于 24 小时之前，用户在重启通知中将无法看到进度条。
 

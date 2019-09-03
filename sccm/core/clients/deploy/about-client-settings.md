@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 08/09/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d48b2f7a842da0a567c4ed1a51e85e0d283603cf
-ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
+ms.openlocfilehash: 123515f7b7b78d3c92f7372adb6aec73ee64443c
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69632021"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999404"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -91,7 +91,7 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 ### <a name="minimum-duration-before-cached-content-can-be-removed-minutes"></a>可以删除缓存内容前的最短持续时间（以分钟为单位）
 
 <!--4485509-->
-从版本 1906 开始，可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置控制客户端在删除内容之前将其存储在缓存中的时间。
+从版本 1906 开始，可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置定义了在需要更多空间的情况下，Configuration Manager 代理可以从缓存中删除内容之前应等待的最短时间。
 
 默认情况下，此值为 1,440 分钟（24 小时）。
 此设置的最大值为 10,080 分钟（1 周）。
@@ -325,8 +325,8 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
 
-- **指定计算机重新启动倒计时通知的推迟持续时间（以小时为单位）** （从版本 1906 开始）<!--3976435-->
-  - 默认值为 4 小时。
+- **“指定计算机重启倒计时通知的暂停持续时间(分钟)”** （从版本 1906 开始）<!--3976435-->
+  - 默认值为 240 分钟。
   - 暂停持续时间值应小于临时通知值减去用户无法关闭的通知值之后的值。
   - 有关详细信息，请参阅[设备重新启动通知](/sccm/core/clients/deploy/device-restart-notifications)。
 

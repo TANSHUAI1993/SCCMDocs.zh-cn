@@ -2,7 +2,7 @@
 title: 用于 1906 的清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1906 之前需要执行的操作。
-ms.date: 08/17/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a995305ebfcf5f411c92af5092f9816e89e118
-ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
+ms.openlocfilehash: 4b2c712a3d5b0948f5069fb84d48e5cbf01d27b1
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69549518"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110040"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1906 的清单
 
@@ -201,6 +201,12 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 更新站点之前，在 CAS 和主站点上备份站点数据库。 此备份可确保你拥有可用于灾难恢复的成功备份。
 
 有关详细信息，请参阅 [备份和恢复](/sccm/protect/understand/backup-and-recovery)。
+
+### <a name="back-up-customized-files"></a>备份自定义文件
+
+如果你或第三方产品自定义任何 Configuration Manager 配置文件，请保存自定义项的副本。
+
+例如，将自定义条目添加到 Configuration Manager 安装目录的 `bin\X64` 文件夹中的 osdinjection.xml  文件中。 在更新 Configuration Manager 后，这些自定义项不会保留。 需要重新应用自定义项。
 
 ### <a name="plan-for-client-piloting"></a>规划客户端试点
 

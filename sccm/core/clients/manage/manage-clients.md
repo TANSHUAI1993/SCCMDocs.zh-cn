@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ae4074897359dcebb9b91392bd36893d0276012
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 52259888bdfe343072bfa34e8eb053c0bb082789
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339009"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110143"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
@@ -189,10 +189,11 @@ ms.locfileid: "68339009"
 
 
 ## <a name="restart-clients"></a>重新启动客户端
-从 1710 版开始，可以使用 Configuration Manager 控制台来标识需要重启的客户端。 然后使用客户端通知操作进行重启。
+
+使用 Configuration Manager 控制台来标识需要重启的客户端。 然后使用客户端通知操作进行重启。
 
 > [!Tip]
-> 此外，必须将客户端升级到 1710 版才能运行此功能。 建议启用客户端自动升级以将客户端保持为管理开销最低的新版本。 有关详细信息，请参阅[使用自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)。
+> 启用自动客户端升级，以更轻松的方式使客户端保持最新状态。 有关详细信息，请参阅[关于自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate)。
 
 若要标识正在等待重启的设备，请转到 Configuration Manager 控制台中的“资产和符合性”  工作区，并选择“设备”  节点。 然后可以在名为“等待重启”  的新列的详细信息窗格中查看每个设备的状态。 每个设备都具有以下一个或多个值： 
 - **No**：没有正在等待的重启

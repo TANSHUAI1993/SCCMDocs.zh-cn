@@ -2,7 +2,7 @@
 title: 1906 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1906 中引入的更改和新增功能的详细信息。
-ms.date: 08/20/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ced44684415c60bede26e86a02a47ed555b2b9e
-ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
+ms.openlocfilehash: 13c9f2e6f6b279aeea13ce2ede66b6d11f2c12a2
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69632008"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999436"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -224,7 +224,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="configure-client-cache-minimum-retention-period"></a>配置客户端缓存最短保持期
 
 <!--4485509-->
-现在可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置控制客户端在删除内容之前将其存储在缓存中的时间。 在客户端设置的“客户端缓存设置”组中，配置以下设置  ：**可以删除缓存内容前的最短持续时间（以分钟为单位）** 。
+现在可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置定义了在需要更多空间的情况下，Configuration Manager 代理可以从缓存中删除内容之前应等待的最短时间。 在客户端设置的“客户端缓存设置”组中，配置以下设置  ：**可以删除缓存内容前的最短持续时间（以分钟为单位）** 。
 
 > [!Note]  
 > 在同一个客户端设置组中，现有设置“在完整 OS 中启用 Configuration Manager 客户端以共享内容”现重命名为“启用为对等缓存源”   。 此设置的行为不会发生更改。  
@@ -411,7 +411,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 <!--3976435-->
 
-现在，系统将通过间歇性倒计时通知更频繁地提醒最终用户待重启。 可以在“计算机重新启动”页上的“客户端设置”中定义间歇性通知的时间间隔   。 更改“指定计算机重新启动倒计时通知的暂停持续时间(小时)”  的值，以配置在出现最终倒计时通知前提醒用户等待重新启动的频率。
+现在，系统将通过间歇性倒计时通知更频繁地提醒最终用户待重启。 可以在“计算机重新启动”页上的“客户端设置”中定义间歇性通知的时间间隔   。 更改“指定计算机重启倒计时通知的暂停持续时间(分钟)”  的值，以配置在出现最终倒计时通知前提醒用户等待重启的频率。
 
 此外，向用户显示一条临时通知，指示注销用户或重启计算机之前的时间间隔（以分钟为单位），这一时间间隔的最大值从 1440 分钟（24小时）增加到了 20160 分钟（两周）  。
 

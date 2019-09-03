@@ -2,7 +2,7 @@
 title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44430d86dfa017475edfe301f1ce112d6cdd9ab2
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 08cde14b93b5f38aece4ee90f8148f467aab25e3
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536225"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110044"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -180,7 +180,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 - 重新安装任何受影响的组件，如站点系统角色或 Configuration Manager 控制台。  
 
-- 基于针对客户端试验以及针对[自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)进行的选择来管理客户端的更新。  
+- 基于针对客户端试验以及针对[自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate)进行的选择来管理客户端的更新。  
 
 - 站点系统服务器通常不需要在更新过程中重启。 如果某个角色使用 .NET，并且更新包更新该必备组件，则站点系统可能会重启。  
 
@@ -280,6 +280,9 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
     - 在站点服务器上运行的关键站点组件。
     - 负责在站点系统服务器上重新安装角色。 不显示单个站点系统角色的重新安装状态。
     - 重新安装此服务应快速完成。
+
+    > [!Note]
+    > 某些 Configuration Manager 站点角色共享客户端框架。 例如，管理点和拉取分发点。 当这些角色更新时，这些服务器上的客户端版本同时更新。 有关详细信息，请参阅[如何升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers)。
 
 -  安装 SMS_REPLICATION_CONFIGURATION_MONITOR 组件
 
