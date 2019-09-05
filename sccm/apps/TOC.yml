@@ -72,6 +72,8 @@
           href: deploy-use/link-users-and-devices-with-user-device-affinity.md
         - name: 适用于企业的 Microsoft Store 批量采购的应用
           href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: 适用于企业的 Microsoft Store 集成的故障排除
+          href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
         - name: APP-V 虚拟环境
           href: deploy-use/create-app-v-virtual-environments.md
         - name: 导入和导出应用程序
