@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08156819af349af0f052cf2b58e8b4a44ef7b74b
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: dad3906732a237cad94ae94f9974d94fd72292c2
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516210"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380327"
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义启动映像
 
@@ -38,7 +38,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
    Windows PE 3.1<sup>1</sup> 和 Windows PE 5  
 
-   <sup>1</sup> 只有当启动映像基于 Windows PE 3.1 时才能将该映像添加到 Configuration Manager 中。 安装适用于 Windows 7 SP1 的 Windows AIK 补充，以使用适用于 Windows 7 SP1（基于 Windows PE 3.1）的 Windows AIK 补充升级适用于 Windows 7（基于 Windows PE 3）的 Windows AIK。 你可以从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充。  
+   <sup>1</sup> 只有当启动映像基于 Windows PE 3.1 时才能将该映像添加到 Configuration Manager 中。 安装适用于 Windows 7 SP1 的 Windows AIK 补充，以使用适用于 Windows 7 SP1（基于 Windows PE 3.1）的 Windows AIK 补充升级适用于 Windows 7（基于 Windows PE 3）的 Windows AIK。 你可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充。  
 
    例如，如果具有 Configuration Manager，则可以利用 Configuration Manager 控制台自定义适用于 Windows 10 的 Windows ADK 中的启动映像（基于 Windows PE 10）。 但是，当支持基于 Windows PE 5 的启动映像时，你必须在不同的计算机中自定义它们，并使用随适用于 Windows 8 的 Windows ADK 一起安装的 DISM 版本。 然后，可以向 Configuration Manager 控制台添加启动映像。  
 
@@ -66,7 +66,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 1. 在无其他 Windows AIK 或 Windows ADK 版本且未安装任何 Configuration Manager 组件的计算机上安装 Windows ADK。  
 
-2. 请从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=39982)下载适用于 Windows 8.1 的 Windows ADK  
+2. 请从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=39982)下载适用于 Windows 8.1 的 Windows ADK  
 
 3. 将启动映像 (wimpe.wim) 从 Windows ADK 安装文件夹（例如，<*安装路径*>\Windows Kits\\<版本  >\Assessment and Deployment Kit\Windows Preinstallation Environment\\<x86 或 amd64  >\\<区域设置  >）复制到将自定义启动映像的计算机上的目标文件夹。 此过程使用 C:\WinPEWAIK 作为目标文件夹名称。  
 
@@ -186,9 +186,9 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 #### <a name="to-customize-a-boot-image-that-uses-windows-pe-31"></a>自定义使用 Windows PE 3.1 的启动映像  
 
-1. 在无其他 Windows AIK 或 Windows ADK 版本且未安装任何 Configuration Manager 组件的计算机上安装 Windows AIK。 请从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=5753)下载 Windows AIK。  
+1. 在无其他 Windows AIK 或 Windows ADK 版本且未安装任何 Configuration Manager 组件的计算机上安装 Windows AIK。 请从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5753)下载 Windows AIK。  
 
-2. 在步骤 1 中的计算机上安装适用于带 SP1 的 Windows 7 的 Windows AIK 补充程序。 从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充程序。  
+2. 在步骤 1 中的计算机上安装适用于带 SP1 的 Windows 7 的 Windows AIK 补充程序。 从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充程序。  
 
 3. 将启动映像 (wimpe.wim) 从 Windows AIK 安装文件夹（例如，<*InstallationPath*>\Windows AIK\Tools\PETools\amd64\\）复制到将自定义启动映像的计算机上的文件夹。 此过程使用 C:\WinPEWAIK 作为文件夹名称。  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71ea7cf51d2657cea59ae21f7aa120fe11d191c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9b42e8f06cfc5dffb04854f2296837f921eb86c5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494565"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380273"
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略
 
@@ -30,18 +30,18 @@ System Center Configuration Manager 中的 Endpoint Protection 的防火墙策�
 
 -   控制是否在 Windows 防火墙阻止新程序时通知用户。  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”  。  
 
-2.  在“资产和符合性”工作区中，展开“Endpoint Protection”，然后单击“Windows 防火墙策略”。  
+2.  在“资产和符合性”  工作区中，展开“Endpoint Protection”  ，然后单击“Windows 防火墙策略”  。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建 Windows 防火墙策略” 。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建 Windows 防火墙策略”  。  
 
-4.  在“创建 Windows 防火墙策略向导”  的“常规” 页中，指定此防火墙策略的名称和可选描述，然后单击“下一步” 。  
+4.  在“创建 Windows 防火墙策略向导”  的“常规”  页中，指定此防火墙策略的名称和可选描述，然后单击“下一步”  。  
 
 5.  在向导的“配置文件设置”  页上，为每个网络配置文件配置以下设置：  
 
     > [!IMPORTANT]  
-    >  如果希望将 Windows 防火墙策略部署到运行 Windows Server 2008 和 Windows Vista Service Pack 1 的计算机，必须先在这些计算机上安装 [修补程序 KB971800](http://go.microsoft.com/fwlink/p/?LinkId=231239) 。  
+    >  如果希望将 Windows 防火墙策略部署到运行 Windows Server 2008 和 Windows Vista Service Pack 1 的计算机，必须先在这些计算机上安装 [修补程序 KB971800](https://go.microsoft.com/fwlink/p/?LinkId=231239) 。  
 
     > [!NOTE]  
     >  有关网络配置文件的详细信息，请参阅 Windows 文档。  
@@ -61,13 +61,13 @@ System Center Configuration Manager 中的 Endpoint Protection 的防火墙策�
 
 ##  <a name="BKMK_Assign"></a> 若要部署 Windows 防火墙策略  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”  。  
 
-2.  在“资产和符合性”工作区中，展开“Endpoint Protection”，然后单击“Windows 防火墙策略”。  
+2.  在“资产和符合性”  工作区中，展开“Endpoint Protection”  ，然后单击“Windows 防火墙策略”  。  
 
 3.  在“Windows 防火墙策略”  列表中，选择要部署的 Windows 防火墙策略。  
 
-4.  在“主页”选项卡上的“部署”组中，单击“部署”。  
+4.  在“主页”  选项卡上的“部署”  组中，单击“部署”  。  
 
 5.  在“部署 Windows 防火墙策略”  对话框中，指定希望将此 Windows 防火墙策略分配到的集合，并指定分配计划。 Windows 防火墙策略通过使用此计划和客户端上的 Windows 防火墙设来置评估符合性，并进行重新配置以与 Windows 防火墙策略相匹配。  
 
