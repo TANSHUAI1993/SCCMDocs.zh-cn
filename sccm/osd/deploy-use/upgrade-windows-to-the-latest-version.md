@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b85c29bb87bb8b05f857198b56ed8ffebf46d964
-ms.sourcegitcommit: ee0d33ef79e1de1f5057a7d7e743f500da977caa
+ms.openlocfilehash: 6d1d6ba76983041c0c6c8d13147cfae481186f23
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150798"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380084"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>使用 Configuration Manager 将 Windows 升级到最新版本
 
@@ -40,7 +40,7 @@ ms.locfileid: "70150798"
 
 ### <a name="upgrade-version"></a>升级版本
 
-仅创建 OS 升级包以升级到以下 OS 版本:
+仅创建 OS 升级包以升级到以下 OS 版本：
 
 - Windows 10
 - Windows Server 2016
@@ -48,7 +48,7 @@ ms.locfileid: "70150798"
 
 ### <a name="original-version"></a>原始版本
 
-设备必须运行以下操作系统之一, 以针对 OS 升级任务序列:
+设备必须运行以下操作系统之一，以针对 OS 升级任务序列：
 
 #### <a name="windows-client"></a>Windows 客户端
 
@@ -56,7 +56,7 @@ ms.locfileid: "70150798"
 - Windows 8.1
 - 较早版本的 Windows 10。 例如，可以将 1809 版本的 Windows 10 升级到 1903 版本的 Windows 10。  
 
-有关详细信息, 请参阅[Windows 10 升级路径](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths)。
+有关详细信息，请参阅[Windows 10 升级路径](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths)。
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -65,7 +65,7 @@ ms.locfileid: "70150798"
 - 较早版本的 Windows Server 2016
 - 较早版本的 Windows Server 2019
 
-有关 Windows Server 支持的升级路径的详细信息, 请参阅[Windows server 2016 支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)和[Windows server 升级中心](http://aka.ms/upgradecenter)。
+有关 Windows Server 支持的升级路径的详细信息，请参阅[Windows server 2016 支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)和[Windows server 升级中心](https://aka.ms/upgradecenter)。
 
 
 ## <a name="BKMK_Plan"></a> 计划  
@@ -76,7 +76,7 @@ ms.locfileid: "70150798"
 
 - 仅添加与操作系统升级的核心任务相关的任务序列步骤。 这些步骤主要包括安装包、应用程序或更新。 还会用到用于运行命令行、PowerShell 或设置动态变量的步骤。  
 
-- 查看计算机上安装的驱动程序和应用程序。 在部署升级任务序列之前, 请确保驱动程序与 Windows 10 兼容。  
+- 查看计算机上安装的驱动程序和应用程序。 在部署升级任务序列之前，请确保驱动程序与 Windows 10 兼容。  
 
 以下任务与就地升级不兼容。 它们需要使用传统的操作系统部署：  
 
@@ -121,7 +121,7 @@ Windows 10 升级包包含在目标计算机上升级操作系统所必需的源
 - [使用独立媒体部署 Windows，而不使用网络](/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network)  
 
   > [!IMPORTANT]  
-  > 使用独立媒体时, 必须在任务序列中包括启动映像。 此配置使任务序列在任务序列媒体向导中可用。
+  > 使用独立媒体时，必须在任务序列中包括启动映像。 此配置使任务序列在任务序列媒体向导中可用。
 
 
 ## <a name="monitor"></a>监视器  

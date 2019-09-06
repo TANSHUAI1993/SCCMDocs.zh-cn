@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5526afcf826c29ff5cf5d55f730092ce3031a0b
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 3758e7aa996a47b78e1d17864843cf0be70bdd8f
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859801"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176518"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
@@ -394,7 +394,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
- 如果设置为 1，则此属性指定客户端应选择有效期最长的 PKI 证书。 如果将网络访问保护与 IPsec 强制配合使用，则可能需要此设置。  
+ 如果设置为 1，则此属性指定客户端应选择有效期最长的 PKI 证书。  
 
  示例：`CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 

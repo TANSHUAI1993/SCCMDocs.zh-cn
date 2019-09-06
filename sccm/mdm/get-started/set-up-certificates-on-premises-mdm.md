@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8443430b55ee61e9ad5eeac1e70342dfa6e85851
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3e454212b5a70c903471d0bda82611e12b3c8693
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122366"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380328"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>为 System Center Configuration Manager 中的本地移动设备管理的受信任通信设置证书
 
@@ -31,7 +31,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
  作为未加入域的设备的替代方法，可以使用已知公共 CA（如 Verisign 或 GoDaddy）的根来颁发服务器证书，这样可以避免必须手动在设备上安装证书，因为大多数设备本机信任与特定服务器之间的连接，这类服务器使用的根与公共 CA 使用的根相同。 这个替代方法对于用户注册的设备非常有用，因为在该设备中不能通过每台设备上的站点 CA 安装受信任的证书。  
 
 > [!IMPORTANT]  
->  有多种方法可以为设备和本地移动设备管理的站点系统服务器之间的受信任通信设置证书。 本文中提供的信息作为实现此操作的其中一种方法的示例给出。 此方法要求在安装有 Active Directory 证书服务角色和证书颁发机构及证书颁发机构 Web 注册角色的站点中运行服务器。 请参阅 [Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)了解有关此 Windows Server 角色的详细信息和指南。  
+>  有多种方法可以为设备和本地移动设备管理的站点系统服务器之间的受信任通信设置证书。 本文中提供的信息作为实现此操作的其中一种方法的示例给出。 此方法要求在安装有 Active Directory 证书服务角色和证书颁发机构及证书颁发机构 Web 注册角色的站点中运行服务器。 请参阅 [Active Directory 证书服务](https://go.microsoft.com/fwlink/p/?LinkId=115018)了解有关此 Windows Server 角色的详细信息和指南。  
 
  若要设置本地移动设备管理所需的 SSL 通信的 Configuration Manager 站点，请按照以下高级步骤操作：  
 
@@ -79,15 +79,15 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 2.  在证书颁发机构控制台中，右键单击“证书模板”，然后单击“管理”以加载证书模板控制台。  
 
-3.  在结果窗格中，右键单击在“模板显示名称”  列中显示“Web 服务器” 的条目，然后单击“复制模板” 。  
+3.  在结果窗格中，右键单击在“模板显示名称” 列中显示“Web 服务器”的条目，然后单击“复制模板”。  
 
-4.  在“复制模板”  对话框中，确保已选择“Windows 2003 Server，Enterprise Edition”  ，然后单击“确定” 。  
+4.  在“复制模板” 对话框中，确保已选择“Windows 2003 Server，Enterprise Edition” ，然后单击“确定”。  
 
     > [!IMPORTANT]  
-    >  不要选择“Windows 2008 Server，Enterprise Edition” 。 Configuration Manager 不支持使用 HTTPS 的受信任通信的 Windows Server 2008 证书模板。  
+    >  不要选择“Windows 2008 Server，Enterprise Edition”。 Configuration Manager 不支持使用 HTTPS 的受信任通信的 Windows Server 2008 证书模板。  
 
     > [!NOTE]  
-    >  如果使用的 CA 位于 Windows Server 2012，单击“复制模板”时系统不会提示证书模板版本。 请改为在模板属性的“兼容性”  选项卡上指定这一点，如下所示：  
+    >  如果使用的 CA 位于 Windows Server 2012，单击“复制模板”时系统不会提示证书模板版本。 请改为在模板属性的“兼容性” 选项卡上指定这一点，如下所示：  
     >   
     >  **证书颁发机构**：Windows Server 2003  
     >   
@@ -97,15 +97,15 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 6.  单击“使用者名称”选项卡，选择“用 Active Directory 中的信息生成”，并为使用者名称格式指定 **DNS 名称**。 如果选择了“用户主体名称 (UPN)”，则清除另一个使用者名称的复选框。  
 
-7.  单击“安全”  选项卡，并从安全组“域管理员”  和“企业管理员”  中删除“注册” 权限。  
+7.  单击“安全” 选项卡，并从安全组“域管理员” 和“企业管理员” 中删除“注册”权限。  
 
 8.  单击“添加”，在文本框中输入 **ConfigMgr MDM 服务器**，然后单击“确定”。  
 
-9. 为此组选择“注册”  权限，并且不要清除“读取”  权限。  
+9. 为此组选择“注册” 权限，并且不要清除“读取” 权限。  
 
 10. 单击“确定”，然后关闭证书模板控制台。  
 
-11. 在证书颁发机构控制台中，右键单击“证书模板” ，单击“新建” ，然后单击“要颁发的证书模板” 。  
+11. 在证书颁发机构控制台中，右键单击“证书模板”，单击“新建”，然后单击“要颁发的证书模板”。  
 
 12. 在“启用证书模板”对话框中，选择刚创建的新模板 **ConfigMgr MDM Web 服务器**，然后单击“确定”。  
 
@@ -164,6 +164,6 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
      要注册的设备需要访问此文件以导入根证书，所以建议选择大部分计算机和设备能够访问的常见位置，或者也可以现将其保存到一个便捷的位置（例如 C 驱动器），稍后再将其移动到常见位置。  
 
-     单击“下一步” 。  
+     单击“下一步”。  
 
 9. 检查设置，然后单击“完成”。  

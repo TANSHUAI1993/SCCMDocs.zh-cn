@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 612056861b896d8c7c271e60e0bb6b78fcbd106e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 226a2632f8aa827975a764f0d22aea0a05ec6d96
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123257"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379752"
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的先决条件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的报表具有产品外部依赖关系和产品内依赖关系。  
 
@@ -29,7 +29,7 @@ System Center Configuration Manager 中的报表具有产品外部依赖关系�
 
 |先决条件|更多信息|  
 |------------------|----------------------|  
-|SQL Server Reporting Services|必须安装和配置 SQL Server Reporting Services，然后才能在 Configuration Manager 中使用报表。<br /><br /> 有关在你的环境中规划和部署 Reporting Services 的信息，请参阅 SQL Server 2008 联机丛书中的 [Reporting Services](http://go.microsoft.com/fwlink/p/?LinkId=212032) 部分。|  
+|SQL Server Reporting Services|必须安装和配置 SQL Server Reporting Services，然后才能在 Configuration Manager 中使用报表。<br /><br /> 有关在你的环境中规划和部署 Reporting Services 的信息，请参阅 SQL Server 2008 联机丛书中的 [Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=212032) 部分。|  
 |运行 Reporting Services 点的计算机的站点系统角色依赖关系。|[System Center Configuration Manager 支持的配置](../../../core/plan-design/configs/supported-configurations.md)|  
 
 ## <a name="dependencies-internal-to-configuration-manager"></a>Configuration Manager 的内部依赖关系  

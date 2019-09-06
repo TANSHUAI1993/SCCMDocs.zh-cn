@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf18203d4b6d4c8858e3547671b7bf63a2250db7
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 6e4f843d8984cbf27fed4e309af523855ab14002
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537261"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380239"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板
 
@@ -74,7 +74,7 @@ Office 365 客户端管理仪表板包含新磁贴“Office 365 专业增强版�
 - 启用宏的 Office 文件格式，例如启用了宏的 Excel 工作簿 (.xlsm) 或启用了宏的 Word 文档 (.docm)  
 - 不指示是否有宏内容的旧版 Office 格式。 例如，Excel 97-2003 工作簿 (.xls)。
 
-如果需要更详细的评估，请部署“Office Readiness Toolkit”  。 此工具分析宏文件中的代码。 它会检查是否存在任何潜在的兼容性问题。 例如，文件是否使用了较新版 Office 中已更改的功能。 运行 Office Readiness Toolkit 后，Configuration Manager 可以使用其结果。 这些额外的数据可提高设备就绪情况计算的准确度。 有关详细信息，请参阅[使用 Readiness Toolkit 评估 Office 365 专业增强版的应用程序兼容性](http://aka.ms/readinesstoolkit)。
+如果需要更详细的评估，请部署“Office Readiness Toolkit”  。 此工具分析宏文件中的代码。 它会检查是否存在任何潜在的兼容性问题。 例如，文件是否使用了较新版 Office 中已更改的功能。 运行 Office Readiness Toolkit 后，Configuration Manager 可以使用其结果。 这些额外的数据可提高设备就绪情况计算的准确度。 有关详细信息，请参阅[使用 Readiness Toolkit 评估 Office 365 专业增强版的应用程序兼容性](https://aka.ms/readinesstoolkit)。
 
 ## <a name="office-365-proplus-upgrade-readiness-dashboard"></a>Office 365 专业增强版升级就绪情况仪表板
 
@@ -96,7 +96,7 @@ Office 365 客户端管理仪表板包含新磁贴“Office 365 专业增强版�
  
 1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Office 365 客户端管理”   。
 1. 选择**Office 365 ProPlus 升级就绪情况**"节点。
-1. 更改**集合**和**目标 Office 体系结构**, 以更改仪表板中的信息中继。
+1. 更改**集合**和**目标 Office 体系结构**，以更改仪表板中的信息中继。
 
 ![Office 365 专业增强版升级就绪情况仪表板](./media/4021125-office-365-upgrade-readiness-dashboard.png)
 

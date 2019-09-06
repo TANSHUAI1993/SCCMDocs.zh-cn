@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a8f1ca1484df0480a7923a8d3de64c1670aec6d
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 1e452d515e586b688001a0cfd1fb9bf0ae837589
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748203"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380186"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -96,7 +96,7 @@ ms.locfileid: "66748203"
 
 2.  如果你收到的错误消息中包含代码 0x80072f8f，那么该问题很可能是由你的计算机上不正确的日期或时间设置引起的。  
 
-3.  要重置计算机的日期或时间设置，请按照[修复损坏的桌面快捷方式和常规系统维护任务](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579)) 中的步骤执行。  
+3.  要重置计算机的日期或时间设置，请按照[修复损坏的桌面快捷方式和常规系统维护任务](https://go.microsoft.com/fwlink/?LinkId=155579) (https://go.microsoft.com/fwlink/?LinkId=155579) ) 中的步骤执行。  
 
 ### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>步骤 4：重命名你的计算机上的 Software Distribution 文件夹  
 

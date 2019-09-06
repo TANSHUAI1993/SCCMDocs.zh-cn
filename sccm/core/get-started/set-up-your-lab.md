@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b586fb4eded2143e42887236d1c52b0a8bae275
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 107eb6bfa7f373a0ad13dc687fd373dfcae22d2d
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726246"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379368"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
@@ -35,7 +35,7 @@ ms.locfileid: "67726246"
 
 -   **实验室环境中将 SQL Server 2012 SP2** 用于站点数据库。  
 
-     可以从 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=29066)下载 SQL Server 2012 的评估版。  
+     可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=29066)下载 SQL Server 2012 的评估版。  
 
      SQL Server 具有[支持的 SQL Server 版本](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions)，必须满足这些版本才能用于 System Center Configuration Manager。  
 
@@ -194,7 +194,7 @@ ms.locfileid: "67726246"
 
 9. 单击“安装”  并在“服务器管理器”  的“通知”  窗格验证安装是否正确完成。  
 
-10. .NET 的基本安装完成后，导航到 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 以获取 .NET Framework 4.5.2 的 Web 安装程序。 单击“下载”  按钮，然后单击“运行”以运行  安装程序。 它将自动检测并安装你选择的语言版本的所需组件。  
+10. .NET 的基本安装完成后，导航到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=42643) 以获取 .NET Framework 4.5.2 的 Web 安装程序。 单击“下载”  按钮，然后单击“运行”以运行  安装程序。 它将自动检测并安装你选择的语言版本的所需组件。  
 
 有关其他信息，请查看以下文章以了解为什么需要这些 .NET 框架：  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07d6ecefb2cc4cded7ce43bad3f681f8f335ec4e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c8e76920dc5f63e3a203d3ec46b4c94c4247d599
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500438"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379992"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
@@ -48,7 +48,7 @@ ms.locfileid: "65500438"
 
 -   **简单证书注册协议 (SCEP)** - 使用 SCEP 协议为设备或用户请求证书。 该类型需要运行 Windows Server 2012 R2 或更高版本的服务器上的网络设备注册服务 (NDES) 角色。
 
-    首先创建“受信任的 CA 证书”证书配置文件，然后才能创建“简单证书注册协议(SCEP)”证书配置文件。
+    首先创建“受信任的 CA 证书”证书配置文件，然后才能创建“简单证书注册协议(SCEP)”证书配置文件   。
 
 -   **个人信息交换 (.pfx)** - 为设备或用户请求一个 .pfx（又称 PKCS #12）证书。<!--1321368-->  
 
@@ -57,7 +57,7 @@ ms.locfileid: "65500438"
     > [!Note]  
     > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
-    从版本 1706 开始，可以将 Microsoft 或 Entrust 用作“个人信息交换 (.pfx)”证书的证书颁发机构。
+    从版本 1706 开始，可以将 Microsoft 或 Entrust 用作“个人信息交换 (.pfx)”证书的证书颁发机构  。
 
 
 ## <a name="requirements-and-supported-platforms"></a>要求和支持的平台  
@@ -65,7 +65,7 @@ ms.locfileid: "65500438"
 
 PFX 证书还需要一个证书注册点。 此外，请指定证书的证书颁发机构 (CA) 和相关访问凭据。 从版本 1706 开始，可以将 Microsoft 或 Entrust 指定为证书颁发机构。  
 
-有关网络设备注册服务如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](http://go.microsoft.com/fwlink/p/?LinkId=328657)。  
+有关网络设备注册服务如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](https://go.microsoft.com/fwlink/p/?LinkId=328657)。  
 
 Configuration Manager 支持将证书部署到不同设备类型和操作系统上的不同证书存储，具体取决于要求。 支持下列设备和操作系统：  
 
@@ -88,10 +88,10 @@ Configuration Manager 的一个典型方案是，在连接使用 EAP-TLS、EAP-T
 
 必须在设备上安装企业根 CA 证书，然后设备才能使用 SCEP 证书配置文件请求证书。  
 
-可以在 SCEP 证书配置文件中指定设置，以便针对不同的环境或连接要求请求自定义证书。 “创建证书配置文件向导”有两个注册参数页面。 首先，“SCEP 注册”包括有关注册请求以及在何处安装证书的设置。 其次，“证书属性” 本身描述了请求的证书。  
+可以在 SCEP 证书配置文件中指定设置，以便针对不同的环境或连接要求请求自定义证书。 “创建证书配置文件向导”有两个注册参数页面  。 首先，“SCEP 注册”包括有关注册请求以及在何处安装证书的设置  。 其次，“证书属性”  本身描述了请求的证书。  
 
 ## <a name="deploying-certificate-profiles"></a>部署证书配置文件  
- 在部署证书配置文件时，配置文件内的证书文件安装在客户端设备上。 还会部署任何 SCEP 参数，并且在客户端设备上处理 SCEP 请求。 可将证书配置文件部署到用户或设备集合，并为每个证书指定目标存储。 适用性规则确定证书是否可安装在设备上。 将证书配置文件部署到用户集合时，用户设备相关性会确定在用户的哪台设备上安装证书。 将包括用户证书的证书配置文件部署到设备集合时，默认情况下证书会安装在用户的每台主设备上。 可在“创建证书配置文件向导” 的“SCEP 注册”页上修改此行为，以将证书安装在用户的任何设备上。 如果设备为工作组计算机，则不会部署用户证书。  
+ 在部署证书配置文件时，配置文件内的证书文件安装在客户端设备上。 还会部署任何 SCEP 参数，并且在客户端设备上处理 SCEP 请求。 可将证书配置文件部署到用户或设备集合，并为每个证书指定目标存储。 适用性规则确定证书是否可安装在设备上。 将证书配置文件部署到用户集合时，用户设备相关性会确定在用户的哪台设备上安装证书。 将包括用户证书的证书配置文件部署到设备集合时，默认情况下证书会安装在用户的每台主设备上。 可在“创建证书配置文件向导”  的“SCEP 注册”  页上修改此行为，以将证书安装在用户的任何设备上。 如果设备为工作组计算机，则不会部署用户证书。  
 
 ## <a name="monitoring-certificate-profiles"></a>监视证书配置文件  
 
@@ -107,4 +107,4 @@ Configuration Manager 的一个典型方案是，在连接使用 EAP-TLS、EAP-T
 
 - 设备在 System Center Configuration Manager 层次结构中受阻止。  
 
-  为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作” 。  
+  为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作”  。  

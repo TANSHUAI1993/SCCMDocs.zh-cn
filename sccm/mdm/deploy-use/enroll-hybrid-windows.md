@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7811e1ab4a323660f16b707076015d9e81bda2bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7ce20ac1917640bd9762bafb37c0e22fe39375fa
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121288"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379574"
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 Windows 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
@@ -40,7 +40,7 @@ ms.locfileid: "56121288"
         - **应用程序注册令牌**
         - **.pfx 文件**
         - **无**：如果使用 Symantec 证书，则可以指定“在 Symantec 证书到期前显示警报”。
-4. 单击“确定”  关闭对话框。  若要使用公司门户简化注册过程，你应该为创建 DNS 别名以进行设备注册。 然后可以告知用户如何注册其设备。
+4. 单击“确定” 关闭对话框。  若要使用公司门户简化注册过程，你应该为创建 DNS 别名以进行设备注册。 然后可以告知用户如何注册其设备。
 
 ## <a name="choose-how-to-enroll-windows-devices"></a>选择注册 Windows 设备的方式
 
@@ -60,7 +60,7 @@ ms.locfileid: "56121288"
 通过添加工作或学校帐户并同意接受管理，自动注册可让用户在 Intune 中注册公司拥有的电脑或个人 Windows 10 电脑和 Windows 10 移动设备。 就是这么简单。 在后台注册用户设备并加入 Azure Active Directory。 注册后，通过 Intune 管理设备。
 
 **先决条件**
-- Azure Active Directory Premium 订阅（[试用订阅](http://go.microsoft.com/fwlink/?LinkID=816845)）
+- Azure Active Directory Premium 订阅（[试用订阅](https://go.microsoft.com/fwlink/?LinkID=816845)）
 - Microsoft Intune 订阅
 
 
@@ -104,7 +104,7 @@ ms.locfileid: "56121288"
 
 虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 enrollment.manage.microsoft.com。
 
-|键入|主机名|指向|TTL|  
+|类型|主机名|指向|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 

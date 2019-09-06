@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e80a001153012763f56686df66ab7c6fcbf9b88
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: a276ab19267d97526d916fb246facd75314006dd
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288196"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379629"
 ---
 # <a name="confirm-domain-name-requirements-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 确认域名要求
 
@@ -34,16 +34,16 @@ ms.locfileid: "62288196"
     在设置单一登录时，用户可以使用其公司凭据登录，以访问 Intune 中的服务。
 
     有关详细信息，请参阅下列主题：
-   -   [为单一登录做准备](http://go.microsoft.com/fwlink/?LinkID=271124)
-   -   [规划和部署 AD FS 2.0 以用于单一登录](http://go.microsoft.com/fwlink/?LinkID=271125)
+   -   [为单一登录做准备](https://go.microsoft.com/fwlink/?LinkID=271124)
+   -   [规划和部署 AD FS 2.0 以用于单一登录](https://go.microsoft.com/fwlink/?LinkID=271125)
 
 3. 部署并配置目录同步。
 
     目录同步可让你利用同步的用户帐户来填充 Intune。 同步的用户帐户和安全组被添加到 Intune 中。 未能启用目录同步是在使用 Microsoft Intune 设置 Configuration Manager MDM 时，设备无法注册的一个常见原因。
 
-    有关详细信息，请参阅 Active Directory 文档库中的 [目录集成](http://go.microsoft.com/fwlink/?LinkID=271120) 。
+    有关详细信息，请参阅 Active Directory 文档库中的 [目录集成](https://go.microsoft.com/fwlink/?LinkID=271120) 。
 
-4. 可选但不建议：如果不使用 Active Directory 联合身份验证服务，重置用户的 Microsoft Online 密码。
+4. 可选，不建议：如果你使用的不是 Active Directory 联合身份验证服务，请重置用户的 Microsoft Online 密码。
 
     如果没有使用 AD FS，则必须为每个用户设置 Microsoft Online 密码。
 

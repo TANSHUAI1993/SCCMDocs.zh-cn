@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ec6756e5c180561bef10bba799e3fdba3dcc303
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: fd48ec41114b122d8d00549c1ae8d99d08ba5f1f
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289043"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379708"
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 配置 Intune 订阅
 
@@ -35,7 +35,7 @@ Intune 订阅执行以下任务：
 
 ## <a name="to-create-the-microsoft-intune-subscription"></a>创建 Microsoft Intune 订阅
 
-1.  如果尚未注册，请在 [Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=258216) 处注册 Microsoft Intune 帐户。  创建 Intune 帐户之后，无需将任何用户添加到 Intune 帐户或执行其他设置配置。
+1.  如果尚未注册，请在 [Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=258216) 处注册 Microsoft Intune 帐户。  创建 Intune 帐户之后，无需将任何用户添加到 Intune 帐户或执行其他设置配置。
 
 2.  在 Configuration Manager 控制台中，单击“管理”。
 
@@ -54,18 +54,18 @@ Intune 订阅执行以下任务：
 
 7. 在“常规”页上，指定以下选项，然后单击“下一步”。
 
-   - **集合**：指定包含将注册其移动设备用户的用户集合。
+   - **集合**：指定一个用户集合，其中包含将注册其移动设备的用户。
 
      > [!NOTE]
      >  如果从集合中删除某个用户，则将继续管理该用户的设备最多 24 小时，直至从用户数据库中删除用户记录为止。
 
    - **公司名称**：指定你的公司名称。
 
-   - **指向公司隐私文档的 URL**:如果将公司隐私信息发布到可从 Internet 访问的链接，提供该链接以便用户可以从公司门户中，例如访问 http://www.contoso.com/CP_privacy.html。 隐私信息可阐明用户与你的公司分享了什么信息。
+   - **公司隐私文档的 URL**：如果将公司隐私信息发布到可从 Internet 中访问的链接，请提供用户可从公司门户访问的链接，例如 http://www.contoso.com/CP_privacy.html 。 隐私信息可阐明用户与你的公司分享了什么信息。
 
-   - **公司门户的配色方案**:（可选） 更改公司门户的蓝色的默认颜色。
+   - **公司门户的配色方案**：（可选）更改公司门户的默认颜色（蓝色）。
 
-   - **Configuration Manager 站点代码**:指定主站点来管理移动设备的站点代码。
+   - **Configuration Manager 站点代码**：指定主站点的站点代码以管理移动设备。
 
    > [!NOTE]
    >  更改站点代码仅影响新注册，不影响现有注册设备。

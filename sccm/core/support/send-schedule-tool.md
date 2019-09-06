@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97c506c85cbb26dbb68b2e0eb0c223ae2a9d5b7e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 799de01786debb44450d1ba67c75c14a1762f851
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500779"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176783"
 ---
 # <a name="send-schedule-tool"></a>发送计划工具
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 发送计划工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 使用该工具在客户端上触发计划或者触发指定配置基线的评估。 它适用于本地计算机或面向远程客户端。  
 
@@ -30,14 +30,14 @@ ms.locfileid: "65500779"
 
 ## <a name="usage"></a>用法
 
-以管理员身份运行 SendSchedule.exe。 
+以管理员身份运行 SendSchedule.exe  。 
 
 `SendSchedule /L [Computer Name]`
 `SendSchedule "<Message GUID | DCM UID>" [Computer Name]` 
 
-触发一条消息 (GUID) 后，请查看 SMSClientMethodProvider.log。 有关可用消息 GUID 的详细信息，请参阅[消息 ID](#bkmk_sendschedule-guids)。
+触发一条消息 (GUID) 后，请查看 SMSClientMethodProvider.log  。 有关可用消息 GUID 的详细信息，请参阅[消息 ID](#bkmk_sendschedule-guids)。
 
-触发配置基线 (DCM UID) 的评估后，请查看 DCMAgent.log。
+触发配置基线 (DCM UID) 的评估后，请查看 DCMAgent.log  。
 
 
 
@@ -95,7 +95,6 @@ ms.locfileid: "65500779"
 |{00000000-0000-0000-0000-000000000061}|对等 DP 状态报告|
 |{00000000-0000-0000-0000-000000000062}|对等 DP 挂起包检查计划|
 |{00000000-0000-0000-0000-000000000063}|SUM 更新安装计划|
-|{00000000-0000-0000-0000-000000000071}|NAP 操作|
 |{00000000-0000-0000-0000-000000000101}|硬件清单收集周期|
 |{00000000-0000-0000-0000-000000000102}|软件清单收集周期|
 |{00000000-0000-0000-0000-000000000103}|发现数据收集周期|
@@ -112,7 +111,6 @@ ms.locfileid: "65500779"
 |{00000000-0000-0000-0000-000000000114}|更新存储策略|
 |{00000000-0000-0000-0000-000000000115}|状态系统策略批量发送（高）|
 |{00000000-0000-0000-0000-000000000116}|状态系统策略批量发送（低）|
-|{00000000-0000-0000-0000-000000000120}|AMT 状态检查策略|
 |{00000000-0000-0000-0000-000000000121}|应用程序管理器策略操作|
 |{00000000-0000-0000-0000-000000000122}|应用程序管理器用户策略操作|
 |{00000000-0000-0000-0000-000000000123}|应用程序管理器全局评估操作|

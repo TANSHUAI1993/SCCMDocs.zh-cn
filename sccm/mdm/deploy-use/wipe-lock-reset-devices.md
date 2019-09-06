@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a50dd4df66292837cd7a3667a0790c04ebddb9a
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 358a69af0290cbe7359e07b165ed7f1e805e4db5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516020"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380354"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>使用 Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
 
@@ -41,7 +41,7 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 如果需要保护遗失设备的安全或者停用正在使用的设备，你可以向设备发出擦除命令。  
 
-向设备发出“完全擦除”  命令以将设备还原为其出厂默认值。 这将删除所有公司及用户数据和设置。 可以在 Windows Phone、iOS、Android 和 Windows 10 上执行完全擦除。  
+向设备发出“完全擦除” 命令以将设备还原为其出厂默认值。 这将删除所有公司及用户数据和设置。 可以在 Windows Phone、iOS、Android 和 Windows 10 上执行完全擦除。  
 
 > [!NOTE]
 > 你只能对公司拥有的设备执行完全擦除。
@@ -51,17 +51,17 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 #### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择需停用/擦除的设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“停用/擦除”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
 
 
 
 ## <a name="selective-wipe"></a>选择性擦除  
 
-向设备发出“选择性擦除”  命令以仅删除公司数据。 下表按平台描述了将删除什么数据，以及执行选择性擦除后对设备上保留的数据的影响。  
+向设备发出“选择性擦除” 命令以仅删除公司数据。 下表按平台描述了将删除什么数据，以及执行选择性擦除后对设备上保留的数据的影响。  
 
 **Android**  
 
@@ -70,7 +70,7 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|卸载应用。 删除公司应用数据。|  
 |VPN 和 Wi-Fi 配置文件|删除。|  
 |证书|删除并吊销。|  
-|设置|删除，以下各项除外：**允许语音漫游**，**允许数据漫游**，和**允许漫游时自动同步**。|  
+|设置|删除，以下各项除外：**允许语音漫游**，**允许数据漫游**，并**允许在漫游时自动同步**。|  
 |管理代理|删除管理配置文件。|  
 |电子邮件配置文件|对于由 Intune 设置的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
 
@@ -140,11 +140,11 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 #### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择需停用/擦除的设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“停用/擦除”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
 
 
 
@@ -164,7 +164,7 @@ EFS 选择性擦除当前支持的数据和应用：
 
 - 工作文件夹。
 
-- 使用 EFS 加密的文件和文件夹。 有关详细信息，请参阅 [加密文件系统的最佳方案](http://support.microsoft.com/kb/223316)。  
+- 使用 EFS 加密的文件和文件夹。 有关详细信息，请参阅 [加密文件系统的最佳方案](https://support.microsoft.com/kb/223316)。  
 
 
 ### <a name="best-practices-for-selective-wipe"></a>选择性擦除的最佳方案  
@@ -173,7 +173,7 @@ EFS 选择性擦除当前支持的数据和应用：
 
 - 确保通过移动设备应用管理分发了应用，以便成功擦除应用。  
 
-- 对于 iOS，将设置“允许备份到 iCloud”  配置为“不允许”  ，以使用户无法使用 iCloud 还原内容。  
+- 对于 iOS，将设置“允许备份到 iCloud”配置为“不允许”，以使用户无法使用 iCloud 还原内容。  
 
 - 如果帐户已停用一年，那么 Intune 将停用该帐户，并将执行选择性擦除。  
 
@@ -186,33 +186,33 @@ EFS 选择性擦除当前支持的数据和应用：
 | 平台                              | 密码重置                                                                               |
 |---------------------------------------|----------------------------------------------------------------------------------------------|
 | iOS                                   | 支持以便清除设备中的密码。 不创建新的临时密码。 |
-| macOS                                 | 不支持。                                                                               |
+| macOS                                 | 不受支持。                                                                               |
 | Android                               | 在早于 Android 7.0 的版本上受支持。 创建临时密码。                |
-| Android for Work                      | 不支持。                                                                               |
+| Android for Work                      | 不受支持。                                                                               |
 | Windows 10 电脑                        | 不支持。                                                                               |
 | Windows 10 移动版                     | 支持，已加入 Azure AD 的设备除外。  |
-| Windows Phone 8 和 Windows Phone 8.1 | 支持。                                                                                   |
-| Windows RT 8.1                        | 不支持。                                                                               |
-| Windows 8.1 电脑                       | 不支持。                                                                               |
+| Windows Phone 8 和 Windows Phone 8.1 | 。                                                                                   |
+| Windows RT 8.1                        | 不受支持。                                                                               |
+| Windows 8.1 电脑                       | 不受支持。                                                                               |
 
 > [!Note]    
 > 必须在环境中的顶层站点上执行密码重置操作。 例如，如果使用管理中心站点，则只能在该站点中执行该操作。 如果使用独立的主站点，则只能在该站点执行该操作。
 
 #### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 中远程重置移动设备上的密码  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择要重置密码的一台或多台设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“密码重置”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“密码重置”。  
 
 #### <a name="to-show-the-state-of-the-passcode-reset"></a>显示密码重置状态  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择要显示密码重置状态的一台或多台设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“显示密码状态”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“显示密码状态”。  
 
 
 
@@ -222,10 +222,10 @@ EFS 选择性擦除当前支持的数据和应用：
 
 |平台|远程锁定|  
 |--------------|-----------------|  
-|iOS|支持。|  
-|Android|支持。|  
+|iOS|。|  
+|Android|。|  
 |Windows 10|此时不受支持。|  
-|Windows Phone 8 和 Windows Phone 8.1|支持。|  
+|Windows Phone 8 和 Windows Phone 8.1|。|  
 |Windows RT 8.1 |如果设备的当前用户是注册设备的相同用户，则支持。|  
 |Windows 8.1|如果设备的当前用户是注册设备的相同用户，则支持。|  
 
@@ -234,19 +234,19 @@ EFS 选择性擦除当前支持的数据和应用：
 
 #### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>通过 Configuration Manager 控制台远程锁定移动设备  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择要锁定的一台或多台设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“远程锁定”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“远程锁定”。  
 
 #### <a name="to-show-the-state-of-the-remote-lock"></a>显示远程锁定状态  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”  ，然后选择“设备”  。 或者，可以选择“设备集合”  并选择一个集合。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
 
 2. 选择要显示远程锁定状态的设备。  
 
-3. 选择“设备组”  中的“远程设备操作”  ，然后选择“显示远程锁定状态”  。  
+3. 选择“设备组”中的“远程设备操作”，然后选择“显示远程锁定状态”。  
 
 
 

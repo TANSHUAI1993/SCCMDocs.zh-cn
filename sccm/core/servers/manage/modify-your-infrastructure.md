@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd02452e8a92ca95e2df594a2d4b8c3c735ad924
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 001b083318771f00e7122c7f63a40aea95a815a4
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338097"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379855"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 
@@ -189,10 +189,10 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
 
 可通过使用 **Setspn** 工具来为站点数据库服务器的 SQL Server 服务帐户注册 SPN。 你必须在位于 SQL Server 的域中的计算机上运行 Setspn 工具，并且该工具必须使用域管理员凭据才能运行。  
 
-使用下列过程作为如何为在 Windows Server 2008 R2 上使用 Setspn 工具的 SQL Server 服务帐户管理 SPN 的示例。 有关 Setspn 的具体指引，请参阅 [Setspn Overview（Setspn 概述）](http://go.microsoft.com/fwlink/p/?LinkId=226343)或特定于你的操作系统的类似文档。  
+使用下列过程作为如何为在 Windows Server 2008 R2 上使用 Setspn 工具的 SQL Server 服务帐户管理 SPN 的示例。 有关 Setspn 的具体指引，请参阅 [Setspn Overview（Setspn 概述）](https://go.microsoft.com/fwlink/p/?LinkId=226343)或特定于你的操作系统的类似文档。  
 
 > [!NOTE]  
-> 下列过程引用 Setspn 命令行工具。 在通过产品 CD 或 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/p/?LinkId=100114)安装 Windows Server 2003 支持工具时，将包括 Setspn 命令行工具。 有关如何通过产品 CD 安装 Windows 支持工具的详细信息，请参阅 [安装 Windows 支持工具](http://go.microsoft.com/fwlink/p/?LinkId=62270)。  
+> 下列过程引用 Setspn 命令行工具。 在通过产品 CD 或 [Microsoft Download Center（Microsoft 下载中心）](https://go.microsoft.com/fwlink/p/?LinkId=100114)安装 Windows Server 2003 支持工具时，将包括 Setspn 命令行工具。 有关如何通过产品 CD 安装 Windows 支持工具的详细信息，请参阅 [安装 Windows 支持工具](https://go.microsoft.com/fwlink/p/?LinkId=62270)。  
 
 #### <a name="to-manually-create-a-domain-user-service-principal-name-spn-for-the-sql-server-service-account"></a>为 SQL Server 服务帐户手动创建域用户服务主体名称 (SPN)  
 

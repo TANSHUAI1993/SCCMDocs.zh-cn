@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ecf757a35556d4b810df47ca50a6c7bac59467
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 6c0880b7ba84ecf2e99c2b0e0e791b1c56802378
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535635"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378182"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中基于 Internet 的客户端管理计划
 
@@ -200,4 +200,4 @@ ms.locfileid: "68535635"
 
     有关支持这些要求的配置信息，请参阅防火墙或代理服务器文档。  
 
-    关于使用 Internet 中客户端连接的软件更新点时的类似通信要求，请参阅 Windows Server Update Services (WSUS) 的文档。 例如，对于 Windows Server 2003 上的 WSUS，请参阅 [Appendix D：Security Settings（附录 D：安全设置）](http://go.microsoft.com/fwlink/p/?LinkId=143368)，即安全设置的部署附录。
+    关于使用 Internet 中客户端连接的软件更新点时的类似通信要求，请参阅 Windows Server Update Services (WSUS) 的文档。 例如，对于 Windows Server 2003 上的 WSUS，请参阅 [Appendix D：Security Settings（附录 D：安全设置）](https://go.microsoft.com/fwlink/p/?LinkId=143368)，即安全设置的部署附录。

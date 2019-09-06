@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 277ed98ee4c77acda809affcdc61c56f0eb4c636
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fdfbd5ae0e72cf258e92e9504a955f39e6ced52b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126011"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379298"
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>有关迁移到 System Center Configuration Manager 的安全性和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本主题包含到 System Center Configuration Manager 环境的迁移的安全最佳方案和隐私信息。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "56126011"
 
  有关安全和隐私信息的详细信息，请参阅下列主题之一：  
 
--   有关 Configuration Manager 2007 隐私信息的详细信息，请参阅 Configuration Manager 2007 文档库中的[ Configuration Manager 2007 安全性和隐私](http://go.microsoft.com/fwlink/p/?LinkId=216450)。  
+-   有关 Configuration Manager 2007 隐私信息的详细信息，请参阅 Configuration Manager 2007 文档库中的[ Configuration Manager 2007 安全性和隐私](https://go.microsoft.com/fwlink/p/?LinkId=216450)。  
 
 -   有关 System Center 2012 Configuration Manager 隐私信息的详细信息，请参阅 System Center 2012 Configuration Manager 文档库中的 [System Center 2012 Configuration Manager 安全性和隐私](https://technet.microsoft.com/library/gg682033.aspx)。  
 

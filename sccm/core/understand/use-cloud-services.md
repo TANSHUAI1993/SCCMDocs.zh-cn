@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e58f5cffa201224516e03dd6a1e919f352c297d0
-ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
+ms.openlocfilehash: 72478590144915075ae224552b6d67f7ad8fd87c
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662633"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377794"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 
@@ -37,7 +37,7 @@ System Center Configuration Manager 支持多个基于云的选项。 这些选�
 
 -   有关基于云的分发点的信息，请参阅[安装基于云的分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)。
 
--   有关 Azure 的详细信息，请参阅 MSDN 库中的 [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965)。  
+-   有关 Azure 的详细信息，请参阅 MSDN 库中的 [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965)。  
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虚拟机（用于基于云的基础结构）  
  Configuration Manager 支持使用在 Azure 虚拟机中运行的计算机，正如在物理公司网络中进行本地运行一样。 你可在以下方案中使用 Azure 虚拟机：  
@@ -81,10 +81,10 @@ Azure 虚拟机的使用需要一个 Azure 订阅。 根据所使用虚拟机的
 
  有关详细信息，请参阅关于不同的基于云的资源方案的详细信息。 还可以查看 Azure 安全性的以下主题：  
 
--   [Azure：了解 Azure 中的安全帐户管理](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure：了解 Azure 中的安全帐户管理](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Azure 安全性概述](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
+-   [Azure 安全性概述](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
 
--   [在云迁移中通过安全性十字路口](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
+-   [在云迁移中通过安全性十字路口](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
--   [Azure 中的数据安全性（1/2 部分）](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Azure 中的数据安全性（1/2 部分）](https://go.microsoft.com/fwlink/p/?LinkId=262974)  

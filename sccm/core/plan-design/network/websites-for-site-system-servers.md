@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78791648d2ee69dc4eaf0d0869a87cb584f287d7
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 20c701bb5f00b8a109044913291597f27c2a9e29
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499145"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379792"
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的站点系统服务器网站
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 多个 Configuration Manager 站点系统角色需要使用 Microsoft Internet Information Services (IIS) 和默认的 IIS 网站来托管站点系统服务。 当必须在同一服务器上运行其他 Web 应用程序，且设置与 Configuration Manager 不兼容时，请考虑使用 Configuration Manager 的自定义网站。  
 
@@ -31,7 +31,7 @@ ms.locfileid: "65499145"
 
 
 ##  <a name="BKMK_What2Know"></a>选择使用自定义网站前的须知  
- 默认情况下，站点系统角色使用 IIS 中的“默认网站”。 这会在站点系统角色安装时自动设置。 但在主站点上，可以转而选择使用自定义网站。 使用自定义网站时：  
+ 默认情况下，站点系统角色使用 IIS 中的“默认网站”。  这会在站点系统角色安装时自动设置。 但在主站点上，可以转而选择使用自定义网站。 使用自定义网站时：  
 
 -   为整个站点启用自定义网站，而不是为单独的站点系统服务器或角色启用。  
 
@@ -48,9 +48,9 @@ ms.locfileid: "65499145"
 
 -   设置自定义网站，以响应为 Configuration Manager 客户端通信设置的同一端口（客户端请求端口）。  
 
--   对于每个自定义网站或使用自定义文件夹的默认网站，请将所用的默认文档类型的副本放到承载网站的根文件夹中。 例如，在使用默认配置的 Windows Server 2008 R2 计算机上，**iisstart.htm** 是几种默认可用的文档类型之一。 可以在默认网站的根文件夹中找到此文件，然后将此文件的副本（或所用默认文档类型的副本）放到承载 SMSWEB 自定义网站的根文件夹中。 有关默认文档类型的详细信息，请参阅 [IIS 的默认文档 &lt;defaultDocument\>](http://www.iis.net/configreference/system.webserver/defaultdocument)。  
+-   对于每个自定义网站或使用自定义文件夹的默认网站，请将所用的默认文档类型的副本放到承载网站的根文件夹中。 例如，在使用默认配置的 Windows Server 2008 R2 计算机上，**iisstart.htm** 是几种默认可用的文档类型之一。 可以在默认网站的根文件夹中找到此文件，然后将此文件的副本（或所用默认文档类型的副本）放到承载 SMSWEB 自定义网站的根文件夹中。 有关默认文档类型的详细信息，请参阅 [IIS 的默认文档 &lt;defaultDocument\>](https://www.iis.net/configreference/system.webserver/defaultdocument)。  
 
-**关于 IIS 要求：**
+**关于 IIS 要求：** 
 **下列站点系统角色需要 IIS 和网站才能托管站点系统服务：**  
 
 -   应用程序目录 Web 服务点  
@@ -117,13 +117,13 @@ ms.locfileid: "65499145"
 ## <a name="set-up-custom-websites"></a>设置自定义网站  
 由于自定义网站的创建步骤随操作系统版本的不同而有所不同，所以请参阅你操作系统版本的文档以了解确切步骤，但请在适当时使用以下信息：  
 
--   网站名称必须是：SMSWEB。  
+-   网站名称必须是：SMSWEB  。  
 
 -   设置 HTTPS 时，必须先指定 SSL 证书才能保存配置。  
 
 -   创建自定义网站后，请删除 IIS 中所用的其他网站的自定义网站端口：  
 
-    1.  编辑其他网站的“绑定”，以删除与分配给 **SMSWEB** 网站的端口匹配的端口。  
+    1.  编辑其他网站的“绑定”  ，以删除与分配给 **SMSWEB** 网站的端口匹配的端口。  
 
     2.  启动 **SMSWEB** 网站。  
 

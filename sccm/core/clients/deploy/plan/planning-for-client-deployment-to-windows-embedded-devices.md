@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fd221ecb62a74e9ff3a56815fbdeacdd27ca026
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: b96e7f77dae283d31ba3d2f0955c2910ea499dd5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038328"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378677"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 <a name="BKMK_DeployClientEmbedded"></a>如果 Windows Embedded 设备不包括 System Center Configuration Manager 客户端，并且设备满足所需的依赖关系要求，则可以使用任何客户端安装方法。 如果嵌入式设备支持写入筛选器，则必须在安装客户端之前禁用这些筛选器，然后在安装客户端并将其分配给站点之后再次重新启用筛选器。  
 
@@ -47,11 +47,11 @@ ms.locfileid: "67038328"
 
  Configuration Manager 支持管理下列类型的写入筛选器：  
 
-- 基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](http://go.microsoft.com/fwlink/?LinkID=204717)。  
+- 基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](https://go.microsoft.com/fwlink/?LinkID=204717)。  
 
-- 增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](http://go.microsoft.com/fwlink/?LinkId=204718)。  
+- 增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](https://go.microsoft.com/fwlink/?LinkId=204718)。  
 
-- 统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](http://go.microsoft.com/fwlink/?LinkId=309236)。  
+- 统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](https://go.microsoft.com/fwlink/?LinkId=309236)。  
 
   当 Windows Embedded 设备处于 EWF RAM 注册模式时，Configuration Manager 不支持写入筛选器操作。  
 
@@ -83,7 +83,7 @@ ms.locfileid: "67038328"
 >   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
 > [!NOTE]
-> 除上述“重要”框中记录的异常之外，Configuration Manager 客户端无需其他异常。 添加其他与 Configuration Manager 或 WMI (WBEM) 相关的异常可能会导致 Configuration Manager 出现故障，包括设备陷入服务模式或设备遇到重启循环。 非必要的异常包括 Configuration Manager 客户端目录、CCMcache 目录、CCMSetup 目录、任务序列缓存目录、WBEM 目录、以及 Configuration Manager 相关的注册表项。
+> 除上述“重要”框中记录的异常之外，Configuration Manager 客户端无需其他异常  。 添加其他与 Configuration Manager 或 WMI (WBEM) 相关的异常可能会导致 Configuration Manager 出现故障，包括设备陷入服务模式或设备遇到重启循环。 非必要的异常包括 Configuration Manager 客户端目录、CCMcache 目录、CCMSetup 目录、任务序列缓存目录、WBEM 目录、以及 Configuration Manager 相关的注册表项。
 
  有关在 Configuration Manager 中部署和管理启用写入筛选器的 Windows Embedded 设备的示例场景，请参阅[在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例场景](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)。  
 
@@ -92,18 +92,18 @@ ms.locfileid: "67038328"
 > [!NOTE]
 >  为软件部署和配置项目选择合适的平台时，这些内容会显示 Windows Embedded 系列，而不是特定版本。 请使用以下列表将特定版本的 Windows Embedded 映射到列表框中的选项：  
 > 
-> - “基于 Windows XP (32 位)的嵌入式操作系统” 包括以下各项：  
+> - “基于 Windows XP (32 位)的嵌入式操作系统”  包括以下各项：  
 > 
 >   -   Windows XP Embedded  
 >   -   Windows Embedded for Point of Service  
 >   -   Windows Embedded Standard 2009  
 >   -   Windows Embedded POSReady 2009  
->   -   “基于 Windows 7 (32 位)的嵌入式操作系统” 包括以下各项：  
+>   -   “基于 Windows 7 (32 位)的嵌入式操作系统”  包括以下各项：  
 > 
 >   -   Windows Embedded Standard 7（32 位）  
 >   -   Windows Embedded POSReady 7（32 位）  
 >   -   Windows ThinPC  
->   -   “基于 Windows 7 (64 位) 的嵌入式操作系统” 包括以下各项：  
+>   -   “基于 Windows 7 (64 位) 的嵌入式操作系统”  包括以下各项：  
 > 
 >   -   Windows Embedded Standard 7（64 位）  
 >   -   Windows Embedded POSReady 7（64 位）

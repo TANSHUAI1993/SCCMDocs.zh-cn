@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 368fd0b4d86b1ee263bbe47619a4387db614b167
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 39548117fb7e03614af32fa330fb86bf6de4151e
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264398"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378063"
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager 应用程序的管理任务
 
@@ -41,7 +41,7 @@ ms.locfileid: "66264398"
 |**更新统计信息**|更新在“监视”  工作区的“部署”  节点中显示的、有关此应用程序的部署的信息。<br /><br /> 请参阅[从 System Center Configuration Manager 控制台监视应用程序](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
 |**恢复**|恢复以前使用“停用”  管理任务停用的应用程序。|  
 |<bpt id="p1">**</bpt>Retire<ept id="p1">**</ept>|在停用某应用程序时，它不能再用于部署，但不会删除此应用程序及其部署。 也不会删除在客户端计算机上安装的此应用程序的现有副本。 将在 60 天后从 Configuration Manager 中删除对应用程序的任何修订。 但是，不会删除此应用程序的任何已安装的副本。<br /><br /> 若要删除应用程序，必须先停用应用程序，删除所有部署，删除其他部署对该应用程序的引用，然后删除该应用程序的所有修订版本。<br /><br /> 请参阅[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880)。|  
+|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880)。|  
 |**删除**|删除当前所选的应用程序。<br /><br /> 在下列情况下无法删除某应用程序：其他应用程序依赖它，它具有活动的部署，或者它具有依赖的任务序列。|  
 |**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试将应用程序部署到计算机的结果。<br /><br /> 请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
 |**部署**|打开“部署软件向导”  ，在其中你可以将所选的应用程序部署到层次结构中的一组计算机。<br /><br /> 请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  

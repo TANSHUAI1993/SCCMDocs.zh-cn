@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2356547d01df346b8b5db090ea8690377c8d0dc8
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 862505e7ea1ad1e59b0bbf7ace07bc07d326a83d
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551032"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379876"
 ---
 # <a name="create-queries-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建查询
 
@@ -50,9 +50,9 @@ ms.locfileid: "67551032"
     > [!TIP]  
     > 可以参阅下面的参考文档，它们有助于你构造自己的 WQL 查询：  
     >   
-    > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE 子句](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL 运算符：](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL for WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
+    > -   [WHERE 子句](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
+    > -   [WQL 运算符：](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
 8.  在“&lt;查询名称\> 语句属性”  对话框的“条件”  选项卡中，指定用于优化查询结果的条件。 例如，可以只返回包含站点代码 XYZ  的资源。 可以配置多个查询条件。  
 

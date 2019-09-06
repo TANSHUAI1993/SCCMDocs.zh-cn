@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad3be032a3dd8ea21d7eeb6a4755c32d546f38
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: dee1a5a998f6d99678f85e6d5f39e52cb35a2bad
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158640"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378718"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
 *适用范围：System Center Updates Publisher*
 
-System Center Updates Publisher (Updates Publisher) 是一款独立工具，可方便独立软件供应商或业务线应用程序开发者管理自定义更新。 此自定义更新管理包括具有依赖项，如驱动程序和更新捆绑包的更新。
+System Center Updates Publisher (Updates Publisher) 是一款独立工具，可方便独立软件供应商或业务线应用程序开发者管理自定义更新。 此自定义更新管理包括具有依赖关系的更新，如驱动程序和更新捆绑。
 
 使用 Updates Publisher，可以执行下列操作：
 
@@ -34,7 +34,7 @@ System Center Updates Publisher (Updates Publisher) 是一款独立工具，可�
 将更新发布到更新服务器后，可以使用 System Center Configuration Manager 检测这些更新，并将其部署到受管理设备中。
 
 > [!TIP]  
-> 旧版 [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111) 仍受支持。 此更新版保留了相同的功能，区别在于支持其他操作系统，新增了可简化某些任务的功能，并更新了用户界面。
+> 旧版 [System Center Updates Publisher 2011](https://go.microsoft.com/fwlink/?LinkId=848111) 仍受支持。 此更新版保留了相同的功能，区别在于支持其他操作系统，新增了可简化某些任务的功能，并更新了用户界面。
 
 ## <a name="workspaces"></a>工作区
 打开 Updates Publisher 时，默认打开的是“更新工作区”  的“概述”节点。
@@ -58,48 +58,48 @@ Updates Publisher 有四个工作区，可方便整理。
 
 **目录工作区：** 使用此工作区可添加和[管理软件更新目录](/sccm/sum/tools/updates-publisher-catalogs)。 在此工作区中，可以将目录中的软件更新导入 Updates Publisher 存储库。
 
-## <a name="whats-new-in-the-system-center-updates-publisher-preview"></a>什么是 System Center Updates Publisher 预览版中的新增功能
+## <a name="whats-new-in-the-system-center-updates-publisher-preview"></a>System Center Updates Publisher 预览版的新增功能
 
 >[!NOTE] 
->在本部分中的信息仅适用于 System Center Updates publisher 的预览版本。 若要安装预览版时，可以从下载[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=58390)。
+>本部分中的信息仅适用于 System Center Updates publisher 的预览版本。 若要安装预览版，请从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=58390)下载。
 
-System Center Updates Publisher，以帮助你创作你的更新在预览中没有新的创作模式。 当启用创作模式**类别的工作区**添加到开始屏幕。 一个新**检测**按钮也已添加到**更新工作区**当创作模式处于启用状态。 
+System Center Updates Publisher 预览版中有一种新的创作模式，可帮助你创作更新。 启用创作模式时，"**类别" 工作区**将添加到 "开始" 屏幕。 当启用了创作模式时，还会将一个新的**Detectoid**按钮添加到 "**更新" 工作区**。 
 
-### <a name="to-enable-authoring-mode-in-the-preview"></a>若要启用在预览中的创作模式
+### <a name="to-enable-authoring-mode-in-the-preview"></a>在预览版中启用创作模式
 
-1. 在控制台的左上角，单击**Updates Publisher** **属性**选项卡，然后选择**选项**。
-1. 转到**创作**选项。
-1. 选中的复选框**创作模式启用**。
+1. 在控制台的左上角，单击 "**更新发布服务器** **属性**" 选项卡，然后选择 "**选项**"。
+1. 请参阅**创作**选项。
+1. 选中 "**启用创作模式**" 复选框。
 
-![有关更新发布服务器启用创作模式](media/scup-enable-authoring-mode.png)
+![为 Updates Publisher 启用创作模式](media/scup-enable-authoring-mode.png)
 
-### <a name="about-the-categories-workspace"></a>有关类别的工作区
+### <a name="about-the-categories-workspace"></a>关于 "类别" 工作区
 
-类别工作区允许更新作者组织拥有共同的更新。 例如，如果您是 OEM，您可能希望组织基于在模型或产品系列上应用更新。 可以定义多个类别和子类别，但不是 grand 子类别局限于两个级别。
+"类别" 工作区使更新创作者能够组织组成的更新。 例如，如果你是 OEM，则可能想要根据模型或产品系列来组织更新。 您可以定义多个类别和子类别，但不能定义子类别，因为您限制为两个级别。
 
-![类别的工作区的屏幕截图](media/scup-categories-workspace.png)
+!["类别" 工作区的屏幕截图](media/scup-categories-workspace.png)
 
-### <a name="assign-an-update-to-a-category"></a>将更新分配给类别
+### <a name="assign-an-update-to-a-category"></a>为类别分配更新
 
-一旦创建了你的更新，您可以将其分配给类别选择更新，然后单击**分类**按钮。 此外可以右键单击该更新，然后选择**分类**。
+编写更新后，可以通过选择 "更新"，然后单击 "**分类**" 按钮，将其分配到某个类别。 你还可以右键单击该更新，然后选择 "**分类**"。
 
-![对更新进行分类的屏幕截图](media/scup-categorize-update.png)
-
-
-### <a name="about-detectoids"></a>有关 detectoid
-
-创作模式启用后，可以创建更新的 detectoid。 必须使用相同的规则 （或一组规则） 来确定适用性的多个更新时，Detectoid 非常有用。 在这些情况下，您可以创建检测，并将其分配为更新的必备组件。 可以将多个 detectoid 分配给创作更新。
+![分类更新的屏幕截图](media/scup-categorize-update.png)
 
 
-### <a name="create-a-detectoid"></a>创建检测
+### <a name="about-detectoids"></a>关于 detectoid
+
+一旦启用了创作模式，你就可以创建更新的 detectoid。 如果有多个更新使用同一规则（或一组规则）来确定适用性，detectoid 将非常有用。 在这些实例中，你将创建一个 detectoid，并将其分配为更新的必备组件。 可以将多个 detectoid 分配给创作的更新。
+
+
+### <a name="create-a-detectoid"></a>创建 detectoid
 
 1. 打开“更新工作区”  。
-1. 在功能区中，单击**检测**按钮。
-1. 按照向导以创建在检测中的提示。
+1. 在功能区中，单击 " **Detectoid** " 按钮。
+1. 按照向导中的提示创建你的 detectoid。
 
 
 
-![使用检测更新先决条件](media/scup-detectoid-as-prerequisite.png)
+![使用 detectoid 更新必备组件](media/scup-detectoid-as-prerequisite.png)
 
 
 ## <a name="next-steps"></a>后续步骤

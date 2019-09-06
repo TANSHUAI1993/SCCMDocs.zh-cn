@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9066983e631e1444cccb7b8c686c5b31e6fcf096
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 18edb5a18baa7c009638580d9b338d297fb42e76
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551455"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380372"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>使用 Intune 对 Lookout 集成进行故障排除
 
-适用范围：  System Center Configuration Manager (Current Branch)
+适用范围：System Center Configuration Manager (Current Branch)
 
 ## <a name="troubleshoot-login-errors"></a>解决登录错误
 ### <a name="403-errors"></a>403 错误
@@ -31,7 +31,7 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 可以通过以下方式联系 Lookout 支持：
 
 * 电子邮件：enterprisesupport@lookout.com
-* 登录 [MTP 控制台](http://aad.lookout.com)，导航到“支持”  模块。
+* 登录 [MTP 控制台](https://aad.lookout.com)，导航到“支持”模块。
 * 前往 https://enterprise.support.lookout.com/hc/requests 并提出支持请求。
 
 ### <a name="unable-to-sign-in"></a>无法登录
@@ -46,20 +46,20 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 ### <a name="device-not-showing-up-in-the-lookout-mtp-console-device-list"></a>设备不显示在 Lookout MTP 控制台设备列表中
 
 在以下其中一个情况中可能出现此问题：
-* 当拥有此设备的用户不在“Lookout MTP 控制台”  中指定的“注册组”  中时。  从“系统”  模块转到“Intune 连接器”  选项卡，然后查看“注册管理”  设置。  应看到一个或多个为注册配置的 Azure AD 组。  验证拥有缺失设备的用户是否属于其中一个指定的 Azure AD 组。  新用户添加到注册组后，要看到设备在 Lookout MTP 控制台的“设备”  模块中显示，需要的时间最多为配置的轮询间隔（默认为 5 分钟）。
+* 当拥有此设备的用户不在“Lookout MTP 控制台”中指定的“注册组”中时。  从“系统”模块转到“Intune 连接器”选项卡，然后查看“注册管理”设置。  应看到一个或多个为注册配置的 Azure AD 组。  验证拥有缺失设备的用户是否属于其中一个指定的 Azure AD 组。  新用户添加到注册组后，要看到设备在 Lookout MTP 控制台的“设备”模块中显示，需要的时间最多为配置的轮询间隔（默认为 5 分钟）。
 
-* 如果设备不受 Lookout MTP 支持。  不受支持的设备将在 Lookout MTP 控制台连接器设置的“托管的设备”  部分显示。
+* 如果设备不受 Lookout MTP 支持。  不受支持的设备将在 Lookout MTP 控制台连接器设置的“托管的设备”部分显示。
 
-### <a name="device-continues-to-be-reported-as-pending"></a>设备继续报告为“挂起” 
+### <a name="device-continues-to-be-reported-as-pending"></a>设备继续报告为“挂起”
 
-设备显示为“挂起”  意味着最终用户尚未打开 Lookout for Work 应用，也尚未点击“激活”  按钮。 有关在 Lookout for Work 应用中激活设备的更多详细信息，请参阅以下主题：
+设备显示为“挂起”意味着最终用户尚未打开 Lookout for Work 应用，也尚未点击“激活”按钮。 有关在 Lookout for Work 应用中激活设备的更多详细信息，请参阅以下主题：
 
 [系统提示在 Android 设备上安装 Lookout for Work](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
 ### <a name="in-the-lookout-mtp-console-a-device-is-showing-as-active-but-does-not-have-a-device-id"></a>在 Lookout MTP 控制台中，某设备显示为活动状态，但不具有设备 ID。
 这表明拥有此设备的用户不在“Lookout MTP控制台”指定的“注册组”中。   如果拥有此设备的用户已从注册组删除或者该用户所属的注册组已删除，设备会进入此状态。
 
-从 Lookout MTP 控制台的“系统”  模块转到“Intune 连接器”  选项卡，然后查看“注册”  设置。  应看到一个或多个为注册配置的 Azure AD 组。  验证拥有设备的用户是否属于其中一个指定的 Azure AD 组。
+从 Lookout MTP 控制台的“系统”模块转到“Intune 连接器”选项卡，然后查看“注册”设置。  应看到一个或多个为注册配置的 Azure AD 组。  验证拥有设备的用户是否属于其中一个指定的 Azure AD 组。
 
 在设备处于此状态时，Lookout 将继续通知用户任何检测到的威胁，但不会向 Intune 发送任何威胁信息。
 
@@ -68,13 +68,13 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 “已断开连接”表明 Lookout MTP 超过预配置的时间间隔（默认值为 30 天，至少为 7 天）仍未收到来自设备的消息。 这表明 Company Portal 应用或 Lookout for Work 应用未安装在该设备上或已被卸载。 重新安装该应用应当能够解决此问题。 用户打开 Lookout for Work 并激活该应用时，设备便与 Lookout MTP 和 Intune 重新同步。
 
 ### <a name="forcing-a-resync-on-the-device"></a>在设备上强制重新同步
-在 Lookout MTP 控制台的“设备”  模块中，管理员可以选择该设备，然后选择将其删除。   设备所有者下一次打开 Lookout for Work 应用并点击“激活”  时，设备状态将执行完整的重新同步。
+在 Lookout MTP 控制台的“设备”模块中，管理员可以选择该设备，然后选择将其删除。   设备所有者下一次打开 Lookout for Work 应用并点击“激活”时，设备状态将执行完整的重新同步。
 
 ### <a name="the-owner-of-the-device-is-no-longer-using-this-device"></a>设备的所有者将不能再使用此设备
 必须擦除设备并要求新用户按[本主题](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe)中所述方法进行注册。
 
 
-此外，可转到 Lookout MTP 控制台的“设备”  模块，然后选择“删除”  。
+此外，可转到 Lookout MTP 控制台的“设备”模块，然后选择“删除”。
 
 只要新用户属于在 Lookout MTP 控制台中指定的注册组之一，Azure AD 将该设备与新用户关联后，即可显示该设备。
 

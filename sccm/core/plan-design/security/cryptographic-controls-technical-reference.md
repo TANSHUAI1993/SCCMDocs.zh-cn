@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8caed88289af0947bb9924e50f8369412e3c55f2
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 76bf5ffecd21d25d152d74957473571b05f7d2a8
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676676"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176701"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -197,21 +197,17 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 - 启用多播的分发点  
 
-- 带外服务点  
-
 - Reporting Services 点  
 
 - 软件更新点  
 
 - 状态迁移点  
 
-- 系统健康验证程序点  
-
 - Microsoft Intune 连接器  
 
-  这些证书由 Configuration Manager 自动管理并会在必要时自动生成。  
+这些证书由 Configuration Manager 自动管理并会在必要时自动生成。  
 
-  Configuration Manager 还使用客户端身份验证证书将状态消息从分发点发送到管理点。 如果仅针对 HTTPS 客户端连接配置了管理点，则必须使用 PKI 证书。 如果管理点接受 HTTP 连接，则你可以使用 PKI 证书，或选择选项以使用具有客户端身份验证功能、使用 SHA-256 并且密钥长度为 2048 位的自签名证书。  
+Configuration Manager 还使用客户端身份验证证书将状态消息从分发点发送到管理点。 如果仅针对 HTTPS 客户端连接配置了管理点，则必须使用 PKI 证书。 如果管理点接受 HTTP 连接，则你可以使用 PKI 证书，或选择选项以使用具有客户端身份验证功能、使用 SHA-256 并且密钥长度为 2048 位的自签名证书。  
 
 ### <a name="server-communication-between-sites"></a>站点间的服务器通信  
  Configuration Manager 通过使用数据库复制和基于文件的复制在站点之间传输数据。 有关详细信息，请参阅[终结点之间的通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints)。  

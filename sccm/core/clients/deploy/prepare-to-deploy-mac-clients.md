@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ead2348e96856d006c8041705c4b4e30c145e9
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 3718661af1bae7dbf0984e29d95736b9f86104dc
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286819"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378372"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 
@@ -28,7 +28,7 @@ ms.locfileid: "67286819"
 
 ## <a name="mac-prerequisites"></a>Mac 先决条件
 
-Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载适用于其他操作系统的客户端  。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=525184)下载适用于其他操作系统的客户端  。  
 
 有关支持的版本列表，请参阅[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers)。
 

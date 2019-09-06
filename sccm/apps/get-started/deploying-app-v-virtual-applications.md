@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4598b89429ec3a9bd3bed31f57a6b681f88063cf
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 361676d51c83e298ab2e0e57fcc4cfad2d0b2906
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67515823"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378042"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 App-V 虚拟应用程序
 
@@ -59,7 +59,7 @@ ms.locfileid: "67515823"
 
 -   **App-V 4.6**：要在 Configuration Manager 中使用虚拟应用程序，客户端计算机必须安装 App-V 4.6 SP1、App-V 4.6 SP2 或 App-V 4.6 SP3 客户端。  
 
-     还必须使用知识库文章 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的修补程序来更新 App-V 4.6 SP1 客户端，才能成功部署虚拟应用程序。  
+     还必须使用知识库文章 [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的修补程序来更新 App-V 4.6 SP1 客户端，才能成功部署虚拟应用程序。  
 
 -   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：对于 App-V 5.0 SP2，必须安装[修补程序包 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
 -   **App-V 5.2**：App-V 5.2 内置在 Windows 10 教育版（1607 及更高版本）、Windows 10 企业版（1607 及更高版本）和 Windows Server 2016 中。

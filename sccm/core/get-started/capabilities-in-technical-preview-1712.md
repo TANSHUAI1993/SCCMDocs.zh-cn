@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce992a7d47d77d6542c4f6ede3fb37195714659a
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 571884ded86bd6c0ef7ce2d9a0d92ec9ac9457f7
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339979"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379449"
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的 Technical Preview 1712 中的功能
 
@@ -150,7 +150,7 @@ Surface 仪表板现在显示 Surface 设备的固件版本，而不是操作系
 - Configuration Manager 操作系统部署
 - Configuration Manager 服务器
 
-继续使用我们的[用户之声页面](http://configurationmanager.uservoice.com/)，为 Configuration Manager 中新功能想法投票。
+继续使用我们的[用户之声页面](https://configurationmanager.uservoice.com/)，为 Configuration Manager 中新功能想法投票。
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->

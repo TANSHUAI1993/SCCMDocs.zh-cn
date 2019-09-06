@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0f3e0a20874539b079541f363c6d494a738225f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a28b901c731d46fb19140526af6e85825ad43795
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500505"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380012"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -78,13 +78,13 @@ ms.locfileid: "65500505"
 即使你未发现任何症状，你的计算机上也可能有恶意软件。 此类型软件可以在你不知情或未经你同意的情况下收集有关你和你的计算机的信息。 为了帮助保护你的隐私和你的计算机，你应该时刻运行 Windows Defender 或 Endpoint Protection。  
 
 ## <a name="how-can-i-find-the-version-of-windows-defender"></a>如何查找 Windows Defender 版本？
- 若要查看在计算机上运行的 Windows Defender 版本，请打开 Windows Defender（单击“开始”，然后搜索 **Windows Defender**，单击“设置”，然后滚动到 Windows Defender 设置底部可查找**版本信息**。
+ 若要查看在计算机上运行的 Windows Defender 版本，请打开 Windows Defender（单击“开始”  ，然后搜索 **Windows Defender**，单击“设置”  ，然后滚动到 Windows Defender 设置底部可查找**版本信息**。
 
 ##  <a name="what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer"></a>如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？  
 
  如果 Windows Defender 在你的计算机上检测到恶意软件或可能不需要的软件（使用实时保护监视你的计算机时或运行扫描后），它将通过在屏幕右下角显示通知消息来通知你检测到的项目。  
 
- 通知消息包括“干净计算机”  按钮和“显示详细信息”  链接，让你可以查看有关检测到的项目的其他信息。 单击“显示详细信息”  链接将打开“潜在威胁详细信息”  窗口，从而获取有关检测到的项目的其他信息。 现在，你可选择要应用于此项目的操作，也可单击“干净计算机” 。 如果你需要帮助来确定应用于检测到的项目的操作，请使用 Windows Defender 分配给此项目的警报级别作为指导（有关详细信息，请参阅“了解警报级别”）。  
+ 通知消息包括“干净计算机”  按钮和“显示详细信息”  链接，让你可以查看有关检测到的项目的其他信息。 单击“显示详细信息”  链接将打开“潜在威胁详细信息”  窗口，从而获取有关检测到的项目的其他信息。 现在，你可选择要应用于此项目的操作，也可单击“干净计算机”  。 如果你需要帮助来确定应用于检测到的项目的操作，请使用 Windows Defender 分配给此项目的警报级别作为指导（有关详细信息，请参阅“了解警报级别”）。  
 
  警报级别有助于你选择如何应对病毒、间谍软件和其他潜在有害软件。 当 Windows Defender 建议你删除所有病毒和间谍软件时，并不是所有标记的软件都是恶意的或是不需要的。 当 Windows Defender 在你的计算机上检测到可能不需要的软件时，以下信息可帮助你确定应执行的操作。  
 
@@ -102,13 +102,13 @@ ms.locfileid: "65500505"
 
 要方便快捷地删除 Windows Defender 检测到的所有不需要的或可能有害的项目，请使用“清理计算机”  选项。  
 
-1.  当你看见 Windows Defender 检测到潜在威胁后在通知区域显示的通知消息时，请单击“清理计算机” 。  
+1.  当你看见 Windows Defender 检测到潜在威胁后在通知区域显示的通知消息时，请单击“清理计算机”  。  
 
 2.  Windows Defender 将删除潜在威胁，然后在清理完你的计算机后通知你。  
 
-3.  若要了解有关检测到的威胁的详细信息，请单击“历史记录”  选项卡，然后选择“所有检测到的项目” 。  
+3.  若要了解有关检测到的威胁的详细信息，请单击“历史记录”  选项卡，然后选择“所有检测到的项目”  。  
 
-4.  如果你看不到所有检测到的项目，请单击“查看详细信息” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。 在运行 Windows XP 的系统上，你可能需要以管理员身份登录到此计算机。  
+4.  如果你看不到所有检测到的项目，请单击“查看详细信息”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。 在运行 Windows XP 的系统上，你可能需要以管理员身份登录到此计算机。  
 
 > [!NOTE]  
 >  在清理计算机时，Windows Defender 尽可能只删除文件的受感染部分，而不是整个文件。  
@@ -146,7 +146,7 @@ ms.locfileid: "65500505"
 
 -   请确保你的防病毒和反间谍软件 Windows Defender 使用最新的更新应对潜在的威胁（请参阅“如何使病毒和间谍软件定义保持最新？”）。 此外请确保你始终使用最新版本的 Windows Defender。  
 
--   仅从可信的来源下载更新。 对于 Windows 操作系统，请始终访问 [Microsoft 更新](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304))，对于其他软件，请始终使用开发该软件的公司或个人的合法网站。  
+-   仅从可信的来源下载更新。 对于 Windows 操作系统，请始终访问 [Microsoft 更新](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) )，对于其他软件，请始终使用开发该软件的公司或个人的合法网站。  
 
 -   如果你收到一封带有附件的电子邮件，并且你不确定来源，那么你应该立即删除它。 不要从未知来源下载任何应用程序或文件，与其他用户交换文件时要小心。  
 
@@ -162,9 +162,9 @@ ms.locfileid: "65500505"
 
 1.  单击通知区域中的图标或从“开始”菜单启动来打开 Windows Defender 或 Endpoint Protection 客户端  。  
 
-2.  单击“设置”，然后单击“计划扫描”。  
+2.  单击“设置”  ，然后单击“计划扫描”  。  
 
-3.  请确保已选中 **在运行计划扫描之前检查最新的病毒和间谍软件定义** 复选框，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+3.  请确保已选中 **在运行计划扫描之前检查最新的病毒和间谍软件定义** 复选框，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ### <a name="to-check-for-new-definitions-manually"></a>手动检查新定义
 
@@ -172,7 +172,7 @@ ms.locfileid: "65500505"
 
 1.  单击通知区域中的图标或从“开始”菜单启动来打开 Windows Defender 或 Endpoint Protection 客户端  。  
 
-2.  要手动检查新定义，请单击“更新”  选项卡，然后单击“更新定义” 。  
+2.  要手动检查新定义，请单击“更新”  选项卡，然后单击“更新定义”  。  
 
 ##  <a name="how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection"></a>如何删除或还原 Windows Defender 或 Endpoint Protection 隔离的项目？  
 
@@ -183,15 +183,15 @@ ms.locfileid: "65500505"
 ###  <a name="to-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection"></a>删除或还原 Windows Defender 或 Endpoint Protection 隔离的项目
 
 
-1.  单击“历史记录”  选项卡，选择“隔离的项目” ，然后选择“隔离的项目”选项  。  
+1.  单击“历史记录”  选项卡，选择“隔离的项目”  ，然后选择“隔离的项目”选项  。  
 
 2.  单击“查看详细信息”  来查看所有项目。  
 
-3.  查看每一项，然后针对每一项单击“删除”  或“还原” 。 如果你希望从计算机中删除所有隔离的项目，请单击“全部删除” 。  
+3.  查看每一项，然后针对每一项单击“删除”  或“还原”  。 如果你希望从计算机中删除所有隔离的项目，请单击“全部删除”  。  
 
 ##  <a name="what-is-real-time-protection"></a>什么是实时保护？  
 
- 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“有风险”。  
+ 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“有风险”  。  
 
  每当实时保护检测到威胁或潜在威胁时，Windows Defender 会显示一条通知。 你可从以下选项中进行选择：  
 
@@ -211,9 +211,9 @@ ms.locfileid: "65500505"
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 
-1.  单击“设置” ，然后单击“实时保护”   
+1.  单击“设置”  ，然后单击“实时保护”   
 
-2.  清除你想要关闭的实时保护选项，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+2.  清除你想要关闭的实时保护选项，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ##  <a name="how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer"></a>如何知道 Windows Defender 或 Endpoint Protection 正在我的计算机上运行？  
 
@@ -241,11 +241,11 @@ ms.locfileid: "65500505"
 
 ### <a name="to-set-up-alerts"></a>要设置警报  
 
-1.  单击“设置” ，然后单击“实时保护”   
+1.  单击“设置”  ，然后单击“实时保护”   
 
 2.  确保选中“打开实时保护(推荐)”  复选框。  
 
-3.  选中你希望运行的实时保护选项旁边的复选框，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+3.  选中你希望运行的实时保护选项旁边的复选框，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ### <a name="see-also"></a>另请参阅  
  [对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)   

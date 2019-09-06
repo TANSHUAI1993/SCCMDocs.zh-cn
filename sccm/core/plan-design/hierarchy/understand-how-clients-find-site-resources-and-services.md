@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e5daac58bce2e0aca97e7872ea7b896b16177b5
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: bded5760fb397f0bd2acc676a9f875235d66fae4
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339446"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380162"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>了解客户端如何查找 System Center Configuration Manager 的站点资源和服务
 
@@ -63,7 +63,7 @@ System Center Configuration Manager 客户端使用名为*服务定位*的进程
 
 可使用首选管理点。 首选管理点是客户端的已分配站点中的管理点，它与客户端用于查找站点系统服务器的边界组相关联。 首选管理点作为站点系统服务器与边界组相关联，其关联方式与分发点或状态迁移点与边界组的关联方式类似。 如果为层次结构启用首选管理点，则当客户端从其已分配站点使用管理点时，它将在从其分配的站点使用其他管理点之前尝试使用首选管理点。  
 
-还可使用 TechNet.com 上[管理点相关性](http://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
+还可使用 TechNet.com 上[管理点相关性](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
 
 每当客户端需要联系管理点时，它就会检查 MP 列表，该列表本地存储在 Windows Management Instrumentation (WMI) 中。 安装客户端后，客户端会创建一个初始 MP 列表。 然后客户端会使用层次结构中有关每个管理点的详细信息定期更新该列表。  
 

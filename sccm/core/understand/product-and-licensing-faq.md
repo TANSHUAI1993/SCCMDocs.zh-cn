@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0975c2b8dcf945464273930073ebf370bd4c32
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: acafe2aeefc267446042b12f06763fd0f1737cfb
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340161"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377845"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
 适用范围：  System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)
 
-此常见问题解答涉及通过 Microsoft 批量许可计划提供的 Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx) 的产品许可<!-- this link doesn't work without some language code --> 和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
+此常见问题解答涉及通过 Microsoft 批量许可计划提供的 Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/licensing/product-licensing/system-center-2016.aspx) 的产品许可<!-- this link doesn't work without some language code --> 和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
 
 有关 Configuration Manager 功能的详细信息，请参阅[产品页面](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。
 
@@ -44,7 +44,7 @@ LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件
 
 - **软件保障 (SA)** ：客户必须在 Configuration Manager 许可证上具有可用 SA 或具有等效的订阅权限，才可安装和使用 Configuration Manager 的 Current Branch。    
 
-  - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限  。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
+  - 虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 Configuration Manager Current Branch 的权限的唯一方法是使用 SA 或等效订阅权限  。 有关详细信息，请参阅[软件保障常见问题解答](https://www.microsoft.com/licensing/licensing-programs/FAQ-Software-Assurance.aspx)。<!--this link doesn't work without some language code-->
 
 - **Microsoft 许可证和软件保障 (L&SA)** ：购买新的 Configuration Manager 许可证的客户必须获取 L&SA（许可证和 SA 范围）。   
 
@@ -52,12 +52,12 @@ LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件
 
   - 如果 SA 过期，你仍拥有 Configuration Manager 的许可证，但无法再使用 Current Branch。 有关详细信息，请参阅[如果 SA 过期且拥有 L&SA，我可使用的功能是什么？](#bkmk_sa-expires)
 
-有关许可证产品/服务的详细信息，请参阅[购买方式](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> 和[许可产品条款](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64)。  
+有关许可证产品/服务的详细信息，请参阅[购买方式](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> 和[许可产品条款](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64)。  
 
 
 ### <a name="bkmk_equiv-sub"></a>我遇到了术语“等效订阅”，这是指什么计划？   
 
-等效订阅指[企业移动性 + 安全性](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) 或 [Microsoft 365 企业版](https://www.microsoft.com/microsoft-365/enterprise)等计划。 可能还涉及其他计划，但以上计划是最常见的。 Microsoft 批量许可产品条款将这些计划称为“管理许可证的等效许可证”。
+等效订阅指[企业移动性 + 安全性](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) 或 [Microsoft 365 企业版](https://www.microsoft.com/microsoft-365/enterprise)等计划。 可能还涉及其他计划，但以上计划是最常见的。 Microsoft 批量许可产品条款将这些计划称为“管理许可证的等效许可证”。
 
 
 ### <a name="bkmk_ems-expires"></a>我拥有企业移动性 + 安全性，但已过期，现在必须执行什么操作？  

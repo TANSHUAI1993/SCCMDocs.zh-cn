@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecc7a7743783522e08d9b69ed037a6ca03ba80e8
-ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
+ms.openlocfilehash: db19004cfc954084eea3c0af69c169414946e57f
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68833040"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377978"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -61,7 +61,7 @@ ms.locfileid: "68833040"
 
 通过 Configuration Manager，已删除 Configuration Manager 控制台中基于 AMT 的计算机的本机支持。  
 
-- 使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
+- 使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](https://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
 
 - System Center 2012 Configuration Manager 中的带外管理不受此更改的影响。  
 

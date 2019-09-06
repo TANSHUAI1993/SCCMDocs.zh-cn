@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cae90ec8a6120b2a9fcbdb25d7aecbf66bcaae8
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 241b8787548c12dff509078df3b9130d21dbfa10
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285817"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377998"
 ---
 # <a name="whats-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
@@ -75,7 +75,7 @@ Configuration Manager 收集站点和基础设施的使用情况数据。 编译
 
 ##  <a name="bkmk_AMT"></a> Intel 主动管理技术 (AMT) 的支持  
 
-Configuration Manager Current Branch 已从 Configuration Manager 控制台中删除对基于 AMT 的计算机的本机支持。 使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
+Configuration Manager Current Branch 已从 Configuration Manager 控制台中删除对基于 AMT 的计算机的本机支持。 使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](https://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
 
 带外管理随适用于 Configuration Manager 的集成 AMT 一起删除。 带外管理点站点系统角色不再可用。  
 

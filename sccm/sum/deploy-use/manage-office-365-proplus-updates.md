@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 276c5dd71b62a29a3f68b1eed2cdc814cfd1c804
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 493e9138c5be3bdf396dd7fe0d318e3da71f561d
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537176"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380302"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -47,8 +47,8 @@ ms.locfileid: "68537176"
 - 运行 Office 365 安装程序的计算机必须具有 Internet 访问权限。  
 - 运行 Office 365 安装程序的用户必须对向导中提供的文件位置共享具有  读取和  写入权限。
 - 如果收到 404 下载错误，将以下文件复制到用户的 %temp%文件夹中：
-  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
-  - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+  - [releasehistory.xml](https://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
+  - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1806-or-higher"></a>使用 Configuration Manager 版本 1806 或更高版本部署 Office 365 应用： 
 从 Configuration Manager 1806 开始，Office 自定义工具在 Configuration Manager 控制台中已与 Office 365 安装程序集成。 在为 Office 365 创建部署时，可以动态配置最新的 Office 可管理性设置。 <!--1358149-->
@@ -89,7 +89,7 @@ ms.locfileid: "68537176"
 <!--4224414-->
 （从版本 1906 中引入） 
 
-您可以钻取符合性统计信息, 查看哪些设备需要特定的 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取到设备列表:
+可深入查看符合性统计信息，了解哪些设备需要特定 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取到设备列表：
 
 1. 转到“软件库” > “Office 365 客户端管理” > “Office 365 更新”   
 1. 选择至少一台设备所需的任何更新。
@@ -244,7 +244,7 @@ ms.locfileid: "68537176"
 > [!Note]
 > The Office 365 Installation Wizard was introduced in Configuration Manager version 1702 and provides an easy way to create Office 365 apps.
 
-- [Download the Office 2016 Deployment Tool](http://aka.ms/ODT2016) from the Microsoft Download Center.  
+- [Download the Office 2016 Deployment Tool](https://aka.ms/ODT2016) from the Microsoft Download Center.  
 - Review the [configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/jj219426.aspx).
 
 You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5499fae986dcd266e0b2a31d2619aa79146f8981
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 98b06429296927ade2dd738fb8df5356668dd89b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676026"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377769"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
@@ -26,7 +26,7 @@ ms.locfileid: "67676026"
 如果未在本主题或 LTSB 特定主题中另行声明，适用于 Current Branch 版本 1606 的相同配置和限制同样适用于 LTSB。  发生冲突时，使用适用于所使用版本的信息。 通常，LTSB 受到的限制比 Current Branch 更多。
 
 ## <a name="general-statement-of-support"></a>常规支持声明
-此 Configuration Manager 分支支持以下产品和技术。 不过，将它们囊括在这一内容中并不表示对超出相应产品的单独支持生命周期的任何产品或版本延长支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关详细信息，请访问 [Microsoft 支持生命周期](http://go.microsoft.com/fwlink/p/?LinkId=208270)网站并参阅 [Microsoft 支持生命周期策略常见问题解答](http://go.microsoft.com/fwlink/p/?LinkId=31976)。
+此 Configuration Manager 分支支持以下产品和技术。 不过，将它们囊括在这一内容中并不表示对超出相应产品的单独支持生命周期的任何产品或版本延长支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关详细信息，请访问 [Microsoft 支持生命周期](https://go.microsoft.com/fwlink/p/?LinkId=208270)网站并参阅 [Microsoft 支持生命周期策略常见问题解答](https://go.microsoft.com/fwlink/p/?LinkId=31976)。
 
 此外，不支持以下主题中未列出的产品和产品版本，除非它们已在 [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/)（企业移动性和安全性博客）上公布。
 
@@ -143,7 +143,7 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 ### <a name="mac-computers"></a>Mac 计算机  
  可以使用 LTSB，通过用于 Mac 的 Configuration Manager 客户端来管理 Mac OS X 计算机。
 
-Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=525184)下载。  
 
 对 Mac 操作系统的支持仅限于本节中列出的这些操作系统。 支持不包括其他可能受 Current Branch 适用的 Mac 客户端安装包的将来更新支持的操作系统。
 
@@ -157,7 +157,7 @@ Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可以�
 ## <a name="linux-and-unix-servers"></a>Linux 和 UNIX 服务器
 可使用 LTSB，通过适用于 Linux 和 UNIX 的 Configuration Manager 客户端管理 Linux 和 UNIX 服务器。
 
-Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的“install”脚本。
+Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=525184)下载。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的“install”脚本。
 
 对 Linux 和 UNIX 操作系统的支持仅限于本节中列出的这些操作系统。 支持不包括其他可能受 Current Branch 适用的 Linux 和 UNIX 客户端安装包的将来更新支持的操作系统。
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a7206c6eeab7b737ea4f0130cdf736a52635fce
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: ab44233756a237513298391a59951919ac4412d5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68337863"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380111"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -39,7 +39,7 @@ ms.locfileid: "68337863"
 
   - **Visual C++ Redistributable** x86 和 x64 文件。   默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。  
 
-    若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) 。  
+    若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) 。  
 
   - .NET Framework 4.5.2 或更高版本。  
 

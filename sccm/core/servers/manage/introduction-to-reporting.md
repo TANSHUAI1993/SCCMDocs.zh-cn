@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 760b159114796922e2c8707e3b7f14484591f7a2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c42b8a97c5ceb5bdff64def06f18275585c51dc6
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141487"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379768"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表简介
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的报表提供了一套工具和资源，可帮助用户使用 SQL Server Reporting Services (SSRS) 的高级报表功能和 Reporting Services 报表生成器提供的丰富创作体验。 报表有助于收集、整理和显示组织中用户、硬件和软件清单、软件更新、应用程序、站点状态和其他 Configuration Manager 操作的相关信息。 “报表”为你提供了许多预定义的报表，你可以使用这些报表而不用做任何更改，或者可以进行修改以满足你的需求，并且，你可以创建自定义报表。 使用以下部分有助于在 Configuration Manager 中管理报表。  
 
@@ -39,7 +39,7 @@ System Center Configuration Manager 中的报表提供了一套工具和资源�
 
 - 导出用户可以选择的各种常见格式的报表。  
 
-  有关 Reporting Services 的详细信息，请参阅 SQL Server 2008 联机丛书中的 [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) 。  
+  有关 Reporting Services 的详细信息，请参阅 SQL Server 2008 联机丛书中的 [SQL Server Reporting Services](https://go.microsoft.com/fwlink/p/?LinkID=212032) 。  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Reporting Services 点  
  Reporting Services 点是安装在运行 Microsoft SQL Server Reporting Services 的服务器上的站点系统角色。 Reporting Services 点将 Configuration Manager 报表定义复制到 Reporting Services，基于报表类别创建报表文件夹，根据 Configuration Manager 管理用户基于角色的权限对报表文件夹和报表设置安全策略。 Reporting Services 点按 10 分钟的间隔连接到 Reporting Services 以重新应用更改的安全策略，例如通过使用报表管理器来应用。 有关如何规划和安装 Reporting Services 点的详细信息，请参阅以下文档：  

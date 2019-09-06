@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 376d35ae0eaca282b9634e2c3eeb50b9c814f270
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 2ec958701b81c70677f65815d4fa053004c09c2b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748010"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378081"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>详细了解 PowerShell 脚本安全性
 
@@ -67,7 +67,7 @@ ms.locfileid: "66748010"
 
 ## <a name="environment-recommendations"></a>环境建议
 PowerShell 管理员的一般建议。
-1. 部署 PowerShell 最新版本，如版本 5 或更高版本，内置于 Windows 10。 或者，可以部署 [Windows Management Framework](https://www.microsoft.com/en-us/download/details.aspx?id=54616)，可向下部署，包括 Windows 7 和 Windows Server 2008 R2。 
+1. 部署 PowerShell 最新版本，如版本 5 或更高版本，内置于 Windows 10。 或者，可以部署 [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616)，可向下部署，包括 Windows 7 和 Windows Server 2008 R2。 
 2. 启用并收集 PowerShell 日志，有选择性地包括受保护的事件日志。 将这些日志合并到签名、搜寻和事件响应工作流中。
 3. 对高价值系统实施足够的管理，以消除或减少对这些系统不受约束的管理访问。
 4. 部署设备防护/应用程序控制策略，以允许预批准的管理任务使用 PowerShell 语言的完整功能，同时将交互式和未批准的使用限制到 PowerShell 语言的有限子集上。

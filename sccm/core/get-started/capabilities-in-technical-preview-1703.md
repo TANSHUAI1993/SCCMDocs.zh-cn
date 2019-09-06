@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f830100bd2d227df0206c40071711d9c7888f88
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 26933c878a7a57b40ade404b8ef205c18a01f7f6
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677475"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378014"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
@@ -139,7 +139,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>用于配置 Windows Analytics for Upgrade Readiness 的客户端设置
-自此版本起，可以使用设备客户端设置来简化配置将 [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) 解决方案（如 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)）与 Configuration Manager 结合使用所需的 Windows 遥测。 Configuration Manager 可以从 Windows Analytics 中检索数据，从而能够根据客户端计算机报告的 Windows 遥测数据获取有关环境当前状态的有价值见解。 Windows 遥测数据由客户端计算机报告给 Windows 遥测服务，随后相关数据被传输到在组织的 OMS 工作区之一中托管的 Windows Analytics 解决方案。 Upgrade Readiness 是一种 Windows Analytics 解决方案，可以帮助你优先做出有关受管理设备的 Windows 升级的决策。
+自此版本起，可以使用设备客户端设置来简化配置将 [Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) 解决方案（如 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)）与 Configuration Manager 结合使用所需的 Windows 遥测。 Configuration Manager 可以从 Windows Analytics 中检索数据，从而能够根据客户端计算机报告的 Windows 遥测数据获取有关环境当前状态的有价值见解。 Windows 遥测数据由客户端计算机报告给 Windows 遥测服务，随后相关数据被传输到在组织的 OMS 工作区之一中托管的 Windows Analytics 解决方案。 Upgrade Readiness 是一种 Windows Analytics 解决方案，可以帮助你优先做出有关受管理设备的 Windows 升级的决策。
 
 有关 Windows 遥测设置的信息，请参阅[在组织中配置 Windows 遥测](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)。
 

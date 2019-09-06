@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d456bfa1bf177a721a967a57b51cf513ed5c08c3
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: b8e8273cfd3e99f9085baf6db0590b08c6e0623a
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956407"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379841"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
@@ -51,7 +51,7 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
 
 若要升级服务器，请使用要升级到的目标操作系统所提供的升级过程。 请参阅下列文章：  
 
-- [Windows Server 升级中心](http://aka.ms/upgradecenter)  
+- [Windows Server 升级中心](https://aka.ms/upgradecenter)  
 
 - [适用于 Windows Server 2016 的升级和转换选项](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 

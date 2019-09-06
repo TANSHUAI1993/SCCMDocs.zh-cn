@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baa5a2219a4eb8c22e8fb5f3db19660c4dca77d1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4c6085990cf61ac034d2e28de67965216722dce8
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122519"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379402"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>规划将 Configuration Manager 对象迁移到 System Center Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 借助 System Center Configuration Manager，可以迁移与源站点上的不同功能关联的许多不同对象。 使用下列部分来帮助你规划层次结构之间的对象迁移。  
 
@@ -71,7 +71,7 @@ ms.locfileid: "56122519"
 |软件更新列表|软件更新列表将转换为软件更新组。|  
 |软件更新部署|软件更新部署将转换为部署和更新组。<br /><br /> 从 Configuration Manager 2007 中迁移软件更新部署后，必须在目标层次结构中启用该部署，然后才能使用它。|  
 |软件更新包|软件更新包仍然是软件更新包。|  
-|软件更新模板|软件更新模板仍然是软件更新模板。<br /><br /> Configuration Manager 2007 部署中的“持续时间”值不会迁移。|  
+|软件更新模板|软件更新模板仍然是软件更新模板。<br /><br /> Configuration Manager 2007 部署中的“持续时间”  值不会迁移。|  
 
 从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构中迁移对象时，不会修改软件更新对象。  
 
@@ -86,10 +86,10 @@ ms.locfileid: "56122519"
  对于已迁移的内容，如果内容版本在源层次结构或目标层次结构中发生变化，则客户端将不再能够从目标层次结构中共享的分发点中访问内容。 在这种情况下，你必须重新迁移内容以还原源层次结构和目标层次结构之间一致的包版本。 此信息在数据收集周期中同步。  
 
 > [!TIP]  
->  对于每个所迁移的包，请更新目标层次结构中的包。 此操作可以防止将包部署到目标层次结构中的分发点时产生问题。 但是，当更新目标层次结构分发点中的包时，该层次结构中的客户端将不再能够从共享的分发点获取该程序包。 要更新目标层次结构中的包，请在 Configuration Manager 控制台中转到“软件库”，右键单击此包，然后选择“更新分发点”。 对于每个迁移的包执行此操作。  
+>  对于每个所迁移的包，请更新目标层次结构中的包。 此操作可以防止将包部署到目标层次结构中的分发点时产生问题。 但是，当更新目标层次结构分发点中的包时，该层次结构中的客户端将不再能够从共享的分发点获取该程序包。 要更新目标层次结构中的包，请在 Configuration Manager 控制台中转到“软件库”，右键单击此包，然后选择“更新分发点”  。 对于每个迁移的包执行此操作。  
 
 > [!TIP]  
->  可以使用 Microsoft System Center Configuration Manager 包转换管理器将包和程序转换成 System Center Configuration Manager 应用程序。 请从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/p/?LinkId=212950) 站点中下载包转换管理器。 有关详细信息，请参阅 [Configuration Manager 包转换管理器](http://go.microsoft.com/fwlink/p/?LinkId=247245)。  
+>  可以使用 Microsoft System Center Configuration Manager 包转换管理器将包和程序转换成 System Center Configuration Manager 应用程序。 请从 [Microsoft Download Center（Microsoft 下载中心）](https://go.microsoft.com/fwlink/p/?LinkId=212950) 站点中下载包转换管理器。 有关详细信息，请参阅 [Configuration Manager 包转换管理器](https://go.microsoft.com/fwlink/p/?LinkId=247245)。  
 
 ### <a name="virtual-applications"></a>虚拟应用程序  
 从支持的 Configuration Manager 2007 站点中迁移 App-V 包时，迁移过程会将这些包转换为目标层次结构中的应用程序。 此外，将根据 App-V 包的现有播发在目标层次结构中创建下列部署类型：  
@@ -127,7 +127,7 @@ ms.locfileid: "56122519"
 
 -   操作系统映像和包。 启动映像的源路径在目标站点上将更新为 Windows 管理安装工具包 (Windows AIK) 的默认映像位置。 下面是迁移操作系统映像和包的要求及限制：  
 
-    -   要成功迁移映像文件，目标层次结构顶层站点的 SMS 提供程序服务器的计算机帐户必须具有源站点 Windows AIK 位置的映像源文件的“读取”和“写入”权限。  
+    -   要成功迁移映像文件，目标层次结构顶层站点的 SMS 提供程序服务器的计算机帐户必须具有源站点 Windows AIK 位置的映像源文件的“读取”  和“写入”  权限。  
 
     -   在迁移操作系统安装包时，请确保源站点上包的配置指向包含 WIM 文件的文件夹，而不是指向 WIM 文件本身。 如果安装包指向 WIM 文件，安装包的迁移将失败。  
 
@@ -144,7 +144,7 @@ ms.locfileid: "56122519"
 你可以迁移配置项目和配置基线。  
 
 > [!NOTE]  
->  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](http://go.microsoft.com/fwlink/?LinkId=103846)主题中的“未解释的配置项目”。  
+>  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](https://go.microsoft.com/fwlink/?LinkId=103846)主题中的“未解释的配置项目”。  
 
 可以导入 Configuration Manager 2007 配置包。 导入过程会自动转换配置包以与 System Center Configuration Manager 兼容。  
 
@@ -166,7 +166,7 @@ Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server 
 ##  <a name="Plan_Migrate_Org_Folders"></a>规划组织文件夹和搜索文件夹的迁移  
  可以将组织文件夹和搜索文件夹从支持的源层次结构迁移到目标层次结构。 此外，可以将保存的搜索条件从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构迁移到目标层次结构中。  
 
- 默认情况下，在迁移时迁移过程将为对象和集合保持搜索文件夹和管理文件夹的结构。 但是，在“创建迁移作业向导”的“设置”页上，可以将迁移作业设置为不迁移对象的组织结构（取消勾选此选项的框）。 将始终保持集合的组织结构。  
+ 默认情况下，在迁移时迁移过程将为对象和集合保持搜索文件夹和管理文件夹的结构。 但是，在“创建迁移作业向导”的“设置”  页上，可以将迁移作业设置为不迁移对象的组织结构（取消勾选此选项的框）。 将始终保持集合的组织结构。  
 
  但包含虚拟应用程序的搜索文件夹是一个例外。 在迁移 App-V 包时，会将 App-V 包转换为 System Center Configuration Manager 中的应用程序。 在迁移搜索文件夹之后，只会查找剩余的包，而且搜索文件夹无法查找 App-V 包，因为在迁移 App-V 包时已将此包转换为应用程序。  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e4c37bff6942014761c53a5e2a659b398fbf7d2
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 6fd2da0440110706d03e49c34928ed4f6ae98fc3
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818159"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380094"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>可获取 System Center Configuration Manager 的安装媒体的位置
 
@@ -26,6 +26,6 @@ ms.locfileid: "67818159"
 
 如果具有 EMS、Microsoft 365 或云解决方案提供商 (CSP) 的 System Center Configuration Manager 许可证，请参阅[产品和许可常见问题解答](/sccm/core/understand/product-and-licensing-faq#bkmk_csp)。
 
-如果要购买 System Center Configuration Manager 的批量许可证，请联系首选 Microsoft 经销商，或请参阅 [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)（如何通过批量许可购买）。 还可下载媒体，从 [TechNet 评估中心]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)网站安装 System Center Configuration Manager 评估版。
+如果要购买 System Center Configuration Manager 的批量许可证，请联系首选 Microsoft 经销商，或请参阅 [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)（如何通过批量许可购买）。 还可下载媒体，从 [TechNet 评估中心]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)网站安装 System Center Configuration Manager 评估版。
 
 若要了解 Configuration Manager 基线媒体的相关信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。

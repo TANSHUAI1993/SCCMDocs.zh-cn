@@ -2,7 +2,7 @@
 title: 创建和运行脚本
 titleSuffix: Configuration Manager
 description: 在客户端设备上创建并运行 Powershell 脚本。
-ms.date: 06/20/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d4775819efbbb33bdd46e80e857a7d1b2d47ab
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: f2b063fe21a674fc066531b1bd970a330d02d9f9
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243673"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -76,7 +76,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 ### <a name="scripts-roles-control"></a>脚本角色控制
 
-默认情况下, 用户无法批准他们编写的脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以禁用辅助审批，以方便进行测试。
+默认情况下，用户无法批准他们编写的脚本。 由于这些脚本功能非常强大、用途多样，并且可能部署到多个设备，因此可以将脚本创建者和脚本批准者之间的角色相互分开。 这些角色可以额外提升安全级别，避免在没有监督的情况下运行脚本。 可以禁用辅助审批，以方便进行测试。
 
 ### <a name="approve-or-deny-a-script"></a>“批准”或“拒绝”脚本
 
@@ -210,7 +210,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 正则表达式是一种紧凑的编程形式，用于检查一串字符的编码验证。 例如，可以通过将 `[^A-Z]` 放入“RegEx”  字段，来检查“FirstName”  字段中是否缺少大写字母字符。
 
-.NET Framework 支持此对话框的正则表达式处理。 有关使用正则表达式的指南，请参阅 [.NET 正则表达式](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)。 
+.NET Framework 支持此对话框的正则表达式处理。 有关使用正则表达式的指导，请参阅[.Net 正则表达式](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)和[正则表达式语言](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference)。
 
 
 ## <a name="script-examples"></a>脚本示例
@@ -252,16 +252,16 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ### <a name="edit-a-script"></a>编辑脚本
 
 1. 中转到 "**软件库**" 工作区下的 "**脚本**" 节点。
-1. 选择要编辑的脚本, 然后在功能区中单击 "**编辑**"。 
+1. 选择要编辑的脚本，然后在功能区中单击 "**编辑**"。 
 1. 在**脚本详细信息**页中更改或重新导入脚本。
-1. 单击 "**下一步**" 查看**摘要**, 然后在编辑完成后**关闭**。
+1. 单击 "**下一步**" 查看**摘要**，然后在编辑完成后**关闭**。
 
 ### <a name="copy-a-script"></a>复制脚本
 
 1. 中转到 "**软件库**" 工作区下的 "**脚本**" 节点。
-1. 选择要复制的脚本, 然后单击功能区中的 "**复制**"。
-1. 重命名**脚本名称**字段中的脚本, 并进行任何其他可能需要的编辑。
-1. 单击 "**下一步**" 查看**摘要**, 然后在编辑完成后**关闭**。
+1. 选择要复制的脚本，然后单击功能区中的 "**复制**"。
+1. 重命名**脚本名称**字段中的脚本，并进行任何其他可能需要的编辑。
+1. 单击 "**下一步**" 查看**摘要**，然后在编辑完成后**关闭**。
 
 
 ## <a name="run-a-script"></a>运行脚本

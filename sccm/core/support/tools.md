@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0db0d38a1ed6929659c8c82b5b43f76535b025f9
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 45b330e28e1c6aa3b993e0a29e57fcb72fe09741
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536091"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379804"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager 工具
 
@@ -29,7 +29,7 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 所有在[客户端和设备支持的操作系统](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)中列为受支持客户端的 Windows 操作系统均支持使用这些工具。
 
 > [!Note]  
-> 仍可从 Microsoft 下载中心获取 [System Center 2012 R2 Configuration Manager 工具包](https://www.microsoft.com/en-us/download/details.aspx?id=50012)。 对于 Configuration Manager 版本 1806 及更高版本，在站点服务器上的 CD.Latest 文件夹中使用这些版本的工具。 有些工具之前位于工具包中，但不包括在版本 1806 中。 不再支持这些旧工具。
+> 仍可从 Microsoft 下载中心获取 [System Center 2012 R2 Configuration Manager 工具包](https://www.microsoft.com/download/details.aspx?id=50012)。 对于 Configuration Manager 版本 1806 及更高版本，在站点服务器上的 CD.Latest 文件夹中使用这些版本的工具。 有些工具之前位于工具包中，但不包括在版本 1806 中。 不再支持这些旧工具。
 
 
 ## <a name="client-tools"></a>客户端工具

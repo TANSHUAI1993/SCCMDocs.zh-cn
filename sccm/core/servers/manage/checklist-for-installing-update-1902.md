@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96a638250db6002196e1898a3e8811012807d340
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: b3f641e76e9e27b44eb4524f3242ce39aa45f164
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956322"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377810"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1902 的清单
 
@@ -32,7 +32,7 @@ ms.locfileid: "68956322"
 
     -   dmpdownloader.log 可能指示 dmpdownloader 进程要等待一段时间之后才检查更新。 若要重启更新的重分发文件的下载，请在站点服务器上重启 SMS_Executive 服务  。
 
-    -   当代理服务器设置阻止从 [http://silverlight.dlservice.microsoft.com](http://silverlight.dlservice.microsoft.com )、 http://download.microsoft.com 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
+    -   当代理服务器设置阻止从 [http://silverlight.dlservice.microsoft.com](http://silverlight.dlservice.microsoft.com )、 http://download.microsoft.com/ 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
 
 有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#bkmk_inconsole)。
 

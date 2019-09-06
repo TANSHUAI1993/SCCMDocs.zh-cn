@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7831b8b818f68b3094ed765eb5e69441ce18d0f6
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: e1d5954527fd644b9dbe0ba4aee88170028d511b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68337906"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379830"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
 
@@ -208,7 +208,7 @@ Updates Publisher 的目录名为“SCUPCatalog.cab”，它位于运行更新�
 > [!IMPORTANT]  
 > 在创建 SCUPCatalog.cab 时，使用了安装更新捆绑的站点服务器的特定路径，因此，无法在其他站点服务器上使用该文件。  
 
-在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 System Center 2012 的 TechNet 库中的 [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkID=83449)。  
+在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 System Center 2012 的 TechNet 库中的 [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449)。  
 
 使用下列过程将 SCUPCatalog.cab 文件导入到更新发布服务器，然后发布更新。  
 

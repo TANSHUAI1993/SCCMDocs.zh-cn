@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c93c7ead83a09bb882c5f0468d936c5188d46b2
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: ef901e6bb9c0b28d55d8ffe08accca8f30101583
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176939"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377913"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>安装 System Center Configuration Manager 的站点系统角色
 
@@ -56,7 +56,7 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 7.  完成向导。  
 
 > [!TIP]  
->  Windows PowerShell cmdlet New-CMSiteSystemServer 执行与此过程相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414)。  
+>  Windows PowerShell cmdlet New-CMSiteSystemServer 执行与此过程相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [New-CMSiteSystemServer](https://go.microsoft.com/fwlink/p/?LinkID=271414)。  
 
 ## <a name="to-install-site-system-roles-on-a-new-site-system-server"></a>在新的站点系统服务器上安装站点系统角色  
 
@@ -78,4 +78,4 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 7.  完成向导。  
 
 > [!TIP]  
->  Windows PowerShell cmdlet New-CMSiteSystemServer 执行与此过程相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414)。  
+>  Windows PowerShell cmdlet New-CMSiteSystemServer 执行与此过程相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [New-CMSiteSystemServer](https://go.microsoft.com/fwlink/p/?LinkID=271414)。  

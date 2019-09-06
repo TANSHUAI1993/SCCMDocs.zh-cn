@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e53c0dd242d1274914738173ee1997109cff8411
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e041c3ef1725f3084f05b084a9a48716a6fac556
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499373"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377955"
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的配置
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 作为本地解决方案，System Center Configuration Manager 会使用服务器、客户端、网络配置和其他产品（如 Microsoft Intune、SQL Server 和 Azure）。
 
@@ -28,10 +28,10 @@ ms.locfileid: "65499373"
 
 如果 Configuration Manager 功能需要更具体的配置，相关信息会包含在特定于功能的文档中，作为对较通用配置详细信息的补充。  
 
- 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](http://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。  
+ 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](https://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。  
 
 > [!NOTE]  
->  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](http://go.microsoft.com/fwlink/p/?LinkId=31976)。  
+>  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](https://go.microsoft.com/fwlink/p/?LinkId=31976)。  
 
  此外，System Center Configuration Manager 不支持以下主题中未列出的产品和产品版本，除非它们已在[企业移动性和安全性博客](https://blogs.technet.microsoft.com/enterprisemobility/)上公布。  此博客上的内容有时会早于本文档正文的更新。
 

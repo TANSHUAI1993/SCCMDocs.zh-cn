@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b18c8e780ac5fa43f3fdf6790c80ed6d38e02e28
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fd7f84e097ddfbc36d3c595a28e0cb31b968ce57
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128732"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380070"
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义操作系统映像
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 中的操作系统映像是 WIM 文件，并且表示在计算机上成功安装和配置操作系统所需的参考文件和文件夹的压缩集合。 自定义操作系统映像是通过一台引用计算机构建和捕获的。在该计算机上，你配置了所有必需的操作系统文件、支持文件、软件更新、工具和其他软件应用。 由你决定将引用计算机手动配置到何种程度。 你可以通过使用构建和捕获任务序列完全自动完成配置引用计算机的过程，可以手动配置引用计算机的某些方面然后使用任务序列自动完成其余配置，或者可以在不使用任务序列的情况下手动配置引用计算机。 使用以下部分自定义操作系统。
 
@@ -96,7 +96,7 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
     > [!IMPORTANT]  
     >  “准备 Windows 以便捕获” [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 任务序列步骤会在 Sysprep 运行之前尝试将引用计算机上的本地管理员密码重置为空白值。 如果启用了本地安全策略“密码必须满足复杂性要求”  ，则此任务序列步骤将无法重置管理员密码。 在这种情况下，请在运行任务序列之前禁用此策略。  
 
-     有关 Sysprep 的详细信息，请参阅 [System Preparation (Sysprep) Technical Reference（系统准备 (Sysprep) 概述技术参考）](http://go.microsoft.com/fwlink/?LinkId=280286)。  
+     有关 Sysprep 的详细信息，请参阅 [System Preparation (Sysprep) Technical Reference（系统准备 (Sysprep) 概述技术参考）](https://go.microsoft.com/fwlink/?LinkId=280286)。  
 
 -   **迁移安装方案所需的适当工具和脚本**  
 
