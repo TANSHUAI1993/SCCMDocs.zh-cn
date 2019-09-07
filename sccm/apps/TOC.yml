@@ -1,7 +1,6 @@
 - name: 应用程序管理
   href: understand/introduction-to-application-management.md
 - name: 了解和探索
-  expanded: true
   items:
     - name: 简介
       href: understand/introduction-to-application-management.md

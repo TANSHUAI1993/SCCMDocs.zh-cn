@@ -1,7 +1,6 @@
 - name: 保护数据和基础结构
   href: understand\protect-data-and-site-infrastructure.md
 - name: 了解和探索
-  expanded: true
   items:
     - name: 概述
       href: understand\protect-data-and-site-infrastructure.md

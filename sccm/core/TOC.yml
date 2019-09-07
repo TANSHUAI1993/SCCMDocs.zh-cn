@@ -1,7 +1,6 @@
 - name: 核心基础结构
   href: understand/introduction.md
 - name: 了解和探索
-  expanded: true
   items:
     - name: Configuration Manager 简介
       items:

@@ -1,7 +1,6 @@
 - name: 设备符合性
   href: understand/ensure-device-compliance.md
 - name: 了解和探索
-  expanded: true
   items:
     - name: 确保设备符合性
       href: understand/ensure-device-compliance.md

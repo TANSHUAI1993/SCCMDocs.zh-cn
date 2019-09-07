@@ -1,7 +1,6 @@
 - name: 共同管理
   href: overview.md
 - name: 概述
-  expanded: true
   items:
     - name: 什么是共同管理？
       href: overview.md
