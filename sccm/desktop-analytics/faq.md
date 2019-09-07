@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 09/03/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 884626cd46659917734fa309fa6e84fbdd517ae2
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 306c6569551e1068c0e682c893e94b8f1a920ade
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738280"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -122,6 +122,12 @@ ms.locfileid: "70243649"
 ### <a name="im-not-ready-yet-can-i-migrate-after-the-initial-onboarding"></a>我还没有准备好，我是否可以在初次加入后迁移？
 
 不需要，此时需要决定在[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)期间进行迁移。
+
+### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>是否可以将更新符合性与桌面分析一起使用？
+
+是。 如果你现在使用 Azure 门户中的[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started)，现在可以继续执行此操作，而不能超过2020年1月。
+
+<!-- For more information, see [blog post]... -->
 
 ## <a name="other"></a>其他
 
