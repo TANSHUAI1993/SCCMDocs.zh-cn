@@ -20,7 +20,7 @@ ms.locfileid: "65499188"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>准备 Windows Server 以支持 Configuration Manager
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 在将一台 Windows 计算机作为用于 Configuration Manager 的站点系统服务器使用之前，该计算机必须满足作为站点服务器或站点系统服务器使用的先决条件。  
 
@@ -47,20 +47,20 @@ ms.locfileid: "65499188"
 
     由于 .NET Framework 4.0 和更高版本不是向后兼容，无法替换 3.5 及更早版本，在不同的版本被列为必需时，计划在同一台计算机上启用每个版本。  
 
-- **后台智能传输服务 (BITS)**：管理点需要 BITS（和自动选择的选项），以支持与托管设备之间的通信。  
+- **后台智能传输服务 (BITS)** ：管理点需要 BITS（和自动选择的选项），以支持与托管设备之间的通信。  
 
 - **BranchCache**：可以通过 BranchCache 来设置分发点以支持使用 BranchCache 的客户端。  
 
 - **重复数据删除**：可以使用重复数据删除设置分发点并从中获益。  
 
-- **远程差分压缩 (RDC)**：每台托管站点服务器或分发点的计算机都需要 RDC。RDC 用于生成包签名和执行签名比较。  
+- **远程差分压缩 (RDC)** ：每台托管站点服务器或分发点的计算机都需要 RDC。 RDC 用于生成包签名和执行签名比较。  
 
 ### <a name="roles"></a>角色  
 需要以下 Windows 角色才支持特定功能（例如软件更新和操作系统部署），而最常见的站点系统角色需要 IIS。  
 
 - **网络设备注册服务**（在 Active Directory 域服务证书服务下）：此 Windows 角色是在 Configuration Manager 中使用证书配置文件的先决条件。  
 
-- **Web 服务器 (IIS)**：包括：  
+- **Web 服务器 (IIS)** ：包括：  
     - 常见 HTTP 功能  
           - HTTP 重定向  
     - 应用程序开发  
@@ -110,11 +110,11 @@ ms.locfileid: "65499188"
 
 例如，软件部署的源文件可能包含名为 **bin** 的文件夹，或者包含具有 **.mdb** 文件扩展名的文件。  
 
-- 默认情况下，IIS 请求筛选会阻止对这些元素的访问（“bin”作为隐藏段被阻止，“mdb”作为文件扩展名被阻止）。  
+- 默认情况下，IIS 请求筛选会阻止对这些元素的访问（“bin”作为隐藏段被阻止，“mdb”作为文件扩展名被阻止   ）。  
 
 - 在分发点上使用默认的 IIS 配置时，使用 BITS 的客户端不能从分发点下载此软件部署，并指示它们正在等待内容。  
 
-- 若要允许客户端下载此内容，请在每个适用的分发点上编辑 IIS 管理器中的“请求筛选”，以允许访问所部署的包和应用程序中的文件扩展名和文件夹。  
+- 若要允许客户端下载此内容，请在每个适用的分发点上编辑 IIS 管理器中的“请求筛选”  ，以允许访问所部署的包和应用程序中的文件扩展名和文件夹。  
 
 > [!IMPORTANT]  
 > 对请求筛选器进行编辑会增大计算机的受攻击面。  
