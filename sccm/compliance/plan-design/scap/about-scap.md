@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969bbb28e64c37d8843d634adce99916333540ed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2036b3a9981c1a27b24bff1f1f0f543813267dc7
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130354"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378108"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>关于安全内容自动化协议 (SCAP) 扩展
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 的 SCAP 扩展有助于分析和评估网络环境是否符合安全内容自动化协议 (SCAP)。 SCAP 由美国国家标准技术研究院 (NIST) 定义和维护。 有关详细信息，请参阅 [SCAP 项目概述](https://csrc.nist.gov/projects/security-content-automation-protocol)。
 
@@ -132,7 +132,7 @@ Configuration Manager 的 SCAP 扩展使用符合性设置功能首先扫描环�
 
 - Windows PowerShell 2.0 或更高版本。  
 
-- Configuration Manager PowerShell 执行策略设置为“绕过”。 有关详细信息，请参阅 [PowerShell 执行策略](/sccm/core/clients/deploy/about-client-settings#computer-agent)一文。  
+- Configuration Manager PowerShell 执行策略设置为“绕过”  。 有关详细信息，请参阅 [PowerShell 执行策略](/sccm/core/clients/deploy/about-client-settings#computer-agent)一文。  
 
 - 以下操作系统之一：  
   - Windows 7 SP1，32 位或 64 位
@@ -153,11 +153,11 @@ Configuration Manager 的 SCAP 扩展包含 Windows 命令行工具。 这些工
 
 - 各个工具的命令行参数 `-help` 和 `-?` 将其使用情况显示在屏幕上。 这些使用详情随后可供屏幕读取器和其他辅助技术使用。  
 
-- 有关详细信息，请参阅 [Windows 辅助功能](http://windows.microsoft.com/windows/help/accessibility)。
+- 有关详细信息，请参阅 [Windows 辅助功能](https://windows.microsoft.com/windows/help/accessibility)。
 
 SCAP 扩展还利用 Configuration Manager 中的辅助功能。 有关详细信息，请参阅 [Configuration Manager 中的辅助功能](/sccm/core/understand/accessibility-features)。
 
-有关 Microsoft 辅助功能产品和服务的详细信息，请参阅 [Microsoft Accessibility 网站](http://go.microsoft.com/fwlink/p/?LinkId=9212)。
+有关 Microsoft 辅助功能产品和服务的详细信息，请参阅 [Microsoft Accessibility 网站](https://go.microsoft.com/fwlink/p/?LinkId=9212)。
 
 
 

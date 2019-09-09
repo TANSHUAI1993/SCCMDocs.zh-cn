@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b63894764e45e67ef262e345140e245297a11c87
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: dee4e3a83f0cdba38f07ba0e7bd9bf6f425ca440
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133929"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378146"
 ---
 # <a name="install-and-configure-the-scap-extensions-for-configuration-manager"></a>安装并配置 Configuration Manager 的 SCAP 扩展
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在[准备基础结构](/sccm/compliance/plan-design/scap/about-scap#bkmk_prepare)后，即可在需要运行此进程的计算机上安装并配置 Configuration Manager 的 SCAP 扩展。
 
@@ -31,13 +31,13 @@ ms.locfileid: "56133929"
 安装文件位于 Configuration Manager 站点服务器上安装目录中的以下路径：  
 `cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi`
 
-1. 将 ConfigMgrExtensionsforSCAP.msi 复制到需要运行此进程的、具有 Configuration Manager 控制台的计算机。  
+1. 将 ConfigMgrExtensionsforSCAP.msi 复制到需要运行此进程的、具有 Configuration Manager 控制台的计算机  。  
 
-2. 在 Windows 资源管理器中，转到复制 ConfigMgrExtensionsforSCAP.msi 的文件夹。 双击打开该文件，并启动 Configuration Manager 的 SCAP 扩展安装向导。  
+2. 在 Windows 资源管理器中，转到复制 ConfigMgrExtensionsforSCAP.msi 的文件夹  。 双击打开该文件，并启动 Configuration Manager 的 SCAP 扩展安装向导。  
 
-3. 查看许可协议。 单击“我接受许可协议中的条款”，然后单击“安装”。  
+3. 查看许可协议。 单击“我接受许可协议中的条款”，然后单击“安装”   。  
 
-4. 安装完成之后，单击“完成”以关闭安装向导。  
+4. 安装完成之后，单击“完成”以关闭安装向导  。  
 
 安装向导会将 SCAP 扩展安装在 Configuration Manager 控制台安装文件夹中。 默认情况下，控制台安装文件夹为 `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole`。  
 
@@ -51,10 +51,10 @@ ms.locfileid: "56133929"
 
 ### <a name="install-the-scap-data-streams"></a>安装 SCAP 数据流
 
-1. 请访问 [NVD 网站](http://nvd.nist.gov/) 确定你的组织要求的 SCAP 数据流。
+1. 请访问 [NVD 网站](https://nvd.nist.gov/) 确定你的组织要求的 SCAP 数据流。
 NIST 发布的 SCAP 数据流被分成多个捆绑包，这些捆绑包也称作_清单_。  
 
-2. 从 [NVD 网站](http://nvd.nist.gov/home.cfm)下载 SCAP 数据流，这些数据流存储在压缩文件中，带有 .zip 文件扩展名或标记为 DataStream XML 文件。  
+2. 从 [NVD 网站](https://nvd.nist.gov/home.cfm)下载 SCAP 数据流，这些数据流存储在压缩文件中，带有 .zip 文件扩展名或标记为 DataStream XML 文件。  
 
     > [!IMPORTANT]  
     > 有许多可从 NVD 下载的带有 .xml 扩展名的 SCAP 数据流文件。 但是，只有包含 XCCDF（SCAP1.0 和 1.1）/DataStream (SCAP1.2) 内容的 .xml 文件才适用于 SCAP 扩展。  
@@ -70,7 +70,7 @@ NIST 发布的 SCAP 数据流被分成多个捆绑包，这些捆绑包也称作
 > [!Note]  
 > 本文介绍通过 Configuration Manager 控制台转换和导入数据流文件的手动过程。 要自动完成此过程，请参阅下一节以[自动转换并导入 SCAP 数据流文件](#bkmk_auto-convert-and-import)。  
 
-1. 从配置基线组的功能区单击“导入 SCAP 内容”向导。
+1. 从配置基线组的功能区单击“导入 SCAP 内容”向导  。
 
      ![控制台功能区中的“导入 SCAP 内容”按钮](./media/import-scap-content.png)
 
@@ -82,18 +82,18 @@ NIST 发布的 SCAP 数据流被分成多个捆绑包，这些捆绑包也称作
 
      ![选择 SCAP 数据流文件](./media/select-datastream-file.png)
 
-4. 如果是 SCAP 1.2，则选择数据流。 然后选择 SCAP 1.x 的基准和配置文件。 单击“下一步”以转换内容。 
+4. 如果是 SCAP 1.2，则选择数据流。 然后选择 SCAP 1.x 的基准和配置文件。 单击“下一步”以转换内容  。 
 
       ![选择 SCAP 1.2 的基准和配置文件](./media/select-benchmark-and-profile.png)
 
       > [!Tip]  
-      > 此向导页面显示将与 ScapToDcm.exe 工具配合使用以自动执行相同过程的命令行。  
+      > 此向导页面显示将与 ScapToDcm.exe  工具配合使用以自动执行相同过程的命令行。  
 
 5. 确认要导入的配置数据。
 
       ![确认配置屏幕截图](./media/confirm-configuration.png)
 
-6. 单击“下一步”，导入配置数据。
+6. 单击“下一步”，导入配置数据  。
 
       ![完成导入](./media/complete-import.png)
 
@@ -103,15 +103,15 @@ NIST 发布的 SCAP 数据流被分成多个捆绑包，这些捆绑包也称作
 
 ### <a name="import-with-the-command-line-tool"></a>使用命令行工具进行导入
 
-获取 SCAP 数据流后，可使用 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为符合性设置符合 .cab 文件。 然后将 .cab 文件导入 Configuration Manager。 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为可在 Configuration Manager 中使用的配置项目和配置基线。 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为 XML 清单。 然后，它将 XML 清单打包成一个 .cab 文件，你可以将该文件导入 Configuration Manager。
+获取 SCAP 数据流后，可使用 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为符合性设置符合 .cab 文件  。 然后将 .cab 文件导入 Configuration Manager。 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为可在 Configuration Manager 中使用的配置项目和配置基线。 Microsoft.Sces.ScapToDcm.exe 工具将 SCAP 数据流转换为 XML 清单。 然后，它将 XML 清单打包成一个 .cab 文件，你可以将该文件导入 Configuration Manager。
 
 > [!Tip]  
-> 上一节中手动过程的步骤 4 中显示了此向导页，其中显示的是将和 ScapToDcm.exe 工具配合使用以便自动执行相同过程的命令行。  
+> 上一节中手动过程的步骤 4 中显示了此向导页，其中显示的是将和 ScapToDcm.exe 工具配合使用以便自动执行相同过程的命令行  。  
 
 
 #### <a name="use-microsoftscesscaptodcmexe-to-convert-scap-data-streams-into-cab-files"></a>使用 Microsoft.Sces.ScapToDcm.exe 将 SCAP 数据流转换为 .cab 文件
 
-在命令提示符处，转至 AdminConsole\Bin 文件夹，然后运行 Microsoft.Sces.ScapToDcm.exe。 此工具生成符合性设置符合 .cab 文件，并将其导入 Configuration Manager 站点。
+在命令提示符处，转至 AdminConsole\Bin 文件夹，然后运行 Microsoft.Sces.ScapToDcm.exe   。 此工具生成符合性设置符合 .cab 文件，并将其导入 Configuration Manager 站点。
 
    > [!NOTE]  
    > 帐户必须具备输出文件夹的读/写权限。
@@ -261,7 +261,7 @@ NIST 发布的 SCAP 数据流被分成多个捆绑包，这些捆绑包也称作
 > [!IMPORTANT]  
 > 请为在此过程前期所创建的每个 .cab 文件重复此过程。 对于从 NVD 网站下载的 XCCDF/DataStream XML 文件，在其中所选的每个配置文件均有一个 .cab 文件。 可通过运行 Microsoft.Sces.ScapToDcm.exe 工具来处理这些文件。  
 
-导入的配置基线是只读的，状态为“启用”，且部署状态为“否”。 “修改日期”属性显示的是导入基线的时间。 配置基线的名称来自 XCCDF/Datastream XML 的显示名称部分。 名称是使用约定 `ABC[XYZ]` 构造的，其中 ABC 是 XCCDF 基准 ID，而 XYZ 是 XCCDF 配置文件 ID（如果选择了配置文件）。
+导入的配置基线是只读的，状态为“启用”，且部署状态为“否”   。 “修改日期”属性显示的是导入基线的时间  。 配置基线的名称来自 XCCDF/Datastream XML 的显示名称部分。 名称是使用约定 `ABC[XYZ]` 构造的，其中 ABC 是 XCCDF 基准 ID，而 XYZ 是 XCCDF 配置文件 ID（如果选择了配置文件）   。
 
 
 

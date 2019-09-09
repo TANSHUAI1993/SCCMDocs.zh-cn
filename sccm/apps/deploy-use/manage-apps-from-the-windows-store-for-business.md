@@ -2,7 +2,7 @@
 title: 适用于企业的 Microsoft Store
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 来管理和部署适用于企业的 Microsoft Store 中的应用。
-ms.date: 07/30/2018
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,46 +11,49 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41fb296f45b54723c59c7d6fe803916af95752ad
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: a9e3fab2a62ae6781f976fe5c74504d8c41d0eb0
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675854"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243625"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>使用 Configuration Manager 来管理适用于企业的 Microsoft Store 中的应用
 
 在[适用于企业的 Microsoft Store](https://www.microsoft.com/business-store) 中可以为组织查找和获取 Windows 应用。 将适用于企业的 Microsoft Store 连接到 Configuration Manager 时，会同步已获取的应用列表。 在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。
 
-
 ## <a name="bkmk_apps"></a>联机和脱机应用
 
 适用于企业的 Microsoft Store 支持两种类型的应用：
 
-- 联机：此许可证类型要求用户和设备连接到应用商店，以此获取应用及其许可证  。 Windows 10 设备必须已加入域的 Azure Active Directory (Azure AD)。  
+- 联机：此许可证类型要求用户和设备连接到应用商店，以此获取应用及其许可证  。 Windows 10 设备必须 Azure Active Directory （Azure AD）加入或混合 Azure AD 加入。  
 
 - 脱机：此类型允许缓存应用和许可证，以便直接在本地网络中部署  。 设备无需连接到适用于企业的 Microsoft Store 或 Internet。
 
-[了解更多](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview)适用于企业的 Microsoft Store 的相关信息。
+有关详细信息，请参阅[业务 Microsoft Store 概述](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview)。
+
+### <a name="summary-of-capabilities"></a>功能摘要
 
 Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows 10 设备上管理适用于企业的 Microsoft Store 应用，也支持使用 Microsoft Intune 注册的 Windows 10 设备。 Configuration Manager 对联机和脱机应用提供以下功能：
-
 
 |功能|脱机应用|联机应用|
 |------------|------------|------------|
 |将应用数据同步到 Configuration Manager<br>（每 24 小时同步一次）|是|是|
 |从应用商店应用创建 Configuration Manager 应用程序|是|是|
 |对应用商店中免费应用的支持|是|是|
-|对应用商店中收费应用的支持|否|是<sup>1</sup>|
+|对应用商店中收费应用的支持|否|是<sup>[注释 1](#bkmk_note1)</sup>|
 |支持针对用户或设备集合必需的部署|是|是|
 |支持对用户或设备集合可用的部署|是|是|
 |来自应用商店的业务线应用的支持|是|是|
-|为设备上的所有用户配置应用商店应用<sup>2</sup><!--1358310-->|是|是|
+|为设备上的所有用户配置应用商店应用<sup>[备注 2](#bkmk_note2)</sup><!--1358310-->|是|是|
 
-- <sup>1</sup>要使用 Configuration Manager 客户端将在线许可的应用部署到 Windows 10 设备，这些应用必须在 Windows 10 版本 1703 或更高版本上运行。  
+#### <a name="bkmk_note1"></a>注释1：联机许可应用版本要求
 
-- <sup>2</sup>自版本 1806 开始。 有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。  
+要使用 Configuration Manager 客户端将在线许可的应用部署到 Windows 10 设备，这些应用必须在 Windows 10 版本 1703 或更高版本上运行。  
 
+#### <a name="bkmk_note2"></a>备注2： Configuration Manager 最低版本
+
+从版本 1806 开始。 有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。  
 
 ### <a name="deploying-online-apps-using-the-microsoft-store-for-business-to-devices-that-run-the-configuration-manager-client"></a>使用适用于企业的 Microsoft Store 将联机应用部署到运行 Configuration Manager 客户端的设备上
 
@@ -58,12 +61,11 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 要获取完整的功能，设备必须运行 Windows 10 版本 1703 或更高版本。  
 
-- 必须将设备添加到适用于企业的 Microsoft Store 注册为管理工具的同一个租户的 Azure AD。  
+- 将设备注册或加入到 Azure AD 租户，在该租户中，你已将 Microsoft Store 用作管理工具。  
 
 - 本地管理员帐户登录设备时，无法访问适用于企业的 Microsoft Store 应用。  
 
 - 设备必须具有适用于企业的 Microsoft Store 的实时 Internet 连接。 有关包括代理配置在内的详细信息，请参阅[先决条件](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business)。  
-
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>运行 Windows 10 较早版本的设备的说明
 
@@ -73,7 +75,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 用户安装应用  
 
-- 部署达到其安装截止日期   
+- 部署达到其安装截止日期
 
 - 对所需的部署进行安装后重新评估  
 
@@ -91,12 +93,11 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 如果用户未尝试从应用商店安装应用：  
 
-    - 对于所需部署，Configuration Manager 客户端会尝试再次启动应用商店  
+  - 对于所需部署，Configuration Manager 客户端会尝试再次启动应用商店  
 
-    - 不会再次强制执行可用的部署
+  - 不会再次强制执行可用的部署
 
-
-#### <a name="further-notes-for-devices-running-earlier-versions-of-windows-10"></a>有关运行早期版本 Windows 10 设备的进一步说明：
+#### <a name="devices-running-earlier-versions-of-windows-10"></a>运行 Windows 10 较早版本的设备
 
 - 不能部署来自适用于企业的 Microsoft Store 的业务线应用  
 
@@ -104,16 +105,15 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 如果部署组策略来禁用对 Microsoft Store 的使用者版本的访问权限，则适用于企业的 Microsoft Store 中的部署将不起作用。 即使启用了适用于企业的 Microsoft Store，也会发生此行为。  
 
+## <a name="bkmk_setup"></a>设置同步
 
-
-## <a name="bkmk_setup"></a>设置适用于企业的 Microsoft Store 同步
-
-通过同步组织获取的应用列表，可在 Configuration Manager 控制台中查看这些应用。
+通过同步组织获得的适用于企业的 Microsoft Store 应用列表，可在 Configuration Manager 控制台中查看这些应用。
 
 将 Configuration Manager 站点连接到 Azure AD 和适用于企业的 Microsoft Store。 有关此流程的详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。 创建适用于企业的 Microsoft Store 服务的连接  。
 
+请确保服务连接点和目标设备可以访问云服务。 有关详细信息，请参阅[Business proxy Microsoft Store](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
 
-### <a name="bkmk_config"></a>补充信息和配置 
+### <a name="bkmk_config"></a>补充信息和配置
 
 在 Azure 服务向导的“应用”页面上，首先配置“Azure环境”和“Web 应用”    。 然后阅读页面底部的“详细信息”部分  。 此信息包括在适用于企业的 Microsoft Store 门户中的以下附加操作：  
 
@@ -127,36 +127,34 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 适用于企业的 Microsoft Store 应用内容存储的路径：指定共享网络路径，包括文件夹  。 例如，`\\server\share\folder`。 当站点服务器与应用商店同步时，它在此位置缓存内容。 在 Configuration Manager 中创建应用程序时，站点服务器会将应用内容从本地缓存复制到站点的内容库中。  
 
-- 所选语言：从应用商店中选择要同步的语言，并在软件中心中向用户显示  。 例如，如果用户将 Windows 配置为德语，那么软件中心会在应用商店中显示德语字符串。 此行为要求语言同步并且针对特定应用程序存在。    
+- 所选语言：从应用商店中选择要同步的语言，并在软件中心中向用户显示  。 例如，如果用户将 Windows 配置为德语，那么软件中心会在应用商店中显示德语字符串。 此行为要求语言同步并且针对特定应用程序存在。
 
 - 默认语言：如果用户的语言不可用，请选择要使用的默认语言  。  
 
+## <a name="bkmk_deploy"></a> 创建并部署应用
 
+同步后，创建和部署类似于任何其他 Configuration Manager 应用程序的业务应用 Microsoft Store。
 
-## <a name="bkmk_deploy"></a>从适用于企业的 Microsoft Store 应用创建和部署 Configuration Manager 应用程序
+1. 在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”节点    。  
 
-同步后，像其他应用一样，创建并部署应用商店。
+2. 选择要部署的应用，然后选择功能区中的“创建应用程序”  。  
 
-1.  在 Configuration Manager 控制台的“软件库”  工作区中，展开“应用程序管理”  ，然后单击“应用商店应用的许可证信息”  。  
-
-2.  选择要部署的应用，然后单击功能区中的“创建应用程序”  。  
-
-该站点将创建包含适用于企业的 Microsoft Store 应用的 Configuration Manager 应用程序。 
+该站点将创建包含适用于企业的 Microsoft Store 应用的 Configuration Manager 应用程序。
 
 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。 有关详细信息，请参阅下列文章：  
+
 - [部署应用程序](/sccm/apps/deploy-use/deploy-applications)
 - [从控制台监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)
 
 > [!IMPORTANT]  
 > 对于使用 Microsoft Intune 注册的设备，已部署的应用仅适用于最初注册该设备的用户。 其他任何用户都无法访问该应用。
 
-
-
 ## <a name="next-steps"></a>后续步骤
 
-在“软件库”  工作区中，展开“应用程序管理”  ，然后单击“应用商店应用的许可证信息”  。
+在“软件库”工作区中，展开“应用程序管理”，然后选择“应用商店应用的许可证信息”节点    。
 
 对于你管理的每个应用商店，请查看有关该应用的以下信息：
+
 - 应用名称
 - 应用平台
 - 你拥有的应用的许可证数量
@@ -164,11 +162,10 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 部署联机应用后，该应用的任何更新都直接来自 Microsoft Store。 此外，Configuration Manager 不会检查联机应用的版本合规性，只是 Windows 会报告应用为已安装。  
 
-使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)来禁用 Microsoft Store。 
+使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)来禁用 Microsoft Store。
 
-适用于企业的 Microsoft Store 管理员获取脱机应用后，请勿通过应用商店将应用发布给用户。 此配置可确保用户无法安装或联机更新。 用户仅通过 Configuration Manager 接收脱机应用更新。 
+适用于企业的 Microsoft Store 管理员获取脱机应用后，请勿通过应用商店将应用发布给用户。 此配置可确保用户无法联机安装或联机更新。 用户仅通过 Configuration Manager 接收脱机应用更新。
 
 ## <a name="see-also"></a>另请参阅
 
-[了解并排查适用于企业的 Microsoft Store 与 ConfigMgr 集成的问题](https://support.microsoft.com/help/4010214)
-
+[排查 Microsoft Store 与 Configuration Manager 进行业务集成](/sccm/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)

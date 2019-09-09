@@ -2,7 +2,7 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 07/26/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4ee01c85cf978b595aa9d6a7948503b34927c31
-ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
+ms.openlocfilehash: 273e61024032defd10b3176fb70ac6c3a35125e2
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110235"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380039"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -695,7 +695,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
-从1906版开始, 在此步骤中使用以下任务序列变量:  
+从1906版开始，在此步骤中使用以下任务序列变量：  
 
 - [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
 - [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
@@ -730,7 +730,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - OS 升级包  
 - 驱动程序包  
 - 包  
-- 启动映像 (版本1810及更早版本)  
+- 启动映像（版本1810及更早版本）  
 
 此步骤适用于任务序列，从而在以下方案中升级 OS：  
 
@@ -744,7 +744,7 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 此步骤在完整 OS 或 Windows PE 中运行。 Windows PE 中不提供将包保存在 Configuration Manager 客户端缓存中的选项。
 
 > [!NOTE]  
-> 不支持将 "**下载包内容**" 任务用于独立媒体。 有关详细信息, 请参阅[独立媒体不支持的操作](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media)。  
+> 不支持将 "**下载包内容**" 任务用于独立媒体。 有关详细信息，请参阅[独立媒体不支持的操作](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media)。  
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“下载包内容”  以添加此步骤。
 
@@ -917,15 +917,15 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 - 它本身不能启动重新启动。 该应用程序必须使用标准的重新启动代码 (3010) 请求重新启动。 此行为可确保此步骤正确处理重新启动。 如果应用程序返回 3010 退出代码，则任务序列引擎将重启计算机。 重新启动后，任务序列自动继续。  
 
 > [!Note]
-> 如果应用程序[检查正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check), 则任务序列将无法安装它。 如果未将此步骤配置为 "出错时继续", 则整个任务序列将失败。
+> 如果应用程序[检查正在运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check)，则任务序列将无法安装它。 如果未将此步骤配置为 "出错时继续"，则整个任务序列将失败。
 
 当此步骤运行时，应用程序将检查部署类型的要求规则和检测方法的适用性。 根据此检查的结果，应用程序将安装适用的部署类型。 如果部署类型包含依赖关系，则对该依赖部署类型进行评估并将其作为此步骤的一部分进行安装。 独立媒体不支持应用程序依赖关系。  
 
 > [!NOTE]  
 > 要安装取代另一应用程序的应用程序，被取代的应用程序的内容文件必须可用。 否则任务序列步骤将失败。 例如，在客户端或捕获的映像中安装 Microsoft Visio 2010。 当运行“安装应用程序”步骤安装 Microsoft Visio 2013 时，Microsoft Visio 2010（被取代的应用程序）的内容文件必须在分发点上可用  。 如果某个客户端或捕获映像未安装 Microsoft Visio，任务序列会安装 Microsoft Visio 2013，而不会检查 Microsoft Visio 2010 内容文件。  
 >
-> 如果停用了某个被取代的应用, 并且在任务序列中引用了该新应用, 则任务序列将无法启动。
-此行为是设计的: 任务序列需要所有应用引用。<!-- SCCMDocs 1711 -->  
+> 如果停用了某个被取代的应用，并且在任务序列中引用了该新应用，则任务序列将无法启动。
+此行为是设计的：任务序列需要所有应用引用。<!-- SCCMDocs 1711 -->  
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
@@ -941,7 +941,7 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装应用程序”  以添加此步骤。
 
-通过以下 PowerShell cmdlet 管理此步骤:<!-- SCCMDocs #1118 -->
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
 
 - [CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
 - [新-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
@@ -1001,7 +1001,7 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 #### <a name="clear-application-content-from-cache-after-installing"></a>安装后从缓存中清除应用程序内容
 
 <!--4485675-->
-从1906版开始, 在步骤运行后, 从客户端缓存中删除应用内容。 对于具有小型硬盘的设备，或在连续安装大量大型应用时，这一行为是有帮助的。
+从1906版开始，在步骤运行后，从客户端缓存中删除应用内容。 对于具有小型硬盘的设备，或在连续安装大量大型应用时，这一行为是有帮助的。
 
 
 ### <a name="options"></a>选项
@@ -1142,7 +1142,7 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 
 在大多数情况下，使用默认设置来使用缓存的扫描结果。
 
-SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫描超时。 默认值为 30 分钟。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)。
+SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫描超时。 默认值为 60 分钟。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)。
 
 ### <a name="options"></a>选项  
 
@@ -1653,7 +1653,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 #### <a name="account"></a>帐户
 
 <!-- 3556028 -->
-从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 指定的帐户必须是系统上的本地管理员, 并且该脚本将使用此帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
+从版本 1902 开始，指定此步骤用于运行 PowerShell 脚本的 Windows 用户帐户。 指定的帐户必须是系统上的本地管理员，并且该脚本将使用此帐户的权限运行。 选择“设置”  以指定本地用户或域帐户。 有关任务序列运行方式帐户的详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account)。
 
 > [!IMPORTANT]  
 > 如果此步骤指定用户帐户并在 Windows PE 中运行，操作将失败。 Windows PE 无法加入域。 smsts.log  文件将记录这一失败。  
@@ -1678,7 +1678,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行任务序列”  以添加此步骤。
 
-从版本1906开始, 通过以下 PowerShell cmdlet 管理此步骤:<!-- 2839943, SCCMDocs #1118 -->
+从版本1906开始，通过以下 PowerShell cmdlet 管理此步骤：<!-- 2839943, SCCMDocs #1118 -->
 
 - **New-CMTSStepRunTaskSequence**
 - **Set-CMTSStepRunTaskSequence**
@@ -1809,7 +1809,7 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 使用此步骤执行从 Windows PE 到新 OS 的转换。 此任务序列步骤是在部署任何 OS 时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新 OS 中，并为任务序列在新 OS 中继续执行做好准备。  
 
-此步骤负责将任务序列从 Windows PE 转换为完整操作系统。 此步骤将在 Windows PE 中运行, 并且在此转换的整个操作系统中运行。 但是, 由于转换在 Windows PE 中开始, 因此只能在任务序列的 Windows PE 部分中添加。  
+此步骤负责将任务序列从 Windows PE 转换为完整操作系统。 此步骤将在 Windows PE 中运行，并且在此转换的整个操作系统中运行。 但是，由于转换在 Windows PE 中开始，因此只能在任务序列的 Windows PE 部分中添加。  
 
 在此步骤中使用以下任务序列变量：  
 
