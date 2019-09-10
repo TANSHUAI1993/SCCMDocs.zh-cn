@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44a01fa12a93b041e61e3bfc85890821bdf09c29
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: 5f6461d607401a0d932997d3ef38f02c991a5e2b
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738394"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808338"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -72,7 +72,7 @@ ms.locfileid: "70738394"
 - 有效的 Azure 订阅，具有[全局管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)权限。 不支持[Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
 
     > [!Important]  
-    > 桌面分析目前以 Office 365 服务的形式提供，并且需要 Azure AD 租户中的 Office 365 订阅。 将来可能不需要这样做。
+    > 桌面分析当前要求在 Azure AD 租户中部署 Office 365 服务。 以后这不是必需的。
 
     - **工作区所有者**或**参与者**权限**设置你的工作区**，以及以下角色：  
 

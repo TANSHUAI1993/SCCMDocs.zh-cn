@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 306c6569551e1068c0e682c893e94b8f1a920ade
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: e47827c6ad2b52ebb2b9dfabcdc4c61320385bf3
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738280"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808395"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -127,7 +127,7 @@ ms.locfileid: "70738280"
 
 是。 如果你现在使用 Azure 门户中的[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started)，现在可以继续执行此操作，而不能超过2020年1月。
 
-<!-- For more information, see [blog post]... -->
+有关详细信息，请参阅博客文章：[从 "Windows Analytics：升级就绪情况 "到桌面分析](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744)。
 
 ## <a name="other"></a>其他
 
