@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 08/28/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c4b0ed9150988deee3f8484e5c7b10eb919c086
-ms.sourcegitcommit: 9aa852d54670b5bc568a1ca6e57cd9c1349e5724
+ms.openlocfilehash: 5e0be6129306e37ba1721923efe1b7533875784e
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70053756"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380026"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -167,7 +167,7 @@ CMPivot 窗口包含以下元素：
 
      - **显示不具备以下条件的设备**：查询没有此属性值的设备。 例如，从 `OS` 查询的结果中，在“版本”行中的单元格上选择此选项：`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-     - **使用必应进行搜索**：使用此值作为查询字符串，启动默认 Web 浏览器以转到 www.bing.com 。  
+     - **使用必应进行搜索**：使用此值作为查询字符串，启动默认 Web 浏览器以转到 https://www.bing.com 。  
 
    - 单击任何超链接文本，可转到针对该特定信息的视图。  
 
@@ -261,6 +261,14 @@ CMPivot 窗口包含以下元素：
   - 这一更改提高了查看脚本或查询输出的性能。
   - 如果脚本或查询输出大于 80 KB，客户端会通过状态消息发送数据。
   - 如果客户端未更新至 1810 客户端版本，它将继续使用状态消息。
+
+- 启动 CMPivot 时，可能会看到以下错误：**由于脚本版本不兼容，现在无法使用 CMPivot。这个问题可能是因为层次结构正在升级站点所导致的。等待升级完成，然后重试。**
+
+  - 如果看到此消息，则表示：
+    - 安全作用域设置不正确。
+    - 升级过程中存在一些问题。
+    - 基础 CMPivot 脚本不兼容。
+
 
 ### <a name="bkmk_cmpivot-functions"></a>标量函数
 CMPivot 支持下列标量函数：

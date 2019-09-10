@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10689b4ae50b06f07516f50041e42a4871fa6bcf
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 947ea5908fdcfc620f043ab57c7174e69c7b0199
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536570"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176835"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Configuration Manager 中的站点系统角色的配置选项
 
@@ -83,7 +83,7 @@ Configuration Manager 站点系统角色的大多数配置选项都不言自明�
 
 ### <a name="allowed-connections"></a>允许的连接
 
-HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向注册代理点和带外服务点进行服务器身份验证，以及通过 SSL 对数据进行加密。 有关详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
+HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向注册代理点进行服务器身份验证，以及通过 SSL 对数据进行加密。 有关详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
 
 有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。  
 

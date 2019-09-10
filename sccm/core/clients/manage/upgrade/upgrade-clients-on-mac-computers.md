@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63f56c1d158370b72b43c41ec985adc93a735ba0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c3d465589c0763e0893bfe863ccfe41f82b40265
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125766"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378164"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 按照下面的高级步骤，使用 System Center Configuration Manager 应用程序升级 Mac 计算机上的客户端。 或者，你也可以下载 Mac 客户端安装文件，将其复制到 Mac 计算机上的共享网络位置或本地文件夹，然后指示用户手动运行安装。  
 
@@ -30,10 +30,10 @@ ms.locfileid: "56125766"
 ## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>步骤 1：从 Microsoft 下载中心下载最新的 Mac 客户端安装文件  
  Configuration Manager 安装媒体上未提供 Configuration Manager 的 Mac 客户端，必须从 Microsoft 下载中心下载。 Mac 客户端安装文件包含在名为 ConfigmgrMacClient.msi 的 Windows Installer 文件中。  
 
- 可以从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/p/?LinkId=525184)下载此文件。  
+ 可以从 [Microsoft Download Center（Microsoft 下载中心）](https://go.microsoft.com/fwlink/p/?LinkId=525184)下载此文件。  
 
-## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>步骤 2：运行下载的安装文件以创建 Mac 客户端安装文件  
- 在运行 Windows 的计算机上，运行下载的“ConfigmgrMacClient.msi”  以解压缩名为“Macclient.dmg” 的 Mac 客户端安装文件。 默认情况下，在你解压缩文件之后，此文件可在 Windows 计算机上的“C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client”  文件夹中找到。  
+## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>步骤 2:运行下载的安装文件以创建 Mac 客户端安装文件  
+ 在运行 Windows 的计算机上，运行下载的“ConfigmgrMacClient.msi”  以解压缩名为“Macclient.dmg”  的 Mac 客户端安装文件。 默认情况下，在你解压缩文件之后，此文件可在 Windows 计算机上的“C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client”  文件夹中找到。  
 
 ## <a name="step-3-extract-the-client-installation-files"></a>步骤 3：提取客户端安装文件  
  将 Macclient.dmg 文件复制到网络共享或 Mac 计算机上的本地文件夹。 然后，从 Mac 计算机中装载并随后打开 Macclient.dmg 文件，并将文件复制到 Mac 计算机上的某个文件夹。  
@@ -42,13 +42,13 @@ ms.locfileid: "56125766"
 
 1. 使用“CMAppUtil”  工具（位于 Mac 客户端安装文件的“Tools”  文件夹中）通过客户端安装包创建 .cmmac 文件。 该文件将用于创建 Configuration Manager 应用程序。  
 
-2. 将新文件“CMClient.pkg.cmmac”复制到可供运行 Configuration Manager 控制台的计算机使用的位置。  
+2. 将新文件“CMClient.pkg.cmmac”  复制到可供运行 Configuration Manager 控制台的计算机使用的位置。  
 
    有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
 
 ## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**步骤 5：** 创建并部署包含 Mac 客户端文件的应用程序  
 
-1. 在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”文件创建应用程序。  
+1. 在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”  文件创建应用程序。  
 
 2. 将此应用程序部署到层次结构中的 Mac 计算机。  
 
@@ -64,9 +64,9 @@ ms.locfileid: "56125766"
 ##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> 将升级后的客户端配置为使用现有证书  
  运行下列过程以防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
 
-- 在 Configuration Manager 控制台中，创建“Mac OS X”类型的配置项目。  
+- 在 Configuration Manager 控制台中，创建“Mac OS X”  类型的配置项目。  
 
-- 使用设置类型“脚本” 将设置添加到此配置项。  
+- 使用设置类型“脚本”  将设置添加到此配置项。  
 
 - 将下列脚本添加到设置：  
 

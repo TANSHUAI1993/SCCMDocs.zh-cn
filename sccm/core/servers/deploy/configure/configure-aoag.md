@@ -2,7 +2,7 @@
 title: 配置可用性组
 titleSuffix: Configuration Manager
 description: 设置和管理与 Configuration Manager 配合使用的 SQL Server Always On 可用性组
-ms.date: 7/19/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cc514e37554b8238124255584f59647446baf44
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 9677c49dfd577e5dc5e02450821ec73bdfb7f3b4
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536542"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380133"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -120,13 +120,9 @@ ms.locfileid: "68536542"
 <!--3127336-->
 从版本 1906 开始，运行 Configuration Manager 安装程序以添加新的同步副本成员。
 
-1. 使用[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)停止站点：`preinst.exe /stopsite`
+1. 使用 SQL Server 过程添加次要副本。
 
-1. 使用 SQL Server 程序修改可用性组：
-
-    1. 从主要副本[创建站点数据库的备份](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)。
-
-    1. [将该备份还原](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)到新的次要副本服务器。
+    1. [将次要副本添加到 Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
 
     1. 在 SQL Management Studio 中监视状态。 等待可用性组完全恢复正常运行。
 

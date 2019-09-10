@@ -3,12 +3,12 @@ title: System Center Configuration Manager
 summary: 关于 Configuration Manager 的官方产品文档
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: fdea6b136b93cc3afe62a9fd16efa365d9467b16
-  ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+  ms.openlocfilehash: 3c0f4f04b4fc28f96a1749013c393e33e4fea3f8
+  ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/04/2019
-  ms.locfileid: "67562061"
+  ms.lasthandoff: 09/06/2019
+  ms.locfileid: "70738111"
 highlightedContent:
   items:
   - title: 新增功能
@@ -75,6 +75,9 @@ conceptualContent:
     - text: 设置桌面分析
       url: https://docs.microsoft.com/sccm/desktop-analytics/set-up
       itemType: how-to-guide
+    - text: Office 365 仪表板
+      url: https://docs.microsoft.com/sccm/sum/deploy-use/office-365-dashboard
+      itemType: learn
     footerLink:
       text: 查看更多
       url: https://docs.microsoft.com/sccm/desktop-analytics/overview

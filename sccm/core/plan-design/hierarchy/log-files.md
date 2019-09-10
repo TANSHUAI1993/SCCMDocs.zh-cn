@@ -2,7 +2,7 @@
 title: 日志文件引用
 titleSuffix: Configuration Manager
 description: Configuration Manager 客户端、服务器和依赖组件的所有日志文件的引用。
-ms.date: 08/08/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44ed3f61914cf62a9eceb189be933330cf04124e
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: c82cd6cb25763de9c470148c91f80b79e31d981b
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860061"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243562"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -273,6 +273,7 @@ ms.locfileid: "68860061"
 |adsgdis.log|记录 Active Directory 组发现操作。|站点服务器|  
 |adsysdis.log|记录 Active Directory 系统发现操作。|站点服务器|  
 |adusrdis.log|记录 Active Directory 用户发现操作。|站点服务器|  
+|BusinessAppProcessWorker.log|记录适用于企业的 Microsoft Store 应用的处理。|站点服务器|
 |ccm.log|记录客户端请求安装的活动。|站点服务器|  
 |CertMgr.log|记录站点内通信的证书活动。|站点系统服务器|  
 |chmgr.log|记录客户端健康状况管理器的活动。|站点服务器|  
@@ -323,6 +324,7 @@ ms.locfileid: "68860061"
 |sitectrl.log|记录对数据库中的站点控制对象所做的站点设置更改。|站点服务器|  
 |sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| 用于将集合成员身份结果同步到 Azure Active Directory 的日志文件。 这是从 Configuration Manager 版本 1906 开始第一次作为预发布功能引入。| 站点服务器|
+|SMS_BUSINESS_APP_PROCESS_MANAGER.log|用于同步来自适用于企业的 Microsoft Store 的应用的组件的日志文件。|站点服务器|
 |SMS_ISVUPDATES_SYNCAGENT.log| 从 Configuration Manager 版本 1806 开始，用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
 |SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点|   
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
@@ -415,11 +417,13 @@ ms.locfileid: "68860061"
 |Dmpdownloader.log|记录有关通过 Microsoft Intune 进行的下载的详细信息。|具有服务连接点的计算机|  
 |Dmpuploader.log|记录有关将数据库更改上传到 Microsoft Intune 的详细信息。|具有服务连接点的计算机|  
 |hman.log|记录有关邮件转发的信息。|站点服务器|  
+|MSfBSyncWorker.log|记录与适用于企业的 Microsoft Store 的通信的相关信息。|具有服务连接点的计算机|
 |objreplmgr.log|记录对策略和分配的处理。|主站点服务器|  
 |policypv.log|记录所有策略的策略生成情况。|站点服务器|  
 |outgoingcontentmanager.log|记录上传到 Microsoft Intune 的内容。|具有服务连接点的计算机|  
 |sitecomp.log|记录服务连接点安装的详细信息。|站点服务器|  
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
+|SMS_CLOUDCONNECTION.log|记录有关云服务的信息。|具有服务连接点的计算机|
 |SMSProv.log|记录 SMS 提供程序所执行的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|带有 SMS 提供程序的计算机|  
 |SrvBoot.log|记录关于服务连接点安装程序服务的详细信息。|具有服务连接点的计算机|  
 |Statesys.log|记录对移动设备管理消息的处理。|主站点和管理中心站点|  
@@ -457,9 +461,11 @@ ms.locfileid: "68860061"
 |AppGroupHandler.log|从版本 1906 开始，应用程序组的检测和强制信息|客户端|
 |awebsctl.log|记录针对应用程序目录 Web 服务点站点系统角色的监视活动。|站点系统服务器|  
 |awebsvcMSI.log|记录应用程序目录 Web 服务点站点系统角色的详细安装信息。|站点系统服务器|  
+|BusinessAppProcessWorker.log|记录适用于企业的 Microsoft Store 应用的处理。|站点服务器|
 |CCMSDKProvider.log|记录应用程序管理 SDK 的活动。|客户端|  
 |colleval.log|记录有关集合计算器创建、更改和删除集合时的详细信息。|站点系统服务器|  
 |ConfigMgrSoftwareCatalog.log|记录应用程序目录的活动（包括它使用 Silverlight 的情况）。|客户端|  
+|MSfBSyncWorker.log|记录与适用于企业的 Microsoft Store 的通信的相关信息。|具有服务连接点的计算机|
 |NotiCtrl.log|应用程序请求通知。|站点服务器|  
 |portlctl.log|记录针对应用程序目录网站点站点系统角色的监视活动。|站点系统服务器|  
 |portlwebMSI.log|记录应用程序目录网站角色的 MSI 安装活动。|站点系统服务器|  
@@ -467,6 +473,8 @@ ms.locfileid: "68860061"
 |ServicePortalWebService.log|记录应用程序目录 Web 服务的活动。|站点系统服务器|  
 |ServicePortalWebSite.log|记录应用程序目录网站的活动。|站点系统服务器|  
 |SettingsAgent.log|特定应用程序的强制信息，记录应用程序组评估的业务流程，以及共同管理策略的详细信息。|客户端|
+|SMS_BUSINESS_APP_PROCESS_MANAGER.log|用于同步来自适用于企业的 Microsoft Store 的应用的组件的日志文件。|站点服务器|
+|SMS_CLOUDCONNECTION.log|记录有关云服务的信息。|具有服务连接点的计算机|
 |SMSdpmon.log|记录有关在分发点上配置的分发点健康状况监视计划任务的详细信息。|站点服务器|  
 |SoftwareCatalogUpdateEndpoint.log|记录管理在软件中心中显示的应用程序目录的 URL 的活动。|客户端|  
 |SoftwareCenterSystemTasks.log|记录与软件中心必备组件验证相关的活动。|客户端|  
@@ -754,7 +762,6 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |CAS.log|在为引用的内容找到分发点时记录详细信息。|客户端|  
 |ccmsetup.log|记录客户端安装、客户端升级和客户端删除的 ccmsetup 任务。 可用于排除客户端安装问题。|客户端|  
 |CreateTSMedia.log|记录任务序列媒体创建的详细信息。|运行 Configuration Manager 控制台的计算机|  
-|DeployToVhd.log|记录有关虚拟硬盘 (VHD) 创建和修改过程的详细信息。|运行 Configuration Manager 控制台的计算机|  
 |Dism.log|记录脱机维护的驱动程序安装操作或更新应用操作。|站点系统服务器|  
 |distmgr.log|记录有关为预启动执行环境 (PXE) 启用分发点的配置的详细信息。|站点系统服务器|  
 |DriverCatalog.log|记录有关已导入到驱动程序目录的设备驱动程序的详细信息。|站点系统服务器|  

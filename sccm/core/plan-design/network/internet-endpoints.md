@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 08/08/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fa7ab85d86a544b3ea0ad22325ddd63e2034982e
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 11241176abade1233a6fbdbe2ee3bdd0e3219e48
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860044"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243572"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -31,6 +31,8 @@ ms.locfileid: "68860044"
 服务连接点支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。 有关详细信息，请参阅[代理服务器支持](/sccm/core/plan-design/network/proxy-server-support)。
 
 有关服务连接点的详细信息，请参阅[关于服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。
+
+其他 Configuration Manager 功能可能需要来自服务连接点的其他终结点。 有关详细信息，请参阅本文中的其他部分。
 
 > [!TIP]  
 > 服务连接点在连接到 `go.microsoft.com` 或 `manage.microsoft.com` 时使用 Microsoft Intune 服务。 存在以下已知问题：如果未在服务连接点上安装 Baltimore CyberTrust 根证书、该证书已过期或损坏，则 Intune 连接器会遇到连接问题。 有关详细信息，请参阅 [KB 3187516：服务连接点不下载更新](https://support.microsoft.com/help/3187516)。  
@@ -90,6 +92,11 @@ ms.locfileid: "68860044"
 ## <a name="co-management"></a>共同管理
 
 如果将 Windows 10 设备注册到 Microsoft Intune 以进行共同管理，请确保这些设备可以访问 Intune 所需的终结点。 有关详细信息，请参阅 [Microsoft Intune 的终结点](https://docs.microsoft.com/intune/intune-endpoints)。
+
+
+## <a name="microsoft-store-for-business"></a>适用于企业的 Microsoft Store
+
+如果将 Configuration Manager 与[适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) 集成，请确保服务连接点和目标设备能够访问云服务。 有关详细信息，请参阅[适用于企业的 Microsoft Store 代理配置](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
 
 
 ## <a name="bkmk_cloud"></a> 云服务

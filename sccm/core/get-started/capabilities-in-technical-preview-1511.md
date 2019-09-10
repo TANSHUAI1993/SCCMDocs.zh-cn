@@ -12,16 +12,16 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02fc742ddb975c06bc7e919914ad46ae455bf92
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a24f33e9cef10df9ba329958e4cf93db838b5969
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127960"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378029"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
 
-适用范围：System Center Configuration Manager (Technical Preview)
+适用范围：  System Center Configuration Manager (Technical Preview)
 
 本文介绍了 System Center Configuration Manager Technical Preview 1511 版中的可用功能。 此版本是技术预览版的基准安装版本，可以使用它安装新的技术预览站点，或者从早期的技术预览版升级。   在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](/sccm/core/get-started/technical-preview)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
@@ -43,7 +43,7 @@ ms.locfileid: "56127960"
 1.  禁用 Windows 更新代理，以便它不会针对 WSUS 进行扫描（如果以前已启用）。   
     可以设置注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，以指示是否针对 WSUS 或 Windows 更新扫描计算机。  值是 2 时，它不会针对 WSUS 进行扫描。  
 
-2.  记下新属性“UseWUServer” （Configuration Manager 资源浏览器中“Windows 更新”  节点下）。  
+2.  记下新属性“UseWUServer”  （Configuration Manager 资源浏览器中“Windows 更新”  节点下）。  
 
 3.  基于 **UserWUServer** 属性为通过 WUfB 连接以获取更新和升级的所有计算机创建一个集合。  
 
@@ -98,7 +98,7 @@ ms.locfileid: "56127960"
 
 -   无法成功向已用作站点数据库的可用性组添加新的副本成员。 相反，必须在添加新的副本成员后重新安装站点。  
 
--   对于这种方案，你可能需要在管理点服务器上（ **从 SQL Server 2012 功能包** ）安装[SQL Server 2012 的本机客户端](http://www.microsoft.com/download/details.aspx?id=29065)。 这可以防止 SQL 连接错误（记录在管理点服务器上的“mp_getauth.log”  中）。  
+-   对于这种方案，你可能需要在管理点服务器上（ **从 SQL Server 2012 功能包** ）安装[SQL Server 2012 的本机客户端](https://www.microsoft.com/download/details.aspx?id=29065)。 这可以防止 SQL 连接错误（记录在管理点服务器上的“mp_getauth.log”  中）。  
 
 ### <a name="try-it-out"></a>试试看！  
 尝试完成以下任务，然后使用本主题顶部附近的反馈信息，让我们知道它们的工作方式：  
@@ -168,11 +168,11 @@ ms.locfileid: "56127960"
 
 1.  [创建一个设备集合](https://technet.microsoft.com/library/gg712295.aspx)，使其包含群集中的所有服务器。  
 
-2.  在“资产和符合性”工作区中，单击“设备集合”，右键单击包含群集中的服务器的集合，然后单击“属性”。  
+2.  在“资产和符合性”  工作区中，单击“设备集合”  ，右键单击包含群集中的服务器的集合，然后单击“属性”  。  
 
-3.  在“常规”选项卡上，选择“所有设备属于同一服务器集群”，然后单击“设置”。  
+3.  在“常规”  选项卡上，选择“所有设备属于同一服务器集群”  ，然后单击“设置”  。  
 
-4.  在“群集设置”页面，选择可以同时脱机安装软件更新的服务器的百分比。 不管你提供的百分比为何，可能只有一台群集服务器在某个时候会处于脱机状态。 当选择一次同时服务的服务器数量时，Configuration Manager 会向下取整。 例如，如果你选择 51%，并且群集中有 4 台服务器，则将有 2 台服务器会同时处于脱机状态。  
+4.  在“群集设置”  页面，选择可以同时脱机安装软件更新的服务器的百分比。 不管你提供的百分比为何，可能只有一台群集服务器在某个时候会处于脱机状态。 当选择一次同时服务的服务器数量时，Configuration Manager 会向下取整。 例如，如果你选择 51%，并且群集中有 4 台服务器，则将有 2 台服务器会同时处于脱机状态。  
 
 5.  指定是否使用部署前（节点排出）脚本或部署后（节点恢复）脚本。  
 

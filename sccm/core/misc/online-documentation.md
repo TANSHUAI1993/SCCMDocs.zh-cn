@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2015d0ac56be97eeb98e81f4d598c70ca8ee1f3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f69277c55cec8c6acf9ef6763d63f18f73b38d87
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128477"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379189"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 
@@ -60,7 +60,7 @@ ms.locfileid: "56128477"
 
 **发行说明：** 此技术预览版的发行说明包含在此版本的核心文档中，并且显示在每个功能的信息的字里行间。  
 
-**辅助功能：** 此技术预览版的辅助功能信息与 System Center 2012 Configuration Manager 中的一样。 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
+**辅助功能：** 此技术预览版的辅助功能信息与 System Center 2012 Configuration Manager 中的一样。 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](https://go.microsoft.com/fwlink/p/?LinkId=258586)。  
 
 ## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager  
 以下项目的**联机文档**：  
@@ -91,10 +91,10 @@ ms.locfileid: "56128477"
 
   **发行说明和技术出版物：** 发行说明和技术出版物对 Configuration Manager 指南进行补充。 发行说明包含产品文档中未提供的信息，该信息是成功安装 Configuration Manager 所需要的。 技术出版物提供了支持 Configuration Manager 的附加信息。  
 
-- [System Center 2012 Configuration Manager 的发行说明](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [System Center 2012 Configuration Manager 的发行说明](https://go.microsoft.com/fwlink/?LinkId=529437)  
 
-- [System Center 2012 Configuration Manager 的技术出版物](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [System Center 2012 Configuration Manager 的技术出版物](https://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
-**辅助功能：** 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅联机主题 [Configuration Manager 的辅助功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
+**辅助功能：** 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅联机主题 [Configuration Manager 的辅助功能](https://go.microsoft.com/fwlink/p/?LinkId=258586)。  
 
-**可下载文档：** 你可以 [从 Microsoft 下载中心下载此技术文档的副本](http://go.microsoft.com/fwlink/?LinkId=253643)。 请使用在线的 TechNet 库来获取最新的信息。
+**可下载文档：** 你可以 [从 Microsoft 下载中心下载此技术文档的副本](https://go.microsoft.com/fwlink/?LinkId=253643)。 请使用在线的 TechNet 库来获取最新的信息。
