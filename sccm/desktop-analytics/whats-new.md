@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 最新的桌面分析云服务每月版本中的新功能摘要。
-ms.date: 09/03/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,17 +11,17 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b6afa437dd37603bef668d4bc6ba39ad05aec2d
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 6c25aaba8c93204283723521ac157c62e62343d7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243545"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891696"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
 > [!Note]  
-> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
+> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 了解桌面分析中每月的新增功能。
 
@@ -38,6 +38,12 @@ ms.locfileid: "70243545"
 <!-- 4252663 -->
 
 在载入期间，你现在可以从现有的 Windows Analytics 工作区迁移输入。 有关详细信息，请参阅[现有 Windows Analytics 客户](/sccm/desktop-analytics/faq#existing-windows-analytics-customers)的常见问题。
+
+### <a name="offboard-from-desktop-analytics"></a>桌面分析中的下架
+
+<!-- 4972396 -->
+
+如果你在环境中设置了桌面分析，但想要停止使用该服务，现在可以关闭你的帐户。 如果你在90天内改变主意，则可以重新激活该帐户。 有关详细信息，请参阅[如何关闭你的帐户](/sccm/desktop-analytics/account-close)。
 
 
 ## <a name="august-2019"></a>2019年8月

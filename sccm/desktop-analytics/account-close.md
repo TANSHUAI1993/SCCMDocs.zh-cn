@@ -2,7 +2,7 @@
 title: 如何关闭你的帐户
 titleSuffix: Configuration Manager
 description: 如何从 Azure 帐户中删除桌面分析
-ms.date: 07/08/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,62 +11,84 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2b1c893204366581eacd0f8e953cb2a6fd0d1a4
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 387d16b75c688640eba0ed6658b281badd3c7c54
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676178"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891735"
 ---
 # <a name="how-to-close-your-account"></a>如何关闭你的帐户
 
 > [!Note]  
-> 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
+> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-如果在环境中，设置 Desktop 分析并确定还需要将其删除，使用此过程来关闭你的帐户。
+如果你在环境中设置了 "桌面分析"，然后决定要删除它，请使用此过程来关闭你的帐户。
 
-## <a name="contact-support"></a>请联系支持人员
+## <a name="prerequisites"></a>先决条件
 
-第一步是与 Microsoft 支持部门联系。 打开支持案例来关闭你的桌面 Analytics 帐户。 之前不要继续执行其他步骤收到确认 Microsoft 关闭你的帐户。
+只有**全局管理员**才能关闭或重新激活 Azure 门户中的帐户。
+
+## <a name="process-to-offboard"></a>处理到下架
+
+1. 以具有**全局管理员**角色的用户身份在 Microsoft 365 设备管理 "中打开[桌面分析门户](https://aka.ms/desktopanalytics)。
+
+1. 在**全局设置**菜单中，选择 "**连接的服务**"。 在 "注册设备" 部分中，选择 "**下架**" 选项。
+
+1. 如果你决定继续，你的帐户将会关闭。
+
+> [!Important]
+> 90天后，请继续阅读本文的剩余部分，如果不能重新激活。
+>
+> 如果你想要完全关闭你的帐户而不等待90天，请首先[重置](/sccm/desktop-analytics/account-reset)你的帐户。
+
+## <a name="reactivate"></a>$
+
+在接下来的90天，你的组织中访问桌面分析门户的任何管理员都将看到你选择下架的通知。
+
+全局管理员可以在90天内重新激活帐户。 若要为你的组织还原桌面分析，请选择此选项以**返回**。
 
 ## <a name="delete-the-solution"></a>删除解决方案
 
-1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**全局管理员**角色。
+> [!Warning]
+> 90天后，请继续阅读本文的剩余部分，如果不能重新激活。 如果删除并断开这些其他组件的连接，请不要尝试重新激活。
 
-1. 在中搜索**的所有资源**Desktop 分析工作区的名称。 此名称是注册该服务时创建的内容。
+1. 以具有**全局管理员**角色的用户身份登录到[Azure 门户](https://portal.azure.com)。
 
-1. 删除`Microsoft365Analytics(YourWorkspaceName)`类型的**解决方案**。
+1. 在 "**所有资源**" 中搜索桌面分析工作区的名称。 此名称是在注册服务时创建的。
 
-Desktop 分析数据会过期，根据数据保留策略工作区。 您可以继续使用同一个工作区中的任何其他解决方案。
+1. 删除`Microsoft365Analytics(YourWorkspaceName)`类型**解决方案**。
+
+桌面分析数据基于工作区的数据保留策略过期。 你可以继续使用同一工作区中的任何其他解决方案。
 
 > [!Important]  
-> 如果使用 Windows Analytics 等其他解决方案的 Log Analytics 工作区，不要删除工作区。
+> 如果将 Log Analytics 工作区与 Windows Analytics 等其他解决方案一起使用，请不要删除工作区。
 
-## <a name="remove-user-and-app-access"></a>删除用户和应用的访问权限
+## <a name="remove-user-and-app-access"></a>删除用户和应用访问权限
 
-1. 登录到[Azure 门户](https://portal.azure.com)具有的用户身份**全局管理员**角色。 转到**Azure Active Directory**。
+1. 以具有**全局管理员**角色的用户身份登录到[Azure 门户](https://portal.azure.com)。 请参阅**Azure Active Directory**。
 
-1. 在中**角色和管理员**，搜索**Desktop 分析管理员**角色。 删除其成员。
+1. 在 "**角色" 和 "管理员**" 中，搜索 "**桌面分析管理员**" 角色。 删除其成员。
 
-1. 在中**组**，删除以下组的成员：
+1. 在 "**组**" 中，删除以下组的成员：
 
-    - **M365 分析客户端管理员 （日志分析所有者）**
-    - **M365 分析客户端管理员 （Log Analytics 参与者）**
+    - **M365 Analytics 客户端管理员（Log Analytics 所有者）**
+    - **M365 Analytics 客户端管理员（Log Analytics 参与者）**
 
-1. 在中**企业应用程序**、 删除或撤消针对以下应用的访问权限：
+1. 在 "**企业应用程序**" 中，删除或撤消对以下应用的访问权限：
 
     - `MaLogAnalyticsReader`
 
-    - ConfigMgr 应用程序。 若要查找此应用程序的名称，请转到 Configuration Manager 控制台。 在中**Administration**工作区中，展开**云服务**，然后选择**Azure 服务**节点。 打开的属性**Desktop 分析**服务，并切换到**应用程序**选项卡。**Web 应用**是此 Azure 应用程序。
+    - ConfigMgr 应用。 若要查找此应用的名称，请前往 Configuration Manager 控制台。 在 "**管理**" 工作区中，展开 "**云服务**"，然后选择 " **Azure 服务**" 节点。 打开**桌面分析**服务的属性，并切换到 "**应用程序**" 选项卡。**Web 应用**是此 Azure 应用。
 
         > [!Important]  
-        > 在 Azure AD 中对此应用程序进行更改之前，请确保，您不能重复使用它与另一个服务配置管理器中。
+        > 在 Azure AD 中对此应用进行更改之前，请确保不会将其与 Configuration Manager 中的其他服务一起使用。
 
-## <a name="disconnect-configuration-manager"></a>断开连接配置管理器
+## <a name="disconnect-configuration-manager"></a>断开连接 Configuration Manager
 
-1. 打开 Configuration Manager 控制台以用户身份**完全权限管理员**角色。
+1. 以具有**完全权限管理员**角色的用户身份打开 Configuration Manager 控制台。
 
-1. 转到**Administration**工作区中，展开**云服务**，然后选择**Azure 服务**节点。
+1. 中转到 "**管理**" 工作区，展开 "**云服务**"，然后选择 " **Azure 服务**" 节点。
 
 1. 删除桌面分析服务。
 
@@ -74,24 +96,24 @@ Desktop 分析数据会过期，根据数据保留策略工作区。 您可以�
 
 ### <a name="unenroll-devices"></a>取消注册设备
 
-在已注册的设备上从以下 Windows 注册表项中删除 CommercialID 值：
+在已注册的设备上，从以下 Windows 注册表项中删除 CommercialID 值：
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 ### <a name="windows-diagnostic-data-configuration"></a>Windows 诊断数据配置
 
-如果不希望你继续发送诊断数据的设备：
+如果你不希望设备继续发送诊断数据：
 
-- Windows 10： 将诊断数据级别设置为**安全**
-- Windows 7 SP1 或 8.1： 禁用**商业数据选择的密钥**
+- Windows 10：将诊断数据级别设置为**安全性**
+- Windows 7 SP1 或8.1：禁用**商业数据选择加入密钥**
 
-设置这些值使用以下方法之一：
+使用以下方法之一设置这些值：
 
-- 在组策略，**计算机配置** > **管理模板** > **Windows 组件** >  **数据收集和预览版本**
-- 移动设备管理 (MDM)，如[Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- 组策略，在**计算机配置** > 中**管理模板** > **Windows 组件** > **数据收集和预览版本**
+- 移动设备管理（MDM），如[Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。
 
 > [!NOTE]  
-> 当应用这些更改时，设备将立即停止发送诊断数据。 可能需要 24-48 小时，microsoft 将停止处理你的工作区的见解。 在 30 天或更少 Microsoft 从其云服务中删除此数据。
+> 应用这些更改后，设备会立即停止发送诊断数据。 Microsoft 可能需要24-48 小时才能停止处理工作区的见解。 Microsoft 会在30天内或更短时间内从其云服务中删除此数据。
