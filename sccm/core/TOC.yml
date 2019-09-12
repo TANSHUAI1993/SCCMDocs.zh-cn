@@ -659,13 +659,13 @@
               href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
         - name: 规划如何唤醒客户端
           href: clients/deploy/plan/plan-wake-up-clients.md
-        - name: 关于在虚拟桌面基础结构 (VDI) 中管理客户端的注意事项
+        - name: 管理 VDI 客户端
           href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
     - name: 客户端部署任务
       items:
         - name: 如何配置客户端通信端口
           href: clients/deploy/configure-client-communication-ports.md
-        - name: 如何配置客户端计算机以使用 DNS 发布查找管理点
+        - name: 配置客户端以使用 DNS 发布功能
           href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
         - name: 配置客户端设置
           items:
@@ -723,8 +723,8 @@
           href: clients/manage/client-notification.md
         - name: 如何管理 Linux 和 UNIX 客户端
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
-        - name: 将数据同步到 Log Analytics
-          href: clients/manage/sync-data-log-analytics.md
+        - name: 将数据同步到 Azure Monitor
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
         - name: 维护 Mac 客户端
           href: clients/manage/maintain-mac-clients.md
         - name: Surface 设备仪表板
@@ -795,19 +795,19 @@
           href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
     - name: 资产智能
       items:
-        - name: 资产智能简介
+        - name: 简介
           href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
-        - name: 资产智能先决条件
+        - name: 先决条件
           href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
         - name: 配置资产智能
           href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
         - name: 使用资产智能
           href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
-        - name: 资产智能的安全和隐私
+        - name: 安全和隐私
           href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
-        - name: 资产智能的验证状态转换示例
+        - name: 验证状态转换示例
           href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
-        - name: 资产智能常规许可证导入文件示例
+        - name: 常规许可证导入文件示例
           href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
         - name: 使用产品生命周期仪表板
           href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
