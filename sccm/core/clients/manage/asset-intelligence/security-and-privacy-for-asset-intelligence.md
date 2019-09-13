@@ -2,7 +2,7 @@
 title: 资产智能安全和隐私
 titleSuffix: Configuration Manager
 description: 获取 System Center Configuration Manager 中资产智能的安全和隐私信息。
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f6b052f47c828a09e69844c012b47526ee367d
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 283a60145047da5c593ab287c83fc2a9d06783aa
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500120"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890269"
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中资产智能的安全和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本主题包括有关 System Center Configuration Manager 中资产智能的安全和隐私的信息。  
 

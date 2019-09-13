@@ -2,7 +2,7 @@
 title: 使用资源浏览器查看软件清单
 titleSuffix: Configuration Manager
 description: 使用资源浏览器查看 System Center Configuration Manager 中的软件清单。
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aa4b118b87015389762ca4ec6ea79ba5ea2034f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: eba3e3757a325576222636ca0113bc667639c538
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499664"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890046"
 ---
 # <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>如何使用资源浏览器来查看 System Center Configuration Manager 中的软件清单
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager 中的资源浏览器查看从层次结构中的计算机收集的软件清单的相关信息。  
 
@@ -41,11 +41,11 @@ ms.locfileid: "65499664"
 
 ## <a name="to-run-resource-explorer-from-the-configuration-manager-console"></a>若要从 Configuration Manager 控制台运行资源浏览器  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性”
+1.  在 Configuration Manager 控制台中，选择“资产和符合性” 
 
-2.  在“资产和符合性”工作区中，选择“设备”或打开显示设备的任何集合。  
+2.  在“资产和符合性”  工作区中，选择“设备”  或打开显示设备的任何集合。  
 
-3.  选择包含想要查看的清单的计算机，然后在“主页”选项卡 >“设备”组中，选择“启动” > “资源浏览器”。
+3.  选择包含想要查看的清单的计算机，然后在“主页”  选项卡 >“设备”  组中，选择“启动”   > “资源浏览器”  。
 
-4.  可以右键单击“资源浏览器”窗口右窗格中的任意项，然后选择“属性”，以可读性更强的格式查看收集的清单信息。  
+4.  可以右键单击“资源浏览器”窗口右窗格中的任意项，然后选择“属性”  ，以可读性更强的格式查看收集的清单信息。  
  

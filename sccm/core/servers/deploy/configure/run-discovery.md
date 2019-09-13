@@ -2,7 +2,7 @@
 title: 发现设备和用户资源
 titleSuffix: Configuration Manager
 description: 阅读发现过程和发现数据记录的概述。
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51d96ef84832785e8d01bad447883dbe4761c2b0
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 760ea21d2badc6e58acf10c78aec4a3437ed3c1a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65498399"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890703"
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>运行 System Center Configuration Manager 发现
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager 中的一种或多种发现方法以查找可以管理的设备和用户资源。 还可以使用发现来识别环境中的网络基础结构。 可使用多种不同的方法来发现不同的内容，并且每种方法都有其自己的配置和限制。  
 

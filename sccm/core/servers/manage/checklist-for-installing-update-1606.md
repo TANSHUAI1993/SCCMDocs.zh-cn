@@ -2,7 +2,7 @@
 title: 1606 清单
 titleSuffix: Configuration Manager
 description: 了解从 System Center Configuration Manager 版本 1511 或 1602 更新到版本 1606 之前需要执行的操作。
-ms.date: 6/6/2017
+ms.date: 06/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5275d24cecebbcda06b75de3d27dae1fe7c1e6c
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 5639e66b52d7ea3f7257e495d445a93dd058fe8e
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956360"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892139"
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
 

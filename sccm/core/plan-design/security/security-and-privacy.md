@@ -2,7 +2,7 @@
 title: 安全和隐私资源
 titleSuffix: Configuration Manager
 description: 查找有关 System Center Configuration Manager 的安全性和隐私的资源。
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bfc608fd9180f690269597a03fa35d15faa1b57
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b5918758b9894920047c89ac0c96d3c4c96c7742
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142470"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891227"
 ---
 # <a name="security-and-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全性和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本文包括 System Center Configuration Manager 的安全和隐私相关资源。  
 

@@ -2,7 +2,7 @@
 title: 准备 Windows Server
 titleSuffix: Configuration Manager
 description: 确保计算机满足用作 Configuration Manager 的站点服务器或站点系统服务器的先决条件。
-ms.date: 2/14/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbe2608058f7364ba2b78a7ed31a01dbec5ef65f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ce183f33a022259a5f706a6ec32aab409e0493a0
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499188"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891257"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>准备 Windows Server 以支持 Configuration Manager
 

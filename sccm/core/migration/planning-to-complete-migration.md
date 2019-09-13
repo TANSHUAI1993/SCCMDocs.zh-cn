@@ -2,7 +2,7 @@
 title: 完成迁移
 titleSuffix: Configuration Manager
 description: 了解如何在源层次结构不再包含数据后，完成到 System Center Configuration Manager 目标层次结构的迁移。
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b93672c951668a4ea3b9970c0fd22132ec5aa8b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 25cf1473da6bf44792e4037821000b110dc09c37
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128317"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891491"
 ---
 # <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>规划在 System Center Configuration Manager 中完成迁移
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 对于 System Center Configuration Manager，当源层次结构不再包含要迁移到目标层次结构的数据时，可以完成迁移过程。 完成迁移包括下列常规步骤：  
 
@@ -54,4 +54,4 @@ ms.locfileid: "56128317"
 ##  <a name="Plan_to_clean_up"></a>计划清理迁移数据  
  完成迁移所需的最后一步是清理迁移数据。 在停止收集源层次结构中每个源站点的数据之后，你可以使用“清理迁移数据”  命令。 此可选操作将从目标层次结构的数据库中删除有关当前源层次结构的数据。  
 
- 清理迁移数据时，会从目标层次结构的数据库中删除有关迁移的大部分数据。 但是，有关迁移对象的详细信息将会保留。 通过这些详细信息，可以使用“迁移”工作区重新配置包含已迁移的数据的源层次结构，以恢复从该源层次结构进行迁移，或者查看以前迁移的对象的对象和站点所有权。  
+ 清理迁移数据时，会从目标层次结构的数据库中删除有关迁移的大部分数据。 但是，有关迁移对象的详细信息将会保留。 通过这些详细信息，可以使用“迁移”  工作区重新配置包含已迁移的数据的源层次结构，以恢复从该源层次结构进行迁移，或者查看以前迁移的对象的对象和站点所有权。  

@@ -2,7 +2,7 @@
 title: 集合安全和隐私
 titleSuffix: Configuration Manager
 description: 获取 System Center Configuration Manager 中集合的最佳安全做法和隐私。
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1de6835b3096d8747258461b5e0013bc6e87028
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c71df04bab25a07d854ccc582fc92e4da8d1ad40
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138783"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890153"
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的集合的安全和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本主题包含 System Center Configuration Manager 中集合的最佳安全做法和隐私信息。  
 

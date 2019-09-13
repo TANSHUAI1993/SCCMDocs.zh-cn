@@ -2,7 +2,7 @@
 title: 查找站点资源
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 客户端如何以及何时使用服务定位查找站点资源。
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bded5760fb397f0bd2acc676a9f875235d66fae4
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: e24460cb7acaaa715d21d49bd1e1f37fe270253c
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380162"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891193"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>了解客户端如何查找 System Center Configuration Manager 的站点资源和服务
 

@@ -2,7 +2,7 @@
 title: 服务时段
 titleSuffix: Configuration Manager
 description: 使用服务时段控制 System Center Configuration Manager 站点安装更新的时间。
-ms.date: 1/11/2017
+ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 495d109d73a32617f58383b78d11a10bf05edf75
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d4244c92bd312dd67667bb00d19ca6f3cf94ecb6
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134531"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892044"
 ---
 #  <a name="service-windows-for-site-servers"></a>站点服务器的服务时段
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 可以在中心管理站点和主站点配置服务时段，控制控制台中更新可以安装的时间。  可配置多个时段，时段允许用于安装更新，更新由该站点服务器的所有服务时段的组合决定。
 
@@ -36,6 +36,6 @@ ms.locfileid: "56134531"
 
 ## <a name="to-configure-a-service-window"></a>配置服务时段
 
-1.  在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，然后选择要在其中配置服务时段的站点服务器。  
+1.  在 Configuration Manager 控制台中，打开“管理”   > “站点配置”   > “站点”  ，然后选择要在其中配置服务时段的站点服务器。  
 
-2.  接下来，编辑站点服务器“属性”，然后选择“服务时段”选项卡，此时你可以在其中为该站点服务器设置一个或多个服务时段。  
+2.  接下来，编辑站点服务器“属性”，然后选择“服务时段”选项卡，此时你可以在其中为该站点服务器设置一个或多个服务时段。    

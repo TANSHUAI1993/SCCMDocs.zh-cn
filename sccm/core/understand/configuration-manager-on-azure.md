@@ -1,5 +1,6 @@
 ---
 title: Azure 上的 Configuration Manager
+titleSuffix: Configuration Manager
 description: 有关在 Azure 环境中使用 Configuration Manager 的信息。
 ms.date: 03/27/2017
 ms.prod: configuration-manager
@@ -10,14 +11,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb185a009740b73a7836b94aca18f9748aa76fb5
-ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
+ms.openlocfilehash: 71588dbd541c9d42c37b182b3ef420f3e68f3c3a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662620"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891978"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
+
 适用范围：  System Center Configuration Manager (Current Branch)
 
 下列问题和解答可帮助了解何时使用以及如何在 Microsoft Azure 上配置 Configuration Manager。

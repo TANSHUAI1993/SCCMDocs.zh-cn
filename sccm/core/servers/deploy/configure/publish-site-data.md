@@ -2,7 +2,7 @@
 title: 发布站点数据
 titleSuffix: Configuration Manager
 description: 了解如何将 Configuration Manager 站点发布到 Active Directory 域服务。
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce6e2d18da1c2cb87a52fdef545d1b23f602f38
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 016e809e752b54d73550f783c5a16296521121e5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501427"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891213"
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>发布 System Center Configuration Manager 的站点数据
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 在为 System Center Configuration Manager 扩展 Active Directory 架构后，可将 Configuration Manager 站点发布到 Active Directory 域服务 (AD DS)。 这使 Active Directory 计算机能以从受信任的源中安全地检索站点信息。 尽管无需将站点信息发布到 AD DS 即可使用基本的 Configuration Manager 功能，但这么做可以减少管理开销。  
 
@@ -33,31 +33,31 @@ ms.locfileid: "65501427"
 ## <a name="configure-sites-to-publish-to-ad-ds"></a>将站点配置为发布到 AD DS  
  高级步骤如下：  
 
--   必须在要发布站点数据的每个林中[扩展 System Center Configuration Manager 的 Active Directory 架构](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。 此外，还需确保存在“系统管理”容器。  
+-   必须在要发布站点数据的每个林中[扩展 System Center Configuration Manager 的 Active Directory 架构](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。 此外，还需确保存在“系统管理”  容器。  
 
--   必须为每个将发布数据的主站点的计算机帐户授予对“系统管理”容器及其所有子对象的“完全控制”权限。  
+-   必须为每个将发布数据的主站点的计算机帐户授予对“系统管理”  容器及其所有子对象的“完全控制”  权限。  
 
 ### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-active-directory-forest"></a>使 Configuration Manager 站点能够将站点信息发布到 Active Directory 林
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 控制台中，单击“管理”  。  
 
-2.  在“管理”  工作区中，展开“站点配置” ，并单击“站点” 。 选择要发布其站点数据的站点。 然后，在“主页”选项卡上的“属性”组中，单击“属性”。  
+2.  在“管理”  工作区中，展开“站点配置”  ，并单击“站点”  。 选择要发布其站点数据的站点。 然后，在“主页”  选项卡上的“属性”  组中，单击“属性”  。  
 
-3.  在站点属性的“发布”选项卡上，选择此站点要将站点数据发布到其中的林。  
+3.  在站点属性的“发布”  选项卡上，选择此站点要将站点数据发布到其中的林。  
 
 4.  单击“确定”  保存配置。  
 
 ### <a name="to-set-up-active-directory-forests-for-publishing"></a>针对发布设置 Active Directory 林  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 控制台中，单击“管理”  。  
 
-2.  在“管理”工作区中，展开“层次结构配置”，并单击“Active Directory 林”。 如果 Active Directory 林发现之前已运行，你将在结果窗格中看到每个发现的林。 当 Active Directory 林发现运行时，将发现本地林和任何受信任林。 只有不受信任的林才必须手动添加。  
+2.  在“管理”工作区中，展开“层次结构配置”，并单击“Active Directory 林”    。 如果 Active Directory 林发现之前已运行，你将在结果窗格中看到每个发现的林。 当 Active Directory 林发现运行时，将发现本地林和任何受信任林。 只有不受信任的林才必须手动添加。  
 
-    -   若要设置先前发现的林，请在结果窗格中选择林。 然后在“主页”选项卡上的“属性”组中，单击“属性”以打开林属性。 继续执行步骤 3。  
+    -   若要设置先前发现的林，请在结果窗格中选择林。 然后在“主页”  选项卡上的“属性”  组中，单击“属性”  以打开林属性。 继续执行步骤 3。  
 
-    -   若要设置未列出的新林，请在“主页”选项卡上的“创建”组中，单击“添加林”以打开“添加林”对话框。 继续执行步骤 3。  
+    -   若要设置未列出的新林，请在“主页”  选项卡上的“创建”  组中，单击“添加林”  以打开“添加林”  对话框。 继续执行步骤 3。  
 
-3.  在“常规”选项卡上，为要发现的林完成配置，并指定“Active Directory 林帐户”。  
+3.  在“常规”  选项卡上，为要发现的林完成配置，并指定“Active Directory 林帐户”  。  
 
     > [!NOTE]  
     >  Active Directory 林发现需要全局帐户才能发现和发布到不受信任林。 如果不使用站点服务器的计算机帐户，则只能选择全局帐户。  

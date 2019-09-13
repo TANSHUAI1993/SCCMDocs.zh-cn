@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 862505e7ea1ad1e59b0bbf7ace07bc07d326a83d
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: e6c5d99860d8897e34038319c5c16417985132cf
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379876"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892073"
 ---
 # <a name="create-queries-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建查询
 
@@ -101,10 +101,10 @@ ms.locfileid: "70379876"
 > [!TIP]  
 > 若要返回运行 Windows Server 2008 R2 的计算机，请将 `%Workstation 6.1%` 改为 `%Server 6.1%`。  
 
-```  
+``` WQL
 select SMS_R_System.NetbiosName,  
-SMS_R_System.OperatingSystemNameandVersion from    
-SMS_R_System where   
+SMS_R_System.OperatingSystemNameandVersion from
+SMS_R_System where
 SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"  
 ```  
 
@@ -115,12 +115,12 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 > [!TIP]  
 > 此查询通过使用 Windows 控制面板中程序列表中显示的名称来搜索软件包。  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from    
-SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
-SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
-SMS_R_System.ResourceId where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
+SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on
+SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =
+SMS_R_System.ResourceId where
 SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
@@ -128,10 +128,10 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"
 
 使用以下查询来返回指定组织单位 (OU) 中所有计算机的 NetBIOS 名称和 OU 名称。 用想要查询的 OU 的名称代替文本 `OU Name`。  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_R_System.SystemOUName from    
-SMS_R_System where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_R_System.SystemOUName from
+SMS_R_System where
 SMS_R_System.SystemOUName = "OU Name"  
 ```  
 
@@ -139,8 +139,8 @@ SMS_R_System.SystemOUName = "OU Name"
 
 使用以下查询来返回以指定字符串开头的所有计算机的 NetBIOS 名称。 在本例中，查询会返回 NetBIOS 名称以 `ABC` 开头的所有计算机。  
 
-```  
-select SMS_R_System.NetbiosName from    
+``` WQL
+select SMS_R_System.NetbiosName from
 SMS_R_System where SMS_R_System.NetbiosName like "ABC%"  
 ```  
 
@@ -148,7 +148,7 @@ SMS_R_System where SMS_R_System.NetbiosName like "ABC%"
 
 设备类型存储在 Configuration Manager 数据库中，在 **sms_r_system** 资源类型和 **AgentEdition** 属性名称下。 若要仅检索与指定设备类型的代理版本匹配的设备，请使用以下查询：  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
@@ -177,7 +177,7 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 
  例如，若要只返回 Mac 计算机，请使用以下查询：  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
 

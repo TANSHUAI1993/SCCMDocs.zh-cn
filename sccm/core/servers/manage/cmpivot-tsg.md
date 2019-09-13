@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1614327bbea6ecb92d37e1ca89d9ee430b74f2f
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 7a8c3147b4ba7df547b07947ee47d4084591f52f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338120"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892166"
 ---
 # <a name="troubleshooting-cmpivot"></a>CMPivot 疑难解答
 
@@ -28,7 +28,7 @@ CMPivot 是一种控制台中实用工具，现提供对环境中设备实时状
 
 查看此行的 smsprov.log  ：
 
-```
+``` Log
 Auditing: User <username> initiated client operation 135 to collection <CollectionId>.
 ```
 
@@ -38,7 +38,7 @@ Auditing: User <username> initiated client operation 135 to collection <Collecti
 
 在 ClientAction 表中查找 TaskID  。 TaskID 对应 ClientAction 表中的 UniqueID   。 
 
-```SQL
+``` SQL
 select * from ClientAction where ClientOperationId=<id>
 ```
 
@@ -57,14 +57,14 @@ select * from ClientAction where ClientOperationId=<id>
 
 查看 TaskID 的 Scripts.log   。 在以下示例中，可以看到“任务 ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}”  ：
 
-```
+``` Log
 Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
 State message: Task Id {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A} Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
 ```
 
 查看 StateMessage.log  。 示例 TaskID 位于 &lt;Param> 旁的消息的底部  。 应看见类似于下面的行：
 
-```xml
+``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
 <Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
 </ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
@@ -86,7 +86,7 @@ Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 A
 
 打开 statesys.log，查看否已收到和处理消息  。 示例 TaskID 位于 &lt;Param> 旁的消息的底部  。
 
-```xml
+``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
 16"?>~~<Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
 </ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
@@ -107,7 +107,7 @@ CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml ver
 
 使用 TaskID 查看来自 SQL 的 CMPivot 监视视图  。
 
-```SQL
+``` SQL
 select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}'
 ```
 

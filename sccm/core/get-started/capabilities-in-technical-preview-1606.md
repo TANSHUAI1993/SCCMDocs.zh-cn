@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4527a67b7a08d7f5b9fd38d2edb223a9de823436
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 135589a924e62cf4eed592fe339780cf138c410d
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677640"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889690"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 版本 1606 中的功能
 
@@ -28,8 +28,8 @@ ms.locfileid: "67677640"
 **此 Technical Preview 中的已知问题：**  
 *  当从技术预览版 1604 更新到 1605 ，然后再更新到 1606 时，更新可能会失败，并且会在 **cmupdate.log** 中记录一个类似于以下的错误：
 
-    ```
-    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ``` Log
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END
     ```
 
     如果发生这种情况，请在“更新与维护服务”  节点中单击“检查更新”  ，然后单击“重试”  ，以重试更新安装。

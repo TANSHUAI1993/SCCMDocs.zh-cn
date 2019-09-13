@@ -2,7 +2,7 @@
 title: 更新重置工具
 titleSuffix: Configuration Manager
 description: 将更新重置工具用于 System Center Configuration Manager 的控制台中更新。
-ms.date: 7/31/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6366e4a92be6aea0441adf6c81c8c8416b05f33
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: dbd5f382a50baecf53c3925e2d903b2abb1948ec
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68337993"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892031"
 ---
 # <a name="update-reset-tool"></a>更新重置工具
 

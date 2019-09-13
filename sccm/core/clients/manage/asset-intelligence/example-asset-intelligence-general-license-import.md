@@ -2,7 +2,7 @@
 title: 资产智能常规许可证导入文件示例
 titleSuffix: Configuration Manager
 description: 使用示例资产智能常规许可证文件，帮助在 System Center Configuration Manager 中导入软件许可证。
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ab8e241f9a1bacba7f8bcfbe0674fbfb513db2e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3cd873f7db312b84ef7591bbd82993e3ebc7a891
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500014"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890309"
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中的资产智能常规许可证导入文件示例
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本主题中的示例信息可用于创建常规软件许可证文件示例，以通过使用“导入软件许可证向导”将软件许可证导入到资产智能目录中。 你可以将下表复制并粘贴到新的 Microsoft Excel 电子表格中，并采用 .csv 文件扩展名保存，然后将其用作常规软件许可证导入文件示例以进行测试。 在创建许可证导入文件时，只有当电子表格中需要“名称”、“发布者”、“版本”和“有效数量”数据值时，才需要所有标题字段。 有关将软件许可证导入资产智能目录的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d27baa691c3adca6dd859b79fc92bdd4fe539ab
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 8499ff11cc7ba53760e541eefb690c69b2f20fcf
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339906"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889711"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1806 中的功能
 
@@ -43,7 +43,8 @@ Steps to workaround, if any.
 ### <a name="ki_contentlib"></a> 站点无法使用远程内容库进行升级
 <!--514642-->
 由于 cmupdate.log 中的以下错误站点无法升级  ：  
-```  
+
+``` Log
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
 ERROR: Failed to process configuration manager update.  
@@ -172,7 +173,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 ## <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>通过 Microsoft Intune 为共同托管设备同步 MDM 策略
 <!--1357377-->
-从此版本开始，当[切换一个共同管理工作负荷](/sccm/core/clients/manage/co-management-switch-workloads)时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步  。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification)。
+从此版本开始，当[切换一个共同管理工作负荷](/sccm/core/clients/manage/co-management-switch-workloads)时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步  。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval)。
 
 
 

@@ -2,7 +2,7 @@
 title: 'LTSB 支持的配置 '
 titleSuffix: Configuration Manager
 description: 了解哪些操作系统和相关产品可配合 System Center Configuration Manager 的 Long-Term Servicing Branch 一起运作。
-ms.date: 5/10/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98b06429296927ade2dd738fb8df5356668dd89b
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 4b71530cbde931c14810ba0e0960e530b56ece04
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377769"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891880"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 

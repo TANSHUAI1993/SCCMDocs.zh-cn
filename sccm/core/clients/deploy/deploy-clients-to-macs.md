@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e686f9cdbece2ceb652ecd2e0f3c6d5eca420caf
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 066a4095fa5714df3243cc729a1dacccd613fd39
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677817"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890360"
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>如何将客户端部署到 Mac
 
@@ -234,7 +234,7 @@ ms.locfileid: "67677817"
 
 7. 在“编辑发现脚本”窗口中，输入以下 shell 脚本  ：  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -244,7 +244,7 @@ ms.locfileid: "67677817"
 
 10. 在“创建修正脚本”窗口中，输入以下 shell 脚本  ：  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -268,7 +268,7 @@ ms.locfileid: "67677817"
 
 15. 在删除了 SMSID 的 Mac 计算机上安装了新证书后，运行以下命令，以便将客户端配置为使用此新证书：  
 
-    ```  
+    ``` Shell
     sudo defaults write com.microsoft.ccmclient SubjectName -string <subject_name_of_new_certificate>  
     ```  
 

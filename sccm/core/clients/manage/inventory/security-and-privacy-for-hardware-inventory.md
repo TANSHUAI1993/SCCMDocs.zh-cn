@@ -2,7 +2,7 @@
 title: 硬件清单安全和隐私
 titleSuffix: Configuration Manager
 description: 获取 System Center Configuration Manager 中硬件清单的安全和隐私信息。
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 265364320f355de6534240cbebf4f4f8f6778806
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 93983affd1da571a63f2f1bd68c0e436fba53382
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499802"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890126"
 ---
 # <a name="security-and-privacy-for-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中硬件清单的安全和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 此主题包含 System Center Configuration Manager 中硬件清单的安全和隐私信息。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "65499802"
 |最佳安全方案|更多信息|  
 |----------------------------|----------------------|  
 |签名和加密清单数据|当客户端使用 HTTPS 与管理点通信时，他们发送的所有数据都使用 SSL 进行加密。 但是，当客户端计算机使用 HTTP 与内部网上的管理点通信时，客户端清单数据和收集的文件可以在未签名和未加密的状态下发送。 请确保将该站点配置为要求签名和使用加密。 此外，如果客户端可以支持 sha-256 的算法，选择需要 sha-256 选项。|  
-|不会收集 IDMIF 和 NOIDMIF 文件在高安全性环境中|IDMIF 和 NOIDMIF 文件集合可用于扩展硬件清单收集。 如有必要，Configuration Manager 创建新表或修改 Configuration Manager 数据库中现有的表，以容纳 IDMIF 和 NOIDMIF 文件中的属性。 但是，Configuration Manager 不会验证 IDMIF 和 NOIDMIF 文件，因此可以使用这些文件来更改不希望更改的表。 无效数据可以覆盖有效数据。 此外，可以添加大量数据，但处理此数据可能会导致所有 Configuration Manager 功能出现延迟。 若要降低这些风险，请将硬件清单客户端设置“收集 MIF 文件”  配置为“无” 。|  
+|不会收集 IDMIF 和 NOIDMIF 文件在高安全性环境中|IDMIF 和 NOIDMIF 文件集合可用于扩展硬件清单收集。 如有必要，Configuration Manager 创建新表或修改 Configuration Manager 数据库中现有的表，以容纳 IDMIF 和 NOIDMIF 文件中的属性。 但是，Configuration Manager 不会验证 IDMIF 和 NOIDMIF 文件，因此可以使用这些文件来更改不希望更改的表。 无效数据可以覆盖有效数据。 此外，可以添加大量数据，但处理此数据可能会导致所有 Configuration Manager 功能出现延迟。 若要降低这些风险，请将硬件清单客户端设置“收集 MIF 文件”  配置为“无”  。|  
 
 ### <a name="security-issues-for-hardware-inventory"></a>硬件清单的安全问题  
  收集清单会暴露潜在的漏洞。 攻击者可以执行以下操作：  

@@ -2,7 +2,7 @@
 title: 受支持的 Active Directory 域
 titleSuffix: Configuration Manager
 description: 获取 Active Directory 域中 System Center Configuration Manager 站点系统的成员身份要求。
-ms.date: 9/18/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02353e516e7af45afe273bc0deff5b227a7c7f2c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9d3d9b471b5a9cb69204dfb39f8d7a0d3295ee6f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499442"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891396"
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>对于 System Center Configuration Manager 受支持的 Active Directory 域
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 所有 System Center Configuration Manager 站点系统必须均为受支持的 Windows Server Active Directory 域的成员。 Configuration Manager 客户端计算机可以是域成员，也可以是工作组成员。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "65499442"
 
 -   不支持对托管站点系统角色的计算机进行以下更改：  
 
-    -   域成员资格（这包括从域中删除站点系统，然后重新加入同一域）。
+    -   域成员资格（这包括从域中删除站点系统，然后重新加入同一域）。 
 
     -   域名  
 
@@ -79,6 +79,6 @@ Configuration Manager 支持在具有非连续命名空间的域中安装站点�
 
 -   Active Directory 域服务中的单标签域必须使用具有有效顶级域的非连续 DNS 命名空间配置。  
 
-     例如：Contoso 的单一标签域配置为，在 contoso.com 的 DNS 中具有非连续命名空间。 因此，当在 Configuration Manager 中为 Contoso 域中的计算机指定 DNS 后缀时，应指定 Contoso.com 而不是 Contoso。  
+     例如  ：Contoso 的单一标签域配置为，在 contoso.com 的 DNS 中具有非连续命名空间。 因此，当在 Configuration Manager 中为 Contoso 域中的计算机指定 DNS 后缀时，应指定 Contoso.com 而不是 Contoso。  
 
 -   系统上下文中的站点服务器之间的分布式组件对象模型 (DCOM) 连接必须使用 Kerberos 身份验证成功完成。  
