@@ -2,7 +2,7 @@
 title: 站点安装资源
 titleSuffix: Configuration Manager
 description: 查看列表中的各主题有助于安装 System Center Configuration Manager，或将站点添加到层次结构。
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ebd90b994e3e6103282e3796be180bfd021128
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 54f79af62780cd29705a84ab4b42275a9226e469
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501383"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888861"
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>用于安装 System Center Configuration Manager 站点的资源
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 以下主题有助于安装 System Center Configuration Manager，或将站点添加到现有 Configuration Manager 层次结构。
 

@@ -2,7 +2,7 @@
 title: 加密控制技术参考
 titleSuffix: Configuration Manager
 description: 了解在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。
-ms.date: 12/8/2017
+ms.date: 12/08/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76bf5ffecd21d25d152d74957473571b05f7d2a8
-ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
+ms.openlocfilehash: da9ec9265d8929860fa6d15d2ba3efb3eb215343
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176701"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889266"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 

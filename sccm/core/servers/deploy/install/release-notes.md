@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858ba3b39ea2290e1d5ca39d9d804e3f46be3002
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: a21fcce7d5e8db66a7e85c14c0ef4ad1050b342c
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738439"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -170,7 +170,7 @@ OS Deployment Manager  内置安全角色具有[分阶段部署](/sccm/osd/deplo
 <!-- 4950335 -->
 适用范围：*包含更新汇总的 Configuration Manager 版本 1902 和版本 1906*
 
-如果你具有层次结构，并且在任何站点复制链接上启用[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews)的硬件清单  站点数据，则在 Configuration Manager 中配置桌面分析连接后，将在 M365UploadWorker.log 中显示以下错误：
+如果你具有层次结构，并且在任何站点复制链接上启用[分布式视图](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews)的硬件清单  站点数据，则在 Configuration Manager 中配置桌面分析连接后，将在 M365UploadWorker.log 中显示以下错误：
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 

@@ -2,7 +2,7 @@
 title: 获取安装媒体
 titleSuffix: Configuration Manager
 description: 可找到新 System Center Configuration Manager 安装的安装媒体的位置。
-ms.date: 1/11/2017
+ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fd2da0440110706d03e49c34928ed4f6ae98fc3
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: f73293620df5315eda6380ae2146860543616baa
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380094"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888924"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>可获取 System Center Configuration Manager 的安装媒体的位置
 

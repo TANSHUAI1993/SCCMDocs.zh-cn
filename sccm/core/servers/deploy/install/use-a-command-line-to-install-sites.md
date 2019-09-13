@@ -2,7 +2,7 @@
 title: 命令行安装
 titleSuffix: Configuration Manager
 description: 了解如何在命令提示符处运行 System Center Configuration Manager 安装程序来安装多个站点。
-ms.date: 3/27/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63fb00eb446c8e91f8bc741c0375b314ad0ef9a7
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3e24fb163d144d69b11e7ae1aae4a5ebc5e0c38f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497653"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888712"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>使用命令行安装 System Center Configuration Manager 站点
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
  可在命令提示符处运行 System Center Configuration Manager 安装程序来安装多个站点类型。
 
@@ -91,7 +91,7 @@ ms.locfileid: "65497653"
 
 
 ### <a name="create-the-script"></a>创建脚本
-[使用用户界面运行安装程序以安装站点](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)时会自动创建安装脚本。  在向导的“摘要”页上确认设置时，会发生以下情况：  
+[使用用户界面运行安装程序以安装站点](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)时会自动创建安装脚本。  在向导的“摘要”  页上确认设置时，会发生以下情况：  
 
 -   安装程序创建脚本 **%TEMP%\ConfigMgrAutoSave.ini**。  在使用之前，你可以重命名此文件，但它必须保留 .ini 文件扩展名。  
 -   无人参与安装脚本包含你在向导中选择的设置。  
@@ -121,4 +121,4 @@ ms.locfileid: "65497653"
     -   该文件名必须有 **.ini** 文件扩展名。  
     -   如果在命令提示符处引用安装程序脚本文件，则必须提供文件的完整路径。 例如，如果安装程序初始化文件的名称为 Setup.ini，并且此文件存储在 C:\Setup 文件夹中，请在命令提示符处键入：**setup /script c:\setup\setup.ini**。  
 
--   运行安装程序的帐户必须具有计算机上的“管理员”权限。 使用无人参与脚本运行安装程序时，请使用“以管理员身份运行”选项打开命令提示符窗口。   
+-   运行安装程序的帐户必须具有计算机上的“管理员”  权限。 使用无人参与脚本运行安装程序时，请使用“以管理员身份运行”  选项打开命令提示符窗口。   

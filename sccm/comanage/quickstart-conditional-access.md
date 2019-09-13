@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a48dd82b1f4c79953ce88c5e156abe47b891ac14
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 0930e2f02d2a99073944c61cfead6767530accbc
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65973953"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738235"
 ---
 # <a name="conditional-access-with-co-management"></a>启用共同管理的条件访问
 
@@ -34,7 +34,7 @@ ms.locfileid: "65973953"
 
     - 对于共同管理的设备，Configuration Manager 还会执行基于配置的评估。 例如，必需的更新或应用符合性。 Intune 将此评估与自身的评估结合起来。  
 
-2. Intune 检测设备上的活动安全事件。 它使用 [Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started)（以前称为 Windows Defender ATP）和其他 [Mobile Threat Defense 提供程序](https://www.lookout.com/about/partners/microsoft)的智能安全。 这些合作伙伴对设备进行持续的行为分析。 此分析检测活动事件，然后将此信息传递给 Intune 用于实时符合性评估。  
+2. Intune 检测设备上的活动安全事件。 它使用 [Microsoft Defender 高级威胁防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)（以前称为 Windows Defender ATP）和其他 [Mobile Threat Defense 提供程序](https://www.lookout.com/about/partners/microsoft)的智能安全。 这些合作伙伴对设备进行持续的行为分析。 此分析检测活动事件，然后将此信息传递给 Intune 用于实时符合性评估。  
 
     - 此评估在出现安全漏洞之后基于事件执行  
 

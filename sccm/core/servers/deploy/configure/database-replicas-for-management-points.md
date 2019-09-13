@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7c2951ad07c3ac0d2ac0658fecf47f7231c62a7
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: a3520217cde80b080676d23dc49a16974c11823a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377923"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889132"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
@@ -245,7 +245,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
     > [!IMPORTANT]  
     >  如果你正在单个 SQL Server 上配置多个数据库副本，则对于配置的每个后续副本，必须对此步骤使用此脚本的修改版本。 请参阅  [单个 SQL Server 上附加数据库副本的补充脚本](#bkmk_supscript)  
 
-    ```  
+    ``` PowerShell
     # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.  
 
     Param($SQLInstance)  

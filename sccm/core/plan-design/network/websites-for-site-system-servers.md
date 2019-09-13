@@ -2,7 +2,7 @@
 title: 站点系统网站
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 中的站点系统服务器的默认和自定义网站。
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c701bb5f00b8a109044913291597f27c2a9e29
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: e70c78161db4d7c97829f48348b547a0e1c7e85f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379792"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889306"
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的站点系统服务器网站
 

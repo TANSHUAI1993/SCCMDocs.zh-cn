@@ -11,12 +11,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b58f6d1441d338c121b67754989128944adcc923
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: ec0d298b6adea38c6b4104f2006b77eba650ac66
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536569"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889245"
 ---
 # <a name="how-to-enable-tls-12"></a>如何启用 TLS 1.2
 
@@ -90,7 +90,7 @@ Configuration Manager 依赖于许多不同的组件来实现安全通信。 用
 
 对于在 32 位系统上运行的 32 位应用程序或在 64 位系统上运行的 64 位应用程序，请更新以下子项值：
 
-```Registry
+``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]
       "SystemDefaultTlsVersions" = dword:00000001
       "SchUseStrongCrypto" = dword:00000001
@@ -101,7 +101,7 @@ Configuration Manager 依赖于许多不同的组件来实现安全通信。 用
 
 对于在 64 位系统上运行的 32 位应用程序，请更新以下子项值：
 
-```Registry
+``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
       "SystemDefaultTlsVersions" = dword:00000001
       "SchUseStrongCrypto" = dword:00000001
@@ -158,7 +158,7 @@ Windows 早期版本（如 Windows 7 或 Windows Server 2012）默认情况下�
 
 验证 `DefaultSecureProtocols` 注册表设置的值，例如：
 
-```Registry
+``` Registry
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\
       DefaultSecureProtocols = (DWORD): 0xAA0
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\
@@ -244,7 +244,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 1. 在应用程序目录服务器的 `%WinDir%\System32\InetSrv` 文件夹中，使用以下内容创建 W2SP.exe.config  文件：
 
-    ```xml
+    ``` XML
     <?xml version="1.0" encoding="utf-8" ?>
     <configuration>
       <runtime>
@@ -296,7 +296,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Interne
 
 SMSAdminui.log  可能包含如下所示的错误：
 
-```
+``` Log
 Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationException
 Service returned error. Check InnerException for more details
 at Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationContext.GetAADAuthResultObject

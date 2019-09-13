@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acafe2aeefc267446042b12f06763fd0f1737cfb
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: f4f4d10d7ae21ac209fc7cdc85f54bd8dbf604b8
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377845"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738332"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -35,7 +35,7 @@ Current Branch 是提供活动服务模型的 Configuration Manager 的生产就
 
 ### <a name="bkmk_ltsb"></a>什么是 Long Term Servicing Branch (LTSB)？  
 
-LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件保障或等效订阅权限过期的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允许软件保障或等效订阅权限过期的客户必须卸载 Configuration Manager 的 Current Branch。 如果客户对 Configuration Manager 具有永久许可权限，则可在过期时安装并使用 Configuration Manager 最新版的 LTSB 版本。
+LTSB 是 Configuration Manager 的生产就绪版本。 它适用于允许软件保障或等效订阅权限过期的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-arent-available)。 允许软件保障或等效订阅权限过期的客户必须卸载 Configuration Manager 的 Current Branch。 如果客户对 Configuration Manager 具有永久许可权限，则可在过期时安装并使用 Configuration Manager 最新版的 LTSB 版本。
 
 
 ### <a name="bkmk_licensing-acronyms"></a>我知道许可内容中使用的 SA  和 L&SA  。 这些首字母缩写词在 Configuration Manager 中的含义是什么？    

@@ -2,7 +2,7 @@
 title: 架构扩展
 titleSuffix: Configuration Manager
 description: 扩展 Active Directory 架构以支持 System Center Configuration Manager。
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e0d5863f1e498bd2f2a5f793b5de9dad03c1218
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 5390dfaeb9a9a45b96e35f2a5b4e988479f0a492
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499125"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889321"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 可以扩展 Active Directory 架构以支持 Configuration Manager。 这将编辑林 Active Directory 架构，以添加由 Configuration Manager 站点使用的新容器和某些特性，从而将 Active Directory 关键信息发布到客户端可以安全使用的位置。 此信息可以简化客户端部署和配置，并帮助客户端找到站点资源（例如具有部署的内容或向客户端提供不同服务的服务器）。  
 
@@ -71,7 +71,7 @@ ms.locfileid: "65499125"
 
     -   **手动安装客户端**，并使用 CCMSetup 安装命令行属性来提供客户端安装属性。 这必须包括下列操作：  
 
-        -   在客户端安装过程中，在 CCMSetup 命令行上通过使用 CCMSetup 属性 **/mp:=&lt;management point name computer name\>** 或 **/source:&lt;path to client source files\>**，指定计算机可以从中下载安装文件的管理点或源路径。  
+        -   在客户端安装过程中，在 CCMSetup 命令行上通过使用 CCMSetup 属性 **/mp:=&lt;management point name computer name\>** 或 **/source:&lt;path to client source files\>** ，指定计算机可以从中下载安装文件的管理点或源路径。  
 
         -   指定供客户端使用的初始管理点的列表，以便它可以分配到站点，然后下载客户端策略和站点设置。 使用 CCMSetup Client.msi 的 SMSMP 属性来执行此操作。  
 
@@ -87,7 +87,7 @@ ms.locfileid: "65499125"
 
 **内容部署方案** - 当在一个站点中创建内容，然后将该内容部署到层次结构中的另一个站点时，接收站点必须能够验证已签名的内容数据的签名。 这需要访问你在其中创建此数据的源站点的公钥。 在扩展 Configuration Manager 的 Active Directory 架构时，站点的公钥将提供给层次结构中的所有站点使用。  
 
--   解决方法：如果不扩展架构，则可以使用层次结构维护工具“preinst.exe”在站点之间交换安全密钥信息。  
+-    解决方法：如果不扩展架构，则可以使用层次结构维护工具“preinst.exe”在站点之间交换安全密钥信息  。  
 
      例如，如果计划在主站点中创建内容，然后将该内容部署到另一个主站点下面的辅助站点，必须扩展 Active Directory 架构，使此辅助站点能够获得源主站点的公钥，或者必须使用 preinst.exe 直接在这两个站点之间共享密钥。  
 

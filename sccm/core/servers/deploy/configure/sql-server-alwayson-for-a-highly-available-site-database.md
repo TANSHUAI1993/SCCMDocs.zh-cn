@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ff2de897d274caf85539a3338fc7d45d8393f6
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 74905b9c681b98716447ac40683f4a09f024826b
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536445"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888958"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -94,7 +94,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 启用“CLR 集成”  ：
 
-    ```sql
+    ``` SQL
     sp_configure 'show advanced options', 1;  
     GO  
     RECONFIGURE;  
@@ -109,7 +109,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 将“最大文本复制大小”  设置为 `2147483647`：  
 
-    ```sql
+    ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
     ```
 
@@ -117,7 +117,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 打开  “可信”  设置：
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
@@ -125,7 +125,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 启用“Service Broker”  ：  
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
     ```
 
@@ -134,7 +134,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 - 配置 Service Broker 优先级：
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET HONOR_BROKER_PRIORITY ON;
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
 
@@ -146,7 +146,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 运行以下 SQL 脚本来验证主要副本和次要副本的数据库配置。 将该次要副本更改为主要副本才能修复次要副本上的某个问题。
 
-```SQL
+``` SQL
     SET NOCOUNT ON
 
     DECLARE @dbname NVARCHAR(128)
@@ -296,7 +296,7 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 <!-- SCCMDocs-pr#3734 -->
 从版本 1906 开始，可以在 SQL Server 中启用 [MultiSubnetFailover 连接字符串关键字](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)。 还需要手动将以下值添加到站点服务器上的 Windows 注册表：
 
-```
+``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
 
 MSF Enabled : 1 (DWORD)

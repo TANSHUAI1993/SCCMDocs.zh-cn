@@ -2,7 +2,7 @@
 title: 先决条件检查程序
 titleSuffix: Configuration Manager
 description: 了解如何使用先决条件检查程序识别并修复可能会阻止安装站点或站点系统角色的问题。
-ms.date: 3/1/2017
+ms.date: 03/1/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 303092686611d08d8b05a5dafd9ee669ea2271a6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 19167ee3b25d838ad6d2268d2b67230968394ef5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497744"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888790"
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查程序
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
  在运行安装程序安装或升级 System Center Configuration Manager 站点之前，或在新的服务器上安装站点系统角色之前，可从想要用于验证服务器是否已准备就绪的 Configuration Manager 版本，使用此独立应用程序 (**Prereqchk.exe**)。 使用先决条件检查程序识别并修复会阻止安装站点或站点系统角色的问题。  
 
@@ -46,8 +46,8 @@ ms.locfileid: "65497744"
 
 1.  在 Windows 资源管理器中，转到以下位置之一：  
 
-    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
-    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
+    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64 **  
+    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**   
 
 2.  将以下文件复制到另一台计算机上的目标文件夹：  
 
@@ -61,8 +61,8 @@ ms.locfileid: "65497744"
 
 1.  在 Windows 资源管理器中，转到以下位置之一：  
 
-    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
-    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
+    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64 **  
+    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**   
 
 2.  运行 **prereqchk.exe** 以启动先决条件检查程序。   
     先决条件检查程序将检测现有站点，如果找到，则执行针对升级准备情况的检查。 如果未找到站点，则执行所有检查。 “站点类型”  列提供有关规则与之关联的站点服务器或站点系统的信息。  
@@ -71,8 +71,8 @@ ms.locfileid: "65497744"
 
 1.  打开命令提示符窗口并将目录更改为以下位置之一：  
 
-    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
-    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
+    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64 **  
+    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**   
 
 2.  输入  **prereqchk.exe /LOCAL** 以启动先决条件检查程序，并在服务器上运行所有先决条件检查。  
 
@@ -80,8 +80,8 @@ ms.locfileid: "65497744"
 
 1. 打开命令提示符窗口并将目录更改为以下位置之一：  
 
-   -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
-   -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
+   -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64 **  
+   -   **&lt;Configuration Manager 安装路径\>\BIN\X64**   
 
 2. 输入 **prereqchk.exe**，并在后面添加以下一个或多个命令行选项。  
 
@@ -99,11 +99,11 @@ ms.locfileid: "65497744"
 
         必需。 验证本地计算机是否满足管理中心站点的要求。  
 
-   -   **/SQL &lt;SQL Server 的 FQDN>**  
+   -   **/SQL &lt;SQL Server 的 FQDN>**   
 
         必需。 使用完全限定的域名 (FQDN)，验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
 
-   -   **/SDK &lt;SMS 提供程序的 FQDN>**  
+   -   **/SDK &lt;SMS 提供程序的 FQDN>**   
 
         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
 
@@ -111,7 +111,7 @@ ms.locfileid: "65497744"
 
         不需要。 验证防火墙例外是否生效以允许 SQL Server Service Broker (SSB) 端口上的通信。 默认 SSB 端口为 4022。  
 
-   -   **InstallDir &lt;Configuration Manager 安装路径>**  
+   -   **InstallDir &lt;Configuration Manager 安装路径>**   
 
         不需要。 验证站点安装的最小磁盘空间要求。  
 
@@ -125,23 +125,23 @@ ms.locfileid: "65497744"
 
         必需。 验证本地计算机是否满足主站点的要求。  
 
-   -   **/SQL &lt;SQL Server 的 FQDN>**  
+   -   **/SQL &lt;SQL Server 的 FQDN>**   
 
         必需。 验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
 
-   -   **/SDK &lt;SMS 提供程序的 FQDN>**  
+   -   **/SDK &lt;SMS 提供程序的 FQDN>**   
 
         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
 
-   -   **/JOIN &lt;管理中心站点的 FQDN>**  
+   -   **/JOIN &lt;管理中心站点的 FQDN>**   
 
         不需要。 验证本地计算机是否满足用于连接到管理中心站点服务器的要求。  
 
-   -   **/MP &lt;管理点的 FQDN>**  
+   -   **/MP &lt;管理点的 FQDN>**   
 
         不需要。 验证指定计算机是否满足管理点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
 
-   -   **/DP &lt;分发点的 FQDN>**  
+   -   **/DP &lt;分发点的 FQDN>**   
 
         不需要。 验证指定计算机是否满足分发点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
 
@@ -149,7 +149,7 @@ ms.locfileid: "65497744"
 
         不需要。 验证防火墙例外是否生效以允许 SSB 端口上的通信。 默认 SSB 端口为 4022。  
 
-   -   **InstallDir &lt;Configuration Manager 安装路径>**  
+   -   **InstallDir &lt;Configuration Manager 安装路径>**   
 
         不需要。 验证站点安装的最小磁盘空间要求。  
 
@@ -159,7 +159,7 @@ ms.locfileid: "65497744"
 
         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
 
-   -   **&lt;/SEC 辅助站点服务器的 FQDN>**  
+   -   **&lt;/SEC 辅助站点服务器的 FQDN>**   
 
         必需。 验证指定计算机是否满足辅助站点的要求。  
 
@@ -175,7 +175,7 @@ ms.locfileid: "65497744"
 
         不需要。 验证防火墙例外是否生效以允许 SQL Server 服务端口的通信，并且该端口未由 SQL Server 的另一个命名实例使用。 默认端口为 1433。  
 
-   -   **InstallDir &lt;Configuration Manager 安装路径>**  
+   -   **InstallDir &lt;Configuration Manager 安装路径>**   
 
         不需要。 验证站点安装的最小磁盘空间要求。  
 
@@ -189,8 +189,8 @@ ms.locfileid: "65497744"
 
         必需。 验证本地计算机是否满足 Configuration Manager 的安装要求。  
 
-3. 在先决条件检查程序用户界面中，先决条件检查程序将在“先决条件结果”部分中创建一个已发现问题的列表。  
+3. 在先决条件检查程序用户界面中，先决条件检查程序将在“先决条件结果”  部分中创建一个已发现问题的列表。  
 
    -   单击列表中的项目以了解有关如何解决问题的详细信息。  
-   -   在安装站点服务器、站点系统或 Configuration Manager 控制台之前，必须解决列表中状态为“错误”的所有项目。  
+   -   在安装站点服务器、站点系统或 Configuration Manager 控制台之前，必须解决列表中状态为“错误”  的所有项目。  
    -   也可打开系统驱动器根目录中的 **ConfigMgrPrereq.log** 文件，查看先决条件检查程序结果。 该日志文件可能包含先决条件检查程序用户界面中未显示的其他信息。  

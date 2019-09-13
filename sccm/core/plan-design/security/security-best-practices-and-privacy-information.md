@@ -2,7 +2,7 @@
 title: 安全最佳方案和隐私信息
 titleSuffix: Configuration Manager
 description: 查找可提供 System Center Configuration Manager 的安全最佳方案和隐私信息的资源。
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa59087ef30ccbaad1332e33934e728fa793b3d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c485fdb3633562e41ca6bdfb23d0033d1c5a7ee7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132725"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889181"
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全最佳方案和隐私信息
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 使用以下信息可查找 System Center Configuration Manager 的安全最佳方案和隐私信息。  
 
@@ -60,7 +60,7 @@ ms.locfileid: "56132725"
 
 -   [System Center Configuration Manager 中符合性设置的安全和隐私](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   请参阅 [System Center Configuration Manager 中的远程连接配置文件](/sccm/compliance/deploy-use/create-remote-connection-profiles)中的“远程连接配置文件的安全和隐私注意事项”部分  
+-   请参阅 [System Center Configuration Manager 中的远程连接配置文件](/sccm/compliance/deploy-use/create-remote-connection-profiles)中的“远程连接配置文件的安全和隐私注意事项”  部分  
 
 -   [System Center Configuration Manager 中证书配置文件的安全和隐私](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 

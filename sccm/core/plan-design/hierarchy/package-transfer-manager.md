@@ -2,7 +2,7 @@
 title: 包传输管理器
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 中的包传输管理器如何将内容从站点服务器传输到远程分发点。
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,21 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a465317334879e048ef9fe628a0efbdd5dbad78
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e5994ba2689ba276412012b6bd1c18b65d27c3df
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139562"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889475"
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包传输管理器
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 站点中，包传输管理器是 SMS_Executive 服务的组件，用于管理将内容从站点服务器计算机传输到站点内远程分发点。 （远程分发点是不位于站点服务器计算机上的分发点。）包传输管理器不支持由管理员配置，但了解它的工作方式有助于规划内容管理基础结构。 还能帮助解决内容分发方面的问题。
 
 
-将内容分发到站点上的一个或多个远程分发点时，“分发管理器”创建内容传输作业。 然后，它会通知主站点和辅助站点服务器上的包传输管理器将内容传输到远程分发点。
+将内容分发到站点上的一个或多个远程分发点时，“分发管理器”  创建内容传输作业。 然后，它会通知主站点和辅助站点服务器上的包传输管理器将内容传输到远程分发点。
 
  包传输管理器会在站点服务器上的“pkgxfermgr.log”  文件中记录其操作。 你只能在此日志文件中查看包传输管理器的活动。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "56139562"
     -   **标准分发点：** 包传输管理器检查每个指定远程分发点的单一实例内容存储。 目的是标识已经在该分发点上的任何文件。 然后，包传输管理器会进行排队以仅传输还不存在的那些文件。  
 
         > [!NOTE]  
-        >  若要将分发中的每个文件复制到分发点（即使该分发点的单一实例存储中已经存在这些文件也不例外），对内容使用“重新分发”操作。  
+        >  若要将分发中的每个文件复制到分发点（即使该分发点的单一实例存储中已经存在这些文件也不例外），对内容使用“重新分发”  操作。  
 
     -   **拉取分发点：** 对于分发中的每个拉取分发点，包传输管理器会检查拉取分发点的源分发点以确认是否有内容可用。  
 
@@ -61,15 +61,15 @@ ms.locfileid: "56139562"
         -   如果尚未提供内容，则包传输管理器不会向分发点发送通知。 而是会每 20 分钟重复进行一次检查，直到有可用的内容为止。 然后，当有可用的内容时，包传输管理器会向该请求分发点发送通知。  
 
         > [!NOTE]  
-        >  为使请求分发点将分发中的每个文件复制到分发点（即使该请求分发点的单一实例存储中已经存在这些文件也不例外），对内容使用“重新分发”操作。  
+        >  为使请求分发点将分发中的每个文件复制到分发点（即使该请求分发点的单一实例存储中已经存在这些文件也不例外），对内容使用“重新分发”  操作。  
 
 4.  **此时内容将开始传输。**  
 
     -   **标准分发点：** 包传输管理器会将文件复制到每个远程分发点。 在传输至标准分发点期间：  
 
-        -   默认情况下，包传输管理器可以同时处理三个唯一的包，并且可以并行将其分发给五个分发点。 这些设置统称为“并发分发设置”。 若要设置并发分发，请在每个站点的“软件分发组件属性”中转至“常规”选项卡。  
+        -   默认情况下，包传输管理器可以同时处理三个唯一的包，并且可以并行将其分发给五个分发点。 这些设置统称为“并发分发设置”  。 若要设置并发分发，请在每个站点的“软件分发组件属性”  中转至“常规”  选项卡。  
 
-        -   将内容传输至每个分发点时，包传输管理器使用该分发点的计划和网络带宽配置。 若要配置这些设置，可在每个远程分发点的“属性”中，转到“计划”和“速率限制”选项卡。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+        -   将内容传输至每个分发点时，包传输管理器使用该分发点的计划和网络带宽配置。 若要配置这些设置，可在每个远程分发点的“属性”  中，转到“计划”  和“速率限制”  选项卡。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
     -   **拉取分发点：** 当请求分发点收到通知文件时，分发点将开始内容传输过程。 此传输过程在每个请求分发点上独立运行：  
 

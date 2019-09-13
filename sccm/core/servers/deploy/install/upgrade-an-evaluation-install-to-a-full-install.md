@@ -2,7 +2,7 @@
 title: 升级评估版安装
 titleSuffix: Configuration Manager
 description: 了解如何将评估版安装升级到 System Center Configuration Manager 的完整安装。
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b5e527fbed544447052556041db3de3c5b06ffd
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 29c1aee34669ac65ae3175895bc1061e851182d1
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497677"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888887"
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>将 System Center Configuration Manager 的评估版安装升级到完整安装
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-如果将 System Center Configuration Manager 作为评估版进行安装，那么 180 天后，Configuration Manager 控制台会变为只读，直至从安装程序的“站点维护”页激活产品。 在 180 天期限之前或之后，可随时选择将评估安装升级到完整安装。  
+如果将 System Center Configuration Manager 作为评估版进行安装，那么 180 天后，Configuration Manager 控制台会变为只读，直至从安装程序的“站点维护”  页激活产品。 在 180 天期限之前或之后，可随时选择将评估安装升级到完整安装。  
 
 > [!NOTE]  
 >  将 Configuration Manager 控制台连接到 Configuration Manager 评估版时，此控制台的标题栏会显示该评估版安装到期前的剩余天数。 此天数不会自动刷新，而且仅在建立新的站点连接时才会更新。  
@@ -37,16 +37,16 @@ ms.locfileid: "65497677"
 将评估版升级到许可版的先决条件：  
 
 -   必须具有在升级过程中使用的有效产品。  
--   帐户必须具有对安装该站点的计算机的“管理员”权限。  
+-   帐户必须具有对安装该站点的计算机的“管理员”  权限。  
 
 ### <a name="to-upgrade-an-evaluation-version-of-configuration-manager-to-a-licensed-version"></a>将 Configuration Manager 的评估版升级到许可版  
 
-1.  在站点服务器上，在 Configuration Manager 安装文件夹 (**%path%\BIN\X64**) 中运行 **Setup.exe**（Configuration Manager 安装程序）。 必须在 Configuration Manager 文件夹中运行位于站点服务器上的安装程序副本，因为从安装媒体运行安装程序时，站点维护选项不可用。  
-2.  在“开始之前”页面上，选择“下一步”。  
-3.  在“入门”页上，选择“执行站点维护或重置此站点”，然后选择“下一步”。  
-4.  在“站点维护”页上，选择“从评估版升级为许可版”，输入有效的产品密钥，然后选择“下一步”。  
-5.  在“Microsoft 软件许可条款”页上，阅读并接受许可条款，然后选择“下一步”。  
-6.  在“确认”页上，选择“关闭”以完成向导。  
+1.  在站点服务器上，在 Configuration Manager 安装文件夹 ( **%path%\BIN\X64**) 中运行 **Setup.exe**（Configuration Manager 安装程序）。 必须在 Configuration Manager 文件夹中运行位于站点服务器上的安装程序副本，因为从安装媒体运行安装程序时，站点维护选项不可用。  
+2.  在“开始之前”  页面上，选择“下一步”  。  
+3.  在“入门”  页上，选择“执行站点维护或重置此站点”  ，然后选择“下一步”  。  
+4.  在“站点维护”  页上，选择“从评估版升级为许可版”  ，输入有效的产品密钥，然后选择“下一步”  。  
+5.  在“Microsoft 软件许可条款”  页上，阅读并接受许可条款，然后选择“下一步”  。  
+6.  在“确认”  页上，选择“关闭”  以完成向导。  
 
     > [!NOTE]  
     >  与升级的站点保持连接的 Configuration Manager 控制台的标题栏可能会指明站点仍为评估版本，直到将控制台重新连接到该站点为止。  

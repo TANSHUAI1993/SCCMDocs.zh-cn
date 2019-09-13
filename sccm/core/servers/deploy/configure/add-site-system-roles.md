@@ -2,7 +2,7 @@
 title: 添加站点系统角色
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 站点系统角色，以及如何添加它们以扩展站点的功能和容量。
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96710897dd518832a221717b7fdbec0a73eed01e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 654334e7e2e8a3cf939f51d85cb5ade67f0ff711
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499102"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889218"
 ---
 # <a name="add-site-system-roles-for-system-center-configuration-manager"></a>添加 System Center Configuration Manager 的站点系统角色
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 每个 System Center Configuration Manager 站点支持多个站点系统角色。 每个角色可扩展站点的功能和容量，以为站点提供服务并管理设备和用户。 站点系统服务器上的每个站点系统角色必须来自同一站点。   
 
