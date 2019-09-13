@@ -2,7 +2,7 @@
 title: 配置选项
 titleSuffix: Configuration Manager
 description: 配置选项以使用 System Center Updates Publisher
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d576057c1ca7940a8d09bcfa305b80b178a6006
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: c8fc420db7e793b3fa0a1b71132bb902a23de43d
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159524"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892220"
 ---
 # <a name="configure-options-for-updates-publisher"></a>为 Updates Publisher 配置选项
 

@@ -2,7 +2,7 @@
 title: 创建更新
 titleSuffix: Configuration Manager
 description: 使用 System Center Updates Publisher 创建和捆绑软件更新
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e60ce54c5f792f7ea9c7a6c6d05b32c79c1e9b8d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 74165357238f6ba37b2eef28c2e946448df0d957
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678795"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888582"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>使用 Updates Publisher 创建软件更新和更新捆绑包
 

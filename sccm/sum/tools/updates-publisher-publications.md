@@ -2,7 +2,7 @@
 title: 管理发布内容
 titleSuffix: Configuration Manager
 description: 使用 System Center Updates Publisher 将各组软件更新作为发布项进行管理
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a56fea517c12e0d6f8e476b28c2af65a04c2593b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 61228a84c642693f38122c06b060bfc638ad01e3
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158894"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888422"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 

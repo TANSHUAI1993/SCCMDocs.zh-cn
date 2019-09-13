@@ -2,7 +2,7 @@
 title: 使用可启动媒体通过网络部署 Windows
 titleSuffix: Configuration Manager
 description: 使用 System Center Configuration Manager 中的可启动媒体在启动目标计算机时部署操作系统。
-ms.date: 6/16/2017
+ms.date: 06/16/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ebe239687489ce14cd77c23b59ec5f01c2e6609
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 98aa69cc0a80b12ca5caabb2c5b7167310ea2c83
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128113"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892528"
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用可启动媒体与 System Center Configuration Manager 一起通过网络部署 Windows
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 可以在使用可启动媒体部署启动目标计算机时部署操作系统。 媒体包含指向任务序列的指针、操作系统映像和来自网络的其他所需内容。 当目标计算机启动时，计算机会检索到指针所引用的项。 使用没有内容的可启动媒体可以更新目标，无需在媒体中进行替换。
 
@@ -35,7 +35,7 @@ ms.locfileid: "56128113"
 完成其中一个操作系统部署方案中的步骤，然后运行以下部分来使用可启动媒体部署操作系统。  
 
 ## <a name="configure-deployment-settings"></a>配置部署设置  
-当你使用可启动媒体来启动操作系统部署过程时，配置该部署才能使操作系统对媒体可用。 可以在“部署软件向导”的“部署设置”页或部署属性的“部署设置”选项卡上设置这一选项。 对于“可用于以下项目”  设置，请配置下述内容之一：
+当你使用可启动媒体来启动操作系统部署过程时，配置该部署才能使操作系统对媒体可用。 可以在“部署软件向导”的“部署设置”  页或部署属性的“部署设置”  选项卡上设置这一选项。 对于“可用于以下项目”  设置，请配置下述内容之一：
 
 -   Configuration Manager 客户端、媒体和 PXE
 

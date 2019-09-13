@@ -2,7 +2,7 @@
 title: 证书和安全
 titleSuffix: Configuration Manager
 description: 管理 System Center Updates Publisher 中的证书和安全性
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db60b7cf6332e778279b494b2922cd621983c20c
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: fc54cfc55821dc7189680f264c10a4a471979b04
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516294"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892193"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 

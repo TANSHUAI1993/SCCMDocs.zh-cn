@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6699b73bd9a3a911fef788f25cbf2140e90cbe92
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: 48cb5d13dc3683a11731937d94d1f84414c3d923
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355053"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892407"
 ---
 # <a name="install-software-updates"></a>安装软件更新
 
@@ -52,7 +52,7 @@ ms.locfileid: "66355053"
 
 向映像应用软件更新时，可以通过删除任何被取代的更新来优化输出。 使用 DISM 命令行工具，例如：
 
-```
+``` Command
 dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir
 dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  

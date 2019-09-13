@@ -2,7 +2,7 @@
 title: 适用性规则
 titleSuffix: Configuration Manager
 description: 管理 System Center Updates Publisher 中的适用性规则
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30200c9da2ea37ef0868db680d04fe6aae9fd314
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 3b1f638bccb35ac10ea37956405c023a6ab0f184
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678072"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892244"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>管理 Updates Publisher 中的适用性规则
 
@@ -31,11 +31,11 @@ ms.locfileid: "67678072"
 
 例如，下面是包含三条规则的规则集。 第一条规则验证 *MyFile* 文件是否存在，第二条和第三条规则验证 Windows 操作系统的语言是英语还是日语。
 
-```
+``` Example
 And  
   File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
   Or  
-    Windows Language is English   
+    Windows Language is English
     Windows Language is Japanese
 ```
 

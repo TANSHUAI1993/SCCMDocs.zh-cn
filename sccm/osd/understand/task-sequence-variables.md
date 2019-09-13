@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a279602a2e52b47f42f0204e6953801c26454a1
-ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
+ms.openlocfilehash: 6a8c13d450acdd268996e1e7c760f12510549a38
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021997"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892384"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -144,7 +144,7 @@ ms.locfileid: "70021997"
 ### <a name="SMSTSLastContentDownloadLocation"></a>_SMSTSLastContentDownloadLocation
 
 <!-- 2840337 -->
-从版本 1906 开始，此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量, 而不是分析此内容位置的客户端日志。
+从版本 1906 开始，此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量，而不是分析此内容位置的客户端日志。
 
 ### <a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
@@ -256,17 +256,13 @@ ms.locfileid: "70021997"
 
 此变量用以下格式存储时区信息：
 
-```
-Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName
-```
+`Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName`
 
 #### <a name="example"></a>示例
 
 对于时区东部时间（美国和加拿大）  ：
 
-```
-300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time
-```
+`300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
 ### <a name="SMSTSType"></a> _SMSTSType
 
@@ -491,7 +487,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
 
 <!-- 4512937 -->
-从版本1906开始, 使用此变量设置恢复保护的重启次数。
+从版本1906开始，使用此变量设置恢复保护的重启次数。
 
 #### <a name="valid-values"></a>有效值
 
@@ -502,7 +498,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
 
 <!-- 4512937 -->
-从版本1906开始, 将此值设置为替代步骤或[OSDBitLockerRebootCount](#OSDBitLockerRebootCount)变量设置的计数。 虽然其他方法只接受值 1 到 15，但如果将此变量设置为 0，则 BitLocker 会永远保持禁用状态。 虽然在任务序列设置一个值的情况下，此变量很有用，但建议在每个设备或每个集合上设置一个单独的值。
+从版本1906开始，将此值设置为替代步骤或[OSDBitLockerRebootCount](#OSDBitLockerRebootCount)变量设置的计数。 虽然其他方法只接受值 1 到 15，但如果将此变量设置为 0，则 BitLocker 会永远保持禁用状态。 虽然在任务序列设置一个值的情况下，此变量很有用，但建议在每个设备或每个集合上设置一个单独的值。
 
 #### <a name="valid-values"></a>有效值
 
@@ -1378,7 +1374,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 重启任务序列时，此变量的值仍然存在。 但任务序列会尝试发送初始状态消息。 该第一次尝试包含多次重试。 如果成功，任务序列会继续发送状态，不会考虑此变量的值。 如果状态发送失败，任务序列将使用此变量的值。
 
 > [!NOTE]  
-> [任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。 如果状态消息无法发送, 则它们不会排队。 将连接还原到管理点时, 不会在以后发送连接。 此行为会导致任务序列状态报告为 "未完成" 和 "缺失项目"。
+> [任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。 如果状态消息无法发送，则它们不会排队。 将连接还原到管理点时，不会在以后发送连接。 此行为会导致任务序列状态报告为 "未完成" 和 "缺失项目"。
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
@@ -1507,7 +1503,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 ### <a name="SMSTSRebootDelayNext"></a>SMSTSRebootDelayNext
 
 <!--4447680-->
-从1906版开始, 将此变量与现有的[SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay)变量一起使用。 若要稍后执行超时值不同于第一个的任何重启，请将 SMSTSRebootDelayNext 设置为其他值（以秒为单位）。
+从1906版开始，将此变量与现有的[SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay)变量一起使用。 若要稍后执行超时值不同于第一个的任何重启，请将 SMSTSRebootDelayNext 设置为其他值（以秒为单位）。
 
 #### <a name="example"></a>示例
 
@@ -1526,8 +1522,8 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 指示当前任务序列步骤完成后，请求重新启动。 如果任务序列步骤需要重启才能完成操作，请设置此变量。 重启计算机后，任务序列继续从下一个任务序列步骤运行。
 
-- `HD`: 重新启动到安装的 OS
-- `WinPE`: 重新启动到关联的启动映像
+- `HD`：重新启动到安装的 OS
+- `WinPE`：重新启动到关联的启动映像
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
@@ -1588,7 +1584,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 ### <a name="TSDebugMode"></a>TSDebugMode
 
 <!--3612274-->
-从1906版开始, 将此变量设置`TRUE`为要将任务序列部署到的集合或计算机对象。 具有此变量集的任何设备会将部署的任何任务序列置于调试模式。
+从1906版开始，将此变量设置`TRUE`为要将任务序列部署到的集合或计算机对象。 具有此变量集的任何设备会将部署的任何任务序列置于调试模式。
 
 有关详细信息，请参阅[调试任务序列](/sccm/osd/deploy-use/debug-task-sequence)。
 

@@ -2,7 +2,7 @@
 title: 使用软件中心通过网络部署 Windows
 titleSuffix: Configuration Manager
 description: 可将操作系统部署到软件中心，使用新版 Windows 刷新现有计算机或将 Windows 升级到最新版本。
-ms.date: 6/16/2017
+ms.date: 06/16/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa86d335b94db796f37955462abddeb9451ccf4e
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 2c8f360d864c0ff8c17e4833a7cb6384a06f373c
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083139"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888519"
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用软件中心与 System Center Configuration Manager 一起通过网络部署 Windows
 
@@ -31,7 +31,7 @@ ms.locfileid: "65083139"
 完成其中一个操作系统部署方案中的步骤。 然后使用以下部分来准备在 Software Center 中可用的部署。
 
 ## <a name="configure-deployment-settings"></a>配置部署设置  
-要使操作系统部署在软件中心中可用，请配置该部署。 可以在部署软件向导的“部署设置”页或部署属性的“部署设置”选项卡中配置部署。 对于“可用于以下项目”  设置，请配置“仅 Configuration Manager 客户端”  或“Configuration Manager 客户端、媒体和 PXE” 。 系统部署操作系统后，操作系统显示在目标集合成员的软件中心中。
+要使操作系统部署在软件中心中可用，请配置该部署。 可以在部署软件向导的“部署设置”  页或部署属性的“部署设置”  选项卡中配置部署。 对于“可用于以下项目”  设置，请配置“仅 Configuration Manager 客户端”  或“Configuration Manager 客户端、媒体和 PXE”  。 系统部署操作系统后，操作系统显示在目标集合成员的软件中心中。
 
 ##  <a name="BKMK_Deploy"></a> 将任务序列部署到计算机  
 将操作系统部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。 在为软件中心部署操作系统时，可以配置部署属性为必需还是可用。

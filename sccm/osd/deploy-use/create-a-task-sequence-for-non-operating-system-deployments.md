@@ -1,5 +1,5 @@
 ---
-title: 为非操作系统部署创建任务序列
+title: 创建非 OS 部署的任务序列
 titleSuffix: Configuration Manager
 description: 创建不用于部署 OS 的任务序列，例如分发软件或自动执行任务
 ms.date: 05/03/2019
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17ba0f146a80928b1eaae6334e6418a5e08b1114
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: d3cd923348b3ac6dfd6b2da652efc0a56ad9b787
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083063"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888449"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>创建非 OS 部署的任务序列
 

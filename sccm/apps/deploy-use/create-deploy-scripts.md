@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2b063fe21a674fc066531b1bd970a330d02d9f9
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 4702f29f9c321c4361aea2f2f75c7c7e30e284b7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243673"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888627"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -221,7 +221,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 如果提供命名输入，此脚本会在文件夹中创建一个新文件夹和一个文件。
 
-``` powershell
+``` PowerShell
 Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
@@ -237,7 +237,7 @@ New-Item $FileName -type file
 
 此脚本使用 WMI 来查询计算机的 OS 版本。
 
-``` powershell
+``` PowerShell
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
@@ -304,8 +304,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ### <a name="example-script-output-is-valid-json"></a>示例：脚本输出是有效的 JSON
 命令：`$PSVersionTable.PSVersion`  
 
-输出：  
-```
+``` Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      16299  551
@@ -314,8 +313,7 @@ Major  Minor  Build  Revision
 ### <a name="example-script-output-isnt-valid-json"></a>示例：脚本输出不是有效的 JSON
 命令：`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
-输出：  
-```
+``` Output
 Microsoft Windows 10 Enterprise
 ```
 

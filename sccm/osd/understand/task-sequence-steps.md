@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273e61024032defd10b3176fb70ac6c3a35125e2
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 7132bbbc0746af04e4af952b2fcf7d8de46b3c9b
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380039"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808380"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -868,6 +868,13 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 选择任务序列编辑器中的“添加”  ，选择“磁盘”  ，然后选择“格式化磁盘并分区”  以添加此步骤。
 
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [新-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+
 ### <a name="properties"></a>属性  
 
 在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
@@ -1049,6 +1056,12 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)（从版本 1806 开始）<!--1358493-->  
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装包”  以添加此步骤。
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [新-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 ### <a name="properties"></a>属性  
 
@@ -1119,6 +1132,13 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 > 如果客户端无法利用定位服务检索管理点列表，则使用 SMSTSMPListRequestTimeoutEnabled  和 SMSTSMPListRequestTimeout  变量。 这些变量指定任务序列重试安装应用程序或软件更新之前要等待的毫秒数。 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
 
 选择任务序列编辑器中的“添加”  ，选择“软件”  ，然后选择“安装软件更新”  以添加此步骤。
+
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [新-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 有关此步骤的更多建议和技术流程图，请参阅[安装软件更新](/sccm/osd/understand/install-software-updates)。
 
@@ -1374,6 +1394,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“重启计算机”  以添加此步骤。
 
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [新-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+
 ### <a name="properties"></a>属性  
 
 在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
@@ -1473,6 +1500,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行命令行”  以添加此步骤。
 
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [新-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+
 ### <a name="properties"></a>属性  
 
 在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
@@ -1558,6 +1592,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters)（从版本 1902 开始）<!--3556028-->  
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行 PowerShell 脚本”  以添加此步骤。
+
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [新-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > 使用采用 Unicode 格式的已签名 PowerShell 脚本。 默认的 ANSI 格式不适用于这一步。
@@ -1678,10 +1719,14 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“运行任务序列”  以添加此步骤。
 
-从版本1906开始，通过以下 PowerShell cmdlet 管理此步骤：<!-- 2839943, SCCMDocs #1118 -->
+从版本1906开始，通过以下 PowerShell cmdlet 管理此步骤：<!-- 2839943, SCCMDocs#1118 -->
 
+- **CMTSStepRunTaskSequence**
 - **New-CMTSStepRunTaskSequence**
+- **CMTSStepRunTaskSequence**
 - **Set-CMTSStepRunTaskSequence**
+
+有关详细信息，请参阅[1906 发行说明-新 cmdlet](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets)。
 
 ### <a name="specifications-and-limitations"></a>规范和限制
 
@@ -1737,6 +1782,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“设置动态变量”  以添加此步骤。
 
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [新-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable?view=sccm-ps)
+
 ### <a name="properties"></a>属性  
 
 在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
@@ -1783,6 +1835,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 
 选择任务序列编辑器中的“添加”  ，选择“常规”  ，然后选择“设置任务序列变量”  以添加此步骤。
 
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [新-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+
 ### <a name="properties"></a>属性  
 
 在此步骤的“属性”选项卡上，请配置此部分中描述的设置  。  
@@ -1818,6 +1877,13 @@ SMSTSSoftwareUpdateScanTimeout  变量控制着此步骤期间的软件更新扫
 此步骤使用 Windows PE 安装目录 `X:\Windows` 替换 sysprep.inf 或 unattend.xml 目录变量，例如 `%WINDIR%` 和 `%ProgramFiles%`。 任务序列会忽略使用这些环境变量指定的变量。  
 
 选择任务序列编辑器中的“添加”  ，选择“映像”  ，然后选择“安装 Windows 和 ConfigMgr”  以添加此步骤。
+
+通过以下 PowerShell cmdlet 管理此步骤：<!-- SCCMDocs #1118 -->
+
+- [CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [新-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="step-actions"></a>步骤操作
 

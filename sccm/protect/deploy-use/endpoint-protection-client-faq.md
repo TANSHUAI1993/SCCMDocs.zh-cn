@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28b901c731d46fb19140526af6e85825ad43795
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 642f74319fca149cce15c019a473904641b4ea9e
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380012"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902947"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -108,7 +108,7 @@ ms.locfileid: "70380012"
 
 3.  若要了解有关检测到的威胁的详细信息，请单击“历史记录”  选项卡，然后选择“所有检测到的项目”  。  
 
-4.  如果你看不到所有检测到的项目，请单击“查看详细信息”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。 在运行 Windows XP 的系统上，你可能需要以管理员身份登录到此计算机。  
+4.  如果你看不到所有检测到的项目，请单击“查看详细信息”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。
 
 > [!NOTE]  
 >  在清理计算机时，Windows Defender 尽可能只删除文件的受感染部分，而不是整个文件。  

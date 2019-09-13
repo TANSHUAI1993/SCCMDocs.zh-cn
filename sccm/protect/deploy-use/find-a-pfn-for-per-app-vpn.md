@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05278353f12f9d443b3e162f1a362244afd8afc6
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 546cf0178993a364a4e1121e8236372162ab8481
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380220"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892314"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>查找每应用 VPN 的包系列名称 (PFN)
 
@@ -31,7 +31,7 @@ ms.locfileid: "70380220"
 
 Get-appxpackage 的语法是：
 
-```
+``` Syntax
 Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]
 ```
 
@@ -78,10 +78,11 @@ Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User 
 
 在 Microsoft Edge 中，将显示所需信息；在 Internet Explorer 中，单击“打开”，  查看信息。 第一行提供 PFN 值。 本示例的结果如下所示：
 
-```json
+``` JSON
 {
   "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",
   "packageIdentityName": "Microsoft.Office.OneNote",
   "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",
   "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
 }
+```
