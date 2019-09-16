@@ -1,7 +1,7 @@
 ---
-title: 创建和部署 Windows Defender 应用程序防护策略
+title: 管理应用程序防护策略
 titleSuffix: Configuration Manager
-description: 创建和部署 Windows Defender 应用程序防护策略。
+description: 了解如何创建和部署 Windows Defender 应用程序防护策略
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a21ef053cbd5f0a57d7688d69f29bc6f8871484a
-ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
+ms.openlocfilehash: a9567dc53a204d639b3da5920cf1fc452426a11f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794734"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892488"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略
 
@@ -33,7 +33,7 @@ ms.locfileid: "68794734"
 1. 在 Configuration Manager 控制台中，选择“资产和符合性”  。
 2. 在“资产和符合性”  工作区中，选择“概述”   > “终结点保护”   > “Windows Defender 应用程序防护”  。
 3. 在“主页”  选项卡的“创建”  组中，单击“创建 Windows Defender 应用程序防护策略”  。
-4. 将此[文章](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)用作参考，浏览和配置可用的设置。 Configuration Manager 允许设置某些策略设置:
+4. 将此[文章](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)用作参考，浏览和配置可用的设置。 Configuration Manager 允许设置某些策略设置：
    - [主机交互设置](#bkmk_HIS)
    - [应用程序行为](#bkmk_ABS)
    - [文件管理](#bkmk_FM)
@@ -79,14 +79,14 @@ ms.locfileid: "68794734"
 
 ### <a name="bkmk_FM"></a> 文件管理
 <!--3555858-->
-从 Configuration Manager 版本1906开始, 有一个允许用户信任通常在应用程序防护中打开的文件的策略设置。 成功完成后，文件将在主机设备上打开，而不是在应用程序防护中打开。 有关应用程序防护策略的详细信息，请参阅[配置 Windows Defender 应用程序防护策略设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)。
+从 Configuration Manager 版本1906开始，有一个允许用户信任通常在应用程序防护中打开的文件的策略设置。 成功完成后，文件将在主机设备上打开，而不是在应用程序防护中打开。 有关应用程序防护策略的详细信息，请参阅[配置 Windows Defender 应用程序防护策略设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)。
 
-- **允许用户信任在 Windows Defender 应用程序防护中打开的文件**-使用户能够将文件标记为受信任。 当文件受信任时, 它会在主机而不是应用程序防护中打开。 适用于 Windows 10 版本1809或更高版本的客户端。
+- **允许用户信任在 Windows Defender 应用程序防护中打开的文件**-使用户能够将文件标记为受信任。 当文件受信任时，它会在主机而不是应用程序防护中打开。 适用于 Windows 10 版本1809或更高版本的客户端。
   - **禁止：** 不允许用户将文件标记为可信（默认）。
-  - **文件由防病毒软件检查:** 允许用户在防病毒检查后将文件标记为受信任。
+  - **文件由防病毒软件检查：** 允许用户在防病毒检查后将文件标记为受信任。
   - **所有文件：** 允许用户将任何文件标记为可信。
 
-启用文件管理时, 可能会看到客户端的 DCMReporting 中记录的错误。 以下错误通常不会影响功能: <!--4619457-->
+启用文件管理时，可能会看到客户端的 DCMReporting 中记录的错误。 以下错误通常不会影响功能： <!--4619457-->
 
 - 在兼容的设备上：
   - 找不到 FileTrustCriteria_condition
@@ -95,7 +95,7 @@ ms.locfileid: "68794734"
   - FileTrustCriteria_condition 不能位于映射中
   - 在摘要中找不到 FileTrustCriteria_condition
 
-若要编辑应用程序防护设置, 请在 "**资产和符合性**" 工作区中展开**Endpoint Protection** , 然后单击 " **Windows Defender 应用程序防护**" 节点。 右键单击要编辑的策略，然后选择“属性”  。
+若要编辑应用程序防护设置，请在 "**资产和符合性**" 工作区中展开**Endpoint Protection** ，然后单击 " **Windows Defender 应用程序防护**" 节点。 右键单击要编辑的策略，然后选择“属性”  。
 
 ## <a name="next-steps"></a>后续步骤
 

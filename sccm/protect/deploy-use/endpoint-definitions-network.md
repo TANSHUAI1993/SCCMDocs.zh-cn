@@ -1,5 +1,5 @@
 ---
-title: 网络共享中的 Endpoint Protection 恶意软件定义
+title: 从网络共享下载定义
 titleSuffix: Configuration Manager
 description: 了解如何从 Microsoft 手动下载最新定义更新，然后将客户端配置为下载这些定义。
 ms.date: 02/14/2017
@@ -11,14 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68ed19c9baebd079d10bda024b9f6457ccb58cab
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: d003ca61a649de3835766adede0869edb4393b20
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494610"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892456"
 ---
-# <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享为 Configuration Manager 下载定义
+# <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享下载定义
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -31,19 +31,19 @@ ms.locfileid: "65494610"
 
 ## <a name="to-configure-definition-downloads-from-a-file-share"></a>若要从文件共享配置定义下载
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”  。
 
-2.  在“资产和符合性”  工作区中，展开“Endpoint Protection” ，然后单击“反恶意软件策略” 。
+2.  在“资产和符合性”  工作区中，展开“Endpoint Protection”  ，然后单击“反恶意软件策略”  。
 
 3.  打开“默认反恶意软件策略”  的属性页，或创建新的反恶意软件策略。 有关如何创建反恶意软件策略的详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
-4.  在反恶意软件属性对话框的“定义更新”  部分中，单击“设置源” 。
+4.  在反恶意软件属性对话框的“定义更新”  部分中，单击“设置源”  。
 
-5.  在“配置定义更新源”  对话框中，选择“来自 UNC 文件共享的更新” 。
+5.  在“配置定义更新源”  对话框中，选择“来自 UNC 文件共享的更新”  。
 
 6.  单击“确定”  以关闭“配置定义更新源”  对话框。
 
-7.  单击“设置路径” 。 然后，在“配置定义更新 UNC 路径”  对话框中，添加一个或多个指向网络共享上定义更新文件位置的 UNC 路径。
+7.  单击“设置路径”  。 然后，在“配置定义更新 UNC 路径”  对话框中，添加一个或多个指向网络共享上定义更新文件位置的 UNC 路径。
 
 8.  单击“确定”  以关闭“配置定义更新 UNC 路径”  对话框。
 

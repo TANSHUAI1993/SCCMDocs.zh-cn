@@ -1,7 +1,7 @@
 ---
-title: 使用独立媒体部署 Windows，而不使用网络
+title: 使用独立媒体部署 Windows
 titleSuffix: Configuration Manager
-description: 对于带宽受到限制或作为更新、安装或升级计算机选项的操作系统，可使用 Configuration Manager 中的独立媒体进行部署。
+description: 对于带宽受到限制或作为更新、安装或升级计算机选项的 Windows，可使用 Configuration Manager 中的独立媒体进行部署。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87d86ba571e998431fe198d4b4c18d8dd91dc06f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 408f8c17150aa6b6ee9330b40d8b8fef09b7eae5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124177"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892513"
 ---
-# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用独立媒体部署 Windows，而不使用网络
+# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network"></a>使用独立媒体部署 Windows，而不使用网络
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的独立媒体包含在计算机上部署操作系统所需的所有内容。 这包括启动映像、操作系统映像和安装操作系统的任务序列（包括应用程序、驱动程序等）。 独立媒体部署允许在下列情况下部署操作系统：  
+Configuration Manager 中的独立媒体包含在计算机上部署操作系统所需的所有内容。 这包括启动映像、操作系统映像和安装操作系统的任务序列（包括应用程序、驱动程序等）。 独立媒体部署允许在下列情况下部署操作系统：  
 
 -   在通过网络复制操作系统映像包或其他大型包并不实际可行的环境中。  
 

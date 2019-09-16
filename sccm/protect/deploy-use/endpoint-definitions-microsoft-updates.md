@@ -1,5 +1,5 @@
 ---
-title: 网络共享中的 Endpoint Protection 恶意软件定义
+title: 从 Microsoft 下载定义
 titleSuffix: Configuration Manager
 description: 了解如何可以实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 的恶意软件定义。
 ms.date: 02/14/2017
@@ -11,19 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed7ea945a3454b2c647fec07ebcf3301fc6c708
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3f5d72fc7dba8fea11c0c51aabac546e1966aa25
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494584"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892343"
 ---
-# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 恶意软件定义
+# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates"></a>启用 Endpoint Protection 恶意软件定义，以便从 Microsoft 更新下载定义
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-
- 当你选择从 Microsoft 更新下载定义更新时，客户端将按照反恶意软件策略对话框的“定义更新”  部分中定义的间隔检查 Microsoft 更新网站。
+当你选择从 Microsoft 更新下载定义更新时，客户端将按照反恶意软件策略对话框的“定义更新”  部分中定义的间隔检查 Microsoft 更新网站。
 
  当客户端不具有到 Configuration Manager 站点的连接或当你希望用户能够启动定义更新时，此方法会很有用。
 

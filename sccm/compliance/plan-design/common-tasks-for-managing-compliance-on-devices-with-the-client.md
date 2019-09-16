@@ -1,7 +1,7 @@
 ---
-title: '客户端托管设备的常见符合性管理任务 '
+title: 常见合规性管理任务
 titleSuffix: Configuration Manager
-description: 通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。
+description: 通过完成一些常见方案，了解 Configuration Manager 符合性设置。
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -11,43 +11,43 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a23fd5c1791253a7789fda74a30a0e71566f92
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: da92506d291ca24af807db7b4f4b73473359e12f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67550818"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890646"
 ---
-# <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务
+# <a name="common-tasks-for-managing-compliance-on-devices-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端在设备上管理符合性的常见任务
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本文提供了指导用户完成时可能遇到的一些常见方案中使用 System Center Configuration Manager 符合性设置的说明。  
+本文提供了有关如何使用 System Center Configuration Manager 符合性设置的简介，指导你完成可能遇到的一些常见方案。  
 
  在已熟悉符合性设置的前提下，若要详细了解所有可用功能，可参阅[使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/create-configuration-items.md)。  
 
- 在开始之前，请阅读[符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)若要了解有关符合性设置的一些基础知识。 读取[规划和配置符合性设置](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)有关必需的先决条件的信息。  
+ 在开始之前，请阅读[符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)以了解有关符合性设置的一些基础知识。 阅读[规划和配置符合性设置，](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)获取有关必需先决条件的信息。  
 
 ## <a name="general-information-for-each-scenario"></a>每个方案的一般信息  
- 在每个方案中，将创建可执行特定任务的配置项目。 若要打开创建配置项目向导并开始，执行以下步骤：  
+ 在每个方案中，将创建可执行特定任务的配置项目。 若要打开 "创建配置项目向导" 并开始使用，请执行以下步骤：  
 
 1.  在 Configuration Manager 控制台中，选择“资产和符合性”   > “符合性设置”   > “配置项目”  。  
 
 1.  在“主页”  选项卡的“创建”  组中，选择“创建配置项目”  。  
 
-1.  上**常规**创建配置项目向导中，这在以下屏幕截图中所示的页上，指定的名称和说明的配置项。 在本文中，然后选择每个方案的相应的配置项类型。  
+1.  在 "创建配置项目向导" 的 "**常规**" 页上，如以下屏幕截图所示，指定配置项目的名称和描述。 然后为本文中的每个方案选择适当的配置项目类型。  
 
      ![“创建配置项目向导”的“常规”页](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
-## <a name="scenario-disable-bluetooth-on-windows-10-devices"></a>方案： Windows 10 设备上禁用蓝牙
+## <a name="scenario-disable-bluetooth-on-windows-10-devices"></a>方案：在 Windows 10 设备上禁用蓝牙
 
- 在此方案中，安全部门已确定设备上的蓝牙功能可用于在公司外传输敏感企业信息。 你最近已升级到 Windows 10 的所有计算机。 您决定这些设备上禁用蓝牙。  
+ 在此方案中，安全部门已确定设备上的蓝牙功能可用于在公司外传输敏感企业信息。 你最近已将所有计算机升级到 Windows 10。 你决定在这些设备上禁用蓝牙。  
 
 1. 在“创建配置项目向导”的“常规”  页上，选择“Windows 10”  配置项目类型，然后选择“下一步”  。  
 
 2. 在向导的“支持的平台”  页上，选择所有 Windows 10 平台。  
 
-3. 上**设备设置**页上，选择**设备**，然后选择**下一步**。  
+3. 在 "**设备设置**" 页上，选择 "**设备**"，然后选择 "**下一步**"。  
 
 4. 在“设备”  页上，选择“禁止”  作为  “蓝牙”的值。  
 
@@ -66,7 +66,7 @@ ms.locfileid: "67550818"
 >
 >有关详细信息，请参阅[如何为 System Center Configuration Manager 客户端管理的Mac OS X 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)。  
 
- 在此方案中，你将发现在你管理某些 Windows 8.1 计算机上正确运行并不重要的业务线应用。 确定这是因为某些计算机上名为“HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1”  的注册表项的值已被设置为“0”  。 若想成功运行业务线应用，需要将该值设置为“1”  。  
+ 在此方案中，你将发现重要的业务线应用在你管理的某些 Windows 8.1 计算机上不能正常运行。 确定这是因为某些计算机上名为“HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1”  的注册表项的值已被设置为“0”  。 若想成功运行业务线应用，需要将该值设置为“1”  。  
 
  在此过程中，需要创建一个配置项目，它会监视并自动修正发现的任何错误的注册表项值。  
 
@@ -90,7 +90,7 @@ ms.locfileid: "67550818"
 
    -   **值** > **1** （必需值）  
 
-5. 上**符合性规则**选项卡**创建设置**对话框中，选择**新建**。 在中**创建规则**对话框框中，配置这些设置：  
+5. 在 "**创建设置**" 对话框的 "**符合性规则**" 选项卡上，选择 "**新建**"。 在 "**创建规则**" 对话框中，配置以下设置：  
 
    -   **名称** > **规则示例**  
 

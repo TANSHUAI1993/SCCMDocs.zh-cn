@@ -1,7 +1,7 @@
 ---
-title: 在 Windows 10 中与 Windows Update for Business 集成
+title: 集成适用于企业的 Windows 更新
 titleSuffix: Configuration Manager
-description: 将可使组织中基于 Windows 10 的设备保持最新状态的适用于企业的 Windows 更新用于连接到 Windows 更新服务的设备。
+description: 使用 Windows 更新 for Business （WUfB）将设备连接到 Windows 更新服务，使其保持最新状态。
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -11,14 +11,14 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12757bed4c674d12f1e0e2b3dc5c6ef72db59778
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 504ace282988ef8b52863184f0685ea5a6958a27
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243695"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892277"
 ---
-# <a name="integration-with-windows-update-for-business-in-windows-10"></a>在 Windows 10 中与 Windows Update for Business 集成
+# <a name="integrate-with-windows-update-for-business"></a>与 Windows 更新 for Business 集成
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -65,7 +65,8 @@ ms.locfileid: "70243695"
 2.  Configuration Manager 资源浏览器中的“Windows 更新”  节点下有一个新属性“UseWUServer”  。  
 
 3.  基于 **UserWUServer** 属性为通过 WUfB 连接以获取更新和升级的所有计算机创建一个集合。 您可以基于类似于下面的查询创建集合：  
-    ``` 
+
+    ``` WQL
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 

@@ -1,8 +1,7 @@
 ---
-title: 部署和监视安全软件更新的示例方案
+title: 用于部署和监视更新的示例方案
 titleSuffix: Configuration Manager
-description: 请使用此示例方案以了解如何在 Configuration Manager 中使用软件更新以部署和监视 Microsoft 每月发布的安全软件更新。
-manager: dougeby
+description: 如何使用 Configuration Manager 中的软件更新来部署和监视每月的软件更新。
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -10,15 +9,16 @@ ms.technology: configmgr-sum
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 author: mestew
 ms.author: mstewart
+manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02c1f1cbc80bacf35306d2e4d5367a41ec5d8c1c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 42c53f88d727a0024f2d5b99f86b4d39a3ba6f6a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496328"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888439"
 ---
-# <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>使用 System Center Configuration Manager 部署和监视 Microsoft 每月发布的安全软件更新的示例方案
+# <a name="example-scenario-to-deploy-and-monitor-monthly-software-updates"></a>部署和监视每月软件更新的示例方案
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -47,15 +47,15 @@ ms.locfileid: "65496328"
 
 |过程|参考|  
 |-------------|---------------|  
-|John 从 Configuration Manager 控制台中的“所有软件更新”节点中添加条件，以仅显示满足以下条件的于 2015 年发布或修订的安全软件更新：<br /><br /><ul><li>**条件**：发布或修订日期</li><li>**条件**：大于或等于特定日期<br />“值”：1/1/2015</li><li>“条件”：更新分类<br />**值**：安全更新</li><li>**条件**：已过期 <br />**值**：否</li></ul>|无更多信息|
-|John 将所有经过筛选的软件更新添加到一个具有以下要求的新的软件更新组中：<br /><br /><ul><li>“名称”：符合性组 - Microsoft 安全更新2015</li><li>**描述**：软件更新|[将软件更新添加到更新组](add-software-updates-to-an-update-group.md)|  
+|John 从 Configuration Manager 控制台中的“所有软件更新”  节点中添加条件，以仅显示满足以下条件的于 2015 年发布或修订的安全软件更新：<br /><br /><ul><li>**条件**：发布或修订日期</li><li>**条件**：大于或等于特定日期<br />“值”  ：1/1/2015</li><li>“条件”  ：更新分类<br />**值**：安全更新</li><li>**条件**：已过期 <br />**值**：否</li></ul>|无更多信息|
+|John 将所有经过筛选的软件更新添加到一个具有以下要求的新的软件更新组中：<br /><br /><ul><li>“名称”  ：符合性组 - Microsoft 安全更新2015</li><li>**描述**：软件更新|[将软件更新添加到更新组](add-software-updates-to-an-update-group.md)|  
 
 ##  <a name="BKMK_Step2"></a>步骤 2：为当月创建自动部署规则  
  John 为 Microsoft 在当月发布的安全软件更新创建自动部署规则。 他执行下表中的步骤。  
 
 |过程|参考|  
 |-------------|---------------|  
-|John 创建具有以下要求的自动部署规则：<br /><br /><ol><li>在“常规”  选项卡上，John 进行以下配置：<br /> <ul><li>将名称指定为“每月安全更新”。</li><li>选择一个包含有限客户端的测试集合。</li><li>选择“创建新的软件更新组”。</li><li>确保未选中“运行此规则后启用部署”。</li></ul></li><li>在“部署设置”  选项卡上，John 选择默认设置。</li><li>在“软件更新”页上，John 配置以下属性筛选器和搜索条件：<br /><ul><li>发布或修订日期 **最近 1 个月**。</li><li>更新分类 **安全更新**。</li></ul></li><li>在“评估”页上，John 使此规则能够按照为每**月**的**第二个星期二**制定的计划运行。 John 还确认了将同步计划设置为在每**月**的**第二个星期三**运行。</li><li>John 使用“部署计划”、“用户体验”、“警报”和“下载设置”页上的默认设置。</li><li>在“部署包”页上，John 指定新的部署包。</li><li>John 使用“下载位置”和“语言选择”页上的默认设置。</li></ol>|[自动部署软件更新](automatically-deploy-software-updates.md)|  
+|John 创建具有以下要求的自动部署规则：<br /><br /><ol><li>在“常规”  选项卡上，John 进行以下配置：<br /> <ul><li>将名称指定为“每月安全更新”  。</li><li>选择一个包含有限客户端的测试集合。</li><li>选择“创建新的软件更新组”  。</li><li>确保未选中“运行此规则后启用部署”  。</li></ul></li><li>在“部署设置”  选项卡上，John 选择默认设置。</li><li>在“软件更新”  页上，John 配置以下属性筛选器和搜索条件：<br /><ul><li>发布或修订日期 **最近 1 个月**。</li><li>更新分类 **安全更新**。</li></ul></li><li>在“评估”  页上，John 使此规则能够按照为每**月**的**第二个星期二**制定的计划运行。 John 还确认了将同步计划设置为在每**月**的**第二个星期三**运行。</li><li>John 使用“部署计划”、“用户体验”、“警报”和“下载设置”页上的默认设置。</li><li>在“部署包”  页上，John 指定新的部署包。</li><li>John 使用“下载位置”和“语言选择”页上的默认设置。</li></ol>|[自动部署软件更新](automatically-deploy-software-updates.md)|  
 
 ##  <a name="BKMK_Step3"></a>步骤 3：验证软件更新是否做好部署准备  
  在每月的第二个星期二，John 都会验证软件更新是否做好部署准备。 他将执行以下步骤。  
