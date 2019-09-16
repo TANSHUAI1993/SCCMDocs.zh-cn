@@ -152,8 +152,6 @@
               href: plan-design/hierarchy/manage-content-library-flowchart.md
             - name: 内容库清理工具
               href: plan-design/hierarchy/content-library-cleanup-tool.md
-            - name: 传递优化网络内缓存
-              href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
             - name: 用于 Configuration Manager 客户端的对等缓存
               href: plan-design/hierarchy/client-peer-cache.md
             - name: 包传输管理器
@@ -374,6 +372,10 @@
               href: servers/deploy/configure/deploy-and-manage-content.md
             - name: 监视内容
               href: servers/deploy/configure/monitor-content-you-have-distributed.md
+            - name: 传递优化网络内缓存
+              href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
+            - name: 排除传递优化网络内缓存的故障
+              href: servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md
         - name: 运行发现
           items:
             - name: 发现方法概述
