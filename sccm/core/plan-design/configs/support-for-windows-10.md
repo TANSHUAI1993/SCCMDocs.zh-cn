@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4cc83e3b7d234b7dfbab24ba54079e4633814d5
-ms.sourcegitcommit: 9c29ee22d3af5ab2bf8d51262c11d5a756dc55c7
+ms.openlocfilehash: f3ec5f9b9bbda3b3bec6fdd1d955b8911f8029b5
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68913783"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738498"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -103,7 +103,7 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 
 |项|
 |--|
-| ![支持](media/green_check.png) = **支持** <br/> Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 7。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
+| ![支持](media/green_check.png) = **支持** <br/> 此表仅显示与 Configuration Manager 版本相关的 Windows ADK 可支持性。 Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 7。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
 | ![Backwards compatible](media/blue_compat.png)  = 后向兼容  <br/> 此组合未经测试，但应该适用。 我们会记录任何已知问题或注意事项。 |
 | ![不支持](media/Red_X.png) = **不支持** |
 

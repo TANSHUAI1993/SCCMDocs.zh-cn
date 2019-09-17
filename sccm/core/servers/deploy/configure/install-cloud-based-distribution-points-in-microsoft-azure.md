@@ -2,7 +2,7 @@
 title: 安装云分发点
 titleSuffix: Configuration Manager
 description: 使用以下步骤在 Configuration Manager 中设置云分发点。
-ms.date: 06/17/2019
+ms.date: 09/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 436392eabf545241141fe8eebe6f351cb85eb78e
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 564e24f3c753af3a757001e5c3c6e420d369915f
+ms.sourcegitcommit: 05a984cf94ea43c392701a389c4eb20bd692847c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70922744"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
@@ -86,6 +86,18 @@ ms.locfileid: "67194060"
 
     - Azure 管理证书，同时导出为 .CER 和 .PFX 文件  。 Azure 订阅管理员需要将 .CER 管理证书添加到 [Azure 门户](https://portal.azure.com)中的订阅。  
 
+### <a name="branchcache"></a>BranchCache
+
+若要启用云分发点来使用 Windows BranchCache，请在站点服务器上安装 BranchCache 功能。<!-- SCCMDocs-pr#4054 -->
+
+- 如果站点服务器具有本地分发点站点系统角色，请将该角色属性中的选项配置为“启用并配置 BranchCache”  。 有关详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)。
+
+- 如果站点服务器没有分发点角色，请在 Windows 中安装 BranchCache 功能。 有关详细信息，请参阅[安装 BranchCache 功能](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)。
+
+如果已将内容分发到云分发点，然后决定启用 BranchCache，请首先安装该功能。 之后再将内容重新分发到云分发点。
+
+> [!NOTE]  
+> 在 Configuration Manager 1810 版本及更低版本中，如果具有多个云分发点，则需要手动设置 BranchCache 密钥密码。 有关详细信息，请参阅 [Microsoft 支持 KB 4458143](https://support.microsoft.com/help/4458143)。
 
 ## <a name="bkmk_setup"></a>设置  
 

@@ -1,6 +1,8 @@
 ---
 title: 控制台中文档
-ms.date: 08/09/2019
+titleSuffix: Configuration Manager
+description: 本文仅在 Configuration Manager 控制台中显示。
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b413dd90a30317c4dec091a7963b637024eab442
-ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
+ms.openlocfilehash: 1b24f5cc928265cf79eeebe2d9beb4c9f8d9d759
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995424"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889616"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +28,7 @@ ms.locfileid: "68995424"
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager 文档
 
-上次更新时间：*2019 年 8 月 9 日*
+上次更新时间：  2019 年 9 月 09 日
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -54,22 +56,22 @@ ms.locfileid: "68995424"
 
 ## <a name="trending"></a>趋势
 
-2019 年 7 月 1 日至 7 月 31 日期间最热门的文章。
+2019 年 8 月 1 日至 8 月 31 日期间最热门的文章。
 
 | 页面查看次数 | 标题 |
 |------------|-------|
-| 19223 | [日志文件引用](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17954 | [如何启用 TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 13242 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 12120 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 11772 | [版本 1902 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 10206 | [桌面分析](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
-| 9885 | [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 8740 | [版本 1906 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
-| 8464 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8398 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 18594 | [日志文件引用](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 18045 | [版本 1906 中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
+| 16244 | [如何启用 TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 11902 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11233 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8663 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8399 | [桌面分析](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
+| 8391 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8229 | [客户端设置](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
+| 8069 | [任务序列步骤](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
 
-[Configuration Manager 中心页面](https://docs.microsoft.com/sccm/)在此时间段收到了 24,008 个页面查看次数。
+[Configuration Manager 中心页面](https://docs.microsoft.com/sccm/)在此时间段获得了 22,991 次页面查看。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -77,16 +79,16 @@ ms.locfileid: "68995424"
 
 | 上次审阅时间 | 标题 |
 |---------------|-------|
-| 2019-07-30 | [传递优化网络内缓存](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache) |
-| 2019-07-26 | [设备重启通知](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/device-restart-notifications) |
-| 2019-07-26 | [兼容性评估](https://docs.microsoft.com/en-us/sccm/desktop-analytics/compat-assessment) |
-| 2019-07-26 | [调试任务序列](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/debug-task-sequence) |
-| 2019-07-26 | [SQL Server AlwaysOn](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) |
-| 2019-07-26 | [关于日志文件](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/about-log-files) |
-| 2019-07-26 | [配置预先缓存内容](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/configure-precache-content) |
-| 2019-07-26 | [创建应用程序组](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-app-groups) |
-| 2019-07-19 | [1906 版发行说明](https://docs.microsoft.com/en-us/powershell/sccm/1906-release-notes) |
-| 2019-07-11 | [技术预览版 1907](https://docs.microsoft.com/en-us/sccm/core/get-started/2019/technical-preview-1907) |
+| 2019/8/30 | [技术预览版 1908.2](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1908-2) |
+| 2019/8/30 | [MSfB 集成故障排除](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration) |
+| 2019/8/23 | [桌面分析常见问题解答](https://docs.microsoft.com/sccm/desktop-analytics/faq) |
+| 2019/8/23 | [设备重启通知](https://docs.microsoft.com/sccm/core/clients/deploy/device-restart-notifications) |
+| 2019/8/22 | [软件更新的先决条件](https://docs.microsoft.com/sccm/sum/plan-design/prerequisites-for-software-updates) |
+| 2019/8/21 | [安装程序的命令行选项](https://docs.microsoft.com/sccm/core/servers/deploy/install/command-line-options-for-setup) |
+| 2019/8/15 | [桌面分析中的新增功能](https://docs.microsoft.com/sccm/desktop-analytics/whats-new) |
+| 2019/8/9 | [SQL 复制故障排除](https://docs.microsoft.com/sccm/core/servers/manage/replication/overview) |
+| 2019/8/9 | [Database replication](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/database-replication) |
+| 2019/8/8 | [Internet 访问要求](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
 
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 

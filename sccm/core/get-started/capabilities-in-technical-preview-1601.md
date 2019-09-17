@@ -12,12 +12,12 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be84e7bfae54cf3099b588cce35b01a424c45b8f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 605a95aa96191fab63f7c4a0e0ce2f8b7c6a8778
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716000"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902545"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
 
@@ -35,7 +35,7 @@ ms.locfileid: "66716000"
 
     -   在主站点的数据库上运行以下 SQL 脚本：  
 
-        ```  
+        ``` SQL
         DECLARE @PilotingPkgID NVARCHAR(8)  
 
         SELECT @PilotingPkgID = PilotingPackageID FROM ClientDeploymentSettings  
@@ -89,7 +89,7 @@ ms.locfileid: "66716000"
     -   **需要反恶意软件：** 此规则检查是否已启用并正在运行反恶意软件（仅限 System Center Endpoint Protection 或 Windows Defender）。  
          如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
 
-    因不合规而被阻止的最终用户将在 SCCM 软件中心查看合规性信息，并且在纠正合规性问题之后启动新的策略评估。  
+    因不合规而被阻止的最终用户将在软件中心查看合规性信息，并且在纠正合规性问题之后启动新的策略评估。  
 
 -   **使用运行状况证明服务的条件访问：** 现在可以根据运行状况证明服务报告的设备运行状况来限制对电子邮件和 0365 服务的访问。  此外，设备健康状况报告中包含由 Intune 管理的设备。  
 

@@ -2,7 +2,7 @@
 title: 客户端通知
 titleSuffix: Configuration Manager
 description: 通过立即从中央 Configuration Manager 控制台执行操作来管理客户端。
-ms.date: 03/22/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db68a55136d708ad9276f8b1319dde33fcde35ac
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: a2835ac13f9ffc2aa7a36ebc9669fb62cccc1257
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477460"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738170"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 若要立即对远程客户端执行操作，请从 Configuration Manager 控制台发送客户端通知操作。 在单个设备或一组设备上启动这些操作。 
 
@@ -33,10 +33,10 @@ ms.locfileid: "58477460"
 
 ### <a name="install-client"></a>安装客户端
 
-将打开“安装客户端向导”。 此向导使用客户端请求安装来安装 Configuration Manager 客户端。 有关详细信息，请参阅[客户端请求安装](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)。
+将打开“安装客户端向导”  。 此向导使用客户端请求安装来安装 Configuration Manager 客户端。 有关详细信息，请参阅[客户端请求安装](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)。
 
 #### <a name="permissions"></a>权限
-此操作需要“集合”对象上的“修改资源”和“读取”权限。 
+此操作需要“集合”对象上的“修改资源”和“读取”权限    。 
 
 默认情况下，以下内置角色具有这些权限：
 - 应用程序管理员  
@@ -50,10 +50,10 @@ ms.locfileid: "58477460"
 
 ### <a name="run-script"></a>运行脚本
 
-将打开“运行脚本”向导以在所有集合中的客户端上运行 PowerShell 脚本。 有关详细信息，请参阅[创建和运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)。
+将打开“运行脚本”  向导以在所有集合中的客户端上运行 PowerShell 脚本。 有关详细信息，请参阅[创建和运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)。
 
 #### <a name="permissions"></a>权限
-此操作需要“集合”对象上的“运行脚本”权限。 
+此操作需要“集合”对象上的“运行脚本”权限   。 
 
 默认情况下，以下内置角色具有此权限：
 - 完全权限管理员  
@@ -74,13 +74,13 @@ ms.locfileid: "58477460"
 
 ## <a name="client-notification"></a>客户端通知
 
-以下操作位于“客户端通知”菜单下，此菜单位于功能区上的“主页”选项卡的“设备”或“集合”组中。
+以下操作位于“客户端通知”菜单下，此菜单位于功能区上的“主页”选项卡的“设备”或“集合”组中  。
 
-在 1806 版或更早版本中，“客户端通知”选项仅在“设备集合”节点中或在查看了“设备集合”的成员身份时显示。 从 1810 版开始，可以直接从“设备”节点启动“客户端通知”。 不再要求必须在集合成员资格视图内。 <!--SCCMDocs-pr issue 2972-->
+在 1806 版或更早版本中，“客户端通知”选项仅在“设备集合”节点中或在查看了“设备集合”的成员身份时显示  。 从 1810 版开始，可以直接从“设备”节点启动“客户端通知”   。 不再要求必须在集合成员资格视图内。 <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>权限
 <!--SCCMDocs-pr issue #2972-->
-从 1810 版开始，客户端通知操作现在需要“集合”对象上的“通知资源”权限。 此权限适用于“客户端通知”菜单下的所有操作。 
+从 1810 版开始，客户端通知操作现在需要“集合”对象上的“通知资源”权限  。 此权限适用于“客户端通知”菜单下的所有操作  。 
 
 默认情况下，以下内置角色具有此权限：
 - 完全权限管理员  
@@ -141,23 +141,25 @@ ms.locfileid: "58477460"
 
 ### <a name="wake-up"></a>唤醒
 
-从版本 1810 开始，使用同一子网上的其他设备触发配置为支持使用 LAN 唤醒进行唤醒的设备，以发送 LAN 唤醒包。
+从版本 1810 开始，使用同一子网上的其他设备触发配置为支持使用 LAN 唤醒进行唤醒的设备，以发送 LAN 唤醒包。 有关详细信息，请参阅[如何配置 LAN 唤醒](/sccm/core/clients/deploy/configure-wake-on-lan)。
 
+### <a name="permissions"></a>权限
+此操作需要“集合”对象上的“通知资源”权限   。
 
 ### <a name="restart"></a>重启
 
-触发选定设备重启。 
+触发选定设备重启。 有关详细信息，请参阅[重启客户端](/sccm/core/clients/manage/manage-clients#restart-clients)。
 
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-以下操作位于“Endpoint Protection”菜单下。 此菜单位于功能区上的“主页”选项卡的“集合”组中。当选择一个或多个设备时，这些操作位于功能区的“选定对象”选项卡上。
+以下操作位于“Endpoint Protection”菜单下  。 此菜单位于功能区上的“主页”选项卡的“集合”组中。当选择一个或多个设备时，这些操作位于功能区的“选定对象”选项卡上  。
 
 有关详细信息，请参阅 [Configuration Manager 中的 Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection)。
 
 #### <a name="permissions"></a>权限
-此操作需要“集合”对象上的“强制安全性”权限。 
+此操作需要“集合”对象上的“强制安全性”权限   。 
 
 默认情况下，以下内置角色具有此权限：
 - 完全权限管理员  

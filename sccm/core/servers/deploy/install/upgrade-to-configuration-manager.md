@@ -1,5 +1,6 @@
 ---
-title: 升级到 Configuration Manager
+title: 升级到 Current Branch
+titleSuffix: Configuration Manager
 description: 了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。
 ms.date: 08/16/2019
 ms.prod: configuration-manager
@@ -10,14 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb0d120fd9d9b301cf02af9c6126a0991524e9c6
-ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
+ms.openlocfilehash: e5799d35c8820379d42571b527b870fa7efb4252
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490047"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888903"
 ---
-# <a name="upgrade-to-configuration-manager"></a>升级到 Configuration Manager
+# <a name="upgrade-to-configuration-manager-current-branch"></a>升级到 Configuration Manager Current Branch
 
 适用范围：  System Center Configuration Manager (Current Branch)
 

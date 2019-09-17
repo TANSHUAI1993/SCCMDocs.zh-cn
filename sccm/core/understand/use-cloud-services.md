@@ -1,7 +1,7 @@
 ---
-title: 使用云服务来补充本地基础结构
+title: 使用云服务
 titleSuffix: Configuration Manager
-description: 为 System Center Configuration Manager 预配云资源，补充本地基础结构。
+description: 为 Configuration Manager 预配云资源，补充本地基础结构。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72478590144915075ae224552b6d67f7ad8fd87c
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 2828443de3833f2b98665fc4d87dcb63eb795b4d
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377794"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891844"
 ---
-# <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
+# <a name="use-cloud-services-with-configuration-manager"></a>将云服务与 Configuration Manager 结合使用
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-System Center Configuration Manager 支持多个基于云的选项。 这些选项能补充本地基础结构，还有助于解决以下业务问题，如：  
+Configuration Manager 支持多个基于云的选项。 这些选项能补充本地基础结构，还有助于解决以下业务问题，如：  
 
 -   如何管理 BYOD（通过将 Intune 用于移动设备管理）。  
 

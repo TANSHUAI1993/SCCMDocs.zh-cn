@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e0be6129306e37ba1721923efe1b7533875784e
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 8ed24e1f7089b7b8078c4cfcfed021bc1bac9346
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380026"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902997"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -297,33 +297,36 @@ CMPivot 现在包括对 KQL [render 运算符](https://docs.microsoft.com/azure/
 #### <a name="example-bar-chart"></a>示例：条形图
 以下查询以条形图呈现最近使用的应用程序：
 
-```
+``` Kusto
 CCMRecentlyUsedApplications
 | summarize dcount( Device ) by ProductName
 | top 10 by dcount_
 | render barchart
 ```
+
 ![CMPivot 条形图可视化效果示例](media/1359068-cmpivot-barchart.png)
 
 #### <a name="example-time-chart"></a>示例：时间图
 要呈现时间图，请使用新的 bin() 运算符对某段时间的事件进行分组  。 以下查询显示过去七天内设备启动的时间：
 
-``` 
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
+
 ![CMPivot 时间图可视化效果示例](media/1359068-cmpivot-timechart.png)
 
 #### <a name="example-pie-chart"></a>示例：饼图
 以下查询显示饼图中的所有 OS 版本：
 
-```
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
+
 ![CMPivot 饼图可视化效果示例](media/1359068-cmpivot-piechart.png)
 
 
@@ -333,12 +336,14 @@ OperatingSystem
 结果表或图表中数据的颜色饱和度表示数据是实时的还是缓存的。 例如，深蓝色是来自在线客户端的实时数据。 浅蓝色是缓存数据。
 
 #### <a name="example"></a>示例
-```
+
+``` Kusto
 LogicalDisk
 | summarize sum( FreeSpace ) by Device
 | order by sum_ desc
 | render columnchart
 ```
+
 ![带柱形图可视化效果的 CMPivot 清单查询示例](media/1359068-cmpivot-inventory.png)
 
 #### <a name="limitations"></a>限制
@@ -400,7 +405,7 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 
 当 SQL 或提供程序不在同一台计算机上时，或在 SQL Always On 配置的情况下，在 CAS 上运行 CMPivot 将需要其他权限。 使用这些远程配置，即可为 CMPivot 配置“双跃点方案”。
 
-要在这种“双跃点方案”中让 CMPivot 使用 CAS，可以定义约束委派。 若要了解此配置的安全隐患，请阅读 [Kerberos 约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)一文。 如果正在使用或未使用 CAS 并置多个远程配置（例如 SQL 或 SCCM 提供程序），可能需要权限设置组合。 下面是你需要遵循的步骤：
+要在这种“双跃点方案”中让 CMPivot 使用 CAS，可以定义约束委派。 若要了解此配置的安全隐患，请阅读 [Kerberos 约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)一文。 如果正在使用或未使用 CAS 并置多个远程配置（例如 SQL 或 SMS 提供程序），可能需要权限设置组合。 下面是你需要遵循的步骤：
 
 ### <a name="cas-has-a-remote-sql-server"></a>CAS 具有远程 SQL Server
 
@@ -517,7 +522,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 
 - 显示设备、制造商、模型和 OSVersion：
 
-   ```
+   ``` Kusto
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -525,7 +530,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 
 - 显示设备的启动时间图：
 
-   ```
+   ``` Kusto
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration

@@ -1,8 +1,8 @@
 ---
-title: 资产智能的验证状态转换示例
+title: 验证状态转换示例
 titleSuffix: Configuration Manager
-description: 请参阅 System Center Configuration Manager 中的资产智能验证状态转换示例。
-ms.date: 2/22/2017
+description: 请参阅 Configuration Manager 中的资产智能验证状态转换示例。
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b266848d0a15ac26dc6002a6553583f560cb44e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f2fb577fc4799dfb1e9c1d6585df4ed244ebfab5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499935"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890288"
 ---
-# <a name="example-validation-state-transitions-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能验证状态转换示例
+# <a name="example-validation-state-transitions-for-asset-intelligence"></a>资产智能的验证状态转换示例
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-System Center Configuration Manager 中的资产智能验证状态不是静态的，可能会因执行的管理操作而变化，这些操作会影响存储在资产智能目录中的数据。 此主题提供了可能的验证状态转换的示例。
+Configuration Manager 中的资产智能验证状态不是静态的，可能会因执行的管理操作而变化，这些操作会影响存储在资产智能目录中的数据。 此主题提供了可能的验证状态转换的示例。
 
 ##  <a name="BKMK_UncategorizedIsCategorized"></a> 管理用户对未分类的目录项目进行分类  
 

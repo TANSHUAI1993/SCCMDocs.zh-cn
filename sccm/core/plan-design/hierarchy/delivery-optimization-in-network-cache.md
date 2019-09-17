@@ -2,7 +2,7 @@
 title: 传递优化网络内缓存
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 分发点用作传递优化的本地缓存服务器
-ms.date: 07/30/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,14 +11,16 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cacc27b95328d5abd43e477762ebe4d55562bfef
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: 070f7ec6f99a9de89c155e756989fb3b5fa4a594
+ms.sourcegitcommit: 05a984cf94ea43c392701a389c4eb20bd692847c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712552"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70922741"
 ---
 # <a name="delivery-optimization-in-network-cache-in-configuration-manager"></a>Configuration Manager 中的传递优化网络内缓存
+
+适用范围：  System Center Configuration Manager (Current Branch)
 
 <!--3555764-->
 
@@ -29,7 +31,7 @@ ms.locfileid: "68712552"
 此缓存独立于 Configuration Manager 分发点内容。 如果选择和分发点角色一样的驱动，它将单独存储内容。
 
 > [!Note]  
-> 传递优化网络中缓存服务器是一项仍在开发的 Windows Server 功能。 它在 Configuration Manager 控制台中标记有“beta”标签  。  
+> 传递优化网络内缓存服务器是一项安装于 Windows Server 的应用程序，目前仍在开发。 它在 Configuration Manager 控制台中标记有“beta”标签  。  
 
 
 ## <a name="how-it-works"></a>工作原理
@@ -44,7 +46,7 @@ ms.locfileid: "68712552"
 
 3. 客户端 A 从 DO 缓存服务器请求内容。
 
-4. 如果缓存不包含该内容，客户端将从 CDN 获取该内容。
+4. 如果缓存不包含该内容，则 DO 缓存服务器从 CDN 获取该内容。
 
 5. 如果缓存服务器无法响应，客户端将从 CDN 下载该内容。
 
@@ -78,7 +80,7 @@ ms.locfileid: "68712552"
 
         查看并接受许可条款。
 
-    2. **要使用的本地驱动器**：选择要用于缓存的磁盘。 “自动”是默认值，使用可用空间最多的磁盘  。  
+    2. **要使用的本地驱动器**：选择要用于缓存的磁盘。 “自动”是默认值，使用可用空间最多的磁盘。<sup>[备注 1](#bkmk_note1)</sup>   
 
         > [!Note]  
         > 可以在以后更改此驱动器。 除非将缓存内容复制到新驱动器，否则会丢失任何缓存内容。
@@ -92,6 +94,17 @@ ms.locfileid: "68712552"
 
 1. 在客户端设置的“传递优化”组中，配置“使 Configuration Manage 管理的设备能够对下载的内容使用传递优化网络内缓存服务器 (Beta)”设置   。  
 
+### <a name="bkmk_note1"></a> 注释 1：关于驱动器选择
+
+如果选择“自动”，则 Configuration Manager 安装 DOINC 组件时，将优先采用 no_sms_on_drive.sms 文件   。 例如，分发点具有 `C:\no_sms_on_drive.sms` 文件。 即使 C: 驱动器具有的可用空间最多，Configuration Manager 也会将 DOINC 配置为使用另一个驱动器进行缓存。
+
+如果选择已具有 no_sms_on_drive.sms 文件的特定驱动器，则 Configuration Manager 将忽略该文件  。 将 DOINC 配置为使用该驱动器是一个明确的意图。 例如，分发点具有 `F:\no_sms_on_drive.sms` 文件。 将分发点属性显式配置为使用 F: 驱动器时，Configuration Manager 将 DOINC 配置为将 F: 驱动器用于缓存  。
+
+在安装 DOINC 后更改驱动器：
+
+- 手动将分发点属性配置为使用特定的驱动器号。
+
+- 如果设置为自动，请首先创建 no_sms_on_drive.sms 文件  。 然后对分发点属性进行一些更改，以触发配置更改。
 
 ## <a name="verify"></a>验证
 
@@ -110,7 +123,10 @@ ms.locfileid: "68712552"
 
 如果缓存服务器返回任何 HTTP 故障，则传递优化客户端退回到原始云源。
 
+有关详细信息，请参阅 [Configuration Manager 中的传递优化网络内缓存故障排除](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache)。
 
 ## <a name="see-also"></a>另请参阅
 
 [通过传递优化来优化 Windows 10 更新](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
+
+[Configuration Manager 中的传递优化网络内缓存故障排除](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache)

@@ -1,8 +1,8 @@
 ---
-title: '升级 macOS 客户端 '
+title: 升级 macOS 客户端
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中升级 Mac 计算机上的客户端。
-ms.date: 04/23/2017
+description: 升级 Mac 计算机上的 Configuration Manager 客户端。
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,66 +11,67 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3d465589c0763e0893bfe863ccfe41f82b40265
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: b887a82afce8cf446494e7b9348a0b8c0718e389
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70378164"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902571"
 ---
-# <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
+# <a name="how-to-upgrade-clients-on-mac-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Mac 计算机上的客户端
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
-按照下面的高级步骤，使用 System Center Configuration Manager 应用程序升级 Mac 计算机上的客户端。 或者，你也可以下载 Mac 客户端安装文件，将其复制到 Mac 计算机上的共享网络位置或本地文件夹，然后指示用户手动运行安装。  
+按照本文中的高级步骤，使用 Configuration Manager 应用程序升级 Mac 计算机上的客户端。 也可以下载 Mac 客户端安装文件，将其复制到 Mac 计算机上的共享网络位置或本地文件夹，然后指示用户手动运行安装。  
 
 > [!NOTE]  
->  在执行这些步骤之前，请确保 Mac 计算机满足先决条件。 请参阅 [Mac 计算机支持的操作系统](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)。  
+> 在执行这些步骤之前，请确保 Mac 计算机满足先决条件。 请参阅 [Mac 计算机支持的操作系统](/sccm/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers)。  
 
-## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>步骤 1：从 Microsoft 下载中心下载最新的 Mac 客户端安装文件  
- Configuration Manager 安装媒体上未提供 Configuration Manager 的 Mac 客户端，必须从 Microsoft 下载中心下载。 Mac 客户端安装文件包含在名为 ConfigmgrMacClient.msi 的 Windows Installer 文件中。  
+## <a name="download-the-latest-mac-client"></a>下载最新的 Mac 客户端
 
- 可以从 [Microsoft Download Center（Microsoft 下载中心）](https://go.microsoft.com/fwlink/p/?LinkId=525184)下载此文件。  
+Configuration Manager 安装媒体上未提供适用于 Configuration Manager 的 Mac 客户端。 请从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=47719)下载。 Mac 客户端安装文件包含在名为 ConfigmgrMacClient.msi 的 Windows Installer 文件中  。  
 
-## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>步骤 2:运行下载的安装文件以创建 Mac 客户端安装文件  
- 在运行 Windows 的计算机上，运行下载的“ConfigmgrMacClient.msi”  以解压缩名为“Macclient.dmg”  的 Mac 客户端安装文件。 默认情况下，在你解压缩文件之后，此文件可在 Windows 计算机上的“C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client”  文件夹中找到。  
+## <a name="create-the-mac-client-installation-file"></a>创建 Mac 客户端安装文件
 
-## <a name="step-3-extract-the-client-installation-files"></a>步骤 3：提取客户端安装文件  
- 将 Macclient.dmg 文件复制到网络共享或 Mac 计算机上的本地文件夹。 然后，从 Mac 计算机中装载并随后打开 Macclient.dmg 文件，并将文件复制到 Mac 计算机上的某个文件夹。  
+在运行 Windows 的计算机上，运行 ConfigmgrMacClient.msi  。 此安装程序解压缩名为 Macclient.dmg 的 Mac 客户端安装文件  。 此文件默认位于以下文件夹中：C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client  。  
 
-## <a name="step-4-create-a-cmmac-file-that-can-be-used-to-create-an-application"></a>步骤 4：创建可用于创建应用程序的 .cmmac 文件  
+## <a name="extract-the-client-installation-files"></a>提取客户端安装文件
 
-1. 使用“CMAppUtil”  工具（位于 Mac 客户端安装文件的“Tools”  文件夹中）通过客户端安装包创建 .cmmac 文件。 该文件将用于创建 Configuration Manager 应用程序。  
+将 Macclient.dmg 复制到 Mac 计算机上  。 在 macOS 中装载 Macclient.dmg 文件，然后将内容复制到 Mac 计算机上的某个文件夹中。  
 
-2. 将新文件“CMClient.pkg.cmmac”  复制到可供运行 Configuration Manager 控制台的计算机使用的位置。  
+## <a name="create-a-cmmac-file"></a>创建 .cmmac 文件
 
-   有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
+1. 打开 Mac 客户端安装文件的“工具”文件夹  。 使用 CMAppUtil 工具来创建客户端安装包中的 .cmmac 文件  。 需要使用该文件来创建 Configuration Manager 应用程序。  
 
-## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**步骤 5：** 创建并部署包含 Mac 客户端文件的应用程序  
+2. 将新文件“CMClient.pkg.cmmac”复制到可供运行 Configuration Manager 控制台的计算机使用的网络位置  。  
 
-1. 在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”  文件创建应用程序。  
+    有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
 
-2. 将此应用程序部署到层次结构中的 Mac 计算机。  
+## <a name="create-and-deploy-the-app"></a>创建并部署应用
 
-   有关详细信息，请参阅[使用 System Center Configuration Manager 创建 Mac 计算机应用程序](../../../../apps/get-started/creating-mac-computer-applications.md)。  
+1. 在 Configuration Manager 控制台中，从“CMClient.pkg.cmmac”文件[创建应用程序](/sccm/apps/get-started/creating-mac-computer-applications)  。  
 
-## <a name="step-6-users-install-the-latest-client"></a>步骤 6：用户安装最新的客户端  
- 将向 Mac 客户端的用户发出提示，指出 Configuration Manager 客户端的更新可用并且必须安装。 用户安装客户端后，他们必须重启其 Mac 计算机。  
+2. [将此应用程序部署](/sccm/apps/deploy-use/deploy-applications)到层次结构中的 Mac 计算机。  
 
- 计算机重启后，“计算机注册向导”将自动运行以请求新用户证书。 仅在首次安装 SCCM 客户端时，才会自动执行计算机注册向导。 如果稍后尝试使用新安装程序更新客户端，则将不会再次执行该向导，因为它已具有有效的用户证书。 
+## <a name="install-the-updated-client"></a>安装更新后的客户端
 
- 如果不希望使用 Configuration Manager 注册，而希望从 Configuration Manager 独立安装客户端证书，请参阅[配置已升级客户端以使用现有证书](#BKMK_UpgradingClient_MachineEnrollment)。  
+Mac 计算机上的现有 Configuration Manager 客户端将提示用户有更新可供安装。 用户安装客户端后，他们必须重启其 Mac 计算机。  
 
-##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> 将升级后的客户端配置为使用现有证书  
- 运行下列过程以防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
+计算机重启后，“计算机注册”向导将自动运行以请求新用户证书  。
 
-- 在 Configuration Manager 控制台中，创建“Mac OS X”  类型的配置项目。  
+如果不使用 Configuration Manager 注册，而是从 Configuration Manager 独立安装客户端证书，请参阅[将客户端配置为使用现有证书](#BKMK_UpgradingClient_MachineEnrollment)。  
 
-- 使用设置类型“脚本”  将设置添加到此配置项。  
+## <a name="BKMK_UpgradingClient_MachineEnrollment"></a> 将客户端配置为使用现有证书
 
-- 将下列脚本添加到设置：  
+使用此过程来防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
 
-  ```  
+1. 在 Configuration Manager 控制台中，[创建“Mac OS X”类型的配置项目](/sccm/compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client)  。  
+
+1. 使用设置类型“脚本”  将设置添加到此配置项。  
+
+1. 将下列脚本添加到设置：  
+
+  ``` Shell
   #!/bin/sh  
   echo "Starting script\n"  
   echo "Changing directory to MAC Client\n"  
@@ -93,9 +94,6 @@ ms.locfileid: "70378164"
   sudo open ./CCMClient  
   echo "Ending Script\n"  
   exit  
-
   ```  
 
-- 将配置项添加到配置基线，然后将该配置基线部署到独立 Configuration Manager 安装证书的所有 Mac 计算机。  
-
-  有关如何为 Mac 计算机创建和部署配置项目的详细信息，请参阅[如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X 设备创建配置项目](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)和[如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)。  
+1. 将配置项目添加到[配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。 然后[将配置基线部署](/sccm/compliance/deploy-use/deploy-configuration-baselines)到独立于 Configuration Manager 安装证书的所有 Mac 计算机。  

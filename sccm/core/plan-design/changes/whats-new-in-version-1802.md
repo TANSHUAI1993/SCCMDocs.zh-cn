@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fdf140b998b4d6d64ade232503b64b14a11416f
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: b92f099a3a64cb6b1943d3d4b1306cbbd4131d6c
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338669"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902922"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -139,7 +139,7 @@ Configuration Manager 1802 中提供以下见解：
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Linux 和 Unix 客户端支持的弃用公告
  <!--510139-->
-Microsoft 计划从现在起大约一年后弃用 System Center Configuration Manager 中的 Linux 和 UNIX 客户端支持，因此，2019 年初的 SCCM 1902 发布中将不会包括这些客户端。 2018 年底的 Configuration Manager 1810 版将是包含 Linux 和 UNIX 客户端的最后一个版本，Configuration Manager 1810 的整个生命周期都将支持这些客户端。 Configuration Manager 1810 后，客户应考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
+Microsoft 计划从现在起大约一年后弃用 System Center Configuration Manager 中的 Linux 和 UNIX 客户端支持。因此，2019 年初的 1902 版本中将不会包括这些客户端。 2018 年底的 Configuration Manager 1810 版将是包含 Linux 和 UNIX 客户端的最后一个版本，Configuration Manager 1810 的整个生命周期都将支持这些客户端。 Configuration Manager 1810 后，客户应考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
 
 ### <a name="surface-device-dashboard"></a>Surface 设备仪表板
 <!--1355788-->

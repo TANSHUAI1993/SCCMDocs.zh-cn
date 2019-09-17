@@ -1,5 +1,6 @@
 ---
-title: 开始使用 System Center Configuration Manager
+title: 部署服务器和角色
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,25 +10,25 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ccac130293edf3e3e74c0ed0e3a86adad9af084
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 2856869b17f851382750f9347c732f3a75a82467
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501247"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891638"
 ---
-# <a name="start-using-system-center-configuration-manager"></a>开始使用 System Center Configuration Manager
+# <a name="deploy-servers-and-roles"></a>部署服务器和角色
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-在计划 System Center Configuration Manager 之后，站点和层次结构拓扑已准备好安装或升级站点，请使用以下主题中的信息：  
+在完成 Configuration Manager 计划并且站点和层次结构拓扑已准备好安装或升级站点后，请使用以下文章中的信息：  
 
--   [安装 System Center Configuration Manager 站点](/sccm/core/servers/deploy/install/installing-sites)  
+- [安装 Configuration Manager 站点](/sccm/core/servers/deploy/install/installing-sites)  
 
--   [升级到 System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)  
+- [升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)  
 
--   [简化 System Center Configuration Manager 安装的方案](../../../core/servers/deploy/install/scenarios-to-streamline-your-installation.md)  
+- [简化 Configuration Manager 安装的方案](/sccm/core/servers/deploy/install/scenarios-to-streamline-your-installation)  
 
--   [配置 System Center Configuration Manager 的站点和层次结构](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)  
+- [卸载站点和层次结构](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)  
 
--   [在 System Center Configuration Manager 中层次结构之间迁移数据](../../../core/migration/migrate-data-between-hierarchies.md)  
+- [在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)  

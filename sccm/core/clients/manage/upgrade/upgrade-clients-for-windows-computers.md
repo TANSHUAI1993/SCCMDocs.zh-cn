@@ -1,5 +1,5 @@
 ---
-title: 升级客户端
+title: 升级 Windows 上的客户端
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中升级 Windows 计算机上的客户端。
 ms.date: 08/27/2019
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 547eb9844ace451a13b01113633796d711bea7c8
-ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
+ms.openlocfilehash: 0b811d6bb974dce7e71d986f81d3255d61382737
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110108"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889914"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Windows 计算机的客户端
 

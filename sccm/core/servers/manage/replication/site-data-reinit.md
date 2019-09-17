@@ -1,5 +1,5 @@
 ---
-title: 全局数据重新初始化
+title: 站点数据重新初始化
 titleSuffix: Configuration Manager
 description: 使用此图示开始对 Configuration Manager 层次结构中站点数据的 SQL 复制重新初始化进行故障排除
 ms.date: 08/09/2019
@@ -11,14 +11,14 @@ ms.assetid: 19741d45-2d42-438e-a9f3-15bb365d63ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b40a38f928351315fe1d0bd9dabc4f187e082a96
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: ed35f296b888d9e13d42114aa2bef2932c715a38
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957757"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892066"
 ---
-# <a name="sql-replication"></a>SQL 复制
+# <a name="troubleshoot-site-data-reinit"></a>站点数据重新初始化故障排除
 
 在多站点层次结构中，Configuration Manager 使用 SQL 复制在站点之间传输数据。 有关详细信息，请参阅[数据库复制](/sccm/core/plan-design/hierarchy/database-replication)。
 

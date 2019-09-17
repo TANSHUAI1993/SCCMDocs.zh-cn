@@ -1,23 +1,21 @@
 ---
-title: 教程：为基于 Internet 的新 Windows 10 设备启用共同管理
+title: 教程：为 Internet 设备启用共同管理
 titleSuffix: Configuration Manager
-description: 为 Windows 10 设备配置共同管理以使用 Configuration Manager 和 Intune。
-keywords: ''
+description: 了解如何使用 Configuration Manager 和 Microsoft Intune 为基于 Internet 的新 Windows 10 设备配置共同管理。
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 07/26/2019
 ms.topic: tutorial
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
-ms.assetid: ''
-ms.openlocfilehash: 446068324ab8840600fb1d0e8f7789520a6468d1
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.technology: configmgr-client
+ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
+ms.openlocfilehash: 6215842691aece6eb13bc1969640e4d9c19d9fae
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533954"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890778"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>教程：为基于 Internet 的新设备启用共同管理
 
@@ -400,7 +398,7 @@ Azure 配置、站点系统角色和客户端设置配置就绪后，可以配�
 
      命令行结构应该类似于仅使用 CCMSETUPCMD 和 SMSSiteCode 参数的以下示例：  
 
-     ```
+     ``` Command
      CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
      ```
 

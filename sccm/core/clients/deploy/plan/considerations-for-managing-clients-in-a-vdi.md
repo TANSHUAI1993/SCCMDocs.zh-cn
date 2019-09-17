@@ -1,7 +1,7 @@
 ---
-title: '虚拟桌面基础结构 (VDI) 客户端管理 '
+title: 管理 VDI 客户端
 titleSuffix: Configuration Manager
-description: 在虚拟桌面基础结构 (VDI) 中管理 System Center Configuration Manager 客户端。
+description: 在虚拟桌面基础结构 (VDI) 中管理 Configuration Manager 客户端。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9352d6e5a26afd4cee36f70a19d0566e26643f50
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 07df750daf0af7aa82a13c1eef421678d7df8202
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130565"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890319"
 ---
-# <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>关于在虚拟桌面基础结构 (VDI) 中管理 System Center Configuration Manager 客户端的注意事项
+# <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>在虚拟桌面基础结构 (VDI) 中管理 Configuration Manager 客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 支持在以下虚拟桌面基础结构 (VDI) 方案中安装 Configuration Manager 客户端：  
 

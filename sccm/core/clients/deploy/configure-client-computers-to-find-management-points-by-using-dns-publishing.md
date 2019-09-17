@@ -1,7 +1,7 @@
 ---
-title: 配置客户端以查找管理点 DNS 发布
+title: 配置客户端以使用 DNS 发布功能
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中设置客户端计算机以使用 DNS 发布查找管理点。
+description: 将 Configuration Manager 客户端计算机配置为使用 DNS 发布查找管理点。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cebb56324af3993458da5317983697b3304ccf7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5305b557eb3db83125e0f259e804a8eba0384290
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128130"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890248"
 ---
-# <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端计算机以使用 DNS 发布查找管理点
+# <a name="configure-client-computers-to-find-management-points-by-using-dns-publishing"></a>将客户端计算机配置为使用 DNS 发布查找管理点
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的客户端必须找到管理点才能完成站点分配，并作为持续的进程一直受到管理。 Active Directory 域服务为 Intranet 上的客户端提供了找到管理点的最安全的方法。 但是，如果客户端无法使用此服务位置方法（例如，你未扩展 Active Directory 架构，或者客户端来自工作组），则使用 DNS 发布作为首选的备用服务位置方法。  
 
@@ -35,13 +35,13 @@ System Center Configuration Manager 中的客户端必须找到管理点才能�
 
 -   若要在客户端安装过程中针对管理点后缀配置客户端，请配置 CCMSetup Client.msi 属性。  
 
--   若要在客户端安装之后针对管理点后缀配置客户端，请在“控制面板”中配置“Configuration Manager 属性” 。  
+-   若要在客户端安装之后针对管理点后缀配置客户端，请在“控制面板”中配置“Configuration Manager 属性”  。  
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>在客户端安装过程中针对管理点后缀配置客户端  
 
 - 利用下列 CCMSetup Client.msi 属性安装客户端：  
 
-  - **DNSSUFFIX=** &lt;管理点域\>  
+  - **DNSSUFFIX=** &lt;管理点域\>   
 
      如果站点具有多个管理点，而且这些管理点位于多个域中，则仅指定一个域。 在客户端连接到此域中的管理点时，它们下载可用管理点的列表（将包含其他域中的管理点）。  
 
@@ -49,8 +49,8 @@ System Center Configuration Manager 中的客户端必须找到管理点才能�
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>在客户端安装之后针对管理点后缀配置客户端  
 
-1.  在客户端计算机的“控制面板”中，导航到“Configuration Manager” ，然后双击“属性” 。  
+1.  在客户端计算机的“控制面板”中，导航到“Configuration Manager”  ，然后双击“属性”  。  
 
-2.  在“站点”  选项卡上，指定管理点的 DNS 后缀，然后单击“确定” 。  
+2.  在“站点”  选项卡上，指定管理点的 DNS 后缀，然后单击“确定”  。  
 
      如果站点具有多个管理点，而且这些管理点位于多个域中，则仅指定一个域。 在客户端连接到此域中的管理点时，它们下载可用管理点的列表（将包含其他域中的管理点）。

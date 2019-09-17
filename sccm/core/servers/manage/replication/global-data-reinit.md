@@ -11,14 +11,14 @@ ms.assetid: d36622c0-776c-493b-971a-4a586fc394d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c57ab69a16e6edb1a6459c89da8920f74d4d845
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 646a8c93b3bc5f90d711e6985983a41d87c38826
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957637"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892089"
 ---
-# <a name="sql-replication"></a>SQL 复制
+# <a name="troubleshoot-global-data-reinit"></a>全局数据重新初始化故障排除
 
 在多站点层次结构中，Configuration Manager 使用 SQL 复制在站点之间传输数据。 有关详细信息，请参阅[数据库复制](/sccm/core/plan-design/hierarchy/database-replication)。
 

@@ -1,8 +1,8 @@
 ---
-title: 监视客户端
+title: 监视和管理客户端
 titleSuffix: Configuration Manager
-description: 了解如何在 System Center Configuration Manager 中监视和管理客户端。
-ms.date: 04/23/2017
+description: 了解如何在 Configuration Manager 中监视和管理客户端。
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,25 +11,25 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63f1216d19b82ad3e39680150736908b4f9762de
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4df97c1e0fd3df1ef6a27eb84134cc1213942451
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128766"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889901"
 ---
-# <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视和管理客户端
+# <a name="monitor-and-manage-clients-in-configuration-manager"></a>在 Configuration Manager 中监视和管理客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-一旦客户端软件被部署到组织的计算机和设备，System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）就会提供多种方式来监视和管理它。  可以监视客户端以检查其状态，在某些情况下，Configuration Manager 可以基于检测到的问题执行自动修正（或修补程序）。 Configuration Manager 控制台还提供管理个人设备或设备集合的客户端的方法。  
+在组织中的计算机上安装客户端后，Configuration Manager 提供几种监视和管理客户端的方法。 可监视客户端来检查其状态，Configuration Manager 可自动修复其检测到的一些问题。 使用 Configuration Manager 控制台来管理单个设备或设备集合的客户端。  
 
- 凭借以下主题中的信息，学习如何监视和管理客户端同时获取监视和管理 Linux 和 UNIX 服务器的客户端的更多详情：  
+- [如何监视客户端](/sccm/core/clients/manage/monitor-clients)  
 
--   [如何在 System Center Configuration Manager 中监视客户端](../../../core/clients/manage/monitor-clients.md)  
+- [如何管理客户端](/sccm/core/clients/manage/manage-clients)  
 
--   [如何在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器的客户端](../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)  
+- [在 Internet 上管理客户端](/sccm/core/clients/manage/manage-clients-internet)
 
--   [如何在 System Center Configuration Manager 中管理客户端](../../../core/clients/manage/manage-clients.md)  
+- [使用集合](/sccm/core/clients/manage/collections/introduction-to-collections)
 
--   [如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器的客户端](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)  
+通过共同管理，可以使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。 它允许通过添加新功能在 Configuration Manager 中云附加现有投资。 启用共同管理后，即可使用 Intune 执行其他客户端管理操作。 有关详细信息，请参阅[什么是共同管理？](/sccm/comanage/overview)

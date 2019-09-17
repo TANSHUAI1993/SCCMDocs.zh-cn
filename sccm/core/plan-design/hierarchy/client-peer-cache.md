@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4754077f1a91cd11ce16e17dd3d2ea2f1704ee08
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 575a011271026e5b617a334476d3c4e8fa401014
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338891"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902960"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -55,7 +55,10 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 要启用对等缓存，请将[客户端设置](#bkmk_settings)部署到集合。 然后，该集合的成员充当同一边界组中其他客户端的对等缓存源。  
 
-- 充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。  
+- 充当对等内容源的客户端会使用状态消息将可用缓存内容列表提交到其管理点。
+
+   > [!NOTE]
+   > 有关适用的对等内容源状态消息的列表，请参阅 [Configuration Manager 中的状态消息](/sccm/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager#7200-state_topictype_super_peer_update_cache_map)，特别是状态消息 ID 为 7200、7201、7202 和 7203 的消息。
 
 - 同一边界组中的另一客户端会向管理点发出内容位置请求。 服务器返回潜在内容源的列表。 此列表包含带有内容且在线的所有对等缓存源。 它还包括分发点及该边界组中的其他内容源位置。 有关详细信息，请参阅[内容源优先级](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority)。  
 

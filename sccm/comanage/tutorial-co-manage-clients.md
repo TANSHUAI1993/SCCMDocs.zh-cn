@@ -1,5 +1,5 @@
 ---
-title: 教程：为现有 Configuration Manager 客户端启用共同管理
+title: 教程：为现有客户端启用共同管理
 titleSuffix: Configuration Manager
 description: 在已使用 Configuration Manager 管理 Windows 10 设备时，在 Microsoft Intune 中配置共同管理。
 ms.date: 07/26/2019
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec46fb91e862c8d835b88a7ca859fcbfd8e4d339
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 947f23f4dd6890326860cd9e499819f6c7c9f546
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535339"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890801"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：为现有 Configuration Manager 客户端启用共同管理
 

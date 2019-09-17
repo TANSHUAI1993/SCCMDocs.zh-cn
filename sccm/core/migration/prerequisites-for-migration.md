@@ -2,7 +2,7 @@
 title: 迁移先决条件
 titleSuffix: Configuration Manager
 description: 了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。
-ms.date: 5/7/2018
+ms.date: 05/7/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fd2bfda86e7c96f2393c0ca0ea6d1d8ea9f86b4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 81073cc22d7bb59188cf881590d07deb0c20158c
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135439"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891471"
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中迁移的先决条件
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 若要从支持的源层次结构中进行迁移，必须拥有对每个适用的 Configuration Manager 源站点的访问权限以及 System Center Configuration Manager 目标站点内的权限，才能配置和运行迁移操作。  
 
@@ -73,7 +73,7 @@ ms.locfileid: "56135439"
 
 - **在 Configuration Manager 控制台中配置、运行和监视迁移：**  
 
-   在目标站点中，必须为你的帐户分配基于角色的管理安全角色“基础结构管理员” 。 此安全角色授予用于管理所有迁移操作的权限，这些操作包括创建迁移作业、清理、监视以及共享和升级分发点的操作。  
+   在目标站点中，必须为你的帐户分配基于角色的管理安全角色“基础结构管理员”  。 此安全角色授予用于管理所有迁移操作的权限，这些操作包括创建迁移作业、清理、监视以及共享和升级分发点的操作。  
 
 - **数据收集：**  
 
@@ -81,16 +81,16 @@ ms.locfileid: "56135439"
 
   -   **源站点帐户：** 此帐户用于访问源站点的 SMS 提供程序。  
 
-      -   对于 Configuration Manager 2007 SP2 源站点，此帐户需要对所有源站点对象具有“读取”权限。  
+      -   对于 Configuration Manager 2007 SP2 源站点，此帐户需要对所有源站点对象具有“读取”  权限。  
 
-      -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点，此帐户需要对所有源站点对象具有“读取”权限，可通过使用基于角色的管理向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
+      -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点，此帐户需要对所有源站点对象具有“读取”  权限，可通过使用基于角色的管理向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
-  -   **源站点数据库帐户：** 此帐户用于访问源站点的 SQL Server 数据库，并需要源站点数据库的“连接”、“执行”和“选择”权限。  
+  -   **源站点数据库帐户：** 此帐户用于访问源站点的 SQL Server 数据库，并需要源站点数据库的“连接”、“执行”和“选择”权限    。  
 
   你可以在配置新的源层次结构、其他源站点的数据收集或在为源站点重新配置凭据时配置这些帐户。 这些帐户可以使用域用户帐户，或者你可以指定目标层次结构的顶层站点的计算机帐户。  
 
   > [!IMPORTANT]  
-  >  如果为任一访问帐户使用 Configuration Manager 计算机帐户，请确保此帐户是源站点所在域中“分布式 COM 用户”安全组的成员。  
+  >  如果为任一访问帐户使用 Configuration Manager 计算机帐户，请确保此帐户是源站点所在域中“分布式 COM 用户”  安全组的成员。  
 
   在收集数据时，将使用以下网络协议和端口：  
 
@@ -110,15 +110,15 @@ ms.locfileid: "56135439"
 
    对于每个源站点，只会共享在使用 FQDN 配置的站点系统服务器上安装的分发点。  
 
-   此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”（此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”对象的“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
+   此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”  （此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”  对象的“修改”  权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
 
 - **升级或重新分配分发点：**  
 
    配置为从源站点的 SMS 提供程序中收集数据的“源站点访问帐户”  必须拥有以下权限：  
 
-  - 若要升级 Configuration Manager 2007 分发点，该帐户需要拥有对 Configuration Manager 2007 站点服务器上“站点”类的“读取”、“执行”和“删除”权限，才能成功删除 Configuration Manager 2007 源站点中的分发点  
+  - 若要升级 Configuration Manager 2007 分发点，该帐户需要拥有对 Configuration Manager 2007 站点服务器上“站点”  类的“读取”  、“执行”  和“删除”  权限，才能成功删除 Configuration Manager 2007 源站点中的分发点  
 
-  - 若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”对象具有“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
+  - 若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”  对象具有“修改”  权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
     若要成功将分发点升级或重新分配到新层次结构，为源层次结构中用于管理分发点的站点上的客户端请求配置的端口必须与为将用于管理分发点的目标站点上的客户端请求配置的端口匹配。 有关客户端请求端口的信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端通信端口](../../core/clients/deploy/configure-client-communication-ports.md)。  

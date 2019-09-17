@@ -1,7 +1,7 @@
 ---
-title: Active Directory 域服务中的客户端安装属性
+title: Active Directory 中的客户端安装属性
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中使用发布到 Active Directory 域服务的客户端安装属性。
+description: 将 Configuration Manager 客户端安装属性发布到 Active Directory 域服务。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 203de632cea1dbe7c5fa70177f3a111a4e487911
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 39208f0ff2265e2ca9b89647e082224c01cbd731
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123805"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890338"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
-在扩展 System Center Configuration Manager 的 Active Directory 架构并将站点发布到 Active Directory 域服务时，会将许多客户端安装属性发布到 Active Directory 域服务。 如果计算机可以找到这些客户端安装属性，则它可以在 Configuration Manager 客户端的部署过程中使用这些属性。  
+在扩展 Configuration Manager 的 Active Directory 架构并将站点发布到 Active Directory 域服务时，会将许多客户端安装属性发布到 Active Directory 域服务。 如果计算机可以找到这些客户端安装属性，则它可以在 Configuration Manager 客户端的部署过程中使用这些属性。  
 
  使用 Active Directory 域服务发布客户端安装属性的优点包括：  
 
@@ -74,13 +74,13 @@ ms.locfileid: "56123805"
 ## <a name="client-push-installation"></a>客户端请求安装  
  客户端请求安装不使用 Active Directory 域服务来获取安装属性。  
 
- 而是，你可以在“客户端请求安装属性”对话框的“安装属性”选项卡中指定客户端安装属性。 这些选项和有关客户端的站点设置存储在一个文件中，客户端在客户端安装过程中将读取此文件。  
+ 而是，你可以在“客户端请求安装属性”  对话框的“安装属性”  选项卡中指定客户端安装属性。 这些选项和有关客户端的站点设置存储在一个文件中，客户端在客户端安装过程中将读取此文件。  
 
 > [!NOTE]  
->  你无需在“安装属性”选项卡中为客户端请求安装指定任何 CCMSetup 属性、回退状态点或受信任的根密钥。在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。
+>  你无需在“安装属性”  选项卡中为客户端请求安装指定任何 CCMSetup 属性、回退状态点或受信任的根密钥。在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。
 除了 Client.msi 属性之外，CCMSetup 还支持以下参数：/forcereboot、/skipprereq、/logon、/BITSPriority、/downloadtimeout 和 /forceinstall
 
- 如果将站点发布到 Active Directory 域服务，则在“安装属性”选项卡中指定的任何属性都会发布到 Active Directory 域服务。 通过运行不带安装属性的 CCMSetup 来进行的客户端安装将读取这些设置。  
+ 如果将站点发布到 Active Directory 域服务，则在“安装属性”  选项卡中指定的任何属性都会发布到 Active Directory 域服务。 通过运行不带安装属性的 CCMSetup 来进行的客户端安装将读取这些设置。  
 
 ## <a name="software-update-point-based-installation"></a>基于软件更新点的安装  
  基于软件更新点的安装方法不支持将安装属性添加到 CCMSetup 命令行中。  

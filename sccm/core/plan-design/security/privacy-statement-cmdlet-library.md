@@ -1,7 +1,8 @@
 ---
-title: Configuration Manager Cmdlet 库的隐私声明
-description: 了解 Microsoft 如何收集和使用与 System Center Configuration Manager cmdlet 库相关的数据。
-ms.date: 1/3/2017
+title: cmdlet 隐私声明
+titleSuffix: Configuration Manager
+description: 了解 Microsoft 如何收集和使用与 Configuration Manager cmdlet 相关的数据
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,22 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58b5a2eec6df6ecd6b96c18178cc116bc2b6965a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e777c509ae0461120ae195712aaecf7f44813261
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135664"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889239"
 ---
-# <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager 隐私声明 – Configuration Manager cmdlet 库
+# <a name="configuration-manager-cmdlet-library-privacy-statement"></a>Configuration Manager Cmdlet 库隐私声明
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 本隐私声明涵盖 System Center Configuration Manager Cmdlet 库的功能。  
 
 ## <a name="usage-data"></a>使用情况数据  
 
-#### <a name="what-this-feature-does"></a>此功能的作用   
+#### <a name="what-this-feature-does"></a>此功能的作用
 
 System Center Configuration Manager cmdlet 库允许通过使用 Windows PowerShell cmdlet 和脚本来管理 Configuration Manager 层次结构。 Cmdlet 库收集有关如何使用库中的 cmdlet 来确定趋势和使用模式的信息。 Cmdlet 库还收集使用 cmdlet 时收到的错误类型和数目信息。  
 
