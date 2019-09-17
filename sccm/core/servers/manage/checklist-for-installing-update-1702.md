@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5f6661c84c328c8b607bcaa9d1b31c0b78fdea
-ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.openlocfilehash: 1c6f874f74a7c788860ce3c2650f2407dfb05b01
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743664"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738369"
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1702 的清单
 
@@ -100,7 +100,7 @@ ms.locfileid: "68743664"
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。
 对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。
 
-有关详细信息，请参阅 [System Center Configuration Manager 中的监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)主题中的[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)。
+有关详细信息，请参阅 [监视数据库复制](/sccm/core/servers/manage/monitor-replication)主题中的[复制链接分析器](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)。
 
 **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统，安装所有合适的关键更新：** 为 Configuration Manager 安装更新之前，为每个适用的站点系统安装任何关键的更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。
 

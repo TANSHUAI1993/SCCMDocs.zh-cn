@@ -1,7 +1,7 @@
 ---
 title: 升级客户端
 titleSuffix: Configuration Manager
-description: 获取有关如何在 System Center Configuration Manager 中升级客户端的信息。
+description: 获取有关如何在 Configuration Manager 中升级客户端的信息。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0531c50792b6617eeb5e294bfad3626a0089c1f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 50212a84185396e53c92bff46dd3b369ad811928
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131483"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890208"
 ---
-# <a name="upgrade-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中升级客户端
+# <a name="upgrade-clients-in-configuration-manager"></a>在 Configuration Manager 中升级客户端
 
-适用范围：System Center Configuration Manager (Current Branch)
+适用范围：  System Center Configuration Manager (Current Branch)
 
 可以使用不同的方法在 Windows 计算机、UNIX 和 Linux 服务器以及 Mac 计算机上升级 System Center Configuration Manager 客户端软件。 以下是每种方法的优缺点。  
 
