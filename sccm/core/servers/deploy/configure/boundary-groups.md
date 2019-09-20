@@ -2,7 +2,7 @@
 title: 配置边界组
 titleSuffix: Configuration Manager
 description: 通过使用边界组以逻辑方式对称为边界的相关网络位置进行整理，帮助客户端查找站点系统
-ms.date: 06/18/2019
+ms.date: 09/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716b36060f4fdc768f98e4cc22be1653a967246c
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 22645b08e3cb5f8b1200ab5c4e77b418ea74c8d8
+ms.sourcegitcommit: 55f68b5adc9bb84e324ead9f0429e41108d5b515
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194260"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71010834"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>为 Configuration Manager 配置边界组
 
@@ -223,8 +223,10 @@ ms.locfileid: "67194260"
 
 如果你的分支机构具有更快的 Internet 链接，你现在可以优先考虑云内容。  
 
-在版本 1902 中，此设置现在标题为“首选基于云的源而非本地源”  。 该行为将保持不变。<!-- SCCMDocs#1529 -->
+在版本 1902 中，此设置现在标题为“首选基于云的源而非本地源”  。 基于云的源包括：<!-- SCCMDocs#1529 -->
 
+- 云分发点
+- Microsoft 更新（在版本 1902 中添加）
 
 ## <a name="software-update-points"></a>软件更新点
 

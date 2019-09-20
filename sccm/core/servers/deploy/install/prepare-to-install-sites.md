@@ -2,7 +2,7 @@
 title: 安装站点的准备工作
 titleSuffix: Configuration Manager
 description: 如果计划安装多个 Configuration Manager 站点，请阅读此信息，帮助节省时间并防止出现错误。
-ms.date: 03/1/2017
+ms.date: 09/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaac8972d6fbe3c8d99acf0a37fab2a748f2ce20
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 5d530540ba83fbe03752aab6943b8bf4fa02404b
+ms.sourcegitcommit: 2ef7e69f3db54a90ed4ae2a3f59a75e6329a1584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888933"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062131"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点
 
@@ -90,6 +90,7 @@ ms.locfileid: "70888933"
 - NUL
 - PRN
 - SMS
+- ENV <!--SCCMDocs-1871 and 5399453-->
 
 > [!NOTE]
 > Configuration Manager 安装程序不会验证站点代码是否已弃用。

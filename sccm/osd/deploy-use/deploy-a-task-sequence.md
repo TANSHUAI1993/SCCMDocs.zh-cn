@@ -11,12 +11,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e21a1eb9f6d97571c47906e04f030294b875ae17
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: c3aca04273c25326c64d696a44089b6c8d1222bf
+ms.sourcegitcommit: 2ef7e69f3db54a90ed4ae2a3f59a75e6329a1584
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537095"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062109"
 ---
 # <a name="deploy-a-task-sequence"></a>部署任务序列
 
@@ -146,7 +146,7 @@ ms.locfileid: "68537095"
 
     - **针对 Windows Embedded 设备的写入筛选器处理**：此设置控制通过写入筛选器启用的 Windows Embedded 设备的安装行为。 选择此选项可在安装截止时间或维护时段提交更改。 选择此选项后需要重启，然后所作更改才能保留在设备上。 否则，应用程序将安装到临时覆盖，并稍后提交。 将任务序列部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。  
 
-    - **允许任务序列针对 Internet 上的客户端运行**：指定是否允许在基于 Internet 的客户端上运行任务序列。 此设置不支持安装软件（如 OS）的操作。 请将此选项仅用于在标准 OS 中执行操作的基于通用脚本的任务序列。  
+    - **允许任务序列针对 Internet 上的客户端运行**：指定是否允许在基于 Internet 的客户端上运行任务序列。 此设置不支持需要启动媒体的操作，如操作系统的安装。 请将此选项仅用于一般软件安装或在标准 OS 中执行操作的基于通用脚本的任务序列。  
 
         - 从 1802 版开始，此设置支持通过云管理网关从 Windows 10 就地升级任务序列部署到基于 Internet 的客户端。 有关详细信息，请参阅[通过 CMG 部署 Windows 10 就地升级](#deploy-windows-10-in-place-upgrade-via-cmg)。  
 
