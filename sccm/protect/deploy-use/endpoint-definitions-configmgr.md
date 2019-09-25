@@ -62,7 +62,7 @@ ms.locfileid: "65500527"
 
 11. 在“属性筛选器”  列表中，选择“产品”  复选框。
 
-12. 在“搜索条件”列表中，单击“<要查找的项\>”。 然后，在“搜索条件”  对话框中的“指定要搜索的值”  列表中，选择适用于 Windows 8.1 及更早版本的“Forefront Endpoint Protection 2010”  或适用于 Windows 10 及更高版本的“Windows Defender”  。
+12. 在“搜索条件”列表中，单击“<要查找的项\>”。 然后，在“搜索条件”  对话框中的“指定要搜索的值”  列表中，选择适用于 Windows 8.1 及更早版本的“System Center Endpoint Protection”  或适用于 Windows 10 及更高版本的“Windows Defender”  。
 
 13. 单击“确定”  以关闭“搜索条件”  对话框，然后单击“下一步” 。
 
