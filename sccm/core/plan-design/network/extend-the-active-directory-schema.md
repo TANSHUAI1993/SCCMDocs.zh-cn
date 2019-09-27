@@ -2,7 +2,7 @@
 title: 发布和 Active Directory 架构
 titleSuffix: Configuration Manager
 description: 为 System Center Configuration Manager 扩展 Active Directory 架构，以简化部署和配置客户端的过程。
-ms.date: 02/6/2017
+ms.date: 09/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68be076cd166867ae3a1b181c14e3c888110b029
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 094cef520a2c5f1f4da06b8eefdafb4d3d58f3ac
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70889439"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311612"
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>为站点发布准备 Active Directory
 
