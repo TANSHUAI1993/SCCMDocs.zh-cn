@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b3c3f52f15ba4d61a589833e43144ce5ecb6de0
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: c5dadb6400ad76947ce7ace3228b6f7d95cedc17
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894224"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311549"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>如何在 Configuration Manager 中监视客户端
 
@@ -31,7 +31,7 @@ Configuration Manager 提供以下类型的信息作为客户端状态：
 
 - **客户端联机状态**：如果计算机连接到其已分配的管理点，则站点将设备视为联机。  为指示客户端处于联机状态，它将向管理点发送类似 ping 的消息。 如果管理点在 5 分钟后未收到消息，则站点将客户端视为处于脱机状态。   
 
-- **客户端活跃状况**：若客户端在过去的 7 天内曾与 Configuration Manager 通信，则站点将客户端视觉处于活跃状态。  若客户端在未来 7 天内未请求执行下面的操作，则站点将客户端视为处于非活动状态：   
+- **客户端活跃状况**：若客户端在过去的 7 天内曾与 Configuration Manager 通信，则站点将客户端视觉处于活跃状态。  若客户端在未来 7 天内未执行下面的操作，则站点将客户端视为处于非活动状态：   
 
     - 请求策略更新  
     - 发送检测信号消息  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed24e1f7089b7b8078c4cfcfed021bc1bac9346
-ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
+ms.openlocfilehash: 450b8a930fa04e88db5d6bf9ff2516cb31dff92a
+ms.sourcegitcommit: 013596de802ac0eb416118169ad049733b5a63e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902997"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198262"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -393,7 +393,7 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 是 CMPivot 的 Script-Guid。
 - 可以在客户端的 scripts.log 文件中查看 Script-Hash。
-- 也可以查看存储在客户端脚本分数中的哈希。 客户端上的文件名为 &lt;Script-Guid>_&lt;Script-Hash>。
+- 也可以查看存储在客户端脚本存储中的哈希。 客户端上的文件名为 &lt;Script-Guid>_&lt;Script-Hash>。
     - 示例文件名：C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123.ps
    
 

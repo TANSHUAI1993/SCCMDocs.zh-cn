@@ -2,7 +2,7 @@
 title: 设置实验室
 titleSuffix: Configuration Manager
 description: 设置实验室以便使用模拟现实活动评估 Configuration Manager。
-ms.date: 09/21/2017
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 107eb6bfa7f373a0ad13dc687fd373dfcae22d2d
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: cb1a527a96bcf068253f7832d67a4ee650330e49
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379368"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311574"
 ---
-# <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
+# <a name="set-up-a-configuration-manager-lab"></a>设置 Configuration Manager 实验室
 
 适用范围：  System Center Configuration Manager (Current Branch)
 
 遵循本主题中的指导原则将使你能够设置实验室以使用模拟现实活动评估 Configuration Manager。  
+
+> [!NOTE]
+> Microsoft 使用 Configuration Manager 评估版提供此实验室的预配置版本。 有关详细信息，请参阅 [Windows 和 Office 部署及管理实验室工具包](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab)。 
 
 ##  <a name="BKMK_LabCore"></a> 核心组件  
  为 System Center Configuration Manager 中设置环境需要一些核心组件支持安装 Configuration Manager。    

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2835ac13f9ffc2aa7a36ebc9669fb62cccc1257
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: 790fc7d0d9df0d88983671be7cba290393016de0
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311519"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
@@ -70,6 +70,7 @@ ms.locfileid: "70738170"
 #### <a name="permissions"></a>权限
 此操作需要具有与[运行脚本](#run-script)操作相同的权限。 
 
+自版本 1906 起，可以对集合对象使用“运行 CMPivot”权限。  
 
 
 ## <a name="client-notification"></a>客户端通知

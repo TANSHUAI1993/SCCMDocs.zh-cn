@@ -2,7 +2,7 @@
 title: 支持 Windows 10
 titleSuffix: Configuration Manager
 description: 了解支持作为客户端或 OSD 对 Configuration Manager 使用的 Windows 10 版本
-ms.date: 08/09/2019
+ms.date: 09/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3ec5f9b9bbda3b3bec6fdd1d955b8911f8029b5
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: cf8c57a6322c36e0bfe28f76fafb6f3e58640397
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738498"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311640"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -47,6 +47,7 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 - 此信息补充了[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)。  
 
 - 如果使用 Configuration Manager 的 Long-Term Servicing Branch，请参阅 [Long-Term Servicing Branch 的支持配置](/sccm/core/understand/supported-configurations-for-ltsb)。  
+
 
 <br/>
 下表列出了 Windows 10 的版本，这些版本可用作具有不同 Configuration Manager 版本的客户端。
@@ -79,6 +80,11 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 > [!NOTE]  
 > Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 现有客户端管理功能应适用于这些新设备。 例如，硬件和软件清单、软件更新和应用程序管理。 当前不支持 OS 部署。 <!-- 1353704 -->
 
+### <a name="bkmk_WIfB-support"></a> 支持 Windows 预览体验成员 
+
+从 Configuration Manager 版本 1906 开始，可以[更新和维护 Windows 预览体验成员](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB)版本。 此功能旨在为客户提供便利。 在此功能工作期间，对它的支持是最佳支持。 若此功能停止工作，Configuration Manager 无法提供它的修补程序。  
+- 有关 Windows 预览体验人员预览版支持的详细信息，请参阅[如何获取支持](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support)。 <!--the direct page/anchor doesn't work without a locale :(-->
+- 若要提供 Windows 预览体验人员的反馈，请使用[反馈中心](https://insider.windows.com/en-us/how-to-feedback/)。 <!--the direct page link doesn't work without a locale :(-->
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
