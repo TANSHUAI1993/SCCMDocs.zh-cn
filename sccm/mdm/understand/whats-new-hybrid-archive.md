@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21dc3376212505b15078daddbe9dfb0716486c64
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 006580a7ae4965ab4662ae02bee13ed9796697f8
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379029"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826264"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
@@ -123,12 +123,12 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
     | Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
     |-|-|-|-|
-    |早于 1702|是|用户|用户许可证|
-    |早于 1702|否|用户|用户许可证|
+    |早于 1702|是|“用户”|用户许可证|
+    |早于 1702|否|“用户”|用户许可证|
     |早于 1702|是|设备|用户许可证|
     |早于 1702|否|设备|用户许可证|
-    |1702 及更高版本|是|用户|用户许可证|
-    |1702 及更高版本|否|用户|用户许可证|
+    |1702 及更高版本|是|“用户”|用户许可证|
+    |1702 及更高版本|否|“用户”|用户许可证|
     |1702 及更高版本|是|设备|设备许可证|
     |1702 及更高版本|否|设备|用户许可证|
 
@@ -537,7 +537,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能  
  2016 年 5 月推出的以下 Intune 功能适用于混合部署。
 
-- **MAM SDK：支持 PIN 长度配置**
+- @NO__T 0MAM SDK：支持 PIN 长度配置 @ no__t-0
 
   与设备 PIN 类似，现在可指定 MAM 应用的 PIN 长度。 这要求最终用户符合所设置的新限制。 同时，对 PIN 屏幕稍微进行了修改，以满足较长输入的需要。 有关详细信息，请参阅[适用于 Android 的 MAM 策略设置](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings)和[适用于 iOS 的 MAM 策略设置](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings)。  
 
@@ -547,13 +547,13 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
 - **可使用 MAM 策略管理的新应用**
 
-  适用于 Android 的 Microsoft Word、Excel 和 PowerPoint 应用现在可与未注册 Intune 的设备上的 MAM 策略相关联。 有关受支持应用的完整列表，请转到 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx)页面上的 Microsoft Intune 移动应用程序库。  
+  适用于 Android 的 Microsoft Word、Excel 和 PowerPoint 应用现在可与未注册 Intune 的设备上的 MAM 策略相关联。 有关受支持应用的完整列表，请转到 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)页面上的 Microsoft Intune 移动应用程序库。  
 
-- **Android 公司门户应用：最终用户 toast 通知**
+- @no__t 0Android 公司门户应用：最终用户 toast 通知 @ no__t-0
 
   最终用户在公司门户中注册设备或从中删除设备时，会显示来自 Android 公司门户应用的 Toast 通知。  
 
-- **公司门户网站：设备标识横幅将向最终用户提供详细信息**
+- @no__t 0Company 门户网站：设备标识横幅将向最终用户提供详细信息 @ no__t-0
 
   现在当最终用户使用公司门户网站时，可以更轻松地识别其所选的设备。 如果选择了错误的设备，可以通过点击主页横幅中的“点击此处”链接选择正确设备。  
 
