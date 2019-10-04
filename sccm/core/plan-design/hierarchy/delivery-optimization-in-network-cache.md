@@ -11,12 +11,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 070f7ec6f99a9de89c155e756989fb3b5fa4a594
-ms.sourcegitcommit: 05a984cf94ea43c392701a389c4eb20bd692847c
+ms.openlocfilehash: 55daf45df3216b205dd1242017eb1ddefb128530
+ms.sourcegitcommit: 84a6f31797490eeda73bd4f3656ba27741df3030
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70922741"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71343821"
 ---
 # <a name="delivery-optimization-in-network-cache-in-configuration-manager"></a>Configuration Manager 中的传递优化网络内缓存
 
@@ -31,7 +31,7 @@ ms.locfileid: "70922741"
 此缓存独立于 Configuration Manager 分发点内容。 如果选择和分发点角色一样的驱动，它将单独存储内容。
 
 > [!Note]  
-> 传递优化网络内缓存服务器是一项安装于 Windows Server 的应用程序，目前仍在开发。 它在 Configuration Manager 控制台中标记有“beta”标签  。  
+> 传递优化网络内缓存服务器是一项安装于 Windows Server 的应用程序，目前仍在开发。  
 
 
 ## <a name="how-it-works"></a>工作原理

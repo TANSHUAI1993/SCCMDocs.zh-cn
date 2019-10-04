@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2edf117f27eda3ee3c9e587edb9f69c8d84bf5dc
-ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
+ms.openlocfilehash: 7127229ceef948f4e88365255737fbe3844aa428
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71311586"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826189"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -77,14 +77,13 @@ ms.locfileid: "71311586"
 <!--3556023-->
 从2019年9月开始，你可以通过 Configuration Manager 来服务和更新运行 Windows 有问必答 Preview 版本的设备。 此更改意味着，你可以管理这些设备，而无需更改正常过程或启用 Windows 更新 for Business。 你可以将 Windows 预览体验预览版的功能更新和累积更新下载到 Configuration Manager，就像任何其他 Windows 10 更新或升级一样。 有关详细信息，请参阅[发布预发布 Windows 10 功能更新到 WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054)博客文章。
 
-有关 Configuration Manager 中的 Windows 内幕支持的详细信息，请参阅[对 windows 10 的支持](/sccm/core/plan-design/configs/support-for-windows-10bkmk_WIfB-support)。
+有关 Configuration Manager 中的 Windows 内幕支持的详细信息，请参阅[对 windows 10 的支持](/sccm/core/plan-design/configs/support-for-windows-10#bkmk_WIfB-support)。
 
 ### <a name="prerequisites"></a>先决条件
 
 - Configuration Manager 版本1906或更高版本，配置为[软件更新管理](/sccm/sum/plan-design/plan-for-software-updates)。
-- 运行[Windows 内幕预览版](https://insider.windows.com/en-us/how-to-pc/)的 windows 10 设备。<!--the direct page link doesn't work without a locale :(-->
+- 运行[Windows 内幕预览版](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)的 windows 10 设备。
 - 包含 Windows 有问必答设备的集合。
-
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>启用 Windows 有问必答升级和更新
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfb37b5e3f84feb70eea7120ab503a5c8e76b00d
-ms.sourcegitcommit: 05a984cf94ea43c392701a389c4eb20bd692847c
+ms.openlocfilehash: 3fa15a3bcd98c39f2b103793d9cc24ccdd2efd90
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70922719"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826148"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -56,7 +56,7 @@ ms.locfileid: "70922719"
 |以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)。|2016 年 12 月 13 日|版本 1802|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 <br><br>此次弃用包括删除使用任务序列创建新 VHD 或管理 VHD 的选项，以及删除 Configuration Manager 控制台的虚拟硬盘节点。 <br><br>不会删除现有 VHD，但无法从 Configuration Manager 控制台中对其进行访问。  |2017 年 1 月 6 日 |版本 1710|
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|版本 1710|
-|System Center Configuration Manager 升级评估工具。 <br><br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此会停止对升级评估工具的支持。 <br><br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
+|System Center Configuration Manager 升级评估工具。 <br><br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此会停止对升级评估工具的支持。 <br><br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/en-us/software-download/windows10)。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
 |带有网络负载均衡 (NLB) 群集的软件更新点 | 2016 年 2 月 27 日 | 版本 1702 |
 |任务序列： <br /> - OSDPreserveDriveLetter  <br /><br /> 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置  。 选择“特定逻辑驱动器号”并选择想要使用的驱动器  。 |2016 年 6 月 20 日 |版本 1606 |
 |网络访问保护 (NAP)- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月|版本 1511|  

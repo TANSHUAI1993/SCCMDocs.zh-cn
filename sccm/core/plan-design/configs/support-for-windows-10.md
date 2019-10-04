@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf8c57a6322c36e0bfe28f76fafb6f3e58640397
-ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
+ms.openlocfilehash: 51b234070f92135444e00a8eee672bdc4aa70bf1
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71311640"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826227"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -80,11 +80,11 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 > [!NOTE]  
 > Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 现有客户端管理功能应适用于这些新设备。 例如，硬件和软件清单、软件更新和应用程序管理。 当前不支持 OS 部署。 <!-- 1353704 -->
 
-### <a name="bkmk_WIfB-support"></a> 支持 Windows 预览体验成员 
+### <a name="bkmk_WIfB-support"></a> 支持 Windows 预览体验成员
 
 从 Configuration Manager 版本 1906 开始，可以[更新和维护 Windows 预览体验成员](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB)版本。 此功能旨在为客户提供便利。 在此功能工作期间，对它的支持是最佳支持。 若此功能停止工作，Configuration Manager 无法提供它的修补程序。  
-- 有关 Windows 预览体验人员预览版支持的详细信息，请参阅[如何获取支持](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support)。 <!--the direct page/anchor doesn't work without a locale :(-->
-- 若要提供 Windows 预览体验人员的反馈，请使用[反馈中心](https://insider.windows.com/en-us/how-to-feedback/)。 <!--the direct page link doesn't work without a locale :(-->
+
+若要提供 Windows 预览体验人员的反馈，请使用[反馈中心](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback)。
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 

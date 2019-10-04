@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/23/2019
-ms.openlocfilehash: 25d255b986a6ff08842ddab338acc0b3232afc6c
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 91fc86d10eeb0d898866c63207e4d8af3ce06724
+ms.sourcegitcommit: 160bcdaf783f3946ad5c7869b2566cbfc4da545c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70891649"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401698"
 ---
 # <a name="system-center-configuration-manager-site-size-and-performance-guidelines"></a>System Center Configuration Manager 站点大小和性能指南
 
@@ -69,7 +69,7 @@ System Center Configuration Manager 在可伸缩性和性能方面处于行业�
 
 在集合上启用增量更新可确保快速及时地更新集合成员资格。 但即使增量更新是高效的，它们仍然会给系统增加负载。 平衡所需的更改频率与近实时的会员资格更新需求。 例如，假设你希望对集合成员进行大改动，但不需要近实时的成员资格更新。 与启用增量更新相比，在某个时间间隔使用计划的完整更新更新集合更高效，并且对系统产生的负载更少。 
 
-启用增量更新时，请减少同一集合上的任何计划的完整更新。 它们只是评估的备用方法，因为增量更新应使集合成员资格近乎实时更新。 [集合的最佳做法](../../clients/manage/collections/best-practices-for-collections.md#do-not-use-incremental-updates-for-a-large-number-of-collections)推荐了增量更新的最大集合总数，但正如文章所指出的，你的体验可能因许多因素而异。
+启用增量更新时，请减少同一集合上的任何计划的完整更新。 它们只是评估的备用方法，因为增量更新应使集合成员资格近乎实时更新。 [集合的最佳做法](/sccm/core/clients/manage/collections/best-practices-for-collections#bkmk_incremental)推荐了增量更新的最大集合总数，但正如文章所指出的，你的体验可能因许多因素而异。
 
 仅具有直接成员身份规则和未执行增量更新的限制集合的集合不需要计划的完整更新。 禁用这些类型的集合的更新计划，以防止对系统造成不必要的负载。 如果限制集合使用增量更新，则仅具有直接成员身份规则的集合可能最多在 24 小时内（或者计划刷新发生之前）不能反映成员身份更新。
 

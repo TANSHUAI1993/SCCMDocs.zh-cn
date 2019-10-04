@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30e1804ea1d2e02f5c2d6fbc4b1243c8dccaa775
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: 5da81e4208e1659ce927b0a55066599d9670ad37
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712622"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826207"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -225,7 +225,7 @@ ms.locfileid: "68712622"
 
 - “云管理”  服务，“发现”  页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
-- “Log Analytics 连接器”  服务，“配置”  页：[配置到 Log Analytics 的连接](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
+- “Log Analytics 连接器”  服务，“配置”  页：[配置到 Log Analytics 的连接](/sccm/core/clients/manage/sync-data-log-analytics#grant-configuration-manager-with-permissions-to-log-analytics)  
 
 - “升级就绪情况连接器”  服务，“配置”  页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 

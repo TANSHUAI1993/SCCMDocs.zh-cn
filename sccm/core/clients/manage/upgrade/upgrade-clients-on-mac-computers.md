@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b887a82afce8cf446494e7b9348a0b8c0718e389
-ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
+ms.openlocfilehash: 33a956bf19a1b14a2190467b2148a3ef4b65e908
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902571"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826124"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Mac 计算机上的客户端
 
@@ -25,7 +25,7 @@ ms.locfileid: "70902571"
 按照本文中的高级步骤，使用 Configuration Manager 应用程序升级 Mac 计算机上的客户端。 也可以下载 Mac 客户端安装文件，将其复制到 Mac 计算机上的共享网络位置或本地文件夹，然后指示用户手动运行安装。  
 
 > [!NOTE]  
-> 在执行这些步骤之前，请确保 Mac 计算机满足先决条件。 请参阅 [Mac 计算机支持的操作系统](/sccm/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers)。  
+> 在执行这些步骤之前，请确保 Mac 计算机满足先决条件。 请参阅 [Mac 计算机支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers)。  
 
 ## <a name="download-the-latest-mac-client"></a>下载最新的 Mac 客户端
 

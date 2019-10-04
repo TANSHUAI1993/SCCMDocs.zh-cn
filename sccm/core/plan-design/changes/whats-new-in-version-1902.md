@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f3100e9580566b072bed6c8813018876f720eb3
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: af59b3ea1dfefcf0ae0e4919229b77b633819657
+ms.sourcegitcommit: 160bcdaf783f3946ad5c7869b2566cbfc4da545c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338802"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401658"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -230,11 +230,6 @@ Configuration Manager 现在支持从层次结构中的管理中心站点运行 
 #### <a name="add-a-label-to-the-media"></a>向媒体添加标签
 
 现在可以向任务序列媒体添加标签。 此标签可帮助你在创建媒体后更好地识别媒体。 在“创建任务序列媒体向导”中，指定“媒体标签”   。
-
-#### <a name="include-autoruninf-file-on-media"></a>在媒体上添加 autorun.inf 文件
-
-<!-- 4090666 -->
-当你创建任务序列媒体时，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 如果情况需要，仍然可以包括该文件。
 
 ### <a name="import-a-single-index-of-an-os-image"></a>导入 OS 映像的单个索引
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f50562f6390b302f619bbeef273ad1998f316737
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 2d55335eb8e55381cfa5481edf027a54a18f6bda
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892290"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826154"
 ---
 # <a name="troubleshoot-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -126,7 +126,7 @@ Windows Defender 或 Endpoint Protection 会自动与 Microsoft 更新一同运�
 
 #### <a name="step-5-manually-install-the-definition-updates"></a>步骤5：手动安装定义更新  
 
-[手动下载最新更新](https://www.microsoft.com/wdsi/defenderupdates)。  
+[手动下载最新更新](https://www.microsoft.com/en-us/wdsi/defenderupdates)。  
 
 #### <a name="step-6-contact-microsoft-support"></a>步骤 6：联系 Microsoft 支持部门  
 

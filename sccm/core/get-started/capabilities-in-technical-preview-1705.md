@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50a85f9639cb2f284a431081caea10e71f92b9f3
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: e61489373c7e5c739485f1a5162f203d883a4835
+ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551130"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71826104"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
 
@@ -266,7 +266,7 @@ ms.locfileid: "67551130"
 -   Configuration Manager 连接到 OMS 以实现[日志分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)或[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)等功能。
 
 ### <a name="prerequisites-for-the-oms-connector"></a>OMS 连接器的先决条件
-配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](/sccm/core/clients/manage/sync-data-log-analytics#prerequisites-for-the-log-analytics-connector)先决条件并无任何区别。 此处重复了该信息：  
+配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](/sccm/core/clients/manage/sync-data-log-analytics)先决条件并无任何区别。 此处重复了该信息：  
 
 -   向 OMS 提供 Configuration Manager 权限。
 
