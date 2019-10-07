@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a00da1511c6410088f318fc619bbddc537e20708
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 37143372acdadb6a340c2ee556901f5133683c5f
+ms.sourcegitcommit: 160bcdaf783f3946ad5c7869b2566cbfc4da545c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083244"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401578"
 ---
 # <a name="create-stand-alone-media"></a>创建独立媒体
 
@@ -68,16 +68,16 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
 - 通过[安装应用程序](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication)步骤安装动态应用程序。
 
-- “安装 Windows 和 ConfigMgr”任务序列步骤中的“使用预生产客户端包(可用时)”设置。 有关此设置的详细信息，请参阅[安装 Windows 和 ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)。  
+- “安装 Windows 和 ConfigMgr”任务序列步骤中的“使用预生产客户端包(可用时)”设置   。 有关此设置的详细信息，请参阅[安装 Windows 和 ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)。  
 
 > [!NOTE]  
-> 如果任务序列包括[安装包](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage)步骤，并且在管理中心站点创建独立媒体，则可能发生错误。 管理中心站点没有必需的客户端配置策略。 在运行任务序列期间启用软件分发代理时需要这些策略。 在 CreateTsMedia.log 文件中可能会出现以下错误：  
+> 如果任务序列包括[安装包](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage)步骤，并且在管理中心站点创建独立媒体，则可能发生错误。 管理中心站点没有必需的客户端配置策略。 在运行任务序列期间启用软件分发代理时需要这些策略。 在 CreateTsMedia.log  文件中可能会出现以下错误：  
 >
 > `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
 >
-> 对于包括“安装包”步骤的独立媒体，请在已启用软件分发代理的主站点创建独立媒体。
+> 对于包括“安装包”步骤的独立媒体，请在已启用软件分发代理的主站点创建独立媒体  。
 >
-> 或者，使用自定义[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 在[安装 Windows 和 ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)步骤之后，第一个**安装包**步骤之前执行该步骤。 “运行命令行”步骤运行以下 WMIC 命令，以便在第一个“安装包”步骤运行之前启用软件分发代理：  
+> 或者，使用自定义[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 在[安装 Windows 和 ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)步骤之后，第一个**安装包**步骤之前执行该步骤。 “运行命令行”  步骤运行以下 WMIC 命令，以便在第一个“安装包”步骤运行之前启用软件分发代理：  
 >
 > `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
@@ -85,7 +85,7 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
 将任务序列所需的所有内容至少分发到一个分发点。 此内容包括启动映像、OS 映像和其他关联文件。 向导在创建媒体时从分发点中收集内容。
 
-用户帐户至少需要具有对该分发点上的内容库的读取访问权限。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。
+用户帐户至少需要具有对该分发点上的内容库的  读取访问权限。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。
 
 ### <a name="prepare-the-removable-usb-drive"></a>准备可移动的 USB 驱动器
 
@@ -100,29 +100,29 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
 ## <a name="process"></a>过程
 
-1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，选择“任务序列”节点。  
+1. 在 Configuration Manager 控制台中，转到“软件库”  工作区，展开“操作系统”  ，选择“任务序列”  节点。  
 
-2. 在功能区的“主页”选项卡上，在“创建”组中，选择“创建任务序列媒体”。 此操作会启动“创建任务序列媒体向导”。  
+2. 在功能区的“主页”选项卡上，在“创建”组中，选择“创建任务序列媒体”    。 此操作会启动“创建任务序列媒体向导”。  
 
-3. 在“选择媒体类型”页上，指定以下选项：  
+3. 在“选择媒体类型”  页上，指定以下选项：  
 
-    - 选择“独立媒体”。  
+    - 选择“独立媒体”  。  
 
-    - （可选）如果你希望仅允许部署 OS 而不需要用户输入，请选择“允许无人参与的操作系统部署”。  
+    - （可选）如果你希望仅允许部署 OS 而不需要用户输入，请选择“允许无人参与的操作系统部署”  。  
 
         > [!IMPORTANT]  
         > 如果选择此选项，则不会提示用户输入网络配置信息或可选的任务序列。 如果针对密码保护配置媒体，则仍会提示用户输入密码。  
 
-4. 在“媒体类型”页上，指定媒体是“可移动 USB 驱动器”还是“CD/DVD 集”。 然后配置以下选项：  
+4. 在“媒体类型”页上，指定媒体是“可移动 USB 驱动器”还是“CD/DVD 集”    。 然后配置以下选项：  
 
     > [!IMPORTANT]  
     > 媒体使用 FAT32 文件系统。 如果媒体的内容包含超过 4 GB 大小的文件，则无法在 USB 驱动器上创建媒体。  
 
-    - 如果选择“可移动 USB 驱动器”，则选择要在其中存储内容的驱动器。  
+    - 如果选择“可移动 USB 驱动器”  ，则选择要在其中存储内容的驱动器。  
 
         - **格式化可移动 U 盘 (FAT32) 并使其可启动**：默认情况下，让 Configuration Manager 准备 U 盘。 很多较新的 UEFI 设备都需要可启动的 FAT32 分区。 但是，此格式还限制文件的大小和驱动器的总容量。 如果已格式化并配置了可移动驱动器，请禁用此选项。
 
-    - 如果选择“CD/DVD 集”，请指定媒体的容量（媒体大小）以及输出文件（媒体文件）的名称和路径。 向导会将输出文件写入到此位置。 例如：`\\servername\folder\outputfile.iso`  
+    - 如果选择“CD/DVD 集”，请指定媒体的容量（媒体大小）以及输出文件（媒体文件）的名称和路径    。 向导会将输出文件写入到此位置。 例如：`\\servername\folder\outputfile.iso`  
 
         如果媒体的容量太小，无法存储整个内容，则会创建多个文件。 然后必须将内容存储在多张 CD 或 DVD 上。 如果需要多个媒体文件，Configuration Manager 会在创建的每个输出文件的名称中添加序号。  
 
@@ -141,9 +141,9 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
         - Configuration Manager 将名为 `MediaLabel.txt` 的文本文件写入媒体的根目录。 默认情况下，该文件包含一行文本：`label=Configuration Manager`。 如果自定义媒体标签，则此行使用你的自定义标签而不是默认值。  
 
-    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1902 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。  
+    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1906 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。  
 
-5. 在“安全”页上，指定以下选项：
+5. 在“安全”  页上，指定以下选项：
 
     - **使用密码保护媒体**：输入强密码来帮助防止未经授权访问媒体。 如果指定密码，则用户必须提供该密码才能使用媒体。  
 
@@ -154,37 +154,37 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
     - **为此独立媒体选择有效日期范围**：在媒体上设置可选的开始日期和到期日期。 默认情况下，此设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于到期时间，则独立介质不会启动。 也可通过使用 [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 启用这些选项。  
 
-6. 在“独立 CD/DVD”页上，选择用于部署 OS 的任务序列。 还可以仅选择那些与启动映像关联的任务序列。 验证任务序列引用的内容的列表。  
+6. 在“独立 CD/DVD”  页上，选择用于部署 OS 的任务序列。 还可以仅选择那些与启动映像关联的任务序列。 验证任务序列引用的内容的列表。  
 
     - **检测关联的应用程序依赖项并将其添加到此媒体**：同时还将内容添加到应用程序依赖项的媒体中。  
 
         > [!TIP]  
         > 如果看不到预期的应用程序依赖项，请取消选择并重新选择此选项以刷新列表。  
 
-7. 在“选择应用程序”页上，指定要作为媒体文件的一部分包含的其他应用程序内容。  
+7. 在“选择应用程序”  页上，指定要作为媒体文件的一部分包含的其他应用程序内容。  
 
-8. 在“选择包”页上，指定要作为媒体文件的一部分包含的其他包内容。  
+8. 在“选择包”  页上，指定要作为媒体文件的一部分包含的其他包内容。  
 
-9. 在“选择驱动程序包”页上，指定要作为媒体文件的一部分包含的其他驱动程序包内容。  
+9. 在“选择驱动程序包”  页上，指定要作为媒体文件的一部分包含的其他驱动程序包内容。  
 
-10. 在“分发点”页上，指定包含所需内容的分发点。  
+10. 在“分发点”  页上，指定包含所需内容的分发点。  
 
-    Configuration Manager 仅显示具有内容的分发点。 先将与任务序列相关联的所有内容分发到至少一个分发点上，然后再继续操作。 在分发内容后，刷新分发点列表。 删除此页中已选中的任何分发点，然后返回到“分发点”页。 或者，重启该向导。 有关详细信息，请参阅[分发任务序列引用的内容](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS)和[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)  
+    Configuration Manager 仅显示具有内容的分发点。 先将与任务序列相关联的所有内容分发到至少一个分发点上，然后再继续操作。 在分发内容后，刷新分发点列表。 删除此页中已选中的任何分发点，然后返回到“分发点”  页。 或者，重启该向导。 有关详细信息，请参阅[分发任务序列引用的内容](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS)和[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)  
 
-11. 在“自定义”页上，指定以下选项：  
+11. 在“自定义”  页上，指定以下选项：  
 
     - 添加用于任务序列的任何变量。  
 
     - **启用预启动命令**：指定想要在运行任务序列之前运行的任何预启动命令。 预启动命令是一个脚本或可执行文件，它可以在任务序列运行之前在 Windows PE 中与用户交互。 有关详细信息，请参阅[任务序列媒体的预启动命令](/sccm/osd/understand/prestart-commands-for-task-sequence-media)。  
 
         > [!TIP]  
-        > 在媒体创建过程中，任务序列会将包 ID 和预启动命令行（包括任何任务序列变量的值）写入到运行 Configuration Manager 控制台的计算机上的 CreateTSMedia.log 文件。 你可以查看此日志文件以验证任务序列变量的值。  
+        > 在媒体创建过程中，任务序列会将包 ID 和预启动命令行（包括任何任务序列变量的值）写入到运行 Configuration Manager 控制台的计算机上的 CreateTSMedia.log  文件。 你可以查看此日志文件以验证任务序列变量的值。  
 
-        如果预启动命令需要任何内容，请选择“包括预启动命令的文件”选项。  
+        如果预启动命令需要任何内容，请选择“包括预启动命令的文件”  选项。  
 
 12. 完成向导。  
 
-在目标文件夹中创建独立媒体文件 (.ISO)。 如果选择了“CD/DVD 集”，则将输出文件复制到一组 CD 或 DVD。
+在目标文件夹中创建独立媒体文件 (.ISO)。 如果选择了“CD/DVD 集”  ，则将输出文件复制到一组 CD 或 DVD。
 
 
 ## <a name="next-steps"></a>后续步骤
