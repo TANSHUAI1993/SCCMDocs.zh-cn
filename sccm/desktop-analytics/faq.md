@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 09/05/2019
+ms.date: 10/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e47827c6ad2b52ebb2b9dfabcdc4c61320385bf3
-ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
+ms.openlocfilehash: 17791a695d2413d867bf5ee212b9e3cfd0837f83
+ms.sourcegitcommit: 23e4f4f02b62e5cc284196067a83eaaa67a6f446
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808395"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998979"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -25,7 +25,7 @@ ms.locfileid: "70808395"
 
 ## <a name="prerequisites"></a>先决条件
 
-### <a name="can-i-use-desktop-analytics-with-intune-managed-devices"></a>能否将桌面分析用于 Intune 托管的设备？ 
+### <a name="bkmk_intune"></a>能否将桌面分析用于 Intune 托管的设备？ 
 
 大多数可以从桌面分析工作流获益的客户使用 Configuration Manager 来部署 Windows。 我们知道，Intune 客户喜欢分析数据的其他见解，并且我们正在努力与他们分享见解。
 
@@ -127,13 +127,52 @@ ms.locfileid: "70808395"
 
 是。 如果你现在使用 Azure 门户中的[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started)，现在可以继续执行此操作，而不能超过2020年1月。
 
-有关详细信息，请参阅博客文章：[从 "Windows Analytics：升级就绪情况 "到桌面分析](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744)。
+有关详细信息，请参阅博客文章：从 "Windows Analytics：0Migrate 用户输入数据" @no__t升级就绪情况 "到桌面分析 @ no__t。
+
+### <a name="are-there-any-windows-analytics-features-that-arent-available-in-desktop-analytics"></a>桌面分析是否有任何 Windows Analytics 功能不可用？
+
+<!-- 3616924 -->
+是的，以下 Windows 分析功能将在桌面分析中停用或尚未提供：
+
+#### <a name="general"></a>常规
+
+- 对不需要 Configuration Manager 的方案的支持。 例如， [Intune 支持](#bkmk_intune)。
+- 任何有效 Windows 许可证与 E3、E5 的许可先决条件
+- 支持每个 Azure AD 租户的多个工作区
+- 运行自定义查询和导出原始解决方案数据的能力
+- 自定义报表的数据模型文档
+
+#### <a name="upgrade-readiness"></a>Upgrade Readiness
+
+- Internet Explorer 站点发现数据
+- Office 外接程序见解（现已[在 Configuration Manager 中提供](#bkmk_office)）
+- 反馈中心见解
+
+#### <a name="update-compliance"></a>更新符合性
+
+- 支持企业 Windows 更新
+- 交付优化见解
+- 支持 Windows 10 长期服务通道（LTSC）
+- Windows 预览体验报表
+- Windows Defender 状态
+
+> [!Note]
+> 所有现有更新符合性功能，包括桌面分析中未提供的功能，Azure 门户的[更新符合性](/windows/deployment/update/update-compliance-get-started)解决方案中仍提供这些功能。
+
+#### <a name="device-health"></a>设备健康状况
+
+- 驱动程序运行状况
+- 应用运行状况（部署计划之外）
+- 经常崩溃设备或驱动程序引发的故障
+- Windows 登录运行状况
+- Windows 信息保护
+- Windows Server 支持
 
 ## <a name="other"></a>其他
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>我能否将桌面分析用于我的 Office 365 ProPlus 升级？
+### <a name="bkmk_office"></a>我能否将桌面分析用于我的 Office 365 ProPlus 升级？
 
-不能，桌面分析侧重于 Windows。 Microsoft 开发的桌面分析与许多客户紧密协作。 通过预览计划，客户的反馈涉及到桌面分析如何提高其自信地管理 Windows 部署的能力。 他们还告诉我们，他们希望[office 365 ProPlus 的准备工作](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)与 Configuration Manager 和 Intune 中的 office 管理工具更紧密地集成。 Microsoft 将继续在这些领域进行投资，同时重点介绍桌面分析中的 Windows 方案。
+不能，桌面分析侧重于 Windows。 Microsoft 开发的桌面分析与许多客户紧密协作。 客户反馈涉及到桌面分析如何提高其自信地管理 Windows 部署的能力。 他们还告诉我们，他们希望[office 365 ProPlus 的准备情况](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)与 Configuration Manager 和 Intune 中的 office 管理工具更紧密地集成。 Microsoft 将继续投资这些领域，同时重点介绍桌面分析中的 Windows 方案。
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>如何提供有关桌面分析的反馈？
 
