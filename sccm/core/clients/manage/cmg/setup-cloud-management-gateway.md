@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d9f3d922093319c3bfc9341f8fe5472a198a083
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b57a4c63da20cefb7b247f99a97dbba0ec91d9e8
+ms.sourcegitcommit: 84a6f31797490eeda73bd4f3656ba27741df3030
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535460"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71343827"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -184,11 +184,14 @@ CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接�
 Configuration Manager 客户端自动确定它是在 Intranet 上还是在 Internet 上。 如果客户端可以访问域控制器或本地管理点，它会将自己的连接类型设置为“当前 Intranet”  。 否则，它会切换为“当前 Internet”  ，并使用 CMG 服务的位置与站点通信。
 
 >[!NOTE]
-> 不管客户端是在 Intranet 上还是在 Internet 上，都可以强制它始终使用 CMG。 此配置可用于测试，或用于你希望强制使用 CMG 的远程办公室客户端。 请在客户端上设置以下注册表项：
+> 不管客户端是在 Intranet 上还是在 Internet 上，都可以强制它始终使用 CMG。 此配置可用于测试目的，或用于你希望强制始终使用 CMG 的客户端。 请在客户端上设置以下注册表项：
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
 >
 > 也可以在客户端安装期间使用 [CCMALWAYSINF](/sccm/core/clients/deploy/about-client-installation-properties#ccmalwaysinf) 属性指定此设置。
+>
+> 即使客户端漫游到边界组配置将以其他方式利用本地资源的位置，此设置也将始终适用。
+
 
 若要验证客户端是否具有指定 CMG 的策略，请在客户端计算机上以管理员身份打开 Windows PowerShell 命令提示符，然后运行以下命令：`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
 

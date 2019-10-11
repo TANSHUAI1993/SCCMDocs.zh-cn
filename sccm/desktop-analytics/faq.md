@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 10/07/2019
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17791a695d2413d867bf5ee212b9e3cfd0837f83
-ms.sourcegitcommit: 23e4f4f02b62e5cc284196067a83eaaa67a6f446
+ms.openlocfilehash: 13bdb5348e9fc58ca0ba194dd8cf4d509c16b081
+ms.sourcegitcommit: 9c76ed76ead1125b712cef574d832803dbf2c5a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998979"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163139"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -121,7 +121,7 @@ ms.locfileid: "71998979"
 
 ### <a name="im-not-ready-yet-can-i-migrate-after-the-initial-onboarding"></a>我还没有准备好，我是否可以在初次加入后迁移？
 
-不需要，此时需要决定在[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)期间进行迁移。
+是。<!-- 5202803 --> 现有 Windows Analytics 客户现在可以在初始载入后迁移数据。 在桌面分析门户中转到 "**连接的服务**"，并选择用于从 Windows Analytics 迁移数据的选项。
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>是否可以将更新符合性与桌面分析一起使用？
 

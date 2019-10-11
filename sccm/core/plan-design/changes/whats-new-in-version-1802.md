@@ -2,7 +2,7 @@
 title: 新的 1802 版
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager 1802 版中引入的更改和新功能的详细信息。
-ms.date: 04/05/2019
+ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b92f099a3a64cb6b1943d3d4b1306cbbd4131d6c
-ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
+ms.openlocfilehash: 64be14a4029258489a6dfda5e344efd803c85adb
+ms.sourcegitcommit: 9c76ed76ead1125b712cef574d832803dbf2c5a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902922"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163012"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -287,7 +287,7 @@ Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备�
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>对 Configuration Manager 的 Windows Defender 攻击防护策略的改进
 <!-- 1356220 -->
-在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)添加了有关[攻击面减少](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR)和[受控文件夹访问权限](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA)组件的其他策略设置。
+在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)添加了有关[攻击面减少](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR)和[受控文件夹访问权限](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA)组件的其他策略设置。
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Windows Defender 应用程序防护的新主机交互设置
 <!-- 1356256 -->

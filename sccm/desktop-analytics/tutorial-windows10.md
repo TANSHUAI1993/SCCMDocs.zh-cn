@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb33c1e6750fe3302a5a59a6f4d67809b359236a
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: 0f33cd743e02a034049a315b974d2bdf26061cd7
+ms.sourcegitcommit: 974b20f5faa0e0bbf9e43391280fdebeb657ac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738301"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237003"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -79,8 +79,8 @@ ms.locfileid: "70738301"
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
-    - `https://graph.windows.net`（仅在 Configuration Manager 服务器角色上）
-    - `https://fef.msua06.manage.microsoft.com`（仅在 Configuration Manager 服务器角色上）
+    - `https://graph.windows.net` （仅限 Configuration Manager 服务器角色）
+    - `https://*.manage.microsoft.com` （仅限 Configuration Manager 服务器角色）
 
     有关详细信息，请参阅[如何启用桌面分析的数据共享](/sccm/desktop-analytics/enable-data-sharing#endpoints)。  
 
@@ -169,7 +169,7 @@ ms.locfileid: "70738301"
 
     - 从可用服务列表中选择 "**桌面分析**"  
   
-   选择“下一步”。  
+   选择“**下一步**”。  
 
 3. 在 "**应用**" 页上，选择相应的**Azure 环境**。 然后选择 "**浏览**" "web 应用"。
 
@@ -200,7 +200,7 @@ ms.locfileid: "70738301"
 
     - **允许诊断数据中的设备名称**：选择 "**启用**"  
   
-   选择“下一步”。 "**可用功能**" 页显示了可用于上一页中的诊断数据设置的桌面分析功能。 选择“下一步”。  
+   选择“**下一步**”。 "**可用功能**" 页显示了可用于上一页中的诊断数据设置的桌面分析功能。 选择“**下一步**”。  
 
 7. 在 "**集合**" 页上，配置以下设置：  
 
@@ -238,7 +238,7 @@ Configuration Manager 在创建连接的60分钟内同步集合。 在桌面分�
 
 4. 在 "**创建部署计划**" 窗格中，配置以下设置：  
 
-    - **名称**：部署计划的唯一名称，例如`Windows 10 pilot`  
+    - **名称**：部署计划的唯一名称，例如 `Windows 10 pilot`  
 
     - **产品和版本**：选择**Windows**产品和最新的可用建议版本。 例如， **Windows 10 版本1809（推荐）** 。  
 
@@ -248,7 +248,7 @@ Configuration Manager 在创建连接的60分钟内同步集合。 在桌面分�
 
         - **我的计算机自动从 Windows 更新获取驱动程序**：默认设置为 "**关闭**"，在使用 Configuration Manager 部署时，建议使用此设置。  
 
-        - **为应用定义低安装计数阈值**：默认设置为`2%`。 低于此阈值的应用会自动设置为 "*低安装计数*"。 在试点期间，桌面分析不会验证这些加载项。  
+        - **为应用定义低安装计数阈值**：默认设置为 `2%`。 低于此阈值的应用会自动设置为 "*低安装计数*"。 在试点期间，桌面分析不会验证这些加载项。  
 
             如果应用安装在比此阈值更高的计算机上，则部署计划会将应用标记为 "*值得注意*"。 然后，你可以决定在试验阶段测试其重要性。  
 

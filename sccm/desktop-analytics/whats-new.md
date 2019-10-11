@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 最新的桌面分析云服务每月版本中的新功能摘要。
-ms.date: 09/10/2019
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,17 +11,17 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c25aaba8c93204283723521ac157c62e62343d7
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: ce51ddc7a6c46dfc8b131ed6bc573b5b501f8598
+ms.sourcegitcommit: 9c76ed76ead1125b712cef574d832803dbf2c5a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70891696"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72162881"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
 > [!Note]  
-> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
+> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 了解桌面分析中每月的新增功能。
 
@@ -30,6 +30,14 @@ ms.locfileid: "70891696"
 
 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="october-2019"></a>2019年10月
+
+### <a name="migrate-from-windows-analytics-to-existing-tenant"></a>从 Windows Analytics 迁移到现有租户
+
+<!-- 5202803 -->
+
+你现在可以在载入桌面分析后从现有 Windows Analytics 工作区迁移输入。 有关详细信息，请参阅[现有 Windows Analytics 客户](/sccm/desktop-analytics/faq#existing-windows-analytics-customers)的常见问题。
 
 ## <a name="september-2019"></a>2019年9月
 
@@ -46,7 +54,7 @@ ms.locfileid: "70891696"
 如果你在环境中设置了桌面分析，但想要停止使用该服务，现在可以关闭你的帐户。 如果你在90天内改变主意，则可以重新激活该帐户。 有关详细信息，请参阅[如何关闭你的帐户](/sccm/desktop-analytics/account-close)。
 
 
-## <a name="august-2019"></a>2019年8月
+## <a name="august-2019"></a>2019 年 8 月
 
 ### <a name="reset-your-account"></a>重置你的帐户
 

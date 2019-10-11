@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f69277c55cec8c6acf9ef6763d63f18f73b38d87
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: e9a61241cfda459f5b18fbbbcc63143fb33674be
+ms.sourcegitcommit: cb813496467a5191237d853a6126ea534c12d2f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379189"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172652"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 

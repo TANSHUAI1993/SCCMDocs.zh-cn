@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 08/30/2019
+ms.date: 09/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5c80836ced76bdf1109c9279bf2068efbbd97f5
-ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
+ms.openlocfilehash: b52a152f24b641d0debfdf39ee6a78cfa2352d66
+ms.sourcegitcommit: 3ecba0573e7b1c99de3291dbeb29a5de432ce647
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176739"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71715884"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -77,11 +77,7 @@ Configuration Manager 的技术预览分支支持以下产品和技术：
     - SQL Server 2014（含服务包 1 或更高版本）
     - SQL Server 2012（含服务包 3 或更高版本）  
 
-- 站点最多支持 10 个客户端，这些客户端必须运行 Windows 的以下版本之一：  
-
-    - Windows 10  
-    - Windows 8.1  
-    - Windows 7  
+- 站点最多支持 10 个客户端，客户端可以运行任何[受支持的客户端 OS 版本](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)。<!-- SCCMDocs#1656 -->
 
 > [!Note]  
 > 在此内容中包含这些产品并不意味着支持超出其支持生命周期以外的版本。 Configuration Manager 不支持超出其支持生命周期以外的产品。 有关详细信息，请参阅 [Microsoft 生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=208270)。  
@@ -122,14 +118,19 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-19082"></a>技术预览版 1908.2
+### <a name="technical-preview-version-1909"></a>技术预览版 1909
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [控制台连接的改进](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
-- [对已启用多播的分发点的改进](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
-- [对 CMPivot 引擎的优化](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
-- [在 OS 部署过程中设置键盘布局](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
+- [业务流程组](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
+- [对 BitLocker 管理的改进](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
+- [将本地站点扩展并迁移到 Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Azure-migration) <!--3556022-->
+- [其他 CMPivot 实体和增强功能](/sccm/core/get-started/2019/technical-preview-1909#bkmk_CMPivot) <!--5410930-->
+- [通过 Internet 按需进行任务序列下载](/sccm/core/get-started/2019/technical-preview-1909#bkmk_dodcmg) <!--3601238-->
+- [支持 Windows 预览体验成员](/sccm/core/get-started/2019/technical-preview-1909#bkmk_wifb) <!--3556023-->
+- [任务序列中改进的语言支持](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
+- [Office 365 专业增强版运行状况仪表板](/sccm/core/get-started/2019/technical-preview-1909#bkmk_o365health) <!--4488301-->
+- [任务序列调试程序的改进](/sccm/core/get-started/2019/technical-preview-1909#bkmk_tsdebug) <!-- 5012536, 5012509 -->
 
 > [!Note]  
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。  
@@ -138,6 +139,13 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 ## <a name="features-in-recent-technical-previews"></a>最新的技术预览版中的功能
 
 以下是自 Current Branch 版本 1906 发布以来的旧版 Configuration Manager 技术预览分支发布的功能：
+
+### <a name="technical-preview-version-19082"></a>技术预览版 1908.2
+
+- [控制台连接的改进](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [对已启用多播的分发点的改进](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [对 CMPivot 引擎的优化](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [在 OS 部署过程中设置键盘布局](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
 
 ### <a name="technical-preview-version-1908"></a>技术预览版 1908
 

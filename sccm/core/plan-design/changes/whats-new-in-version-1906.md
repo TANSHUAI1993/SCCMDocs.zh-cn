@@ -2,7 +2,7 @@
 title: 1906 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1906 中引入的更改和新增功能的详细信息。
-ms.date: 08/23/2019
+ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13c9f2e6f6b279aeea13ce2ede66b6d11f2c12a2
-ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
+ms.openlocfilehash: 05b2a01c66cba7119bc8752dc3ed6f4a4a9ab7da
+ms.sourcegitcommit: 3ecba0573e7b1c99de3291dbeb29a5de432ce647
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69999436"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71715920"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -371,6 +371,8 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 - 任务序列设置了新的只读变量“_SMSTSLastContentDownloadLocation”  。 此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量，而不是分析客户端日志。<!-- 2840337 -->
 
+- 当你创建任务序列媒体时，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 如果情况需要，仍然可以包括该文件。<!-- 4090666 -->
+
 
 ## <a name="bkmk_userxp"></a>软件中心
 
@@ -615,13 +617,13 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 - [SMS 提供程序管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
- 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1906）的更改摘要](https://support.microsoft.com/help/4514258)。
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1906）的更改摘要](https://support.microsoft.com/help/4514258)。
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)。<!-- link is not live yet; will be published before this release branch -->
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)。
+
+以下更新汇总 (4517869) 于 2019 年 10 月 1 日起在控制台中提供：[Configuration Manager 当前分支版本 1906 的更新汇总](https://support.microsoft.com/help/4517869)。
 
 <!--
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4486457).
-
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
