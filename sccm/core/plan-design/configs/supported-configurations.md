@@ -2,7 +2,7 @@
 title: 支持的配置
 titleSuffix: Configuration Manager
 description: 标识重要配置和要求，以便可以规划、部署和维护功能性 System Center Configuration Manager 部署。
-ms.date: 10/06/2016
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e041c3ef1725f3084f05b084a9a48716a6fac556
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 7fd2805ad886bd0e2f8d6dbcadc8953ae20be24c
+ms.sourcegitcommit: 23e4f4f02b62e5cc284196067a83eaaa67a6f446
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377955"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999016"
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的配置
 
@@ -28,7 +28,7 @@ ms.locfileid: "70377955"
 
 如果 Configuration Manager 功能需要更具体的配置，相关信息会包含在特定于功能的文档中，作为对较通用配置详细信息的补充。  
 
- 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](https://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。  
+ 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将已超出支持生命周期的产品与 Configuration Manager 一起使用，包括[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划包含的任何产品。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](https://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。 有关 Configuration Manager 中的扩展的安全更新的详细信息，请参阅[用于 Configuration Manager 的客户端和设备的支持的操作系统版本](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_ESU)。
 
 > [!NOTE]  
 >  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](https://go.microsoft.com/fwlink/p/?LinkId=31976)。  

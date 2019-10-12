@@ -11,12 +11,12 @@ ms.assetid: 4cde43d1-9b09-4601-b389-0776de451b4e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a015277f9a2fb05c4fbecc4d702d63a5a97777ca
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 0e90a06b956c39cb7a473af87cdfca0f722122ff
+ms.sourcegitcommit: cb813496467a5191237d853a6126ea534c12d2f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537973"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172625"
 ---
 # <a name="support-center-onetrace-preview"></a>支持中心 OneTrace（预览）
 
@@ -48,6 +48,8 @@ OneTrace 适用于许多类型的日志文件，如：
 ## <a name="install"></a>安装
 
 OneTrace 与支持中心一起安装。 通过以下路径在站点服务器上找到支持中心安装程序：`cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`。
+
+默认情况下，OneTrace 应用程序安装在 `"C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe` 中。
 
 > [!Note]  
 > 支持中心和 OneTrace 使用 Windows Presentation Foundation (WPF)。 此组件在 Windows PE 中不可用。 继续在具有任务序列部署的启动映像中使用 CMTrace。  

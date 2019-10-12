@@ -2,7 +2,7 @@
 title: 支持的客户端和设备
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 在客户端和设备上支持的操作系统版本。
-ms.date: 07/26/2019
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 862f579069f117af13ecd0720c5e9e92ab7a356d
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 48568f962f412342e005f18b790ed1478b359163
+ms.sourcegitcommit: 23e4f4f02b62e5cc284196067a83eaaa67a6f446
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377947"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998992"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -188,6 +188,13 @@ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没�
 
 - 西班牙语（西班牙）  
 
+## <a name="bkmk_ESU"></a> 扩展的安全更新和 Configuration Manager
+
+如果客户需要运行某些已停止支持的 Microsoft 旧产品，[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划则是他们的终极选项。 它包括关键和/或重要安全更新（根据 [Microsoft 安全响应中心 (MSRC)](https://www.microsoft.com/msrc) 的定义），并且在超出产品的外延支持结束日期后最多可保存三年。
+
+不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 它包括 ESU 计划包含的所有产品。 通过 ESU 计划发布的安全更新将发布到 Windows Server Update Services (WSUS)。 这些更新将在 Configuration Manager 控制台中显示。 尽管不再支持将 ESU 计划包含的产品与 Configuration Manager 一起使用，但仍可使用 [Configuration Manager 当前分支的最新版本](/sccm/core/servers/manage/updates#version-details)部署并安装通过此计划发布的 Windows 安全更新。 此外，还可以使用此最新版本通过操作系统部署 (OSD) 部署支持的操作系统。
+
+将不再在 ESU 计划包含的操作系统上测试与 Windows 软件更新管理或 OSD 无关的客户端管理功能，并且不保证它们会继续工作。 强烈建议尽快升级或迁移到操作系统的最新版本，以获得客户端管理支持。
 
 ## <a name="mac-computers"></a>Mac 计算机  
 

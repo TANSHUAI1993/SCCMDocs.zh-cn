@@ -2,7 +2,7 @@
 title: 用于连接的端口
 titleSuffix: Configuration Manager
 description: 了解有关 Configuration Manager 用于连接的必需的和可自定义网络端口。
-ms.date: 04/11/2019
+ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8818f858900db76192df1503d9043e6435a4999
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 5461fd365322cdcfa51084335f375099cb1449e4
+ms.sourcegitcommit: b100e2068d429b0901b54e4a9d405349207fba3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338701"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72037376"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -159,7 +159,7 @@ Configuration Manager 不允许为以下通信类型配置端口：
 有关详细信息，请参阅 [CMG 端口和数据流](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow)。
 
 
-###  <a name="BKMK_PortsClient-DP"></a> 客户端 -- > 分发点  
+###  <a name="BKMK_PortsClient-DP"></a> 客户端 -- > 分发点（标准和拉取）  
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -167,14 +167,14 @@ Configuration Manager 不允许为以下通信类型配置端口：
 |HTTPS|--|443 <sup>[备注 2](#bkmk_note2) 可用的备用端口</sup>|  
 
 
-###  <a name="BKMK_PortsClient-DP2"></a> 客户端 -- > 配置进行多播的分发点  
+###  <a name="BKMK_PortsClient-DP2"></a> 客户端 -- > 配置进行多播的分发点（标准和拉取）  
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |多播协议|63000-64000|--|  
 
-###  <a name="BKMK_PortsClient-DP3"></a> 客户端 -- > 为 PXE 配置的分发点  
+###  <a name="BKMK_PortsClient-DP3"></a> 客户端 -- > 为 PXE 配置的分发点（标准和拉取）  
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -329,7 +329,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 |SQL over TCP|--|1433 <sup>[备注 2](#bkmk_note2) 可用的备用端口</sup>|  
 
 
-###  <a name="BKMK_PortsDist_MP"></a> 分发点 -- > 管理点  
+###  <a name="BKMK_PortsDist_MP"></a> 分发点（标准和拉取） -- > 管理点  
 在以下情况中，分发点向管理点通信：  
 
 - 报告预留内容的状态  
@@ -338,7 +338,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 - 报告内容验证  
 
-- 报告包下载的状态（拉取分发点）
+- 报告包下载的状态（仅拉取分发点）
 
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -504,7 +504,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 有关详细信息，请参阅[端口和数据流](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow)。
 
 
-###  <a name="BKMK_PortsSite-DP"></a> 站点服务器 -- > 分发点  
+###  <a name="BKMK_PortsSite-DP"></a> 站点服务器 -- > 分发点（标准和拉取）  
  <sup>[备注 5](#bkmk_note5)</sup>  
 
 |说明|UDP|TCP|  
@@ -872,7 +872,7 @@ Configuration Manager 使用下列端口发现和发布站点信息：
 使用 IPsec 帮助确保站点服务器和站点系统之间的通信安全。 如果必须限制针对 RPC 使用的动态端口，则可以使用 Microsoft RPC 配置工具 (rpccfg.exe) 为这些 RPC 数据包配置有限的端口范围。 有关 RPC 配置工具的详细信息，请参阅 [如何配置 RPC 以使用特定端口以及如何使用 IPsec 来帮助保护这些端口](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those)。  
 
 > [!IMPORTANT]  
->  在安装这些站点系统之前，请确保站点系统服务器上正在运行远程注册表服务；如果站点系统位于不同的 Active Directory 林中且不具有信任关系，则另请确保指定了站点系统安装帐户。  
+>  在安装这些站点系统之前，请确保站点系统服务器上正在运行远程注册表服务；如果站点系统位于不同的 Active Directory 林中且不具有信任关系，则另请确保指定了站点系统安装帐户。 例如，在运行站点系统的服务器上使用远程注册表服务，如分发点（拉取和标准）、远程 SQL Server 和应用程序目录。
 
 
 ###  <a name="BKMK_PortsClientInstall"></a> Configuration Manager 客户端安装使用的端口  
