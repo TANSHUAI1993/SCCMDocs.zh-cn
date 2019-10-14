@@ -5,18 +5,18 @@ description: 按照以下步骤在 Configuration Manager 控制台中配置要�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/25/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7127229ceef948f4e88365255737fbe3844aa428
-ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
+ms.openlocfilehash: 10ec464f9689f2a4bf7f0c6176cf52bbf7033d0d
+ms.sourcegitcommit: 23e4f4f02b62e5cc284196067a83eaaa67a6f446
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71826189"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999037"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -75,7 +75,7 @@ ms.locfileid: "71826189"
 
 ## <a name="bkmk_WIfB"></a>Windows 预览体验计划
 <!--3556023-->
-从2019年9月开始，你可以通过 Configuration Manager 来服务和更新运行 Windows 有问必答 Preview 版本的设备。 此更改意味着，你可以管理这些设备，而无需更改正常过程或启用 Windows 更新 for Business。 你可以将 Windows 预览体验预览版的功能更新和累积更新下载到 Configuration Manager，就像任何其他 Windows 10 更新或升级一样。 有关详细信息，请参阅[发布预发布 Windows 10 功能更新到 WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054)博客文章。
+从 2019 年 9 月起，你可以通过 Configuration Manager 来维护和更新运行 Windows Insider Preview 内部版本的设备。 此更改意味着，你可以管理这些设备，而无需更改正常流程或启用适用于企业的 Windows 更新。 像对待任何其他 Windows 10 更新或升级一样，你可以将 Windows Insider Preview 内部版本的功能更新和累积更新下载到 Configuration Manager。 有关详细信息，请参阅[发布预发布 Windows 10 功能更新到 WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054)博客文章。
 
 有关 Configuration Manager 中的 Windows 内幕支持的详细信息，请参阅[对 windows 10 的支持](/sccm/core/plan-design/configs/support-for-windows-10#bkmk_WIfB-support)。
 
@@ -103,7 +103,7 @@ ms.locfileid: "71826189"
 
 ### <a name="upgrading-windows-insider-devices"></a>升级 Windows 有问必答设备
 
-对 windows 预览体验的升级完成同步后，可以从**软件库** > **Windows 10** > 中看到它们，以处理**所有 Windows 10 更新**。
+对 Windows 预览体验的升级完成同步后，可以从**软件库**中查看它们  >  个**windows 10 服务** >  个**windows 10 更新**。
 
 ![Windows 10 维护服务的 windows 预览体验版功能更新](media/3556023-windows-insiders-pre-release-feature-update.png)
 
@@ -122,6 +122,14 @@ ms.locfileid: "71826189"
 ### <a name="keeping-insider-devices-up-to-date"></a>使内幕设备保持最新
 
 适用于 Configuration Manager 的 WSUS 和扩展将提供适用于 Windows 有问必答的累积更新。 这些累积更新的发布频率类似于 Windows 10 版本1903累积更新。 Windows 内幕累积更新位于**windows 10 版本1903及更高版本**的产品类别中，并归类为**安全更新**或**更新**。 你可以使用常规软件更新过程（如使用[自动部署规则](/sccm/sum/deploy-use/automatically-deploy-software-updates)或[分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)）为 Windows 有问必答部署累积更新。
+
+## <a name="bkmk_ESU"></a>扩展的安全更新和 Configuration Manager
+
+对于需要在支持结束时运行某些旧的 Microsoft 产品的客户，[扩展安全更新（ESU）](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates)计划是最后一种方法。 它包括关键的和/或重要的安全更新（如[Microsoft 安全响应中心（MSRC）](https://www.microsoft.com/msrc)的定义），在产品延长支持日期后最多三年。
+
+不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 这包括 ESU 计划中涵盖的任何产品。 ESU 程序下发布的安全更新将发布到 Windows Server Update Services （WSUS）。 这些更新将显示在 Configuration Manager 控制台中。 虽然 ESU 计划中涵盖的产品不能再用于 Configuration Manager，但[Configuration Manager current branch 的最新发行版本](/sccm/core/servers/manage/updates#version-details)可用于部署和安装已发布的 Windows 安全更新在程序下。 最新发布的版本还可用于通过操作系统部署（OSD）来部署受支持的操作系统。
+
+不与 Windows 软件更新管理或 OSD 相关的客户端管理功能将不再在 ESU 计划下的操作系统上进行测试，并且我们不保证它们将继续运行。 强烈建议尽快升级或迁移到最新版本的操作系统，以接收客户端管理支持。
 
 
 ## <a name="next-steps"></a>后续步骤
