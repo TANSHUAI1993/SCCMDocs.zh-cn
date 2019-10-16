@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc212104dc69e4ba4cc7d82e0b8c4813094bea2d
-ms.sourcegitcommit: 2dbe49e3ef1133d49e58d82cefdeba69f9ba3ce2
+ms.openlocfilehash: 1a71a35781a2c1586636dc32cbc12b67e97f8471
+ms.sourcegitcommit: 44c48e2cb00e60d6ccb1ddde62a6159663917e2d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127295"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923958"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>配置任务序列的预先缓存内容
 
@@ -51,7 +51,7 @@ ms.locfileid: "71127295"
 3. [部署任务序列并启用预缓存](#bkmk_deploy)
 
 
-### <a name="bkmk_createpkg"></a>-1创建和配置包
+### -1创建和配置包
 
 客户端评估包的属性，以确定在预缓存过程中它下载哪些内容。  
 
@@ -95,7 +95,7 @@ ms.locfileid: "71127295"
 > 建议为英语（美国） OS 和64位体系结构使用以下 WMI 查询：
 >
 > ```WMI
-> SELECT * FROM Win32_OperatingSystem WHERE OSArchitecture LIKE '%64%' AND OSLanguage=1033`
+> SELECT * FROM Win32_OperatingSystem WHERE OSArchitecture LIKE '%64%' AND OSLanguage='1033'
 > ```
 >
 > 首先，通过选择**操作系统语言**条件来添加语言。 然后编辑 WMI 查询以包括体系结构子句。
