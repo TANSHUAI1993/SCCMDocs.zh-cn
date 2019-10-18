@@ -2,7 +2,7 @@
 title: 如何关闭你的帐户
 titleSuffix: Configuration Manager
 description: 如何从 Azure 帐户中删除桌面分析
-ms.date: 09/10/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,21 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387d16b75c688640eba0ed6658b281badd3c7c54
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 0a37062bc945a69bfb6679186954146a337f8aed
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70891735"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72386778"
 ---
 # <a name="how-to-close-your-account"></a>如何关闭你的帐户
 
-> [!Note]  
-> 此信息与预览版服务相关, 该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
-
 如果你在环境中设置了 "桌面分析"，然后决定要删除它，请使用此过程来关闭你的帐户。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>Prerequisites
 
 只有**全局管理员**才能关闭或重新激活 Azure 门户中的帐户。
 
@@ -57,7 +54,7 @@ ms.locfileid: "70891735"
 
 1. 在 "**所有资源**" 中搜索桌面分析工作区的名称。 此名称是在注册服务时创建的。
 
-1. 删除`Microsoft365Analytics(YourWorkspaceName)`类型**解决方案**。
+1. 删除类型**解决方案**的 `Microsoft365Analytics(YourWorkspaceName)`。
 
 桌面分析数据基于工作区的数据保留策略过期。 你可以继续使用同一工作区中的任何其他解决方案。
 
@@ -92,6 +89,12 @@ ms.locfileid: "70891735"
 
 1. 删除桌面分析服务。
 
+### <a name="delete-collections-for-the-pilot-and-production-deployments"></a>删除试点和生产部署的集合
+
+1. 在 Configuration Manager 控制台中，选择 "**资产和符合性**" 工作区中的 "**设备集合**"。
+
+1. 删除不再使用的所有集合。 默认情况下，集合位于 "**部署计划**" 文件夹下。  
+
 ## <a name="reconfigure-clients"></a>重新配置客户端
 
 ### <a name="unenroll-devices"></a>取消注册设备
@@ -110,7 +113,7 @@ ms.locfileid: "70891735"
 
 使用以下方法之一设置这些值：
 
-- 组策略，在**计算机配置** > 中**管理模板** > **Windows 组件** > **数据收集和预览版本**
+- "**计算机配置**" 中的组策略  > **管理模板** > **Windows 组件** > **数据收集和预览生成**
 - 移动设备管理（MDM），如[Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。

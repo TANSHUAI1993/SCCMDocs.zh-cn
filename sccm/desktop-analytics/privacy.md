@@ -2,7 +2,7 @@
 title: 桌面分析数据隐私
 titleSuffix: Configuration Manager
 description: 桌面分析提交给客户数据隐私
-ms.date: 06/13/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,26 +11,26 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef08fb2d4c404ea66ded3d1a49d30af68fe4a95
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: ca2b94b19c4e95da103799e7357063e7253eaa72
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379739"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72384923"
 ---
 # <a name="desktop-analytics-data-privacy"></a>桌面分析数据隐私
 
 桌面分析已完全提交给客户数据隐私，并中心于以下原则：
 
-- **透明化**我们会完全记录 Windows 诊断事件。 查看公司的安全和合规性团队。 Windows 诊断数据查看器允许您查看从给定设备发送的诊断数据。 有关详细信息，请参阅[诊断数据查看器概述](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview)。  
+- **透明度：** 我们会完全记录 Windows 诊断事件。 查看公司的安全和合规性团队。 Windows 诊断数据查看器允许您查看从给定设备发送的诊断数据。 有关详细信息，请参阅[诊断数据查看器概述](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview)。  
 
-- **控件**可以控制要与 Microsoft 共享的诊断数据级别。 Windows 10 版本1709添加了新策略，以将增强的诊断数据限制为桌面分析所需的最小值。  
+- **控件：** 可以控制要与 Microsoft 共享的诊断数据级别。 Windows 10 版本1709添加了新策略，以将增强的诊断数据限制为桌面分析所需的最小值。  
 
-- **安全**Microsoft 通过强大的安全性和加密来保护你的数据。  
+- **安全性：** Microsoft 通过强大的安全性和加密来保护你的数据。  
 
-- **建立**桌面分析支持 Microsoft[隐私声明](https://privacy.microsoft.com/privacystatement)和[在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)。  
+- **信任：** 桌面分析支持 Microsoft[隐私声明](https://privacy.microsoft.com/privacystatement)和[在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)。  
 
-
+有关详细信息，请参阅[Windows 服务，其中 Microsoft 是 GDPR 下的处理器](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)。<!-- 5353168 -->
 
 ## <a name="diagnostic-data-flow"></a>诊断数据流
 
@@ -57,8 +57,6 @@ ms.locfileid: "70379739"
 5. 然后，将快照复制到相应的 Azure Log Analytics 工作区。  
 
 6. 桌面分析在 Azure Log Analytics 存储中存储输入。 这些配置包括部署计划，以及用于升级和重要性的资产决策。  
-
-
 
 ## <a name="other-resources"></a>其他资源
 

@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 使用桌面分析来共享诊断数据的参考指南。
-ms.date: 07/03/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,17 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0128a802916958c69b07dffe86d04f31698fd028
-ms.sourcegitcommit: 974b20f5faa0e0bbf9e43391280fdebeb657ac47
+ms.openlocfilehash: 91be1fbb03c49b28d689aff974a43ba8434fc194
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237023"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72385686"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
-
-> [!Note]  
-> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 若要将设备注册到桌面分析，需要将诊断数据发送给 Microsoft。 如果你的环境使用代理服务器，请使用此信息来帮助配置代理。
 
@@ -64,7 +61,7 @@ ms.locfileid: "72237023"
 > [!Important]  
 > 对于隐私和数据完整性，Windows 会在与诊断数据终结点通信时检查 Microsoft SSL 证书。 无法进行 SSL 拦截和检查。 若要使用桌面分析，请从 SSL 检查中排除这些终结点。<!-- BUG 4647542 -->
 
-| 终结点  | Functions  |
+| 终结点  | 函数  |
 |-----------|-----------|
 | `https://aka.ms` | 用于查找服务 |
 | `https://v10c.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行 Windows 10 版本1703或更高版本的设备使用，其中安装了2018-09 累积更新或更高版本。 |
@@ -79,8 +76,10 @@ ms.locfileid: "72237023"
 | `https://kmwatsonc.events.data.microsoft.com` | 联机崩溃分析。 Windows 10 版本1809或更高版本中的设备运行状况报告所需的。 |
 | `https://oca.telemetry.microsoft.com`  | 联机崩溃分析（OCA）。 需要在 Windows 10 版本1803或更早版本中监视部署运行状况。 |
 | `https://login.live.com` | 需要为桌面分析提供更可靠的设备标识。 <br> <br>若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
-| `https://graph.windows.net` | 用于在将层次结构附加到桌面分析（仅限 Configuration Manager Server 角色上）时自动检索 CommercialId 等设置。 |
-| `https://*.manage.microsoft.com` | 用于使用桌面分析同步设备集合成员身份、部署计划和设备就绪状态（仅限 Configuration Manager Server 角色上）。 |
+| `https://graph.windows.net` | 用于在将层次结构附加到桌面分析（Configuration Manager Server 角色上）时自动检索设置，如 CommercialId。 有关详细信息，请参阅 [为站点系统服务器配置代理
+] （/sccm/core/plan-design/network/proxy-server-support # 配置--代理-站点系统服务器）。 |
+| `https://*.manage.microsoft.com` | 用于使用桌面分析同步设备集合成员身份、部署计划和设备就绪状态（仅限 Configuration Manager Server 角色上）。 有关详细信息，请参阅 [为站点系统服务器配置代理
+] （/sccm/core/plan-design/network/proxy-server-support # 配置--代理-站点系统服务器）。 |
 
 
 ## <a name="proxy-server-authentication"></a>代理服务器身份验证

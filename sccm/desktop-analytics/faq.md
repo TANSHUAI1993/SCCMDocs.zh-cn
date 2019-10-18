@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 10/08/2019
+ms.date: 10/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,19 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13bdb5348e9fc58ca0ba194dd8cf4d509c16b081
-ms.sourcegitcommit: 9c76ed76ead1125b712cef574d832803dbf2c5a9
+ms.openlocfilehash: 96f84adcacdf298840a981360478bf828a22716a
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163139"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72385485"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
-> [!Note]  
-> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
-
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="bkmk_intune"></a>能否将桌面分析用于 Intune 托管的设备？ 
 
@@ -39,6 +36,19 @@ ms.locfileid: "72163139"
 - 在过去7天内检查与组织关联的设备。 在[桌面分析门户](https://aka.ms/desktopanalytics)中，请参阅 "**连接服务**" 窗格。 选择 "**注册设备**" 并**查看最近的数据**
 
 如果设备配置正确，并且仍未看到工作区中的数据，请[联系 Microsoft 支持](https://support.microsoft.com/hub/4343728/support-for-business)部门。
+
+## <a name="connect-configuration-manager"></a>连接 Configuration Manager
+
+### <a name="can-i-change-the-target-or-additional-collections"></a>能否更改目标或其他集合？
+
+是的，请使用以下过程：
+
+- 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 打开与桌面分析服务关联的项的属性。
+
+- 在 " **Desktop 分析连接**" 选项卡上，更改**目标集合**或管理其他集合。
+
+> [!IMPORTANT]  
+> Configuration Manager 使用设置策略来配置目标集合中的设备。 此策略包括诊断数据设置，使设备能够将数据发送到 Microsoft。 更改目标集合不会撤销目标集合中设备上不再有的设置策略。 如果你不希望设备继续发送诊断数据，请[重新配置这些设备](/sccm/desktop-analytics/account-close#reconfigure-clients)。
 
 ## <a name="windows-upgrade"></a>Windows 升级
 
@@ -70,9 +80,9 @@ ms.locfileid: "72163139"
 
 ### <a name="can-i-choose-the-data-center-location"></a>能否选择数据中心位置？
 
-对于 Azure Log Analytics：是，当设置桌面分析并创建 Log Analytics 工作区时。
+对于 Azure Log Analytics：是，当你设置桌面分析并创建 Log Analytics 工作区时。
 
-对于 Microsoft 数据管理服务和分析 Azure 存储：不是，这两个服务托管在美国中。
+对于 Microsoft 数据管理服务和分析 Azure 存储：不，这两项服务托管在美国中。
 
 ### <a name="where-is-my-organizations-data-stored"></a>我的组织的数据存储在何处？
 
@@ -98,13 +108,13 @@ ms.locfileid: "72163139"
 
 | Windows Analytics | 桌面分析 |
 |-------------------| ------------------|
-| 低安装计数 | （不适用） <br> 注意:桌面分析运行其自己的试探法来确定低安装计数 |
+| 低安装计数 | （不适用） <br> 注意：桌面分析运行其自己的试探法来确定低安装计数 |
 | 未查看 | 未查看 |
 | 查看正在进行 | 未查看 |
-| 关键任务 | 关键 |
-| 业务关键 | 关键 |
-| 重要提示 | 重要提示 |
-| 最大努力 | 重要提示 |
+| 关键任务 | 严重 |
+| 业务关键 | 严重 |
+| 重要 | 重要 |
+| 最大努力 | 重要 |
 | 忽略 | 不重要 |
 
 ### <a name="can-i-migrate-from-multiple-windows-analytics-workspaces"></a>能否从多个 Windows Analytics 工作区迁移？
@@ -127,7 +137,7 @@ ms.locfileid: "72163139"
 
 是。 如果你现在使用 Azure 门户中的[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started)，现在可以继续执行此操作，而不能超过2020年1月。
 
-有关详细信息，请参阅博客文章：从 "Windows Analytics：0Migrate 用户输入数据" @no__t升级就绪情况 "到桌面分析 @ no__t。
+有关详细信息，请参阅[KB 4521815： Windows Analytics 在2020年1月31日停](https://support.microsoft.com/help/4521815/windows-analytics-retirement)用。
 
 ### <a name="are-there-any-windows-analytics-features-that-arent-available-in-desktop-analytics"></a>桌面分析是否有任何 Windows Analytics 功能不可用？
 
@@ -179,4 +189,4 @@ ms.locfileid: "72163139"
 若要共享有关桌面分析的反馈，请选择门户顶部的 "**发送笑脸**" 图标。 在提交时包含屏幕截图，帮助 Microsoft 更好地了解你的反馈。 你还可以提交产品建议并在[UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805)上投票赞成其他观点。
 
 > [!Note]
-> 永远不要通过发送笑脸或 UserVoice 来共享隐私信息。 此类私人信息包括你的租户 Id 或商业 Id。Microsoft 不通过 "发送笑脸" 或 "UserVoice" 通道提供支持。 若要获取桌面分析工作区帮助，请在导航菜单中选择 "**帮助和支持**" 链接以打开支持票证。
+> 永远不要通过发送笑脸或 UserVoice 来共享隐私信息。 此类私人信息包括你的租户 Id 或商业 Id。 Microsoft 不通过 "发送笑脸" 或 "UserVoice" 通道提供支持。 若要获取桌面分析工作区帮助，请在导航菜单中选择 "**帮助和支持**" 链接以打开支持票证。

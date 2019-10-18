@@ -11,17 +11,14 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce51ddc7a6c46dfc8b131ed6bc573b5b501f8598
-ms.sourcegitcommit: 9c76ed76ead1125b712cef574d832803dbf2c5a9
+ms.openlocfilehash: cf4ec11bbf5595a8e6475d448f7e1d5532b4dd3c
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72162881"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72384715"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
-
-> [!Note]  
-> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 了解桌面分析中每月的新增功能。
 
@@ -54,7 +51,7 @@ ms.locfileid: "72162881"
 如果你在环境中设置了桌面分析，但想要停止使用该服务，现在可以关闭你的帐户。 如果你在90天内改变主意，则可以重新激活该帐户。 有关详细信息，请参阅[如何关闭你的帐户](/sccm/desktop-analytics/account-close)。
 
 
-## <a name="august-2019"></a>2019 年 8 月
+## <a name="august-2019"></a>2019年8月
 
 ### <a name="reset-your-account"></a>重置你的帐户
 

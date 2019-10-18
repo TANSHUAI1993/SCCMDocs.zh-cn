@@ -11,17 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59cd27ac63430a8b9073e7b178b53f9a5cc23da6
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 8d4719fb17ed9eef67a73d97ab74caf667a865a0
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377893"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72385581"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
-
-> [!Note]  
-> 此信息与预览版服务相关，该服务可能会在商业发布之前进行大量修改。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
 [将 Configuration Manager 连接](/sccm/desktop-analytics/connect-configmgr)到桌面分析时，将配置设置以将设备注册到桌面分析。 你可以随时更改这些设置。 同时确保设备是最新的。
 
@@ -55,7 +52,7 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 
 #### <a name="windows-81"></a>Windows 8.1
 
-下载更新：[KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
+下载更新： [KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
 
 在参与 Windows 客户体验改善计划 Windows 8.1 系统上运行诊断。 这些诊断帮助确定升级到 Windows 10 时是否可能存在兼容性问题。
 
@@ -63,7 +60,7 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 
 #### <a name="windows-7-with-service-pack-1"></a>带有 Service Pack 1 的 Windows 7
 
-下载更新：[KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
+下载更新： [KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
 
 在参与 Windows 客户体验改善计划的 Windows 7 Service Pack 1 （SP1）系统上运行诊断。 这些诊断帮助确定升级到 Windows 10 时是否可能存在兼容性问题。
 
@@ -140,7 +137,7 @@ Configuration Manager 提供了用于管理这些设置并将其部署到客户�
 
     - **目标集合**：此集合包括 Configuration Manager 配置商业 ID 和诊断数据设置的所有设备。 它是 Configuration Manager 连接到桌面分析服务的完整设备集。  
 
-    - **目标集合中的设备使用用户身份验证的代理进行出站通信**：默认情况下，此值为 "**否**"。 如果你的环境中需要，请将设置为 **"是"** 。 有关详细信息，请参阅[代理服务器身份验证](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication)。  
+    - **目标集合中的设备使用用户身份验证的代理进行出站通信**：默认情况下，此值为 "**否**"。 如果你的环境中需要，请将设置为 **"是"**。 有关详细信息，请参阅[代理服务器身份验证](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication)。  
 
     - **选择要与桌面分析同步的特定集合**：选择 "**添加**" 以包括**目标集合**层次结构中的其他集合。 这些集合在桌面分析门户中提供，用于将部署计划分组。 请确保包括试验和试点排除集合。  <!-- 4097528 -->
 
@@ -150,17 +147,17 @@ Configuration Manager 提供了用于管理这些设置并将其部署到客户�
 
 ### <a name="windows-settings"></a>Windows 设置
 
-Configuration Manager 在 "本地策略" 路径`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`下设置以下 Windows 设置：
+Configuration Manager 在本地策略路径下设置以下 Windows 设置 `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`：
 
 | 策略   | 值  |
 |----------|--------|
 | **CommercialId** | 为了使设备在桌面分析中显示，请将其配置为组织的商业 ID。 |
-| **AllowTelemetry**  | 为`1` "**基本**" `2` 、"**增强**" `3`或 "**完整**诊断数据" 设置。 桌面分析至少需要基本诊断数据。 Microsoft 建议使用桌面分析的 "增强（受限）" 级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | *适用于 Windows 10 及更高版本1709及更高版本*：仅当 AllowTelemetry 设置为`2`时，此设置才适用。 它将发送给 Microsoft 的增强诊断数据事件限制为仅限桌面分析所需的那些事件。 有关详细信息，请参阅 windows [10 版本1709增强的诊断数据事件和 Windows Analytics 使用的字段](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)。|
-| **AllowDeviceNameInTelemetry** | *适用于 Windows 10 及更高版本1803及更高版本*：要使设备能够继续发送设备名称，需要单独选择加入。<br> <br>注意:默认情况下，设备名称不会发送给 Microsoft。 如果不发送设备名称，它将在桌面分析中显示为 "未知"。 此行为可能会导致难以识别和评估设备。 有关详细信息，请参阅[设备名称](#device-name)。 |
-| **CommercialDataOptIn** | *适用于 Windows 7 和 Windows 8.1*：桌面分析需要`1`值。 有关详细信息，请参阅[Windows 7 中的商业数据选择加入](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
+| **AllowTelemetry**  | 将 "**基本**"、"`2`" `1` 设置为 "**增强**" 或 "`3`" 以获取**完整**的诊断数据。 桌面分析至少需要基本诊断数据。 Microsoft 建议使用桌面分析的 "增强（受限）" 级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | *适用于 Windows 10 版本1709及更高版本*：此设置仅适用于 AllowTelemetry 设置 `2`。 它将发送给 Microsoft 的增强诊断数据事件限制为仅限桌面分析所需的那些事件。 有关详细信息，请参阅 windows [10 版本1709增强的诊断数据事件和 Windows Analytics 使用的字段](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)。|
+| **AllowDeviceNameInTelemetry** | *适用于 Windows 10 版本1803及更高版本*：需要单独的选择加入，使设备能够继续发送设备名称。<br> <br>注意：默认情况下，设备名称不会发送给 Microsoft。 如果不发送设备名称，它将在桌面分析中显示为 "未知"。 此行为可能会导致难以识别和评估设备。 有关详细信息，请参阅[设备名称](#device-name)。 |
+| **CommercialDataOptIn** | *适用于 Windows 7 和 Windows 8.1*：桌面分析需要 `1` 值。 有关详细信息，请参阅[Windows 7 中的商业数据选择加入](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
 
-在组策略编辑器中的以下路径查看这些设置：**计算机配置** > **管理模板** **Windows 组件**数据收集**和预览生成。**  >  > 
+在组策略编辑器的以下路径中查看这些设置：**计算机配置** > **管理模板** > **Windows 组件** > **数据收集和预览生成**。
 
 > [!Important]  
 > 在大多数情况下，只使用 Configuration Manager 来配置这些设置。 不要同时在域组策略对象中应用这些设置。 有关详细信息，请参阅[冲突解决](#conflict-resolution)。<!-- SCCMDocs-pr 3120 -->
@@ -173,7 +170,7 @@ Configuration Manager 在 "本地策略" 路径`HKLM:\SOFTWARE\Microsoft\Windows
 
 ![显示 "未知" 名称的桌面分析设备列表](media/unknown-device-name.png)
 
-"桌面分析" 的 "Configuration Manager 设置" 中有一个选项，用于配置此选项：**允许诊断数据中的设备名称**。 此 Configuration Manager 设置控制 Windows 策略设置 AllowDeviceNameInTelemetry。
+"桌面分析" 的 "Configuration Manager 设置" 中提供了一个选项，用于配置此选项：**在诊断数据中允许设备名称**。 此 Configuration Manager 设置控制 Windows 策略设置 AllowDeviceNameInTelemetry。
  
 
 ### <a name="conflict-resolution"></a>冲突解决
