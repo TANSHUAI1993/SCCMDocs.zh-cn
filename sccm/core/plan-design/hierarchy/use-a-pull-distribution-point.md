@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3e759ef44170c460118d3629d8a7b9648ed8528
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: e658874c9ff5c7bfbf0305b937779d101fefeeb2
+ms.sourcegitcommit: 262b0796cf270684ad09c2b296d490f076dfa235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251648"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448015"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>结合使用 Configuration Manager 和拉取分发点
 
@@ -38,9 +38,6 @@ ms.locfileid: "67251648"
 - 来自客户端的 HTTP 或 HTTPS 通信
 - 与其他分发点相关的证书选项
 - 单独管理或作为分发点组的成员进行管理  
-
-> [!IMPORTANT]  
-> 尽管拉取分发点支持通过 HTTP 和 HTTPS 通信，但在使用 Configuration Manager 控制台时，你只能指定配置为通过 HTTP 通信的源分发点。 你可以使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。  
 
 在安装分发点时配置拉取分发点。 创建分发点之后，可通过编辑角色属性将其配置为拉取分发点。 要详细了解如何使分发点成为拉取分发点，请参阅[拉取分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pull)。  
 
