@@ -3,7 +3,7 @@ title: 软件更新维护
 titleSuffix: Configuration Manager
 description: 若要在 Configuration Manager 中维护更新，可以计划 WSUS 清理任务，也可以手动运行它。
 author: mestew
-ms.date: 07/30/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11a817b907a27c0991fe6fc610063e1151ae94f9
-ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
+ms.openlocfilehash: 1e2edd794d582c4ab875ac53f095eb65fcd26ba8
+ms.sourcegitcommit: c56cd368f8e380b7339ec8bcf3f68187eff479fb
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604529"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72347892"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 
@@ -104,7 +104,7 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 ## <a name="wsus-cleanup-starting-in-version-1906"></a>WSUS 清理从版本1906开始
 <!--41101009-->
 
- 你还可以运行 Configuration Manager 的其他 WSUS 维护任务来维护运行状况良好的软件更新点。 除了在 WSUS 中拒绝过期的更新以外, Configuration Manager 可以将非聚集索引添加到 WSUS 数据库, 并从 WSUS 数据库中删除过时的更新。 每次同步后都会进行 WSUS 维护。
+ 你具有 Configuration Manager 为维护软件更新点正常运行而执行的其他 WSUS 维护任务。 除了在 WSUS 中拒绝过期的更新以外，Configuration Manager 可以将非聚集索引添加到 WSUS 数据库，并从 WSUS 数据库中删除过时的更新。 每次同步后都会进行 WSUS 维护。
 
 ### <a name="add-non-clustered-indexes-to-the-wsus-database-to-improve-wsus-cleanup-performance"></a>将非聚集索引添加到 WSUS 数据库以提高 WSUS 清理性能
 
@@ -130,7 +130,7 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>从 WSUS 数据库中删除过时的更新
 
-过时更新是 WSUS 数据库中未使用的更新和更新修订。 一般而言, 更新在[Microsoft 更新目录](https://www.catalog.update.microsoft.com/)中不再是过时的, 并且其他更新不需要它作为先决条件或依赖项。
+过时更新是 WSUS 数据库中未使用的更新和更新修订。 一般而言，更新在[Microsoft 更新目录](https://www.catalog.update.microsoft.com/)中不再是过时的，并且其他更新不需要它作为先决条件或依赖项。
 
 1. 在 Configuration Manager 控制台中，导航到“管理”   > “概述”   > “站点配置”   > “站点”  。
 2. 选择 Configuration Manager 层次结构顶部的站点。
@@ -144,6 +144,27 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 
 - `db_datareader` 和 `db_datawriter` 固定数据库角色。 有关详细信息，请参阅[数据库级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles)。
 - 必须向站点服务器的计算机帐户授予 `CONNECT SQL` 服务器权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)。
+
+### <a name="known-issues-for-version-1906"></a>版本1906的已知问题
+
+请考虑以下情形：
+<!--5418148-->
+- 你使用的是 Configuration Manager 版本1906
+- 你有使用 Windows 内部数据库的远程软件更新点
+- 在 "**软件更新点组件属性**" 中，在 " **WSUS 维护**" 选项卡下有以下任意选定选项：
+   - 将非聚集索引添加到 WSUS 数据库
+   - 从 WSUS 数据库中删除过时的更新
+
+在这种情况下，Configuration Manager 无法使用 Windows 内部数据库对远程软件更新点执行上述 WSUS 维护任务。 之所以出现此问题，是因为 Windows 内部数据库不允许远程连接。 你将在站点服务器上的 `WSyncMgr.log` 中看到以下错误：
+
+```text
+Indexing Failed. Could not connect to SUSDB.
+SqlException thrown while connect to SUSDB in Server: <SUP.CONTOSO.COM>. Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+...
+Could not Delete Obselete Updates because ConfigManager could not connect to SUSDB: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) UpdateServer: <SUP.CONTOSO.COM>
+```
+
+若要解决此问题，可以使用 Windows 内部数据库自动执行远程软件更新点的 WSUS 维护。 有关详细信息和详细步骤，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护的完整指南](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint)。
 
 ## <a name="updates-cleanup-log-entries"></a>更新清理日志条目
 
