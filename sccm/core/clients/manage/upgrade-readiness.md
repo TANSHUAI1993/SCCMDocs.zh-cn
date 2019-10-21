@@ -5,22 +5,29 @@ description: 将升级就绪情况与 Configuration Manager 集成来访问 Wind
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/04/2018
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4340f21ad257bfe311915edaa918e704832e3e77
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 11cb935eef2d214cf541142aea81fbe8e12bd06b
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286442"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72384604"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>将升级就绪情况与 Configuration Manager 集成
 
 适用范围：  System Center Configuration Manager (Current Branch)
+
+> [!Important]  
+> 自 2019 年 10 月起，Configuration Manager 中的升级就绪情况集成成为[弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 将于 2020 年 1 月 31 日停用 Windows Analytics 服务。
+>
+> Windows Analytics 演变为 [桌面分析](/sccm/desktop-analytics/overview)。 现有的 Windows Analytics 客户可以[将数据迁移到桌面分析](/sccm/desktop-analytics/faq#existing-windows-analytics-customers)。
+>
+> 有关详细信息，请参阅 [KB 4521815：Windows Analytics 将于 2020 年 1 月 31 日停用](https://support.microsoft.com/help/4521815/windows-analytics-retirement)。
 
 升级就绪情况是 [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness) 的一部分。 可以使用它来访问和分析环境中的设备对升级至 Windows 10 的准备情况。 将升级就绪情况与 Configuration Manager 集成，以便在 Configuration Manager 控制台中访问客户端升级兼容性数据。 然后使用此数据创建集合，并设定要升级或修正的设备。
 

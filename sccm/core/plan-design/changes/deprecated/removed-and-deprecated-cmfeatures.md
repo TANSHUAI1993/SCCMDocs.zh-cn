@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 09/06/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fa15a3bcd98c39f2b103793d9cc24ccdd2efd90
-ms.sourcegitcommit: b9cc8e723c5d8c3be44edad24ad29d75c0cdd2b0
+ms.openlocfilehash: 2979adb3965db23579271893f741a0479a22195f
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71826148"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72387144"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -32,6 +32,7 @@ ms.locfileid: "71826148"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
+| [Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics) 和[升级就绪情况](/sccm/core/clients/manage/upgrade-readiness)集成。 有关详细信息，请参阅 [KB 4521815：Windows Analytics 将于 2020 年 1 月 31 日停用](https://support.microsoft.com/help/4521815/windows-analytics-retirement)。 | 2019 年 10 月 14 日 | 2020 年 1 月 31 日 |
 | 用于条件访问合规性策略的设备运行状况证明评估 <!--1235616 aka 3608202--> 有关详细信息，请参阅[为 Configuration Manager 托管的 PC 管理对 Office 365 服务的访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy)。| 2019 年 7 月 3 日 | 2019 年 11 月 1 日后发布的首版 |
 | Configuration Manager 公司门户应用 | 2019 年 5 月 21 日 | 2019 年 11 月 1 日后发布的首版|
 | 应用程序目录包括两个站点系统角色：应用程序目录网站点和 Web 服务点。 有关详细信息，请参阅[删除应用程序目录](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat)。 | 2019 年 5 月 21 日 | 2019 年 11 月 1 日后发布的首版|

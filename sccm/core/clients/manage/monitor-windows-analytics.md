@@ -2,7 +2,7 @@
 title: 使用 Windows Analytics 监视客户端
 titleSuffix: Configuration Manager
 description: Windows Analytics 是一组解决方案，使你能够有效深入了解当前环境状态。
-ms.date: 09/04/2018
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7836e1779acbfdfbb66d6eac57bc7797abd52563
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: c2530b20d065b3b2bd15c0dc38232687d286b6b0
+ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286483"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72384755"
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
 
 适用范围：  System Center Configuration Manager (Current Branch)
+
+> [!Important]  
+> 自 2019 年 10 月起，Configuration Manager 中的 Windows Analytics 集成成为[弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 将于 2020 年 1 月 31 日停用 Windows Analytics 服务。
+>
+> Windows Analytics 演变为 [桌面分析](/sccm/desktop-analytics/overview)。 现有的 Windows Analytics 客户可以[将数据迁移到桌面分析](/sccm/desktop-analytics/faq#existing-windows-analytics-customers)。
+>
+> 有关详细信息，请参阅 [KB 4521815：Windows Analytics 将于 2020 年 1 月 31 日停用](https://support.microsoft.com/help/4521815/windows-analytics-retirement)。
 
 [Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) 是一组解决方案，使你能够深入了解当前环境状态。 环境中的 Windows 设备向 Microsoft 报告数据，你可以通过这些解决方案访问和分析数据。 例如，通过将[升级就绪情况](/sccm/core/clients/manage/upgrade-readiness)连接到 Configuration Manager，可以直接访问 Configuration Manager 控制台的“监视”  工作区中的数据。
 
