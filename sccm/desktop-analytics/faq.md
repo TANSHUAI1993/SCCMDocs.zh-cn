@@ -2,7 +2,7 @@
 title: 桌面分析常见问题解答
 titleSuffix: Configuration Manager
 description: 有关桌面分析的常见问题。
-ms.date: 10/15/2019
+ms.date: 10/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f84adcacdf298840a981360478bf828a22716a
-ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
+ms.openlocfilehash: bc8b770ff99fbf9c45815e2516639726d47be7a9
+ms.sourcegitcommit: 90f51008deeabf2a434bd12f81bb25669045029c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72385485"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684758"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -129,9 +129,13 @@ ms.locfileid: "72385485"
 
 迁移过程是事务性的。 你将看到所有已迁移的输入没有损坏，或者根本没有迁移的输入。 如果在24小时内未看到迁移的输入，请联系 Microsoft 支持部门。 查看已迁移的输入时开始标记应用。 如果已标记一些应用，桌面分析会保留这些输入，以防与 Windows Analytics 中的输入发生冲突。
 
-### <a name="im-not-ready-yet-can-i-migrate-after-the-initial-onboarding"></a>我还没有准备好，我是否可以在初次加入后迁移？
+### <a name="how-long-do-i-have-to-migrate-my-data"></a>需要多长时间才能迁移数据？
 
-是。<!-- 5202803 --> 现有 Windows Analytics 客户现在可以在初始载入后迁移数据。 在桌面分析门户中转到 "**连接的服务**"，并选择用于从 Windows Analytics 迁移数据的选项。
+Windows Analytics 升级就绪情况解决方案将[于2020年1月31日停](https://aka.ms/waretirement)用。 停用后，根据 Log Analytics 工作区保留策略，数据将在一段时间后消失。 要使数据在发生之前需要迁移或导出的客户。
+
+### <a name="can-i-migrate-after-the-initial-onboarding"></a>初次加入后是否可以迁移？
+
+是。<!-- 5202803 --> 只要在[初始载入](/sccm/desktop-analytics/set-up#initial-onboarding)期间将现有的 windows analytics 工作区设置为桌面分析工作区，现有的 windows analytics 客户现在就可以在初始载入后迁移数据。 在桌面分析门户中转到 "**连接的服务**"，并选择用于从 Windows Analytics 迁移数据的选项。
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>是否可以将更新符合性与桌面分析一起使用？
 
