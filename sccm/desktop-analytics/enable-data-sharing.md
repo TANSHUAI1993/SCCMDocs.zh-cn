@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 使用桌面分析来共享诊断数据的参考指南。
-ms.date: 10/17/2019
+ms.date: 10/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91be1fbb03c49b28d689aff974a43ba8434fc194
-ms.sourcegitcommit: b64ed4a10a90b93a5bd5454b6efafda90ad45718
+ms.openlocfilehash: edf0922d4aab8dc5a9c37ae54bbb7e91759e59de
+ms.sourcegitcommit: 90f51008deeabf2a434bd12f81bb25669045029c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72385686"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684845"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
 
@@ -29,7 +29,14 @@ ms.locfileid: "72385686"
 
 将 Configuration Manager 与桌面分析集成时，还可以使用它来管理设备上的诊断数据级别。 为获得最佳体验，请使用 Configuration Manager。
 
-桌面分析的基本功能适用于**基本**诊断数据级别。 不启用已更新的设备的使用情况或运行状况数据，无需启用 "**增强（受限）** " 级别。 Microsoft 建议您启用 "**增强（受限）** " 诊断数据级别。 有关详细信息，请参阅 windows [10 增强的诊断数据事件和 Windows Analytics 使用的字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
+桌面分析的基本功能适用于**基本**[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)。 如果未在 Configuration Manager 中配置 "**增强（受限）** " 级别，则不会获取已更新设备的使用情况或运行状况数据。 
+
+> [!TIP]
+> Configuration Manager 中的 "**增强（受限）** " 设置是指在运行 windows 10 版本1709及更高版本的设备上，将**增强的诊断数据限制为 Windows Analytics 策略所需的最小值**。 Microsoft 建议使用桌面分析启用**增强（受限）** 诊断数据级别。
+>
+> 运行 Windows 10 版本1703及更早版本的设备不具有此策略设置。 在 Configuration Manager 中配置 "**增强（受限）** " 设置时，这些设备将回退到 "**基本**" 级别。
+
+有关详细信息，请参阅[Windows 10 增强的诊断数据事件和字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
 
 > [!Important]   
 > Microsoft 对提供用于控制隐私的工具和资源提供了强大的承诺。 因此，Microsoft 不会从位于欧洲国家/地区（EEA 和瑞士）的设备中收集以下数据：
@@ -46,7 +53,7 @@ ms.locfileid: "72385686"
 - [在组织中配置 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!Note]  
-> 在 "增强（受限）" 级别，当每个客户端执行初始完全扫描时，它会向 Microsoft 云发送大约 2 MB 的数据。 每日增量不同于 250-400 KB。
+> 在初始完全扫描时，配置为限制增强诊断数据的客户端将向 Microsoft 云发送大约 2 MB 的数据。 每日增量不同于 250-400 KB。
 >
 > 每日增量扫描发生在上午3:00 （设备本地时间）。 有些事件会在一天中的第一天可用时发送。 这些时间不可配置。
 >
