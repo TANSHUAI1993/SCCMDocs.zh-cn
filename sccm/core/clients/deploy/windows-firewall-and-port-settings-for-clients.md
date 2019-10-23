@@ -124,7 +124,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 |站点服务器与客户端计算机之间的 RPC 终结点映射程序。|135|135|  
 |站点服务器与客户端计算机之间的 RPC 动态端口。|--|DYNAMIC|  
 |在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
-|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|443（请参阅备注 1， **可用的备用端口**）|  
 
 ### <a name="ports-that-are-used-with-software-update-point-based-installation"></a>用于基于软件更新点的安装的端口  
 
@@ -139,7 +139,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
-|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|443（请参阅备注 1， **可用的备用端口**）|  
 |指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时源服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 
 ### <a name="ports-that-are-used-with-manual-installation-and-logon-script-based-installation"></a>用于手动安装和基于登录脚本的安装的端口  
@@ -148,7 +148,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 |-----------------|---------|---------|  
 |客户端计算机与从中运行 CCMSetup.exe 的网络共享之间的服务器消息块 (SMB)。<br /><br /> 安装 Configuration Manager 时，会从管理点上的 &lt;InstallationPath\>\Client 文件夹中复制客户端安装源文件并自动共享这些文件。 但是，您可以在网络上的任何计算机上复制这些文件并创建新共享。 或者，您可以通过以本地方式运行 CCMSetup.exe 来消除此网络流量，例如，使用可移动媒体。|--|445|  
 |通过超文本传输协议 (HTTP) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
-|通过安全超文本传输协议 (HTTPS) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|通过安全超文本传输协议 (HTTPS) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTPS。|--|443（请参阅备注 1， **可用的备用端口**）|  
 |指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时源服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 
 ### <a name="ports-that-are-used-with-software-distribution-based-installation"></a>用于基于软件分发的安装的端口  
@@ -157,7 +157,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 |-----------------|---------|---------|  
 |分发点与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 |在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端连接到分发点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
-|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端连接到分发点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端连接到分发点的 HTTPS。|--|443（请参阅备注 1， **可用的备用端口**）|  
 
 ## <a name="notes"></a>注意  
  **1 可用的备用端口** 在 Configuration Manager 中，您可以为此值定义备用端口。 如果定义了自定义端口，则为 IPsec 策略或为配置防火墙定义 IP 筛选器信息时将替代该自定义端口。  
